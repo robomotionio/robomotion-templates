@@ -261,6 +261,28 @@
     ]
   },
   {
+    "name": "Crypto Trading With Strategy",
+    "description": "Fetches data from **Binance**, creates indicators and a strategy with Robomotion's library. Finally plots them with decision labels",
+    "slug": "crypto-trading-with-strategy",
+    "icon": "crypto_trading_with_strategy_icon.jpg",
+    "screenshots": [
+      "crypto_trading_with_strategy_screenshot1.png",
+      "crypto_trading_with_strategy_screenshot2.png"
+    ],
+    "author": "Robomotion",
+    "category": "Other",
+    "tags": [
+      "indicators",
+      "analysis",
+      "exchange",
+      "strategy",
+      "rules"
+    ],
+    "applications": [
+      "Other"
+    ]
+  },
+  {
     "name": "CSV to Google Sheets",
     "description": "Reads range from a CSV file and write it to Google Sheet file.",
     "slug": "csv-to-google-sheets",
@@ -1219,12 +1241,12 @@
     "tags": [
       "bot",
       "message",
-	"receive",
-	"send"
+      "receive",
+      "send"
     ],
     "applications": [
       "Discord",
-	"Slack"
+      "Slack"
     ]
   },
   {

@@ -1,0 +1,1104 @@
+{
+	"nodes": [
+		{
+			"id": "6ce29e24-2dde-44b3-ac32-ba00ca118741",
+			"type": "simple",
+			"selected": true,
+			"x": 1069.8333333333335,
+			"y": -2.958333333333343,
+			"extras": {
+				"inPayload": {
+					"scope": "JS",
+					"name": "Date.now()"
+				},
+				"outPayload": {
+					"scope": "Message",
+					"name": "payload"
+				},
+				"optRepeat": 1,
+				"optOnce": true,
+				"optOnceDelay": 0.1
+			},
+			"ports": [
+				{
+					"id": "8218da10-d8c7-43cf-ba0f-33b13a67363f",
+					"type": "default",
+					"selected": false,
+					"name": "out_8218da10-d8c7-43cf-ba0f-33b13a67363f",
+					"parentNode": "6ce29e24-2dde-44b3-ac32-ba00ca118741",
+					"links": [
+						"24c4937e-7df4-4653-8598-cbacac0325a9"
+					],
+					"in": false,
+					"label": "simple",
+					"position": "out"
+				}
+			],
+			"model": {
+				"id": "6ce29e24-2dde-44b3-ac32-ba00ca118741",
+				"name": "Inject",
+				"icon": "M10,9A1,1 0 0,1 11,8A1,1 0 0,1 12,9V13.47L13.21,13.6L18.15,15.79C18.68,16.03 19,16.56 19,17.14V21.5C18.97,22.32 18.32,22.97 17.5,23H11C10.62,23 10.26,22.85 10,22.57L5.1,18.37L5.84,17.6C6.03,17.39 6.3,17.28 6.58,17.28H6.8L10,19V9M11,5A4,4 0 0,1 15,9C15,10.5 14.2,11.77 13,12.46V11.24C13.61,10.69 14,9.89 14,9A3,3 0 0,0 11,6A3,3 0 0,0 8,9C8,9.89 8.39,10.69 9,11.24V12.46C7.8,11.77 7,10.5 7,9A4,4 0 0,1 11,5Z",
+				"color": "#FDD835",
+				"namespace": "Core.Trigger.Inject",
+				"version": "1.11.6",
+				"abc": [
+					{},
+					{
+						"inPayload": {
+							"scope": "JS",
+							"name": "Date.now()"
+						}
+					},
+					{
+						"outPayload": {
+							"scope": "Message",
+							"name": "payload"
+						}
+					},
+					{
+						"optRepeat": 1,
+						"optOnce": true,
+						"optOnceDelay": 0.1
+					}
+				],
+				"xyz": [
+					{
+						"schema": {
+							"title": "Input",
+							"type": "object",
+							"properties": {
+								"inPayload": {
+									"type": "object",
+									"title": "Payload",
+									"variableType": "String",
+									"customScope": true,
+									"jsScope": true,
+									"argsScope": true,
+									"properties": {
+										"scope": {
+											"type": "string"
+										},
+										"name": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"uiSchema": {
+							"inPayload": {
+								"ui:field": "variable"
+							}
+						},
+						"formData": {
+							"inPayload": {
+								"scope": "JS",
+								"name": "Date.now()"
+							}
+						}
+					},
+					{
+						"schema": {
+							"title": "Output",
+							"type": "object",
+							"properties": {
+								"outPayload": {
+									"type": "object",
+									"title": "Payload",
+									"variableType": "String",
+									"messageOnly": true,
+									"properties": {
+										"scope": {
+											"type": "string"
+										},
+										"name": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"uiSchema": {
+							"outPayload": {
+								"ui:field": "variable"
+							}
+						},
+						"formData": {
+							"outPayload": {
+								"scope": "Message",
+								"name": "payload"
+							}
+						}
+					},
+					{
+						"schema": {
+							"title": "Options",
+							"type": "object",
+							"properties": {
+								"optRepeat": {
+									"title": "Repeat Interval (sec)",
+									"type": "number"
+								},
+								"optOnce": {
+									"title": "Once",
+									"type": "boolean"
+								},
+								"optOnceDelay": {
+									"title": "Once Delay (sec)",
+									"type": "number"
+								}
+							}
+						},
+						"uiSchema": {
+							"ui:order": [
+								"optRepeat",
+								"optOnceDelay",
+								"optOnce"
+							]
+						},
+						"formData": {
+							"optRepeat": 1,
+							"optOnce": true,
+							"optOnceDelay": 0.1
+						}
+					}
+				],
+				"outputs": 1,
+				"inputs": 0
+			}
+		},
+		{
+			"id": "0f2f5b63-9573-4167-bdfb-d992b1acf976",
+			"type": "simple",
+			"selected": true,
+			"x": 1310.0833333333335,
+			"y": -5.166666666666677,
+			"extras": {
+				"outputs": 1,
+				"func": "msg.currency_pair = \"BNBUSDT\";\nmsg.root_path = \"C:\";\nmsg.operating_system = \"windows\"//linux, macos\n\nmsg.start_date = \"2022-03-01 00:00:00\";\nmsg.end_date = \"\" // If it is empty, the end date becomes current date\nreturn msg;",
+				"optTimeout": 30,
+				"variables": []
+			},
+			"ports": [
+				{
+					"id": "cc556b88-6005-4e8f-b061-604a334d1b0c",
+					"type": "default",
+					"selected": false,
+					"name": "out_cc556b88-6005-4e8f-b061-604a334d1b0c",
+					"parentNode": "0f2f5b63-9573-4167-bdfb-d992b1acf976",
+					"links": [
+						"7995432c-ec84-4a15-a8d0-7e13128ef21e"
+					],
+					"in": false,
+					"label": "simple",
+					"position": "out"
+				},
+				{
+					"id": "1ec5d425-702d-4fa2-a9c4-c794a1745b59",
+					"type": "default",
+					"selected": false,
+					"name": "in",
+					"parentNode": "0f2f5b63-9573-4167-bdfb-d992b1acf976",
+					"links": [
+						"24c4937e-7df4-4653-8598-cbacac0325a9"
+					],
+					"in": true,
+					"label": "simple",
+					"position": "in"
+				}
+			],
+			"model": {
+				"id": "0f2f5b63-9573-4167-bdfb-d992b1acf976",
+				"name": "Config",
+				"icon": "M15.6,5.29C14.5,5.19 13.53,6 13.43,7.11L13.18,10H16V12H13L12.56,17.07C12.37,19.27 10.43,20.9 8.23,20.7C6.92,20.59 5.82,19.86 5.17,18.83L6.67,17.33C6.91,18.07 7.57,18.64 8.4,18.71C9.5,18.81 10.47,18 10.57,16.89L11,12H8V10H11.17L11.44,6.93C11.63,4.73 13.57,3.1 15.77,3.3C17.08,3.41 18.18,4.14 18.83,5.17L17.33,6.67C17.09,5.93 16.43,5.36 15.6,5.29Z",
+				"color": "#F27925",
+				"editor": "javascript",
+				"namespace": "Core.Programming.Function",
+				"version": "1.11.6",
+				"abc": [
+					{
+						"name": "Config",
+						"color": "#F27925",
+						"delayBefore": 0,
+						"delayAfter": 0,
+						"continueOnError": false,
+						"version": "1.11.6"
+					},
+					{
+						"outputs": 1,
+						"func": "msg.currency_pair = \"BNBUSDT\";\nmsg.root_path = \"C:\";\nmsg.operating_system = \"windows\"//linux, macos\n\nmsg.start_date = \"2022-03-01 00:00:00\";\nmsg.end_date = \"\" // If it is empty, the end date becomes current date\nreturn msg;",
+						"optTimeout": 30
+					},
+					{
+						"variables": []
+					}
+				],
+				"xyz": [
+					{
+						"schema": {
+							"title": "Options",
+							"type": "object",
+							"properties": {
+								"func": {
+									"title": "Function",
+									"type": "string"
+								},
+								"outputs": {
+									"title": "Outputs",
+									"type": "number",
+									"minimum": 1,
+									"maximum": 32
+								},
+								"optTimeout": {
+									"title": "Script Timeout",
+									"type": "number"
+								}
+							}
+						},
+						"uiSchema": {
+							"outputs": {
+								"ui:widget": "updown"
+							},
+							"func": {
+								"ui:widget": "hidden",
+								"ui:options": {
+									"rows": 6
+								}
+							}
+						},
+						"formData": {
+							"outputs": 1,
+							"func": "msg.currency_pair = \"BNBUSDT\";\nmsg.root_path = \"C:\";\nmsg.operating_system = \"windows\"//linux, macos\n\nmsg.start_date = \"2022-03-01 00:00:00\";\nmsg.end_date = \"\" // If it is empty, the end date becomes current date\nreturn msg;",
+							"optTimeout": 30
+						}
+					},
+					{
+						"schema": {
+							"title": "Local Variables",
+							"type": "object",
+							"properties": {
+								"variables": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"name": {
+												"type": "string"
+											},
+											"variableType": {
+												"type": "string"
+											}
+										}
+									}
+								}
+							}
+						},
+						"uiSchema": {
+							"variables": {
+								"ui:field": "localVariable"
+							}
+						},
+						"formData": {
+							"variables": []
+						}
+					}
+				],
+				"outputs": 1,
+				"inputs": 1
+			}
+		},
+		{
+			"id": "4bf1e7a8-bb41-452e-98e5-75cb901f7b40",
+			"type": "simple",
+			"selected": true,
+			"x": 1312,
+			"y": 95,
+			"extras": {
+				"outputs": 1,
+				"subflow": "https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/4bf1e7a8-bb41-452e-98e5-75cb901f7b40.flow"
+			},
+			"ports": [
+				{
+					"id": "a62dd271-1d4e-4336-b91f-9a5d98c8c506",
+					"type": "default",
+					"selected": false,
+					"name": "out_a62dd271-1d4e-4336-b91f-9a5d98c8c506",
+					"parentNode": "4bf1e7a8-bb41-452e-98e5-75cb901f7b40",
+					"links": [
+						"512b6bfb-5631-4762-9a35-d48918ae3f08"
+					],
+					"in": false,
+					"label": "simple",
+					"position": "out"
+				},
+				{
+					"id": "1c5b9272-1bde-41db-b16a-fe210c9eb3e9",
+					"type": "default",
+					"selected": false,
+					"name": "in",
+					"parentNode": "4bf1e7a8-bb41-452e-98e5-75cb901f7b40",
+					"links": [
+						"68f37aea-2418-4d78-88b5-3fc344f0154f"
+					],
+					"in": true,
+					"label": "simple",
+					"position": "in"
+				}
+			],
+			"model": {
+				"id": "4bf1e7a8-bb41-452e-98e5-75cb901f7b40",
+				"name": "Fetch Data From Binance",
+				"icon": "M4,9C5.31,9 6.42,9.83 6.83,11H17.17C17.58,9.83 18.69,9 20,9A3,3 0 0,1 23,12A3,3 0 0,1 20,15C18.69,15 17.58,14.17 17.17,13H6.83C6.42,14.17 5.31,15 4,15A3,3 0 0,1 1,12A3,3 0 0,1 4,9Z",
+				"color": "#646bf5",
+				"namespace": "Core.Flow.SubFlow",
+				"version": "1.11.6",
+				"abc": [
+					{
+						"name": "Fetch Data From Binance",
+						"version": "1.11.6",
+						"color": "#646bf5",
+						"delayBefore": 0,
+						"delayAfter": 0,
+						"continueOnError": false
+					},
+					{
+						"outputs": 1,
+						"subflow": "https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/4bf1e7a8-bb41-452e-98e5-75cb901f7b40.flow"
+					}
+				],
+				"xyz": [
+					{
+						"schema": {
+							"title": "Options",
+							"type": "object",
+							"properties": {
+								"outputs": {
+									"title": "Outputs",
+									"type": "number",
+									"minimum": 1,
+									"maximum": 32
+								},
+								"subflow": {
+									"type": "string",
+									"properties": {}
+								}
+							}
+						},
+						"uiSchema": {
+							"subflow": {
+								"ui:widget": "hidden"
+							},
+							"outputs": {
+								"ui:widget": "updown"
+							},
+							"ui:order": [
+								"outputs",
+								"*"
+							]
+						},
+						"formData": {
+							"outputs": 1,
+							"subflow": "https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/4bf1e7a8-bb41-452e-98e5-75cb901f7b40.flow"
+						}
+					}
+				],
+				"outputs": 1,
+				"inputs": 1
+			}
+		},
+		{
+			"id": "c205fee9-dda2-4bf5-ab43-1d696190c772",
+			"type": "simple",
+			"selected": true,
+			"x": 1312,
+			"y": 146,
+			"extras": {
+				"outputs": 1,
+				"subflow": "https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/c205fee9-dda2-4bf5-ab43-1d696190c772.flow"
+			},
+			"ports": [
+				{
+					"id": "a37c0397-e28e-4350-adf9-c4f559371ae3",
+					"type": "default",
+					"selected": false,
+					"name": "out_a37c0397-e28e-4350-adf9-c4f559371ae3",
+					"parentNode": "c205fee9-dda2-4bf5-ab43-1d696190c772",
+					"links": [
+						"ecc32b2e-8d22-4e0d-b605-4b7b3d401db3"
+					],
+					"in": false,
+					"label": "simple",
+					"position": "out"
+				},
+				{
+					"id": "a15156c4-eb61-4771-8e95-5224ce27f090",
+					"type": "default",
+					"selected": false,
+					"name": "in",
+					"parentNode": "c205fee9-dda2-4bf5-ab43-1d696190c772",
+					"links": [
+						"512b6bfb-5631-4762-9a35-d48918ae3f08"
+					],
+					"in": true,
+					"label": "simple",
+					"position": "in"
+				}
+			],
+			"model": {
+				"id": "c205fee9-dda2-4bf5-ab43-1d696190c772",
+				"name": "Generate Indicators",
+				"icon": "M4,9C5.31,9 6.42,9.83 6.83,11H17.17C17.58,9.83 18.69,9 20,9A3,3 0 0,1 23,12A3,3 0 0,1 20,15C18.69,15 17.58,14.17 17.17,13H6.83C6.42,14.17 5.31,15 4,15A3,3 0 0,1 1,12A3,3 0 0,1 4,9Z",
+				"color": "#646bf5",
+				"namespace": "Core.Flow.SubFlow",
+				"version": "1.11.6",
+				"abc": [
+					{
+						"name": "Generate Indicators",
+						"color": "#646bf5",
+						"delayBefore": 0,
+						"delayAfter": 0,
+						"continueOnError": false,
+						"version": "1.11.6"
+					},
+					{
+						"outputs": 1,
+						"subflow": "https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/c205fee9-dda2-4bf5-ab43-1d696190c772.flow"
+					}
+				],
+				"xyz": [
+					{
+						"schema": {
+							"title": "Options",
+							"type": "object",
+							"properties": {
+								"outputs": {
+									"title": "Outputs",
+									"type": "number",
+									"minimum": 1,
+									"maximum": 32
+								},
+								"subflow": {
+									"type": "string",
+									"properties": {}
+								}
+							}
+						},
+						"uiSchema": {
+							"subflow": {
+								"ui:widget": "hidden"
+							},
+							"outputs": {
+								"ui:widget": "updown"
+							},
+							"ui:order": [
+								"outputs",
+								"*"
+							]
+						},
+						"formData": {
+							"outputs": 1,
+							"subflow": "https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/c205fee9-dda2-4bf5-ab43-1d696190c772.flow"
+						}
+					}
+				],
+				"outputs": 1,
+				"inputs": 1
+			}
+		},
+		{
+			"id": "e9f3eda8-b934-4543-800b-ff324006938e",
+			"type": "simple",
+			"selected": true,
+			"x": 1311,
+			"y": 198,
+			"extras": {
+				"outputs": 1,
+				"subflow": "https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/e9f3eda8-b934-4543-800b-ff324006938e.flow"
+			},
+			"ports": [
+				{
+					"id": "74cf109c-f87e-478f-8402-a6889c9b25dc",
+					"type": "default",
+					"selected": false,
+					"name": "out_74cf109c-f87e-478f-8402-a6889c9b25dc",
+					"parentNode": "e9f3eda8-b934-4543-800b-ff324006938e",
+					"links": [
+						"49cd16e9-6b36-4f84-99bc-2d546d53403d"
+					],
+					"in": false,
+					"label": "simple",
+					"position": "out"
+				},
+				{
+					"id": "86f99020-0038-42e7-b5d5-41ddae7bab9f",
+					"type": "default",
+					"selected": false,
+					"name": "in",
+					"parentNode": "e9f3eda8-b934-4543-800b-ff324006938e",
+					"links": [
+						"ecc32b2e-8d22-4e0d-b605-4b7b3d401db3"
+					],
+					"in": true,
+					"label": "simple",
+					"position": "in"
+				}
+			],
+			"model": {
+				"id": "e9f3eda8-b934-4543-800b-ff324006938e",
+				"name": "Run Strategy",
+				"icon": "M4,9C5.31,9 6.42,9.83 6.83,11H17.17C17.58,9.83 18.69,9 20,9A3,3 0 0,1 23,12A3,3 0 0,1 20,15C18.69,15 17.58,14.17 17.17,13H6.83C6.42,14.17 5.31,15 4,15A3,3 0 0,1 1,12A3,3 0 0,1 4,9Z",
+				"color": "#646bf5",
+				"namespace": "Core.Flow.SubFlow",
+				"version": "1.11.6",
+				"abc": [
+					{
+						"name": "Run Strategy",
+						"version": "1.11.6",
+						"color": "#646bf5",
+						"delayBefore": 0,
+						"delayAfter": 0,
+						"continueOnError": false
+					},
+					{
+						"outputs": 1,
+						"subflow": "https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/e9f3eda8-b934-4543-800b-ff324006938e.flow"
+					}
+				],
+				"xyz": [
+					{
+						"schema": {
+							"title": "Options",
+							"type": "object",
+							"properties": {
+								"outputs": {
+									"title": "Outputs",
+									"type": "number",
+									"minimum": 1,
+									"maximum": 32
+								},
+								"subflow": {
+									"type": "string",
+									"properties": {}
+								}
+							}
+						},
+						"uiSchema": {
+							"subflow": {
+								"ui:widget": "hidden"
+							},
+							"outputs": {
+								"ui:widget": "updown"
+							},
+							"ui:order": [
+								"outputs",
+								"*"
+							]
+						},
+						"formData": {
+							"outputs": 1,
+							"subflow": "https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/e9f3eda8-b934-4543-800b-ff324006938e.flow"
+						}
+					}
+				],
+				"outputs": 1,
+				"inputs": 1
+			}
+		},
+		{
+			"id": "14994281-f11a-45d3-8ae9-1ad8509ddc05",
+			"type": "simple",
+			"selected": true,
+			"x": 1312,
+			"y": 251,
+			"extras": {
+				"outputs": 1,
+				"subflow": "https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/14994281-f11a-45d3-8ae9-1ad8509ddc05.flow"
+			},
+			"ports": [
+				{
+					"id": "5dbd2022-471d-4492-9faf-ca7952b0231b",
+					"type": "default",
+					"selected": false,
+					"name": "out_5dbd2022-471d-4492-9faf-ca7952b0231b",
+					"parentNode": "14994281-f11a-45d3-8ae9-1ad8509ddc05",
+					"links": [
+						"77b28cd2-e718-4456-8cdf-b4de368e48e6"
+					],
+					"in": false,
+					"label": "simple",
+					"position": "out"
+				},
+				{
+					"id": "06b7010b-a710-4d46-a778-7b902ce7569c",
+					"type": "default",
+					"selected": false,
+					"name": "in",
+					"parentNode": "14994281-f11a-45d3-8ae9-1ad8509ddc05",
+					"links": [
+						"49cd16e9-6b36-4f84-99bc-2d546d53403d"
+					],
+					"in": true,
+					"label": "simple",
+					"position": "in"
+				}
+			],
+			"model": {
+				"id": "14994281-f11a-45d3-8ae9-1ad8509ddc05",
+				"name": "Plot Graph",
+				"icon": "M4,9C5.31,9 6.42,9.83 6.83,11H17.17C17.58,9.83 18.69,9 20,9A3,3 0 0,1 23,12A3,3 0 0,1 20,15C18.69,15 17.58,14.17 17.17,13H6.83C6.42,14.17 5.31,15 4,15A3,3 0 0,1 1,12A3,3 0 0,1 4,9Z",
+				"color": "#646bf5",
+				"namespace": "Core.Flow.SubFlow",
+				"version": "1.11.6",
+				"abc": [
+					{
+						"name": "Plot Graph",
+						"version": "1.11.6",
+						"color": "#646bf5",
+						"delayBefore": 0,
+						"delayAfter": 0,
+						"continueOnError": false
+					},
+					{
+						"outputs": 1,
+						"subflow": "https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/14994281-f11a-45d3-8ae9-1ad8509ddc05.flow"
+					}
+				],
+				"xyz": [
+					{
+						"schema": {
+							"title": "Options",
+							"type": "object",
+							"properties": {
+								"outputs": {
+									"title": "Outputs",
+									"type": "number",
+									"minimum": 1,
+									"maximum": 32
+								},
+								"subflow": {
+									"type": "string",
+									"properties": {}
+								}
+							}
+						},
+						"uiSchema": {
+							"subflow": {
+								"ui:widget": "hidden"
+							},
+							"outputs": {
+								"ui:widget": "updown"
+							},
+							"ui:order": [
+								"outputs",
+								"*"
+							]
+						},
+						"formData": {
+							"outputs": 1,
+							"subflow": "https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/14994281-f11a-45d3-8ae9-1ad8509ddc05.flow"
+						}
+					}
+				],
+				"outputs": 1,
+				"inputs": 1
+			}
+		},
+		{
+			"id": "707b87d7-77d3-44cc-afbd-fea0bd5c65b1",
+			"type": "simple",
+			"selected": true,
+			"x": 720.9583333333334,
+			"y": -127.20833333333333,
+			"extras": {
+				"optText": "##### Crypto Trading With Strategy\n\nThis template fetches historical data from **Binance**, creates EMA5 and EMA100 indicators and creates a strategy with Robomotion's library. Finally plots them with decision labels\n\nFollow these steps to test this template;\n\n**1.** Edit the Config Node\n\n**2.** Update the currency pair with you want\n\n**3.** Update the root path \n\n**4.** Set your operating system\n\n**5.** Set the start date which the starting point of the historical data\n\n**6.** Set the end date which the end point of the historical data. If it is empty, the end date becomes current date\n\n**7.** Create Binance API and Secret keys, put them to your vault as API Key/ Token Type. Finaly select them in the **Connect** node"
+			},
+			"ports": [],
+			"model": {
+				"id": "707b87d7-77d3-44cc-afbd-fea0bd5c65b1",
+				"name": "Comment",
+				"icon": "M21,6V8H3V6H21M3,18H12V16H3V18M3,13H21V11H3V13Z",
+				"color": "#FBE364",
+				"namespace": "Core.Flow.Comment",
+				"version": "1.11.6",
+				"abc": [
+					{},
+					{
+						"optText": "##### Crypto Trading With Strategy\n\nThis template fetches historical data from **Binance**, creates EMA5 and EMA100 indicators and creates a strategy with Robomotion's library. Finally plots them with decision labels\n\nFollow these steps to test this template;\n\n**1.** Edit the Config Node\n\n**2.** Update the currency pair with you want\n\n**3.** Update the root path \n\n**4.** Set your operating system\n\n**5.** Set the start date which the starting point of the historical data\n\n**6.** Set the end date which the end point of the historical data. If it is empty, the end date becomes current date\n\n**7.** Create Binance API and Secret keys, put them to your vault as API Key/ Token Type. Finaly select them in the **Connect** node"
+					}
+				],
+				"xyz": [
+					{
+						"schema": {
+							"title": "Options",
+							"type": "object",
+							"properties": {
+								"comment": {
+									"title": "Comment",
+									"type": "string"
+								},
+								"optText": {
+									"title": "Text",
+									"type": "string"
+								}
+							}
+						},
+						"uiSchema": {
+							"optText": {
+								"ui:description": "Comment",
+								"ui:widget": "hidden",
+								"ui:options": {
+									"rows": 8
+								}
+							},
+							"comment": {
+								"ui:widget": "hidden",
+								"ui:options": {
+									"rows": 6
+								}
+							}
+						},
+						"formData": {
+							"optText": "##### Crypto Trading With Strategy\n\nThis template fetches historical data from **Binance**, creates EMA5 and EMA100 indicators and creates a strategy with Robomotion's library. Finally plots them with decision labels\n\nFollow these steps to test this template;\n\n**1.** Edit the Config Node\n\n**2.** Update the currency pair with you want\n\n**3.** Update the root path \n\n**4.** Set your operating system\n\n**5.** Set the start date which the starting point of the historical data\n\n**6.** Set the end date which the end point of the historical data. If it is empty, the end date becomes current date\n\n**7.** Create Binance API and Secret keys, put them to your vault as API Key/ Token Type. Finaly select them in the **Connect** node"
+						}
+					}
+				],
+				"outputs": 0,
+				"inputs": 0
+			}
+		},
+		{
+			"id": "5200eadb-ed47-4fcf-a7c7-3eb7fc722d17",
+			"type": "simple",
+			"selected": true,
+			"x": 1311.625,
+			"y": 46.833333333333336,
+			"extras": {
+				"outClientID": {
+					"name": "client_id",
+					"scope": "Message"
+				},
+				"optApiKey": {
+					"scope": "Custom",
+					"name": {
+						"vaultId": "8ddc7b5e-7ac3-417f-a95a-cb5a01f9d7e4",
+						"itemId": "e76080ef-4da2-4205-974e-16616362a08e"
+					}
+				},
+				"optSecretKey": {
+					"scope": "Custom",
+					"name": {
+						"vaultId": "8ddc7b5e-7ac3-417f-a95a-cb5a01f9d7e4",
+						"itemId": "a97b4e85-f687-4309-8c61-bf3f12a7b7ea"
+					}
+				}
+			},
+			"ports": [
+				{
+					"id": "3017fed9-8640-4ff9-b5a4-a67470404676",
+					"type": "default",
+					"selected": false,
+					"name": "out_3017fed9-8640-4ff9-b5a4-a67470404676",
+					"parentNode": "5200eadb-ed47-4fcf-a7c7-3eb7fc722d17",
+					"links": [
+						"68f37aea-2418-4d78-88b5-3fc344f0154f"
+					],
+					"in": false,
+					"label": "simple",
+					"position": "out"
+				},
+				{
+					"id": "52fc5727-f567-47b9-97a2-6d3c9a266599",
+					"type": "default",
+					"selected": false,
+					"name": "in",
+					"parentNode": "5200eadb-ed47-4fcf-a7c7-3eb7fc722d17",
+					"links": [
+						"7995432c-ec84-4a15-a8d0-7e13128ef21e"
+					],
+					"in": true,
+					"label": "simple",
+					"position": "in"
+				}
+			],
+			"model": {
+				"id": "5200eadb-ed47-4fcf-a7c7-3eb7fc722d17",
+				"name": "Connect",
+				"icon": "M4.5,5H8V2H10V5H11.5V2H13.5V5C19,5 19,11 16,11.25C20,11 21,19 13.5,19V22H11.5V19H10V22H8V19H4.5L5,17H6A1,1 0 0,0 7,16V8A1,1 0 0,0 6,7H4.5V5M10,7V11C10,11 14.5,11.25 14.5,9C14.5,6.75 10,7 10,7M10,12.5V17C10,17 15.5,17 15.5,14.75C15.5,12.5 10,12.5 10,12.5Z",
+				"color": "#f5ca2d",
+				"namespace": "Robomotion.Binance.Connect",
+				"version": "0.0.10",
+				"abc": [
+					{
+						"name": "Connect",
+						"version": "0.0.10",
+						"color": "#f5ca2d",
+						"delayBefore": 0,
+						"delayAfter": 0,
+						"continueOnError": false
+					},
+					{
+						"outClientID": {
+							"name": "client_id",
+							"scope": "Message"
+						}
+					},
+					{
+						"optApiKey": {
+							"scope": "Custom",
+							"name": {
+								"vaultId": "8ddc7b5e-7ac3-417f-a95a-cb5a01f9d7e4",
+								"itemId": "e76080ef-4da2-4205-974e-16616362a08e"
+							}
+						},
+						"optSecretKey": {
+							"scope": "Custom",
+							"name": {
+								"vaultId": "8ddc7b5e-7ac3-417f-a95a-cb5a01f9d7e4",
+								"itemId": "a97b4e85-f687-4309-8c61-bf3f12a7b7ea"
+							}
+						}
+					}
+				],
+				"xyz": [
+					{
+						"schema": {
+							"type": "object",
+							"title": "Output",
+							"properties": {
+								"outClientID": {
+									"type": "object",
+									"title": "Client Id",
+									"properties": {
+										"name": {
+											"type": "string"
+										},
+										"scope": {
+											"type": "string"
+										}
+									},
+									"messageScope": true,
+									"variableType": "String"
+								}
+							}
+						},
+						"formData": {
+							"outClientID": {
+								"name": "client_id",
+								"scope": "Message"
+							}
+						},
+						"uiSchema": {
+							"outClientID": {
+								"ui:field": "variable"
+							},
+							"ui:order": [
+								"outClientID"
+							]
+						}
+					},
+					{
+						"schema": {
+							"type": "object",
+							"title": "Options",
+							"properties": {
+								"optApiKey": {
+									"type": "object",
+									"title": "Api Key",
+									"subtitle": "Credentials",
+									"category": 0,
+									"properties": {
+										"name": {
+											"properties": {
+												"itemId": {
+													"type": "string"
+												},
+												"vaultId": {
+													"type": "string"
+												}
+											},
+											"type": "object"
+										},
+										"scope": {
+											"type": "string"
+										}
+									},
+									"customScope": true,
+									"messageScope": true
+								},
+								"optSecretKey": {
+									"type": "object",
+									"title": "Secret Key",
+									"subtitle": "Credentials",
+									"category": 0,
+									"properties": {
+										"name": {
+											"properties": {
+												"itemId": {
+													"type": "string"
+												},
+												"vaultId": {
+													"type": "string"
+												}
+											},
+											"type": "object"
+										},
+										"scope": {
+											"type": "string"
+										}
+									},
+									"customScope": true,
+									"messageScope": true
+								}
+							}
+						},
+						"formData": {
+							"optApiKey": {
+								"scope": "Custom",
+								"name": {
+									"vaultId": "8ddc7b5e-7ac3-417f-a95a-cb5a01f9d7e4",
+									"itemId": "e76080ef-4da2-4205-974e-16616362a08e"
+								}
+							},
+							"optSecretKey": {
+								"scope": "Custom",
+								"name": {
+									"vaultId": "8ddc7b5e-7ac3-417f-a95a-cb5a01f9d7e4",
+									"itemId": "a97b4e85-f687-4309-8c61-bf3f12a7b7ea"
+								}
+							}
+						},
+						"uiSchema": {
+							"optApiKey": {
+								"ui:field": "vault"
+							},
+							"optSecretKey": {
+								"ui:field": "vault"
+							},
+							"ui:order": [
+								"optApiKey",
+								"optSecretKey"
+							]
+						}
+					}
+				],
+				"outputs": 1,
+				"inputs": 1
+			}
+		},
+		{
+			"id": "fe60a098-2b62-491a-be5b-7efee0b86985",
+			"type": "simple",
+			"selected": true,
+			"x": 1546.5833333333335,
+			"y": 253.38020833333337,
+			"extras": {
+				"outResult": {
+					"scope": "Message",
+					"name": "error"
+				}
+			},
+			"ports": [
+				{
+					"id": "8dd01877-737d-442e-befa-c12c5ce161de",
+					"type": "default",
+					"selected": false,
+					"name": "in",
+					"parentNode": "fe60a098-2b62-491a-be5b-7efee0b86985",
+					"links": [
+						"77b28cd2-e718-4456-8cdf-b4de368e48e6"
+					],
+					"in": true,
+					"label": "simple",
+					"position": "in"
+				}
+			],
+			"model": {
+				"id": "fe60a098-2b62-491a-be5b-7efee0b86985",
+				"name": "Stop",
+				"icon": "M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4M9,9V15H15V9",
+				"color": "#fb2727",
+				"namespace": "Core.Flow.Stop",
+				"version": "1.11.6",
+				"abc": [
+					{},
+					{
+						"outResult": {
+							"scope": "Message",
+							"name": "error"
+						}
+					}
+				],
+				"xyz": [
+					{
+						"schema": {
+							"title": "Output",
+							"type": "object",
+							"properties": {
+								"outResult": {
+									"type": "object",
+									"title": "Error",
+									"variableType": "String",
+									"messageOnly": true,
+									"properties": {
+										"scope": {
+											"type": "string"
+										},
+										"name": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"uiSchema": {
+							"ui:order": [
+								"outResult"
+							],
+							"outResult": {
+								"ui:field": "variable"
+							}
+						},
+						"formData": {
+							"outResult": {
+								"scope": "Message",
+								"name": "error"
+							}
+						}
+					}
+				],
+				"outputs": 0,
+				"inputs": 1
+			}
+		}
+	],
+	"subFlows": [
+		{
+			"id": "4bf1e7a8-bb41-452e-98e5-75cb901f7b40",
+			"flow": "{\"id\":\"4bf1e7a8-bb41-452e-98e5-75cb901f7b40\",\"offsetX\":22,\"offsetY\":114,\"zoom\":100,\"gridSize\":0,\"links\":[{\"id\":\"b9b7cf2e-1604-4c5c-a58b-9a937e133892\",\"type\":\"default\",\"selected\":false,\"source\":\"2b1e78ea-56ce-42f1-8a5b-d3dc47153f5a\",\"sourcePort\":\"4eb2eac7-ec7e-47de-8b9a-edabd3495dde\",\"target\":\"42955cc4-9bdf-4c2d-bd9b-6f0c58c91d9e\",\"targetPort\":\"690c3811-a1be-4671-927a-b1f730ea6603\",\"points\":[{\"id\":\"ea82feb7-b604-47d0-800d-636f5852bbc3\",\"selected\":false,\"x\":1120,\"y\":181},{\"id\":\"87e2148c-827a-48fe-9c78-76531e277468\",\"selected\":true,\"x\":1167,\"y\":307.5}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"3baf1e90-4718-4fe9-ba28-977a50e651e0\",\"type\":\"default\",\"selected\":false,\"source\":\"18024016-e8b0-4246-b13e-38b125bdb281\",\"sourcePort\":\"4abfb819-a994-4f79-9992-d63bf822316e\",\"target\":\"e5f6687d-e94b-4df1-a62f-f5d70d46b927\",\"targetPort\":\"8f7cd183-5ec9-4a0e-8169-22f0d8dedb2d\",\"points\":[{\"id\":\"5d3a512b-7ebf-46fb-ab42-a68b300f524d\",\"selected\":false,\"x\":923,\"y\":83},{\"id\":\"ae50353a-873f-44d6-8ade-42d4ff7a6ace\",\"selected\":true,\"x\":761,\"y\":309.5}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":-300},{\"id\":\"14a932d7-72cc-4fff-b0c0-169472f3785e\",\"type\":\"default\",\"selected\":false,\"source\":\"645ae321-c461-4405-9bb6-78f7d6c02b25\",\"sourcePort\":\"4fcc5049-0479-4cf3-924f-c728f968896b\",\"target\":\"18024016-e8b0-4246-b13e-38b125bdb281\",\"targetPort\":\"bbbd09ec-878a-452c-9572-e5c3f3159050\",\"points\":[{\"id\":\"1b3a8523-5855-443a-8a56-517634390bef\",\"selected\":false,\"x\":925,\"y\":133},{\"id\":\"5761fd49-5cc9-4ca2-80be-25871ddea837\",\"selected\":false,\"x\":1125,\"y\":85}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":-300},{\"id\":\"39f1c404-3a17-4a3c-bb13-df92ae4f0acc\",\"type\":\"default\",\"selected\":false,\"source\":\"645ae321-c461-4405-9bb6-78f7d6c02b25\",\"sourcePort\":\"dfdcbb11-0053-4d3e-b5a9-e0336d4c5352\",\"target\":\"2b1e78ea-56ce-42f1-8a5b-d3dc47153f5a\",\"targetPort\":\"ab3703e4-c88c-4ce7-87e7-efa3076cec4d\",\"points\":[{\"id\":\"30cf70c0-f4c3-4c0e-9fa6-fdf355acd966\",\"selected\":false,\"x\":1127,\"y\":135},{\"id\":\"68722e84-c399-42be-b151-3da664c9d4a6\",\"selected\":false,\"x\":918,\"y\":179}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300}],\"nodes\":[{\"id\":\"e5f6687d-e94b-4df1-a62f-f5d70d46b927\",\"type\":\"simple\",\"selected\":false,\"x\":560,\"y\":284.5,\"extras\":{},\"ports\":[{\"id\":\"8f7cd183-5ec9-4a0e-8169-22f0d8dedb2d\",\"type\":\"default\",\"selected\":false,\"name\":\"out_8f7cd183-5ec9-4a0e-8169-22f0d8dedb2d\",\"parentNode\":\"e5f6687d-e94b-4df1-a62f-f5d70d46b927\",\"links\":[\"3baf1e90-4718-4fe9-ba28-977a50e651e0\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"}],\"model\":{\"id\":\"e5f6687d-e94b-4df1-a62f-f5d70d46b927\",\"name\":\"Begin\",\"icon\":\"M4,9C5.31,9 6.42,9.83 6.83,11H22V13H6.83C6.42,14.17 5.31,15 4,15A3,3 0 0,1 1,12A3,3 0 0,1 4,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.Begin\",\"version\":\"0.0\",\"abc\":[],\"xyz\":[],\"outputs\":1,\"inputs\":0}},{\"id\":\"42955cc4-9bdf-4c2d-bd9b-6f0c58c91d9e\",\"type\":\"simple\",\"selected\":false,\"x\":1160,\"y\":284.5,\"extras\":{\"sfPort\":0},\"ports\":[{\"id\":\"690c3811-a1be-4671-927a-b1f730ea6603\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"42955cc4-9bdf-4c2d-bd9b-6f0c58c91d9e\",\"links\":[\"b9b7cf2e-1604-4c5c-a58b-9a937e133892\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"42955cc4-9bdf-4c2d-bd9b-6f0c58c91d9e\",\"name\":\"End\",\"icon\":\"M20,9C18.69,9 17.58,9.83 17.17,11H2V13H17.17C17.58,14.17 18.69,15 20,15A3,3 0 0,0 23,12A3,3 0 0,0 20,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.End\",\"version\":\"0.0\",\"abc\":[{},{\"sfPort\":0}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"sfPort\":{\"title\":\"Port\",\"type\":\"number\"}}},\"uiSchema\":{\"sfPort\":{\"ui:widget\":\"hidden\"},\"ui:order\":[\"*\"]},\"formData\":{\"sfPort\":0}}],\"outputs\":0,\"inputs\":1}},{\"id\":\"2b1e78ea-56ce-42f1-8a5b-d3dc47153f5a\",\"type\":\"simple\",\"selected\":false,\"x\":911,\"y\":156,\"extras\":{\"inClientID\":{\"name\":\"client_id\",\"scope\":\"Message\"},\"inCurrencyPair\":{\"name\":\"currency_pair\",\"scope\":\"Message\"},\"inCustomInterval\":{\"scope\":\"Custom\",\"name\":\"1h\"},\"inDelayBetweenReq\":{\"name\":\"0.5\",\"scope\":\"Custom\"},\"inEndTime\":{\"name\":\"end_date\",\"scope\":\"Message\"},\"inLimit\":{\"scope\":\"Custom\",\"name\":\"0\"},\"inSavePath\":{\"name\":\"export_path\",\"scope\":\"Message\"},\"inStartTime\":{\"name\":\"start_date\",\"scope\":\"Message\"},\"optInterval\":\"1h\"},\"ports\":[{\"id\":\"4eb2eac7-ec7e-47de-8b9a-edabd3495dde\",\"type\":\"default\",\"selected\":false,\"name\":\"out_4eb2eac7-ec7e-47de-8b9a-edabd3495dde\",\"parentNode\":\"2b1e78ea-56ce-42f1-8a5b-d3dc47153f5a\",\"links\":[\"b9b7cf2e-1604-4c5c-a58b-9a937e133892\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"ab3703e4-c88c-4ce7-87e7-efa3076cec4d\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"2b1e78ea-56ce-42f1-8a5b-d3dc47153f5a\",\"links\":[\"39f1c404-3a17-4a3c-bb13-df92ae4f0acc\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"2b1e78ea-56ce-42f1-8a5b-d3dc47153f5a\",\"name\":\"Get Price History\",\"icon\":\"M4.5,5H8V2H10V5H11.5V2H13.5V5C19,5 19,11 16,11.25C20,11 21,19 13.5,19V22H11.5V19H10V22H8V19H4.5L5,17H6A1,1 0 0,0 7,16V8A1,1 0 0,0 6,7H4.5V5M10,7V11C10,11 14.5,11.25 14.5,9C14.5,6.75 10,7 10,7M10,12.5V17C10,17 15.5,17 15.5,14.75C15.5,12.5 10,12.5 10,12.5Z\",\"color\":\"#f5ca2d\",\"namespace\":\"Robomotion.Binance.GetPriceHistory\",\"version\":\"0.0.10\",\"abc\":[{\"name\":\"Get Price History\",\"version\":\"0.0.10\",\"color\":\"#f5ca2d\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"inClientID\":{\"name\":\"client_id\",\"scope\":\"Message\"},\"inCurrencyPair\":{\"name\":\"currency_pair\",\"scope\":\"Message\"},\"inCustomInterval\":{\"scope\":\"Custom\",\"name\":\"1h\"},\"inDelayBetweenReq\":{\"name\":\"0.5\",\"scope\":\"Custom\"},\"inEndTime\":{\"name\":\"end_date\",\"scope\":\"Message\"},\"inLimit\":{\"scope\":\"Custom\",\"name\":\"0\"},\"inSavePath\":{\"name\":\"export_path\",\"scope\":\"Message\"},\"inStartTime\":{\"name\":\"start_date\",\"scope\":\"Message\"}},{\"optInterval\":\"1h\"}],\"xyz\":[{\"schema\":{\"type\":\"object\",\"title\":\"Input\",\"properties\":{\"inClientID\":{\"type\":\"object\",\"title\":\"Client Id\",\"properties\":{\"name\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"}},\"messageScope\":true,\"variableType\":\"String\"},\"inCurrencyPair\":{\"type\":\"object\",\"title\":\"Currency Pair\",\"properties\":{\"name\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true,\"variableType\":\"String\"},\"inCustomInterval\":{\"type\":\"object\",\"title\":\"Custom Interval\",\"properties\":{\"name\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true,\"variableType\":\"String\"},\"inDelayBetweenReq\":{\"type\":\"object\",\"title\":\"Delay Between Request\",\"properties\":{\"name\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true,\"variableType\":\"Number\"},\"inEndTime\":{\"type\":\"object\",\"title\":\"End Date\",\"properties\":{\"name\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true,\"variableType\":\"String\"},\"inLimit\":{\"type\":\"object\",\"title\":\"Limit\",\"properties\":{\"name\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true,\"variableType\":\"Number\"},\"inSavePath\":{\"type\":\"object\",\"title\":\"Save Path\",\"properties\":{\"name\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true,\"variableType\":\"String\"},\"inStartTime\":{\"type\":\"object\",\"title\":\"Start Date\",\"properties\":{\"name\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true,\"variableType\":\"String\"}}},\"formData\":{\"inClientID\":{\"name\":\"client_id\",\"scope\":\"Message\"},\"inCurrencyPair\":{\"name\":\"currency_pair\",\"scope\":\"Message\"},\"inCustomInterval\":{\"scope\":\"Custom\",\"name\":\"1h\"},\"inDelayBetweenReq\":{\"name\":\"0.5\",\"scope\":\"Custom\"},\"inEndTime\":{\"name\":\"end_date\",\"scope\":\"Message\"},\"inLimit\":{\"scope\":\"Custom\",\"name\":\"0\"},\"inSavePath\":{\"name\":\"export_path\",\"scope\":\"Message\"},\"inStartTime\":{\"name\":\"start_date\",\"scope\":\"Message\"}},\"uiSchema\":{\"inClientID\":{\"ui:field\":\"variable\"},\"inCurrencyPair\":{\"ui:field\":\"variable\"},\"inCustomInterval\":{\"ui:field\":\"variable\"},\"inDelayBetweenReq\":{\"ui:field\":\"variable\"},\"inEndTime\":{\"ui:field\":\"variable\"},\"inLimit\":{\"ui:field\":\"variable\"},\"inSavePath\":{\"ui:field\":\"variable\"},\"inStartTime\":{\"ui:field\":\"variable\"},\"ui:order\":[\"inClientID\",\"inCurrencyPair\",\"inLimit\",\"inStartTime\",\"inEndTime\",\"inSavePath\",\"inDelayBetweenReq\",\"inCustomInterval\"]}},{\"schema\":{\"type\":\"object\",\"title\":\"Options\",\"properties\":{\"optInterval\":{\"type\":\"string\",\"title\":\"Interval\",\"multiple\":true,\"enum\":[\"1m\",\"3m\",\"5m\",\"15m\",\"30m\",\"1h\",\"2h\",\"4h\",\"6h\",\"8h\",\"12h\",\"1d\",\"3d\",\"1w\",\"1M\"],\"enumNames\":[\"1 Minute\",\"3 Minutes\",\"5 Minutes\",\"15 Minutes\",\"30 Minutes\",\"1 Hour\",\"2 Hours\",\"4 Hours\",\"6 Hours\",\"8 Hours\",\"12 Hours\",\"1 Day\",\"3 Days\",\"1 Week\",\"1 Month\"]}}},\"formData\":{\"optInterval\":\"1h\"},\"uiSchema\":{\"ui:order\":[\"optInterval\"]}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"645ae321-c461-4405-9bb6-78f7d6c02b25\",\"type\":\"simple\",\"selected\":false,\"x\":918,\"y\":110,\"extras\":{\"outputs\":1,\"func\":\"msg.start_date = \\\"\\\"+new Date(msg.start_date).getTime();\\n\\nif(msg.end_date){\\n  msg.end_date = \\\"\\\"+new Date(msg.end_date).getTime();\\n}else{\\n  msg.end_date = \\\"\\\"+new Date().getTime();\\n}\\nmsg.limit = \\\"0\\\"\\nmsg.interval = \\\"1h\\\"\\nreturn msg;\",\"optTimeout\":30,\"variables\":[]},\"ports\":[{\"id\":\"dfdcbb11-0053-4d3e-b5a9-e0336d4c5352\",\"type\":\"default\",\"selected\":false,\"name\":\"out_dfdcbb11-0053-4d3e-b5a9-e0336d4c5352\",\"parentNode\":\"645ae321-c461-4405-9bb6-78f7d6c02b25\",\"links\":[\"39f1c404-3a17-4a3c-bb13-df92ae4f0acc\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"4fcc5049-0479-4cf3-924f-c728f968896b\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"645ae321-c461-4405-9bb6-78f7d6c02b25\",\"links\":[\"14a932d7-72cc-4fff-b0c0-169472f3785e\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"645ae321-c461-4405-9bb6-78f7d6c02b25\",\"name\":\"Set Dates\",\"icon\":\"M15.6,5.29C14.5,5.19 13.53,6 13.43,7.11L13.18,10H16V12H13L12.56,17.07C12.37,19.27 10.43,20.9 8.23,20.7C6.92,20.59 5.82,19.86 5.17,18.83L6.67,17.33C6.91,18.07 7.57,18.64 8.4,18.71C9.5,18.81 10.47,18 10.57,16.89L11,12H8V10H11.17L11.44,6.93C11.63,4.73 13.57,3.1 15.77,3.3C17.08,3.41 18.18,4.14 18.83,5.17L17.33,6.67C17.09,5.93 16.43,5.36 15.6,5.29Z\",\"color\":\"#F27925\",\"editor\":\"javascript\",\"namespace\":\"Core.Programming.Function\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Set Dates\",\"color\":\"#F27925\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false,\"version\":\"1.11.6\"},{\"outputs\":1,\"func\":\"msg.start_date = \\\"\\\"+new Date(msg.start_date).getTime();\\n\\nif(msg.end_date){\\n  msg.end_date = \\\"\\\"+new Date(msg.end_date).getTime();\\n}else{\\n  msg.end_date = \\\"\\\"+new Date().getTime();\\n}\\nmsg.limit = \\\"0\\\"\\nmsg.interval = \\\"1h\\\"\\nreturn msg;\",\"optTimeout\":30},{\"variables\":[]}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"func\":{\"title\":\"Function\",\"type\":\"string\"},\"outputs\":{\"title\":\"Outputs\",\"type\":\"number\",\"minimum\":1,\"maximum\":32},\"optTimeout\":{\"title\":\"Script Timeout\",\"type\":\"number\"}}},\"uiSchema\":{\"outputs\":{\"ui:widget\":\"updown\"},\"func\":{\"ui:widget\":\"hidden\",\"ui:options\":{\"rows\":6}}},\"formData\":{\"outputs\":1,\"func\":\"msg.start_date = \\\"\\\"+new Date(msg.start_date).getTime();\\n\\nif(msg.end_date){\\n  msg.end_date = \\\"\\\"+new Date(msg.end_date).getTime();\\n}else{\\n  msg.end_date = \\\"\\\"+new Date().getTime();\\n}\\nmsg.limit = \\\"0\\\"\\nmsg.interval = \\\"1h\\\"\\nreturn msg;\",\"optTimeout\":30}},{\"schema\":{\"title\":\"Local Variables\",\"type\":\"object\",\"properties\":{\"variables\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"variableType\":{\"type\":\"string\"}}}}}},\"uiSchema\":{\"variables\":{\"ui:field\":\"localVariable\"}},\"formData\":{\"variables\":[]}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"18024016-e8b0-4246-b13e-38b125bdb281\",\"type\":\"simple\",\"selected\":false,\"x\":916,\"y\":60,\"extras\":{\"outputs\":1,\"func\":\"msg.splitter = \\\"\\\\\\\\\\\";\\nif (msg.operating_system !== \\\"windows\\\"){\\n  msg.splitter = \\\"/\\\"\\n}\\nmsg.export_path = msg.root_path + msg.splitter + \\\"export.csv\\\";\\nmsg.ema5_path = msg.root_path + msg.splitter + \\\"ema5.csv\\\";\\nmsg.ema100_path = msg.root_path + msg.splitter + \\\"ema100.csv\\\";\\nmsg.rules_path = msg.root_path + msg.splitter + \\\"rules.grb\\\";\\nmsg.rules_result_path = msg.root_path + msg.splitter + \\\"rules_result.csv\\\";\\nmsg.result_path = msg.root_path + msg.splitter + \\\"result.html\\\";\\nreturn msg;\",\"optTimeout\":30,\"variables\":[]},\"ports\":[{\"id\":\"bbbd09ec-878a-452c-9572-e5c3f3159050\",\"type\":\"default\",\"selected\":false,\"name\":\"out_bbbd09ec-878a-452c-9572-e5c3f3159050\",\"parentNode\":\"18024016-e8b0-4246-b13e-38b125bdb281\",\"links\":[\"14a932d7-72cc-4fff-b0c0-169472f3785e\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"4abfb819-a994-4f79-9992-d63bf822316e\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"18024016-e8b0-4246-b13e-38b125bdb281\",\"links\":[\"3baf1e90-4718-4fe9-ba28-977a50e651e0\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"18024016-e8b0-4246-b13e-38b125bdb281\",\"name\":\"Set Paths\",\"icon\":\"M15.6,5.29C14.5,5.19 13.53,6 13.43,7.11L13.18,10H16V12H13L12.56,17.07C12.37,19.27 10.43,20.9 8.23,20.7C6.92,20.59 5.82,19.86 5.17,18.83L6.67,17.33C6.91,18.07 7.57,18.64 8.4,18.71C9.5,18.81 10.47,18 10.57,16.89L11,12H8V10H11.17L11.44,6.93C11.63,4.73 13.57,3.1 15.77,3.3C17.08,3.41 18.18,4.14 18.83,5.17L17.33,6.67C17.09,5.93 16.43,5.36 15.6,5.29Z\",\"color\":\"#F27925\",\"editor\":\"javascript\",\"namespace\":\"Core.Programming.Function\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Set Paths\",\"color\":\"#F27925\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false,\"version\":\"1.11.6\"},{\"outputs\":1,\"func\":\"msg.splitter = \\\"\\\\\\\\\\\";\\nif (msg.operating_system !== \\\"windows\\\"){\\n  msg.splitter = \\\"/\\\"\\n}\\nmsg.export_path = msg.root_path + msg.splitter + \\\"export.csv\\\";\\nmsg.ema5_path = msg.root_path + msg.splitter + \\\"ema5.csv\\\";\\nmsg.ema100_path = msg.root_path + msg.splitter + \\\"ema100.csv\\\";\\nmsg.rules_path = msg.root_path + msg.splitter + \\\"rules.grb\\\";\\nmsg.rules_result_path = msg.root_path + msg.splitter + \\\"rules_result.csv\\\";\\nmsg.result_path = msg.root_path + msg.splitter + \\\"result.html\\\";\\nreturn msg;\",\"optTimeout\":30},{\"variables\":[]}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"func\":{\"title\":\"Function\",\"type\":\"string\"},\"outputs\":{\"title\":\"Outputs\",\"type\":\"number\",\"minimum\":1,\"maximum\":32},\"optTimeout\":{\"title\":\"Script Timeout\",\"type\":\"number\"}}},\"uiSchema\":{\"outputs\":{\"ui:widget\":\"updown\"},\"func\":{\"ui:widget\":\"hidden\",\"ui:options\":{\"rows\":6}}},\"formData\":{\"outputs\":1,\"func\":\"msg.splitter = \\\"\\\\\\\\\\\";\\nif (msg.operating_system !== \\\"windows\\\"){\\n  msg.splitter = \\\"/\\\"\\n}\\nmsg.export_path = msg.root_path + msg.splitter + \\\"export.csv\\\";\\nmsg.ema5_path = msg.root_path + msg.splitter + \\\"ema5.csv\\\";\\nmsg.ema100_path = msg.root_path + msg.splitter + \\\"ema100.csv\\\";\\nmsg.rules_path = msg.root_path + msg.splitter + \\\"rules.grb\\\";\\nmsg.rules_result_path = msg.root_path + msg.splitter + \\\"rules_result.csv\\\";\\nmsg.result_path = msg.root_path + msg.splitter + \\\"result.html\\\";\\nreturn msg;\",\"optTimeout\":30}},{\"schema\":{\"title\":\"Local Variables\",\"type\":\"object\",\"properties\":{\"variables\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"variableType\":{\"type\":\"string\"}}}}}},\"uiSchema\":{\"variables\":{\"ui:field\":\"localVariable\"}},\"formData\":{\"variables\":[]}}],\"outputs\":1,\"inputs\":1}}]}"
+		},
+		{
+			"id": "c205fee9-dda2-4bf5-ab43-1d696190c772",
+			"flow": "{\"id\":\"c205fee9-dda2-4bf5-ab43-1d696190c772\",\"offsetX\":32,\"offsetY\":171,\"zoom\":100,\"gridSize\":0,\"links\":[{\"id\":\"7ed516de-8dfe-44a2-b1de-1ca3ddecab25\",\"type\":\"default\",\"selected\":false,\"source\":\"6dd809b4-5e19-40c9-a717-eb0d01033a7e\",\"sourcePort\":\"9818430d-818d-4f43-9bf7-320befac0b9f\",\"target\":\"318cbe8c-149e-4eb6-b3bb-b45ead788b2e\",\"targetPort\":\"d17725ce-772f-476b-8766-c657fa4c5c25\",\"points\":[{\"id\":\"48a944e7-5ed4-430c-a3ea-4c638e49636e\",\"selected\":false,\"x\":1058,\"y\":176},{\"id\":\"51e5f0c7-d6c6-48f3-b90a-2bb06cf21100\",\"selected\":false,\"x\":858,\"y\":223}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"dfd308a9-7ab4-42da-b8c3-adf1d82811b3\",\"type\":\"default\",\"selected\":false,\"source\":\"318cbe8c-149e-4eb6-b3bb-b45ead788b2e\",\"sourcePort\":\"bd00212c-d8c8-4212-83ad-03cccb7a9d54\",\"target\":\"cb63a0a2-8d97-4433-a294-a4efb95a178f\",\"targetPort\":\"d6e563b4-28fc-4c43-a8fc-e0bd032a7381\",\"points\":[{\"id\":\"99ea2935-1600-4002-888c-3f18323abd77\",\"selected\":false,\"x\":1060,\"y\":225},{\"id\":\"d0ecbbdb-1782-4491-bf7a-2e4fb592fb2e\",\"selected\":false,\"x\":855,\"y\":273}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"8091dc70-c7be-45ac-b7c3-205e0412868b\",\"type\":\"default\",\"selected\":false,\"source\":\"cb63a0a2-8d97-4433-a294-a4efb95a178f\",\"sourcePort\":\"2c6737a9-8252-4823-b3bf-0ca866cc18e2\",\"target\":\"635c1618-5336-43ab-8633-8b95398c604f\",\"targetPort\":\"27e7e7bc-8359-4081-b374-c205c2666bf6\",\"points\":[{\"id\":\"913cf724-16bc-48ad-9327-3c156a5b136f\",\"selected\":false,\"x\":1057,\"y\":275},{\"id\":\"33ca50ce-485b-4ea2-b5d7-a633b082fe19\",\"selected\":false,\"x\":853,\"y\":322}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"35d4c0e6-ea28-4419-ad03-77e7647c9521\",\"type\":\"default\",\"selected\":false,\"source\":\"635c1618-5336-43ab-8633-8b95398c604f\",\"sourcePort\":\"207b4bad-9f50-4328-9399-9d4593f198a9\",\"target\":\"cd327537-f7cb-4a70-92cd-02373cadd040\",\"targetPort\":\"d2e8f63d-0552-4013-ac94-8686180e4b82\",\"points\":[{\"id\":\"fbd428ff-517e-44cf-ab3c-362b8d03df1c\",\"selected\":false,\"x\":1055,\"y\":324},{\"id\":\"808fec4e-ee40-4d8a-9622-c99b218339e1\",\"selected\":false,\"x\":854,\"y\":371}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"e0cadc4c-501c-48e4-862c-a353e2fb748b\",\"type\":\"default\",\"selected\":false,\"source\":\"cd327537-f7cb-4a70-92cd-02373cadd040\",\"sourcePort\":\"7999b4a6-99b9-48c7-ac87-c11895b44f16\",\"target\":\"faf0c80b-7589-43b9-b8d5-7b6db38b3881\",\"targetPort\":\"109eec15-e1a0-427e-9364-0525ad33ff58\",\"points\":[{\"id\":\"7c964ece-aa95-4683-ad4f-7dc385367b53\",\"selected\":false,\"x\":1113.796875,\"y\":373},{\"id\":\"f6d5cf86-3491-4e60-91af-31b30a3da297\",\"selected\":false,\"x\":1183,\"y\":308.5}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"8a6e137f-52c7-4178-88db-5e50bea38e87\",\"type\":\"default\",\"selected\":false,\"source\":\"eab91d33-50ef-4891-9017-5997823420fa\",\"sourcePort\":\"2d9d7d21-97b9-48a8-8b9c-8901c47188c9\",\"target\":\"e42a5d8d-edc5-4109-ad49-bff07ee746b4\",\"targetPort\":\"de548610-8980-4a34-b820-d475d84c7b47\",\"points\":[{\"id\":\"53b12327-dbae-4787-b923-93cafc723b54\",\"selected\":false,\"x\":761,\"y\":309.5},{\"id\":\"fde89792-fb9f-4c8c-9f1b-2334f3e894b5\",\"selected\":false,\"x\":855,\"y\":124}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"43201dee-c4c2-4d17-bebe-e08e74570529\",\"type\":\"default\",\"selected\":false,\"source\":\"6dd809b4-5e19-40c9-a717-eb0d01033a7e\",\"sourcePort\":\"46654548-8700-40e3-ab88-629aec57c9fe\",\"target\":\"e42a5d8d-edc5-4109-ad49-bff07ee746b4\",\"targetPort\":\"b39602e2-ea94-4d7e-a8a9-ae0a1ece9af4\",\"points\":[{\"id\":\"823e3f43-637e-4527-b7f7-7578554a1d34\",\"selected\":false,\"x\":856,\"y\":174},{\"id\":\"31181020-2974-4b07-b920-d4d446181bbd\",\"selected\":false,\"x\":1057,\"y\":126}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":-300}],\"nodes\":[{\"id\":\"eab91d33-50ef-4891-9017-5997823420fa\",\"type\":\"simple\",\"selected\":false,\"x\":560,\"y\":284.5,\"extras\":{},\"ports\":[{\"id\":\"2d9d7d21-97b9-48a8-8b9c-8901c47188c9\",\"type\":\"default\",\"selected\":false,\"name\":\"out_2d9d7d21-97b9-48a8-8b9c-8901c47188c9\",\"parentNode\":\"eab91d33-50ef-4891-9017-5997823420fa\",\"links\":[\"8a6e137f-52c7-4178-88db-5e50bea38e87\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"}],\"model\":{\"id\":\"eab91d33-50ef-4891-9017-5997823420fa\",\"name\":\"Begin\",\"icon\":\"M4,9C5.31,9 6.42,9.83 6.83,11H22V13H6.83C6.42,14.17 5.31,15 4,15A3,3 0 0,1 1,12A3,3 0 0,1 4,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.Begin\",\"version\":\"0.0\",\"abc\":[],\"xyz\":[],\"outputs\":1,\"inputs\":0}},{\"id\":\"faf0c80b-7589-43b9-b8d5-7b6db38b3881\",\"type\":\"simple\",\"selected\":false,\"x\":1176,\"y\":285.5,\"extras\":{\"sfPort\":0},\"ports\":[{\"id\":\"109eec15-e1a0-427e-9364-0525ad33ff58\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"faf0c80b-7589-43b9-b8d5-7b6db38b3881\",\"links\":[\"e0cadc4c-501c-48e4-862c-a353e2fb748b\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"faf0c80b-7589-43b9-b8d5-7b6db38b3881\",\"name\":\"End\",\"icon\":\"M20,9C18.69,9 17.58,9.83 17.17,11H2V13H17.17C17.58,14.17 18.69,15 20,15A3,3 0 0,0 23,12A3,3 0 0,0 20,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.End\",\"version\":\"0.0\",\"abc\":[{},{\"sfPort\":0}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"sfPort\":{\"title\":\"Port\",\"type\":\"number\"}}},\"uiSchema\":{\"sfPort\":{\"ui:widget\":\"hidden\"},\"ui:order\":[\"*\"]},\"formData\":{\"sfPort\":0}}],\"outputs\":0,\"inputs\":1}},{\"id\":\"6dd809b4-5e19-40c9-a717-eb0d01033a7e\",\"type\":\"simple\",\"selected\":false,\"x\":849,\"y\":151,\"extras\":{\"inPath\":{\"scope\":\"Message\",\"name\":\"export_path\"},\"inIndex\":{\"scope\":\"Custom\",\"name\":\"openTime\"},\"inLenght\":{\"scope\":\"Custom\",\"name\":\"5\"},\"inIndicatorPath\":{\"scope\":\"Message\",\"name\":\"ema5_path\"},\"optIndicator\":\"ema\"},\"ports\":[{\"id\":\"9818430d-818d-4f43-9bf7-320befac0b9f\",\"type\":\"default\",\"selected\":false,\"name\":\"out_9818430d-818d-4f43-9bf7-320befac0b9f\",\"parentNode\":\"6dd809b4-5e19-40c9-a717-eb0d01033a7e\",\"links\":[\"7ed516de-8dfe-44a2-b1de-1ca3ddecab25\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"46654548-8700-40e3-ab88-629aec57c9fe\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"6dd809b4-5e19-40c9-a717-eb0d01033a7e\",\"links\":[\"43201dee-c4c2-4d17-bebe-e08e74570529\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"6dd809b4-5e19-40c9-a717-eb0d01033a7e\",\"name\":\"Overlap Indicators\",\"icon\":\"M2 2H4V20H22V22H2V2M17 2H20V18H17V2M6 11H9V18H6V11M13 3H16V7H13V3M10 8H13V12H10V8Z\",\"color\":\"#ed7a4f\",\"namespace\":\"Robomotion.TechnicalAnalysis.Overlap\",\"version\":\"0.1.2\",\"abc\":[{\"name\":\"Overlap Indicators\",\"version\":\"0.1.2\",\"color\":\"#ed7a4f\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"inPath\":{\"scope\":\"Message\",\"name\":\"export_path\"},\"inIndex\":{\"scope\":\"Custom\",\"name\":\"openTime\"},\"inLenght\":{\"scope\":\"Custom\",\"name\":\"5\"},\"inIndicatorPath\":{\"scope\":\"Message\",\"name\":\"ema5_path\"}},{\"optIndicator\":\"ema\"}],\"xyz\":[{\"schema\":{\"title\":\"Input\",\"type\":\"object\",\"properties\":{\"inPath\":{\"type\":\"object\",\"title\":\"Data Path\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inIndex\":{\"type\":\"object\",\"title\":\"Index Key\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inLenght\":{\"type\":\"object\",\"title\":\"Length\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inIndicatorPath\":{\"type\":\"object\",\"title\":\"Indicator Path\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true}}},\"uiSchema\":{\"inPath\":{\"ui:field\":\"variable\"},\"inIndex\":{\"ui:field\":\"variable\"},\"inLenght\":{\"ui:field\":\"variable\"},\"inIndicatorPath\":{\"ui:field\":\"variable\"},\"ui:order\":[\"inPath\",\"inIndex\",\"inLenght\",\"inIndicatorPath\"]},\"formData\":{\"inPath\":{\"scope\":\"Message\",\"name\":\"export_path\"},\"inIndex\":{\"scope\":\"Custom\",\"name\":\"openTime\"},\"inLenght\":{\"scope\":\"Custom\",\"name\":\"5\"},\"inIndicatorPath\":{\"scope\":\"Message\",\"name\":\"ema5_path\"}}},{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"optIndicator\":{\"type\":\"string\",\"title\":\"Indicator\",\"enum\":[\"alma\",\"dema\",\"ema\",\"fwma\",\"hilo\",\"hl2\",\"hlc3\",\"hma\",\"hwma\",\"jma\",\"kama\",\"linreg\",\"mcgd\",\"midpoint\",\"midprice\",\"ohlc4\",\"pwma\",\"rma\",\"sinwma\",\"sma\",\"ssf\",\"supertrend\",\"swma\",\"t3\",\"tema\",\"trima\",\"vidya\",\"vwap\",\"vwma\",\"wcp\",\"wma\",\"zlma\"],\"enumNames\":[\"ALMA (Arnaud Legoux Moving Average)\",\"DEMA (Double Exponential Moving Average)\",\"EMA (Exponential Moving Average)\",\"FWMA (Fibonacci's Weighted Moving Average)\",\"HILO (Gann High-Low Activator)\",\"HL2 (High-Low Average)\",\"HLC3 (High-Low-Close Average) - (Typical Price)\",\"HMA (Hull Exponential Moving Average)\",\"HWMA (Holt-Winter Moving Average)\",\"JMA (Jurik Moving Average)\",\"KAMA (Kaufman's Adaptive Moving Average)\",\"LINREG (Linear Regression)\",\"MCGD (McGinley Dynamic)\",\"Mid Point\",\"Mid Price\",\"OHLC4 (Open-High-Low-Close Average)\",\"PWMA (Pascal's Weighted Moving Average)\",\"RMA (WildeR's Moving Average)\",\"SINWMA (Sine Weighted Moving Average)\",\"SMA (Simple Moving Average)\",\"SSF (Ehler's Super Smoother Filter)\",\"Super Trend\",\"Symmetric Weighted Moving Average\",\"T3 Moving Average\",\"TEMA (Triple Exponential Moving Average)\",\"TRIMA (Triangular Moving Average)\",\"VIDYA (Variable Index Dynamic Average)\",\"VWAP (Volume Weighted Average Price)\",\"VWMA (Volume Weighted Moving Average)\",\"WCP (Weighted Closing Price)\",\"WMA (Weighted Moving Average)\",\"ZLMA (Zero Lag Moving Average)\"]}}},\"uiSchema\":{\"ui:order\":[\"optIndicator\"]},\"formData\":{\"optIndicator\":\"ema\"}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"cb63a0a2-8d97-4433-a294-a4efb95a178f\",\"type\":\"simple\",\"selected\":false,\"x\":848,\"y\":250,\"extras\":{\"inPath\":{\"scope\":\"Message\",\"name\":\"export_path\"},\"inIndex\":{\"scope\":\"Custom\",\"name\":\"openTime\"},\"inLenght\":{\"scope\":\"Custom\",\"name\":\"100\"},\"inIndicatorPath\":{\"scope\":\"Message\",\"name\":\"ema100_path\"},\"optIndicator\":\"ema\"},\"ports\":[{\"id\":\"2c6737a9-8252-4823-b3bf-0ca866cc18e2\",\"type\":\"default\",\"selected\":false,\"name\":\"out_2c6737a9-8252-4823-b3bf-0ca866cc18e2\",\"parentNode\":\"cb63a0a2-8d97-4433-a294-a4efb95a178f\",\"links\":[\"8091dc70-c7be-45ac-b7c3-205e0412868b\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"d6e563b4-28fc-4c43-a8fc-e0bd032a7381\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"cb63a0a2-8d97-4433-a294-a4efb95a178f\",\"links\":[\"dfd308a9-7ab4-42da-b8c3-adf1d82811b3\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"cb63a0a2-8d97-4433-a294-a4efb95a178f\",\"name\":\"Overlap Indicators\",\"icon\":\"M2 2H4V20H22V22H2V2M17 2H20V18H17V2M6 11H9V18H6V11M13 3H16V7H13V3M10 8H13V12H10V8Z\",\"color\":\"#ed7a4f\",\"namespace\":\"Robomotion.TechnicalAnalysis.Overlap\",\"version\":\"0.1.2\",\"abc\":[{\"name\":\"Overlap Indicators\",\"version\":\"0.1.2\",\"color\":\"#ed7a4f\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"inPath\":{\"scope\":\"Message\",\"name\":\"export_path\"},\"inIndex\":{\"scope\":\"Custom\",\"name\":\"openTime\"},\"inLenght\":{\"scope\":\"Custom\",\"name\":\"100\"},\"inIndicatorPath\":{\"scope\":\"Message\",\"name\":\"ema100_path\"}},{\"optIndicator\":\"ema\"}],\"xyz\":[{\"schema\":{\"title\":\"Input\",\"type\":\"object\",\"properties\":{\"inPath\":{\"type\":\"object\",\"title\":\"Data Path\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inIndex\":{\"type\":\"object\",\"title\":\"Index Key\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inLenght\":{\"type\":\"object\",\"title\":\"Length\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inIndicatorPath\":{\"type\":\"object\",\"title\":\"Indicator Path\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true}}},\"uiSchema\":{\"inPath\":{\"ui:field\":\"variable\"},\"inIndex\":{\"ui:field\":\"variable\"},\"inLenght\":{\"ui:field\":\"variable\"},\"inIndicatorPath\":{\"ui:field\":\"variable\"},\"ui:order\":[\"inPath\",\"inIndex\",\"inLenght\",\"inIndicatorPath\"]},\"formData\":{\"inPath\":{\"scope\":\"Message\",\"name\":\"export_path\"},\"inIndex\":{\"scope\":\"Custom\",\"name\":\"openTime\"},\"inLenght\":{\"scope\":\"Custom\",\"name\":\"100\"},\"inIndicatorPath\":{\"scope\":\"Message\",\"name\":\"ema100_path\"}}},{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"optIndicator\":{\"type\":\"string\",\"title\":\"Indicator\",\"enum\":[\"alma\",\"dema\",\"ema\",\"fwma\",\"hilo\",\"hl2\",\"hlc3\",\"hma\",\"hwma\",\"jma\",\"kama\",\"linreg\",\"mcgd\",\"midpoint\",\"midprice\",\"ohlc4\",\"pwma\",\"rma\",\"sinwma\",\"sma\",\"ssf\",\"supertrend\",\"swma\",\"t3\",\"tema\",\"trima\",\"vidya\",\"vwap\",\"vwma\",\"wcp\",\"wma\",\"zlma\"],\"enumNames\":[\"ALMA (Arnaud Legoux Moving Average)\",\"DEMA (Double Exponential Moving Average)\",\"EMA (Exponential Moving Average)\",\"FWMA (Fibonacci's Weighted Moving Average)\",\"HILO (Gann High-Low Activator)\",\"HL2 (High-Low Average)\",\"HLC3 (High-Low-Close Average) - (Typical Price)\",\"HMA (Hull Exponential Moving Average)\",\"HWMA (Holt-Winter Moving Average)\",\"JMA (Jurik Moving Average)\",\"KAMA (Kaufman's Adaptive Moving Average)\",\"LINREG (Linear Regression)\",\"MCGD (McGinley Dynamic)\",\"Mid Point\",\"Mid Price\",\"OHLC4 (Open-High-Low-Close Average)\",\"PWMA (Pascal's Weighted Moving Average)\",\"RMA (WildeR's Moving Average)\",\"SINWMA (Sine Weighted Moving Average)\",\"SMA (Simple Moving Average)\",\"SSF (Ehler's Super Smoother Filter)\",\"Super Trend\",\"Symmetric Weighted Moving Average\",\"T3 Moving Average\",\"TEMA (Triple Exponential Moving Average)\",\"TRIMA (Triangular Moving Average)\",\"VIDYA (Variable Index Dynamic Average)\",\"VWAP (Volume Weighted Average Price)\",\"VWMA (Volume Weighted Moving Average)\",\"WCP (Weighted Closing Price)\",\"WMA (Weighted Moving Average)\",\"ZLMA (Zero Lag Moving Average)\"]}}},\"uiSchema\":{\"ui:order\":[\"optIndicator\"]},\"formData\":{\"optIndicator\":\"ema\"}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"318cbe8c-149e-4eb6-b3bb-b45ead788b2e\",\"type\":\"simple\",\"selected\":false,\"x\":851,\"y\":200,\"extras\":{\"outputs\":1,\"subflow\":\"https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/318cbe8c-149e-4eb6-b3bb-b45ead788b2e.flow\"},\"ports\":[{\"id\":\"bd00212c-d8c8-4212-83ad-03cccb7a9d54\",\"type\":\"default\",\"selected\":false,\"name\":\"out_bd00212c-d8c8-4212-83ad-03cccb7a9d54\",\"parentNode\":\"318cbe8c-149e-4eb6-b3bb-b45ead788b2e\",\"links\":[\"dfd308a9-7ab4-42da-b8c3-adf1d82811b3\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"d17725ce-772f-476b-8766-c657fa4c5c25\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"318cbe8c-149e-4eb6-b3bb-b45ead788b2e\",\"links\":[\"7ed516de-8dfe-44a2-b1de-1ca3ddecab25\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"318cbe8c-149e-4eb6-b3bb-b45ead788b2e\",\"name\":\"Prepare  EMA5 File\",\"icon\":\"M4,9C5.31,9 6.42,9.83 6.83,11H17.17C17.58,9.83 18.69,9 20,9A3,3 0 0,1 23,12A3,3 0 0,1 20,15C18.69,15 17.58,14.17 17.17,13H6.83C6.42,14.17 5.31,15 4,15A3,3 0 0,1 1,12A3,3 0 0,1 4,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.SubFlow\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Prepare  EMA5 File\",\"version\":\"1.11.6\",\"color\":\"#646bf5\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"outputs\":1,\"subflow\":\"https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/318cbe8c-149e-4eb6-b3bb-b45ead788b2e.flow\"}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"outputs\":{\"title\":\"Outputs\",\"type\":\"number\",\"minimum\":1,\"maximum\":32},\"subflow\":{\"type\":\"string\",\"properties\":{}}}},\"uiSchema\":{\"subflow\":{\"ui:widget\":\"hidden\"},\"outputs\":{\"ui:widget\":\"updown\"},\"ui:order\":[\"outputs\",\"*\"]},\"formData\":{\"outputs\":1,\"subflow\":\"https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/318cbe8c-149e-4eb6-b3bb-b45ead788b2e.flow\"}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"635c1618-5336-43ab-8633-8b95398c604f\",\"type\":\"simple\",\"selected\":true,\"x\":846,\"y\":299,\"extras\":{\"outputs\":1,\"subflow\":\"https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/635c1618-5336-43ab-8633-8b95398c604f.flow\"},\"ports\":[{\"id\":\"207b4bad-9f50-4328-9399-9d4593f198a9\",\"type\":\"default\",\"selected\":false,\"name\":\"out_207b4bad-9f50-4328-9399-9d4593f198a9\",\"parentNode\":\"635c1618-5336-43ab-8633-8b95398c604f\",\"links\":[\"35d4c0e6-ea28-4419-ad03-77e7647c9521\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"27e7e7bc-8359-4081-b374-c205c2666bf6\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"635c1618-5336-43ab-8633-8b95398c604f\",\"links\":[\"8091dc70-c7be-45ac-b7c3-205e0412868b\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"635c1618-5336-43ab-8633-8b95398c604f\",\"name\":\"Prepare  EMA9 File\",\"icon\":\"M4,9C5.31,9 6.42,9.83 6.83,11H17.17C17.58,9.83 18.69,9 20,9A3,3 0 0,1 23,12A3,3 0 0,1 20,15C18.69,15 17.58,14.17 17.17,13H6.83C6.42,14.17 5.31,15 4,15A3,3 0 0,1 1,12A3,3 0 0,1 4,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.SubFlow\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Prepare  EMA9 File\",\"version\":\"1.11.6\",\"color\":\"#646bf5\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"outputs\":1,\"subflow\":\"https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/635c1618-5336-43ab-8633-8b95398c604f.flow\"}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"outputs\":{\"title\":\"Outputs\",\"type\":\"number\",\"minimum\":1,\"maximum\":32},\"subflow\":{\"type\":\"string\",\"properties\":{}}}},\"uiSchema\":{\"subflow\":{\"ui:widget\":\"hidden\"},\"outputs\":{\"ui:widget\":\"updown\"},\"ui:order\":[\"outputs\",\"*\"]},\"formData\":{\"outputs\":1,\"subflow\":\"https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/635c1618-5336-43ab-8633-8b95398c604f.flow\"}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"cd327537-f7cb-4a70-92cd-02373cadd040\",\"type\":\"simple\",\"selected\":false,\"x\":847,\"y\":348,\"extras\":{\"outputs\":1,\"func\":\"delete msg.ema5_table;\\ndelete msg.ema100_table;\\ndelete msg.export_table;\\nreturn msg;\",\"optTimeout\":30,\"variables\":[]},\"ports\":[{\"id\":\"7999b4a6-99b9-48c7-ac87-c11895b44f16\",\"type\":\"default\",\"selected\":false,\"name\":\"out_7999b4a6-99b9-48c7-ac87-c11895b44f16\",\"parentNode\":\"cd327537-f7cb-4a70-92cd-02373cadd040\",\"links\":[\"e0cadc4c-501c-48e4-862c-a353e2fb748b\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"d2e8f63d-0552-4013-ac94-8686180e4b82\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"cd327537-f7cb-4a70-92cd-02373cadd040\",\"links\":[\"35d4c0e6-ea28-4419-ad03-77e7647c9521\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"cd327537-f7cb-4a70-92cd-02373cadd040\",\"name\":\"Delete Unnecessary Fields\",\"icon\":\"M15.6,5.29C14.5,5.19 13.53,6 13.43,7.11L13.18,10H16V12H13L12.56,17.07C12.37,19.27 10.43,20.9 8.23,20.7C6.92,20.59 5.82,19.86 5.17,18.83L6.67,17.33C6.91,18.07 7.57,18.64 8.4,18.71C9.5,18.81 10.47,18 10.57,16.89L11,12H8V10H11.17L11.44,6.93C11.63,4.73 13.57,3.1 15.77,3.3C17.08,3.41 18.18,4.14 18.83,5.17L17.33,6.67C17.09,5.93 16.43,5.36 15.6,5.29Z\",\"color\":\"#F27925\",\"editor\":\"javascript\",\"namespace\":\"Core.Programming.Function\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Delete Unnecessary Fields\",\"color\":\"#F27925\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false,\"version\":\"1.11.6\"},{\"outputs\":1,\"func\":\"delete msg.ema5_table;\\ndelete msg.ema100_table;\\ndelete msg.export_table;\\nreturn msg;\",\"optTimeout\":30},{\"variables\":[]}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"func\":{\"title\":\"Function\",\"type\":\"string\"},\"outputs\":{\"title\":\"Outputs\",\"type\":\"number\",\"minimum\":1,\"maximum\":32},\"optTimeout\":{\"title\":\"Script Timeout\",\"type\":\"number\"}}},\"uiSchema\":{\"outputs\":{\"ui:widget\":\"updown\"},\"func\":{\"ui:widget\":\"hidden\",\"ui:options\":{\"rows\":6}}},\"formData\":{\"outputs\":1,\"func\":\"delete msg.ema5_table;\\ndelete msg.ema100_table;\\ndelete msg.export_table;\\nreturn msg;\",\"optTimeout\":30}},{\"schema\":{\"title\":\"Local Variables\",\"type\":\"object\",\"properties\":{\"variables\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"variableType\":{\"type\":\"string\"}}}}}},\"uiSchema\":{\"variables\":{\"ui:field\":\"localVariable\"}},\"formData\":{\"variables\":[]}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"e42a5d8d-edc5-4109-ad49-bff07ee746b4\",\"type\":\"simple\",\"selected\":false,\"x\":848,\"y\":101,\"extras\":{\"outputs\":1,\"subflow\":\"https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/e42a5d8d-edc5-4109-ad49-bff07ee746b4.flow\"},\"ports\":[{\"id\":\"b39602e2-ea94-4d7e-a8a9-ae0a1ece9af4\",\"type\":\"default\",\"selected\":false,\"name\":\"out_b39602e2-ea94-4d7e-a8a9-ae0a1ece9af4\",\"parentNode\":\"e42a5d8d-edc5-4109-ad49-bff07ee746b4\",\"links\":[\"43201dee-c4c2-4d17-bebe-e08e74570529\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"de548610-8980-4a34-b820-d475d84c7b47\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"e42a5d8d-edc5-4109-ad49-bff07ee746b4\",\"links\":[\"8a6e137f-52c7-4178-88db-5e50bea38e87\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"e42a5d8d-edc5-4109-ad49-bff07ee746b4\",\"name\":\"Prepare  Dates\",\"icon\":\"M4,9C5.31,9 6.42,9.83 6.83,11H17.17C17.58,9.83 18.69,9 20,9A3,3 0 0,1 23,12A3,3 0 0,1 20,15C18.69,15 17.58,14.17 17.17,13H6.83C6.42,14.17 5.31,15 4,15A3,3 0 0,1 1,12A3,3 0 0,1 4,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.SubFlow\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Prepare  Dates\",\"color\":\"#646bf5\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false,\"version\":\"1.11.6\"},{\"outputs\":1,\"subflow\":\"https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/e42a5d8d-edc5-4109-ad49-bff07ee746b4.flow\"}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"outputs\":{\"title\":\"Outputs\",\"type\":\"number\",\"minimum\":1,\"maximum\":32},\"subflow\":{\"type\":\"string\",\"properties\":{}}}},\"uiSchema\":{\"subflow\":{\"ui:widget\":\"hidden\"},\"outputs\":{\"ui:widget\":\"updown\"},\"ui:order\":[\"outputs\",\"*\"]},\"formData\":{\"outputs\":1,\"subflow\":\"https://api.robomotion.io/v1/flows.files.get?type=subflow&path=flows/3115e67d-c9da-4e69-9df2-75f5ee7f1758/subflows/e42a5d8d-edc5-4109-ad49-bff07ee746b4.flow\"}}],\"outputs\":1,\"inputs\":1}}]}"
+		},
+		{
+			"id": "318cbe8c-149e-4eb6-b3bb-b45ead788b2e",
+			"flow": "{\"id\":\"318cbe8c-149e-4eb6-b3bb-b45ead788b2e\",\"offsetX\":0,\"offsetY\":0,\"zoom\":100,\"gridSize\":0,\"links\":[{\"id\":\"beffcddb-0802-4bfa-9214-0847d5ac4b0c\",\"type\":\"default\",\"selected\":false,\"source\":\"cbae2dea-5abf-40fa-b075-66eb08dfbf68\",\"sourcePort\":\"a13d6075-5441-4f48-ba2a-5924647bc41b\",\"target\":\"8659a94b-13f9-402e-8cc6-698f63e9525b\",\"targetPort\":\"f2364cdf-cad2-4634-a1ea-a73c393f32fa\",\"points\":[{\"id\":\"cafbef96-2988-4a45-8c28-bc37ccd81cf9\",\"selected\":false,\"x\":1055,\"y\":344},{\"id\":\"e4228e87-d325-4f7a-ae37-736640280310\",\"selected\":true,\"x\":1167,\"y\":307.5}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"bfdb95bf-bb25-4865-bccc-0cc31633399a\",\"type\":\"default\",\"selected\":false,\"source\":\"618f5770-63f7-427c-9d13-16c5717cd196\",\"sourcePort\":\"ebecf096-4299-4c69-8ef7-fb8b00951924\",\"target\":\"070178b3-b555-44ab-ae7c-dd2a29d35351\",\"targetPort\":\"90c867ae-baa9-4e1f-90f5-df546721d02e\",\"points\":[{\"id\":\"d44c281a-be18-4361-a4e0-0423dbf4d7e3\",\"selected\":false,\"x\":702,\"y\":236.5},{\"id\":\"f09c1681-37ad-4fd1-b1af-1c2101918abc\",\"selected\":true,\"x\":846,\"y\":239}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"b53b536e-3ecc-4e53-b0a6-15fa25f7a34d\",\"type\":\"default\",\"selected\":false,\"source\":\"2682c3f5-c134-4d8f-9ce1-5a3602260fa6\",\"sourcePort\":\"afd0d499-aa03-4717-a86e-9a4c668d0dbb\",\"target\":\"cbae2dea-5abf-40fa-b075-66eb08dfbf68\",\"targetPort\":\"04434391-657f-4e30-909c-a8f816bf25c4\",\"points\":[{\"id\":\"a3428640-d331-485e-8965-c4c310c9dce8\",\"selected\":false,\"x\":1050,\"y\":294},{\"id\":\"a463d238-b8b7-49b7-8ae2-b2197365a013\",\"selected\":true,\"x\":853,\"y\":342}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"8f794afa-fbfc-4f74-97b7-d6ea470db610\",\"type\":\"default\",\"selected\":false,\"source\":\"070178b3-b555-44ab-ae7c-dd2a29d35351\",\"sourcePort\":\"bf299253-57fb-4d9c-9726-3d8735fd8541\",\"target\":\"2682c3f5-c134-4d8f-9ce1-5a3602260fa6\",\"targetPort\":\"51f7d925-1e1f-4638-9f30-5c675d23f856\",\"points\":[{\"id\":\"cea44f5a-b3e9-4ff5-9473-cced0fe2d0fe\",\"selected\":false,\"x\":1048,\"y\":241},{\"id\":\"865c56e2-8587-48f1-a373-83c02bd043fe\",\"selected\":false,\"x\":848,\"y\":292}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300}],\"nodes\":[{\"id\":\"618f5770-63f7-427c-9d13-16c5717cd196\",\"type\":\"simple\",\"selected\":false,\"x\":501,\"y\":211.5,\"extras\":{},\"ports\":[{\"id\":\"ebecf096-4299-4c69-8ef7-fb8b00951924\",\"type\":\"default\",\"selected\":false,\"name\":\"out_ebecf096-4299-4c69-8ef7-fb8b00951924\",\"parentNode\":\"618f5770-63f7-427c-9d13-16c5717cd196\",\"links\":[\"bfdb95bf-bb25-4865-bccc-0cc31633399a\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"}],\"model\":{\"id\":\"618f5770-63f7-427c-9d13-16c5717cd196\",\"name\":\"Begin\",\"icon\":\"M4,9C5.31,9 6.42,9.83 6.83,11H22V13H6.83C6.42,14.17 5.31,15 4,15A3,3 0 0,1 1,12A3,3 0 0,1 4,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.Begin\",\"version\":\"0.0\",\"abc\":[],\"xyz\":[],\"outputs\":1,\"inputs\":0}},{\"id\":\"8659a94b-13f9-402e-8cc6-698f63e9525b\",\"type\":\"simple\",\"selected\":false,\"x\":1160,\"y\":284.5,\"extras\":{\"sfPort\":0},\"ports\":[{\"id\":\"f2364cdf-cad2-4634-a1ea-a73c393f32fa\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"8659a94b-13f9-402e-8cc6-698f63e9525b\",\"links\":[\"beffcddb-0802-4bfa-9214-0847d5ac4b0c\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"8659a94b-13f9-402e-8cc6-698f63e9525b\",\"name\":\"End\",\"icon\":\"M20,9C18.69,9 17.58,9.83 17.17,11H2V13H17.17C17.58,14.17 18.69,15 20,15A3,3 0 0,0 23,12A3,3 0 0,0 20,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.End\",\"version\":\"0.0\",\"abc\":[{},{\"sfPort\":0}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"sfPort\":{\"title\":\"Port\",\"type\":\"number\"}}},\"uiSchema\":{\"sfPort\":{\"ui:widget\":\"hidden\"},\"ui:order\":[\"*\"]},\"formData\":{\"sfPort\":0}}],\"outputs\":0,\"inputs\":1}},{\"id\":\"070178b3-b555-44ab-ae7c-dd2a29d35351\",\"type\":\"simple\",\"selected\":false,\"x\":839,\"y\":216,\"extras\":{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"ema5_path\"},\"outTable\":{\"scope\":\"Message\",\"name\":\"ema5_table\"},\"optSeparator\":\"comma\",\"optOffset\":{\"scope\":\"Custom\",\"name\":\"0\"},\"optHeaders\":true,\"optJsonify\":true},\"ports\":[{\"id\":\"bf299253-57fb-4d9c-9726-3d8735fd8541\",\"type\":\"default\",\"selected\":false,\"name\":\"out_bf299253-57fb-4d9c-9726-3d8735fd8541\",\"parentNode\":\"070178b3-b555-44ab-ae7c-dd2a29d35351\",\"links\":[\"8f794afa-fbfc-4f74-97b7-d6ea470db610\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"90c867ae-baa9-4e1f-90f5-df546721d02e\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"070178b3-b555-44ab-ae7c-dd2a29d35351\",\"links\":[\"bfdb95bf-bb25-4865-bccc-0cc31633399a\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"070178b3-b555-44ab-ae7c-dd2a29d35351\",\"name\":\"Read CSV\",\"icon\":\"M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2M18 20H6V4H13V9H18V20M10 19L12 15H9V10H15V15L13 19H10\",\"color\":\"#0078DE\",\"namespace\":\"Core.CSV.ReadCSV\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Read CSV\",\"version\":\"1.11.6\",\"color\":\"#0078DE\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"ema5_path\"}},{\"outTable\":{\"scope\":\"Message\",\"name\":\"ema5_table\"}},{\"optSeparator\":\"comma\",\"optOffset\":{\"scope\":\"Custom\",\"name\":\"0\"},\"optHeaders\":true,\"optJsonify\":true}],\"xyz\":[{\"schema\":{\"title\":\"Input\",\"type\":\"object\",\"properties\":{\"inFilePath\":{\"type\":\"object\",\"title\":\"File Path\",\"variableType\":\"String\",\"customScope\":true,\"messageScope\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}}}},\"uiSchema\":{\"inFilePath\":{\"ui:field\":\"variable\"}},\"formData\":{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"ema5_path\"}}},{\"schema\":{\"title\":\"Output\",\"type\":\"object\",\"properties\":{\"outTable\":{\"type\":\"object\",\"title\":\"Table\",\"variableType\":\"String\",\"messageOnly\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}}}},\"uiSchema\":{\"outTable\":{\"ui:field\":\"variable\"}},\"formData\":{\"outTable\":{\"scope\":\"Message\",\"name\":\"ema5_table\"}}},{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"optSeparator\":{\"type\":\"string\",\"title\":\"Separator\",\"enum\":[\"comma\",\"semicolon\",\"tab\",\"space\"],\"enumNames\":[\"Comma (,)\",\"Semicolon (;)\",\"TAB\",\"Space\"]},\"optOffset\":{\"type\":\"object\",\"title\":\"Skip Rows\",\"variableType\":\"Integer\",\"customScope\":true,\"messageScope\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}},\"optHeaders\":{\"title\":\"Headers\",\"type\":\"boolean\"},\"optJsonify\":{\"title\":\"Jsonify\",\"type\":\"boolean\"}}},\"uiSchema\":{\"optOffset\":{\"ui:field\":\"variable\"},\"ui:order\":[\"optSeparator\",\"optOffset\",\"optHeaders\",\"optJsonify\"]},\"formData\":{\"optSeparator\":\"comma\",\"optOffset\":{\"scope\":\"Custom\",\"name\":\"0\"},\"optHeaders\":true,\"optJsonify\":true}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"2682c3f5-c134-4d8f-9ce1-5a3602260fa6\",\"type\":\"simple\",\"selected\":true,\"x\":841,\"y\":269,\"extras\":{\"outputs\":1,\"func\":\"msg.lenx = msg.ema5_table.rows.length\\nmsg.ema5_table.columns = [\\\"EMA_5\\\", \\\"openTime\\\"]\\nfor(var i = 0 ; i < msg.ema5_table.rows.length; i++){\\n  msg.ema5_table.rows[i] = {\\\"EMA_5\\\" : msg.ema5_table.rows[i][\\\"ema_5\\\"] ,\\\"openTime\\\" : msg.export_table.rows[i][\\\"opentime\\\"]};\\n}\\nreturn msg;\",\"optTimeout\":30,\"variables\":[]},\"ports\":[{\"id\":\"afd0d499-aa03-4717-a86e-9a4c668d0dbb\",\"type\":\"default\",\"selected\":false,\"name\":\"out_afd0d499-aa03-4717-a86e-9a4c668d0dbb\",\"parentNode\":\"2682c3f5-c134-4d8f-9ce1-5a3602260fa6\",\"links\":[\"b53b536e-3ecc-4e53-b0a6-15fa25f7a34d\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"51f7d925-1e1f-4638-9f30-5c675d23f856\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"2682c3f5-c134-4d8f-9ce1-5a3602260fa6\",\"links\":[\"8f794afa-fbfc-4f74-97b7-d6ea470db610\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"2682c3f5-c134-4d8f-9ce1-5a3602260fa6\",\"name\":\"Set EMA5 Fields\",\"icon\":\"M15.6,5.29C14.5,5.19 13.53,6 13.43,7.11L13.18,10H16V12H13L12.56,17.07C12.37,19.27 10.43,20.9 8.23,20.7C6.92,20.59 5.82,19.86 5.17,18.83L6.67,17.33C6.91,18.07 7.57,18.64 8.4,18.71C9.5,18.81 10.47,18 10.57,16.89L11,12H8V10H11.17L11.44,6.93C11.63,4.73 13.57,3.1 15.77,3.3C17.08,3.41 18.18,4.14 18.83,5.17L17.33,6.67C17.09,5.93 16.43,5.36 15.6,5.29Z\",\"color\":\"#F27925\",\"editor\":\"javascript\",\"namespace\":\"Core.Programming.Function\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Set EMA5 Fields\",\"color\":\"#F27925\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false,\"version\":\"1.11.6\"},{\"outputs\":1,\"func\":\"msg.lenx = msg.ema5_table.rows.length\\nmsg.ema5_table.columns = [\\\"EMA_5\\\", \\\"openTime\\\"]\\nfor(var i = 0 ; i < msg.ema5_table.rows.length; i++){\\n  msg.ema5_table.rows[i] = {\\\"EMA_5\\\" : msg.ema5_table.rows[i][\\\"ema_5\\\"] ,\\\"openTime\\\" : msg.export_table.rows[i][\\\"opentime\\\"]};\\n}\\nreturn msg;\",\"optTimeout\":30},{\"variables\":[]}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"func\":{\"title\":\"Function\",\"type\":\"string\"},\"outputs\":{\"title\":\"Outputs\",\"type\":\"number\",\"minimum\":1,\"maximum\":32},\"optTimeout\":{\"title\":\"Script Timeout\",\"type\":\"number\"}}},\"uiSchema\":{\"outputs\":{\"ui:widget\":\"updown\"},\"func\":{\"ui:widget\":\"hidden\",\"ui:options\":{\"rows\":6}}},\"formData\":{\"outputs\":1,\"func\":\"msg.lenx = msg.ema5_table.rows.length\\nmsg.ema5_table.columns = [\\\"EMA_5\\\", \\\"openTime\\\"]\\nfor(var i = 0 ; i < msg.ema5_table.rows.length; i++){\\n  msg.ema5_table.rows[i] = {\\\"EMA_5\\\" : msg.ema5_table.rows[i][\\\"ema_5\\\"] ,\\\"openTime\\\" : msg.export_table.rows[i][\\\"opentime\\\"]};\\n}\\nreturn msg;\",\"optTimeout\":30}},{\"schema\":{\"title\":\"Local Variables\",\"type\":\"object\",\"properties\":{\"variables\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"variableType\":{\"type\":\"string\"}}}}}},\"uiSchema\":{\"variables\":{\"ui:field\":\"localVariable\"}},\"formData\":{\"variables\":[]}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"cbae2dea-5abf-40fa-b075-66eb08dfbf68\",\"type\":\"simple\",\"selected\":false,\"x\":846,\"y\":319,\"extras\":{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"ema5_path\"},\"inTable\":{\"scope\":\"Message\",\"name\":\"ema5_table\"},\"optSeparator\":\"comma\",\"optEncoding\":\"utf8\",\"optHeaders\":true},\"ports\":[{\"id\":\"a13d6075-5441-4f48-ba2a-5924647bc41b\",\"type\":\"default\",\"selected\":false,\"name\":\"out_a13d6075-5441-4f48-ba2a-5924647bc41b\",\"parentNode\":\"cbae2dea-5abf-40fa-b075-66eb08dfbf68\",\"links\":[\"beffcddb-0802-4bfa-9214-0847d5ac4b0c\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"04434391-657f-4e30-909c-a8f816bf25c4\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"cbae2dea-5abf-40fa-b075-66eb08dfbf68\",\"links\":[\"b53b536e-3ecc-4e53-b0a6-15fa25f7a34d\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"cbae2dea-5abf-40fa-b075-66eb08dfbf68\",\"name\":\"Write CSV\",\"icon\":\"M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2M18 20H6V4H13V9H18V20M10 19L12 15H9V10H15V15L13 19H10\",\"color\":\"#0078DE\",\"namespace\":\"Core.CSV.WriteCSV\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Write CSV\",\"version\":\"1.11.6\",\"color\":\"#0078DE\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"ema5_path\"},\"inTable\":{\"scope\":\"Message\",\"name\":\"ema5_table\"}},{\"optSeparator\":\"comma\",\"optEncoding\":\"utf8\",\"optHeaders\":true}],\"xyz\":[{\"schema\":{\"title\":\"Input\",\"type\":\"object\",\"properties\":{\"inFilePath\":{\"type\":\"object\",\"title\":\"File Path\",\"variableType\":\"String\",\"messageScope\":true,\"customScope\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}},\"inTable\":{\"type\":\"object\",\"title\":\"Table\",\"variableType\":\"String\",\"messageOnly\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}}}},\"uiSchema\":{\"inTable\":{\"ui:field\":\"variable\"},\"inFilePath\":{\"ui:field\":\"variable\"},\"ui:order\":[\"inFilePath\",\"inTable\"]},\"formData\":{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"ema5_path\"},\"inTable\":{\"scope\":\"Message\",\"name\":\"ema5_table\"}}},{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"optSeparator\":{\"type\":\"string\",\"title\":\"Separator\",\"enum\":[\"comma\",\"semicolon\"],\"enumNames\":[\"Comma (,)\",\"Semicolon (;)\"]},\"optEncoding\":{\"type\":\"string\",\"title\":\"Encoding\",\"enum\":[\"utf8\",\"windows1254\"],\"enumNames\":[\"UTF-8\",\"Windows 1254\"]},\"optHeaders\":{\"title\":\"Headers\",\"type\":\"boolean\"}}},\"uiSchema\":{\"ui:order\":[\"optSeparator\",\"optEncoding\",\"optHeaders\"]},\"formData\":{\"optSeparator\":\"comma\",\"optEncoding\":\"utf8\",\"optHeaders\":true}}],\"outputs\":1,\"inputs\":1}}]}"
+		},
+		{
+			"id": "635c1618-5336-43ab-8633-8b95398c604f",
+			"flow": "{\"id\":\"635c1618-5336-43ab-8633-8b95398c604f\",\"offsetX\":0,\"offsetY\":0,\"zoom\":100,\"gridSize\":0,\"links\":[{\"id\":\"263e5744-f056-42f9-a1d5-a258e18dd927\",\"type\":\"default\",\"selected\":false,\"source\":\"00ad86ac-e1fd-4ec5-a7a0-fcf0b2b689b7\",\"sourcePort\":\"ebecf096-4299-4c69-8ef7-fb8b00951924\",\"target\":\"4cb0111b-fc33-409a-8981-9b77620d287a\",\"targetPort\":\"90c867ae-baa9-4e1f-90f5-df546721d02e\",\"points\":[{\"id\":\"9df3b059-032a-416c-8263-f2aee592f965\",\"selected\":false,\"x\":761,\"y\":309.5},{\"id\":\"80af958c-8cde-4b70-a483-db8b3b380215\",\"selected\":false,\"x\":846,\"y\":239}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"dea23303-b3d2-4413-87a3-354f9f4c1816\",\"type\":\"default\",\"selected\":false,\"source\":\"2c1a49ba-b6e4-4464-abf4-67172695051e\",\"sourcePort\":\"afd0d499-aa03-4717-a86e-9a4c668d0dbb\",\"target\":\"fb34ab32-7448-458d-9630-500a35444b7c\",\"targetPort\":\"04434391-657f-4e30-909c-a8f816bf25c4\",\"points\":[{\"id\":\"bd0533f1-1048-40f6-bdf0-5e92e281ca92\",\"selected\":false,\"x\":1050,\"y\":294},{\"id\":\"5e9aebab-333c-4cac-a828-6d321aba7549\",\"selected\":false,\"x\":853,\"y\":342}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"beffcddb-0802-4bfa-9214-0847d5ac4b0c\",\"type\":\"default\",\"selected\":false,\"source\":\"fb34ab32-7448-458d-9630-500a35444b7c\",\"sourcePort\":\"a13d6075-5441-4f48-ba2a-5924647bc41b\",\"target\":\"0eb21902-8c8b-4005-a5b4-594b8e89d64e\",\"targetPort\":\"f2364cdf-cad2-4634-a1ea-a73c393f32fa\",\"points\":[{\"id\":\"cafbef96-2988-4a45-8c28-bc37ccd81cf9\",\"selected\":false,\"x\":1055,\"y\":344},{\"id\":\"e4228e87-d325-4f7a-ae37-736640280310\",\"selected\":true,\"x\":1167,\"y\":307.5}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"94ec1f8f-2a90-4e45-865b-4de01407a948\",\"type\":\"default\",\"selected\":false,\"source\":\"4cb0111b-fc33-409a-8981-9b77620d287a\",\"sourcePort\":\"bf299253-57fb-4d9c-9726-3d8735fd8541\",\"target\":\"2c1a49ba-b6e4-4464-abf4-67172695051e\",\"targetPort\":\"51f7d925-1e1f-4638-9f30-5c675d23f856\",\"points\":[{\"id\":\"eb66e833-d18a-4c23-9629-f927fb2d9e04\",\"selected\":false,\"x\":1048,\"y\":241},{\"id\":\"3ef30bd6-3b42-4703-a829-fcdbaff6f165\",\"selected\":false,\"x\":848,\"y\":292}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300}],\"nodes\":[{\"id\":\"00ad86ac-e1fd-4ec5-a7a0-fcf0b2b689b7\",\"type\":\"simple\",\"selected\":false,\"x\":560,\"y\":284.5,\"extras\":{},\"ports\":[{\"id\":\"ebecf096-4299-4c69-8ef7-fb8b00951924\",\"type\":\"default\",\"selected\":false,\"name\":\"out_ebecf096-4299-4c69-8ef7-fb8b00951924\",\"parentNode\":\"00ad86ac-e1fd-4ec5-a7a0-fcf0b2b689b7\",\"links\":[\"263e5744-f056-42f9-a1d5-a258e18dd927\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"}],\"model\":{\"id\":\"00ad86ac-e1fd-4ec5-a7a0-fcf0b2b689b7\",\"name\":\"Begin\",\"icon\":\"M4,9C5.31,9 6.42,9.83 6.83,11H22V13H6.83C6.42,14.17 5.31,15 4,15A3,3 0 0,1 1,12A3,3 0 0,1 4,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.Begin\",\"version\":\"0.0\",\"abc\":[],\"xyz\":[],\"outputs\":1,\"inputs\":0}},{\"id\":\"0eb21902-8c8b-4005-a5b4-594b8e89d64e\",\"type\":\"simple\",\"selected\":false,\"x\":1160,\"y\":284.5,\"extras\":{\"sfPort\":0},\"ports\":[{\"id\":\"f2364cdf-cad2-4634-a1ea-a73c393f32fa\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"0eb21902-8c8b-4005-a5b4-594b8e89d64e\",\"links\":[\"beffcddb-0802-4bfa-9214-0847d5ac4b0c\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"0eb21902-8c8b-4005-a5b4-594b8e89d64e\",\"name\":\"End\",\"icon\":\"M20,9C18.69,9 17.58,9.83 17.17,11H2V13H17.17C17.58,14.17 18.69,15 20,15A3,3 0 0,0 23,12A3,3 0 0,0 20,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.End\",\"version\":\"0.0\",\"abc\":[{},{\"sfPort\":0}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"sfPort\":{\"title\":\"Port\",\"type\":\"number\"}}},\"uiSchema\":{\"sfPort\":{\"ui:widget\":\"hidden\"},\"ui:order\":[\"*\"]},\"formData\":{\"sfPort\":0}}],\"outputs\":0,\"inputs\":1}},{\"id\":\"4cb0111b-fc33-409a-8981-9b77620d287a\",\"type\":\"simple\",\"selected\":false,\"x\":839,\"y\":216,\"extras\":{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"ema100_path\"},\"outTable\":{\"scope\":\"Message\",\"name\":\"ema100_table\"},\"optSeparator\":\"comma\",\"optOffset\":{\"scope\":\"Custom\",\"name\":\"0\"},\"optHeaders\":true,\"optJsonify\":true},\"ports\":[{\"id\":\"bf299253-57fb-4d9c-9726-3d8735fd8541\",\"type\":\"default\",\"selected\":false,\"name\":\"out_bf299253-57fb-4d9c-9726-3d8735fd8541\",\"parentNode\":\"4cb0111b-fc33-409a-8981-9b77620d287a\",\"links\":[\"94ec1f8f-2a90-4e45-865b-4de01407a948\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"90c867ae-baa9-4e1f-90f5-df546721d02e\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"4cb0111b-fc33-409a-8981-9b77620d287a\",\"links\":[\"263e5744-f056-42f9-a1d5-a258e18dd927\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"4cb0111b-fc33-409a-8981-9b77620d287a\",\"name\":\"Read CSV\",\"icon\":\"M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2M18 20H6V4H13V9H18V20M10 19L12 15H9V10H15V15L13 19H10\",\"color\":\"#0078DE\",\"namespace\":\"Core.CSV.ReadCSV\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Read CSV\",\"version\":\"1.11.6\",\"color\":\"#0078DE\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"ema100_path\"}},{\"outTable\":{\"scope\":\"Message\",\"name\":\"ema100_table\"}},{\"optSeparator\":\"comma\",\"optOffset\":{\"scope\":\"Custom\",\"name\":\"0\"},\"optHeaders\":true,\"optJsonify\":true}],\"xyz\":[{\"schema\":{\"title\":\"Input\",\"type\":\"object\",\"properties\":{\"inFilePath\":{\"type\":\"object\",\"title\":\"File Path\",\"variableType\":\"String\",\"customScope\":true,\"messageScope\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}}}},\"uiSchema\":{\"inFilePath\":{\"ui:field\":\"variable\"}},\"formData\":{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"ema100_path\"}}},{\"schema\":{\"title\":\"Output\",\"type\":\"object\",\"properties\":{\"outTable\":{\"type\":\"object\",\"title\":\"Table\",\"variableType\":\"String\",\"messageOnly\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}}}},\"uiSchema\":{\"outTable\":{\"ui:field\":\"variable\"}},\"formData\":{\"outTable\":{\"scope\":\"Message\",\"name\":\"ema100_table\"}}},{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"optSeparator\":{\"type\":\"string\",\"title\":\"Separator\",\"enum\":[\"comma\",\"semicolon\",\"tab\",\"space\"],\"enumNames\":[\"Comma (,)\",\"Semicolon (;)\",\"TAB\",\"Space\"]},\"optOffset\":{\"type\":\"object\",\"title\":\"Skip Rows\",\"variableType\":\"Integer\",\"customScope\":true,\"messageScope\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}},\"optHeaders\":{\"title\":\"Headers\",\"type\":\"boolean\"},\"optJsonify\":{\"title\":\"Jsonify\",\"type\":\"boolean\"}}},\"uiSchema\":{\"optOffset\":{\"ui:field\":\"variable\"},\"ui:order\":[\"optSeparator\",\"optOffset\",\"optHeaders\",\"optJsonify\"]},\"formData\":{\"optSeparator\":\"comma\",\"optOffset\":{\"scope\":\"Custom\",\"name\":\"0\"},\"optHeaders\":true,\"optJsonify\":true}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"2c1a49ba-b6e4-4464-abf4-67172695051e\",\"type\":\"simple\",\"selected\":true,\"x\":841,\"y\":269,\"extras\":{\"outputs\":1,\"func\":\"msg.leny = msg.ema5_table.rows.length\\nmsg.ema100_table.columns = [\\\"EMA_100\\\",\\\"openTime\\\"]\\nfor(var i = 0 ; i < msg.ema100_table.rows.length; i++){\\n  msg.ema100_table.rows[i] = {\\\"EMA_100\\\" : msg.ema100_table.rows[i][\\\"ema_100\\\"],\\\"openTime\\\" : msg.export_table.rows[i][\\\"opentime\\\"]};\\n}\\nreturn msg;\",\"optTimeout\":30,\"variables\":[]},\"ports\":[{\"id\":\"afd0d499-aa03-4717-a86e-9a4c668d0dbb\",\"type\":\"default\",\"selected\":false,\"name\":\"out_afd0d499-aa03-4717-a86e-9a4c668d0dbb\",\"parentNode\":\"2c1a49ba-b6e4-4464-abf4-67172695051e\",\"links\":[\"dea23303-b3d2-4413-87a3-354f9f4c1816\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"51f7d925-1e1f-4638-9f30-5c675d23f856\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"2c1a49ba-b6e4-4464-abf4-67172695051e\",\"links\":[\"94ec1f8f-2a90-4e45-865b-4de01407a948\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"2c1a49ba-b6e4-4464-abf4-67172695051e\",\"name\":\"Set EMA100 Fields\",\"icon\":\"M15.6,5.29C14.5,5.19 13.53,6 13.43,7.11L13.18,10H16V12H13L12.56,17.07C12.37,19.27 10.43,20.9 8.23,20.7C6.92,20.59 5.82,19.86 5.17,18.83L6.67,17.33C6.91,18.07 7.57,18.64 8.4,18.71C9.5,18.81 10.47,18 10.57,16.89L11,12H8V10H11.17L11.44,6.93C11.63,4.73 13.57,3.1 15.77,3.3C17.08,3.41 18.18,4.14 18.83,5.17L17.33,6.67C17.09,5.93 16.43,5.36 15.6,5.29Z\",\"color\":\"#F27925\",\"editor\":\"javascript\",\"namespace\":\"Core.Programming.Function\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Set EMA100 Fields\",\"color\":\"#F27925\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false,\"version\":\"1.11.6\"},{\"outputs\":1,\"func\":\"msg.leny = msg.ema5_table.rows.length\\nmsg.ema100_table.columns = [\\\"EMA_100\\\",\\\"openTime\\\"]\\nfor(var i = 0 ; i < msg.ema100_table.rows.length; i++){\\n  msg.ema100_table.rows[i] = {\\\"EMA_100\\\" : msg.ema100_table.rows[i][\\\"ema_100\\\"],\\\"openTime\\\" : msg.export_table.rows[i][\\\"opentime\\\"]};\\n}\\nreturn msg;\",\"optTimeout\":30},{\"variables\":[]}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"func\":{\"title\":\"Function\",\"type\":\"string\"},\"outputs\":{\"title\":\"Outputs\",\"type\":\"number\",\"minimum\":1,\"maximum\":32},\"optTimeout\":{\"title\":\"Script Timeout\",\"type\":\"number\"}}},\"uiSchema\":{\"outputs\":{\"ui:widget\":\"updown\"},\"func\":{\"ui:widget\":\"hidden\",\"ui:options\":{\"rows\":6}}},\"formData\":{\"outputs\":1,\"func\":\"msg.leny = msg.ema5_table.rows.length\\nmsg.ema100_table.columns = [\\\"EMA_100\\\",\\\"openTime\\\"]\\nfor(var i = 0 ; i < msg.ema100_table.rows.length; i++){\\n  msg.ema100_table.rows[i] = {\\\"EMA_100\\\" : msg.ema100_table.rows[i][\\\"ema_100\\\"],\\\"openTime\\\" : msg.export_table.rows[i][\\\"opentime\\\"]};\\n}\\nreturn msg;\",\"optTimeout\":30}},{\"schema\":{\"title\":\"Local Variables\",\"type\":\"object\",\"properties\":{\"variables\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"variableType\":{\"type\":\"string\"}}}}}},\"uiSchema\":{\"variables\":{\"ui:field\":\"localVariable\"}},\"formData\":{\"variables\":[]}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"fb34ab32-7448-458d-9630-500a35444b7c\",\"type\":\"simple\",\"selected\":false,\"x\":846,\"y\":319,\"extras\":{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"ema100_path\"},\"inTable\":{\"scope\":\"Message\",\"name\":\"ema100_table\"},\"optSeparator\":\"comma\",\"optEncoding\":\"utf8\",\"optHeaders\":true},\"ports\":[{\"id\":\"a13d6075-5441-4f48-ba2a-5924647bc41b\",\"type\":\"default\",\"selected\":false,\"name\":\"out_a13d6075-5441-4f48-ba2a-5924647bc41b\",\"parentNode\":\"fb34ab32-7448-458d-9630-500a35444b7c\",\"links\":[\"beffcddb-0802-4bfa-9214-0847d5ac4b0c\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"04434391-657f-4e30-909c-a8f816bf25c4\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"fb34ab32-7448-458d-9630-500a35444b7c\",\"links\":[\"dea23303-b3d2-4413-87a3-354f9f4c1816\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"fb34ab32-7448-458d-9630-500a35444b7c\",\"name\":\"Write CSV\",\"icon\":\"M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2M18 20H6V4H13V9H18V20M10 19L12 15H9V10H15V15L13 19H10\",\"color\":\"#0078DE\",\"namespace\":\"Core.CSV.WriteCSV\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Write CSV\",\"version\":\"1.11.6\",\"color\":\"#0078DE\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"ema100_path\"},\"inTable\":{\"scope\":\"Message\",\"name\":\"ema100_table\"}},{\"optSeparator\":\"comma\",\"optEncoding\":\"utf8\",\"optHeaders\":true}],\"xyz\":[{\"schema\":{\"title\":\"Input\",\"type\":\"object\",\"properties\":{\"inFilePath\":{\"type\":\"object\",\"title\":\"File Path\",\"variableType\":\"String\",\"messageScope\":true,\"customScope\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}},\"inTable\":{\"type\":\"object\",\"title\":\"Table\",\"variableType\":\"String\",\"messageOnly\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}}}},\"uiSchema\":{\"inTable\":{\"ui:field\":\"variable\"},\"inFilePath\":{\"ui:field\":\"variable\"},\"ui:order\":[\"inFilePath\",\"inTable\"]},\"formData\":{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"ema100_path\"},\"inTable\":{\"scope\":\"Message\",\"name\":\"ema100_table\"}}},{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"optSeparator\":{\"type\":\"string\",\"title\":\"Separator\",\"enum\":[\"comma\",\"semicolon\"],\"enumNames\":[\"Comma (,)\",\"Semicolon (;)\"]},\"optEncoding\":{\"type\":\"string\",\"title\":\"Encoding\",\"enum\":[\"utf8\",\"windows1254\"],\"enumNames\":[\"UTF-8\",\"Windows 1254\"]},\"optHeaders\":{\"title\":\"Headers\",\"type\":\"boolean\"}}},\"uiSchema\":{\"ui:order\":[\"optSeparator\",\"optEncoding\",\"optHeaders\"]},\"formData\":{\"optSeparator\":\"comma\",\"optEncoding\":\"utf8\",\"optHeaders\":true}}],\"outputs\":1,\"inputs\":1}}]}"
+		},
+		{
+			"id": "e42a5d8d-edc5-4109-ad49-bff07ee746b4",
+			"flow": "{\"id\":\"e42a5d8d-edc5-4109-ad49-bff07ee746b4\",\"offsetX\":0,\"offsetY\":0,\"zoom\":100,\"gridSize\":0,\"links\":[{\"id\":\"bfdb95bf-bb25-4865-bccc-0cc31633399a\",\"type\":\"default\",\"selected\":false,\"source\":\"f779a803-6819-402a-9223-32368850de87\",\"sourcePort\":\"ebecf096-4299-4c69-8ef7-fb8b00951924\",\"target\":\"9286bd1d-0f7a-4aba-a9e9-60b85cd9a5e8\",\"targetPort\":\"90c867ae-baa9-4e1f-90f5-df546721d02e\",\"points\":[{\"id\":\"d44c281a-be18-4361-a4e0-0423dbf4d7e3\",\"selected\":false,\"x\":702,\"y\":236.5},{\"id\":\"f09c1681-37ad-4fd1-b1af-1c2101918abc\",\"selected\":false,\"x\":846,\"y\":239}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"8f794afa-fbfc-4f74-97b7-d6ea470db610\",\"type\":\"default\",\"selected\":false,\"source\":\"9286bd1d-0f7a-4aba-a9e9-60b85cd9a5e8\",\"sourcePort\":\"bf299253-57fb-4d9c-9726-3d8735fd8541\",\"target\":\"fbe78ddc-d7cf-4615-b95d-1703cc2227f9\",\"targetPort\":\"51f7d925-1e1f-4638-9f30-5c675d23f856\",\"points\":[{\"id\":\"cea44f5a-b3e9-4ff5-9473-cced0fe2d0fe\",\"selected\":false,\"x\":1048,\"y\":241},{\"id\":\"865c56e2-8587-48f1-a373-83c02bd043fe\",\"selected\":false,\"x\":848,\"y\":292}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"55bb5cb5-154f-4f2d-a279-99b524467bef\",\"type\":\"default\",\"selected\":false,\"source\":\"fbe78ddc-d7cf-4615-b95d-1703cc2227f9\",\"sourcePort\":\"afd0d499-aa03-4717-a86e-9a4c668d0dbb\",\"target\":\"f35a9a7b-6263-4f40-a56d-ecde02688192\",\"targetPort\":\"f2364cdf-cad2-4634-a1ea-a73c393f32fa\",\"points\":[{\"id\":\"0e6bce88-eefa-4bd8-9121-e4681dcb914a\",\"selected\":false,\"x\":1050,\"y\":294},{\"id\":\"73ed0465-8d23-43fc-809e-68774a8702cd\",\"selected\":true,\"x\":1167,\"y\":307.5}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300}],\"nodes\":[{\"id\":\"f779a803-6819-402a-9223-32368850de87\",\"type\":\"simple\",\"selected\":false,\"x\":501,\"y\":211.5,\"extras\":{},\"ports\":[{\"id\":\"ebecf096-4299-4c69-8ef7-fb8b00951924\",\"type\":\"default\",\"selected\":false,\"name\":\"out_ebecf096-4299-4c69-8ef7-fb8b00951924\",\"parentNode\":\"f779a803-6819-402a-9223-32368850de87\",\"links\":[\"bfdb95bf-bb25-4865-bccc-0cc31633399a\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"}],\"model\":{\"id\":\"f779a803-6819-402a-9223-32368850de87\",\"name\":\"Begin\",\"icon\":\"M4,9C5.31,9 6.42,9.83 6.83,11H22V13H6.83C6.42,14.17 5.31,15 4,15A3,3 0 0,1 1,12A3,3 0 0,1 4,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.Begin\",\"version\":\"0.0\",\"abc\":[],\"xyz\":[],\"outputs\":1,\"inputs\":0}},{\"id\":\"f35a9a7b-6263-4f40-a56d-ecde02688192\",\"type\":\"simple\",\"selected\":false,\"x\":1160,\"y\":284.5,\"extras\":{\"sfPort\":0},\"ports\":[{\"id\":\"f2364cdf-cad2-4634-a1ea-a73c393f32fa\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"f35a9a7b-6263-4f40-a56d-ecde02688192\",\"links\":[\"55bb5cb5-154f-4f2d-a279-99b524467bef\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"f35a9a7b-6263-4f40-a56d-ecde02688192\",\"name\":\"End\",\"icon\":\"M20,9C18.69,9 17.58,9.83 17.17,11H2V13H17.17C17.58,14.17 18.69,15 20,15A3,3 0 0,0 23,12A3,3 0 0,0 20,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.End\",\"version\":\"0.0\",\"abc\":[{},{\"sfPort\":0}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"sfPort\":{\"title\":\"Port\",\"type\":\"number\"}}},\"uiSchema\":{\"sfPort\":{\"ui:widget\":\"hidden\"},\"ui:order\":[\"*\"]},\"formData\":{\"sfPort\":0}}],\"outputs\":0,\"inputs\":1}},{\"id\":\"9286bd1d-0f7a-4aba-a9e9-60b85cd9a5e8\",\"type\":\"simple\",\"selected\":false,\"x\":839,\"y\":216,\"extras\":{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"export_path\"},\"outTable\":{\"scope\":\"Message\",\"name\":\"export_table\"},\"optSeparator\":\"comma\",\"optOffset\":{\"scope\":\"Custom\",\"name\":\"0\"},\"optHeaders\":true,\"optJsonify\":true},\"ports\":[{\"id\":\"bf299253-57fb-4d9c-9726-3d8735fd8541\",\"type\":\"default\",\"selected\":false,\"name\":\"out_bf299253-57fb-4d9c-9726-3d8735fd8541\",\"parentNode\":\"9286bd1d-0f7a-4aba-a9e9-60b85cd9a5e8\",\"links\":[\"8f794afa-fbfc-4f74-97b7-d6ea470db610\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"90c867ae-baa9-4e1f-90f5-df546721d02e\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"9286bd1d-0f7a-4aba-a9e9-60b85cd9a5e8\",\"links\":[\"bfdb95bf-bb25-4865-bccc-0cc31633399a\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"9286bd1d-0f7a-4aba-a9e9-60b85cd9a5e8\",\"name\":\"Read CSV\",\"icon\":\"M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2M18 20H6V4H13V9H18V20M10 19L12 15H9V10H15V15L13 19H10\",\"color\":\"#0078DE\",\"namespace\":\"Core.CSV.ReadCSV\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Read CSV\",\"version\":\"1.11.6\",\"color\":\"#0078DE\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"export_path\"}},{\"outTable\":{\"scope\":\"Message\",\"name\":\"export_table\"}},{\"optSeparator\":\"comma\",\"optOffset\":{\"scope\":\"Custom\",\"name\":\"0\"},\"optHeaders\":true,\"optJsonify\":true}],\"xyz\":[{\"schema\":{\"title\":\"Input\",\"type\":\"object\",\"properties\":{\"inFilePath\":{\"type\":\"object\",\"title\":\"File Path\",\"variableType\":\"String\",\"customScope\":true,\"messageScope\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}}}},\"uiSchema\":{\"inFilePath\":{\"ui:field\":\"variable\"}},\"formData\":{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"export_path\"}}},{\"schema\":{\"title\":\"Output\",\"type\":\"object\",\"properties\":{\"outTable\":{\"type\":\"object\",\"title\":\"Table\",\"variableType\":\"String\",\"messageOnly\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}}}},\"uiSchema\":{\"outTable\":{\"ui:field\":\"variable\"}},\"formData\":{\"outTable\":{\"scope\":\"Message\",\"name\":\"export_table\"}}},{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"optSeparator\":{\"type\":\"string\",\"title\":\"Separator\",\"enum\":[\"comma\",\"semicolon\",\"tab\",\"space\"],\"enumNames\":[\"Comma (,)\",\"Semicolon (;)\",\"TAB\",\"Space\"]},\"optOffset\":{\"type\":\"object\",\"title\":\"Skip Rows\",\"variableType\":\"Integer\",\"customScope\":true,\"messageScope\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}},\"optHeaders\":{\"title\":\"Headers\",\"type\":\"boolean\"},\"optJsonify\":{\"title\":\"Jsonify\",\"type\":\"boolean\"}}},\"uiSchema\":{\"optOffset\":{\"ui:field\":\"variable\"},\"ui:order\":[\"optSeparator\",\"optOffset\",\"optHeaders\",\"optJsonify\"]},\"formData\":{\"optSeparator\":\"comma\",\"optOffset\":{\"scope\":\"Custom\",\"name\":\"0\"},\"optHeaders\":true,\"optJsonify\":true}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"fbe78ddc-d7cf-4615-b95d-1703cc2227f9\",\"type\":\"simple\",\"selected\":true,\"x\":841,\"y\":269,\"extras\":{\"outputs\":1,\"func\":\"msg.export_table.columns = [\\\"opentime\\\"]\\nfor(var i = 0 ; i < msg.export_table.rows.length; i++){\\n  msg.export_table.rows[i] = {\\\"opentime\\\" : msg.export_table.rows[i][\\\"opentime\\\"]};\\n}\\nreturn msg;\",\"optTimeout\":30,\"variables\":[]},\"ports\":[{\"id\":\"afd0d499-aa03-4717-a86e-9a4c668d0dbb\",\"type\":\"default\",\"selected\":false,\"name\":\"out_afd0d499-aa03-4717-a86e-9a4c668d0dbb\",\"parentNode\":\"fbe78ddc-d7cf-4615-b95d-1703cc2227f9\",\"links\":[\"55bb5cb5-154f-4f2d-a279-99b524467bef\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"51f7d925-1e1f-4638-9f30-5c675d23f856\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"fbe78ddc-d7cf-4615-b95d-1703cc2227f9\",\"links\":[\"8f794afa-fbfc-4f74-97b7-d6ea470db610\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"fbe78ddc-d7cf-4615-b95d-1703cc2227f9\",\"name\":\"Set Dates\",\"icon\":\"M15.6,5.29C14.5,5.19 13.53,6 13.43,7.11L13.18,10H16V12H13L12.56,17.07C12.37,19.27 10.43,20.9 8.23,20.7C6.92,20.59 5.82,19.86 5.17,18.83L6.67,17.33C6.91,18.07 7.57,18.64 8.4,18.71C9.5,18.81 10.47,18 10.57,16.89L11,12H8V10H11.17L11.44,6.93C11.63,4.73 13.57,3.1 15.77,3.3C17.08,3.41 18.18,4.14 18.83,5.17L17.33,6.67C17.09,5.93 16.43,5.36 15.6,5.29Z\",\"color\":\"#F27925\",\"editor\":\"javascript\",\"namespace\":\"Core.Programming.Function\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Set Dates\",\"color\":\"#F27925\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false,\"version\":\"1.11.6\"},{\"outputs\":1,\"func\":\"msg.export_table.columns = [\\\"opentime\\\"]\\nfor(var i = 0 ; i < msg.export_table.rows.length; i++){\\n  msg.export_table.rows[i] = {\\\"opentime\\\" : msg.export_table.rows[i][\\\"opentime\\\"]};\\n}\\nreturn msg;\",\"optTimeout\":30},{\"variables\":[]}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"func\":{\"title\":\"Function\",\"type\":\"string\"},\"outputs\":{\"title\":\"Outputs\",\"type\":\"number\",\"minimum\":1,\"maximum\":32},\"optTimeout\":{\"title\":\"Script Timeout\",\"type\":\"number\"}}},\"uiSchema\":{\"outputs\":{\"ui:widget\":\"updown\"},\"func\":{\"ui:widget\":\"hidden\",\"ui:options\":{\"rows\":6}}},\"formData\":{\"outputs\":1,\"func\":\"msg.export_table.columns = [\\\"opentime\\\"]\\nfor(var i = 0 ; i < msg.export_table.rows.length; i++){\\n  msg.export_table.rows[i] = {\\\"opentime\\\" : msg.export_table.rows[i][\\\"opentime\\\"]};\\n}\\nreturn msg;\",\"optTimeout\":30}},{\"schema\":{\"title\":\"Local Variables\",\"type\":\"object\",\"properties\":{\"variables\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"variableType\":{\"type\":\"string\"}}}}}},\"uiSchema\":{\"variables\":{\"ui:field\":\"localVariable\"}},\"formData\":{\"variables\":[]}}],\"outputs\":1,\"inputs\":1}}]}"
+		},
+		{
+			"id": "e9f3eda8-b934-4543-800b-ff324006938e",
+			"flow": "{\"id\":\"e9f3eda8-b934-4543-800b-ff324006938e\",\"offsetX\":-83,\"offsetY\":-85,\"zoom\":100,\"gridSize\":0,\"links\":[{\"id\":\"c47c1751-4dfc-444e-995d-45bae5909566\",\"type\":\"default\",\"selected\":false,\"source\":\"84c1a331-c5aa-48c5-9989-00b2b05158e3\",\"sourcePort\":\"7913e151-c8b0-46d4-b331-f75fc2189b6f\",\"target\":\"635d100c-0067-4c9b-ba48-c83ef4b0ff20\",\"targetPort\":\"30a973d8-ed8e-4e6f-bbd5-a81162fb3c07\",\"points\":[{\"id\":\"0d02e61e-bf1b-4356-9468-2d9281e45425\",\"selected\":false,\"x\":1152.296875,\"y\":312.84375},{\"id\":\"de1fb850-e57f-4d54-be09-97e9d86e8bfe\",\"selected\":false,\"x\":948,\"y\":359.8125}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"c0359330-3307-4777-9008-c5eab14e113b\",\"type\":\"default\",\"selected\":false,\"source\":\"635d100c-0067-4c9b-ba48-c83ef4b0ff20\",\"sourcePort\":\"96f541ec-67a5-4be2-a310-051d71619485\",\"target\":\"04d24c7b-2705-4730-a752-db4b7739b602\",\"targetPort\":\"ac92ee4c-b585-4e0b-b09b-d2e0d1d5df01\",\"points\":[{\"id\":\"7721e17c-edf4-47e2-a15b-9cb0d626a053\",\"selected\":false,\"x\":1150,\"y\":361.8125},{\"id\":\"152d379b-f817-4d2d-a026-0b943f5c71a2\",\"selected\":false,\"x\":943,\"y\":410}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"c3829ac9-3706-4d22-9600-44de4f39dfdf\",\"type\":\"default\",\"selected\":false,\"source\":\"04d24c7b-2705-4730-a752-db4b7739b602\",\"sourcePort\":\"d72bc18f-1013-4ea6-a450-28725ee7472f\",\"target\":\"3240e230-9070-42a7-b966-62140e2b51a0\",\"targetPort\":\"728eaf30-b362-46c0-9b39-1633f1c38ead\",\"points\":[{\"id\":\"41d5f1ef-f78c-4059-9e8a-15d22dd4b467\",\"selected\":false,\"x\":1145,\"y\":412},{\"id\":\"0f5170a6-e67e-4c41-a5f9-c88586916987\",\"selected\":false,\"x\":941,\"y\":459.796875}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"8b83fced-fb6b-40b7-b308-393f1f55bf2b\",\"type\":\"default\",\"selected\":false,\"source\":\"1e953932-de63-4f75-b31d-ecbc570d565a\",\"sourcePort\":\"8e06e3e5-50cd-4e5a-8f29-151e415c49bd\",\"target\":\"84c1a331-c5aa-48c5-9989-00b2b05158e3\",\"targetPort\":\"d7326474-d536-4338-a2f4-0b839cd0e121\",\"points\":[{\"id\":\"fecab2bb-c204-4c97-b842-f2a47c28d28b\",\"selected\":false,\"x\":761,\"y\":309.5},{\"id\":\"d56ceb30-b9da-4b0d-a2bb-d66c71543ca6\",\"selected\":false,\"x\":950.296875,\"y\":310.84375}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"576d8f23-9124-4eaf-8949-736a8802d3b6\",\"type\":\"default\",\"selected\":false,\"source\":\"3240e230-9070-42a7-b966-62140e2b51a0\",\"sourcePort\":\"75884a44-9587-4f44-9aff-475141473c6c\",\"target\":\"6fe5b07d-8dfe-4417-a81b-b05a2e889374\",\"targetPort\":\"488e781c-c695-4744-923b-cebe008c4fc5\",\"points\":[{\"id\":\"8ca12704-2ca2-4052-b8a4-561c29564f4b\",\"selected\":false,\"x\":1143,\"y\":461.796875},{\"id\":\"0b32e609-b9f8-466e-96e0-c3bbefd217b2\",\"selected\":false,\"x\":939,\"y\":509}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"58819a51-049f-4b2a-a802-9dfa6efdc656\",\"type\":\"default\",\"selected\":false,\"source\":\"6fe5b07d-8dfe-4417-a81b-b05a2e889374\",\"sourcePort\":\"4157b337-6359-4f92-a663-86fe1a617cd1\",\"target\":\"4cc2183d-1e56-4c40-8f2e-20b3bb324058\",\"targetPort\":\"b71fcf9d-4adf-4da8-9d25-fef77810a3b0\",\"points\":[{\"id\":\"1671e088-d219-46a6-958a-26810b264321\",\"selected\":false,\"x\":1141,\"y\":511},{\"id\":\"63559415-bf9b-4b2b-be9c-8e650c2f4819\",\"selected\":false,\"x\":942,\"y\":559}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"9bf6ad75-b06d-4c13-8512-57c4770b9433\",\"type\":\"default\",\"selected\":false,\"source\":\"4cc2183d-1e56-4c40-8f2e-20b3bb324058\",\"sourcePort\":\"7e7ccc96-0679-4200-b2a2-bdbeaf0e6939\",\"target\":\"e1740cb5-c2b4-4e94-8710-4e9d5e3efc82\",\"targetPort\":\"03c18f89-4d00-4c1f-8cb4-492477c81c22\",\"points\":[{\"id\":\"e9af7ed0-d652-452f-a775-44cb57c8e58e\",\"selected\":false,\"x\":1144,\"y\":561},{\"id\":\"70d590b4-bcc6-4e3f-b01b-f6cc7fcf54b0\",\"selected\":false,\"x\":942,\"y\":607}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"d78ce0dc-c2f7-4f6b-bdfc-8aac21ec592f\",\"type\":\"default\",\"selected\":false,\"source\":\"e1740cb5-c2b4-4e94-8710-4e9d5e3efc82\",\"sourcePort\":\"1e7ab0f5-39f4-4155-8efd-72df0da396bd\",\"target\":\"5af24666-cf93-4af4-a4bb-5866a4cb1093\",\"targetPort\":\"4e76daee-727c-4def-afbb-43d505af9c87\",\"points\":[{\"id\":\"9d1cd57c-d66b-4fce-a2dd-0b04726f654e\",\"selected\":false,\"x\":1144,\"y\":609},{\"id\":\"eaf727b4-1861-4c2e-a2ea-e6ad1b35e1d8\",\"selected\":true,\"x\":1280,\"y\":634.5}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300}],\"nodes\":[{\"id\":\"1e953932-de63-4f75-b31d-ecbc570d565a\",\"type\":\"simple\",\"selected\":false,\"x\":560,\"y\":284.5,\"extras\":{},\"ports\":[{\"id\":\"8e06e3e5-50cd-4e5a-8f29-151e415c49bd\",\"type\":\"default\",\"selected\":false,\"name\":\"out_8e06e3e5-50cd-4e5a-8f29-151e415c49bd\",\"parentNode\":\"1e953932-de63-4f75-b31d-ecbc570d565a\",\"links\":[\"8b83fced-fb6b-40b7-b308-393f1f55bf2b\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"}],\"model\":{\"id\":\"1e953932-de63-4f75-b31d-ecbc570d565a\",\"name\":\"Begin\",\"icon\":\"M4,9C5.31,9 6.42,9.83 6.83,11H22V13H6.83C6.42,14.17 5.31,15 4,15A3,3 0 0,1 1,12A3,3 0 0,1 4,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.Begin\",\"version\":\"0.0\",\"abc\":[],\"xyz\":[],\"outputs\":1,\"inputs\":0}},{\"id\":\"5af24666-cf93-4af4-a4bb-5866a4cb1093\",\"type\":\"simple\",\"selected\":false,\"x\":1273,\"y\":611.5,\"extras\":{\"sfPort\":0},\"ports\":[{\"id\":\"4e76daee-727c-4def-afbb-43d505af9c87\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"5af24666-cf93-4af4-a4bb-5866a4cb1093\",\"links\":[\"d78ce0dc-c2f7-4f6b-bdfc-8aac21ec592f\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"5af24666-cf93-4af4-a4bb-5866a4cb1093\",\"name\":\"End\",\"icon\":\"M20,9C18.69,9 17.58,9.83 17.17,11H2V13H17.17C17.58,14.17 18.69,15 20,15A3,3 0 0,0 23,12A3,3 0 0,0 20,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.End\",\"version\":\"0.0\",\"abc\":[{},{\"sfPort\":0}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"sfPort\":{\"title\":\"Port\",\"type\":\"number\"}}},\"uiSchema\":{\"sfPort\":{\"ui:widget\":\"hidden\"},\"ui:order\":[\"*\"]},\"formData\":{\"sfPort\":0}}],\"outputs\":0,\"inputs\":1}},{\"id\":\"04d24c7b-2705-4730-a752-db4b7739b602\",\"type\":\"simple\",\"selected\":false,\"x\":936,\"y\":387,\"extras\":{\"outputs\":1,\"func\":\"msg.facts = [\\n{name: \\\"EMA5\\\", path: msg.ema5_path},\\n{name: \\\"EMA100\\\", path: msg.ema100_path},\\n];\\nreturn msg;\\n\",\"optTimeout\":30,\"variables\":[]},\"ports\":[{\"id\":\"d72bc18f-1013-4ea6-a450-28725ee7472f\",\"type\":\"default\",\"selected\":false,\"name\":\"out_d72bc18f-1013-4ea6-a450-28725ee7472f\",\"parentNode\":\"04d24c7b-2705-4730-a752-db4b7739b602\",\"links\":[\"c3829ac9-3706-4d22-9600-44de4f39dfdf\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"ac92ee4c-b585-4e0b-b09b-d2e0d1d5df01\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"04d24c7b-2705-4730-a752-db4b7739b602\",\"links\":[\"c0359330-3307-4777-9008-c5eab14e113b\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"04d24c7b-2705-4730-a752-db4b7739b602\",\"name\":\"Set Facts\",\"icon\":\"M15.6,5.29C14.5,5.19 13.53,6 13.43,7.11L13.18,10H16V12H13L12.56,17.07C12.37,19.27 10.43,20.9 8.23,20.7C6.92,20.59 5.82,19.86 5.17,18.83L6.67,17.33C6.91,18.07 7.57,18.64 8.4,18.71C9.5,18.81 10.47,18 10.57,16.89L11,12H8V10H11.17L11.44,6.93C11.63,4.73 13.57,3.1 15.77,3.3C17.08,3.41 18.18,4.14 18.83,5.17L17.33,6.67C17.09,5.93 16.43,5.36 15.6,5.29Z\",\"color\":\"#F27925\",\"editor\":\"javascript\",\"namespace\":\"Core.Programming.Function\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Set Facts\",\"color\":\"#F27925\",\"version\":\"1.11.6\"},{\"outputs\":1,\"func\":\"msg.facts = [\\n{name: \\\"EMA5\\\", path: msg.ema5_path},\\n{name: \\\"EMA100\\\", path: msg.ema100_path},\\n];\\nreturn msg;\\n\",\"optTimeout\":30},{\"variables\":[]}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"func\":{\"title\":\"Function\",\"type\":\"string\"},\"outputs\":{\"title\":\"Outputs\",\"type\":\"number\",\"minimum\":1,\"maximum\":32},\"optTimeout\":{\"title\":\"Script Timeout\",\"type\":\"number\"}}},\"uiSchema\":{\"outputs\":{\"ui:widget\":\"updown\"},\"func\":{\"ui:widget\":\"hidden\",\"ui:options\":{\"rows\":6}}},\"formData\":{\"outputs\":1,\"func\":\"msg.facts = [\\n{name: \\\"EMA5\\\", path: msg.ema5_path},\\n{name: \\\"EMA100\\\", path: msg.ema100_path},\\n];\\nreturn msg;\\n\",\"optTimeout\":30}},{\"schema\":{\"title\":\"Local Variables\",\"type\":\"object\",\"properties\":{\"variables\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"variableType\":{\"type\":\"string\"}}}}}},\"uiSchema\":{\"variables\":{\"ui:field\":\"localVariable\"}},\"formData\":{\"variables\":[]}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"84c1a331-c5aa-48c5-9989-00b2b05158e3\",\"type\":\"simple\",\"selected\":false,\"x\":943.3099825235201,\"y\":287.8532530254287,\"extras\":{\"outputs\":1,\"func\":\"msg.rules = `\\nrule CheckBuySignalEMA5AndEMA100 \\\"Checks buy signals\\\" salience 2 {\\n\\twhen \\n\\t  ta.IsValid(EMA5, EMA100) && ta.Cross(EMA5, EMA100) && ta.LTat(EMA100, EMA5)\\n\\tthen\\n\\t\\tdecision[t]['signal'] = 'BUY';\\n\\t\\tdecision[t]['description'] = 'CheckBuySignalEMA5AndEMA100';\\n\\t\\tComplete();\\n}\\n\\nrule CheckSellSignalEMA5AndEMA100 \\\"Checks buy signals\\\" salience 2 {\\n\\twhen \\n\\t  ta.IsValid(EMA5, EMA100) && ta.Cross(EMA5, EMA100) && ta.GTat(EMA100, EMA5)\\n\\tthen\\n\\t\\tdecision[t]['signal'] = 'SELL';\\n\\t\\tdecision[t]['description'] = 'CheckSellSignalEMA5AndEMA100';\\n\\t\\tComplete();\\n}\\n`;\\nreturn msg;\",\"optTimeout\":30,\"variables\":[]},\"ports\":[{\"id\":\"7913e151-c8b0-46d4-b331-f75fc2189b6f\",\"type\":\"default\",\"selected\":false,\"name\":\"out_7913e151-c8b0-46d4-b331-f75fc2189b6f\",\"parentNode\":\"84c1a331-c5aa-48c5-9989-00b2b05158e3\",\"links\":[\"c47c1751-4dfc-444e-995d-45bae5909566\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"d7326474-d536-4338-a2f4-0b839cd0e121\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"84c1a331-c5aa-48c5-9989-00b2b05158e3\",\"links\":[\"8b83fced-fb6b-40b7-b308-393f1f55bf2b\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"84c1a331-c5aa-48c5-9989-00b2b05158e3\",\"name\":\"Rules\",\"icon\":\"M15.6,5.29C14.5,5.19 13.53,6 13.43,7.11L13.18,10H16V12H13L12.56,17.07C12.37,19.27 10.43,20.9 8.23,20.7C6.92,20.59 5.82,19.86 5.17,18.83L6.67,17.33C6.91,18.07 7.57,18.64 8.4,18.71C9.5,18.81 10.47,18 10.57,16.89L11,12H8V10H11.17L11.44,6.93C11.63,4.73 13.57,3.1 15.77,3.3C17.08,3.41 18.18,4.14 18.83,5.17L17.33,6.67C17.09,5.93 16.43,5.36 15.6,5.29Z\",\"color\":\"#F27925\",\"editor\":\"javascript\",\"namespace\":\"Core.Programming.Function\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Rules\",\"color\":\"#F27925\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false,\"version\":\"1.11.6\"},{\"outputs\":1,\"func\":\"msg.rules = `\\nrule CheckBuySignalEMA5AndEMA100 \\\"Checks buy signals\\\" salience 2 {\\n\\twhen \\n\\t  ta.IsValid(EMA5, EMA100) && ta.Cross(EMA5, EMA100) && ta.LTat(EMA100, EMA5)\\n\\tthen\\n\\t\\tdecision[t]['signal'] = 'BUY';\\n\\t\\tdecision[t]['description'] = 'CheckBuySignalEMA5AndEMA100';\\n\\t\\tComplete();\\n}\\n\\nrule CheckSellSignalEMA5AndEMA100 \\\"Checks buy signals\\\" salience 2 {\\n\\twhen \\n\\t  ta.IsValid(EMA5, EMA100) && ta.Cross(EMA5, EMA100) && ta.GTat(EMA100, EMA5)\\n\\tthen\\n\\t\\tdecision[t]['signal'] = 'SELL';\\n\\t\\tdecision[t]['description'] = 'CheckSellSignalEMA5AndEMA100';\\n\\t\\tComplete();\\n}\\n`;\\nreturn msg;\",\"optTimeout\":30},{\"variables\":[]}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"func\":{\"title\":\"Function\",\"type\":\"string\"},\"outputs\":{\"title\":\"Outputs\",\"type\":\"number\",\"minimum\":1,\"maximum\":32},\"optTimeout\":{\"title\":\"Script Timeout\",\"type\":\"number\"}}},\"uiSchema\":{\"outputs\":{\"ui:widget\":\"updown\"},\"func\":{\"ui:widget\":\"hidden\",\"ui:options\":{\"rows\":6}}},\"formData\":{\"outputs\":1,\"func\":\"msg.rules = `\\nrule CheckBuySignalEMA5AndEMA100 \\\"Checks buy signals\\\" salience 2 {\\n\\twhen \\n\\t  ta.IsValid(EMA5, EMA100) && ta.Cross(EMA5, EMA100) && ta.LTat(EMA100, EMA5)\\n\\tthen\\n\\t\\tdecision[t]['signal'] = 'BUY';\\n\\t\\tdecision[t]['description'] = 'CheckBuySignalEMA5AndEMA100';\\n\\t\\tComplete();\\n}\\n\\nrule CheckSellSignalEMA5AndEMA100 \\\"Checks buy signals\\\" salience 2 {\\n\\twhen \\n\\t  ta.IsValid(EMA5, EMA100) && ta.Cross(EMA5, EMA100) && ta.GTat(EMA100, EMA5)\\n\\tthen\\n\\t\\tdecision[t]['signal'] = 'SELL';\\n\\t\\tdecision[t]['description'] = 'CheckSellSignalEMA5AndEMA100';\\n\\t\\tComplete();\\n}\\n`;\\nreturn msg;\",\"optTimeout\":30}},{\"schema\":{\"title\":\"Local Variables\",\"type\":\"object\",\"properties\":{\"variables\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"variableType\":{\"type\":\"string\"}}}}}},\"uiSchema\":{\"variables\":{\"ui:field\":\"localVariable\"}},\"formData\":{\"variables\":[]}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"3240e230-9070-42a7-b966-62140e2b51a0\",\"type\":\"simple\",\"selected\":false,\"x\":934,\"y\":436.796875,\"extras\":{\"inFacts\":{\"name\":\"facts\",\"scope\":\"Message\"},\"inRulesBinaryPath\":{\"scope\":\"Message\",\"name\":\"rules_path\"},\"outDecision\":{\"name\":\"decision\",\"scope\":\"Message\"},\"optTimeSeries\":true},\"ports\":[{\"id\":\"75884a44-9587-4f44-9aff-475141473c6c\",\"type\":\"default\",\"selected\":false,\"name\":\"out_75884a44-9587-4f44-9aff-475141473c6c\",\"parentNode\":\"3240e230-9070-42a7-b966-62140e2b51a0\",\"links\":[\"576d8f23-9124-4eaf-8949-736a8802d3b6\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"728eaf30-b362-46c0-9b39-1633f1c38ead\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"3240e230-9070-42a7-b966-62140e2b51a0\",\"links\":[\"c3829ac9-3706-4d22-9600-44de4f39dfdf\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"3240e230-9070-42a7-b966-62140e2b51a0\",\"name\":\"Execute\",\"icon\":\"M15.9,18.45C17.25,18.45 18.35,17.35 18.35,16C18.35,14.65 17.25,13.55 15.9,13.55C14.54,13.55 13.45,14.65 13.45,16C13.45,17.35 14.54,18.45 15.9,18.45M21.1,16.68L22.58,17.84C22.71,17.95 22.75,18.13 22.66,18.29L21.26,20.71C21.17,20.86 21,20.92 20.83,20.86L19.09,20.16C18.73,20.44 18.33,20.67 17.91,20.85L17.64,22.7C17.62,22.87 17.47,23 17.3,23H14.5C14.32,23 14.18,22.87 14.15,22.7L13.89,20.85C13.46,20.67 13.07,20.44 12.71,20.16L10.96,20.86C10.81,20.92 10.62,20.86 10.54,20.71L9.14,18.29C9.05,18.13 9.09,17.95 9.22,17.84L10.7,16.68L10.65,16L10.7,15.31L9.22,14.16C9.09,14.05 9.05,13.86 9.14,13.71L10.54,11.29C10.62,11.13 10.81,11.07 10.96,11.13L12.71,11.84C13.07,11.56 13.46,11.32 13.89,11.15L14.15,9.29C14.18,9.13 14.32,9 14.5,9H17.3C17.47,9 17.62,9.13 17.64,9.29L17.91,11.15C18.33,11.32 18.73,11.56 19.09,11.84L20.83,11.13C21,11.07 21.17,11.13 21.26,11.29L22.66,13.71C22.75,13.86 22.71,14.05 22.58,14.16L21.1,15.31L21.15,16L21.1,16.68M6.69,8.07C7.56,8.07 8.26,7.37 8.26,6.5C8.26,5.63 7.56,4.92 6.69,4.92A1.58,1.58 0 0,0 5.11,6.5C5.11,7.37 5.82,8.07 6.69,8.07M10.03,6.94L11,7.68C11.07,7.75 11.09,7.87 11.03,7.97L10.13,9.53C10.08,9.63 9.96,9.67 9.86,9.63L8.74,9.18L8,9.62L7.81,10.81C7.79,10.92 7.7,11 7.59,11H5.79C5.67,11 5.58,10.92 5.56,10.81L5.4,9.62L4.64,9.18L3.5,9.63C3.41,9.67 3.3,9.63 3.24,9.53L2.34,7.97C2.28,7.87 2.31,7.75 2.39,7.68L3.34,6.94L3.31,6.5L3.34,6.06L2.39,5.32C2.31,5.25 2.28,5.13 2.34,5.03L3.24,3.47C3.3,3.37 3.41,3.33 3.5,3.37L4.63,3.82L5.4,3.38L5.56,2.19C5.58,2.08 5.67,2 5.79,2H7.59C7.7,2 7.79,2.08 7.81,2.19L8,3.38L8.74,3.82L9.86,3.37C9.96,3.33 10.08,3.37 10.13,3.47L11.03,5.03C11.09,5.13 11.07,5.25 11,5.32L10.03,6.06L10.06,6.5L10.03,6.94Z\",\"color\":\"#90cadc\",\"namespace\":\"Robomotion.Grule.Execute\",\"version\":\"0.1.0\",\"abc\":[{\"name\":\"Execute\",\"version\":\"0.1.0\",\"color\":\"#90cadc\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"inFacts\":{\"name\":\"facts\",\"scope\":\"Message\"},\"inRulesBinaryPath\":{\"scope\":\"Message\",\"name\":\"rules_path\"}},{\"outDecision\":{\"name\":\"decision\",\"scope\":\"Message\"}},{\"optTimeSeries\":true}],\"xyz\":[{\"schema\":{\"type\":\"object\",\"title\":\"Input\",\"properties\":{\"inFacts\":{\"type\":\"object\",\"title\":\"Facts\",\"description\":\"Facts represent the objects in current working memory of Grule\",\"properties\":{\"name\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"}},\"messageScope\":true,\"variableType\":\"Object\"},\"inRulesBinaryPath\":{\"type\":\"object\",\"title\":\"Rules Binary Path\",\"description\":\"Input artifact is a binary Knowledge Base file (input.grb)\",\"properties\":{\"name\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"}},\"messageScope\":true,\"variableType\":\"Object\"}}},\"formData\":{\"inFacts\":{\"name\":\"facts\",\"scope\":\"Message\"},\"inRulesBinaryPath\":{\"scope\":\"Message\",\"name\":\"rules_path\"}},\"uiSchema\":{\"inFacts\":{\"ui:field\":\"variable\"},\"inRulesBinaryPath\":{\"ui:field\":\"variable\"},\"ui:order\":[\"inFacts\",\"inRulesBinaryPath\"]}},{\"schema\":{\"type\":\"object\",\"title\":\"Output\",\"properties\":{\"outDecision\":{\"type\":\"object\",\"title\":\"Result\",\"properties\":{\"name\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"}},\"messageScope\":true,\"messageOnly\":true,\"variableType\":\"Object\"}}},\"formData\":{\"outDecision\":{\"name\":\"decision\",\"scope\":\"Message\"}},\"uiSchema\":{\"outDecision\":{\"ui:field\":\"variable\"},\"ui:order\":[\"outDecision\"]}},{\"schema\":{\"type\":\"object\",\"title\":\"Options\",\"properties\":{\"optTimeSeries\":{\"type\":\"boolean\",\"title\":\"Time Series\",\"description\":\"If selected facts and results should be an array\"}}},\"formData\":{\"optTimeSeries\":true},\"uiSchema\":{\"optTimeSeries\":{\"ui:field\":\"input\"},\"ui:order\":[\"optTimeSeries\"]}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"635d100c-0067-4c9b-ba48-c83ef4b0ff20\",\"type\":\"simple\",\"selected\":false,\"x\":941,\"y\":336.8125,\"extras\":{\"inRules\":{\"name\":\"rules\",\"scope\":\"Message\"},\"inRulesBinaryPath\":{\"scope\":\"Message\",\"name\":\"rules_path\"},\"optFormat\":\"grl\"},\"ports\":[{\"id\":\"96f541ec-67a5-4be2-a310-051d71619485\",\"type\":\"default\",\"selected\":false,\"name\":\"out_96f541ec-67a5-4be2-a310-051d71619485\",\"parentNode\":\"635d100c-0067-4c9b-ba48-c83ef4b0ff20\",\"links\":[\"c0359330-3307-4777-9008-c5eab14e113b\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"30a973d8-ed8e-4e6f-bbd5-a81162fb3c07\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"635d100c-0067-4c9b-ba48-c83ef4b0ff20\",\"links\":[\"c47c1751-4dfc-444e-995d-45bae5909566\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"635d100c-0067-4c9b-ba48-c83ef4b0ff20\",\"name\":\"Build\",\"icon\":\"M2 19.63L13.43 8.2L12.72 7.5L14.14 6.07L12 3.89C13.2 2.7 15.09 2.7 16.27 3.89L19.87 7.5L18.45 8.91H21.29L22 9.62L18.45 13.21L17.74 12.5V9.62L16.27 11.04L15.56 10.33L4.13 21.76L2 19.63Z\",\"color\":\"#90cadc\",\"namespace\":\"Robomotion.Grule.Build\",\"version\":\"0.1.0\",\"abc\":[{\"name\":\"Build\",\"version\":\"0.1.0\",\"color\":\"#90cadc\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"inRules\":{\"name\":\"rules\",\"scope\":\"Message\"},\"inRulesBinaryPath\":{\"scope\":\"Message\",\"name\":\"rules_path\"}},{\"optFormat\":\"grl\"}],\"xyz\":[{\"schema\":{\"type\":\"object\",\"title\":\"Input\",\"properties\":{\"inRules\":{\"type\":\"object\",\"title\":\"Rules\",\"description\":\"JSON or GRL formatted rule script\",\"properties\":{\"name\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"}},\"messageScope\":true,\"variableType\":\"Object\"},\"inRulesBinaryPath\":{\"type\":\"object\",\"title\":\"Rules Binary Path\",\"description\":\"Output build artifact is a binary Knowledge Base file (output.grb)\",\"properties\":{\"name\":{\"type\":\"string\"},\"scope\":{\"type\":\"string\"}},\"messageScope\":true,\"variableType\":\"Object\"}}},\"formData\":{\"inRules\":{\"name\":\"rules\",\"scope\":\"Message\"},\"inRulesBinaryPath\":{\"scope\":\"Message\",\"name\":\"rules_path\"}},\"uiSchema\":{\"inRules\":{\"ui:field\":\"variable\"},\"inRulesBinaryPath\":{\"ui:field\":\"variable\"},\"ui:order\":[\"inRules\",\"inRulesBinaryPath\"]}},{\"schema\":{\"type\":\"object\",\"title\":\"Options\",\"properties\":{\"optFormat\":{\"type\":\"string\",\"title\":\"Rules Format\",\"multiple\":true,\"enum\":[\"json\",\"grl\"],\"enumNames\":[\"JSON\",\"GRL\"]}}},\"formData\":{\"optFormat\":\"grl\"},\"uiSchema\":{\"ui:order\":[\"optFormat\"]}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"4cc2183d-1e56-4c40-8f2e-20b3bb324058\",\"type\":\"simple\",\"selected\":false,\"x\":935,\"y\":536,\"extras\":{\"outputs\":1,\"func\":\"msg.x = msg.table1.rows.length\\nmsg.y = msg.decision.length\\nmsg.table = {\\n  \\\"columns\\\":[\\\"date\\\",\\\"signal\\\", \\\"description\\\", \\\"background_color\\\", \\\"text_color\\\",\\\"close\\\"],\\n  \\\"rows\\\":[]\\n}\\nmsg.table.rows.push({\\\"date\\\":\\\"Date\\\",\\\"close\\\":\\\"Close\\\",\\\"signal\\\":\\\"Signal\\\", \\\"description\\\":\\\"Description\\\", \\\"background_color\\\": \\\"Background Color\\\", \\\"text_color\\\": \\\"Text Color\\\"}); \\nvar len = msg.decision.length < msg.table1.rows.length ?  msg.decision.length : msg.table1.rows.length\\nfor (i=0; i < len; i++) {\\n  v = msg.decision[i];\\n  if (v[\\\"signal\\\"] && v[\\\"description\\\"]) {\\n    var background_color, text_color;\\n    if (v[\\\"signal\\\"] === \\\"BUY\\\"){\\n      background_color = \\\"#ff0000\\\";\\n      text_color = \\\"#000000\\\";\\n    }else{\\n      background_color = \\\"#00ff00\\\";\\n      text_color = \\\"#ffffff\\\";\\n    }\\n    msg.table.rows.push({\\\"date\\\":msg.table1.rows[i][\\\"opentime\\\"], \\\"signal\\\":v[\\\"signal\\\"],\\\"close\\\":msg.table1.rows[i][\\\"close\\\"], \\\"description\\\":v[\\\"description\\\"], \\\"background_color\\\": background_color, \\\"text_color\\\": text_color});  \\n  }\\n}\\n\\nreturn msg;\",\"optTimeout\":30,\"variables\":[]},\"ports\":[{\"id\":\"7e7ccc96-0679-4200-b2a2-bdbeaf0e6939\",\"type\":\"default\",\"selected\":false,\"name\":\"out_7e7ccc96-0679-4200-b2a2-bdbeaf0e6939\",\"parentNode\":\"4cc2183d-1e56-4c40-8f2e-20b3bb324058\",\"links\":[\"9bf6ad75-b06d-4c13-8512-57c4770b9433\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"b71fcf9d-4adf-4da8-9d25-fef77810a3b0\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"4cc2183d-1e56-4c40-8f2e-20b3bb324058\",\"links\":[\"58819a51-049f-4b2a-a802-9dfa6efdc656\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"4cc2183d-1e56-4c40-8f2e-20b3bb324058\",\"name\":\"Create CSV\",\"icon\":\"M15.6,5.29C14.5,5.19 13.53,6 13.43,7.11L13.18,10H16V12H13L12.56,17.07C12.37,19.27 10.43,20.9 8.23,20.7C6.92,20.59 5.82,19.86 5.17,18.83L6.67,17.33C6.91,18.07 7.57,18.64 8.4,18.71C9.5,18.81 10.47,18 10.57,16.89L11,12H8V10H11.17L11.44,6.93C11.63,4.73 13.57,3.1 15.77,3.3C17.08,3.41 18.18,4.14 18.83,5.17L17.33,6.67C17.09,5.93 16.43,5.36 15.6,5.29Z\",\"color\":\"#F27925\",\"editor\":\"javascript\",\"namespace\":\"Core.Programming.Function\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Create CSV\",\"color\":\"#F27925\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false,\"version\":\"1.11.6\"},{\"outputs\":1,\"func\":\"msg.x = msg.table1.rows.length\\nmsg.y = msg.decision.length\\nmsg.table = {\\n  \\\"columns\\\":[\\\"date\\\",\\\"signal\\\", \\\"description\\\", \\\"background_color\\\", \\\"text_color\\\",\\\"close\\\"],\\n  \\\"rows\\\":[]\\n}\\nmsg.table.rows.push({\\\"date\\\":\\\"Date\\\",\\\"close\\\":\\\"Close\\\",\\\"signal\\\":\\\"Signal\\\", \\\"description\\\":\\\"Description\\\", \\\"background_color\\\": \\\"Background Color\\\", \\\"text_color\\\": \\\"Text Color\\\"}); \\nvar len = msg.decision.length < msg.table1.rows.length ?  msg.decision.length : msg.table1.rows.length\\nfor (i=0; i < len; i++) {\\n  v = msg.decision[i];\\n  if (v[\\\"signal\\\"] && v[\\\"description\\\"]) {\\n    var background_color, text_color;\\n    if (v[\\\"signal\\\"] === \\\"BUY\\\"){\\n      background_color = \\\"#ff0000\\\";\\n      text_color = \\\"#000000\\\";\\n    }else{\\n      background_color = \\\"#00ff00\\\";\\n      text_color = \\\"#ffffff\\\";\\n    }\\n    msg.table.rows.push({\\\"date\\\":msg.table1.rows[i][\\\"opentime\\\"], \\\"signal\\\":v[\\\"signal\\\"],\\\"close\\\":msg.table1.rows[i][\\\"close\\\"], \\\"description\\\":v[\\\"description\\\"], \\\"background_color\\\": background_color, \\\"text_color\\\": text_color});  \\n  }\\n}\\n\\nreturn msg;\",\"optTimeout\":30},{\"variables\":[]}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"func\":{\"title\":\"Function\",\"type\":\"string\"},\"outputs\":{\"title\":\"Outputs\",\"type\":\"number\",\"minimum\":1,\"maximum\":32},\"optTimeout\":{\"title\":\"Script Timeout\",\"type\":\"number\"}}},\"uiSchema\":{\"outputs\":{\"ui:widget\":\"updown\"},\"func\":{\"ui:widget\":\"hidden\",\"ui:options\":{\"rows\":6}}},\"formData\":{\"outputs\":1,\"func\":\"msg.x = msg.table1.rows.length\\nmsg.y = msg.decision.length\\nmsg.table = {\\n  \\\"columns\\\":[\\\"date\\\",\\\"signal\\\", \\\"description\\\", \\\"background_color\\\", \\\"text_color\\\",\\\"close\\\"],\\n  \\\"rows\\\":[]\\n}\\nmsg.table.rows.push({\\\"date\\\":\\\"Date\\\",\\\"close\\\":\\\"Close\\\",\\\"signal\\\":\\\"Signal\\\", \\\"description\\\":\\\"Description\\\", \\\"background_color\\\": \\\"Background Color\\\", \\\"text_color\\\": \\\"Text Color\\\"}); \\nvar len = msg.decision.length < msg.table1.rows.length ?  msg.decision.length : msg.table1.rows.length\\nfor (i=0; i < len; i++) {\\n  v = msg.decision[i];\\n  if (v[\\\"signal\\\"] && v[\\\"description\\\"]) {\\n    var background_color, text_color;\\n    if (v[\\\"signal\\\"] === \\\"BUY\\\"){\\n      background_color = \\\"#ff0000\\\";\\n      text_color = \\\"#000000\\\";\\n    }else{\\n      background_color = \\\"#00ff00\\\";\\n      text_color = \\\"#ffffff\\\";\\n    }\\n    msg.table.rows.push({\\\"date\\\":msg.table1.rows[i][\\\"opentime\\\"], \\\"signal\\\":v[\\\"signal\\\"],\\\"close\\\":msg.table1.rows[i][\\\"close\\\"], \\\"description\\\":v[\\\"description\\\"], \\\"background_color\\\": background_color, \\\"text_color\\\": text_color});  \\n  }\\n}\\n\\nreturn msg;\",\"optTimeout\":30}},{\"schema\":{\"title\":\"Local Variables\",\"type\":\"object\",\"properties\":{\"variables\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"},\"variableType\":{\"type\":\"string\"}}}}}},\"uiSchema\":{\"variables\":{\"ui:field\":\"localVariable\"}},\"formData\":{\"variables\":[]}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"e1740cb5-c2b4-4e94-8710-4e9d5e3efc82\",\"type\":\"simple\",\"selected\":false,\"x\":935,\"y\":584,\"extras\":{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"rules_result_path\"},\"inTable\":{\"scope\":\"Message\",\"name\":\"table\"},\"optSeparator\":\"comma\",\"optEncoding\":\"utf8\"},\"ports\":[{\"id\":\"1e7ab0f5-39f4-4155-8efd-72df0da396bd\",\"type\":\"default\",\"selected\":false,\"name\":\"out_1e7ab0f5-39f4-4155-8efd-72df0da396bd\",\"parentNode\":\"e1740cb5-c2b4-4e94-8710-4e9d5e3efc82\",\"links\":[\"d78ce0dc-c2f7-4f6b-bdfc-8aac21ec592f\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"03c18f89-4d00-4c1f-8cb4-492477c81c22\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"e1740cb5-c2b4-4e94-8710-4e9d5e3efc82\",\"links\":[\"9bf6ad75-b06d-4c13-8512-57c4770b9433\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"e1740cb5-c2b4-4e94-8710-4e9d5e3efc82\",\"name\":\"Write CSV\",\"icon\":\"M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2M18 20H6V4H13V9H18V20M10 19L12 15H9V10H15V15L13 19H10\",\"color\":\"#0078DE\",\"namespace\":\"Core.CSV.WriteCSV\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Write CSV\",\"version\":\"1.11.6\",\"color\":\"#0078DE\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"rules_result_path\"},\"inTable\":{\"scope\":\"Message\",\"name\":\"table\"}},{\"optSeparator\":\"comma\",\"optEncoding\":\"utf8\"}],\"xyz\":[{\"schema\":{\"title\":\"Input\",\"type\":\"object\",\"properties\":{\"inFilePath\":{\"type\":\"object\",\"title\":\"File Path\",\"variableType\":\"String\",\"messageScope\":true,\"customScope\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}},\"inTable\":{\"type\":\"object\",\"title\":\"Table\",\"variableType\":\"String\",\"messageOnly\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}}}},\"uiSchema\":{\"inTable\":{\"ui:field\":\"variable\"},\"inFilePath\":{\"ui:field\":\"variable\"},\"ui:order\":[\"inFilePath\",\"inTable\"]},\"formData\":{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"rules_result_path\"},\"inTable\":{\"scope\":\"Message\",\"name\":\"table\"}}},{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"optSeparator\":{\"type\":\"string\",\"title\":\"Separator\",\"enum\":[\"comma\",\"semicolon\"],\"enumNames\":[\"Comma (,)\",\"Semicolon (;)\"]},\"optEncoding\":{\"type\":\"string\",\"title\":\"Encoding\",\"enum\":[\"utf8\",\"windows1254\"],\"enumNames\":[\"UTF-8\",\"Windows 1254\"]},\"optHeaders\":{\"title\":\"Headers\",\"type\":\"boolean\"}}},\"uiSchema\":{\"ui:order\":[\"optSeparator\",\"optEncoding\",\"optHeaders\"]},\"formData\":{\"optSeparator\":\"comma\",\"optEncoding\":\"utf8\"}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"6fe5b07d-8dfe-4417-a81b-b05a2e889374\",\"type\":\"simple\",\"selected\":false,\"x\":932,\"y\":486,\"extras\":{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"export_path\"},\"outTable\":{\"scope\":\"Message\",\"name\":\"table1\"},\"optSeparator\":\"comma\",\"optOffset\":{\"scope\":\"Custom\",\"name\":\"0\"},\"optHeaders\":true,\"optJsonify\":true},\"ports\":[{\"id\":\"4157b337-6359-4f92-a663-86fe1a617cd1\",\"type\":\"default\",\"selected\":false,\"name\":\"out_4157b337-6359-4f92-a663-86fe1a617cd1\",\"parentNode\":\"6fe5b07d-8dfe-4417-a81b-b05a2e889374\",\"links\":[\"58819a51-049f-4b2a-a802-9dfa6efdc656\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"488e781c-c695-4744-923b-cebe008c4fc5\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"6fe5b07d-8dfe-4417-a81b-b05a2e889374\",\"links\":[\"576d8f23-9124-4eaf-8949-736a8802d3b6\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"6fe5b07d-8dfe-4417-a81b-b05a2e889374\",\"name\":\"Read CSV\",\"icon\":\"M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2M18 20H6V4H13V9H18V20M10 19L12 15H9V10H15V15L13 19H10\",\"color\":\"#0078DE\",\"namespace\":\"Core.CSV.ReadCSV\",\"version\":\"1.11.6\",\"abc\":[{\"name\":\"Read CSV\",\"version\":\"1.11.6\",\"color\":\"#0078DE\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"export_path\"}},{\"outTable\":{\"scope\":\"Message\",\"name\":\"table1\"}},{\"optSeparator\":\"comma\",\"optOffset\":{\"scope\":\"Custom\",\"name\":\"0\"},\"optHeaders\":true,\"optJsonify\":true}],\"xyz\":[{\"schema\":{\"title\":\"Input\",\"type\":\"object\",\"properties\":{\"inFilePath\":{\"type\":\"object\",\"title\":\"File Path\",\"variableType\":\"String\",\"customScope\":true,\"messageScope\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}}}},\"uiSchema\":{\"inFilePath\":{\"ui:field\":\"variable\"}},\"formData\":{\"inFilePath\":{\"scope\":\"Message\",\"name\":\"export_path\"}}},{\"schema\":{\"title\":\"Output\",\"type\":\"object\",\"properties\":{\"outTable\":{\"type\":\"object\",\"title\":\"Table\",\"variableType\":\"String\",\"messageOnly\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}}}},\"uiSchema\":{\"outTable\":{\"ui:field\":\"variable\"}},\"formData\":{\"outTable\":{\"scope\":\"Message\",\"name\":\"table1\"}}},{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"optSeparator\":{\"type\":\"string\",\"title\":\"Separator\",\"enum\":[\"comma\",\"semicolon\",\"tab\",\"space\"],\"enumNames\":[\"Comma (,)\",\"Semicolon (;)\",\"TAB\",\"Space\"]},\"optOffset\":{\"type\":\"object\",\"title\":\"Skip Rows\",\"variableType\":\"Integer\",\"customScope\":true,\"messageScope\":true,\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}}},\"optHeaders\":{\"title\":\"Headers\",\"type\":\"boolean\"},\"optJsonify\":{\"title\":\"Jsonify\",\"type\":\"boolean\"}}},\"uiSchema\":{\"optOffset\":{\"ui:field\":\"variable\"},\"ui:order\":[\"optSeparator\",\"optOffset\",\"optHeaders\",\"optJsonify\"]},\"formData\":{\"optSeparator\":\"comma\",\"optOffset\":{\"scope\":\"Custom\",\"name\":\"0\"},\"optHeaders\":true,\"optJsonify\":true}}],\"outputs\":1,\"inputs\":1}}]}"
+		},
+		{
+			"id": "14994281-f11a-45d3-8ae9-1ad8509ddc05",
+			"flow": "{\"id\":\"14994281-f11a-45d3-8ae9-1ad8509ddc05\",\"offsetX\":0,\"offsetY\":0,\"zoom\":100,\"gridSize\":0,\"links\":[{\"id\":\"bcdfaeb7-2bc1-442a-958e-6539bd51d9ff\",\"type\":\"default\",\"selected\":false,\"source\":\"d53eeb25-4fb6-49fd-a1f3-e786516f8005\",\"sourcePort\":\"2c39e0f8-f476-44ef-8634-43bed974e540\",\"target\":\"f99d9cf5-2778-487c-a162-8b9d04a3adae\",\"targetPort\":\"60e7c7f5-caee-4c7e-b7a7-31f80458b368\",\"points\":[{\"id\":\"602349c7-606e-4ed4-951e-70218313b4fa\",\"selected\":false,\"x\":750,\"y\":192.5},{\"id\":\"0517903c-27d6-4cdd-afe4-a5345ebe4c67\",\"selected\":false,\"x\":844,\"y\":283}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"cfee2bf0-46be-4758-bea9-853a00db3962\",\"type\":\"default\",\"selected\":false,\"source\":\"e9f2485a-b4a4-4158-9444-f05512e83178\",\"sourcePort\":\"58a9da1a-dfe5-4c7f-9d4c-4f017d146501\",\"target\":\"978deeb8-6081-4ef2-aafc-d28cf6d95907\",\"targetPort\":\"5542fb58-8b2b-49c2-b2d3-79a027b37dee\",\"points\":[{\"id\":\"9590dbec-7035-496c-90da-97a735f58263\",\"selected\":false,\"x\":1167,\"y\":307.5},{\"id\":\"0d4e2d56-1974-4b15-9c6b-fd40d9f510de\",\"selected\":false,\"x\":1036,\"y\":501.953125}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":-300},{\"id\":\"18ee5f91-55f6-469a-b24e-a172ff9fae1f\",\"type\":\"default\",\"selected\":false,\"source\":\"f99d9cf5-2778-487c-a162-8b9d04a3adae\",\"sourcePort\":\"903aa8f7-d79e-4e69-bbe8-c8fe9b4a52fb\",\"target\":\"0c914eea-5d23-493c-8c95-66808e1c4c7a\",\"targetPort\":\"549c529a-3d0b-4347-b470-9af34ccd2ee2\",\"points\":[{\"id\":\"02738179-aa42-4e81-8595-51e0702454c3\",\"selected\":false,\"x\":1046,\"y\":285},{\"id\":\"08e527a7-a59a-4331-ab95-2deef03264e7\",\"selected\":false,\"x\":837,\"y\":331.96875}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"8284d569-3dbc-4b38-a19f-24fe7270596a\",\"type\":\"default\",\"selected\":false,\"source\":\"bb4589b6-6e04-4656-a0e2-5b40b3118c89\",\"sourcePort\":\"07236ce5-c992-48bd-abfa-109f168dcc9c\",\"target\":\"978deeb8-6081-4ef2-aafc-d28cf6d95907\",\"targetPort\":\"77d41d2b-6ddb-4d47-94f4-caccbee506c7\",\"points\":[{\"id\":\"85b42f68-119b-4a5e-9d03-ec5b7e0c4d97\",\"selected\":false,\"x\":1038,\"y\":445.984375},{\"id\":\"e2e19e93-5eef-4c67-a6c6-213e16b9a5bb\",\"selected\":false,\"x\":834,\"y\":499.953125}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"475bac36-40af-47ee-a524-50c9944c3fc1\",\"type\":\"default\",\"selected\":false,\"source\":\"0c914eea-5d23-493c-8c95-66808e1c4c7a\",\"sourcePort\":\"ac8418dc-29f9-4517-8013-00110248003d\",\"target\":\"9b09b145-4118-46d1-884f-8c829bb79669\",\"targetPort\":\"d7e28176-a282-4916-9abe-337e65279ce1\",\"points\":[{\"id\":\"35425d74-c21b-4511-942d-8a8b3cfcf1a6\",\"selected\":false,\"x\":1039,\"y\":333.96875},{\"id\":\"1a71ce93-0527-4473-83c0-862ce27543e4\",\"selected\":false,\"x\":833,\"y\":387}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":300},{\"id\":\"562cd7dc-e618-4d70-813a-ccccabb05a5c\",\"type\":\"default\",\"selected\":false,\"source\":\"bb4589b6-6e04-4656-a0e2-5b40b3118c89\",\"sourcePort\":\"da6fb7cf-aa58-47b0-a6c8-f2de6756f6c4\",\"target\":\"9b09b145-4118-46d1-884f-8c829bb79669\",\"targetPort\":\"bab8d77f-4b60-40bf-9395-39e64a6df377\",\"points\":[{\"id\":\"94e5d884-487b-4201-a1db-4415d928c1b5\",\"selected\":false,\"x\":836,\"y\":443.984375},{\"id\":\"5aa5b786-f4ea-4bc0-9fef-12a997e3f877\",\"selected\":false,\"x\":1035,\"y\":389}],\"extras\":{},\"labels\":[],\"width\":3,\"color\":\"rgba(87,87,87,0.5)\",\"curvyness\":-300}],\"nodes\":[{\"id\":\"d53eeb25-4fb6-49fd-a1f3-e786516f8005\",\"type\":\"simple\",\"selected\":false,\"x\":549,\"y\":167.5,\"extras\":{},\"ports\":[{\"id\":\"2c39e0f8-f476-44ef-8634-43bed974e540\",\"type\":\"default\",\"selected\":false,\"name\":\"out_2c39e0f8-f476-44ef-8634-43bed974e540\",\"parentNode\":\"d53eeb25-4fb6-49fd-a1f3-e786516f8005\",\"links\":[\"bcdfaeb7-2bc1-442a-958e-6539bd51d9ff\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"}],\"model\":{\"id\":\"d53eeb25-4fb6-49fd-a1f3-e786516f8005\",\"name\":\"Begin\",\"icon\":\"M4,9C5.31,9 6.42,9.83 6.83,11H22V13H6.83C6.42,14.17 5.31,15 4,15A3,3 0 0,1 1,12A3,3 0 0,1 4,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.Begin\",\"version\":\"0.0\",\"abc\":[],\"xyz\":[],\"outputs\":1,\"inputs\":0}},{\"id\":\"e9f2485a-b4a4-4158-9444-f05512e83178\",\"type\":\"simple\",\"selected\":false,\"x\":1160,\"y\":284.5,\"extras\":{\"sfPort\":0},\"ports\":[{\"id\":\"58a9da1a-dfe5-4c7f-9d4c-4f017d146501\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"e9f2485a-b4a4-4158-9444-f05512e83178\",\"links\":[\"cfee2bf0-46be-4758-bea9-853a00db3962\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"e9f2485a-b4a4-4158-9444-f05512e83178\",\"name\":\"End\",\"icon\":\"M20,9C18.69,9 17.58,9.83 17.17,11H2V13H17.17C17.58,14.17 18.69,15 20,15A3,3 0 0,0 23,12A3,3 0 0,0 20,9Z\",\"color\":\"#646bf5\",\"namespace\":\"Core.Flow.End\",\"version\":\"0.0\",\"abc\":[{},{\"sfPort\":0}],\"xyz\":[{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"sfPort\":{\"title\":\"Port\",\"type\":\"number\"}}},\"uiSchema\":{\"sfPort\":{\"ui:widget\":\"hidden\"},\"ui:order\":[\"*\"]},\"formData\":{\"sfPort\":0}}],\"outputs\":0,\"inputs\":1}},{\"id\":\"f99d9cf5-2778-487c-a162-8b9d04a3adae\",\"type\":\"simple\",\"selected\":false,\"x\":837,\"y\":260,\"extras\":{\"inPath\":{\"scope\":\"Message\",\"name\":\"export_path\"},\"inDateKey\":{\"scope\":\"Custom\",\"name\":\"openTime\"},\"inXTitle\":{\"scope\":\"Custom\",\"name\":\"Date\"},\"inYTitle\":{\"scope\":\"Custom\",\"name\":\"BNBUSDT\"},\"inName\":{\"scope\":\"Custom\",\"name\":\"BNB_USDT\"},\"outPlotID\":{\"scope\":\"Message\",\"name\":\"plot_id\"}},\"ports\":[{\"id\":\"903aa8f7-d79e-4e69-bbe8-c8fe9b4a52fb\",\"type\":\"default\",\"selected\":false,\"name\":\"out_903aa8f7-d79e-4e69-bbe8-c8fe9b4a52fb\",\"parentNode\":\"f99d9cf5-2778-487c-a162-8b9d04a3adae\",\"links\":[\"18ee5f91-55f6-469a-b24e-a172ff9fae1f\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"60e7c7f5-caee-4c7e-b7a7-31f80458b368\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"f99d9cf5-2778-487c-a162-8b9d04a3adae\",\"links\":[\"bcdfaeb7-2bc1-442a-958e-6539bd51d9ff\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"f99d9cf5-2778-487c-a162-8b9d04a3adae\",\"name\":\"Plot Create\",\"icon\":\"M2 2H4V20H22V22H2V2M17 2H20V18H17V2M6 11H9V18H6V11M13 3H16V7H13V3M10 8H13V12H10V8Z\",\"color\":\"#ed7a4f\",\"namespace\":\"Robomotion.TechnicalAnalysis.PlotCreate\",\"version\":\"0.1.2\",\"abc\":[{\"name\":\"Plot Create\",\"version\":\"0.1.2\",\"color\":\"#ed7a4f\"},{\"inPath\":{\"scope\":\"Message\",\"name\":\"export_path\"},\"inDateKey\":{\"scope\":\"Custom\",\"name\":\"openTime\"},\"inXTitle\":{\"scope\":\"Custom\",\"name\":\"Date\"},\"inYTitle\":{\"scope\":\"Custom\",\"name\":\"BNBUSDT\"},\"inName\":{\"scope\":\"Custom\",\"name\":\"BNB_USDT\"}},{\"outPlotID\":{\"scope\":\"Message\",\"name\":\"plot_id\"}}],\"xyz\":[{\"schema\":{\"title\":\"Input\",\"type\":\"object\",\"properties\":{\"inPath\":{\"type\":\"object\",\"title\":\"Data Path\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inDateKey\":{\"type\":\"object\",\"title\":\"Date Key\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inXTitle\":{\"type\":\"object\",\"title\":\"X Axis Title\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inYTitle\":{\"type\":\"object\",\"title\":\"Y Axis Title\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inName\":{\"type\":\"object\",\"title\":\"Name\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true}}},\"uiSchema\":{\"inPath\":{\"ui:field\":\"variable\"},\"inDateKey\":{\"ui:field\":\"variable\"},\"inXTitle\":{\"ui:field\":\"variable\"},\"inYTitle\":{\"ui:field\":\"variable\"},\"inName\":{\"ui:field\":\"variable\"},\"ui:order\":[\"inPath\",\"inDateKey\",\"inXTitle\",\"inYTitle\",\"inName\"]},\"formData\":{\"inPath\":{\"scope\":\"Message\",\"name\":\"export_path\"},\"inDateKey\":{\"scope\":\"Custom\",\"name\":\"openTime\"},\"inXTitle\":{\"scope\":\"Custom\",\"name\":\"Date\"},\"inYTitle\":{\"scope\":\"Custom\",\"name\":\"BNBUSDT\"},\"inName\":{\"scope\":\"Custom\",\"name\":\"BNB_USDT\"}}},{\"schema\":{\"title\":\"Output\",\"type\":\"object\",\"properties\":{\"outPlotID\":{\"type\":\"object\",\"title\":\"Plot ID\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"messageOnly\":true}}},\"uiSchema\":{\"outPlotID\":{\"ui:field\":\"variable\"},\"ui:order\":[\"outPlotID\"]},\"formData\":{\"outPlotID\":{\"scope\":\"Message\",\"name\":\"plot_id\"}}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"0c914eea-5d23-493c-8c95-66808e1c4c7a\",\"type\":\"simple\",\"selected\":false,\"x\":830,\"y\":308.96875,\"extras\":{\"inPlotID\":{\"scope\":\"Message\",\"name\":\"plot_id\"},\"inPath\":{\"scope\":\"Message\",\"name\":\"ema5_path\"},\"inDateKey\":{\"scope\":\"Custom\",\"name\":\"openTime\"},\"inValueKey\":{\"scope\":\"Custom\",\"name\":\"EMA_5\"},\"inName\":{\"scope\":\"Custom\",\"name\":\"EMA5\"},\"inColor\":{\"scope\":\"Custom\",\"name\":\"#0000ff\"},\"optPlotMode\":\"lines\"},\"ports\":[{\"id\":\"ac8418dc-29f9-4517-8013-00110248003d\",\"type\":\"default\",\"selected\":false,\"name\":\"out_ac8418dc-29f9-4517-8013-00110248003d\",\"parentNode\":\"0c914eea-5d23-493c-8c95-66808e1c4c7a\",\"links\":[\"475bac36-40af-47ee-a524-50c9944c3fc1\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"549c529a-3d0b-4347-b470-9af34ccd2ee2\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"0c914eea-5d23-493c-8c95-66808e1c4c7a\",\"links\":[\"18ee5f91-55f6-469a-b24e-a172ff9fae1f\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"0c914eea-5d23-493c-8c95-66808e1c4c7a\",\"name\":\"Plot Line\",\"icon\":\"M2 2H4V20H22V22H2V2M17 2H20V18H17V2M6 11H9V18H6V11M13 3H16V7H13V3M10 8H13V12H10V8Z\",\"color\":\"#ed7a4f\",\"namespace\":\"Robomotion.TechnicalAnalysis.PlotLine\",\"version\":\"0.1.2\",\"abc\":[{\"name\":\"Plot Line\",\"version\":\"0.1.2\",\"color\":\"#ed7a4f\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"inPlotID\":{\"scope\":\"Message\",\"name\":\"plot_id\"},\"inPath\":{\"scope\":\"Message\",\"name\":\"ema5_path\"},\"inDateKey\":{\"scope\":\"Custom\",\"name\":\"openTime\"},\"inValueKey\":{\"scope\":\"Custom\",\"name\":\"EMA_5\"},\"inName\":{\"scope\":\"Custom\",\"name\":\"EMA5\"},\"inColor\":{\"scope\":\"Custom\",\"name\":\"#0000ff\"}},{\"optPlotMode\":\"lines\"}],\"xyz\":[{\"schema\":{\"title\":\"Input\",\"type\":\"object\",\"properties\":{\"inPlotID\":{\"type\":\"object\",\"title\":\"Plot ID\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"messageScope\":true},\"inPath\":{\"type\":\"object\",\"title\":\"Data Path\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inDateKey\":{\"type\":\"object\",\"title\":\"Date Key\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inValueKey\":{\"type\":\"object\",\"title\":\"Value Key\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inName\":{\"type\":\"object\",\"title\":\"Name\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inColor\":{\"type\":\"object\",\"title\":\"Color\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true}}},\"uiSchema\":{\"inPlotID\":{\"ui:field\":\"variable\"},\"inPath\":{\"ui:field\":\"variable\"},\"inDateKey\":{\"ui:field\":\"variable\"},\"inValueKey\":{\"ui:field\":\"variable\"},\"inName\":{\"ui:field\":\"variable\"},\"inColor\":{\"ui:field\":\"variable\"},\"ui:order\":[\"inPlotID\",\"inPath\",\"inDateKey\",\"inValueKey\",\"inName\",\"inColor\"]},\"formData\":{\"inPlotID\":{\"scope\":\"Message\",\"name\":\"plot_id\"},\"inPath\":{\"scope\":\"Message\",\"name\":\"ema5_path\"},\"inDateKey\":{\"scope\":\"Custom\",\"name\":\"openTime\"},\"inValueKey\":{\"scope\":\"Custom\",\"name\":\"EMA_5\"},\"inName\":{\"scope\":\"Custom\",\"name\":\"EMA5\"},\"inColor\":{\"scope\":\"Custom\",\"name\":\"#0000ff\"}}},{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"optPlotMode\":{\"type\":\"string\",\"title\":\"Plot Mode\",\"enum\":[\"lines\",\"markers\",\"lines+markers\"],\"enumNames\":[\"Lines\",\"Markers\",\"Lines + Markers\"]}}},\"uiSchema\":{\"ui:order\":[\"optPlotMode\"]},\"formData\":{\"optPlotMode\":\"lines\"}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"bb4589b6-6e04-4656-a0e2-5b40b3118c89\",\"type\":\"simple\",\"selected\":false,\"x\":829,\"y\":420.984375,\"extras\":{\"inPlotID\":{\"scope\":\"Message\",\"name\":\"plot_id\"},\"inPath\":{\"scope\":\"Message\",\"name\":\"rules_result_path\"},\"inDateKey\":{\"scope\":\"Custom\",\"name\":\"Date\"},\"inValueKey\":{\"scope\":\"Custom\",\"name\":\"Close\"},\"inLabelKey\":{\"scope\":\"Custom\",\"name\":\"Signal\"},\"inBGColorKey\":{\"scope\":\"Custom\",\"name\":\"Background Color\"},\"inTextColorKey\":{\"scope\":\"Custom\",\"name\":\"Text Color\"}},\"ports\":[{\"id\":\"07236ce5-c992-48bd-abfa-109f168dcc9c\",\"type\":\"default\",\"selected\":false,\"name\":\"out_07236ce5-c992-48bd-abfa-109f168dcc9c\",\"parentNode\":\"bb4589b6-6e04-4656-a0e2-5b40b3118c89\",\"links\":[\"8284d569-3dbc-4b38-a19f-24fe7270596a\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"da6fb7cf-aa58-47b0-a6c8-f2de6756f6c4\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"bb4589b6-6e04-4656-a0e2-5b40b3118c89\",\"links\":[\"562cd7dc-e618-4d70-813a-ccccabb05a5c\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"bb4589b6-6e04-4656-a0e2-5b40b3118c89\",\"name\":\"Plot Label\",\"icon\":\"M2 2H4V20H22V22H2V2M17 2H20V18H17V2M6 11H9V18H6V11M13 3H16V7H13V3M10 8H13V12H10V8Z\",\"color\":\"#ed7a4f\",\"namespace\":\"Robomotion.TechnicalAnalysis.PlotLabel\",\"version\":\"0.1.2\",\"abc\":[{\"name\":\"Plot Label\",\"version\":\"0.1.2\",\"color\":\"#ed7a4f\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"inPlotID\":{\"scope\":\"Message\",\"name\":\"plot_id\"},\"inPath\":{\"scope\":\"Message\",\"name\":\"rules_result_path\"},\"inDateKey\":{\"scope\":\"Custom\",\"name\":\"Date\"},\"inValueKey\":{\"scope\":\"Custom\",\"name\":\"Close\"},\"inLabelKey\":{\"scope\":\"Custom\",\"name\":\"Signal\"},\"inBGColorKey\":{\"scope\":\"Custom\",\"name\":\"Background Color\"},\"inTextColorKey\":{\"scope\":\"Custom\",\"name\":\"Text Color\"}}],\"xyz\":[{\"schema\":{\"title\":\"Input\",\"type\":\"object\",\"properties\":{\"inPlotID\":{\"type\":\"object\",\"title\":\"Plot ID\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"messageScope\":true},\"inPath\":{\"type\":\"object\",\"title\":\"Data Path\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inDateKey\":{\"type\":\"object\",\"title\":\"Date Key\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inValueKey\":{\"type\":\"object\",\"title\":\"Value Key\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inLabelKey\":{\"type\":\"object\",\"title\":\"Label Key\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inBGColorKey\":{\"type\":\"object\",\"title\":\"Background Color Key\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inTextColorKey\":{\"type\":\"object\",\"title\":\"Text Color Key\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true}}},\"uiSchema\":{\"inPlotID\":{\"ui:field\":\"variable\"},\"inPath\":{\"ui:field\":\"variable\"},\"inDateKey\":{\"ui:field\":\"variable\"},\"inValueKey\":{\"ui:field\":\"variable\"},\"inLabelKey\":{\"ui:field\":\"variable\"},\"inBGColorKey\":{\"ui:field\":\"variable\"},\"inTextColorKey\":{\"ui:field\":\"variable\"},\"ui:order\":[\"inPlotID\",\"inPath\",\"inDateKey\",\"inValueKey\",\"inLabelKey\",\"inBGColorKey\",\"inTextColorKey\"]},\"formData\":{\"inPlotID\":{\"scope\":\"Message\",\"name\":\"plot_id\"},\"inPath\":{\"scope\":\"Custom\",\"name\":\"C:\\\\Users\\\\E15\\\\Desktop\\\\template\\\\rules_result.csv\"},\"inDateKey\":{\"scope\":\"Custom\",\"name\":\"Date\"},\"inValueKey\":{\"scope\":\"Custom\",\"name\":\"Close\"},\"inLabelKey\":{\"scope\":\"Custom\",\"name\":\"Signal\"},\"inBGColorKey\":{\"scope\":\"Custom\",\"name\":\"Background Color\"},\"inTextColorKey\":{\"scope\":\"Custom\",\"name\":\"Text Color\"}}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"978deeb8-6081-4ef2-aafc-d28cf6d95907\",\"type\":\"simple\",\"selected\":true,\"x\":827,\"y\":476.953125,\"extras\":{\"inPlotID\":{\"scope\":\"Message\",\"name\":\"plot_id\"},\"inOutputPath\":{\"scope\":\"Message\",\"name\":\"result_path\"}},\"ports\":[{\"id\":\"5542fb58-8b2b-49c2-b2d3-79a027b37dee\",\"type\":\"default\",\"selected\":false,\"name\":\"out_5542fb58-8b2b-49c2-b2d3-79a027b37dee\",\"parentNode\":\"978deeb8-6081-4ef2-aafc-d28cf6d95907\",\"links\":[\"cfee2bf0-46be-4758-bea9-853a00db3962\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"77d41d2b-6ddb-4d47-94f4-caccbee506c7\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"978deeb8-6081-4ef2-aafc-d28cf6d95907\",\"links\":[\"8284d569-3dbc-4b38-a19f-24fe7270596a\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"978deeb8-6081-4ef2-aafc-d28cf6d95907\",\"name\":\"Plot Write\",\"icon\":\"M2 2H4V20H22V22H2V2M17 2H20V18H17V2M6 11H9V18H6V11M13 3H16V7H13V3M10 8H13V12H10V8Z\",\"color\":\"#ed7a4f\",\"namespace\":\"Robomotion.TechnicalAnalysis.PlotWrite\",\"version\":\"0.1.2\",\"abc\":[{\"name\":\"Plot Write\",\"version\":\"0.1.2\",\"color\":\"#ed7a4f\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"inPlotID\":{\"scope\":\"Message\",\"name\":\"plot_id\"},\"inOutputPath\":{\"scope\":\"Message\",\"name\":\"result_path\"}}],\"xyz\":[{\"schema\":{\"title\":\"Input\",\"type\":\"object\",\"properties\":{\"inPlotID\":{\"type\":\"object\",\"title\":\"Plot ID\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"messageScope\":true},\"inOutputPath\":{\"type\":\"object\",\"title\":\"Output Path\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true}}},\"uiSchema\":{\"inPlotID\":{\"ui:field\":\"variable\"},\"inOutputPath\":{\"ui:field\":\"variable\"},\"ui:order\":[\"inPlotID\",\"inOutputPath\"]},\"formData\":{\"inPlotID\":{\"scope\":\"Message\",\"name\":\"plot_id\"},\"inOutputPath\":{\"scope\":\"Custom\",\"name\":\"C:\\\\Users\\\\E15\\\\Desktop\\\\template\\\\sonuc.html\"}}}],\"outputs\":1,\"inputs\":1}},{\"id\":\"9b09b145-4118-46d1-884f-8c829bb79669\",\"type\":\"simple\",\"selected\":false,\"x\":826,\"y\":364,\"extras\":{\"inPlotID\":{\"scope\":\"Message\",\"name\":\"plot_id\"},\"inPath\":{\"scope\":\"Message\",\"name\":\"ema100_path\"},\"inDateKey\":{\"scope\":\"Custom\",\"name\":\"openTime\"},\"inValueKey\":{\"scope\":\"Custom\",\"name\":\"EMA_100\"},\"inName\":{\"scope\":\"Custom\",\"name\":\"EMA100\"},\"inColor\":{\"scope\":\"Custom\",\"name\":\"#00ff00\"},\"optPlotMode\":\"lines\"},\"ports\":[{\"id\":\"bab8d77f-4b60-40bf-9395-39e64a6df377\",\"type\":\"default\",\"selected\":false,\"name\":\"out_bab8d77f-4b60-40bf-9395-39e64a6df377\",\"parentNode\":\"9b09b145-4118-46d1-884f-8c829bb79669\",\"links\":[\"562cd7dc-e618-4d70-813a-ccccabb05a5c\"],\"in\":false,\"label\":\"simple\",\"position\":\"out\"},{\"id\":\"d7e28176-a282-4916-9abe-337e65279ce1\",\"type\":\"default\",\"selected\":false,\"name\":\"in\",\"parentNode\":\"9b09b145-4118-46d1-884f-8c829bb79669\",\"links\":[\"475bac36-40af-47ee-a524-50c9944c3fc1\"],\"in\":true,\"label\":\"simple\",\"position\":\"in\"}],\"model\":{\"id\":\"9b09b145-4118-46d1-884f-8c829bb79669\",\"name\":\"Plot Line\",\"icon\":\"M2 2H4V20H22V22H2V2M17 2H20V18H17V2M6 11H9V18H6V11M13 3H16V7H13V3M10 8H13V12H10V8Z\",\"color\":\"#ed7a4f\",\"namespace\":\"Robomotion.TechnicalAnalysis.PlotLine\",\"version\":\"0.1.2\",\"abc\":[{\"name\":\"Plot Line\",\"version\":\"0.1.2\",\"color\":\"#ed7a4f\",\"delayBefore\":0,\"delayAfter\":0,\"continueOnError\":false},{\"inPlotID\":{\"scope\":\"Message\",\"name\":\"plot_id\"},\"inPath\":{\"scope\":\"Message\",\"name\":\"ema100_path\"},\"inDateKey\":{\"scope\":\"Custom\",\"name\":\"openTime\"},\"inValueKey\":{\"scope\":\"Custom\",\"name\":\"EMA_100\"},\"inName\":{\"scope\":\"Custom\",\"name\":\"EMA100\"},\"inColor\":{\"scope\":\"Custom\",\"name\":\"#00ff00\"}},{\"optPlotMode\":\"lines\"}],\"xyz\":[{\"schema\":{\"title\":\"Input\",\"type\":\"object\",\"properties\":{\"inPlotID\":{\"type\":\"object\",\"title\":\"Plot ID\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"messageScope\":true},\"inPath\":{\"type\":\"object\",\"title\":\"Data Path\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inDateKey\":{\"type\":\"object\",\"title\":\"Date Key\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inValueKey\":{\"type\":\"object\",\"title\":\"Value Key\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inName\":{\"type\":\"object\",\"title\":\"Name\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true},\"inColor\":{\"type\":\"object\",\"title\":\"Color\",\"variableType\":\"string\",\"properties\":{\"scope\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"customScope\":true,\"messageScope\":true}}},\"uiSchema\":{\"inPlotID\":{\"ui:field\":\"variable\"},\"inPath\":{\"ui:field\":\"variable\"},\"inDateKey\":{\"ui:field\":\"variable\"},\"inValueKey\":{\"ui:field\":\"variable\"},\"inName\":{\"ui:field\":\"variable\"},\"inColor\":{\"ui:field\":\"variable\"},\"ui:order\":[\"inPlotID\",\"inPath\",\"inDateKey\",\"inValueKey\",\"inName\",\"inColor\"]},\"formData\":{\"inPlotID\":{\"scope\":\"Message\",\"name\":\"plot_id\"},\"inPath\":{\"scope\":\"Message\",\"name\":\"ema100_path\"},\"inDateKey\":{\"scope\":\"Custom\",\"name\":\"openTime\"},\"inValueKey\":{\"scope\":\"Custom\",\"name\":\"EMA_100\"},\"inName\":{\"scope\":\"Custom\",\"name\":\"EMA100\"},\"inColor\":{\"scope\":\"Custom\",\"name\":\"#00ff00\"}}},{\"schema\":{\"title\":\"Options\",\"type\":\"object\",\"properties\":{\"optPlotMode\":{\"type\":\"string\",\"title\":\"Plot Mode\",\"enum\":[\"lines\",\"markers\",\"lines+markers\"],\"enumNames\":[\"Lines\",\"Markers\",\"Lines + Markers\"]}}},\"uiSchema\":{\"ui:order\":[\"optPlotMode\"]},\"formData\":{\"optPlotMode\":\"lines\"}}],\"outputs\":1,\"inputs\":1}}]}"
+		}
+	]
+}
