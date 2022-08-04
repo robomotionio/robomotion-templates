@@ -1,5 +1,5 @@
 - name: News Summarizer
-  description: Shows how to read and summarize a news from CNN.
+  description: Shows how to read and summarize news from CNN.
   slug: news-summarizer
   icon: news_summarizer_icon.png
   screenshots:

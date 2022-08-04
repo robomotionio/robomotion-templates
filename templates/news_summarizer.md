@@ -1,6 +1,6 @@
 ## News Summarizer
 
-Shows how to read and summarize a news from CNN.
+Shows how to read and summarize news from CNN.
 
 ### How it Works?
 

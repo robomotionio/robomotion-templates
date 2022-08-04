@@ -1252,7 +1252,7 @@
 		"x": -41.5,
 		"y": -199.42857142857142,
 		"extras": {
-			"optText": "## News Summarizer\r\n\r\nShows how to read and summarize a news from CNN.\r\n\r\n### How it Works?\r\n\r\n**1.** Go to Flow Designer and press package icon above the node palette.\r\n\r\n**2.** You should see Hugging Face package icon, install it.\r\n\r\n**3.** Edit the Config Node.\r\n\r\n**4.** Set the msg.link to the link of news which you want to read and summarize."
+			"optText": "## News Summarizer\r\n\r\nShows how to read and summarize news from CNN.\r\n\r\n### How it Works?\r\n\r\n**1.** Go to Flow Designer and press package icon above the node palette.\r\n\r\n**2.** You should see Hugging Face package icon, install it.\r\n\r\n**3.** Edit the Config Node.\r\n\r\n**4.** Set the msg.link to the link of news which you want to read and summarize."
 		},
 		"ports": [],
 		"model": {
