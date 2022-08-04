@@ -1,0 +1,17 @@
+- name: News Summarizer
+  description: Shows how to read and summarize news from CNN.
+  slug: news-summarizer
+  icon: news_summarizer_icon.png
+  screenshots:
+    - news_summarizer_screenshot1.png
+    - news_summarizer_screenshot2.png
+    - news_summarizer_screenshot3.png
+  author: Robomotion
+  category: Productivity
+  tags:
+    - ai
+    - news
+    - summarize
+  applications:
+    - Hugging_Face
+    

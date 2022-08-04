@@ -1,0 +1,1467 @@
+{
+	"nodes": [{
+		"id": "e8423d31-9dfe-47a6-a27a-89a8f5cfb7ed",
+		"type": "simple",
+		"selected": true,
+		"x": 310.10526315789474,
+		"y": 28.05263157894737,
+		"extras": {
+			"inPayload": {
+				"scope": "JS",
+				"name": "Date.now()"
+			},
+			"outPayload": {
+				"scope": "Message",
+				"name": "payload"
+			},
+			"optRepeat": 1,
+			"optOnce": true,
+			"optOnceDelay": 0.1
+		},
+		"ports": [{
+			"id": "70c4e080-7725-4eef-942b-abfac5ad602b",
+			"type": "default",
+			"selected": false,
+			"name": "out_70c4e080-7725-4eef-942b-abfac5ad602b",
+			"parentNode": "e8423d31-9dfe-47a6-a27a-89a8f5cfb7ed",
+			"links": ["3d4546e4-79c7-4294-a3d7-ea8e28c99930"],
+			"in": false,
+			"label": "simple",
+			"position": "out"
+		}],
+		"model": {
+			"id": "e8423d31-9dfe-47a6-a27a-89a8f5cfb7ed",
+			"name": "Start",
+			"icon": "M10,9A1,1 0 0,1 11,8A1,1 0 0,1 12,9V13.47L13.21,13.6L18.15,15.79C18.68,16.03 19,16.56 19,17.14V21.5C18.97,22.32 18.32,22.97 17.5,23H11C10.62,23 10.26,22.85 10,22.57L5.1,18.37L5.84,17.6C6.03,17.39 6.3,17.28 6.58,17.28H6.8L10,19V9M11,5A4,4 0 0,1 15,9C15,10.5 14.2,11.77 13,12.46V11.24C13.61,10.69 14,9.89 14,9A3,3 0 0,0 11,6A3,3 0 0,0 8,9C8,9.89 8.39,10.69 9,11.24V12.46C7.8,11.77 7,10.5 7,9A4,4 0 0,1 11,5Z",
+			"color": "#FDD835",
+			"namespace": "Core.Trigger.Inject",
+			"version": "1.11.6",
+			"abc": [{
+				"name": "Start",
+				"color": "#FDD835",
+				"delayBefore": 0,
+				"delayAfter": 0,
+				"continueOnError": false,
+				"version": "1.11.6"
+			}, {
+				"inPayload": {
+					"scope": "JS",
+					"name": "Date.now()"
+				}
+			}, {
+				"outPayload": {
+					"scope": "Message",
+					"name": "payload"
+				}
+			}, {
+				"optRepeat": 1,
+				"optOnce": true,
+				"optOnceDelay": 0.1
+			}],
+			"xyz": [{
+				"schema": {
+					"title": "Input",
+					"type": "object",
+					"properties": {
+						"inPayload": {
+							"type": "object",
+							"title": "Payload",
+							"variableType": "String",
+							"customScope": true,
+							"jsScope": true,
+							"argsScope": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"uiSchema": {
+					"inPayload": {
+						"ui:field": "variable"
+					}
+				},
+				"formData": {
+					"inPayload": {
+						"scope": "JS",
+						"name": "Date.now()"
+					}
+				}
+			}, {
+				"schema": {
+					"title": "Output",
+					"type": "object",
+					"properties": {
+						"outPayload": {
+							"type": "object",
+							"title": "Payload",
+							"variableType": "String",
+							"messageOnly": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"uiSchema": {
+					"outPayload": {
+						"ui:field": "variable"
+					}
+				},
+				"formData": {
+					"outPayload": {
+						"scope": "Message",
+						"name": "payload"
+					}
+				}
+			}, {
+				"schema": {
+					"title": "Options",
+					"type": "object",
+					"properties": {
+						"optRepeat": {
+							"title": "Repeat Interval (sec)",
+							"type": "number"
+						},
+						"optOnce": {
+							"title": "Once",
+							"type": "boolean"
+						},
+						"optOnceDelay": {
+							"title": "Once Delay (sec)",
+							"type": "number"
+						}
+					}
+				},
+				"uiSchema": {
+					"ui:order": ["optRepeat", "optOnceDelay", "optOnce"]
+				},
+				"formData": {
+					"optRepeat": 1,
+					"optOnce": true,
+					"optOnceDelay": 0.1
+				}
+			}],
+			"outputs": 1,
+			"inputs": 0
+		}
+	}, {
+		"id": "8500c3f9-ff7d-44da-a7c0-67c269805e2d",
+		"type": "simple",
+		"selected": true,
+		"x": 585,
+		"y": 11,
+		"extras": {
+			"outBrowserId": {
+				"scope": "Message",
+				"name": "browser_id"
+			},
+			"optBrowser": "chrome",
+			"optMaximized": true,
+			"optProxy": "no-proxy",
+			"optProxyAuth": "no-authentication",
+			"optProxyAddr": {
+				"scope": "Custom",
+				"name": ""
+			},
+			"optUserDataDir": {
+				"scope": "Custom",
+				"name": ""
+			},
+			"optDownloadDir": {
+				"scope": "Custom",
+				"name": ""
+			},
+			"optProxyCredentials": {
+				"scope": "Custom",
+				"name": {
+					"vaultId": "_",
+					"itemId": "_"
+				}
+			}
+		},
+		"ports": [{
+			"id": "eaf7b87c-326a-4ad0-b9f7-6d0499653ec7",
+			"type": "default",
+			"selected": false,
+			"name": "out_eaf7b87c-326a-4ad0-b9f7-6d0499653ec7",
+			"parentNode": "8500c3f9-ff7d-44da-a7c0-67c269805e2d",
+			"links": ["c919a5f4-ca5f-46bb-8516-0cd79988622f"],
+			"in": false,
+			"label": "simple",
+			"position": "out"
+		}, {
+			"id": "217f75a2-f615-42fb-b969-825bcba07380",
+			"type": "default",
+			"selected": false,
+			"name": "in",
+			"parentNode": "8500c3f9-ff7d-44da-a7c0-67c269805e2d",
+			"links": ["020d148a-0371-487c-8c9b-d372fc11d7c0"],
+			"in": true,
+			"label": "simple",
+			"position": "in"
+		}],
+		"model": {
+			"id": "8500c3f9-ff7d-44da-a7c0-67c269805e2d",
+			"name": "Open Browser",
+			"icon": "M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z",
+			"color": "#c9d9ff",
+			"namespace": "Core.Browser.Open",
+			"version": "1.16.4",
+			"abc": [{}, {
+				"outBrowserId": {
+					"scope": "Message",
+					"name": "browser_id"
+				}
+			}, {
+				"optBrowser": "chrome",
+				"optMaximized": true,
+				"optProxy": "no-proxy",
+				"optProxyAuth": "no-authentication",
+				"optProxyAddr": {
+					"scope": "Custom",
+					"name": ""
+				},
+				"optUserDataDir": {
+					"scope": "Custom",
+					"name": ""
+				},
+				"optDownloadDir": {
+					"scope": "Custom",
+					"name": ""
+				},
+				"optProxyCredentials": {
+					"scope": "Custom",
+					"name": {
+						"vaultId": "_",
+						"itemId": "_"
+					}
+				}
+			}],
+			"xyz": [{
+				"schema": {
+					"title": "Output",
+					"type": "object",
+					"properties": {
+						"outBrowserId": {
+							"type": "object",
+							"title": "Browser Id",
+							"variableType": "String",
+							"messageScope": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"uiSchema": {
+					"outBrowserId": {
+						"ui:field": "variable"
+					}
+				},
+				"formData": {
+					"outBrowserId": {
+						"scope": "Message",
+						"name": "browser_id"
+					}
+				}
+			}, {
+				"schema": {
+					"title": "Options",
+					"type": "object",
+					"properties": {
+						"optBrowser": {
+							"type": "string",
+							"title": "Browser",
+							"enum": ["chrome", "firefox", "edge", "safari", "headlesschrome"],
+							"enumNames": ["Chrome", "Firefox", "Edge", "Safari", "Headless Chrome"]
+						},
+						"optMaximized": {
+							"title": "Maximized",
+							"type": "boolean"
+						},
+						"optProxy": {
+							"title": "Proxy Settings",
+							"type": "string",
+							"enum": ["no-proxy", "manual-proxy"],
+							"enumNames": ["No Proxy", "Manual Proxy"]
+						},
+						"optProxyAddr": {
+							"type": "object",
+							"title": "Proxy Address",
+							"variableType": "String",
+							"messageScope": true,
+							"customScope": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						},
+						"optProxyAuth": {
+							"title": "Proxy Authentication",
+							"type": "string",
+							"enum": ["no-authentication", "basic-authentication"],
+							"enumNames": ["No Authentication", "Basic Authentication"]
+						},
+						"optProxyCredentials": {
+							"type": "object",
+							"title": "Proxy Credentials",
+							"subtitle": "",
+							"category": 1,
+							"messageScope": true,
+							"customScope": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "object",
+									"properties": {
+										"vaultId": {
+											"type": "string"
+										},
+										"itemId": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						},
+						"optUserDataDir": {
+							"type": "object",
+							"title": "User Data Dir",
+							"description": "If given, browser uses this directory for user data, if it is empty a temporary directory is created",
+							"variableType": "String",
+							"customScope": true,
+							"messageScope": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						},
+						"optDownloadDir": {
+							"type": "object",
+							"title": "Download Dir",
+							"description": "If given, browser uses this directory for downloads, if its empty uses default download directory (Chrome only)",
+							"variableType": "String",
+							"customScope": true,
+							"messageScope": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"uiSchema": {
+					"ui:order": ["optBrowser", "optMaximized", "optUserDataDir", "optDownloadDir", "optProxy", "optProxyAddr", "optProxyAuth", "optProxyCredentials"],
+					"optProxyCredentials": {
+						"ui:field": "vault"
+					},
+					"optProxyAddr": {
+						"ui:field": "variable"
+					},
+					"optUserDataDir": {
+						"ui:field": "variable"
+					},
+					"optDownloadDir": {
+						"ui:field": "variable"
+					}
+				},
+				"formData": {
+					"optBrowser": "chrome",
+					"optMaximized": true,
+					"optProxy": "no-proxy",
+					"optProxyAuth": "no-authentication",
+					"optProxyAddr": {
+						"scope": "Custom",
+						"name": ""
+					},
+					"optUserDataDir": {
+						"scope": "Custom",
+						"name": ""
+					},
+					"optDownloadDir": {
+						"scope": "Custom",
+						"name": ""
+					},
+					"optProxyCredentials": {
+						"scope": "Custom",
+						"name": {
+							"vaultId": "_",
+							"itemId": "_"
+						}
+					}
+				}
+			}],
+			"outputs": 1,
+			"inputs": 1
+		}
+	}, {
+		"id": "4dca7baf-b19c-412c-be53-ccae1bdb4beb",
+		"type": "simple",
+		"selected": true,
+		"x": 588,
+		"y": 62,
+		"extras": {
+			"inBrowserId": {
+				"scope": "Message",
+				"name": "browser_id"
+			},
+			"inPageId": {
+				"scope": "Message",
+				"name": "page_id"
+			},
+			"inUrl": {
+				"scope": "Message",
+				"name": "link"
+			},
+			"outPageId": {
+				"scope": "Message",
+				"name": "page_id"
+			},
+			"optTimeout": 30
+		},
+		"ports": [{
+			"id": "0492bc0c-d229-4378-8253-1aeb142e0c82",
+			"type": "default",
+			"selected": false,
+			"name": "out_0492bc0c-d229-4378-8253-1aeb142e0c82",
+			"parentNode": "4dca7baf-b19c-412c-be53-ccae1bdb4beb",
+			"links": ["cdcf4d00-b121-49d1-ae6e-16067cc574ce"],
+			"in": false,
+			"label": "simple",
+			"position": "out"
+		}, {
+			"id": "de1551c5-3868-4e01-a139-db3afd22c421",
+			"type": "default",
+			"selected": false,
+			"name": "in",
+			"parentNode": "4dca7baf-b19c-412c-be53-ccae1bdb4beb",
+			"links": ["c919a5f4-ca5f-46bb-8516-0cd79988622f"],
+			"in": true,
+			"label": "simple",
+			"position": "in"
+		}],
+		"model": {
+			"id": "4dca7baf-b19c-412c-be53-ccae1bdb4beb",
+			"name": "Open Link",
+			"icon": "M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z",
+			"color": "#c9d9ff",
+			"namespace": "Core.Browser.OpenLink",
+			"version": "1.11.6",
+			"abc": [{
+				"name": "Open Link",
+				"version": "1.11.6",
+				"color": "#c9d9ff",
+				"delayBefore": 0,
+				"delayAfter": 0,
+				"continueOnError": false
+			}, {
+				"inBrowserId": {
+					"scope": "Message",
+					"name": "browser_id"
+				},
+				"inPageId": {
+					"scope": "Message",
+					"name": "page_id"
+				},
+				"inUrl": {
+					"scope": "Message",
+					"name": "link"
+				}
+			}, {
+				"outPageId": {
+					"scope": "Message",
+					"name": "page_id"
+				}
+			}, {
+				"optTimeout": 30
+			}],
+			"xyz": [{
+				"schema": {
+					"title": "Input",
+					"type": "object",
+					"properties": {
+						"inBrowserId": {
+							"type": "object",
+							"title": "Browser",
+							"variableType": "String",
+							"messageScope": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						},
+						"inPageId": {
+							"type": "object",
+							"title": "Page Id",
+							"variableType": "String",
+							"messageScope": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						},
+						"inUrl": {
+							"type": "object",
+							"title": "URL",
+							"variableType": "String",
+							"messageScope": true,
+							"customScope": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"uiSchema": {
+					"inBrowserId": {
+						"ui:field": "variable"
+					},
+					"inPageId": {
+						"ui:field": "variable"
+					},
+					"inUrl": {
+						"ui:field": "variable"
+					}
+				},
+				"formData": {
+					"inBrowserId": {
+						"scope": "Message",
+						"name": "browser_id"
+					},
+					"inPageId": {
+						"scope": "Message",
+						"name": "page_id"
+					},
+					"inUrl": {
+						"scope": "Message",
+						"name": "link"
+					}
+				}
+			}, {
+				"schema": {
+					"title": "Output",
+					"type": "object",
+					"properties": {
+						"outPageId": {
+							"type": "object",
+							"title": "Page Id",
+							"variableType": "String",
+							"messageScope": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"uiSchema": {
+					"outPageId": {
+						"ui:field": "variable"
+					}
+				},
+				"formData": {
+					"outPageId": {
+						"scope": "Message",
+						"name": "page_id"
+					}
+				}
+			}, {
+				"schema": {
+					"title": "Options",
+					"type": "object",
+					"properties": {
+						"optSameTab": {
+							"title": "Open in the Same Tab",
+							"type": "boolean"
+						},
+						"optTimeout": {
+							"title": "Timeout",
+							"type": "number"
+						},
+						"optBlockImages": {
+							"title": "Block Images",
+							"type": "boolean"
+						},
+						"optBlockCSS": {
+							"title": "Block CSS",
+							"type": "boolean"
+						},
+						"optStealthMode": {
+							"title": "Use Stealth Mode",
+							"type": "boolean"
+						}
+					}
+				},
+				"uiSchema": {
+					"ui:order": ["optTimeout", "optSameTab", "optBlockImages", "optBlockCSS", "optStealthMode"]
+				},
+				"formData": {
+					"optTimeout": 30
+				}
+			}],
+			"outputs": 1,
+			"inputs": 1
+		}
+	}, {
+		"id": "13c894eb-addd-4fb0-a8ba-fd4884725792",
+		"type": "simple",
+		"selected": true,
+		"x": 590,
+		"y": 113,
+		"extras": {
+			"inPageId": {
+				"scope": "Message",
+				"name": "page_id"
+			},
+			"inSelectorType": "xpath:position",
+			"inSelector": {
+				"scope": "Custom",
+				"name": "//*[@id=\"body-text\"]"
+			},
+			"image": "",
+			"inAttribute": {
+				"scope": "Custom",
+				"name": ""
+			},
+			"outValue": {
+				"scope": "Message",
+				"name": "news"
+			}
+		},
+		"ports": [{
+			"id": "af94853a-5bba-40aa-80bc-f0de3bb21793",
+			"type": "default",
+			"selected": false,
+			"name": "out_af94853a-5bba-40aa-80bc-f0de3bb21793",
+			"parentNode": "13c894eb-addd-4fb0-a8ba-fd4884725792",
+			"links": ["2e831103-4305-48a0-80d8-e1f91804a320"],
+			"in": false,
+			"label": "simple",
+			"position": "out"
+		}, {
+			"id": "4074f29e-269a-4c27-9381-0f341f10650f",
+			"type": "default",
+			"selected": false,
+			"name": "in",
+			"parentNode": "13c894eb-addd-4fb0-a8ba-fd4884725792",
+			"links": ["cdcf4d00-b121-49d1-ae6e-16067cc574ce"],
+			"in": true,
+			"label": "simple",
+			"position": "in"
+		}],
+		"model": {
+			"id": "13c894eb-addd-4fb0-a8ba-fd4884725792",
+			"name": "Get Value",
+			"icon": "M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z",
+			"color": "#c9d9ff",
+			"namespace": "Core.Browser.GetValue",
+			"version": "1.11.6",
+			"abc": [{
+				"name": "Get Value",
+				"version": "1.11.6",
+				"color": "#c9d9ff",
+				"delayBefore": 0,
+				"delayAfter": 0,
+				"continueOnError": false
+			}, {
+				"inPageId": {
+					"scope": "Message",
+					"name": "page_id"
+				},
+				"inSelectorType": "xpath:position",
+				"inSelector": {
+					"scope": "Custom",
+					"name": "//*[@id=\"body-text\"]"
+				},
+				"image": "",
+				"inAttribute": {
+					"scope": "Custom",
+					"name": ""
+				}
+			}, {
+				"outValue": {
+					"scope": "Message",
+					"name": "news"
+				}
+			}],
+			"xyz": [{
+				"schema": {
+					"title": "Input",
+					"type": "object",
+					"properties": {
+						"inPageId": {
+							"type": "object",
+							"title": "Page Id",
+							"variableType": "String",
+							"messageScope": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						},
+						"inSelectorType": {
+							"type": "string",
+							"title": "Selector Type",
+							"multiple": true,
+							"enumNames": ["XPath", "CSS"],
+							"enum": ["xpath:position", "css"]
+						},
+						"inSelector": {
+							"type": "object",
+							"title": "Selector",
+							"variableType": "String",
+							"messageScope": true,
+							"customScope": true,
+							"jsScope": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						},
+						"image": {
+							"title": "Image",
+							"type": "string"
+						},
+						"inAttribute": {
+							"type": "object",
+							"title": "Attribute",
+							"variableType": "String",
+							"messageOnly": true,
+							"customScope": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"uiSchema": {
+					"inPageId": {
+						"ui:field": "variable"
+					},
+					"inSelector": {
+						"ui:field": "variable"
+					},
+					"inAttribute": {
+						"ui:field": "variable"
+					},
+					"image": {
+						"ui:widget": "hidden"
+					},
+					"ui:order": ["inPageId", "inSelectorType", "inSelector", "inAttribute", "image"]
+				},
+				"formData": {
+					"inPageId": {
+						"scope": "Message",
+						"name": "page_id"
+					},
+					"inSelectorType": "xpath:position",
+					"inSelector": {
+						"scope": "Custom",
+						"name": "//*[@id=\"body-text\"]"
+					},
+					"image": "",
+					"inAttribute": {
+						"scope": "Custom",
+						"name": ""
+					}
+				}
+			}, {
+				"schema": {
+					"title": "Output",
+					"type": "object",
+					"properties": {
+						"outValue": {
+							"type": "object",
+							"title": "Value",
+							"variableType": "String",
+							"messageScope": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"uiSchema": {
+					"outValue": {
+						"ui:field": "variable"
+					},
+					"ui:order": ["outValue"]
+				},
+				"formData": {
+					"outValue": {
+						"scope": "Message",
+						"name": "news"
+					}
+				}
+			}],
+			"outputs": 1,
+			"inputs": 1
+		}
+	}, {
+		"id": "6b4ed8d0-60fd-4325-9e45-1860166b798d",
+		"type": "simple",
+		"selected": true,
+		"x": 305.10526315789474,
+		"y": 75.05263157894737,
+		"extras": {
+			"outputs": 1,
+			"func": "msg.link = \"https://edition.cnn.com/2022/08/02/tech/airbnb-q2-earnings-travel/index.html\"; // news link\nreturn msg;",
+			"optTimeout": 30,
+			"variables": []
+		},
+		"ports": [{
+			"id": "43c5b7e7-2057-4113-b562-b93635865c8e",
+			"type": "default",
+			"selected": false,
+			"name": "out_43c5b7e7-2057-4113-b562-b93635865c8e",
+			"parentNode": "6b4ed8d0-60fd-4325-9e45-1860166b798d",
+			"links": ["020d148a-0371-487c-8c9b-d372fc11d7c0"],
+			"in": false,
+			"label": "simple",
+			"position": "out"
+		}, {
+			"id": "56acad96-1e31-4fec-9903-4f951d84ac6f",
+			"type": "default",
+			"selected": false,
+			"name": "in",
+			"parentNode": "6b4ed8d0-60fd-4325-9e45-1860166b798d",
+			"links": ["3d4546e4-79c7-4294-a3d7-ea8e28c99930"],
+			"in": true,
+			"label": "simple",
+			"position": "in"
+		}],
+		"model": {
+			"id": "6b4ed8d0-60fd-4325-9e45-1860166b798d",
+			"name": "Config",
+			"icon": "M15.6,5.29C14.5,5.19 13.53,6 13.43,7.11L13.18,10H16V12H13L12.56,17.07C12.37,19.27 10.43,20.9 8.23,20.7C6.92,20.59 5.82,19.86 5.17,18.83L6.67,17.33C6.91,18.07 7.57,18.64 8.4,18.71C9.5,18.81 10.47,18 10.57,16.89L11,12H8V10H11.17L11.44,6.93C11.63,4.73 13.57,3.1 15.77,3.3C17.08,3.41 18.18,4.14 18.83,5.17L17.33,6.67C17.09,5.93 16.43,5.36 15.6,5.29Z",
+			"color": "#F27925",
+			"editor": "javascript",
+			"namespace": "Core.Programming.Function",
+			"version": "1.11.6",
+			"abc": [{
+				"name": "Config",
+				"color": "#F27925",
+				"delayBefore": 0,
+				"delayAfter": 0,
+				"continueOnError": false,
+				"version": "1.11.6"
+			}, {
+				"outputs": 1,
+				"func": "msg.link = \"https://edition.cnn.com/2022/08/02/tech/airbnb-q2-earnings-travel/index.html\"; // news link\nreturn msg;",
+				"optTimeout": 30
+			}, {
+				"variables": []
+			}],
+			"xyz": [{
+				"schema": {
+					"title": "Options",
+					"type": "object",
+					"properties": {
+						"func": {
+							"title": "Function",
+							"type": "string"
+						},
+						"outputs": {
+							"title": "Outputs",
+							"type": "number",
+							"minimum": 1,
+							"maximum": 32
+						},
+						"optTimeout": {
+							"title": "Script Timeout",
+							"type": "number"
+						}
+					}
+				},
+				"uiSchema": {
+					"outputs": {
+						"ui:widget": "updown"
+					},
+					"func": {
+						"ui:widget": "hidden",
+						"ui:options": {
+							"rows": 6
+						}
+					}
+				},
+				"formData": {
+					"outputs": 1,
+					"func": "msg.link = \"https://edition.cnn.com/2022/08/02/tech/airbnb-q2-earnings-travel/index.html\"; // news link\nreturn msg;",
+					"optTimeout": 30
+				}
+			}, {
+				"schema": {
+					"title": "Local Variables",
+					"type": "object",
+					"properties": {
+						"variables": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"variableType": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				},
+				"uiSchema": {
+					"variables": {
+						"ui:field": "localVariable"
+					}
+				},
+				"formData": {
+					"variables": []
+				}
+			}],
+			"outputs": 1,
+			"inputs": 1
+		}
+	}, {
+		"id": "350f9ac0-4aba-47da-a1a1-8592735789c9",
+		"type": "simple",
+		"selected": true,
+		"x": 877.4736842105262,
+		"y": 48.94736842105264,
+		"extras": {
+			"inText": {
+				"scope": "Message",
+				"name": "news"
+			},
+			"outMessage": {
+				"scope": "Message",
+				"name": "result"
+			},
+			"optModelName": {
+				"scope": "Custom",
+				"name": ""
+			}
+		},
+		"ports": [{
+			"id": "eaaa8319-6c15-478e-9ae2-34336b776f3d",
+			"type": "default",
+			"selected": false,
+			"name": "out_eaaa8319-6c15-478e-9ae2-34336b776f3d",
+			"parentNode": "350f9ac0-4aba-47da-a1a1-8592735789c9",
+			"links": ["c7abe2c5-7680-4b4b-8efb-7b956e9d7028", "717bfd6f-0d1e-46f0-866a-6b1c21b811ff"],
+			"in": false,
+			"label": "simple",
+			"position": "out"
+		}, {
+			"id": "985a3a5a-1a8e-43f9-b539-3b74a7d5570a",
+			"type": "default",
+			"selected": false,
+			"name": "in",
+			"parentNode": "350f9ac0-4aba-47da-a1a1-8592735789c9",
+			"links": ["5c0ebdeb-98d2-4bd1-8c0d-ad772fe284b4"],
+			"in": true,
+			"label": "simple",
+			"position": "in"
+		}],
+		"model": {
+			"id": "350f9ac0-4aba-47da-a1a1-8592735789c9",
+			"name": "Text Summarization",
+			"icon": "M12,2A2,2 0 0,1 14,4C14,4.74 13.6,5.39 13,5.73V7H14A7,7 0 0,1 21,14H22A1,1 0 0,1 23,15V18A1,1 0 0,1 22,19H21V20A2,2 0 0,1 19,22H5A2,2 0 0,1 3,20V19H2A1,1 0 0,1 1,18V15A1,1 0 0,1 2,14H3A7,7 0 0,1 10,7H11V5.73C10.4,5.39 10,4.74 10,4A2,2 0 0,1 12,2M7.5,13A2.5,2.5 0 0,0 5,15.5A2.5,2.5 0 0,0 7.5,18A2.5,2.5 0 0,0 10,15.5A2.5,2.5 0 0,0 7.5,13M16.5,13A2.5,2.5 0 0,0 14,15.5A2.5,2.5 0 0,0 16.5,18A2.5,2.5 0 0,0 19,15.5A2.5,2.5 0 0,0 16.5,13Z",
+			"color": "#F56040",
+			"namespace": "Robomotion.HuggingFace.TextSummarization",
+			"version": "0.0.1",
+			"abc": [{
+				"name": "Text Summarization",
+				"version": "0.0.1",
+				"color": "#F56040",
+				"delayBefore": 0,
+				"delayAfter": 0,
+				"continueOnError": false
+			}, {
+				"inText": {
+					"scope": "Message",
+					"name": "news"
+				}
+			}, {
+				"outMessage": {
+					"scope": "Message",
+					"name": "result"
+				}
+			}, {
+				"optModelName": {
+					"scope": "Custom",
+					"name": ""
+				}
+			}],
+			"xyz": [{
+				"schema": {
+					"title": "Input",
+					"type": "object",
+					"properties": {
+						"inText": {
+							"type": "object",
+							"title": "Text",
+							"variableType": "string",
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							},
+							"customScope": true,
+							"messageScope": true
+						}
+					}
+				},
+				"uiSchema": {
+					"inText": {
+						"ui:field": "variable"
+					},
+					"ui:order": ["inText"]
+				},
+				"formData": {
+					"inText": {
+						"scope": "Message",
+						"name": "news"
+					}
+				}
+			}, {
+				"schema": {
+					"title": "Output",
+					"type": "object",
+					"properties": {
+						"outMessage": {
+							"type": "object",
+							"title": "Message",
+							"variableType": "string",
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							},
+							"messageOnly": true
+						}
+					}
+				},
+				"uiSchema": {
+					"outMessage": {
+						"ui:field": "variable"
+					},
+					"ui:order": ["outMessage"]
+				},
+				"formData": {
+					"outMessage": {
+						"scope": "Message",
+						"name": "result"
+					}
+				}
+			}, {
+				"schema": {
+					"title": "Options",
+					"type": "object",
+					"properties": {
+						"optModelName": {
+							"type": "object",
+							"title": "Model Name",
+							"variableType": "string",
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							},
+							"customScope": true,
+							"messageScope": true
+						}
+					}
+				},
+				"uiSchema": {
+					"optModelName": {
+						"ui:field": "variable"
+					},
+					"ui:order": ["optModelName"]
+				},
+				"formData": {
+					"optModelName": {
+						"scope": "Custom",
+						"name": ""
+					}
+				}
+			}],
+			"outputs": 1,
+			"inputs": 1
+		}
+	}, {
+		"id": "526058fe-3eff-4ff2-8841-6930f37e2e87",
+		"type": "simple",
+		"selected": true,
+		"x": 594,
+		"y": 164,
+		"extras": {
+			"inPageId": {
+				"scope": "Message",
+				"name": "page_id"
+			}
+		},
+		"ports": [{
+			"id": "ebf9f35c-8963-47f7-836e-cbaa02a1726e",
+			"type": "default",
+			"selected": false,
+			"name": "out_ebf9f35c-8963-47f7-836e-cbaa02a1726e",
+			"parentNode": "526058fe-3eff-4ff2-8841-6930f37e2e87",
+			"links": ["5c0ebdeb-98d2-4bd1-8c0d-ad772fe284b4"],
+			"in": false,
+			"label": "simple",
+			"position": "out"
+		}, {
+			"id": "ebd533c1-77ad-4bf7-8010-1ee87af363d1",
+			"type": "default",
+			"selected": false,
+			"name": "in",
+			"parentNode": "526058fe-3eff-4ff2-8841-6930f37e2e87",
+			"links": ["2e831103-4305-48a0-80d8-e1f91804a320"],
+			"in": true,
+			"label": "simple",
+			"position": "in"
+		}],
+		"model": {
+			"id": "526058fe-3eff-4ff2-8841-6930f37e2e87",
+			"name": "Close Window",
+			"icon": "M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z",
+			"color": "#c9d9ff",
+			"namespace": "Core.Browser.CloseWindow",
+			"version": "1.11.6",
+			"abc": [{}, {
+				"inPageId": {
+					"scope": "Message",
+					"name": "page_id"
+				}
+			}],
+			"xyz": [{
+				"schema": {
+					"title": "Input",
+					"type": "object",
+					"properties": {
+						"inPageId": {
+							"type": "object",
+							"title": "Page Id",
+							"variableType": "String",
+							"messageScope": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"uiSchema": {
+					"inPageId": {
+						"ui:field": "variable"
+					}
+				},
+				"formData": {
+					"inPageId": {
+						"scope": "Message",
+						"name": "page_id"
+					}
+				}
+			}],
+			"outputs": 1,
+			"inputs": 1
+		}
+	}, {
+		"id": "c915af7b-144a-4312-b31e-53ea89484ccf",
+		"type": "simple",
+		"selected": true,
+		"x": -41.5,
+		"y": -199.42857142857142,
+		"extras": {
+			"optText": "## News Summarizer\r\n\r\nShows how to read and summarize news from CNN.\r\n\r\n### How it Works?\r\n\r\n**1.** Go to Flow Designer and press package icon above the node palette.\r\n\r\n**2.** You should see Hugging Face package icon, install it.\r\n\r\n**3.** Edit the Config Node.\r\n\r\n**4.** Set the msg.link to the link of news which you want to read and summarize."
+		},
+		"ports": [],
+		"model": {
+			"id": "c915af7b-144a-4312-b31e-53ea89484ccf",
+			"name": "Comment",
+			"icon": "M21,6V8H3V6H21M3,18H12V16H3V18M3,13H21V11H3V13Z",
+			"color": "#FBE364",
+			"namespace": "Core.Flow.Comment",
+			"version": "1.11.6",
+			"abc": [{}, {
+				"optText": "## News Summarizer\r\n\r\nShows how to read and summarize a news from CNN.\r\n\r\n### How it Works?\r\n\r\n**1.** Go to Flow Designer and press package icon above the node palette.\r\n\r\n**2.** You should see Hugging Face package icon, install it.\r\n\r\n**3.** Edit the Config Node.\r\n\r\n**4.** Set the msg.link to the link of news which you want to read and summarize."
+			}],
+			"xyz": [{
+				"schema": {
+					"title": "Options",
+					"type": "object",
+					"properties": {
+						"comment": {
+							"title": "Comment",
+							"type": "string"
+						},
+						"optText": {
+							"title": "Text",
+							"type": "string"
+						}
+					}
+				},
+				"uiSchema": {
+					"optText": {
+						"ui:description": "Comment",
+						"ui:widget": "hidden",
+						"ui:options": {
+							"rows": 8
+						}
+					},
+					"comment": {
+						"ui:widget": "hidden",
+						"ui:options": {
+							"rows": 6
+						}
+					}
+				},
+				"formData": {
+					"optText": "## News Summarizer\r\n\r\nShows how to read and summarize a news from CNN.\r\n\r\n### How it Works?\r\n\r\n**1.** Go to Flow Designer and press package icon above the node palette.\r\n\r\n**2.** You should see Hugging Face package icon, install it.\r\n\r\n**3.** Edit the Config Node.\r\n\r\n**4.** Set the msg.link to the link of news which you want to read and summarize."
+				}
+			}],
+			"outputs": 0,
+			"inputs": 0
+		}
+	}, {
+		"id": "c6997374-6d60-46e2-9c25-eb829e2bab73",
+		"type": "simple",
+		"selected": true,
+		"x": 877.8670771952505,
+		"y": 151.8852277753207,
+		"extras": {
+			"outResult": {
+				"scope": "Message",
+				"name": "error"
+			}
+		},
+		"ports": [{
+			"id": "874be70a-afeb-4b1a-b3c3-4d6efa62e6e3",
+			"type": "default",
+			"selected": false,
+			"name": "in",
+			"parentNode": "c6997374-6d60-46e2-9c25-eb829e2bab73",
+			"links": ["c7abe2c5-7680-4b4b-8efb-7b956e9d7028"],
+			"in": true,
+			"label": "simple",
+			"position": "in"
+		}],
+		"model": {
+			"id": "c6997374-6d60-46e2-9c25-eb829e2bab73",
+			"name": "Stop",
+			"icon": "M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4M9,9V15H15V9",
+			"color": "#fb2727",
+			"namespace": "Core.Flow.Stop",
+			"version": "1.11.6",
+			"abc": [{}, {
+				"outResult": {
+					"scope": "Message",
+					"name": "error"
+				}
+			}],
+			"xyz": [{
+				"schema": {
+					"title": "Output",
+					"type": "object",
+					"properties": {
+						"outResult": {
+							"type": "object",
+							"title": "Error",
+							"variableType": "String",
+							"messageOnly": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"uiSchema": {
+					"ui:order": ["outResult"],
+					"outResult": {
+						"ui:field": "variable"
+					}
+				},
+				"formData": {
+					"outResult": {
+						"scope": "Message",
+						"name": "error"
+					}
+				}
+			}],
+			"outputs": 0,
+			"inputs": 1
+		}
+	}, {
+		"id": "de0fa808-46de-49bd-9bfc-552de870e751",
+		"type": "simple",
+		"selected": true,
+		"x": 878.3252815296161,
+		"y": 100.36510393631141,
+		"extras": {
+			"optDebugData": {
+				"name": "",
+				"scope": "Message"
+			},
+			"optActive": true,
+			"optSysConsole": false
+		},
+		"ports": [{
+			"id": "e6b83729-b37b-4fb8-8f26-5310e11430aa",
+			"type": "default",
+			"selected": false,
+			"name": "in",
+			"parentNode": "de0fa808-46de-49bd-9bfc-552de870e751",
+			"links": ["717bfd6f-0d1e-46f0-866a-6b1c21b811ff"],
+			"in": true,
+			"label": "simple",
+			"position": "in"
+		}],
+		"model": {
+			"id": "de0fa808-46de-49bd-9bfc-552de870e751",
+			"name": "Debug",
+			"icon": "M4,5H20V7H4V5M4,9H20V11H4V9M4,13H20V15H4V13M4,17H14V19H4V17Z",
+			"color": "#E6EE9C",
+			"namespace": "Core.Programming.Debug",
+			"version": "1.11.6",
+			"abc": [{}, {
+				"optDebugData": {
+					"name": "",
+					"scope": "Message"
+				},
+				"optActive": true,
+				"optSysConsole": false
+			}],
+			"xyz": [{
+				"schema": {
+					"title": "Options",
+					"type": "object",
+					"properties": {
+						"optActive": {
+							"title": "Active",
+							"type": "boolean"
+						},
+						"optSysConsole": {
+							"title": "System Console",
+							"type": "boolean"
+						},
+						"optDebugData": {
+							"type": "object",
+							"title": "Debug Data",
+							"variableType": "String",
+							"messageScope": true,
+							"properties": {
+								"scope": {
+									"type": "string"
+								},
+								"name": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"uiSchema": {
+					"optDebugData": {
+						"ui:field": "variable"
+					},
+					"ui:order": ["optDebugData", "optActive", "optSysConsole"]
+				},
+				"formData": {
+					"optDebugData": {
+						"name": "",
+						"scope": "Message"
+					},
+					"optActive": true,
+					"optSysConsole": false
+				}
+			}],
+			"outputs": 0,
+			"inputs": 1
+		}
+	}],
+	"subFlows": []
+}

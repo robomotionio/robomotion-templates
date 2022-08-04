@@ -9,6 +9,7 @@ applications:
   - Google_Sheets
   - Google_Storage
   - Google_Vision
+  - Hugging_Face
   - Javascript
   - MongoDB
   - MySQL
