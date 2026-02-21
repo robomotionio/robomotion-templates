@@ -1,0 +1,14 @@
+name: Read Text File
+slug: read-text-file
+summary: >-
+  Reads the content of a text file from your file system using the
+  FileSystem.ReadFile node and displays it in a message box.
+category: File Operations
+tags: [file, read, text]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: b442d8a8-13fd-4e4c-bfaa-fbad67b1abe1
+schema_version: 1

@@ -1,0 +1,25 @@
+name: Domain Inspector
+slug: domain-inspector
+summary: >-
+  Domain Inspector is an AI powered tool that instantly analyzes live DNS and SSL
+  data using Robomotion's Monitoring package. It checks domain records, SSL
+  certificate validity, and more by calling real world tools through an AI Agent,
+  giving immediate, accurate answers inside your chat without manual lookups.
+category: System Administration
+tags: [monitoring]
+author: Robomotion
+downloads: 37
+created: "2025-12-07"
+updated: "2025-12-07"
+video_url: "https://www.youtube.com/watch?v=8kLEIm78rII"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.ChatAssistant
+    version: "1.5.0"
+  - package: Robomotion.Agents
+    version: "0.11.2"
+  - package: Robomotion.Monitoring
+    version: "0.4.1"
+has_subflows: false
+flow_id: cacf4dbd-9b62-4e1d-824a-1c70eb16ccfb
+schema_version: 1

@@ -1,0 +1,15 @@
+name: Password Generator
+slug: password-generator
+summary: >-
+  Generates a strong random password with a specified length using alphanumeric
+  characters, then automatically copies it to the clipboard and displays it in
+  a message box.
+category: IT Operations
+tags: [password, security, generator, clipboard]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 1cf8d4a9-a99c-4020-a331-cfa530f029b5
+schema_version: 1

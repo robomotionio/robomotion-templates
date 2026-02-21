@@ -1,0 +1,24 @@
+export default {
+  flowId: '263f9b89-45d2-44ee-a3b8-d68ac50a20b8',
+  sourceHash: '89490e53',
+  positions: {
+    '17a078': { x: 500, y: -200 },
+    '1e22a2': { x: 25, y: 97 },
+    '4f83bf': { x: 250, y: 92 },
+    'aaf3c5': { x: 500, y: 92 },
+    'd5384d': { x: 525, y: 189 },
+    'd81714': { x: 750, y: 136 },
+    '0198c8': { x: 880, y: 183 },
+    'ca1f14': { x: 1130, y: 183 },
+    '4a1cce': { x: 1380, y: 183 },
+    '1881e0': { x: 1630, y: 183 },
+    'c4e967': { x: 1880, y: 189 },
+    '402a38': { x: 900, y: 97 },
+  },
+  commentExtras: {
+    '17a078': { colorIndex: 6, size: { width: 550, height: 185 } },
+  },
+  cameraPositions: {
+    '263f9b89-45d2-44ee-a3b8-d68ac50a20b8': { x: 1040, y: 118, zoom: 0.83 },
+  },
+};

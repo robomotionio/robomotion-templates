@@ -1,0 +1,14 @@
+name: Read From Clipboard
+slug: read-from-clipboard
+summary: >-
+  Reads the current clipboard content and displays it in a message box.
+  Includes error handling for non-text clipboard content.
+category: System Utilities
+tags: [clipboard, read, system]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: c5a571ab-78f2-4549-afac-9cc95a7dc097
+schema_version: 1

@@ -1,0 +1,14 @@
+name: Web Element To PDF
+slug: web-element-to-pdf
+summary: >-
+  Converts any web element to a PDF file by injecting the html2pdf.js library
+  into the page and rendering the selected element based on its XPath selector.
+category: Productivity
+tags: [browser, pdf, html, web]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a63781a9-0a43-4e40-8d85-922c5a069f25
+schema_version: 1

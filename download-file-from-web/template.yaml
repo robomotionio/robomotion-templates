@@ -1,0 +1,15 @@
+name: Download File From Web
+slug: download-file-from-web
+summary: >-
+  Downloads a file from a given URL and saves it to a specified path on your
+  computer. Displays a confirmation message with the download path upon
+  completion.
+category: File Operations
+tags: [download, http, file, web]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 2c194fbe-1d26-4bcb-87f6-c0e95012df87
+schema_version: 1

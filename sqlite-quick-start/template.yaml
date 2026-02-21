@@ -1,0 +1,18 @@
+name: SQLite Quick Start
+slug: sqlite-quick-start
+summary: >-
+  Demonstrates how to use the SQLite package for database operations
+  including creating a database, inserting rows, creating tables, and
+  querying data.
+category: Databases
+tags: [sqlite, database, sql]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.SQLite
+    version: "1.0.7"
+has_subflows: true
+flow_id: 320f330c-fb6d-4fdb-a9f1-61d3939773d6
+schema_version: 1

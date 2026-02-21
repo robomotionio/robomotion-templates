@@ -1,0 +1,15 @@
+name: Translator
+slug: translator
+summary: >-
+  Translates text from one language to another using Google Translate. Text can
+  be provided directly or read from a file, and the result can be displayed in a
+  dialog or saved to a text file.
+category: Productivity
+tags: [browser, dialog, translation]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: d7e5525b-1ba6-4166-8301-f24f28e0ab7a
+schema_version: 1

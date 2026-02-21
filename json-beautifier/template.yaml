@@ -1,0 +1,15 @@
+name: JSON Beautifier
+slug: json-beautifier
+summary: >-
+  Beautifies a given JSON string by parsing and re-formatting it with custom
+  indentation, then exports the result to a file. Displays an error dialog if
+  the input JSON is invalid.
+category: Data Processing
+tags: [json, formatting, beautify, file-processing]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: f89f539e-b74f-4117-a88f-038f5f146b15
+schema_version: 1

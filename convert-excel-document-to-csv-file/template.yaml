@@ -1,0 +1,15 @@
+name: Convert Excel Document to CSV File
+slug: convert-excel-document-to-csv-file
+summary: >-
+  Converts an Excel spreadsheet to a CSV file on your file system. Supports
+  configurable separator characters and optional sheet selection via subflows
+  for reading Excel data and writing CSV output.
+category: Productivity
+tags: [excel, csv, conversion, file]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: cda9e3d2-f26d-42da-8879-e17548f56f94
+schema_version: 1

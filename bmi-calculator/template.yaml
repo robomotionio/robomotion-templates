@@ -1,0 +1,15 @@
+name: BMI Calculator
+slug: bmi-calculator
+summary: >-
+  Calculates Body Mass Index (BMI) using interactive Dialog and Function nodes.
+  Prompts the user for weight and height, computes the BMI value, and displays
+  the result.
+category: Other
+tags: [bmi, calculator, dialog, example]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 838a2cc0-2527-4586-8d69-7bdc1db1ef54
+schema_version: 1

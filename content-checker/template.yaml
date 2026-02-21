@@ -1,0 +1,15 @@
+name: Content Checker
+slug: content-checker
+summary: >-
+  Monitors a webpage for content changes by reading a specific element's value
+  using a browser and comparing it against an expected value. Notifies the user
+  whether the content has changed or remains the same.
+category: Monitoring
+tags: [browser, monitoring, content, web-scraping]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 43e8bd7a-c8ba-4da4-ad4b-a7657fb4a671
+schema_version: 1

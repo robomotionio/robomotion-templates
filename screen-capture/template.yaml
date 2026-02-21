@@ -1,0 +1,14 @@
+name: Screen Capture
+slug: screen-capture
+summary: >-
+  Captures a screenshot of a web page by opening the specified URL in a
+  browser and saving the screenshot to a given file path.
+category: Web Scraping
+tags: [browser, screenshot, automation]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 32ae6638-fb64-4cd1-94f9-0cdf061c4951
+schema_version: 1

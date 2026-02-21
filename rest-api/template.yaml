@@ -1,0 +1,14 @@
+name: REST API
+slug: rest-api
+summary: >-
+  Creates a simple REST API server with GET and POST endpoints using the
+  Net Http nodes. The default robot runs on http://localhost:9090.
+category: Networking
+tags: [rest, api, http, server]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: d4b17a87-1053-4175-8ea7-27dd7857351a
+schema_version: 1
