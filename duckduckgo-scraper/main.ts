@@ -2,13 +2,7 @@ import { flow, Message, Custom } from '@robomotion/sdk';
 
 const FLOW_ID = 'b1cc3fe3-241e-40fd-8b75-af47a38b6b9b';
 
-const duckDuckGoFlow = flow.create(FLOW_ID, 'DuckDuckGo Scraper', (f) => {
-    f.addDependency('Core.Trigger', '26.1.0');
-    f.addDependency('Core.Dialog', '26.1.0');
-    f.addDependency('Core.Browser', '26.1.0');
-    f.addDependency('Core.Excel', '26.1.0');
-    f.addDependency('Core.Flow', '26.1.0');
-    f.addDependency('Core.Programming', '26.1.0');
+const duckDuckGoFlow = flow.create(FLOW_ID, 'DuckDuckGo Scraper', (f) => {;
 
     f.node('dd39a8', 'Core.Trigger.Inject', 'Start', {})
         .then('d25a94', 'Core.Dialog.InputBox', 'Get Query', {
