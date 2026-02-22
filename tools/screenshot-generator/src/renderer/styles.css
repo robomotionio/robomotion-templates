@@ -57,6 +57,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid #000;
+  border-radius: 5px 0 0 5px;
 }
 
 .node-default .node-content {
@@ -109,6 +111,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 18px 2px 2px 18px;
+  border: 1px solid #000;
 }
 
 .node-inject .node-label {
@@ -142,6 +145,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 2px 18px 18px 2px;
+  border: 1px solid #000;
 }
 
 .node-ending .node-label {
@@ -208,6 +212,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 2px 6px 6px 2px;
+  border: 1px solid #000;
 }
 
 .node-label-type .node-label {
