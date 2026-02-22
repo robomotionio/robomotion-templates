@@ -1,0 +1,13 @@
+name: Twitter Get Followings
+slug: twitter-get-followings
+summary: >-
+    Lists the followings of a Twitter account and saves them to an excel file
+category: Social Media
+tags: [social media, twitter]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 84208fea-812d-494f-999f-69065e60957b
+schema_version: 1

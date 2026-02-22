@@ -1,0 +1,13 @@
+name: Read Word Document
+slug: read-word-document
+summary: >-
+    Reads the content of a Word document
+category: Files
+tags: [microsoft, word, document]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 2512c2b1-a558-47a8-8814-76999edab97e
+schema_version: 1

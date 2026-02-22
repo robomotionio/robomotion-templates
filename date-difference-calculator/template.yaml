@@ -1,0 +1,13 @@
+name: Date Difference Calculator
+slug: date-difference-calculator
+summary: >-
+    Calculates the difference between now and a specific date
+category: Other
+tags: [date, difference, calculate, timespan]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: da24ce9d-4a0d-4f89-8913-d1b8eada6722
+schema_version: 1

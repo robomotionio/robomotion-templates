@@ -1,0 +1,13 @@
+name: Duplicate Rows Remover
+slug: duplicate-rows-remover
+summary: >-
+    Finds and removes duplicate rows in excel file
+category: Productivity
+tags: [excel, remover]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 5249d9f7-1890-49c4-b7db-02cfae5d031f
+schema_version: 1

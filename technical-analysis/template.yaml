@@ -1,0 +1,13 @@
+name: Technical Analysis
+slug: technical-analysis
+summary: >-
+    Generates technical indicators and plots them in a graph
+category: Other
+tags: [indicators, analysis, exchange]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 7ad0ef2b-c2cc-4e4b-a31d-40159ab01239
+schema_version: 1

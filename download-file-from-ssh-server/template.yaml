@@ -1,0 +1,13 @@
+name: Download File From SSH Server
+slug: download-file-from-ssh-server
+summary: >-
+    Downloads file from SSH server to local computer
+category: Other
+tags: [ssh, remote, download]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: c80497c1-86bb-4eb9-8647-38ae3c8025e7
+schema_version: 1

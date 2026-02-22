@@ -1,0 +1,14 @@
+name: Mail To MySQL Inserter
+slug: mail-to-mysql-inserter
+summary: >-
+    Checks Inbox every hour and if a mail comes with subject that contain
+  #ROBO#, writes it into a mysql table
+category: Productivity
+tags: [mail, mysql, table]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 3b0e85c2-4e9b-43bf-a8bc-f3569557a93d
+schema_version: 1

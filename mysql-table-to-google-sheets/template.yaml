@@ -1,0 +1,13 @@
+name: MySQL Table To Google Sheets
+slug: mysql-table-to-google-sheets
+summary: >-
+    Executes query for reading data from MySQL table and writes to spreadsheet.
+category: Productivity
+tags: [google, sheets, mysql, table]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 80e5ffa9-3c8b-4fab-a21c-4f1c3bad7411
+schema_version: 1

@@ -1,0 +1,13 @@
+name: Upload File To SSH Server
+slug: upload-file-to-ssh-server
+summary: >-
+    Uploads file from local computer to SSH server
+category: Other
+tags: [ssh, remote, upload]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 84776429-d7e0-4616-9878-91ce0113d704
+schema_version: 1

@@ -1,0 +1,13 @@
+name: Excel To CSV
+slug: excel-to-csv
+summary: >-
+    Converts an excel file to a csv file in your file system
+category: Productivity
+tags: [excel, csv, conversion]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: e2784722-65ac-45d3-98bd-90266437668d
+schema_version: 1

@@ -1,0 +1,13 @@
+name: Google Sheets Range to Excel
+slug: google-sheets-range-to-excel
+summary: >-
+    Gets range from spreadsheet and writes to excel file.
+category: Productivity
+tags: [google, sheets, excel]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 31766bcb-a122-4c3f-beed-4609801508c1
+schema_version: 1

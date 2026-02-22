@@ -1,0 +1,13 @@
+name: Write to Word Document
+slug: write-to-word-document
+summary: >-
+    Reads a txt file and writes output to a new word document
+category: Files
+tags: [microsoft, word, document]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 65b3f54f-222d-4d19-97a2-feb0fc6e6327
+schema_version: 1

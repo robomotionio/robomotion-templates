@@ -1,0 +1,14 @@
+name: Get Instagram Highlights
+slug: get-instagram-highlights
+summary: >-
+    Lists Instagram highlights of multiple accounts and saves them to specified
+  folder
+category: Social Media
+tags: [instagram, social media, highlight]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 92810309-9cae-4944-8c55-4525902a81b8
+schema_version: 1

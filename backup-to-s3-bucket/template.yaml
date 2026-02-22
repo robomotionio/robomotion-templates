@@ -1,0 +1,13 @@
+name: Backup To S3 Bucket
+slug: backup-to-s3-bucket
+summary: >-
+    Creates a zip file and uploads to S3 bucket
+category: Files
+tags: [s3 storage, compress, file, backup, cloud]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: e165ab4f-33b2-4c5b-bdee-a154b2cc7f90
+schema_version: 1

@@ -1,0 +1,14 @@
+name: Pdf Reader With OCR
+slug: pdf-reader-with-ocr
+summary: >-
+    Extracts images from a pdf file, reads images with ocr, parses text, writes
+  to a spreadsheet and uploads the pdf file to drive
+category: Productivity
+tags: [pdf, text, google, sheets, drive, pdfbox, ocr]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 16c64fd5-7235-4a4c-8d96-876d994453a8
+schema_version: 1

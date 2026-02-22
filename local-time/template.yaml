@@ -1,0 +1,13 @@
+name: Local Time
+slug: local-time
+summary: >-
+    Takes a city name from the user and prints the local time out
+category: Other
+tags: [local, time, city]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: e844412f-0b2e-4417-a775-e28a12ad72a1
+schema_version: 1

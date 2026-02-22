@@ -1,0 +1,13 @@
+name: State Machine Example
+slug: state-machine-example
+summary: >-
+    Simulates a basic Finite State Machine example.
+category: Productivity
+tags: [state, machine, transition]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 0887bfb9-062b-47d5-b720-8706133e21ec
+schema_version: 1

@@ -1,0 +1,14 @@
+name: MongoDB Quick Start
+slug: mongodb-quick-start
+summary: >-
+    This flow shows create database, collection and some document operations in
+  MongoDB
+category: IT Operations
+tags: [database, javascript, mongodb]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: fab6d1b3-9ec4-452c-b414-6312a99f0460
+schema_version: 1

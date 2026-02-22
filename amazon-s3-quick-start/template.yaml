@@ -1,0 +1,13 @@
+name: Amazon S3 Quick Start
+slug: amazon-s3-quick-start
+summary: >-
+    Shows upload, get, download and delete object operations in S3 bucket
+category: Files
+tags: [s3, storage, object, cloud, bucket]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 7b10b842-fb2b-4fc9-97dd-12c58afaa813
+schema_version: 1

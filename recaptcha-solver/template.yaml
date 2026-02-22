@@ -1,0 +1,13 @@
+name: ReCaptcha Solver
+slug: recaptcha-solver
+summary: >-
+    Verify Google ReCaptcha V2 automatically with solving services.
+category: Productivity
+tags: [captcha]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 3ec59ac1-6be5-4cd0-a576-1b6d397eff88
+schema_version: 1

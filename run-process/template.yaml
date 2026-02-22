@@ -1,0 +1,14 @@
+name: Run Process
+slug: run-process
+summary: >-
+    Runs an executable file, and shows the standart output of the process in
+  message box.
+category: Other
+tags: [process, executable_file, exe, system]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: f0852401-e4fc-4766-ab4f-e79bb164ca71
+schema_version: 1

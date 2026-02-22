@@ -1,0 +1,13 @@
+name: Excel Range to Word Table
+slug: excel-range-to-word-table
+summary: >-
+    Reads range from excel file and writes to a newly created word document
+category: Files
+tags: [microsoft, excel, word, document]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: c75e7bcb-ca05-4dfb-9f56-d035dbc9dcea
+schema_version: 1

@@ -1,0 +1,14 @@
+name: Pabbly Triggers
+slug: pabbly-triggers
+summary: >-
+    Triggers a Pabbly workflow from a Robomotion flow then triggers a node from
+  Robomotion flow to start the operations
+category: Productivity
+tags: [trigger, workflow, flow]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: f8264ef1-0605-4869-8d58-8f5ecd407596
+schema_version: 1

@@ -1,0 +1,13 @@
+name: Click To Specific Point
+slug: click-to-specific-point
+summary: >-
+    Clicks to specified point in the screen with mouse.
+category: Other
+tags: [mouse, click, system]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a7ff008f-8f5e-44df-b215-2b8e1035aafd
+schema_version: 1

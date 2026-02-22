@@ -1,0 +1,13 @@
+name: Extract Image Labels
+slug: extract-image-labels
+summary: >-
+    Extracts an image's first 10 labels
+category: Productivity
+tags: [image, ai, google]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 30ae56cf-bf66-452c-92f0-1fb314b4f4ab
+schema_version: 1

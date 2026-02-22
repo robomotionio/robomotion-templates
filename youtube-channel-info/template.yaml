@@ -1,0 +1,13 @@
+name: Youtube Channel Information
+slug: youtube-channel-info
+summary: >-
+    Extracts channel information from a Youtube channel
+category: Social Media
+tags: [youtube, channel, stats]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: c42c3982-850e-4dd5-b631-405045628a54
+schema_version: 1

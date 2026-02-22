@@ -1,0 +1,13 @@
+name: Run Command In SSH Server
+slug: run-command-in-ssh-server
+summary: >-
+    Executes commands in ssh server
+category: Other
+tags: [ssh, remote, run_command]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 611b7419-9f08-46f8-8953-b6a0946a0db0
+schema_version: 1

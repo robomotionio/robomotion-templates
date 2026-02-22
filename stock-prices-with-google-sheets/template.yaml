@@ -1,0 +1,13 @@
+name: Stock Prices With Google Sheets
+slug: stock-prices-with-google-sheets
+summary: >-
+    Stock price scraping flow using a Google Sheets document
+category: Productivity
+tags: [google, sheets, scraping, browser]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: e5cbda22-882f-4971-b6fb-1e79168e1952
+schema_version: 1

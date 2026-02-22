@@ -1,0 +1,13 @@
+name: Service Monitor
+slug: service-monitor
+summary: >-
+    Check your service's url, port liveness and SSL certificate validity
+category: Monitoring
+tags: [monitoring, ssl]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 7bccf464-059f-4ee2-a8e8-9bccdf4b3b7c
+schema_version: 1

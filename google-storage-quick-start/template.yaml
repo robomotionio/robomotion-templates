@@ -1,0 +1,13 @@
+name: Google Storage Quick Start
+slug: google-storage-quick-start
+summary: >-
+    Shows some object and bucket operations in Google Storage bucket
+category: Files
+tags: [google, storage, object, cloud, bucket]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: ddaeab12-320f-45bb-b3d1-1fb602fb4ea3
+schema_version: 1

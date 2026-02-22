@@ -1,0 +1,13 @@
+name: Get Tweet Count
+slug: get-tweet-count
+summary: >-
+    Returns the tweet count that specified accounts tweeted
+category: Social Media
+tags: [social media, twitter]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 6758d77d-8894-409a-8dd0-f3747407f328
+schema_version: 1

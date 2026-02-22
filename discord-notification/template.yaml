@@ -1,0 +1,13 @@
+name: Send Discord Notification
+slug: discord-notification
+summary: >-
+    Send Discord messages with embeds using webhooks.
+category: Productivity
+tags: [discord, notification, api]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 15adf87d-8af3-466b-8734-489055daf3e5
+schema_version: 1

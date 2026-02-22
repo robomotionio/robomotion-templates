@@ -1,0 +1,13 @@
+name: Twitter Auto Follow
+slug: twitter-auto-follow
+summary: >-
+    Follows a specified Twitter account
+category: Social Media
+tags: [social media, twitter]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 78928ea8-3c4d-4e46-bbff-0005a042b87c
+schema_version: 1

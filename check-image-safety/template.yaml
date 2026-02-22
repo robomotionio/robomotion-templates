@@ -1,0 +1,13 @@
+name: Check Image Safety
+slug: check-image-safety
+summary: >-
+    Checks an image's safety via Google Vision
+category: Productivity
+tags: [image, safety, ai, google]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: e74e08ef-0e11-4480-8712-a197ad64e757
+schema_version: 1

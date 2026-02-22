@@ -1,0 +1,13 @@
+name: Process Tasks Parallely
+slug: process-tasks-parallely
+summary: >-
+    Shows how to process list of task parallely.
+category: Productivity
+tags: [branching, parallel_processing]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: f3949d80-010c-4272-99bd-294d830aaa9f
+schema_version: 1

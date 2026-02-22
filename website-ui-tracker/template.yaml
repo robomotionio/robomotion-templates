@@ -1,0 +1,13 @@
+name: Website UI Tracker
+slug: website-ui-tracker
+summary: >-
+    Takes screenshot of a web site and uploads it to specified slack channel
+category: Productivity
+tags: [monitoring, messaging]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: d5e8950c-c059-4581-966a-069e6931e406
+schema_version: 1

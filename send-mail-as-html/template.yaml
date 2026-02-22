@@ -1,0 +1,13 @@
+name: Send Mail As HTML
+slug: send-mail-as-html
+summary: >-
+    Sends mail with HTML format
+category: Communication
+tags: [scraping, browser, excel]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 3c30aadc-6811-4605-a07e-eaeb677f3902
+schema_version: 1

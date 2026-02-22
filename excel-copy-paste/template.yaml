@@ -1,0 +1,13 @@
+name: Excel Copy Paste
+slug: excel-copy-paste
+summary: >-
+    Copies and pastes data between sheets
+category: Productivity
+tags: [excel, clipboard]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: cc0c6399-3f10-4e33-8cbc-b1624ce73747
+schema_version: 1

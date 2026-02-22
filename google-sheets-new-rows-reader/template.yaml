@@ -1,0 +1,13 @@
+name: Google Sheets New Rows Reader
+slug: google-sheets-new-rows-reader
+summary: >-
+    Reads new rows from a spreadsheet and writes to end of a txt file.
+category: Productivity
+tags: [google, sheets, rows]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 266aff6e-8dc0-40bc-b582-43a43b851a44
+schema_version: 1

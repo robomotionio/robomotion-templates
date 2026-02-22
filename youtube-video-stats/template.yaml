@@ -1,0 +1,13 @@
+name: Youtube Video Stats
+slug: youtube-video-stats
+summary: >-
+    Extracts video stats from a Youtube video
+category: Social Media
+tags: [comments, dislikes, likes, stats, views, video, youtube]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: db3260e1-7df3-4ba3-adfc-3065cf055377
+schema_version: 1

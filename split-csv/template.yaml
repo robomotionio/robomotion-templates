@@ -1,0 +1,14 @@
+name: Split CSV
+slug: split-csv
+summary: >-
+    Splits a CSV file to a group of .csv files containing at most specified
+  amount of rows
+category: Files
+tags: [csv, split, file]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: f7b5f2b4-d52e-4ae5-8cda-9c982062c366
+schema_version: 1

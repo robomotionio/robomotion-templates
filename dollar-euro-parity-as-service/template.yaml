@@ -1,0 +1,13 @@
+name: Dollar - Euro Parity As Service
+slug: dollar-euro-parity-as-service
+summary: >-
+    Returns dolar - euro parity for API request
+category: Productivity
+tags: [rest, api]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 604b8632-f138-4138-92ea-5bcec2fb2814
+schema_version: 1

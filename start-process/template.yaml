@@ -1,0 +1,13 @@
+name: Start Process
+slug: start-process
+summary: >-
+    Runs a process existing in your computer
+category: Files
+tags: [start, process, run, executable]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: c5cd59d6-77e2-45d9-8eb6-1cd98ae2766f
+schema_version: 1

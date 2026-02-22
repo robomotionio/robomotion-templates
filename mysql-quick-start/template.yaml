@@ -1,0 +1,13 @@
+name: MySQL Quick Start
+slug: mysql-quick-start
+summary: >-
+    This flow shows how to insert and select from MySQL databases.
+category: IT Operations
+tags: [database, javascript, mysql]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: a529cee7-2b63-480f-befa-6a880d25aabd
+schema_version: 1

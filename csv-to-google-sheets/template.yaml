@@ -1,0 +1,13 @@
+name: CSV to Google Sheets
+slug: csv-to-google-sheets
+summary: >-
+    Reads range from a CSV file and write it to Google Sheet file.
+category: Files
+tags: [csv, google, sheets]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 00229a5b-86ee-48fa-a50e-66e969c240da
+schema_version: 1

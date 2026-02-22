@@ -1,0 +1,13 @@
+name: Replace Words in Word Document
+slug: replace-words-in-word-document
+summary: >-
+    Replaces words in a word document
+category: Files
+tags: [microsoft, word, document]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 18b19e4d-6bda-4403-8c56-dd45849b42a9
+schema_version: 1

@@ -1,0 +1,13 @@
+name: Telegram Replier Bot
+slug: telegram-replier-bot
+summary: >-
+    Receives message from telegram and replies
+category: Communication
+tags: [telegram, bot, message]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: e1a5ba19-2d48-41f7-b613-52a5f59de202
+schema_version: 1

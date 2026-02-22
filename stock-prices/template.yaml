@@ -1,0 +1,13 @@
+name: Stock Prices
+slug: stock-prices
+summary: >-
+    Stock price scraping flow using an Excel file
+category: Productivity
+tags: [scraping, browser, excel]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: efae21bf-8413-408f-bc3f-4150c7dec2e0
+schema_version: 1

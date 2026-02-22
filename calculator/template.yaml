@@ -1,0 +1,13 @@
+name: Calculator
+slug: calculator
+summary: >-
+    Performs arithmetic operations in the excel file
+category: Other
+tags: [excel, calculate]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 37fa28c0-1fc5-4453-9b5c-89cc97b9bd9f
+schema_version: 1

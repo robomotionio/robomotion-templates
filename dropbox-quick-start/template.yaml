@@ -1,0 +1,13 @@
+name: Dropbox Quick Start
+slug: dropbox-quick-start
+summary: >-
+    Shows how to make some Dropbox operations
+category: Files
+tags: [dropbox, storage, file, cloud]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: c11ca0c7-64e9-43bb-be00-a9471241b2e0
+schema_version: 1

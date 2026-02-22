@@ -1,0 +1,13 @@
+name: WhatsApp FAQ Bot
+slug: whatsapp-faq-bot
+summary: >-
+    Basic Whatsapp FAQ Bot example for customer support
+category: Productivity
+tags: [whatsapp, chatbot]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 48c7f5bb-ffdd-4bef-bf3f-2f9a9b18092d
+schema_version: 1

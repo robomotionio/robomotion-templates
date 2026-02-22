@@ -1,0 +1,13 @@
+name: Birthday Celebrator
+slug: birthday-celebrator
+summary: >-
+    Sends birthday messages to Slack Channel
+category: Communication
+tags: [chat, messaging]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 2c6e2eca-6621-43c3-b92b-56ab5696f126
+schema_version: 1
