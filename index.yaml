@@ -1,0 +1,335 @@
+schema_version: 1
+templates:
+  - name: API Health Check
+    slug: api-health-check
+    summary: >-
+      Monitors the operational status of API endpoints by sending HTTP requests
+      and evaluating response status codes. Demonstrates how to test any service
+      endpoint using the GET method.
+    category: Monitoring
+    tags: [api, health-check, http, monitoring]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: BMI Calculator
+    slug: bmi-calculator
+    summary: >-
+      Calculates Body Mass Index (BMI) using interactive Dialog and Function nodes.
+      Prompts the user for weight and height, computes the BMI value, and displays
+      the result.
+    category: Other
+    tags: [bmi, calculator, dialog, example]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Content Checker
+    slug: content-checker
+    summary: >-
+      Monitors a webpage for content changes by reading a specific element's value
+      using a browser and comparing it against an expected value. Notifies the user
+      whether the content has changed or remains the same.
+    category: Monitoring
+    tags: [browser, monitoring, content, web-scraping]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Convert Excel Document to CSV File
+    slug: convert-excel-document-to-csv-file
+    summary: >-
+      Converts an Excel spreadsheet to a CSV file on your file system. Supports
+      configurable separator characters and optional sheet selection via subflows
+      for reading Excel data and writing CSV output.
+    category: Productivity
+    tags: [excel, csv, conversion, file]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Domain Inspector
+    slug: domain-inspector
+    summary: >-
+      Domain Inspector is an AI powered tool that instantly analyzes live DNS and SSL
+      data using Robomotion's Monitoring package. It checks domain records, SSL
+      certificate validity, and more by calling real world tools through an AI Agent,
+      giving immediate, accurate answers inside your chat without manual lookups.
+    category: System Administration
+    tags: [monitoring]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    video_url: "https://www.youtube.com/watch?v=8kLEIm78rII"
+    has_subflows: false
+
+  - name: Download File From Web
+    slug: download-file-from-web
+    summary: >-
+      Downloads a file from a given URL and saves it to a specified path on your
+      computer. Displays a confirmation message with the download path upon
+      completion.
+    category: File Operations
+    tags: [download, http, file, web]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: DuckDuckGo Scraper
+    slug: duckduckgo-scraper
+    summary: >-
+      Searches DuckDuckGo for a user-provided query and saves the result titles
+      and links to an Excel file.
+    category: Web Scraping
+    tags: [scraping, search, duckduckgo, browser]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Duplicate File Remover
+    slug: duplicate-file-remover
+    summary: >-
+      Removes duplicate files in a given directory by computing SHA-256 hashes
+      for each file and deleting any file whose hash has already been seen. Uses
+      the Cryptography package for hashing and File System nodes for deletion.
+    category: File Operations
+    tags: [file, hash, duplicate, cleanup, cryptography]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Fork Branch With Memory Queue
+    slug: fork-branch-with-memory-queue
+    summary: >-
+      Demonstrates parallel browser automation using Fork Branch and Memory Queue.
+      Creates multiple concurrent browser instances that dequeue items from a shared
+      queue, navigate to e-commerce websites, and take screenshots simultaneously.
+    category: Concurrency
+    tags: [parallel, fork, queue, browser, memory-queue]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Handle Errors
+    slug: handle-errors
+    summary: >-
+      Shows how to throw and handle errors in a Robomotion flow. Prompts the user
+      for a number greater than 100, validates the input, and demonstrates catching
+      specific error types with appropriate feedback.
+    category: Error Handling
+    tags: [error-handling, catch, throw, validation]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: JSON Beautifier
+    slug: json-beautifier
+    summary: >-
+      Beautifies a given JSON string by parsing and re-formatting it with custom
+      indentation, then exports the result to a file. Displays an error dialog if
+      the input JSON is invalid.
+    category: Data Processing
+    tags: [json, formatting, beautify, file-processing]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: JSON Minifier
+    slug: json-minifier
+    summary: >-
+      Minimizes a given JSON object by converting it to a compact single-line string
+      with no extra whitespace. The result is printed to the Output Panel via a
+      Debug node.
+    category: Data Processing
+    tags: [json, formatting, minify, file-processing]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Merge CSV
+    slug: merge-csv
+    summary: >-
+      Merges a group of CSV files from a directory into a single CSV file. Uses
+      subflows to read individual CSV files and combine their contents with a
+      configurable separator.
+    category: Data Processing
+    tags: [csv, merge, file-processing]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Password Generator
+    slug: password-generator
+    summary: >-
+      Generates a strong random password with a specified length using alphanumeric
+      characters, then automatically copies it to the clipboard and displays it in
+      a message box.
+    category: IT Operations
+    tags: [password, security, generator, clipboard]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Read From Clipboard
+    slug: read-from-clipboard
+    summary: >-
+      Reads the current clipboard content and displays it in a message box.
+      Includes error handling for non-text clipboard content.
+    category: System Utilities
+    tags: [clipboard, read, system]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Read Text File
+    slug: read-text-file
+    summary: >-
+      Reads the content of a text file from your file system using the
+      FileSystem.ReadFile node and displays it in a message box.
+    category: File Operations
+    tags: [file, read, text]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: REST API
+    slug: rest-api
+    summary: >-
+      Creates a simple REST API server with GET and POST endpoints using the
+      Net Http nodes. The default robot runs on http://localhost:9090.
+    category: Networking
+    tags: [rest, api, http, server]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Screen Capture
+    slug: screen-capture
+    summary: >-
+      Captures a screenshot of a web page by opening the specified URL in a
+      browser and saving the screenshot to a given file path.
+    category: Web Scraping
+    tags: [browser, screenshot, automation]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Send GET Request
+    slug: send-get-request
+    summary: >-
+      Sends an HTTP GET request to a sample service and displays the response
+      in a message box. Defaults to querying https://ifconfig.me for your
+      public IP address.
+    category: Networking
+    tags: [http, get, request, api]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: SQLite Quick Start
+    slug: sqlite-quick-start
+    summary: >-
+      Demonstrates how to use the SQLite package for database operations
+      including creating a database, inserting rows, creating tables, and
+      querying data.
+    category: Databases
+    tags: [sqlite, database, sql]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: SSL Watch
+    slug: ssl-watch
+    summary: >-
+      SSL Watch is an automation that monitors domain expiration dates and SSL
+      certificate validity using Robomotion's Monitoring package. It checks each
+      domain, calculates days until expiration, verifies certificate status, and
+      updates a Google Sheets file automatically through secure Vault stored
+      credentials.
+    category: System Administration
+    tags: [automation, ssl]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    video_url: "https://www.youtube.com/watch?v=G2Cp1nW5Plc"
+    has_subflows: false
+
+  - name: Translator
+    slug: translator
+    summary: >-
+      Translates text from one language to another using Google Translate. Text can
+      be provided directly or read from a file, and the result can be displayed in a
+      dialog or saved to a text file.
+    category: Productivity
+    tags: [browser, dialog, translation]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Web Element To PDF
+    slug: web-element-to-pdf
+    summary: >-
+      Converts any web element to a PDF file by injecting the html2pdf.js library
+      into the page and rendering the selected element based on its XPath selector.
+    category: Productivity
+    tags: [browser, pdf, html, web]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Write To Clipboard
+    slug: write-to-clipboard
+    summary: >-
+      Receives text input from the user via a dialog box and copies it to the
+      system clipboard, then confirms the operation with a message.
+    category: System Utilities
+    tags: [clipboard, copy, system, dialog]
+    author: Robomotion
+    created: "2025-12-07"
+    updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
