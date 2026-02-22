@@ -1,0 +1,38 @@
+export default {
+  flowId: '5a3e9eb7-8455-4e02-9f6b-ae33c7df7375',
+  sourceHash: 'b0924856',
+  positions: {
+    '337921': { x: 1494, y: -429 },
+    '894e4d': { x: 1194, y: -560 },
+    'b50310': { x: 479, y: -313 },
+    '5e45ef': { x: 1194, y: -313 },
+    'b30017': { x: 500, y: -110 },
+    '29799e': { x: 1431, y: -108 },
+    '49ac3d': { x: 1255, y: -423 },
+    '22d2ec': { x: 681, y: -115 },
+    '435c24': { x: 916, y: -115 },
+    '1eea09': { x: 1770, y: -423 },
+    '51fef9': { x: 1253, y: -2 },
+    '540edc': { x: 1381, y: 72 },
+    'ffab91': { x: 1381, y: -49 },
+    'b830e2': { x: 1628, y: -49 },
+    'ab70e1': { x: 1864, y: -49 },
+    'c35d46': { x: 2103, y: -49 },
+    'c58cac': { x: 2334, y: -43 },
+  },
+  cameraPositions: {
+    'main': { x: -312, y: 604, zoom: 0.83 },
+  },
+  nodeColors: {
+    '894e4d': 'hsl(var(--comment-dark-gray))',
+    'b50310': 'hsl(var(--comment-dark-gray))',
+    '5e45ef': 'hsl(var(--comment-dark-gray))',
+    '29799e': '#6610F2',
+    'c58cac': '#6610F2',
+  },
+  commentExtras: {
+    '894e4d': { colorIndex: 6, size: { width: 788, height: 212 } },
+    'b50310': { colorIndex: 4, size: { width: 658, height: 294 } },
+    '5e45ef': { size: { width: 1351, height: 478 } },
+  },
+};
