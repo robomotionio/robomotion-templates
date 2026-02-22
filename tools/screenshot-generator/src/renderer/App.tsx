@@ -65,7 +65,7 @@ function FlowCanvas() {
       fitView={false}
       defaultEdgeOptions={{
         type: 'default',
-        style: { stroke: '#374151', strokeWidth: 1.5 },
+        style: { stroke: '#666', strokeWidth: 2 },
         animated: false,
       }}
       proOptions={{ hideAttribution: true }}
