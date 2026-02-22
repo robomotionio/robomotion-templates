@@ -2,7 +2,7 @@ export default {
   flowId: '263f9b89-45d2-44ee-a3b8-d68ac50a20b8',
   sourceHash: '89490e53',
   positions: {
-    '17a078': { x: 480, y: -120 },
+    '17a078': { x: 250, y: -85 },
     '1e22a2': { x: 25, y: 97 },
     '4f83bf': { x: 250, y: 92 },
     'aaf3c5': { x: 500, y: 92 },
@@ -16,7 +16,7 @@ export default {
     '402a38': { x: 900, y: 97 },
   },
   commentExtras: {
-    '17a078': { colorIndex: 6, size: { width: 560, height: 185 } },
+    '17a078': { colorIndex: 6, size: { width: 1400, height: 115 } },
   },
   cameraPositions: {
     '263f9b89-45d2-44ee-a3b8-d68ac50a20b8': { x: 1040, y: 118, zoom: 0.83 },
