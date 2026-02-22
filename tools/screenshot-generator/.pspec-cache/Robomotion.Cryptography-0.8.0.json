@@ -1,0 +1,52 @@
+{
+  "Robomotion.Cryptography.DecryptFile": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Cryptography.DecryptText": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Cryptography.EncryptFile": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Cryptography.EncryptText": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Cryptography.GenerateKey": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Cryptography.HMAC": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Cryptography.HashFile": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Cryptography.HashText": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Cryptography.Sign": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Cryptography.Verify": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  }
+}

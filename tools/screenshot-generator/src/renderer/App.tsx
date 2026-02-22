@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import {
   ReactFlow,
   Background,
@@ -10,6 +10,7 @@ import {
   type Node,
   type Edge,
 } from '@xyflow/react';
+
 // CSS is loaded separately in the HTML shell
 import { DefaultNode } from './nodes/DefaultNode';
 import { InjectNode } from './nodes/InjectNode';
@@ -46,10 +47,8 @@ function FlowCanvas() {
   const { fitView } = useReactFlow();
 
   useEffect(() => {
-    // Wait a tick for layout, then fitView and signal ready
     const timer = setTimeout(() => {
-      fitView({ padding: 0.15 }).then(() => {
-        // Signal to Playwright that we're ready for screenshot
+      fitView({ padding: 0.08 }).then(() => {
         window.__FLOW_READY__ = true;
       });
     }, 200);
@@ -63,11 +62,10 @@ function FlowCanvas() {
       onNodesChange={onNodesChange}
       onEdgesChange={onEdgesChange}
       nodeTypes={nodeTypes}
-      fitView
-      fitViewOptions={{ padding: 0.15 }}
+      fitView={false}
       defaultEdgeOptions={{
         type: 'default',
-        style: { stroke: '#666', strokeWidth: 2 },
+        style: { stroke: '#374151', strokeWidth: 1.5 },
         animated: false,
       }}
       proOptions={{ hideAttribution: true }}

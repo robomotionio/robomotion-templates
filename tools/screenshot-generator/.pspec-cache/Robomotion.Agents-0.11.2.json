@@ -1,0 +1,92 @@
+{
+  "Robomotion.Agents.Callback.CallbackIn": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Agents.Callback.CallbackOut": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 0
+  },
+  "Robomotion.Agents.Session.CreateSession": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Agents.Artifact.DeleteArtifact": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Agents.Session.DeleteSession": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Agents.State.GetState": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Agents.Agent.LLMAgent": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Agents.Artifact.ListArtifacts": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Agents.Artifact.LoadArtifact": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Agents.Session.LoadSession": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Agents.Agent.LoopAgent": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Agents.Tool.MCPTool": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 0
+  },
+  "Robomotion.Agents.Agent.ParallelAgent": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Agents.Artifact.SaveArtifact": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Agents.Agent.SequentialAgent": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Agents.Tool.ToolIn": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Agents.Tool.ToolOut": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 0
+  },
+  "Robomotion.Agents.State.UpdateState": {
+    "color": "#FF6B6B",
+    "inputs": 1,
+    "outputs": 1
+  }
+}

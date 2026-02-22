@@ -5,6 +5,7 @@ export interface CommentNodeData {
   label: string;
   commentText: string;
   color: string;
+  commentColor?: string;
   width: number;
   height: number;
   [key: string]: unknown;
@@ -31,7 +32,7 @@ function renderMarkdown(text: string): string {
 }
 
 export function CommentNode({ data }: NodeProps) {
-  const { commentText, width, height } = data as unknown as CommentNodeData;
+  const { commentText, commentColor, width, height } = data as unknown as CommentNodeData;
 
   return (
     <div
@@ -39,6 +40,8 @@ export function CommentNode({ data }: NodeProps) {
       style={{
         width: width || 300,
         height: height || 150,
+        backgroundColor: commentColor,
+        borderColor: commentColor,
       }}
     >
       <div

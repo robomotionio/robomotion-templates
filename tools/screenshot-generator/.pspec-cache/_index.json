@@ -1,0 +1,440 @@
+{
+  "Robomotion.2FA": {
+    "path": "2FA"
+  },
+  "Robomotion.ABBYYCloud": {
+    "path": "ABBYYCloud"
+  },
+  "Robomotion.ActiveDirectory": {
+    "path": "ActiveDirectory"
+  },
+  "Robomotion.Agents": {
+    "path": "Agents"
+  },
+  "Robomotion.AgentTools": {
+    "path": "AgentTools"
+  },
+  "Robomotion.Airtable": {
+    "path": "Airtable"
+  },
+  "Robomotion.AmazonS3": {
+    "path": "AmazonS3"
+  },
+  "Robomotion.AntiCaptcha": {
+    "path": "AntiCaptcha"
+  },
+  "Robomotion.Apify": {
+    "path": "Apify"
+  },
+  "Robomotion.Array": {
+    "path": "Array"
+  },
+  "Robomotion.Assistant": {
+    "path": "Assistant"
+  },
+  "Robomotion.AudioProcessing": {
+    "path": "AudioProcessing"
+  },
+  "Robomotion.BadgerDB": {
+    "path": "BadgerDB"
+  },
+  "Robomotion.Barcode": {
+    "path": "Barcode"
+  },
+  "Robomotion.Baserow": {
+    "path": "Baserow"
+  },
+  "Robomotion.Binance": {
+    "path": "Binance"
+  },
+  "Robomotion.Boolean": {
+    "path": "Boolean"
+  },
+  "Robomotion.Calendly": {
+    "path": "Calendly"
+  },
+  "Robomotion.CapMonster": {
+    "path": "CapMonster"
+  },
+  "Robomotion.ChatAssistant": {
+    "path": "ChatAssistant"
+  },
+  "Robomotion.Claude": {
+    "path": "Claude"
+  },
+  "Robomotion.ClickHouse": {
+    "path": "ClickHouse"
+  },
+  "Robomotion.Compression": {
+    "path": "Compression"
+  },
+  "Robomotion.CookieStore": {
+    "path": "CookieStore"
+  },
+  "Robomotion.Cryptography": {
+    "path": "Cryptography"
+  },
+  "Robomotion.DataTable": {
+    "path": "DataTable"
+  },
+  "Robomotion.DateTime": {
+    "path": "DateTime"
+  },
+  "Robomotion.DiscordBot": {
+    "path": "DiscordBot"
+  },
+  "Robomotion.DocumentProcessor": {
+    "path": "DocumentProcessor"
+  },
+  "Robomotion.Docusign": {
+    "path": "Docusign"
+  },
+  "Robomotion.DOMParser": {
+    "path": "DOMParser"
+  },
+  "Robomotion.Dropbox": {
+    "path": "Dropbox"
+  },
+  "Robomotion.Dropcontact": {
+    "path": "Dropcontact"
+  },
+  "Robomotion.ElevenLabsAI": {
+    "path": "ElevenLabsAI"
+  },
+  "Robomotion.EmailValidator": {
+    "path": "EmailValidator"
+  },
+  "Robomotion.Encoding": {
+    "path": "Encoding"
+  },
+  "Robomotion.Ethereum": {
+    "path": "Ethereum"
+  },
+  "Robomotion.Excel365": {
+    "path": "Excel365"
+  },
+  "Robomotion.FFmpeg": {
+    "path": "FFmpeg"
+  },
+  "Robomotion.FineReader": {
+    "path": "FineReader"
+  },
+  "Robomotion.Flexicapture": {
+    "path": "Flexicapture"
+  },
+  "Robomotion.GateIO": {
+    "path": "GateIO"
+  },
+  "Robomotion.Giphy": {
+    "path": "Giphy"
+  },
+  "Robomotion.Gmail": {
+    "path": "Gmail"
+  },
+  "Robomotion.GoogleCalendar": {
+    "path": "GoogleCalendar"
+  },
+  "Robomotion.GoogleDialogflow": {
+    "path": "GoogleDialogflow"
+  },
+  "Robomotion.GoogleDocs": {
+    "path": "GoogleDocs"
+  },
+  "Robomotion.GoogleDocumentAI": {
+    "path": "GoogleDocumentAI"
+  },
+  "Robomotion.GoogleDrive": {
+    "path": "GoogleDrive"
+  },
+  "Robomotion.GoogleForms": {
+    "path": "GoogleForms"
+  },
+  "Robomotion.GoogleGemini": {
+    "path": "GoogleGemini"
+  },
+  "Robomotion.GoogleLanguage": {
+    "path": "GoogleLanguage"
+  },
+  "Robomotion.GoogleMaps": {
+    "path": "GoogleMaps"
+  },
+  "Robomotion.GoogleSheets": {
+    "path": "GoogleSheets"
+  },
+  "Robomotion.GoogleSlides": {
+    "path": "GoogleSlides"
+  },
+  "Robomotion.GoogleSpeech": {
+    "path": "GoogleSpeech"
+  },
+  "Robomotion.GoogleStorage": {
+    "path": "GoogleStorage"
+  },
+  "Robomotion.GoogleTranslate": {
+    "path": "GoogleTranslate"
+  },
+  "Robomotion.GoogleTrends": {
+    "path": "GoogleTrends"
+  },
+  "Robomotion.GoogleVision": {
+    "path": "GoogleVision"
+  },
+  "Robomotion.Grule": {
+    "path": "Grule"
+  },
+  "Robomotion.HubSpot": {
+    "path": "HubSpot"
+  },
+  "Robomotion.ImageAutomation": {
+    "path": "ImageAutomation"
+  },
+  "Robomotion.ImageProcessing": {
+    "path": "ImageProcessing"
+  },
+  "Robomotion.Instagram": {
+    "path": "Instagram"
+  },
+  "Robomotion.JavaAutomation": {
+    "path": "JavaAutomation"
+  },
+  "Robomotion.Jira": {
+    "path": "Jira"
+  },
+  "Robomotion.JSON": {
+    "path": "JSON"
+  },
+  "Robomotion.KeywordAnalysis": {
+    "path": "KeywordAnalysis"
+  },
+  "Robomotion.Lemlist": {
+    "path": "Lemlist"
+  },
+  "Robomotion.LeonardoAI": {
+    "path": "LeonardoAI"
+  },
+  "Robomotion.Markdown": {
+    "path": "Markdown"
+  },
+  "Robomotion.Mautic": {
+    "path": "Mautic"
+  },
+  "Robomotion.MCP": {
+    "path": "MCP"
+  },
+  "Robomotion.MemoryQueue": {
+    "path": "MemoryQueue"
+  },
+  "Robomotion.Microsoft365Mail": {
+    "path": "Microsoft365Mail"
+  },
+  "Robomotion.MicrosoftExcel": {
+    "path": "MicrosoftExcel"
+  },
+  "Robomotion.MicrosoftExchangeMail": {
+    "path": "MicrosoftExchangeMail"
+  },
+  "Robomotion.MicrosoftGraph": {
+    "path": "MicrosoftGraph"
+  },
+  "Robomotion.MicrosoftOutlook": {
+    "path": "MicrosoftOutlook"
+  },
+  "Robomotion.MicrosoftTeams": {
+    "path": "MicrosoftTeams"
+  },
+  "Robomotion.MicrosoftWord": {
+    "path": "MicrosoftWord"
+  },
+  "Robomotion.MimeTools": {
+    "path": "MimeTools"
+  },
+  "Robomotion.MongoDB": {
+    "path": "MongoDB"
+  },
+  "Robomotion.Monitoring": {
+    "path": "Monitoring"
+  },
+  "Robomotion.MSSQL": {
+    "path": "MSSQL"
+  },
+  "Robomotion.MySQL": {
+    "path": "MySQL"
+  },
+  "Robomotion.NocoDB": {
+    "path": "NocoDB"
+  },
+  "Robomotion.Notion": {
+    "path": "Notion"
+  },
+  "Robomotion.Number": {
+    "path": "Number"
+  },
+  "Robomotion.Oauth2": {
+    "path": "Oauth2"
+  },
+  "Robomotion.Object": {
+    "path": "Object"
+  },
+  "Robomotion.Odoo": {
+    "path": "Odoo"
+  },
+  "Robomotion.Ollama": {
+    "path": "Ollama"
+  },
+  "Robomotion.OneDrive365": {
+    "path": "OneDrive365"
+  },
+  "Robomotion.OneNote365": {
+    "path": "OneNote365"
+  },
+  "Robomotion.OpenAI": {
+    "path": "OpenAI"
+  },
+  "Robomotion.OpenRouter": {
+    "path": "OpenRouter"
+  },
+  "Robomotion.OpenWeather": {
+    "path": "OpenWeather"
+  },
+  "Robomotion.Oracle": {
+    "path": "Oracle"
+  },
+  "Robomotion.Outlook365": {
+    "path": "Outlook365"
+  },
+  "Robomotion.Pandas": {
+    "path": "Pandas"
+  },
+  "Robomotion.PCloud": {
+    "path": "PCloud"
+  },
+  "Robomotion.PDFBox": {
+    "path": "PDFBox"
+  },
+  "Robomotion.PDFProcessor": {
+    "path": "PDFProcessor"
+  },
+  "Robomotion.Perplexity": {
+    "path": "Perplexity"
+  },
+  "Robomotion.Pinecone": {
+    "path": "Pinecone"
+  },
+  "Robomotion.Pipedrive": {
+    "path": "Pipedrive"
+  },
+  "Robomotion.PostgreSQL": {
+    "path": "PostgreSQL"
+  },
+  "Robomotion.PowerPoint365": {
+    "path": "PowerPoint365"
+  },
+  "Robomotion.Qdrant": {
+    "path": "Qdrant"
+  },
+  "Robomotion.QuestDB": {
+    "path": "QuestDB"
+  },
+  "Robomotion.RabbitMQ": {
+    "path": "RabbitMQ"
+  },
+  "Robomotion.Redis": {
+    "path": "Redis"
+  },
+  "Robomotion.ReplicateAI": {
+    "path": "ReplicateAI"
+  },
+  "Robomotion.Rundeck": {
+    "path": "Rundeck"
+  },
+  "Robomotion.SeaTable": {
+    "path": "SeaTable"
+  },
+  "Robomotion.Sentry": {
+    "path": "Sentry"
+  },
+  "Robomotion.SERP": {
+    "path": "SERP"
+  },
+  "Robomotion.SharePoint365": {
+    "path": "SharePoint365"
+  },
+  "Robomotion.Slack": {
+    "path": "Slack"
+  },
+  "Robomotion.Splunk": {
+    "path": "Splunk"
+  },
+  "Robomotion.SQLite": {
+    "path": "SQLite"
+  },
+  "Robomotion.SSH": {
+    "path": "SSH"
+  },
+  "Robomotion.StabilityAI": {
+    "path": "StabilityAI"
+  },
+  "Robomotion.String": {
+    "path": "String"
+  },
+  "Robomotion.Subtitles": {
+    "path": "Subtitles"
+  },
+  "Robomotion.Supabase": {
+    "path": "Supabase"
+  },
+  "Robomotion.Teams365": {
+    "path": "Teams365"
+  },
+  "Robomotion.Telegram": {
+    "path": "Telegram"
+  },
+  "Robomotion.TelegramBot": {
+    "path": "TelegramBot"
+  },
+  "Robomotion.Tesseract": {
+    "path": "Tesseract"
+  },
+  "Robomotion.TiDBCloud": {
+    "path": "TiDBCloud"
+  },
+  "Robomotion.TimescaleDB": {
+    "path": "TimescaleDB"
+  },
+  "Robomotion.TravisCI": {
+    "path": "TravisCI"
+  },
+  "Robomotion.Trello": {
+    "path": "Trello"
+  },
+  "Robomotion.Twilio": {
+    "path": "Twilio"
+  },
+  "Robomotion.VertexAI": {
+    "path": "VertexAI"
+  },
+  "Robomotion.Vikunja": {
+    "path": "Vikunja"
+  },
+  "Robomotion.WebAutomation": {
+    "path": "WebAutomation"
+  },
+  "Robomotion.WhatsApp": {
+    "path": "WhatsApp"
+  },
+  "Robomotion.WindowsAutomation": {
+    "path": "WindowsAutomation"
+  },
+  "Robomotion.Word": {
+    "path": "Word"
+  },
+  "Robomotion.Word365": {
+    "path": "Word365"
+  },
+  "Robomotion.Wordpress": {
+    "path": "Wordpress"
+  },
+  "Robomotion.Xano": {
+    "path": "Xano"
+  }
+}

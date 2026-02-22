@@ -80,7 +80,7 @@ export function getNodeDimensions(
     case 'labelNode':
       return { width: 150, height: 36 };
     case 'commentNode':
-      return commentSize ?? { width: 300, height: 150 };
+      return commentSize ?? { width: 300, height: 200 };
     case 'defaultNode':
       return { width: 200, height: 47 };
   }

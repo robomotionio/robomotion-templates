@@ -1,0 +1,32 @@
+{
+  "Robomotion.Monitoring.DNS": {
+    "color": "#355474",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Monitoring.Keyword": {
+    "color": "#355474",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Monitoring.Ping": {
+    "color": "#355474",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Monitoring.Port": {
+    "color": "#355474",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Monitoring.SSL": {
+    "color": "#355474",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.Monitoring.Website": {
+    "color": "#355474",
+    "inputs": 1,
+    "outputs": 1
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "Robomotion.GoogleSheets.OpenSpreadsheet": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.CreateSpreadSheet": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.SwitchSheet": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.AddSheet": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.SetCellValue": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.GetCellValue": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.InsertRow": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.DeleteRow": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.InsertColumn": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.DeleteColumn": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.GetRow": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.GetColumn": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.ClearRange": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.GetRange": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.SetRange": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.AppendRange": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.GetSheets": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.RenameSheet": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.DeleteSheet": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.Trigger": {
+    "color": "#1fa463",
+    "inputs": 0,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.FormatRange": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.FindReplace": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.Append": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.GoogleSheets.Merge": {
+    "color": "#1fa463",
+    "inputs": 1,
+    "outputs": 1
+  }
+}

@@ -20,8 +20,7 @@ body {
 .react-flow__handle-left {
   width: 6px;
   height: 12px;
-  background: #555;
-  border: 1px solid #888;
+  background: #48484f;
   border-radius: 50%;
 }
 
@@ -29,14 +28,13 @@ body {
 .react-flow__handle-bottom {
   width: 8px;
   height: 8px;
-  background: #555;
-  border: 1px solid #888;
+  background: #48484f;
   border-radius: 50%;
 }
 
 .react-flow__edge-path {
-  stroke: #666;
-  stroke-width: 2;
+  stroke: #374151;
+  stroke-width: 1.5;
 }
 
 /* Default node — 200×47, icon panel left */
@@ -47,7 +45,7 @@ body {
   height: 47px;
   background: #18181b;
   border-radius: 6px;
-  border: 1px solid #333;
+  border: 1px solid #27272a;
   overflow: hidden;
   color: white;
   font-size: 11px;
@@ -71,7 +69,7 @@ body {
 }
 
 .node-default .node-subtitle {
-  font-size: 8px;
+  font-size: 7px;
   color: #9CA3AF;
   white-space: nowrap;
   overflow: hidden;
@@ -97,7 +95,7 @@ body {
   height: 36px;
   border-radius: 20px 8px 8px 20px;
   background: #18181b;
-  border: 1px solid #333;
+  border: 1px solid #27272a;
   color: white;
   font-size: 12px;
   font-weight: 500;
@@ -118,9 +116,8 @@ body {
   display: flex;
   align-items: center;
   padding: 0 8px;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.2;
 }
 
 /* Ending node — 160×36, dark bg with colored icon panel on right */
@@ -131,7 +128,7 @@ body {
   height: 36px;
   border-radius: 8px 20px 20px 8px;
   background: #18181b;
-  border: 1px solid #333;
+  border: 1px solid #27272a;
   color: white;
   font-size: 12px;
   font-weight: 500;
@@ -152,9 +149,8 @@ body {
   display: flex;
   align-items: center;
   padding: 0 8px;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.2;
 }
 
 /* Box node — 80×74, centered vertical layout, neutral bg with colored icon */
@@ -167,7 +163,7 @@ body {
   min-height: 74px;
   border-radius: 6px;
   background: #18181b;
-  border: 1px solid #333;
+  border: 1px solid #27272a;
   color: white;
   font-size: 10px;
   font-weight: 500;
@@ -198,7 +194,7 @@ body {
   height: 36px;
   border-radius: 8px;
   background: #18181b;
-  border: 1px solid #333;
+  border: 1px solid #27272a;
   color: white;
   font-size: 12px;
   font-weight: 500;
@@ -219,15 +215,13 @@ body {
   display: flex;
   align-items: center;
   padding: 0 8px;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.2;
 }
 
 /* Comment node — variable size, markdown content */
 .node-comment {
-  background: rgba(30, 30, 34, 0.85);
-  border: 1px solid #374151;
+  border: 2px solid;
   border-radius: 8px;
   padding: 16px;
   color: #D1D5DB;

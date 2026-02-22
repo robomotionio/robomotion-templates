@@ -1,0 +1,102 @@
+{
+  "Robomotion.ChatAssistant.ChatIn": {
+    "color": "#F56040",
+    "inputs": 0,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.ChatOut": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 0
+  },
+  "Robomotion.ChatAssistant.Header": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.Text": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.Divider": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.ButtonGroup": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.Dropdown": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.Checkbox": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.RadioButton": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.Datepicker": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.Textbox": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.Image": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.Video": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.DownloadFile": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.UploadFile": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.StreamingText": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.Error": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.Auth": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.CustomWidget": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.ChatAssistant.Progress": {
+    "color": "#F56040",
+    "inputs": 1,
+    "outputs": 1
+  }
+}

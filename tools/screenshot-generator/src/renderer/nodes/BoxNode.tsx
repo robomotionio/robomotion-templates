@@ -25,14 +25,18 @@ export function BoxNode({ id, data }: NodeProps) {
         <LucideIcon name={icon || 'package'} size={24} color={color} />
       </div>
       <div className="node-label">{label}</div>
-      {outputCount > 0 && Array.from({ length: outputCount }, (_, i) => (
-        <Handle
-          key={i}
-          type="source"
-          position={i === 0 ? Position.Right : Position.Bottom}
-          id={`${id}-source-${i + 1}`}
-        />
-      ))}
+      {outputCount > 0 && Array.from({ length: outputCount }, (_, i) => {
+        const spacing = 100 / (outputCount + 1);
+        return (
+          <Handle
+            key={i}
+            type="source"
+            position={Position.Right}
+            id={`${id}-source-${i + 1}`}
+            style={{ top: `${spacing * (i + 1)}%` }}
+          />
+        );
+      })}
     </div>
   );
 }

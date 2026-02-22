@@ -77,7 +77,7 @@ async function main() {
     }
 
     try {
-      const flow = parseTemplate(templateDir);
+      const flow = await parseTemplate(templateDir);
       const outPath = outputDir
         ? join(resolve(outputDir), `${templateName}.png`)
         : join(templateDir, 'screenshot.png');

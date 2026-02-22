@@ -1,0 +1,27 @@
+{
+  "Robomotion.MemoryQueue.Clear": {
+    "color": "#202c3a",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.MemoryQueue.Create": {
+    "color": "#202c3a",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.MemoryQueue.Delete": {
+    "color": "#202c3a",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.MemoryQueue.Enqueue": {
+    "color": "#202c3a",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.MemoryQueue.Dequeue": {
+    "color": "#202c3a",
+    "inputs": 1,
+    "outputs": 1
+  }
+}

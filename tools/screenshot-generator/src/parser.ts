@@ -6,8 +6,9 @@
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import { classifyNode, getNodeDimensions, type NodeType } from './node-classifier.js';
-import { resolveColor } from './color-map.js';
+import { resolveColor, setPspecColors } from './color-map.js';
 import { getPspecDefaults } from './pspec-defaults.js';
+import { loadPspecsForDependencies, type Dependency, type PspecNodeData } from './pspec-loader.js';
 
 export interface FlowNode {
   id: string;
@@ -21,6 +22,8 @@ export interface FlowNode {
   subtitle: string;
   /** For comment nodes: the markdown text */
   commentText?: string;
+  /** For comment nodes: the background/border color */
+  commentColor?: string;
   /** Number of input ports (0 for inject/trigger nodes) */
   inputs: number;
   /** Number of output ports (default 1, can be more for Switch/Function) */
@@ -37,11 +40,18 @@ export interface FlowEdge {
   targetHandle: string;
 }
 
+export interface CameraPosition {
+  x: number;
+  y: number;
+  zoom: number;
+}
+
 export interface ParsedFlow {
   flowId: string;
   name: string;
   nodes: FlowNode[];
   edges: FlowEdge[];
+  cameraPosition?: CameraPosition;
 }
 
 interface RawNode {
@@ -57,6 +67,7 @@ interface DesignerData {
   positions: Record<string, { x: number; y: number }>;
   nodeColors: Record<string, string>;
   commentExtras: Record<string, { colorIndex?: number; size?: { width: number; height: number } }>;
+  cameraPositions: Record<string, CameraPosition>;
 }
 
 /** Extract the optText content from a node call string */
@@ -88,6 +99,17 @@ function extractConditionCount(nodeCallStr: string): number | undefined {
   return items ? items.length : undefined;
 }
 
+/** Parse f.addDependency() calls from main.ts */
+function parseDependencies(content: string): Dependency[] {
+  const deps: Dependency[] = [];
+  const depRegex = /f\.addDependency\(\s*'([^']+)'\s*,\s*'([^']+)'\s*\)/g;
+  let match: RegExpExecArray | null;
+  while ((match = depRegex.exec(content)) !== null) {
+    deps.push({ namespace: match[1], version: match[2] });
+  }
+  return deps;
+}
+
 /**
  * Parse main.ts to extract nodes and edges.
  * Handles:
@@ -100,15 +122,9 @@ export function parseMainTs(content: string): { nodes: RawNode[]; chainEdges: Fl
   const chainEdges: FlowEdge[] = [];
   const explicitEdges: FlowEdge[] = [];
 
-  // Extract flow name
-  // const flowNameMatch = content.match(/flow\.create\('[^']+',\s*'([^']+)'/);
-
   // Strategy: find all f.node() and .then() calls, tracking chains
   // We need to find entire node call blocks including their options
 
-  // First, find all f.node() calls with their full content up to the closing paren
-  // We'll work line by line to handle multiline content
-  const lines = content.split('\n');
   const fullContent = content;
 
   // Find f.node() calls — these start new chains
@@ -230,11 +246,12 @@ function extractCallBlock(content: string, startIdx: number): string {
   return content.slice(startIdx);
 }
 
-/** Parse main.designer.ts to extract positions, colors, and comment extras */
+/** Parse main.designer.ts to extract positions, colors, comment extras, and camera positions */
 export function parseDesignerTs(content: string): DesignerData {
   const positions: Record<string, { x: number; y: number }> = {};
   const nodeColors: Record<string, string> = {};
   const commentExtras: Record<string, { colorIndex?: number; size?: { width: number; height: number } }> = {};
+  const cameraPositions: Record<string, CameraPosition> = {};
 
   // Extract positions
   const posRegex = /'([a-f0-9]+)':\s*\{\s*x:\s*(-?\d+(?:\.\d+)?)\s*,\s*y:\s*(-?\d+(?:\.\d+)?)\s*\}/g;
@@ -277,7 +294,21 @@ export function parseDesignerTs(content: string): DesignerData {
     }
   }
 
-  return { positions, nodeColors, commentExtras };
+  // Extract cameraPositions
+  const cameraSection = extractSection(content, 'cameraPositions');
+  if (cameraSection) {
+    const camRegex = /'([^']+)':\s*\{\s*x:\s*(-?\d+(?:\.\d+)?)\s*,\s*y:\s*(-?\d+(?:\.\d+)?)\s*,\s*zoom:\s*(\d+(?:\.\d+)?)\s*\}/g;
+    let match: RegExpExecArray | null;
+    while ((match = camRegex.exec(cameraSection)) !== null) {
+      cameraPositions[match[1]] = {
+        x: parseFloat(match[2]),
+        y: parseFloat(match[3]),
+        zoom: parseFloat(match[4]),
+      };
+    }
+  }
+
+  return { positions, nodeColors, commentExtras, cameraPositions };
 }
 
 /** Extract a section by key name from the designer export */
@@ -305,30 +336,76 @@ function extractSection(content: string, key: string): string | null {
 function buildSubtitle(namespace: string): string {
   const parts = namespace.split('.');
   if (parts.length <= 2) return namespace;
-  // E.g. "Robomotion.GoogleSheets.SetCellValue" → "GoogleSheets → SetCellValue"
-  // E.g. "Core.Programming.Function" → "Programming → Function"
   const pkg = parts[parts.length - 2];
   const action = parts[parts.length - 1];
   return `${pkg} → ${action}`;
 }
 
-/** Comment color palette by index (matching the designer) */
+/** Comment color palette by index (dark-mode, matching the designer themes.css) */
 const COMMENT_COLORS: Record<number, string> = {
-  0: '#CCCCCC',  // light gray
-  1: '#FBE364',  // yellow
-  2: '#FBE364',  // yellow (alt)
-  3: '#A8D5BA',  // green
-  4: '#4A5568',  // dark gray
-  5: '#E2B6CF',  // pink
-  6: '#4A5568',  // dark gray (alt)
-  7: '#B8C9E8',  // blue
-  8: '#F5C6AA',  // peach
+  0: 'hsl(240, 6%, 20%)',   // Dark Gray (default)
+  1: 'hsl(210, 6%, 25%)',   // Slate
+  2: 'hsl(213, 30%, 25%)',  // Blue
+  3: 'hsl(142, 30%, 25%)',  // Green
+  4: 'hsl(250, 30%, 25%)',  // Purple
+  5: 'hsl(327, 30%, 25%)',  // Pink
+  6: 'hsl(0, 30%, 25%)',    // Red
+  7: 'hsl(48, 30%, 25%)',   // Amber
+  8: 'hsl(226, 30%, 25%)',  // Indigo
 };
+
+/** Build a FlowNode from a raw node, using pspec data when available */
+function buildFlowNode(
+  raw: RawNode,
+  designer: DesignerData,
+  pspecData: Map<string, PspecNodeData>,
+): FlowNode {
+  const nodeType = classifyNode(raw.namespace);
+  const commentExtra = designer.commentExtras[raw.id];
+  const commentSize = commentExtra?.size;
+  const position = designer.positions[raw.id] ?? { x: 0, y: 0 };
+  const color = resolveColor(raw.id, raw.namespace, designer.nodeColors);
+  const pspec = getPspecDefaults(raw.namespace);
+  const pspecNode = pspecData.get(raw.namespace);
+
+  // Determine output count: explicit in code > pspec download > pspec defaults
+  let outputs = raw.outputs ?? pspecNode?.outputs ?? pspec.outputs;
+  if (raw.conditionCount) {
+    outputs = raw.conditionCount;
+  }
+  if (raw.namespace === 'Core.Programming.ForEach') outputs = 2;
+  if (raw.namespace === 'Core.Flow.ForkBranch') outputs = 2;
+
+  const inputs = pspecNode?.inputs ?? pspec.inputs;
+
+  const portCount = outputs + inputs;
+  const dimensions = getNodeDimensions(nodeType, commentSize, portCount);
+
+  // Resolve comment color from palette
+  const commentColorIndex = commentExtra?.colorIndex ?? 0;
+  const commentColor = nodeType === 'commentNode' ? (COMMENT_COLORS[commentColorIndex] ?? COMMENT_COLORS[0]) : undefined;
+
+  return {
+    id: raw.id,
+    namespace: raw.namespace,
+    name: raw.name,
+    nodeType,
+    color,
+    position,
+    dimensions,
+    subtitle: buildSubtitle(raw.namespace),
+    commentText: raw.optText,
+    commentColor,
+    inputs,
+    outputs,
+    icon: pspec.icon,
+  };
+}
 
 /**
  * Parse a full template directory and return combined flow data.
  */
-export function parseTemplate(templateDir: string): ParsedFlow {
+export async function parseTemplate(templateDir: string): Promise<ParsedFlow> {
   const mainTsPath = join(templateDir, 'main.ts');
   const designerTsPath = join(templateDir, 'main.designer.ts');
 
@@ -345,51 +422,36 @@ export function parseTemplate(templateDir: string): ParsedFlow {
   const { nodes: rawNodes, chainEdges, explicitEdges } = parseMainTs(mainContent);
   const designer = parseDesignerTs(designerContent);
 
+  // Parse dependencies and download pspec data
+  const deps = parseDependencies(mainContent);
+  let pspecData = new Map<string, PspecNodeData>();
+  if (deps.length > 0) {
+    try {
+      pspecData = await loadPspecsForDependencies(deps);
+      // Set pspec colors for the color resolver
+      const colorMap: Record<string, string> = {};
+      for (const [ns, data] of pspecData) {
+        colorMap[ns] = data.color;
+      }
+      setPspecColors(colorMap);
+    } catch (err) {
+      console.warn(`    [pspec] Failed to load pspec data: ${err instanceof Error ? err.message : err}`);
+    }
+  } else {
+    // No deps — clear any stale pspec colors from previous template
+    setPspecColors({});
+  }
+
   // Extract flow ID and name
   const flowIdMatch = mainContent.match(/flow\.create\(\s*'([^']+)'\s*,\s*'([^']+)'/);
   const flowId = flowIdMatch?.[1] ?? '';
   const flowName = flowIdMatch?.[2] ?? '';
 
+  // Get camera position for this flow
+  const cameraPosition = designer.cameraPositions[flowId];
+
   // Build final nodes
-  const nodes: FlowNode[] = rawNodes.map(raw => {
-    const nodeType = classifyNode(raw.namespace);
-    const commentExtra = designer.commentExtras[raw.id];
-    const commentSize = commentExtra?.size;
-    const position = designer.positions[raw.id] ?? { x: 0, y: 0 };
-    const color = resolveColor(raw.id, raw.namespace, designer.nodeColors);
-    const pspec = getPspecDefaults(raw.namespace);
-
-    // Determine output count
-    let outputs = raw.outputs ?? pspec.outputs;
-    if (raw.conditionCount) {
-      outputs = raw.conditionCount;
-    }
-    // ForEach has 2 outputs (iterate + complete)
-    if (raw.namespace === 'Core.Programming.ForEach') outputs = 2;
-    // ForkBranch has 2 outputs (branch + complete)
-    if (raw.namespace === 'Core.Flow.ForkBranch') outputs = 2;
-
-    const inputs = pspec.inputs;
-
-    // Port count for dynamic height calculation (inputs + outputs)
-    const portCount = outputs + inputs;
-    const dimensions = getNodeDimensions(nodeType, commentSize, portCount);
-
-    return {
-      id: raw.id,
-      namespace: raw.namespace,
-      name: raw.name,
-      nodeType,
-      color,
-      position,
-      dimensions,
-      subtitle: buildSubtitle(raw.namespace),
-      commentText: raw.optText,
-      inputs,
-      outputs,
-      icon: pspec.icon,
-    };
-  });
+  const nodes: FlowNode[] = rawNodes.map(raw => buildFlowNode(raw, designer, pspecData));
 
   // Combine edges, deduplicating
   const edgeMap = new Map<string, FlowEdge>();
@@ -401,8 +463,6 @@ export function parseTemplate(templateDir: string): ParsedFlow {
   // Also parse subflows if they exist
   const subflowsDir = join(templateDir, 'subflows');
   if (existsSync(subflowsDir)) {
-    // We'll include subflow nodes/edges in the main rendering
-    // by finding all .ts files (not .designer.ts) in subflows/
     const subflowFiles = readdirSyncSafe(subflowsDir)
       .filter(f => f.endsWith('.ts') && !f.endsWith('.designer.ts'));
 
@@ -420,36 +480,7 @@ export function parseTemplate(templateDir: string): ParsedFlow {
       const subDesigner = parseDesignerTs(subDesignerContent);
 
       for (const raw of subParsed.nodes) {
-        const nodeType = classifyNode(raw.namespace);
-        const commentExtra = subDesigner.commentExtras[raw.id];
-        const commentSize = commentExtra?.size;
-        const position = subDesigner.positions[raw.id] ?? { x: 0, y: 0 };
-        const color = resolveColor(raw.id, raw.namespace, subDesigner.nodeColors);
-        const pspec = getPspecDefaults(raw.namespace);
-
-        let outputs = raw.outputs ?? pspec.outputs;
-        if (raw.conditionCount) outputs = raw.conditionCount;
-        if (raw.namespace === 'Core.Programming.ForEach') outputs = 2;
-        if (raw.namespace === 'Core.Flow.ForkBranch') outputs = 2;
-
-        const inputs = pspec.inputs;
-        const portCount = outputs + inputs;
-        const dimensions = getNodeDimensions(nodeType, commentSize, portCount);
-
-        nodes.push({
-          id: raw.id,
-          namespace: raw.namespace,
-          name: raw.name,
-          nodeType,
-          color,
-          position,
-          dimensions,
-          subtitle: buildSubtitle(raw.namespace),
-          commentText: raw.optText,
-          inputs,
-          outputs,
-          icon: pspec.icon,
-        });
+        nodes.push(buildFlowNode(raw, subDesigner, pspecData));
       }
 
       for (const edge of [...subParsed.chainEdges, ...subParsed.explicitEdges]) {
@@ -464,6 +495,7 @@ export function parseTemplate(templateDir: string): ParsedFlow {
     name: flowName,
     nodes,
     edges: Array.from(edgeMap.values()),
+    cameraPosition,
   };
 }
 

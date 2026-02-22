@@ -77,6 +77,7 @@ function toReactFlowData(flow: ParsedFlow): { nodes: unknown[]; edges: unknown[]
       outputs: n.outputs,
       icon: n.icon,
       commentText: n.commentText ?? '',
+      commentColor: n.commentColor,
       width: n.dimensions.width,
       height: n.dimensions.height,
     },
@@ -93,7 +94,7 @@ function toReactFlowData(flow: ParsedFlow): { nodes: unknown[]; edges: unknown[]
     sourceHandle: e.sourceHandle,
     targetHandle: e.targetHandle,
     type: 'default',
-    style: { stroke: '#666', strokeWidth: 2 },
+    style: { stroke: '#374151', strokeWidth: 1.5 },
   }));
 
   return { nodes, edges };

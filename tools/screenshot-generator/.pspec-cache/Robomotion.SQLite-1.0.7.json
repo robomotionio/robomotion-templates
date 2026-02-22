@@ -1,0 +1,47 @@
+{
+  "Robomotion.SQLite.Commit": {
+    "color": "#003b57",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.SQLite.Connect": {
+    "color": "#003b57",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.SQLite.Create": {
+    "color": "#003b57",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.SQLite.Disconnect": {
+    "color": "#003b57",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.SQLite.Export": {
+    "color": "#003b57",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.SQLite.Insert": {
+    "color": "#003b57",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.SQLite.NonQuery": {
+    "color": "#003b57",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.SQLite.Query": {
+    "color": "#003b57",
+    "inputs": 1,
+    "outputs": 1
+  },
+  "Robomotion.SQLite.Start": {
+    "color": "#003b57",
+    "inputs": 1,
+    "outputs": 1
+  }
+}
