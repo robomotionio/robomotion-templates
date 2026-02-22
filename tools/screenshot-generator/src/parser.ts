@@ -279,7 +279,7 @@ export function parseDesignerTs(content: string): DesignerData {
   const commentSection = extractSection(content, 'commentExtras');
   if (commentSection) {
     // Match each entry: 'id': { colorIndex: N, size: { width: W, height: H } }
-    const entryRegex = /'([a-f0-9]+)':\s*\{([^}]*(?:\{[^}]*\}[^}]*)*)\}/g;
+    const entryRegex = /'([a-f0-9]+)':\s*\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}/g;
     let match: RegExpExecArray | null;
     while ((match = entryRegex.exec(commentSection)) !== null) {
       const id = match[1];
