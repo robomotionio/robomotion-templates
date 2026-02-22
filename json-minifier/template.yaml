@@ -1,9 +1,11 @@
-name: Json Minifier
+name: JSON Minifier
 slug: json-minifier
 summary: >-
-  This template uses *Programming* and *Dialog* nodes to minimize a given JSON object.
+  Minimizes a given JSON object by converting it to a compact single-line string
+  with no extra whitespace. The result is printed to the Output Panel via a
+  Debug node.
 category: Data Processing
-tags: [json, formatting, file-processing]
+tags: [json, formatting, minify, file-processing]
 author: Robomotion
 created: "2025-12-07"
 updated: "2025-12-07"

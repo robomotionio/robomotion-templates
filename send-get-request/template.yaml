@@ -1,9 +1,11 @@
-name: Send Get Request
+name: Send GET Request
 slug: send-get-request
 summary: >-
-  This template sends a GET request to a sample service and displays its response.
+  Sends an HTTP GET request to a sample service and displays the response
+  in a message box. Defaults to querying https://ifconfig.me for your
+  public IP address.
 category: Networking
-tags: [http, get, request]
+tags: [http, get, request, api]
 author: Robomotion
 created: "2025-12-07"
 updated: "2025-12-07"

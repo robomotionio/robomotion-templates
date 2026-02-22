@@ -1,9 +1,11 @@
 name: Download File From Web
 slug: download-file-from-web
 summary: >-
-  This template downloads file from web to your computer
+  Downloads a file from a given URL and saves it to a specified path on your
+  computer. Displays a confirmation message with the download path upon
+  completion.
 category: File Operations
-tags: [download, http, file]
+tags: [download, http, file, web]
 author: Robomotion
 created: "2025-12-07"
 updated: "2025-12-07"

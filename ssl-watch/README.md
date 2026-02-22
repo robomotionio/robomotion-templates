@@ -1,33 +1,17 @@
 # SSL Watch
 
-Monitors domain SSL certificates using Robomotion's Monitoring package. Checks each domain, calculates days until expiration, and updates a Google Sheets file automatically.
+Monitors SSL certificates for a list of domains stored in Google Sheets and writes expiration data back to the same spreadsheet.
 
 ## How It Works
 
-1. **Start** — The flow is triggered manually via the Inject node.
-2. **Open Spreadsheet** — Opens a Google Sheets document containing a list of domains.
-3. **Get Range** — Reads the domain list from the spreadsheet with headers.
-4. **For Each** — Iterates over each row (domain) in the spreadsheet.
-5. **SSL Check** — Uses the Monitoring package to check the SSL certificate for each domain.
-6. **Set Cell Coord** — Calculates the target cell coordinates for writing results.
-7. **Set Expires In Value** — Writes the number of days until certificate expiration.
-8. **Set Valid Value** — Writes whether the certificate is currently valid.
-9. **Loop** — Goes back to process the next domain until all are checked.
+The flow opens a Google Sheets document containing domain names in column A (starting at row 2), iterates over each domain, checks its SSL certificate using the Monitoring package, and writes the days until expiration (column B) and validity status (column C) back into the spreadsheet.
 
-## Dependencies
+## Prerequisites
 
-| Package | Version |
-|---|---|
-| Robomotion.Monitoring | 0.4.1 |
-| Robomotion.GoogleSheets | 1.3.0 |
-
-## Setup
-
-1. Import the template into your Robomotion workspace.
-2. Create a Google Sheets document with a column of domains (column A, starting at row 2).
-3. Configure the Google Sheets credential in the Open Spreadsheet node.
-4. Update the spreadsheet URL in the Open Spreadsheet node.
-5. Run the flow.
+- Install **Robomotion.Monitoring** and **Robomotion.GoogleSheets** packages
+- Configure a Google Sheets credential in the **Open Spreadsheet** node
+- Create a Google Sheet with domain names in column A starting at row 2
+- Update the spreadsheet URL in the **Open Spreadsheet** node
 
 ## Video Tutorial
 

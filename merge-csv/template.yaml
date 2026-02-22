@@ -1,7 +1,9 @@
-name: Merge Csv
+name: Merge CSV
 slug: merge-csv
 summary: >-
-  This template uses CSV and File System nodes to merge a group of .csv files
+  Merges a group of CSV files from a directory into a single CSV file. Uses
+  subflows to read individual CSV files and combine their contents with a
+  configurable separator.
 category: Data Processing
 tags: [csv, merge, file-processing]
 author: Robomotion

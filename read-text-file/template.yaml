@@ -1,7 +1,8 @@
 name: Read Text File
 slug: read-text-file
 summary: >-
-  This template uses the *FileSystem.ReadFile* node to read the content of a text file from your file system.
+  Reads the content of a text file from your file system using the
+  FileSystem.ReadFile node and displays it in a message box.
 category: File Operations
 tags: [file, read, text]
 author: Robomotion

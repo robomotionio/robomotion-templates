@@ -1,9 +1,11 @@
-name: Bmi Calculator
+name: BMI Calculator
 slug: bmi-calculator
 summary: >-
-  This template uses *Dialog* and *Function* nodes to calculate Body Mass Index (BMI).
-category: Data Processing
-tags: [calculator, dialog, example]
+  Calculates Body Mass Index (BMI) using interactive Dialog and Function nodes.
+  Prompts the user for weight and height, computes the BMI value, and displays
+  the result.
+category: Other
+tags: [bmi, calculator, dialog, example]
 author: Robomotion
 created: "2025-12-07"
 updated: "2025-12-07"

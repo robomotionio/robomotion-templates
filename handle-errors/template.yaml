@@ -1,9 +1,11 @@
 name: Handle Errors
 slug: handle-errors
 summary: >-
-  This template shows how to throw errors, and handle them
+  Shows how to throw and handle errors in a Robomotion flow. Prompts the user
+  for a number greater than 100, validates the input, and demonstrates catching
+  specific error types with appropriate feedback.
 category: Error Handling
-tags: [error-handling, catch, example]
+tags: [error-handling, catch, throw, validation]
 author: Robomotion
 created: "2025-12-07"
 updated: "2025-12-07"

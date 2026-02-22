@@ -1,7 +1,8 @@
 name: Read From Clipboard
 slug: read-from-clipboard
 summary: >-
-  This template reads the current clipboard content and displays it in a message box.
+  Reads the current clipboard content and displays it in a message box.
+  Includes error handling for non-text clipboard content.
 category: System Utilities
 tags: [clipboard, read, system]
 author: Robomotion

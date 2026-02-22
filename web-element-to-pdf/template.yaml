@@ -1,9 +1,10 @@
-name: Web Element To Pdf
+name: Web Element To PDF
 slug: web-element-to-pdf
 summary: >-
-  This template converts any web element to a PDF file.
-category: Web Scraping
-tags: [browser, pdf, web]
+  Converts any web element to a PDF file by injecting the html2pdf.js library
+  into the page and rendering the selected element based on its XPath selector.
+category: Productivity
+tags: [browser, pdf, html, web]
 author: Robomotion
 created: "2025-12-07"
 updated: "2025-12-07"

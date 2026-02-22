@@ -1,7 +1,8 @@
 name: Screen Capture
 slug: screen-capture
 summary: >-
-  This template uses the *Browser > Screenshot* node to take a screenshot of a web page.
+  Captures a screenshot of a web page by opening the specified URL in a
+  browser and saving the screenshot to a given file path.
 category: Web Scraping
 tags: [browser, screenshot, automation]
 author: Robomotion

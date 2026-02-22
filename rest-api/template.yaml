@@ -1,7 +1,8 @@
-name: Rest Api
+name: REST API
 slug: rest-api
 summary: >-
-  This template uses the *Net > Http* nodes to create a REST API. The default robot runs on `http://localhost:9090`
+  Creates a simple REST API server with GET and POST endpoints using the
+  Net Http nodes. The default robot runs on http://localhost:9090.
 category: Networking
 tags: [rest, api, http, server]
 author: Robomotion

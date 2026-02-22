@@ -1,7 +1,8 @@
-name: Duckduckgo Scraper
+name: DuckDuckGo Scraper
 slug: duckduckgo-scraper
 summary: >-
-  Duckduckgo Scraper template for Robomotion automation.
+  Searches DuckDuckGo for a user-provided query and saves the result titles
+  and links to an Excel file.
 category: Web Scraping
 tags: [scraping, search, duckduckgo, browser]
 author: Robomotion
@@ -9,5 +10,5 @@ created: "2025-12-07"
 updated: "2025-12-07"
 screenshot: screenshot.png
 has_subflows: false
-flow_id: 
+flow_id: b1cc3fe3-241e-40fd-8b75-af47a38b6b9b
 schema_version: 1

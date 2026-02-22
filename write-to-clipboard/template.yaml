@@ -1,9 +1,10 @@
 name: Write To Clipboard
 slug: write-to-clipboard
 summary: >-
-  This template receives a message from the user and copies it to the clipboard.
+  Receives text input from the user via a dialog box and copies it to the
+  system clipboard, then confirms the operation with a message.
 category: System Utilities
-tags: [clipboard, write, system]
+tags: [clipboard, copy, system, dialog]
 author: Robomotion
 created: "2025-12-07"
 updated: "2025-12-07"

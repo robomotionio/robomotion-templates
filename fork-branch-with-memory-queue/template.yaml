@@ -1,9 +1,11 @@
 name: Fork Branch With Memory Queue
 slug: fork-branch-with-memory-queue
 summary: >-
-  When no items remain in the Memory Queue, the Dequeue node throws an exception. We catch this exception and mark the end of the branch's lifecycle using the WG Done node.
+  Demonstrates parallel browser automation using Fork Branch and Memory Queue.
+  Creates multiple concurrent browser instances that dequeue items from a shared
+  queue, navigate to e-commerce websites, and take screenshots simultaneously.
 category: Concurrency
-tags: [parallel, fork, queue, browser]
+tags: [parallel, fork, queue, browser, memory-queue]
 author: Robomotion
 created: "2025-12-07"
 updated: "2025-12-07"

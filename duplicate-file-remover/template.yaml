@@ -1,9 +1,11 @@
 name: Duplicate File Remover
 slug: duplicate-file-remover
 summary: >-
-  duplicated files in a given directory in your file system.
+  Removes duplicate files in a given directory by computing SHA-256 hashes
+  for each file and deleting any file whose hash has already been seen. Uses
+  the Cryptography package for hashing and File System nodes for deletion.
 category: File Operations
-tags: [file, hash, duplicate, cleanup]
+tags: [file, hash, duplicate, cleanup, cryptography]
 author: Robomotion
 created: "2025-12-07"
 updated: "2025-12-07"

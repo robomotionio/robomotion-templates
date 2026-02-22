@@ -1,9 +1,11 @@
 name: Translator
 slug: translator
 summary: >-
-  This template uses *Browser*, *File System* and *Dialog* nodes to translate text from one language to another using Google Translate. The text can be provided directly in the configuration or read from a text file. The translation result can be di...
-category: AI & Agents
-tags: [translation, ai, llm, chat]
+  Translates text from one language to another using Google Translate. Text can
+  be provided directly or read from a file, and the result can be displayed in a
+  dialog or saved to a text file.
+category: Productivity
+tags: [browser, dialog, translation]
 author: Robomotion
 created: "2025-12-07"
 updated: "2025-12-07"
