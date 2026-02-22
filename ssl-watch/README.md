@@ -1,29 +1,26 @@
 # SSL Watch
 
-SSL Watch keeps your domains and SSL certificates under control without manual checks. Powered by Robomotion's Monitoring package and the Google Sheets integration, it retrieves live SSL data for each domain, calculates how many days remain before expiration, and verifies whether the certificate is valid, all automatically.
+SSL Watch is a powerful automation designed to keep your domains and SSL certificates under control without manual checks. Using Robomotion's Monitoring package and its built in SSL node, the automation retrieves live SSL data for each domain, calculates how many days remain before expiration, and verifies whether the certificate is valid.
 
-Instead of logging into each domain provider or running manual certificate checks, you maintain a single Google Sheet with your domains and let the robot update the status for you on every run.
+## Watch the video
 
-## What SSL Watch can do
+👉 https://www.youtube.com/watch?v=G2Cp1nW5Plc
 
-- Read a list of domains from a Google Sheets spreadsheet
-- Check SSL certificate expiration dates and validity for each domain
-- Calculate the number of days remaining before each certificate expires
-- Update the spreadsheet with Domain, Expires In, and Valid columns automatically
+## What the automation does
 
-## Behind the scenes
-
-The flow reads the Domains column from your Google Sheet and iterates through each entry. For every domain, it uses the SSL node from the Monitoring package to fetch live certificate data, including the expiration date and validity status. A Function node calculates how many days remain until expiration. The results are written back to the spreadsheet, keeping your monitoring sheet always up to date. The entire process runs end to end without manual intervention.
+- Reads a list of domains from Google Sheets
+- Uses the SSL node to check expiration dates and validity
+- Calculates remaining days automatically
+- Updates the spreadsheet with columns for: Domain | Expires In | Valid
+- Runs end to end without manual intervention
 
 ## Integrating with Google Services
 
-This template also demonstrates how to:
+The video also demonstrates how to:
 
 - Create a Google Service Account
 - Store credentials securely using Vault
 - Inject secrets safely into the robot
 - Create and update a Google Sheets file with the Google Sheets package
 
-## Watch the video
-
-https://www.youtube.com/watch?v=G2Cp1nW5Plc
+By treating the Domains column as a list, the robot iterates through each domain, fetches its SSL information, and keeps your monitoring sheet always up to date.
