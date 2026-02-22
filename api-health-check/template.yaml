@@ -1,0 +1,13 @@
+name: Api Health Check
+slug: api-health-check
+summary: >-
+  This template uses the *Net > Http Request* node to test if an endpoint works or not.
+category: System Administration
+tags: [api, health-check, http, monitoring]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 7184ff4b-16c3-47ae-a00e-64adf6253afd
+schema_version: 1

@@ -1,0 +1,13 @@
+name: Content Checker
+slug: content-checker
+summary: >-
+  This template uses the *Browser > Get Value* node to monitor and detect if the content of a webpage has changed.
+category: Web Scraping
+tags: [browser, scraping, content, monitoring]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 43e8bd7a-c8ba-4da4-ad4b-a7657fb4a671
+schema_version: 1

@@ -1,0 +1,13 @@
+name: Duckduckgo Scraper
+slug: duckduckgo-scraper
+summary: >-
+  Duckduckgo Scraper template for Robomotion automation.
+category: Web Scraping
+tags: [scraping, search, duckduckgo, browser]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 
+schema_version: 1

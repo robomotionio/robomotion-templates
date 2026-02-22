@@ -1,0 +1,13 @@
+name: Json Minifier
+slug: json-minifier
+summary: >-
+  This template uses *Programming* and *Dialog* nodes to minimize a given JSON object.
+category: Data Processing
+tags: [json, formatting, file-processing]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: b199d98a-476c-47a3-b3a0-ecc813800591
+schema_version: 1

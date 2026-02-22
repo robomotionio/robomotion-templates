@@ -1,0 +1,20 @@
+name: Domain Inspector
+slug: domain-inspector
+summary: >-
+  an AI Agent that can query live DNS and SSL information using our Monitoring package nodes as a tools.
+category: System Administration
+tags: [dns, ssl, ai, monitoring, chat]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.ChatAssistant
+    version: "1.5.0"
+  - package: Robomotion.Agents
+    version: "0.11.2"
+  - package: Robomotion.Monitoring
+    version: "0.4.1"
+has_subflows: false
+flow_id: cacf4dbd-9b62-4e1d-824a-1c70eb16ccfb
+schema_version: 1

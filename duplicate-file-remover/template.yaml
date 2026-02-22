@@ -1,0 +1,16 @@
+name: Duplicate File Remover
+slug: duplicate-file-remover
+summary: >-
+  duplicated files in a given directory in your file system.
+category: File Operations
+tags: [file, hash, duplicate, cleanup]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.Cryptography
+    version: "0.8.0"
+has_subflows: false
+flow_id: 2927f4f3-ffde-4d00-90b4-18c84b2c90e1
+schema_version: 1

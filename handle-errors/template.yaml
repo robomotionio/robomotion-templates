@@ -1,0 +1,13 @@
+name: Handle Errors
+slug: handle-errors
+summary: >-
+  This template shows how to throw errors, and handle them
+category: Error Handling
+tags: [error-handling, catch, example]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a9ecc5cb-45f9-46a7-ab52-03e04ad9333b
+schema_version: 1

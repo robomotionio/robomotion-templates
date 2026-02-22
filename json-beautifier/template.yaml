@@ -1,0 +1,13 @@
+name: Json Beautifier
+slug: json-beautifier
+summary: >-
+  This template uses *Programming*, *File System* and *Dialog* nodes to beautify
+category: Data Processing
+tags: [json, formatting, file-processing]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: f89f539e-b74f-4117-a88f-038f5f146b15
+schema_version: 1

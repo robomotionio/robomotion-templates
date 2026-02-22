@@ -1,0 +1,16 @@
+name: Fork Branch With Memory Queue
+slug: fork-branch-with-memory-queue
+summary: >-
+  When no items remain in the Memory Queue, the Dequeue node throws an exception. We catch this exception and mark the end of the branch's lifecycle using the WG Done node.
+category: Concurrency
+tags: [parallel, fork, queue, browser]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.MemoryQueue
+    version: "0.0.1"
+has_subflows: false
+flow_id: 5a3e9eb7-8455-4e02-9f6b-ae33c7df7375
+schema_version: 1

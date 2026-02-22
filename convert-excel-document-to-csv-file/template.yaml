@@ -1,0 +1,13 @@
+name: Convert Excel Document To Csv File
+slug: convert-excel-document-to-csv-file
+summary: >-
+  This flow, converts given excel file to csv file.
+category: Data Processing
+tags: [excel, csv, conversion]
+author: Robomotion
+created: "2025-12-07"
+updated: "2025-12-07"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: cda9e3d2-f26d-42da-8879-e17548f56f94
+schema_version: 1
