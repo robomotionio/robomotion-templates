@@ -1,10 +1,10 @@
 import { flow, Credential, Custom, Message } from '@robomotion/sdk';
 
-flow.create('263f9b89-45d2-44ee-a3b8-d68ac50a20b8', 'Imported SSL Watch', (f) => {
-  f.addDependency('Robomotion.Monitoring', '0.4.1');
-  f.addDependency('Robomotion.GoogleSheets', '1.3.0');
+flow.create('e7b4141c-038d-4f8d-9c47-3541a2b4542d', 'SSL Watch', (f) => {
+  f.addDependency('Robomotion.GoogleSheets', '1.6.3');
+  f.addDependency('Robomotion.Monitoring', '0.5.5');
 
-  f.node('17a078', 'Core.Flow.Comment', 'Comment', { optText: '### SSL Watch\nUses the Monitoring package and its built in SSL node to check each domain, calculate how many days remain until expiration, and verify certificate status.\n\nYoutube Video:\nhttps://www.youtube.com/watch?v=G2Cp1nW5Plc' });
+  f.node('17a078', 'Core.Flow.Comment', 'Comment', { optText: '### SSL Watch\nUses the Monitoring package and its built in SSL node to check each domain, calculate how many days remain until expiration, and verify certificate status.\n\nhttps://www.youtube.com/watch?v=G2Cp1nW5Plc' });
   f.node('1e22a2', 'Core.Trigger.Inject', 'Start', {})
     .then('4f83bf', 'Robomotion.GoogleSheets.OpenSpreadsheet', 'Open Spreadsheet', { inUrl: Custom('https://docs.google.com/spreadsheets/d/1bXmQP5orm0SauN7xICo7n1DNztxPoYTGZATxKyd_CbI/edit?pli=1&gid=0#gid=0'), optCredentials: Credential({ vaultId: 'ba22caf8-bdfd-42b3-a6c5-7f633bb0f8d6', itemId: '2195825d-5264-453d-825a-d8f2ef9a9a0d' }) })
     .then('aaf3c5', 'Robomotion.GoogleSheets.GetRange', 'Get Range', { optHeaders: true, optJsonify: true });
