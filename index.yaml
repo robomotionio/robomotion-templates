@@ -127,6 +127,21 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Generic Chat Assistant
+    slug: generic-chat-assistant
+    summary: >-
+      A ready-to-use conversational AI template powered by Chat Assistant and LLM
+      Agent nodes. Provides a simple chat interface where users can ask questions
+      and receive answers from a large language model, with support for file
+      attachments and graceful error handling.
+    category: AI
+    tags: [chat, ai, llm, agent, assistant]
+    author: Robomotion
+    created: "2026-03-21"
+    updated: "2026-03-21"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Handle Errors
     slug: handle-errors
     summary: >-
