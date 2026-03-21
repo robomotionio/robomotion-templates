@@ -28,6 +28,21 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Calorie Coach Agent
+    slug: calorie-coach-agent
+    summary: >-
+      A personal nutrition tracking assistant powered by Chat Assistant and LLM
+      Agent nodes. Uses a SQLite database to log meals, manage user profiles, and
+      track daily calorie and macro goals through a natural conversational
+      interface with support for photo-based food logging.
+    category: AI
+    tags: [chat, ai, llm, agent, nutrition, calories]
+    author: Robomotion
+    created: "2026-03-21"
+    updated: "2026-03-21"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Content Checker
     slug: content-checker
     summary: >-
