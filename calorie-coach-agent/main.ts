@@ -1,10 +1,11 @@
 import { flow, Custom, Message } from '@robomotion/sdk';
 
-flow.create('6c71f541-1923-4bf4-b036-065027807033', 'Calorie Coach Agent', (f) => {
+flow.create('fb05d88d-f1d0-4aaa-9889-8c13def83ce9', 'Calorie Coach Agent', (f) => {
   f.addDependency('Robomotion.ChatAssistant', '1.7.3');
   f.addDependency('robomotion.agents', '0.15.0');
 
   f.node('243a1f', 'Core.Flow.Comment', 'Comment', { optText: '#### Calorie Coach Agent\n**Milo** is a friendly and reliable personal calorie coaching assistant. It creates a SQLite database under `~/Documents/calories.db` to track the user\'s meals, profile, and goals.\n\nDouble-Click the `LLM Agent` to read the System Prompt for this agent.' });
+  f.node('3b3c02', 'Core.Flow.Comment', 'Comment', { optText: '\nhttps://www.youtube.com/watch?v=p4HpqTXUU8U' });
   f.node('ecf3af', 'Core.Trigger.Catch', 'Catch', { optNodes: { type: 'catch', ids: [], all: true } })
     .then('f280e2', 'Core.Programming.Function', 'Set Error', { func: 'msg.text = "⚠️ I apologize, but I encountered an unexpected error while processing your request. Please try again in a moment.";\nreturn msg;' });
   f.node('c223fe', 'Robomotion.ChatAssistant.ChatIn', 'Chat In', {})
