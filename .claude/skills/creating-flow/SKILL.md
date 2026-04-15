@@ -1,7 +1,7 @@
 ---
 name: creating-flow
 description: Creates Robomotion automation flows with the @robomotion/sdk TypeScript builder. Handles the full workflow: requirements → plan → build → validate → deploy. Also use when the user has a plan ready and wants the flow code written.
-allowed-tools: Read, Glob, Grep, Edit, Write, Bash(git:*), Bash(robomotion:*), discover_browser_flow
+allowed-tools: Read, Glob, Grep, Edit, Write, Bash(git:*), Bash(robomotion:*), mcp__browser__*, Skill
 argument-hint: [flow-description]
 references: ../../../docs/sdk-grammar.md, ../../../docs/patterns/loops.md, ../../../docs/patterns/conditions.md, ../../../docs/patterns/credentials.md, ../../../docs/patterns/exceptions.md, ../../../docs/patterns/branches.md, ../../../docs/patterns/subflows.md, ../../../docs/architecture.md, ../../../docs/patterns/data-tables.md, ../../../docs/patterns/browser.md, ../../../docs/patterns/captcha.md, ../../../docs/reference/system-variables.md, ../../../docs/reference/node-naming.md
 auto-inject: true
@@ -121,7 +121,16 @@ SubFlow/Begin/End schemas are in AGENTS.md — do NOT call `robomotion describe 
 
 ### Browser flows — mandatory exploration
 
-If the flow uses `Core.Browser.*`, call `discover_browser_flow(description, url)` BEFORE writing code. It launches a sub-agent with browser tools and returns verified selectors. Raw `browser_*` tools are NOT available to you directly — only inside `discover_browser_flow`.
+If the flow uses `Core.Browser.*`, you MUST explore the page before writing code. **Do this in the main session** — MCP servers are scoped to the main conversation, so `Agent` sub-agents cannot use `mcp__browser__*` tools.
+
+Two ways to explore, in order of preference:
+
+1. **Invoke the `exploring-browser` skill** via the `Skill` tool: `Skill(skill="exploring-browser", args="login to <url>")`. The skill uses `mcp__browser__*` directly, records a sequence with resolved XPaths, and returns JSON you convert to SDK code.
+2. **Call `mcp__browser__*` tools inline** if you prefer not to branch into the skill — the tools are in this skill's `allowed-tools`. Minimum sequence: `browser_open` → `browser_navigate` → `browser_snapshot` → action tools (`browser_click`, `browser_type`) → `browser_snapshot` after every page change → `browser_close` to get the recorded sequence JSON.
+
+> **Load schemas before the first call.** `mcp__browser__*` tools are *deferred* — only their names are in the catalog until you pull the schema via `ToolSearch`. Invoking one cold sends empty/malformed JSON over stdio, which crashes `robomotion-browser-mcp` and blacklists ALL browser tools for the rest of the session (they stop appearing in `ToolSearch` results even though `claude mcp list` still says ✓ Connected — that's a fresh probe, not the session's dead pipe). Before your first `browser_*` call, run `ToolSearch query="select:mcp__browser__browser_open,mcp__browser__browser_navigate,mcp__browser__browser_snapshot,mcp__browser__browser_type,mcp__browser__browser_click,mcp__browser__browser_close"` (plus any others you need). If you've already crashed the server, only a Claude Code restart brings the tools back — the connection can't be reattached from inside the session.
+
+If the `browser` MCP server shows `failed` in `/mcp` (or `mcp__browser__*` tools don't surface in your catalog), stop and ask the user to restart Claude Code — do NOT fall back to guessing selectors from `curl` + HTML for production flows. A one-off, plain-HTML form is tolerable as a *last resort*, but verified selectors from a live browser are the norm.
 
 ### Credentials
 
@@ -137,7 +146,7 @@ Compiles AND validates. Fix any errors → re-validate. Exit 0 with `✔ <name> 
 
 ## Step 5: Verify Browser Selectors (if browser flow)
 
-`discover_browser_flow` verifies selectors during exploration. If code changed, re-call it to re-verify.
+Selectors are verified during exploration (Step 3). If the code changed (different selectors, new actions), re-run the exploration — either `Skill(exploring-browser)` or `mcp__browser__*` inline — against the current page to re-verify before running.
 
 ## Step 6: Run
 

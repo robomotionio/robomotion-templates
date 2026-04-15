@@ -16,6 +16,14 @@ This skill enables **pair-programming** with the browser - you and Claude explor
 
 ## Workflow
 
+> **Step 0 — Load tool schemas.** `mcp__browser__*` tools are *deferred* (only names in the catalog until you pull their schemas). Calling `browser_open` cold sends empty/malformed JSON over stdio, crashes `robomotion-browser-mcp`, and blacklists every browser tool for the rest of the session — `ToolSearch` will then return "no matching deferred tools" even though `claude mcp list` still reports ✓ Connected (that's a fresh probe, not the session's dead pipe). Before the first call, run:
+>
+> ```
+> ToolSearch query="select:mcp__browser__browser_open,mcp__browser__browser_navigate,mcp__browser__browser_snapshot,mcp__browser__browser_type,mcp__browser__browser_click,mcp__browser__browser_close,mcp__browser__browser_get_sequence,mcp__browser__browser_set_flow_name"
+> ```
+>
+> (Add `browser_wait`, `browser_select`, `browser_query`, `browser_start_network_capture`, etc. if you need them.) Once the server is dead, only a Claude Code restart brings it back — the connection can't be reattached from inside the session.
+
 1. **Open Browser** - Launch with `browser_open` (stealth mode enabled by default)
 2. **Navigate** - Go to target URL with `browser_navigate`
 3. **Snapshot** - Use `browser_snapshot` to see page structure with refs (primary exploration tool)
