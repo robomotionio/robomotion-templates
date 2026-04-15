@@ -6,18 +6,18 @@ RPA platform with TypeScript SDK and visual node editor. Create, validate, and e
 
 1. **Import from `@robomotion/sdk` only** — `flow`, `Message`, `Custom`, `Credential`, `JS`, `Global`
 2. **`f.node(id, type, name, props)`** — correct param order, 6-char hex IDs
-3. **Only non-default properties** — Go runtime fills ALL defaults from pspec
+3. **Only non-default properties** — Go runtime fills ALL defaults from pspec. *Pspec is the source of truth; emitting defaults shadows future schema changes.*
 4. **`Message()` for variables, `Custom()` for literals, `JS()` for one-liner Javascript, `Credential()` for secrets**
 5. **`func` is literal string** (NOT `JS()`), enum props are plain strings (NOT `Custom()`)
 6. **Loops: Label -> ForEach -> body -> GoTo** — visual flows have no implicit loop
-7. **Verify before coding** — use `plan_flow` or `get_node_cards` to get schemas, NEVER guess property names
+7. **Verify before coding** — use `plan_flow` or `get_node_cards` to get schemas, NEVER guess property names. *Guessed names fail validation silently when the real property has a different scope or casing.*
 8. **Self-contained flows** — NEVER use bash to create dirs/files; use `Core.FileSystem.Create`
-9. **`addDependency` for non-`Core.*` packages** — every non-`Core.*` package needs `f.addDependency(ns, ver)`. When updating existing flows: NEVER change existing versions, only add missing ones with latest.
+9. **`addDependency` for non-`Core.*` packages** — every non-`Core.*` package needs `f.addDependency(ns, ver)`. When updating existing flows: NEVER change existing versions, only add missing ones with latest. *Without `addDependency`, the Designer shows an empty version field and the robot can't resolve the package.*
 10. **NEVER use `ScrapeList` or `ScrapeTable`** — `Core.Browser.ScrapeList` and `Core.Browser.ScrapeTable` are unreliable. Use `Core.Browser.RunScript` to extract data in Data Table format instead.
 11. **ES5 only in `func`** — no `=>`, no `` ` ``, no `const`/`let`, no destructuring. Use `var`, `function()`, string concat (`+`)
 12. **Function nodes are NOT Node.js** — no `require()`, `fs`, `Buffer`, `process`. Pure JS sandbox only
 13. **`Core.Programming.If` does NOT exist** — use `Core.Programming.Function` with `outputs: 2` for conditionals
-14. **Terminal nodes have 0 outputs** — `Debug`, `Log`, `Stop`, `GoTo`, `End` cannot chain `.then()` AFTER them. You can wire TO them; NEVER FROM them. In loops: GoTo ends the body chain — Stop must be a standalone `f.node()` wired via `f.edge()`
+14. **Terminal nodes have 0 outputs** — `Debug`, `Log`, `Stop`, `GoTo`, `End`, `WaitGroup.Done` cannot chain `.then()` AFTER them. You can wire TO them; NEVER FROM them. In loops: GoTo ends the body chain — Stop must be a standalone `f.node()` wired via `f.edge()` on ForEach port 1. *The builder throws "Cannot chain from node (outputs=0)" at compile time, so any chained Debug inside a body breaks the whole flow.*
 15. **Common properties use literal values** — `delayBefore: 2`, `delayAfter: 0.5`, `continueOnError: true` — NOT `Custom()`
 16. **System variables only work in `global.get()`** — `$Home$`, `$TempDir$` must be resolved via `global.get('$Home$')` in Function nodes
 17. **Library projects use `library.create()`** — Begin/End nodes, not `flow.create()` with Inject/Stop
@@ -25,62 +25,85 @@ RPA platform with TypeScript SDK and visual node editor. Create, validate, and e
 
 ## Common Mistakes
 
+### Syntax
 | Mistake | Consequence | Fix |
 |---------|-------------|-----|
 | `f.node('id', 'Start', {type: '...'})` | Wrong param order | `f.node(id, type, name, props)` |
 | `func: JS(\`return msg;\`)` or `func: Custom(\`...\`)` | Validation fails | `func: \`return msg;\`` (literal string) |
-| `optType: Custom('directory')` | OnCreate failure, empty flow\_id | `optType: 'directory'` (plain string) |
+| `optType: Custom('directory')` | OnCreate failure, empty flow_id | `optType: 'directory'` (plain string) |
+| `delayAfter: Custom('2')` | Parse error | `delayAfter: 2` (literal value) |
 | Missing `return msg;` in func | Data lost, next node gets nothing | Always `return msg;` |
 | Arrow functions / template literals in `func` | Sandbox parse error | Use `var`, `function()`, string concat (`+`) |
-| `require('fs')` in Function | Runtime crash | Use Core.FileSystem nodes |
-| Chain `.then()` after Debug/Log/Stop/GoTo/End | Compile error (lastNode.outputs === 0) | These are terminal (0 outputs); wire TO them, NEVER `.then()` FROM them |
-| Missing Goto in loop | Loop runs once | Label→ForEach→body→GoTo |
-| `Core.Programming.If` | Node doesn't exist | Function with `outputs: 2` |
-| `ScrapeList` / `ScrapeTable` | Unreliable | Use `RunScript` with Data Table format |
-| `delayAfter: Custom('2')` | Parse error | `delayAfter: 2` (literal value) |
-| `inPath: Custom('$Home$/file.xlsx')` | Literal string, not resolved | `global.get('$Home$') + '/file.xlsx'` in Function |
-| Using Inject/Stop in Library | Library won't work | Use Begin/End — libraries are subflows |
-| Using `flow.create()` in Library | Library won't compile | Use `library.create(id, name, fn)` |
-| Missing `addDependency` for non-Core | Empty version in designer | `f.addDependency('Ns', 'vN.N.N')` |
-| Bumping existing `addDependency` version | Breaks pinned dependency | NEVER change existing versions |
-| `Core.CSV.Read` / `Core.CSV.Write` / `Core.CSV.Append` | Node not found, schema lookup fails | Use `Core.CSV.ReadCSV`, `Core.CSV.WriteCSV`, `Core.CSV.AppendCSV` |
-| `Core.Flow.Goto` (lowercase t) | Node not found | `Core.Flow.GoTo` (capital T) |
-| `Core.Programming.Log` | Node doesn't exist | Use `Core.Flow.Log` (0 outputs, property: `inText`) or `Core.Programming.Debug` |
-| `Core.Browser.Click` | Node doesn't exist | Use `Core.Browser.ClickElement` |
-| `Core.Browser.Type` | Node doesn't exist | Use `Core.Browser.TypeText` |
-| `Core.Browser.GetCookie` (singular) | Node doesn't exist | Use `Core.Browser.GetCookies` (plural, property: `outCookies`) |
-| `Core.Programming.RandomSleep` / `Core.Programming.Delay` | Node doesn't exist | Use `Core.Programming.Sleep` with `optRandom: true`, `optRandMin`, `optRandMax` |
+| `require('fs')` in Function | Runtime crash | Use `Core.FileSystem.*` nodes |
+
+### Terminal chaining
+| Mistake | Consequence | Fix |
+|---------|-------------|-----|
+| Chain `.then()` after Debug/Log/Stop/GoTo/End | Compile error (`lastNode.outputs === 0`) | Wire TO terminals; attach Debug/Log via `f.edge()` from a non-terminal |
+| Missing Goto in loop | Loop runs once | Label → ForEach → body → GoTo |
 | `inLabel` on GoTo node | Property doesn't exist | `optNodes: { ids: [...], type: 'goto', all: false }` |
-| Writing credential code without loading doc | Wrong Credential() pattern | `get_reference_doc(doc='credentials')` FIRST |
+| `Core.Programming.If` | Node doesn't exist | `Core.Programming.Function` with `outputs: 2` |
+
+### Credentials
+| Mistake | Consequence | Fix |
+|---------|-------------|-----|
+| Writing credential code without loading doc | Wrong `Credential()` pattern | `get_reference_doc(doc='credentials')` FIRST |
 | Using `optApiKey` vs `inCredentials` wrong | Auth failure | Verify with `get_node_cards` first |
 | Missing `optCredentials` on `Core.Vault.GetItem` | "Vault has to be selected" error | `optCredentials: Credential({vaultId, itemId})` REQUIRED |
 
+### System variables / scope
+| Mistake | Consequence | Fix |
+|---------|-------------|-----|
+| `inPath: Custom('$Home$/file.xlsx')` | Literal string, not resolved | `global.get('$Home$') + '/file.xlsx'` in Function node |
+| `ScrapeList` / `ScrapeTable` | Unreliable | Use `RunScript` returning `{ columns, rows }` JSON |
+
+### Library vs flow
+| Mistake | Consequence | Fix |
+|---------|-------------|-----|
+| Using Inject/Stop in Library | Library won't work | Use Begin/End — libraries are subflows |
+| Using `flow.create()` in Library | Library won't compile | Use `library.create(id, name, fn)` |
+
+### Dependencies
+| Mistake | Consequence | Fix |
+|---------|-------------|-----|
+| Missing `addDependency` for non-Core | Empty version in Designer | `f.addDependency('Ns', 'vN.N.N')` |
+| Bumping existing `addDependency` version | Breaks pinned dependency | NEVER change existing versions |
+
+### Wrong node names
+| Mistake | Consequence | Fix |
+|---------|-------------|-----|
+| Any wrong node name (CSV.Read, Flow.Goto, Programming.Log/RandomSleep, Browser.Click/Type/GetCookie, …) | Node not found, schema lookup fails | See `docs/reference/node-naming.md` |
+
 ## Quick Reference Map
 
-Load these with `get_reference_doc(doc='<topic>')` BEFORE writing code.
+Docs load with `get_reference_doc(doc='<topic>')`. Skills load with `get_skill('<name>')`. Verify schemas with `get_node_cards` / `plan_flow` — do not guess.
 
-| Topic | `doc` param | Where to Look |
-|-------|------------|--------------|
-| SDK syntax & grammar | `sdk-grammar` | docs/sdk-grammar.md |
+| Topic | `doc` param | File |
+|-------|------------|------|
+| SDK syntax & grammar (incl. terminal nodes) | `sdk-grammar` | docs/sdk-grammar.md |
+| Architecture | `architecture` | docs/architecture.md |
 | Loop patterns | `loops` | docs/patterns/loops.md |
 | Conditions | `conditions` | docs/patterns/conditions.md |
 | Credentials | `credentials` | docs/patterns/credentials.md |
-| Browser automation | `browser` | docs/patterns/browser.md |
+| Browser automation (incl. proxy) | `browser` | docs/patterns/browser.md |
 | Exception handling | `exceptions` | docs/patterns/exceptions.md |
 | Branches & parallel | `branches` | docs/patterns/branches.md |
 | Subflows | `subflows` | docs/patterns/subflows.md |
 | Data tables | `data-tables` | docs/patterns/data-tables.md |
 | Captcha solving | `captcha` | docs/patterns/captcha.md |
-| Proxy config | `proxy` | docs/patterns/proxy.md |
 | System variables | `system-variables` | docs/reference/system-variables.md |
-| Common packages | `packages` | docs/reference/packages.md |
-| Terminal nodes | `terminal-nodes` | docs/reference/terminal-nodes.md |
-| Architecture | `architecture` | docs/architecture.md |
-| Node schemas & examples | — | Use `get_node_cards(nodeTypes[])` |
-| Package overview | — | Use `plan_flow(description)` |
-| Package docs (compact) | — | `get_llms_txt(namespace)` — compact header: description, auth, dos/don'ts (~10 lines). MANDATORY for every package |
-| Full package docs | — | `get_llms_txt(namespace, full=true)` — complete documentation with all node sections |
-| Single node docs | — | `get_llms_txt(namespace, section='NodeName')` — one node's section only |
+| Node naming (wrong → correct) | `node-naming` | docs/reference/node-naming.md |
+| Credential categories (field layouts) | `credential-categories` | docs/reference/credential-categories.md |
+
+Other tools:
+
+| Need | Tool |
+|------|------|
+| Node schemas & examples | `get_node_cards(nodeTypes[])` |
+| Package overview for a description | `plan_flow(description)` |
+| Package docs (compact header) | `get_llms_txt(namespace)` — MANDATORY per package |
+| Full package docs | `get_llms_txt(namespace, full=true)` |
+| Single node's section only | `get_llms_txt(namespace, section='NodeName')` |
 
 ## Available Skills
 
@@ -94,51 +117,60 @@ Load these with `get_reference_doc(doc='<topic>')` BEFORE writing code.
 | `/validating-flow` | Schema validation | `get_skill('validating-flow')` |
 | `/searching-packages` | Find packages and nodes | `get_skill('searching-packages')` |
 | `/exploring-browser` | Interactive browser automation | `get_skill('exploring-browser')` |
+| `/reversing-network` | Reverse-engineer browser traffic to HTTP | `get_skill('reversing-network')` |
 
-## MCP Tools
+## CLI & MCP Servers
 
-| Tool | Purpose |
-|------|---------|
-| `plan_flow` | Get packages + node cards + template for a description |
-| `get_node_cards` | Batch schema + docs for specific node types |
-| `validate_flow` | Compile + validate against pspec schemas |
-| `search_packages` | Find packages by keyword |
-| `search_nodes` | Find nodes across all packages |
-| `get_llms_txt` | Full package documentation |
-| `generate_dependencies` | Get dependency namespaces + latest versions from node types |
-| `unified_search` | Cross-source search (templates, examples, rules) |
-| `list_robots` | List available robots |
-| `run_flow` | Execute flow on a robot |
-| `save_flow` | Save compiled flow to cloud |
-| `vault_list` | List credential vaults |
-| `vault_item_list` | List items in a vault |
-| `get_reference_doc` | Load a reference doc by topic (browser, loops, conditions, etc.) |
-| `get_skill` | Load a skill's full instructions by name |
-| `discover_browser_flow` | Explore site with sub-agent (browser tools only available here) |
+The Robomotion binaries live on `PATH` (Mac, Windows, Linux). Always call them by their bare name — never with absolute paths.
 
-## Advanced Techniques
+| Binary | Purpose |
+|--------|---------|
+| `robomotion` | CLI: build (`robomotion build main.ts`), validate, run flows locally |
+| `robomotion-sdk-mcp` | MCP server — flow authoring: `plan_flow`, `get_node_cards`, `validate_flow`, `search_packages`, `search_nodes`, `get_llms_txt`, `unified_search`, `get_reference_doc`, `get_skill` |
+| `robomotion-api-mcp` | MCP server — cloud API: `list_robots`, `run_flow`, `save_flow`, `vault_list`, `vault_item_list`, `poll_logs` |
+| `robomotion-browser-mcp` | MCP server — browser automation for exploration: `browser_open`, `browser_snapshot`, `browser_click`, `browser_type`, `browser_start_network_capture`, etc. Used inside `discover_browser_flow` |
 
-Call `get_skill` before writing code that requires special handling:
+### MCP Tools
 
-| Scenario | Call |
-|----------|------|
-| Reverse-engineer browser traffic to HTTP | `get_skill('technique-network-reversal')` |
+| Tool | Server | Purpose |
+|------|--------|---------|
+| `plan_flow` | sdk | Get packages + node cards + template + package docs for a description |
+| `get_node_cards` | sdk | Batch schema + docs for specific node types |
+| `validate_flow` | sdk | Compile + validate against pspec schemas |
+| `search_packages` / `search_nodes` | sdk | Find packages / nodes by keyword |
+| `get_llms_txt` | sdk | Compact or full package documentation |
+| `generate_dependencies` | sdk | Dependency namespaces + latest versions |
+| `unified_search` | sdk | Cross-source search (templates, examples, rules) |
+| `get_reference_doc` | sdk | Load a reference doc by topic |
+| `get_skill` | sdk | Load a skill's full instructions |
+| `list_robots` / `run_flow` / `poll_logs` | api | Execute flows on a robot and monitor |
+| `save_flow` | api | Save compiled flow to cloud |
+| `vault_list` / `vault_item_list` | api | Discover credentials |
+| `discover_browser_flow` | sdk (delegates to browser) | Sub-agent with full browser tool access — use this instead of raw `browser_*` tools |
+
+## Per-Turn Reminders
+
+The five drift-prone rules to re-check before EVERY `Write`/`Edit` that emits flow code:
+
+- **NEVER output TypeScript as chat text** — always use `Write`/`Edit`. Natural-language plans and explanations stay in chat.
+- `f.node(id, type, name, props)` — param order. `.then()` for sequential, `.edge()` for multi-port.
+- `Message(variable)` for variables · `Custom(literal)` for literals · `Credential({vaultId, itemId})` for secrets · `func` is a literal string (not `JS()`) · enum props are plain strings (not `Custom()`).
+- Loops require `Label → ForEach → body → GoTo(label_id)`. GoTo is terminal; `Stop` hangs off ForEach port 1 via `f.edge()`.
+- Every flow ends with `.start()` (libraries use `library.create()` and omit `.start()`).
 
 ## Workflow
 
 1. **Gather requirements** — credentials (`vault_list`), URLs, files, iteration, errors
 2. **Plan** — `plan_flow(description)` — returns packages, node cards, template, AND package docs (llms.txt headers) for all matched packages
-3. **Read package docs** — `plan_flow` includes llms.txt automatically. For packages added later, call `get_llms_txt(namespace)` — this is MANDATORY for every package used in the flow
+3. **Read package docs** — `plan_flow` includes llms.txt automatically. For packages added later, call `get_llms_txt(namespace)` — MANDATORY per package
 4. **Browser?** — if browser automation: `discover_browser_flow(description, url)` MANDATORY
 5. **Get approval** — output plan as text, then `AskUserQuestion` ("Build it" / "Modify plan")
 6. **Read reference docs** — `get_reference_doc` for 1-2 topic-relevant pattern docs
-7. **Load skill** — for non-standard workflows (run, save, search, CAPTCHA, proxy), call `get_skill(name)` first
+7. **Load skill** — for non-standard workflows (run, save, search, CAPTCHA, network reversal), call `get_skill(name)` first
 8. **Write flow** — verify schemas with `get_node_cards` first, then write main.ts
 9. **Validate** — `validate_flow(flowPath)` — compiles + validates (MANDATORY before save/run)
-11. **Verify selectors** — if browser flow: query EVERY selector on live page MANDATORY
-12. **Save or run** — `save_flow` / `run_flow`
-
-> **"NEVER output code" means TypeScript/JSON source code.** You MUST still output natural-language plans and explanations as chat text.
+10. **Verify selectors** — if browser flow: query EVERY selector on live page MANDATORY
+11. **Save or run** — `save_flow` / `run_flow`
 
 ## Canonical Examples
 

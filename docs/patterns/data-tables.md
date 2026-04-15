@@ -2,6 +2,14 @@
 
 Universal tabular data format used across all Robomotion data packages: CSV, Excel (local & 365), Google Sheets, Airtable, SQLite, DOM parsing, Pandas, and DataTable operations.
 
+**Related:** `loops.md` (iterating `table.rows`) · `browser.md` (extracting tables from pages with `RunScript`).
+
+## When NOT to use
+
+- **Single-object data** — use `msg.field` directly; don't wrap one row in a `{columns, rows}` structure.
+- **Free-form JSON** — array of heterogeneous objects → stay as an array; don't force a columns list.
+- **Logs and diagnostics** — `console.log` in a Function or `Core.Flow.Log` are better than building a table.
+
 ## Philosophy
 
 > "The data table is just a simple JSON object"
@@ -125,37 +133,22 @@ return msg;
 
 ## Operations Using This Format
 
-### Core Packages
-
 | Operation | Direction |
 |-----------|-----------|
-| `Core.CSV.ReadCSV` | **Returns** this format |
-| `Core.CSV.WriteCSV` | **Expects** this format |
-| `Core.Excel.GetRange` | **Returns** this format |
-| `Core.Excel.SetRange` | **Expects** this format |
-| `Core.Browser.RunScript` | **Returns** JSON string (parse with Function node) |
-
-### Cloud Spreadsheets
-
-| Operation | Direction |
-|-----------|-----------|
-| `Robomotion.GoogleSheets.GetRange` | **Returns** this format |
-| `Robomotion.GoogleSheets.SetRange` | **Expects** this format |
-| `Robomotion.GoogleSheets.AppendRange` | **Expects** this format |
-| `Robomotion.Excel365.RangeRead` | **Returns** this format |
-| `Robomotion.Excel365.RangeWrite` | **Expects** this format |
-| `Robomotion.Excel365.TablesGetRows` | **Returns** this format |
+| `Core.CSV.ReadCSV` | **Returns** |
+| `Core.CSV.WriteCSV` | **Expects** |
+| `Core.Excel.GetRange` | **Returns** |
+| `Core.Excel.SetRange` | **Expects** |
+| `Core.Browser.RunScript` | **Returns** JSON string (parse with Function) |
+| `Robomotion.GoogleSheets.GetRange` | **Returns** |
+| `Robomotion.GoogleSheets.SetRange` / `AppendRange` | **Expects** |
+| `Robomotion.Excel365.RangeRead` / `TablesGetRows` | **Returns** |
+| `Robomotion.Excel365.RangeWrite` | **Expects** |
 | `Robomotion.Airtable.GetBaseSchema` | **Returns** tables array |
-
-### Database & Data Processing
-
-| Operation | Direction |
-|-----------|-----------|
-| `Robomotion.SQLite.Query` | **Returns** this format |
-| `Robomotion.SQLite.Insert` | **Expects** this format |
-| `Robomotion.DOMParser.ExtractTable` | **Returns** this format |
-| `Robomotion.Pandas.*` | **Uses** this format |
-| `Robomotion.DataTable.*` | **Uses** this format |
+| `Robomotion.SQLite.Query` | **Returns** |
+| `Robomotion.SQLite.Insert` | **Expects** |
+| `Robomotion.DOMParser.ExtractTable` | **Returns** |
+| `Robomotion.Pandas.*`, `Robomotion.DataTable.*` | **Uses** |
 
 ## Reading Data
 

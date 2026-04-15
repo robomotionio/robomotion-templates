@@ -2,6 +2,14 @@
 
 Patterns for handling errors in Robomotion visual flows.
 
+**Related:** `branches.md` (parallel branches MUST call `Done` on both success and failure — wire `Catch → Done`) · `conditions.md` (route by error content with a Function after Catch).
+
+## When NOT to use
+
+- **Switch "no matching condition"** — don't wrap it in Catch; use a Function with `outputs: N+1` and a default branch instead.
+- **Critical steps** — don't set `continueOnError: true` on nodes whose failure invalidates downstream logic (e.g. `HttpRequest` whose response you must read). Let it fail and catch it.
+- **Expected "not found" / "already exists"** — `continueOnError: true` is fine; don't reach for `Catch` for things that happen every run.
+
 ## Two Approaches
 
 | Approach | Use Case | Example |

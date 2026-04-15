@@ -2,6 +2,14 @@
 
 Two packages available for solving captchas during browser automation.
 
+**Related:** `browser.md` · `credentials.md` · `skills/reversing-network` (an exposed API usually bypasses the captcha entirely — try capture-and-replay FIRST).
+
+## When NOT to use
+
+- **API endpoint exists** — network reversal bypasses the captcha entirely. Captcha-solving services cost money and fail ~5-10% of the time. See `skills/reversing-network`.
+- **Logged-in session is reusable** — solve once, export the session (`browser_export_session`), and reuse cookies for future runs.
+- **You're paying per-solve on unattended retries** — add a Catch with a retry ceiling before hitting the solver again.
+
 ## AntiCaptcha (`Robomotion.AntiCaptcha.*`)
 
 Direct credential-based approach. Each node takes `optToken` credential directly.

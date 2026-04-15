@@ -109,6 +109,31 @@ f.edge('1a9b5c', 0, '2c7d4e', 0);  // Port 0: true
 f.edge('1a9b5c', 1, '3f8e6a', 0);  // Port 1: false
 ```
 
+## Terminal Nodes (0 outputs)
+
+These nodes have **0 output ports**. You can wire **TO** them; you can NEVER chain `.then()` **FROM** them. Use `.edge()` to attach them as side-effects off an earlier non-terminal node.
+
+| Node | Purpose |
+|------|---------|
+| `Core.Programming.Debug` | Dump `msg` for inspection |
+| `Core.Flow.Log` | Log text (`inText`) — NOT `Core.Application.Log` |
+| `Core.Flow.Stop` | Stop the flow |
+| `Core.Flow.GoTo` | Loop back to a Label |
+| `Core.Flow.End` | Subflow exit (`sfPort`) |
+| `Core.WaitGroup.Done` | Decrement a WaitGroup counter |
+
+```typescript
+// Stop chained as the final step — allowed (wiring TO a terminal)
+.then('d1e4b8', 'Core.Programming.Function', 'Process', { ... })
+.then('e3a592', 'Core.Flow.Stop', 'Stop', {});
+
+// Debug attached as a parallel branch via f.edge() — NOT via .then()
+f.node('b4d7f1', 'Core.Programming.Debug', 'Debug', { optDebugData: Message('result') });
+f.edge('d1e4b8', 0, 'b4d7f1', 0);
+```
+
+Inside loops, `GoTo` ends the body chain; `Stop` for the exit branch MUST be a standalone `f.node()` wired via `f.edge()` on ForEach port 1 — never chained after `GoTo`.
+
 ## Node IDs
 
 Node IDs are 6-character random hexadecimal strings:

@@ -2,6 +2,15 @@
 
 Patterns for running parallel branches in Robomotion flows using the builder SDK.
 
+**Related:** `loops.md` (serial iteration) · `exceptions.md` (Catch → Done for failed branches) · `conditions.md` (Function-based routing).
+
+## When NOT to use
+
+- **Sub-100ms per-item work** — branching overhead dominates; use a plain ForEach loop.
+- **<3 branches without a shared WaitGroup** — just fan out with multiple `f.edge()` calls.
+- **Many (>20) branches without queueing** — spinning up 100 parallel workers is slower than 5 workers pulling from a `MemoryQueue`. Use ForkBranch + MemoryQueue.
+- **Ordered results required** — fan-out loses ordering; collect with a Function + sort at the end, or stay serial.
+
 ## The Messaging Paradigm
 
 Robomotion is a **Node-RED inspired messaging system**. Messages (`msg` objects) flow through wires between nodes. When a node's output connects to multiple targets, **each target receives its own copy** of the message - creating true parallel execution paths.

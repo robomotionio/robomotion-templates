@@ -1,6 +1,6 @@
 ---
 name: planning-flow
-description: Researches packages and creates implementation plans for Robomotion flows. Read-only exploration of available packages, nodes, and schemas. Use when user wants to plan a flow before building it.
+description: Researches packages and creates a read-only implementation plan for a Robomotion flow via the `robomotion-sdk-mcp` server. Use when the user says "plan a flow", "what packages do I need for X", "outline the flow before building", or wants credentials / selectors discovered up front. No code is generated — use `/creating-flow` or `/exploring-browser` (for browser flows) to proceed.
 allowed-tools: Read, Glob, Grep, mcp__sdk-mcp__*, mcp__api__vault_list, mcp__api__vault_item_list, mcp__browser__*
 argument-hint: [flow-description]
 ---

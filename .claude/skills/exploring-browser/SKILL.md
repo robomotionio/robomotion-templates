@@ -1,12 +1,14 @@
 ---
 name: exploring-browser
-description: Interactive browser automation with real-time exploration and flow recording. Enables pair-programming with the browser to discover selectors and build automation flows. Use when user wants to explore a website interactively or record browser actions.
+description: Explores a website interactively via the robomotion-browser-mcp server to discover selectors, record action sequences, capture network traffic, and produce a JSON flow sequence that maps to Robomotion SDK TypeScript. Use when the user says "explore this page", "find the selector for X", "record the login flow", "what API does this page use", or before writing ANY `Core.Browser.*` flow. Pairs with `/reversing-network` when the captured traffic reveals a clean API.
 allowed-tools: Read, mcp__browser__*
 ---
 
 # Browser Exploration Skill
 
-Interactive browser automation with real-time exploration and flow recording.
+Interactive browser automation with real-time exploration and flow recording. Backed by the `robomotion-browser-mcp` server.
+
+**Pairs with:** `/reversing-network` — once you have captured network traffic, switch from browser automation to HTTP if a clean API is exposed.
 
 ## Overview
 
@@ -192,51 +194,13 @@ Here's the TypeScript flow:
 // ... generated code ...
 ```
 
-## JSON to TypeScript Conversion
-
-The flow sequence JSON maps directly to robomotion-sdk:
-
-```json
-{
-  "flowName": "Login Flow",
-  "actions": [
-    {
-      "nodeType": "Core.Browser.Open",
-      "name": "Open Browser",
-      "props": {
-        "optBrowser": "chrome",
-        "outBrowserId": { "name": "browser_id", "scope": "Message" }
-      }
-    }
-  ]
-}
-```
-
-Converts to:
-
-```typescript
-import { flow } from '@robomotion/sdk';
-
-flow.create('main', 'Login Flow', (f) => {
-  f.node('42ec21', 'Core.Browser.Open', 'Open Browser', {
-    optBrowser: 'chrome',
-    outBrowserId: { name: 'browser_id', scope: 'Message' }
-  });
-  // ... more nodes
-}).start();
-```
-
 ## Tips
 
-1. **Snapshot first, always** - One `browser_snapshot` shows all interactive elements with refs
-2. **Use refs for actions** - `@e3` is faster and less error-prone than guessing XPath
-3. **Re-snapshot after changes** - Navigation, clicks, form submits invalidate refs
-4. **Screenshot for visuals only** - Use when you need to verify layout, colors, or images
-5. **Avoid query spam** - Never make multiple `browser_query` calls to discover the page
-6. **Close browser when done** - ALWAYS `browser_close` after finishing exploration — never leave it open
-7. **Ask before building** - After closing browser, use `AskUserQuestion` before writing/modifying flow code
-8. **Name your flow** - Use `browser_set_flow_name` early
-9. **Explore mode for debugging** - Set `explore=true` to test without recording
+1. **Snapshot first, always** — one `browser_snapshot` shows every interactive element with refs.
+2. **Re-snapshot after page changes** — navigation/clicks invalidate refs.
+3. **Close the browser when done** — always `browser_close`. Never leave it open while writing code.
+
+The conversion from recorded JSON to TypeScript belongs to `/creating-flow`; this skill's job ends at the sequence JSON.
 
 ---
 

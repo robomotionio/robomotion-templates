@@ -2,6 +2,14 @@
 
 Patterns for implementing conditional logic in Robomotion visual flows.
 
+**Related:** `loops.md` (while-loop via Function outputs:2) · `branches.md` (fan-out vs branch) · `exceptions.md` (error branching via Catch).
+
+## When NOT to use
+
+- **Pure data shape** — if you can handle both branches inside one Function (just set `msg.result`), skip the multi-output split.
+- **Binary success/error from a single node** — use `Core.Trigger.Catch`, not a manual Function with `outputs: 2`.
+- **More than ~6 cases** — map data to a key and route with `Switch` (or a Function that dispatches by table lookup).
+
 ## WARNING: Core.Programming.If Does NOT Exist
 
 AI models often invent a `Core.Programming.If` node. **It does not exist.** Use these alternatives:

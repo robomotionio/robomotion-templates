@@ -1,271 +1,156 @@
 ---
 name: running-flow
-description: Executes a Robomotion flow on a robot using the API. Validates first, then runs and monitors execution logs. Use when user wants to run a flow on a robot.
-allowed-tools: Read, Glob, Bash(bun:*), mcp__sdk__validate_flow, mcp__api__*
+description: Executes a Robomotion flow on a robot via `robomotion run <flow-dir>`, then follows the agent-mode JSONL logs emitted on the connected robot's stdout to drive a run → observe → fix loop. Use when the user says "run the flow", "start on robot X", "trigger this on the robot", "test on a robot", or "deploy and run". Falls back to the `robomotion-api-mcp` MCP tools when scripted control is needed.
+allowed-tools: Read, Glob, Bash(bun:*), Bash(robomotion:*), Bash(robomotion-deskbot:*), Bash(tail:*), Bash(grep:*), mcp__sdk__validate_flow, mcp__api__*
 argument-hint: [flow-path]
 ---
 
 # /running-flow
 
-Execute a flow on a robot using the API.
+Run a flow on a robot, watch the agent-mode event stream, react to failures. Three moving parts:
 
-## When to Use
+1. **Robot process** — `robomotion-deskbot connect` keeps the robot online. One long-lived process.
+2. **Trigger** — `robomotion run <flow-dir>` builds locally, uploads, and submits a run.
+3. **Observation** — the deskbot prints JSONL agent events to its stdout, bracketed by `{"event":"agent_mode","status":"start"}` and `{"event":"agent_mode","status":"end"}`. Tail those to drive the fix loop.
 
-- After creating and validating a flow
-- Re-running an existing flow
-- Testing flow changes
+## Step 1 — Robot must be connected
 
-## Prerequisites
-
-Before running:
-
-- [ ] **CRITICAL: Flow validated** - Run `mcp__sdk__validate_flow`
-- [ ] **Tests passed** (if tests exist) - Run `bun test`
-- [ ] **Git committed** - Flow changes committed with descriptive message
-- [ ] Robot available (check with `mcp__api__list_robots`)
-- [ ] ROBOMOTION_API_KEY environment variable set
-
-**NEVER run a flow without validation passing first!** The validator catches:
-- Invalid property names (typos, wrong casing, invented properties)
-- Invalid port connections (connecting to non-existent ports)
-- Missing pspec schemas (warnings for unknown node types)
-
-**See CLAUDE.md for common mistakes to avoid before running.**
-
-## Workflow
-
-### Step 1: Validate Flow (MANDATORY)
-
-```
-mcp__sdk__validate_flow
-  flowPath: "path/to/flow/directory"
-```
-
-This will:
-1. **Validate** all node properties against pspec schemas
-2. **Validate** all port connections
-3. **Check** for unknown node types
-4. **Report** any errors
-
-**Example output (success):**
-```json
-{
-  "valid": true,
-  "message": "Flow validation passed"
-}
-```
-
-**Example output (failure):**
-```json
-{
-  "valid": false,
-  "errors": [
-    "Node '7dbafc': Unknown property 'inURL'. Valid properties: optUrl, inBody, outBody...",
-    "Node 'a06926': Unknown property 'inCode'. Valid properties: func, outputs, variables..."
-  ]
-}
-```
-
-**DO NOT PROCEED if validation fails!** Fix the errors first.
-
-### Step 1.5: Run Tests (if they exist)
-
-After successful validation:
+The robot must be connected BEFORE `robomotion run` can schedule anything on it. Usually a long-lived session in a separate terminal:
 
 ```bash
-cd /path/to/project && bun test
+robomotion-deskbot connect -i "$ROBOMOTION_USER_EMAIL" -w demo.robomotion.io -r Extremis
 ```
 
-If tests fail:
-1. Read error output
-2. Identify the issue
-3. Fix the flow
-4. Re-validate
-5. Re-run tests
+Flags: `-i` identity (email), `-w` workspace domain, `-r` robot name/id, `--token` to skip password prompt. See `robomotion-deskbot connect --help`.
 
-**Note:** Testing is optional if no test suite exists. Validation is mandatory.
+No log-tee setup needed — `robomotion run` reads the session log file the deskbot writes to `~/.config/robomotion/agent/logs/sessions/<studio_id>.jsonl`.
 
-### Step 2: List Available Robots
-
-```
-mcp__api__list_robots
-```
-
-This shows all available robots with their IDs and status.
-
-### Step 3: Start Flow
-
-Choose a robot and start the flow:
-
-```
-mcp__api__run_flow
-  flowPath: "path/to/flow/directory"
-  robotId: "robot-uuid"  (optional, uses default if not specified)
-```
-
-**IMPORTANT:**
-- `flowPath` should be the directory containing `main.ts`
-- Returns a `studio_id` for polling logs
-
-### Step 4: Poll for Completion
-
-Use the returned `studio_id` to monitor execution:
-
-```
-mcp__api__poll_logs
-  studioId: "<studio-id-from-step-3>"
-```
-
-Keep polling until you see completion status.
-
-### Step 5: Check Status (if needed)
-
-To check current robot status:
-
-```
-mcp__api__get_flow_status
-  robotId: "<robot-uuid>"
-```
-
-## Event Types
-
-When polling logs, you'll see various events:
-
-| Event Type | Meaning |
-|------------|---------|
-| `flow_start` | Flow execution began |
-| `node_start` | Node starting execution |
-| `node_end` | Node completed |
-| `node_error` | Node failed with error |
-| `log` | Debug/info message from `Core.Flow.Log` |
-| `flow_end` | Flow completed successfully |
-| `flow_error` | Flow failed |
-
-## Example Response
-
-### Success
-```json
-{
-  "status": "completed",
-  "events": [
-    {"type": "flow_start", "flowName": "My Flow"},
-    {"type": "node_start", "nodeName": "HTTP Request"},
-    {"type": "log", "message": "Fetching data..."},
-    {"type": "node_end", "nodeName": "HTTP Request"},
-    {"type": "flow_end", "status": "success"}
-  ]
-}
-```
-
-### Error
-```json
-{
-  "status": "failed",
-  "events": [
-    {"type": "flow_start", "flowName": "My Flow"},
-    {"type": "node_start", "nodeName": "Function"},
-    {"type": "node_error", "nodeName": "Function", "error": "TypeError: Cannot read property 'data' of undefined"},
-    {"type": "flow_error", "error": "TypeError: ..."}
-  ]
-}
-```
-
-## Error Handling
-
-When flow fails:
-
-1. **Find the failing node** - Look for `node_error` event
-2. **Read the error message** - Usually indicates the problem
-3. **Fix the flow code** - Update TypeScript in flow directory
-4. **Rebuild** - `robomotion build main.ts`
-5. **Re-validate** - `mcp__sdk__validate_flow`
-6. **Run again** - Retry execution
-
-### Common Errors
-
-| Error | Cause | Fix |
-|-------|-------|-----|
-| `Cannot read property 'X' of undefined` | Missing variable | Check variable names with `f.msg('X')` |
-| `Network timeout` | URL unreachable | Check URL, increase timeout |
-| `Selector not found` | Wrong browser selector | Verify selectors exist |
-| `Connection refused` | Service unavailable | Check connection string |
-| `property not found in pspec` | Invalid property name | Use `mcp__sdk__get_node_schema` to verify |
-
-## Auto-Fix Loop
-
-For autonomous operation:
-
-1. Run flow
-2. If error:
-   - Parse `node_error` event
-   - Identify the issue
-   - Fix the TypeScript
-   - Rebuild with `robomotion build main.ts`
-   - Re-validate with `mcp__sdk__validate_flow`
-   - Retry (max 3 times)
-3. If success: Report results to user
-
-## Stopping a Flow
-
-To stop a running flow:
-
-```
-mcp__api__stop_flow
-  robotId: "<robot-uuid>"
-```
-
-## API Commands Reference
-
-| Command | Description |
-|---------|-------------|
-| `mcp__api__list_robots` | List available robots |
-| `mcp__api__run_flow` | Start flow execution |
-| `mcp__api__poll_logs` | Get execution logs |
-| `mcp__api__get_flow_status` | Current robot/flow state |
-| `mcp__api__stop_flow` | Stop running flow |
-
-## Environment Setup
-
-Ensure environment variable is set:
+## Step 2 — Trigger the run
 
 ```bash
-export ROBOMOTION_API_KEY=your-api-key-here
+export ROBOMOTION_API_KEY=<your-api-key>
+export ROBOMOTION_USER_EMAIL=<your-email>
+
+robomotion run <flow-dir>                          # interactive robot picker
+robomotion run <flow-dir> --robot <robot-id>       # scripted
+robomotion run                                     # defaults to main.ts in cwd
 ```
 
-This should be in your environment or MCP server configuration.
+The CLI accepts either a flow directory (resolves to `main.ts` inside) or a `.ts` file. It:
 
-## Monitoring Best Practices
+1. Builds the flow (validates against pspec; fails fast on errors).
+2. Picks a robot (or uses `--robot`).
+3. `POST /v1/flows.agent.run` with a fresh `studio_id` (printed on success).
 
-1. **Poll regularly** - Check logs every 2-3 seconds during execution
-2. **Look for `log` events** - These show `Core.Flow.Log` output (visible to AI)
-3. **Check for errors early** - `node_error` indicates immediate failure
-4. **Track progress** - Use index in loops to show progress
+**Prereqs:** `ROBOMOTION_API_KEY` set; the target robot online (Step 1).
+
+## Step 3 — Observe the agent event stream
+
+`robomotion run` **follows** the stream by default — it tails a session log file the deskbot writes at:
+
+```
+~/.config/robomotion/agent/logs/sessions/<studio_id>.jsonl           (Linux/macOS)
+%LOCALAPPDATA%\Robomotion\agent\logs\sessions\<studio_id>.jsonl      (Windows)
+```
+
+Events are compact one-line JSON, terminated by `agent_mode:end`. Example:
+
+```
+{"event":"agent_mode","status":"start"}
+{"event":"flow_start","flow":"Imported Write To Clipboard","version":"local"}
+{"event":"node_start","node":"Start"}
+{"event":"node_end","node":"Start","duration_ms":21}
+{"event":"node_start","node":"Get Clipboard Data"}
+{"event":"node_end","node":"Get Clipboard Data","duration_ms":4780}
+{"event":"flow_end","status":"success","duration_ms":8852}
+{"event":"agent_mode","status":"end"}
+```
+
+Exit codes from `robomotion run`:
+
+| Code | Meaning |
+|-----:|---------|
+| `0` | `flow_end status=success` |
+| `1` | `flow_end status=error` or `flow_error` |
+| `2` | Tail timeout (session still running) — raise `--timeout` or re-read the log file |
+| `3` | Session submitted but log file never appeared — robot is remote, or an older api-service doesn't forward `studio_id`. Fall back to MCP `poll_logs`. |
+
+Flags: `--no-follow` (fire-and-forget, no stream), `--log-wait <s>` (how long to wait for the file to appear, default 5), `--timeout <s>` (overall follow budget, default 300).
+
+### Event reference
+
+| Event | Fields | Meaning |
+|-------|--------|---------|
+| `agent_mode` | `status: "start" \| "end"` | Brackets the run. `end` is a safety-net terminal event. |
+| `flow_start` | `flow`, `version` | Flow started. |
+| `flow_end` | `status: "success" \| "error"`, `duration_ms`, `error?` | Flow finished — primary terminal event. |
+| `flow_error` | `error`, `node?`, `node_id?`, `duration_ms` | Unhandled flow-level error. |
+| `node_start` | `node` | Node entered. |
+| `node_end` | `node`, `duration_ms` | Node completed. |
+| `node_error` | `node`, `error`, `duration_ms` | Node threw — your signal to fix. |
+| `log` | `node?`, `level`, `msg` | `Core.Flow.Log` output. |
+| `debug` | `node`, `msg` | `Core.Programming.Debug` payload (truncated to 255 bytes per field). |
+| `connected` | `msg` | Robot registered with the workspace. |
+| `ready` | — | Robot ready to accept commands. |
+
+### Re-reading after the run
+
+`robomotion run` consumes the log while streaming. The file persists afterwards; re-read it with any JSONL tool:
+
+```bash
+jq . ~/.config/robomotion/agent/logs/sessions/<studio_id>.jsonl
+```
+
+## Step 4 — The run → observe → fix loop
+
+Target autonomous iteration (bounded retries; stop on user request):
+
+1. `validate_flow` locally (or rely on `robomotion run`'s build-time validation).
+2. `robomotion run <flow-dir> --robot <id>` — capture the `Studio ID`.
+3. Tail the agent stream until `agent_mode:end` for this run.
+4. Classify the outcome:
+   - `flow_end status=success` → report and stop.
+   - `node_error` or `flow_error` → inspect `error` + `node`, fix `main.ts`, re-validate, re-run. Max 3 retries without user confirmation.
+   - Timeout (no `agent_mode:end` within the flow's expected budget) → report and ask.
+5. Between retries, keep mock fixtures stable so you can tell whether a change actually fixed anything.
+
+### Common `node_error` patterns
+
+| `error` fragment | Likely cause | Fix |
+|------------------|--------------|-----|
+| `Cannot read property 'X' of undefined` | Upstream node didn't set `msg.X` | Check the writing node's `out*` property; verify `Message('X')` upstream. |
+| `Network timeout` / `ETIMEDOUT` | URL unreachable from robot | Confirm URL, raise timeout, check proxy. |
+| `element not found` / selector failure | Stale selector | Re-run `/exploring-browser` and update `inSelector`. |
+| `property not found in pspec` | Invalid property name | `get_node_cards` to verify the schema. |
+| `Vault has to be selected` | Missing `optCredentials` on `Core.Vault.GetItem` | Add `optCredentials: Credential({vaultId, itemId})`. |
+
+## Alternative: MCP tool chain (scripted)
+
+When you need structured JSON or can't run background processes, use the API MCP directly:
+
+```
+validate_flow(flowPath: "path/to/flow")
+list_robots()
+run_flow(flowPath: "path/to/flow", robotId: "robot-uuid")   # returns studio_id
+poll_logs(studioId: "<studio-id>")                           # same event shape
+stop_flow(robotId: "<robot-uuid>")                           # if needed
+```
+
+`poll_logs` returns the same event types as the deskbot stream (`flow_start`, `node_start`, `node_end`, `node_error`, `log`, `flow_end`, `flow_error`). Use it if tailing a log file isn't available.
+
+## Quick errors and fixes
+
+| Message | Cause | Fix |
+|---------|-------|-----|
+| `ROBOMOTION_API_KEY environment variable is required` | Env var missing | `export ROBOMOTION_API_KEY=<key>` |
+| `No main.ts found in directory: <path>` | Wrong dir or missing main.ts | Point at a directory that contains `main.ts`. |
+| `Flow validation failed` | pspec violation at build time | Fix errors (use `/validating-flow` for a detailed report) and re-run. |
+| `No robots found` | No robots registered in workspace | Create a robot at https://app.robomotion.io, then `robomotion-deskbot connect`. |
+| Run submits but no `agent_mode:start` appears | Robot offline or in another workspace | Confirm `connected` event in the agent log; match `-w` and `-r` on the deskbot. |
 
 ## Related Skills
 
-- `/creating-flow` - Generate a flow
-- `/validating-flow` - Check before running
-- `/searching-packages` - Find packages/nodes
-- **CLAUDE.md** - Team knowledge base (common mistakes, testing workflows)
-
-## Example Full Workflow
-
-```
-1. User: "Create a flow to fetch Reddit posts"
-
-2. Assistant: Creates flow with builder SDK
-
-3. Assistant: Validates with mcp__sdk__validate_flow
-
-4. Assistant: Runs tests with `bun test` (if they exist)
-
-5. Assistant: Git commits with descriptive message
-
-6. Assistant: Lists robots with mcp__api__list_robots
-
-7. Assistant: Starts flow with mcp__api__run_flow
-
-8. Assistant: Polls logs with mcp__api__poll_logs until completion
-
-9. Assistant: Reports results to user
-```
+- `/creating-flow` — generate the flow
+- `/validating-flow` — schema check (local, no robot needed)
+- `/testing-flow` — behavioral tests with mocks (no robot needed)
+- `/saving-flow` — save to cloud Designer

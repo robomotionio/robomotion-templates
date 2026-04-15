@@ -2,6 +2,14 @@
 
 Patterns for implementing loops in Robomotion visual flows using the builder SDK.
 
+**Related:** `conditions.md` (branching inside a loop body, while-loop shape) · `data-tables.md` (iterating `table.rows`).
+
+## When NOT to use
+
+- **Single known item** — just chain nodes; no ForEach needed.
+- **Fixed small repetition (<3)** — inline the calls; a 2-step loop is harder to read than two sequential calls.
+- **Concurrency needed** — use `ForkBranch` + `MemoryQueue` from `branches.md`, not a serial ForEach.
+
 ## The Loop Challenge
 
 Visual flows execute by passing messages between nodes through wires. Unlike imperative code, there's no call stack or implicit return. When you need to loop, you must **explicitly wire** the flow back to the loop entry point.
@@ -26,6 +34,9 @@ f.edge('3a7c1d', 0, '8e2b4f', 0);  // Port 0 = loop body
 ```
 
 ### Correct (With Goto->Label)
+
+> **Terminal-node rule** (see AGENTS.md Principle 14): `Debug`, `Log`, `Stop`, `GoTo`, `End` have 0 outputs — never chain `.then()` from them. Wire Debug/Log into the body with `f.edge()` from a non-terminal body node.
+
 ```typescript
 // Use .then() for the sequential chain, .edge() only for port 1
 f.node('42ec21', 'Core.Flow.Label', 'Next Item', {})
@@ -33,31 +44,24 @@ f.node('42ec21', 'Core.Flow.Label', 'Next Item', {})
     optInput: Message('items'),
     optOutput: Message('item')
   })
-  // Loop body on port 0 (default .then() connection)
-  // WARNING: Core.Programming.Debug has 0 outputs — NEVER chain .then() after Debug in a loop!
-  // Use Core.Programming.Function for processing (it has 1 output and can be chained).
-  // Core.Programming.RandomSleep does NOT exist — use Core.Programming.Sleep.
   .then('a06926', 'Core.Programming.Function', 'Process Item', {
     func: 'return msg;'
   })
   .then('5f8d3e', 'Core.Programming.Sleep', 'Delay', {
     optDuration: Custom('1')
   })
-  // CRITICAL: GoTo wires back to Label!
-  // Note: Node type is GoTo (capital T), and optNodes.ids must use FULL prefixed IDs
+  // GoTo wires back to Label. Node type is GoTo (capital T); optNodes.ids uses node IDs.
   .then('c91b47', 'Core.Flow.GoTo', 'Continue Loop', {
     optNodes: { ids: ['42ec21'], type: 'goto', all: false }
   });
 
-// To add Debug/logging INSIDE the loop: wire via f.edge() from a non-terminal node
-// NEVER place Debug after GoTo in .then() chain — Debug has 0 outputs too!
-// Both GoTo chain and Debug branch off the same non-terminal node:
+// Debug inside the loop: f.edge() from a non-terminal body node (NEVER from GoTo)
 f.node('dbg01', 'Core.Programming.Debug', 'Log Item', { optDebugData: Message('item') });
-f.edge('a06926', 0, 'dbg01', 0);  // Branch from 'Process Item' — NEVER chain after GoTo
+f.edge('a06926', 0, 'dbg01', 0);
 
-// After loop completes (port 1) - needs .edge() for non-default port
+// After loop completes (port 1) — .edge() for non-default port
 f.node('2e6a8c', 'Core.Flow.Stop', 'Stop', {});
-f.edge('7dbafc', 1, '2e6a8c', 0);  // Port 1 = done
+f.edge('7dbafc', 1, '2e6a8c', 0);
 ```
 
 ### Visual Representation
@@ -97,7 +101,7 @@ f.node('f4a821', 'Core.Flow.Label', 'Next Category', {})
     optInput: Message('category.products'),
     optOutput: Message('product')
   })
-  // Inner loop body (port 0) — use Function (chainable), NOT Debug/Log (terminal, use f.edge())
+  // Inner loop body (port 0) — Function is chainable (1 output); Debug/Log are terminal, see AGENTS.md P14
   .then('d35c12', 'Core.Programming.Function', 'Process Product', {
     func: 'return msg;'
   })
@@ -146,10 +150,9 @@ Add a `Function` node with `outputs: 2` inside the loop body to check a stop con
 | GoTo with wrong ID | optNodes.ids needs the node ID | Use the correct hex ID in optNodes.ids |
 | No delay in loop | Overwhelms target systems | Add RandomSleep in loop body |
 | Wrong port numbers | Port 0 = loop body, Port 1 = done | Check port numbers in f.edge() |
-| Debug in loop chain | Debug has 0 outputs → compile error | Use Function in loop body; wire Debug via f.edge() separately |
-| `Core.Programming.RandomSleep` | Node doesn't exist | Use `Core.Programming.Sleep` with `optRandom: true`, `optRandMin`, `optRandMax` |
-| `Core.Programming.Delay` | Node doesn't exist | Use `Core.Programming.Sleep` with `optDuration: Custom('N')` |
-| Excessive .edge() | Verbose, harder to read | Use `.then()` for sequential chains |
+| Debug in loop chain | Debug has 0 outputs → compile error | Wire Debug via `f.edge()` from a non-terminal body node (see AGENTS.md P14) |
+| Wrong node name (RandomSleep, Delay, …) | Node not found | See `docs/reference/node-naming.md` |
+| Excessive `.edge()` | Verbose, harder to read | Use `.then()` for sequential chains |
 
 ## Summary
 

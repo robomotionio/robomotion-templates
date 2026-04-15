@@ -2,6 +2,15 @@
 
 Patterns for creating modular, reusable flow components using the SubFlow system.
 
+**Related:** `branches.md` (parallel execution) · `exceptions.md` (Catch around a SubFlow) · `conditions.md` (multi-output branching) · `loops.md` (ForEach inside subflows).
+
+## When NOT to use
+
+- **Tiny logic (<3 nodes)** — the Begin/End overhead dwarfs the savings; inline it.
+- **Single-output pass-through** — if the subflow just wraps one Function, inline the Function.
+- **Requires `Core.Trigger.Inject` or `Core.Flow.Stop` inside** — those are flow-level only. SubFlows use `Begin`/`End`. If you need `Inject`, you need a flow, not a subflow.
+- **Library update would break other projects** — library projects update ALL consumers. If the contract isn't stable, keep it as an inline subflow instead.
+
 ## Overview
 
 SubFlows are **reusable flow components** inspired by Node-RED subflows. They enable:
@@ -377,78 +386,13 @@ Inside Bank File Check SubFlow:
 8. **Document expected msg properties** - Add comments about required inputs and outputs
 9. **Use Catch for error handling** - See `exceptions.md` for patterns
 
-## Nested SubFlows (Infinite Depth)
+## Nested SubFlows
 
-Subflows can call other subflows to any depth, just like Node-RED. Each subflow file can contain `Core.Flow.SubFlow` nodes that reference other subflows:
-
-```
-main.ts
-└── Core.Flow.SubFlow (ID: 'e2f81a')
-    └── subflows/e2f81a.ts
-        ├── Core.Flow.Begin
-        ├── Core.Flow.SubFlow (ID: 'd5c3b7')  ← nested call
-        │   └── subflows/d5c3b7.ts
-        │       ├── Core.Flow.Begin
-        │       ├── Core.Flow.SubFlow (ID: 'f8a4e6')  ← deeper nesting
-        │       │   └── subflows/f8a4e6.ts
-        │       │       ├── Core.Flow.Begin
-        │       │       └── Core.Flow.End
-        │       └── Core.Flow.End
-        └── Core.Flow.End
-```
-
-### Example: Level 1 Subflow Calling Level 2
-
-```typescript
-// subflows/e2f81a.ts
-subflow.create('Level 1 SubFlow', (f) => {
-  f.node('4567d8', 'Core.Flow.Begin', 'Begin', {})
-    .then('5678e9', 'Core.Programming.Function', 'Prepare', {
-      func: `msg.level = 1; return msg;`
-    })
-    // Call another subflow (Level 2) — node ID matches subflows/d5c3b7.ts
-    .then('d5c3b7', 'Core.Flow.SubFlow', 'Level 2 SubFlow', {})
-    .then('789a0b', 'Core.Flow.End', 'End', { sfPort: 0 });
-});
-```
-
-```typescript
-// subflows/d5c3b7.ts
-subflow.create('Level 2 SubFlow', (f) => {
-  f.node('89ab1c', 'Core.Flow.Begin', 'Begin', {})
-    .then('9abc2d', 'Core.Programming.Function', 'Process', {
-      func: `msg.level = 2; return msg;`
-    })
-    .then('abcd3e', 'Core.Flow.End', 'End', { sfPort: 0 });
-});
-```
-
-**Note**: Each subflow file uses `subflow.create(name, fn)` and must have its own `Begin` and `End` nodes, regardless of nesting depth.
+Subflows can call other subflows to any depth — a `subflow.create()` file may contain `Core.Flow.SubFlow` nodes referencing other `subflows/*.ts` files, and each file must have its own `Begin` and `End`. No special syntax for nesting.
 
 ## Testing Subflows
 
-Use `SubflowTester` to test subflows in isolation:
-
-```typescript
-import { SubflowTester, discoverSubflows } from '@robomotion/sdk/testing';
-
-// Load single subflow
-const tester = await SubflowTester.load('./subflows/7dbafc');
-
-// Get subflow info
-const info = tester.getInfo();
-console.log('ID:', info.id);
-console.log('Outputs:', info.outputs);
-
-// Validate subflow
-const validation = tester.validate();
-expect(validation.valid).toBe(true);
-
-// Discover all subflows in a flow
-const subflows = await discoverSubflows('./flows/my-flow');
-```
-
-See `testing-flow/SKILL.md` for complete testing documentation.
+See `testing-flow` skill → `reference/subflow-tester.md` for the `SubflowTester` / `discoverSubflows` API.
 
 ## See Also
 

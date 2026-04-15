@@ -1,6 +1,6 @@
 ---
 name: saving-flow
-description: Saves a compiled flow to Robomotion cloud so it can be opened in the Flow Designer. Automatically manages flow IDs - creates new flows and updates existing ones.
+description: Saves a compiled flow to the Robomotion cloud via `robomotion-api-mcp` so it can be opened in the Flow Designer. Use when the user says "save the flow", "deploy to cloud", "send to Designer", or after `/creating-flow` produces a validated flow. Automatically manages flow IDs — first save creates a new flow and rewrites `main.ts`; subsequent saves update the same flow.
 allowed-tools: Read, Bash(ls:*), mcp__sdk__validate_flow, mcp__api__save_flow
 argument-hint: [flow-path]
 ---

@@ -1,6 +1,6 @@
 ---
 name: validating-flow
-description: Validates a compiled Robomotion flow against pspec schemas. Checks node properties, port connections, and node types. Use when user wants to verify a flow is correct before running.
+description: Validates a compiled Robomotion flow against pspec schemas via `robomotion-sdk-mcp`. Checks node property names, port counts, and node types. Use when the user says "validate this flow", "check the flow", "is this correct", or before `/running-flow` / `/saving-flow`. **Does NOT run the flow — for behavioral tests use `/testing-flow`.**
 allowed-tools: Read, Glob, mcp__sdk__validate_flow
 argument-hint: [flow-path]
 ---

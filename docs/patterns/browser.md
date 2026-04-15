@@ -2,6 +2,17 @@
 
 Reference for `Core.Browser.*` nodes and common patterns.
 
+**Related:** `captcha.md` · `credentials.md` · `loops.md` · `skills/reversing-network` (replace browser with HTTP once you've captured the underlying API).
+
+## When NOT to use
+
+- **A clean HTTP/REST API exists** — `Core.Net.HttpRequest` is faster and far more reliable. Capture traffic first (see `skills/reversing-network`).
+- **Single static file to download** — use `Core.Net.HttpRequest` with a file output, not `OpenLink`.
+- **No JS rendering required** — if `curl` gets the data, skip the browser.
+
+> **ES5 only in `func` strings** — no arrow functions, template literals, `const`/`let`, destructuring, or optional chaining. See AGENTS.md Principle 11.
+
+
 ## Core Nodes
 
 | Node | Purpose | Key Properties |
@@ -206,7 +217,23 @@ When building flows, consider whether browser automation is needed or if direct 
 | Login → then API calls | Browser for login, HTTPRequest for data |
 | File downloads behind auth | Browser for auth, HTTPRequest for download |
 
+## Proxy
+
+For sites that block datacenter IPs, route the browser through the Robomotion proxy:
+
+```typescript
+f.node('4a9e12', 'Core.Browser.Open', 'Open Browser', {
+  optBrowser: 'chrome',
+  optProxy: Custom('robomotion-proxy'),
+  outBrowserId: Message('browser_id')
+});
+```
+
+Default (`no-proxy`) is used for normal API calls.
+
 ## Related Documentation
 
-- `loops.md` - ForEach loop wiring for scraping multiple URLs
-- `captcha.md` - Solve captchas during browser automation
+- `loops.md` — ForEach loop wiring for scraping multiple URLs
+- `captcha.md` — solve captchas during browser automation
+- `credentials.md` — browser login via `Core.Vault.GetItem`
+- `skills/reversing-network` — switch to HTTP after capturing the underlying API
