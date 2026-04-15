@@ -1,7 +1,7 @@
 ---
 name: running-flow
-description: Validates locally (`robomotion validate`) then executes a Robomotion flow on a robot (`robomotion run <flow-dir>`), tailing the agent-mode JSONL session log to drive a validate → run → observe → fix loop with bounded retries. Use when the user says "run the flow", "start on robot X", "trigger this on the robot", "test on a robot", or "deploy and run". Falls back to the `robomotion-api-mcp` MCP tools when scripted control is needed.
-allowed-tools: Read, Glob, Bash(bun:*), Bash(robomotion:*), Bash(robomotion-deskbot:*), Bash(tail:*), Bash(grep:*), mcp__sdk__validate_flow, mcp__api__*
+description: Validates locally (`robomotion validate`) then executes a Robomotion flow on a robot (`robomotion run <flow-dir>`), tailing the agent-mode JSONL session log to drive a validate → run → observe → fix loop with bounded retries. Use when the user says "run the flow", "start on robot X", "trigger this on the robot", "test on a robot", or "deploy and run".
+allowed-tools: Read, Glob, Bash(bun:*), Bash(robomotion:*), Bash(robomotion-deskbot:*), Bash(tail:*), Bash(grep:*)
 argument-hint: [flow-path]
 ---
 
@@ -86,7 +86,7 @@ Exit codes from `robomotion run`:
 | `0` | `flow_end status=success` |
 | `1` | `flow_end status=error` or `flow_error` |
 | `2` | Tail timeout (session still running) — raise `--timeout` or re-read the log file |
-| `3` | Session submitted but log file never appeared — robot is remote, or an older api-service doesn't forward `studio_id`. Fall back to MCP `poll_logs`. |
+| `3` | Session submitted but log file never appeared — robot is on a different machine so its log lives there. The run still proceeds on the robot; check the Flow Designer for progress. |
 
 Flags: `--no-follow` (fire-and-forget, no stream), `--log-wait <s>` (how long to wait for the file to appear, default 5), `--timeout <s>` (overall follow budget, default 300).
 
@@ -125,7 +125,7 @@ Target autonomous iteration (bounded retries; stop on user request):
    - `flow_end status=success` (CLI exit 0) → report and stop.
    - `node_error` or `flow_error` (CLI exit 1) → inspect `error` + `node`, fix `main.ts`, **back to step 1**. Max 3 retries without user confirmation.
    - Timeout (CLI exit 2) → flow may still be running on the robot; report and ask.
-   - Log unreachable (CLI exit 3) → robot is remote; fall back to MCP `poll_logs`.
+   - Log unreachable (CLI exit 3) → robot is remote; watch progress in the Flow Designer instead.
 5. Between retries, keep mock/test fixtures stable so a passing run actually proves the fix.
 
 ### Common `node_error` patterns
@@ -135,22 +135,14 @@ Target autonomous iteration (bounded retries; stop on user request):
 | `Cannot read property 'X' of undefined` | Upstream node didn't set `msg.X` | Check the writing node's `out*` property; verify `Message('X')` upstream. |
 | `Network timeout` / `ETIMEDOUT` | URL unreachable from robot | Confirm URL, raise timeout, check proxy. |
 | `element not found` / selector failure | Stale selector | Re-run `/exploring-browser` and update `inSelector`. |
-| `property not found in pspec` | Invalid property name | `get_node_cards` to verify the schema. |
+| `property not found in pspec` | Invalid property name | `robomotion describe node <type>` to verify the schema. |
 | `Vault has to be selected` | Missing `optCredentials` on `Core.Vault.GetItem` | Add `optCredentials: Credential({vaultId, itemId})`. |
 
-## Alternative: MCP tool chain (scripted)
+## Other useful CLI verbs
 
-When you need structured JSON or can't run background processes, use the API MCP directly:
-
-```
-validate_flow(flowPath: "path/to/flow")
-list_robots()
-run_flow(flowPath: "path/to/flow", robotId: "robot-uuid")   # returns studio_id
-poll_logs(studioId: "<studio-id>")                           # same event shape
-stop_flow(robotId: "<robot-uuid>")                           # if needed
-```
-
-`poll_logs` returns the same event types as the deskbot stream (`flow_start`, `node_start`, `node_end`, `node_error`, `log`, `flow_end`, `flow_error`). Use it if tailing a log file isn't available.
+- `robomotion get robots` — list available robots (same data the interactive picker uses).
+- `robomotion stop --robot <robot-id>` — stop whatever flow is running on a robot.
+- `robomotion get vaults` / `robomotion get vault-items <vault-id>` — credentials available to your workspace.
 
 ## Quick errors and fixes
 
@@ -167,4 +159,3 @@ stop_flow(robotId: "<robot-uuid>")                           # if needed
 - `/creating-flow` — generate the flow
 - `/validating-flow` — schema check (local, no robot needed)
 - `/testing-flow` — behavioral tests with mocks (no robot needed)
-- `/saving-flow` — save to cloud Designer

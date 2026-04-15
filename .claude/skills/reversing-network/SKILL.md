@@ -1,7 +1,7 @@
 ---
 name: reversing-network
 description: Reverses the network traffic behind a browser flow to replace slow browser automation with direct HTTP requests. Use when the user says "this browser flow is too slow", "find the API this page uses", "convert to HTTP", "can we call the API instead", or when `/exploring-browser` reveals a clean REST/GraphQL endpoint.
-allowed-tools: get_node_cards, plan_flow, get_reference_doc, get_llms_txt, browser_open, browser_navigate, browser_start_network_capture, browser_get_requests, browser_get_responses, browser_get_request_response, browser_stop_network_capture, browser_clear_network_capture, browser_close, browser_click, browser_type, browser_snapshot
+allowed-tools: Read, Bash(robomotion:*), mcp__browser__*
 auto-inject: false
 ---
 
@@ -135,7 +135,7 @@ f.node('goto', 'Core.Flow.GoTo', 'Next', {
 
 ## Common HTTP Node Properties
 
-Verify exact names with `get_node_cards(['Core.Net.HttpRequest'])`:
+Verify exact names with `robomotion describe node Core.Net.HttpRequest`:
 
 | Property | Value |
 |----------|-------|

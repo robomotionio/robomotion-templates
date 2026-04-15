@@ -10,7 +10,7 @@ RPA platform with TypeScript SDK and visual node editor. Create, validate, and e
 4. **`Message()` for variables, `Custom()` for literals, `JS()` for one-liner Javascript, `Credential()` for secrets**
 5. **`func` is literal string** (NOT `JS()`), enum props are plain strings (NOT `Custom()`)
 6. **Loops: Label -> ForEach -> body -> GoTo** — visual flows have no implicit loop
-7. **Verify before coding** — use `plan_flow` or `get_node_cards` to get schemas, NEVER guess property names. *Guessed names fail validation silently when the real property has a different scope or casing.*
+7. **Verify before coding** — use `robomotion describe node <type>` (or `robomotion search <query>`) to get schemas, NEVER guess property names. *Guessed names fail validation silently when the real property has a different scope or casing.*
 8. **Self-contained flows** — NEVER use bash to create dirs/files; use `Core.FileSystem.Create`
 9. **`addDependency` for non-`Core.*` packages** — every non-`Core.*` package needs `f.addDependency(ns, ver)`. When updating existing flows: NEVER change existing versions, only add missing ones with latest. *Without `addDependency`, the Designer shows an empty version field and the robot can't resolve the package.*
 10. **NEVER use `ScrapeList` or `ScrapeTable`** — `Core.Browser.ScrapeList` and `Core.Browser.ScrapeTable` are unreliable. Use `Core.Browser.RunScript` to extract data in Data Table format instead.
@@ -48,7 +48,7 @@ RPA platform with TypeScript SDK and visual node editor. Create, validate, and e
 | Mistake | Consequence | Fix |
 |---------|-------------|-----|
 | Writing credential code without loading doc | Wrong `Credential()` pattern | `get_reference_doc(doc='credentials')` FIRST |
-| Using `optApiKey` vs `inCredentials` wrong | Auth failure | Verify with `get_node_cards` first |
+| Using `optApiKey` vs `inCredentials` wrong | Auth failure | Verify with `robomotion describe node <type>` first |
 | Missing `optCredentials` on `Core.Vault.GetItem` | "Vault has to be selected" error | `optCredentials: Credential({vaultId, itemId})` REQUIRED |
 
 ### System variables / scope
@@ -76,45 +76,51 @@ RPA platform with TypeScript SDK and visual node editor. Create, validate, and e
 
 ## Quick Reference Map
 
-Docs load with `get_reference_doc(doc='<topic>')`. Skills load with `get_skill('<name>')`. Verify schemas with `get_node_cards` / `plan_flow` — do not guess.
+Pattern docs live on disk under `docs/`. Read them directly.
 
-| Topic | `doc` param | File |
-|-------|------------|------|
-| SDK syntax & grammar (incl. terminal nodes) | `sdk-grammar` | docs/sdk-grammar.md |
-| Architecture | `architecture` | docs/architecture.md |
-| Loop patterns | `loops` | docs/patterns/loops.md |
-| Conditions | `conditions` | docs/patterns/conditions.md |
-| Credentials | `credentials` | docs/patterns/credentials.md |
-| Browser automation (incl. proxy) | `browser` | docs/patterns/browser.md |
-| Exception handling | `exceptions` | docs/patterns/exceptions.md |
-| Branches & parallel | `branches` | docs/patterns/branches.md |
-| Subflows | `subflows` | docs/patterns/subflows.md |
-| Data tables | `data-tables` | docs/patterns/data-tables.md |
-| Captcha solving | `captcha` | docs/patterns/captcha.md |
-| System variables | `system-variables` | docs/reference/system-variables.md |
-| Node naming (wrong → correct) | `node-naming` | docs/reference/node-naming.md |
-| Credential categories (field layouts) | `credential-categories` | docs/reference/credential-categories.md |
+| Topic | File |
+|-------|------|
+| SDK syntax & grammar (incl. terminal nodes) | docs/sdk-grammar.md |
+| Architecture | docs/architecture.md |
+| Loop patterns | docs/patterns/loops.md |
+| Conditions | docs/patterns/conditions.md |
+| Credentials | docs/patterns/credentials.md |
+| Browser automation (incl. proxy) | docs/patterns/browser.md |
+| Exception handling | docs/patterns/exceptions.md |
+| Branches & parallel | docs/patterns/branches.md |
+| Subflows | docs/patterns/subflows.md |
+| Data tables | docs/patterns/data-tables.md |
+| Captcha solving | docs/patterns/captcha.md |
+| System variables | docs/reference/system-variables.md |
+| Node naming (wrong → correct) | docs/reference/node-naming.md |
+| Credential categories (field layouts) | docs/reference/credential-categories.md |
 
-Other tools:
+For schemas, examples, and package docs use the `robomotion` CLI:
 
-| Need | Tool |
-|------|------|
-| Node schemas & examples | `get_node_cards(nodeTypes[])` |
-| Package overview for a description | `plan_flow(description)` |
-| Package docs (compact header) | `get_llms_txt(namespace)` — MANDATORY per package |
-| Full package docs | `get_llms_txt(namespace, full=true)` |
-| Single node's section only | `get_llms_txt(namespace, section='NodeName')` |
+| Need | Command |
+|------|---------|
+| Cross-source fuzzy/semantic search | `robomotion search <query>` |
+| List / filter packages | `robomotion get packages [query]` |
+| List / filter nodes | `robomotion get nodes [query] [--in <ns>]` |
+| List / filter templates, examples | `robomotion get templates/examples [query]` |
+| Full node schema + docs + example | `robomotion describe node <type>[,<type>...]` |
+| Package info | `robomotion describe package <namespace>` |
+| Template / example source | `robomotion describe template \| example <name>` |
+| Package docs (llms.txt) | `robomotion docs <namespace>` |
+| Grep package docs | `robomotion docs <namespace> --grep <pattern>` |
+| List vaults | `robomotion get vaults` |
+| List items in a vault | `robomotion get vault-items <vault-id>` |
+| List robots | `robomotion get robots` |
 
 ## Available Skills
 
 | Skill | Purpose | Load with |
 |-------|---------|-----------|
-| `/creating-flow` | Create flows: plan → build → validate → deploy | `get_skill('creating-flow')` |
+| `/creating-flow` | Create flows: plan → build → validate → run | `get_skill('creating-flow')` |
 | `/running-flow` | Execute flow on robot | `get_skill('running-flow')` |
-| `/saving-flow` | Save flow to cloud | `get_skill('saving-flow')` |
 | `/testing-flow` | Write and run behavioral tests | `get_skill('testing-flow')` |
 | `/validating-flow` | Schema validation | `get_skill('validating-flow')` |
-| `/searching-packages` | Find packages and nodes | `get_skill('searching-packages')` |
+| `/searching-packages` | Find packages, nodes, templates | `get_skill('searching-packages')` |
 | `/exploring-browser` | Interactive browser automation | `get_skill('exploring-browser')` |
 | `/reversing-network` | Reverse-engineer browser traffic to HTTP | `get_skill('reversing-network')` |
 
@@ -124,28 +130,24 @@ The Robomotion binaries live on `PATH` (Mac, Windows, Linux). Always call them b
 
 | Binary | Purpose |
 |--------|---------|
-| `robomotion` | CLI: build (`robomotion build main.ts`), validate, run flows locally |
-| `robomotion-sdk-mcp` | MCP server — flow authoring: `plan_flow`, `get_node_cards`, `validate_flow`, `search_packages`, `search_nodes`, `get_llms_txt`, `unified_search`, `get_reference_doc`, `get_skill` |
-| `robomotion-api-mcp` | MCP server — cloud API: `list_robots`, `run_flow`, `save_flow`, `vault_list`, `vault_item_list`, `poll_logs` |
-| `robomotion-browser-mcp` | MCP server — browser automation for exploration: `browser_open`, `browser_snapshot`, `browser_click`, `browser_type`, `browser_start_network_capture`, etc. Used inside `discover_browser_flow` |
+| `robomotion` | Self-sufficient CLI. Builds, validates, runs, searches, inspects. See `robomotion help` for the full verb list. |
+| `robomotion-browser-mcp` | MCP server for interactive browser exploration. Used inside `discover_browser_flow` and via `mcp__browser__*` tools when the `/exploring-browser` skill is active. |
 
-### MCP Tools
+No other MCP servers are required. `robomotion` shells out to `robomotion-sdk-mcp` internally for search-backed commands, and calls `api.robomotion.io` directly for run/stop/vault/robot operations.
 
-| Tool | Server | Purpose |
-|------|--------|---------|
-| `plan_flow` | sdk | Get packages + node cards + template + package docs for a description |
-| `get_node_cards` | sdk | Batch schema + docs for specific node types |
-| `validate_flow` | sdk | Compile + validate against pspec schemas |
-| `search_packages` / `search_nodes` | sdk | Find packages / nodes by keyword |
-| `get_llms_txt` | sdk | Compact or full package documentation |
-| `generate_dependencies` | sdk | Dependency namespaces + latest versions |
-| `unified_search` | sdk | Cross-source search (templates, examples, rules) |
-| `get_reference_doc` | sdk | Load a reference doc by topic |
-| `get_skill` | sdk | Load a skill's full instructions |
-| `list_robots` / `run_flow` / `poll_logs` | api | Execute flows on a robot and monitor |
-| `save_flow` | api | Save compiled flow to cloud |
-| `vault_list` / `vault_item_list` | api | Discover credentials |
-| `discover_browser_flow` | sdk (delegates to browser) | Sub-agent with full browser tool access — use this instead of raw `browser_*` tools |
+### CLI verbs
+
+| Verb | Purpose |
+|------|---------|
+| `robomotion build` | compile flow to merged JSON |
+| `robomotion validate` | pspec-check without emitting JSON |
+| `robomotion run` | submit + stream agent-mode events |
+| `robomotion stop` | stop the flow currently running on a robot |
+| `robomotion search` | fuzzy + semantic cross-source search |
+| `robomotion get <resource>` | list / filter — packages, nodes, templates, examples, vaults, vault-items, robots |
+| `robomotion describe <resource>` | detailed view — node, package, template, example |
+| `robomotion docs <namespace>` | read or grep llms.txt |
+| `robomotion install` / `skills` / `version` | admin |
 
 ## Per-Turn Reminders
 
@@ -159,17 +161,17 @@ The five drift-prone rules to re-check before EVERY `Write`/`Edit` that emits fl
 
 ## Workflow
 
-1. **Gather requirements** — credentials (`vault_list`), URLs, files, iteration, errors
-2. **Plan** — `plan_flow(description)` — returns packages, node cards, template, AND package docs (llms.txt headers) for all matched packages
-3. **Read package docs** — `plan_flow` includes llms.txt automatically. For packages added later, call `get_llms_txt(namespace)` — MANDATORY per package
+1. **Gather requirements** — credentials (`robomotion get vaults` + `robomotion get vault-items <id>`), URLs, files, iteration, errors
+2. **Discover** — `robomotion search <description>` for templates/nodes that match; `robomotion get nodes <keyword>` for specific nodes
+3. **Read package docs** — `robomotion docs <namespace>` — MANDATORY per non-`Core.*` package used
 4. **Browser?** — if browser automation: `discover_browser_flow(description, url)` MANDATORY
-5. **Get approval** — output plan as text, then `AskUserQuestion` ("Build it" / "Modify plan")
-6. **Read reference docs** — `get_reference_doc` for 1-2 topic-relevant pattern docs
-7. **Load skill** — for non-standard workflows (run, save, search, CAPTCHA, network reversal), call `get_skill(name)` first
-8. **Write flow** — verify schemas with `get_node_cards` first, then write main.ts
-9. **Validate** — `validate_flow(flowPath)` — compiles + validates (MANDATORY before save/run)
+5. **Read pattern docs** — read 1-2 topic-relevant files from `docs/patterns/*.md` or `docs/reference/*.md`
+6. **Load skill** — for non-standard workflows (CAPTCHA, network reversal), call `get_skill(name)` first
+7. **Verify schemas** — `robomotion describe node <type>[,<type>...]` before writing main.ts
+8. **Write flow** with the `Write` tool
+9. **Validate** — `robomotion validate <flow-dir>` (MANDATORY before run)
 10. **Verify selectors** — if browser flow: query EVERY selector on live page MANDATORY
-11. **Save or run** — `save_flow` / `run_flow`
+11. **Run** — `robomotion run <flow-dir>` streams agent events until completion. Commit + `git push` to persist.
 
 ## Canonical Examples
 
