@@ -1,19 +1,32 @@
 ---
 name: running-flow
-description: Executes a Robomotion flow on a robot via `robomotion run <flow-dir>`, then follows the agent-mode JSONL logs emitted on the connected robot's stdout to drive a run → observe → fix loop. Use when the user says "run the flow", "start on robot X", "trigger this on the robot", "test on a robot", or "deploy and run". Falls back to the `robomotion-api-mcp` MCP tools when scripted control is needed.
+description: Validates locally (`robomotion validate`) then executes a Robomotion flow on a robot (`robomotion run <flow-dir>`), tailing the agent-mode JSONL session log to drive a validate → run → observe → fix loop with bounded retries. Use when the user says "run the flow", "start on robot X", "trigger this on the robot", "test on a robot", or "deploy and run". Falls back to the `robomotion-api-mcp` MCP tools when scripted control is needed.
 allowed-tools: Read, Glob, Bash(bun:*), Bash(robomotion:*), Bash(robomotion-deskbot:*), Bash(tail:*), Bash(grep:*), mcp__sdk__validate_flow, mcp__api__*
 argument-hint: [flow-path]
 ---
 
 # /running-flow
 
-Run a flow on a robot, watch the agent-mode event stream, react to failures. Three moving parts:
+Run a flow on a robot, watch the agent-mode event stream, react to failures. Four moving parts:
 
-1. **Robot process** — `robomotion-deskbot connect` keeps the robot online. One long-lived process.
-2. **Trigger** — `robomotion run <flow-dir>` builds locally, uploads, and submits a run.
-3. **Observation** — the deskbot prints JSONL agent events to its stdout, bracketed by `{"event":"agent_mode","status":"start"}` and `{"event":"agent_mode","status":"end"}`. Tail those to drive the fix loop.
+1. **Pre-flight** — `robomotion validate <flow-dir>` catches pspec/schema errors locally in <1s before you ever submit. Cheap; always do it first.
+2. **Robot process** — `robomotion-deskbot connect` keeps the robot online. One long-lived process.
+3. **Trigger** — `robomotion run <flow-dir>` builds locally, submits, and streams the event log.
+4. **Observation** — `run` tails the JSONL session log; events are bracketed by `{"event":"agent_mode","status":"start"}` … `{"event":"agent_mode","status":"end"}`.
 
-## Step 1 — Robot must be connected
+## Step 1 — Validate (mandatory pre-flight)
+
+```bash
+robomotion validate <flow-dir>           # exit 0 = pspec-clean, 1 = errors on stderr
+```
+
+Catches every "wrong property name", "non-existent node type", "invalid port" before any robot-side work. The CLI rebuilds + validates without touching `*.designer.ts` or emitting JSON. **Don't skip it** — diagnosing a pspec error from a `node_error` event in the run log is much slower than reading the validate output.
+
+If validate fails: read stderr, fix `main.ts`, re-run validate. Loop until exit 0, then proceed.
+
+> `robomotion run` also validates as part of its build step, so a bad flow won't reach the robot — but you'll find out *after* the network round-trip and `Submitting flow for execution...` spinner. Validate first.
+
+## Step 2 — Robot must be connected
 
 The robot must be connected BEFORE `robomotion run` can schedule anything on it. Usually a long-lived session in a separate terminal:
 
@@ -25,7 +38,7 @@ Flags: `-i` identity (email), `-w` workspace domain, `-r` robot name/id, `--toke
 
 No log-tee setup needed — `robomotion run` reads the session log file the deskbot writes to `~/.config/robomotion/agent/logs/sessions/<studio_id>.jsonl`.
 
-## Step 2 — Trigger the run
+## Step 3 — Trigger the run
 
 ```bash
 export ROBOMOTION_API_KEY=<your-api-key>
@@ -42,9 +55,9 @@ The CLI accepts either a flow directory (resolves to `main.ts` inside) or a `.ts
 2. Picks a robot (or uses `--robot`).
 3. `POST /v1/flows.agent.run` with a fresh `studio_id` (printed on success).
 
-**Prereqs:** `ROBOMOTION_API_KEY` set; the target robot online (Step 1).
+**Prereqs:** Step 1 (validate) clean; `ROBOMOTION_API_KEY` set; the target robot online (Step 2).
 
-## Step 3 — Observe the agent event stream
+## Step 4 — Observe the agent event stream
 
 `robomotion run` **follows** the stream by default — it tails a session log file the deskbot writes at:
 
@@ -101,18 +114,19 @@ Flags: `--no-follow` (fire-and-forget, no stream), `--log-wait <s>` (how long to
 jq . ~/.config/robomotion/agent/logs/sessions/<studio_id>.jsonl
 ```
 
-## Step 4 — The run → observe → fix loop
+## Step 5 — The validate → run → observe → fix loop
 
 Target autonomous iteration (bounded retries; stop on user request):
 
-1. `validate_flow` locally (or rely on `robomotion run`'s build-time validation).
-2. `robomotion run <flow-dir> --robot <id>` — capture the `Studio ID`.
-3. Tail the agent stream until `agent_mode:end` for this run.
-4. Classify the outcome:
-   - `flow_end status=success` → report and stop.
-   - `node_error` or `flow_error` → inspect `error` + `node`, fix `main.ts`, re-validate, re-run. Max 3 retries without user confirmation.
-   - Timeout (no `agent_mode:end` within the flow's expected budget) → report and ask.
-5. Between retries, keep mock fixtures stable so you can tell whether a change actually fixed anything.
+1. **Validate locally**: `robomotion validate <flow-dir>` — must exit 0 before submitting. If non-zero, fix `main.ts` from the stderr report and repeat this step (do NOT submit a known-broken flow).
+2. **Submit**: `robomotion run <flow-dir> --robot <id>` — capture the `Session` / `Studio ID`.
+3. **Stream**: `run` tails the agent log automatically until `agent_mode:end`.
+4. **Classify**:
+   - `flow_end status=success` (CLI exit 0) → report and stop.
+   - `node_error` or `flow_error` (CLI exit 1) → inspect `error` + `node`, fix `main.ts`, **back to step 1**. Max 3 retries without user confirmation.
+   - Timeout (CLI exit 2) → flow may still be running on the robot; report and ask.
+   - Log unreachable (CLI exit 3) → robot is remote; fall back to MCP `poll_logs`.
+5. Between retries, keep mock/test fixtures stable so a passing run actually proves the fix.
 
 ### Common `node_error` patterns
 
