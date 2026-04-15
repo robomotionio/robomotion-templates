@@ -1,30 +1,59 @@
 ---
 name: validating-flow
-description: Validates a compiled Robomotion flow against pspec schemas via `robomotion-sdk-mcp`. Checks node property names, port counts, and node types. Use when the user says "validate this flow", "check the flow", "is this correct", or before `/running-flow` / `/saving-flow`. **Does NOT run the flow — for behavioral tests use `/testing-flow`.**
-allowed-tools: Read, Glob, mcp__sdk__validate_flow
+description: Validates a compiled Robomotion flow against pspec schemas. Prefer the `robomotion validate <flow-dir>` CLI (build + pspec check, exits 0/1, no stdout on success). Use when the user says "validate this flow", "check the flow", "is this correct", or before `/running-flow` / `/saving-flow`. **Does NOT run the flow — for behavioral tests use `/testing-flow`.**
+allowed-tools: Read, Glob, Bash(robomotion:*), mcp__sdk__validate_flow
 argument-hint: [flow-path]
 ---
 
 # /validating-flow
 
-Validate a compiled flow against pspec schemas, including all subflows.
+Build + validate a flow against pspec schemas, including all subflows.
 
 ## When to Use
 
-- After writing a flow with TypeScript SDK
-- Before running a flow
-- To check flow structure for errors
+- After writing or editing a flow with the TypeScript SDK
+- Before running, saving, or committing a flow
+- In a tight validate-then-fix loop while iterating
 
-## Workflow
+## Preferred: `robomotion validate` CLI
 
-### Step 1: Validate Flow
+```bash
+robomotion validate <flow-dir>      # e.g. robomotion validate write-to-clipboard
+robomotion validate                  # defaults to main.ts in cwd
+robomotion validate path/to/main.ts  # also accepts a file
+```
+
+The CLI builds the flow (via Bun + `@robomotion/sdk`) and runs it through pspec
+validation. On success, exits 0 with a single `✔ <name> validated` line on
+stderr and **no stdout output** — composes cleanly in shell pipelines:
+
+```bash
+robomotion validate write-to-clipboard/ && robomotion run write-to-clipboard/
+```
+
+On failure, exits 1 and prints node-by-node errors on stderr. Designer side
+files (`*.designer.ts`) are NOT regenerated on validate — use `robomotion build`
+when you want JSON output or designer refresh.
+
+### Validate-then-fix loop
+
+```bash
+robomotion validate write-to-clipboard/    # exit 1, error report on stderr
+# read the error, edit main.ts to fix, then:
+robomotion validate write-to-clipboard/    # exit 0
+```
+
+## Alternative: MCP tool
 
 ```
 mcp__sdk__validate_flow
   flowPath: "path/to/flow-directory"
 ```
 
-The validator automatically builds `main.ts` (via `robomotion build`) and validates the output — no manual build step needed.
+Equivalent to `robomotion validate` — returns the result as a structured JSON
+object instead of stderr text. Use this when you need the structured
+`ValidationResult` (e.g. iterating errors programmatically). The MCP tool
+auto-builds via `robomotion build` — no manual build step needed.
 
 This validates:
 - Node properties against pspec schemas

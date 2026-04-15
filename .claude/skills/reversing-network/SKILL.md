@@ -1,13 +1,15 @@
 ---
-name: technique-network-reversal
-description: Reverse-engineer browser traffic to replace slow browser automation with direct HTTP requests — load when you want to convert browser flows to faster API/HTTP calls
+name: reversing-network
+description: Reverses the network traffic behind a browser flow to replace slow browser automation with direct HTTP requests. Use when the user says "this browser flow is too slow", "find the API this page uses", "convert to HTTP", "can we call the API instead", or when `/exploring-browser` reveals a clean REST/GraphQL endpoint.
 allowed-tools: get_node_cards, plan_flow, get_reference_doc, get_llms_txt, browser_open, browser_navigate, browser_start_network_capture, browser_get_requests, browser_get_responses, browser_get_request_response, browser_stop_network_capture, browser_clear_network_capture, browser_close, browser_click, browser_type, browser_snapshot
 auto-inject: false
 ---
 
-# Technique: Network Reversal (Browser → HTTP)
+# Reversing Network (Browser → HTTP)
 
-Load this skill with `get_skill('technique-network-reversal')` when you want to replace browser automation with faster, more reliable HTTP requests by reverse-engineering the underlying API.
+Replace browser automation with faster, more reliable HTTP requests by reverse-engineering the underlying API with `robomotion-browser-mcp` network capture.
+
+**Pairs with:** `/exploring-browser` — capture traffic there during exploration, then come here to convert. Load with `get_skill('reversing-network')`.
 
 ## When to Use This
 

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "api": {
+      "type": "stdio",
+      "command": "robomotion-api-mcp"
+    },
+    "browser": {
+      "type": "stdio",
+      "command": "robomotion-browser-mcp"
+    }
+  }
+}
