@@ -110,7 +110,6 @@ Other tools:
 | Skill | Purpose | Load with |
 |-------|---------|-----------|
 | `/creating-flow` | Create flows: plan → build → validate → deploy | `get_skill('creating-flow')` |
-| `/planning-flow` | Research packages and create plan | `get_skill('planning-flow')` |
 | `/running-flow` | Execute flow on robot | `get_skill('running-flow')` |
 | `/saving-flow` | Save flow to cloud | `get_skill('saving-flow')` |
 | `/testing-flow` | Write and run behavioral tests | `get_skill('testing-flow')` |

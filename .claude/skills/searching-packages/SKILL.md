@@ -295,4 +295,3 @@ Use `refresh_search_index` to force rebuild if needed.
 
 - `/creating-flow` - Generate a flow using found nodes
 - `/validating-flow` - Check compiled flow
-- `/planning-flow` - Research and plan before building

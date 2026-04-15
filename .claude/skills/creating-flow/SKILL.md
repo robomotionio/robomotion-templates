@@ -32,7 +32,7 @@ In direct mode:
 
 ## Step 0: Gather Requirements (interactive)
 
-1. **Credentials** — API keys/passwords? Use `vault_list` + `vault_item_list`; pick the best match and add to the plan.
+1. **Credentials** — API keys/passwords? Use `vault_list` + `vault_item_list`; pick the best match by service/item name and put it in the plan. Let the user *correct* if you picked wrong. Do NOT pepper them with `AskUserQuestion` option buttons to choose a vault item — just commit to a pick and move on.
 2. **URLs/Endpoints** — confirm with user.
 3. **Files** — input/output? The flow MUST create dirs with `Core.FileSystem.Create` (never bash).
 4. **Iteration** — multiple items → ForEach loop with Goto→Label. Single item → simple chain.
@@ -157,7 +157,6 @@ When running inside the Robomotion Designer, a Flow ID is provided in context:
 
 ## Related Skills
 
-- `/planning-flow` — research only (no code)
 - `/validating-flow` — schema validation
 - `/testing-flow` — behavioral tests
 - `/running-flow` — execute on robot

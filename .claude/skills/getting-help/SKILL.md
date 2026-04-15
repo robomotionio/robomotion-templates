@@ -14,20 +14,11 @@ Get help with available skills and Claude Code features for Robomotion flow gene
 - `/creating-flow` - Complete workflow (plan → build → test → commit)
 
 ### Flow Creation (Modular)
-- `/planning-flow` - Research packages and create plan (read-only)
-- `/creating-flow` - Generate TypeScript code from plan
-- `/testing-flow` - Validate and test flow
+- `/creating-flow` - Full workflow: plan → build → validate → deploy
+- `/testing-flow` - Behavioral tests with mocks
 
-**When to use modular skills:**
-- Want fine-grained control over each step
-- Iterative development (repeat steps as needed)
-- Learning or experimenting with flows
-- Complex flows requiring multiple iterations
-
-**When to use /creating-flow:**
-- Quick, straightforward flows
-- Clear requirements from the start
-- One-shot creation without iteration
+Claude Code's plan mode gives you the research/planning phase for free —
+read-only exploration, present the plan, exit plan mode to build.
 
 ### Package Discovery
 - `/searching-packages` - Search for packages, nodes, templates with Bleve full-text search
