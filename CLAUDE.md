@@ -8,5 +8,5 @@ See [AGENTS.md](./AGENTS.md) for all instructions.
 
 - [SDK Grammar](docs/sdk-grammar.md)
 - [Architecture](docs/architecture.md)
-- [Patterns](docs/patterns/) — loops, conditions, credentials, browser, exceptions, branches, subflows, data-tables
-- [Reference](docs/reference/) — system variables, packages, terminal nodes
+- [Patterns](docs/patterns/) — loops, conditions, credentials, browser, captcha, exceptions, branches, subflows, data-tables
+- [Reference](docs/reference/) — system variables, node naming, credential categories
