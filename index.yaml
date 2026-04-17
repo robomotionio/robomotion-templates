@@ -363,3 +363,17 @@ templates:
     updated: "2025-11-17"
     screenshot: screenshot.png
     has_subflows: false
+
+  - name: Redis Basics
+    slug: redis-basics
+    summary: >-
+      Demonstrates the fundamental Connect → Set → Get → Disconnect pattern of
+      the Robomotion Redis package. Stores a key, reads it back, and shows the
+      result in a dialog — a minimal starting point for any Redis automation.
+    category: Databases
+    tags: [redis, cache, key-value, database, example]
+    author: Robomotion
+    created: "2026-04-17"
+    updated: "2026-04-17"
+    screenshot: screenshot.png
+    has_subflows: false
