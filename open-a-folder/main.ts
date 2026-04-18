@@ -5,7 +5,7 @@ const myFlow = flow.create('024d427e-0ed0-441d-974a-c56ac07215ca', 'Imported Ope
 
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a10002', 'Core.Programming.Function', 'Build Documents Path', {
-      func: `msg.documents_folder_path = global.get('$Home$') + '\\\\Documents'; return msg;`,
+      func: `msg.documents_folder_path = global.get('$Home$') + '/Documents'; return msg;`,
     })
     .then('a10003', 'Core.Dialog.InputBox', 'Ask Folder', {
       inTitle: Custom('Open a folder'),
