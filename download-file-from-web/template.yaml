@@ -5,6 +5,7 @@ summary: >-
   computer. Displays a confirmation message with the download path upon
   completion.
 category: File Operations
+level: Beginner
 tags: [download, http, file, web]
 author: Robomotion
 created: "2025-11-16"

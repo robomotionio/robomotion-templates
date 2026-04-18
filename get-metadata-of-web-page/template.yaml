@@ -1,0 +1,15 @@
+name: Get Metadata of a Web Page
+slug: get-metadata-of-web-page
+summary: >-
+  Navigates to a URL, reads its title and meta tags, and returns them as
+  structured data. Useful for link previews or SEO audits.
+category: Web Automation
+level: Intermediate
+tags: [web, metadata, scrape, html, subflow]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 61fc2c33-d57d-4a26-8e18-d1d828480019
+schema_version: 1

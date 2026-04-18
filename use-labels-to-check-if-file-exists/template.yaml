@@ -1,0 +1,15 @@
+name: Use Labels to Check if File Exists
+slug: use-labels-to-check-if-file-exists
+summary: >-
+  Uses Label and GoTo to structure a loop that rechecks file existence — a
+  non-sequential flow pattern useful for polling.
+category: Flow Control
+level: Advanced
+tags: [label, goto, conditional, file, loop]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 7449d9f1-2aa8-4091-bcf3-84fdad6670b0
+schema_version: 1

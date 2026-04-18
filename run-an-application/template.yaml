@@ -1,0 +1,15 @@
+name: Run an Application
+slug: run-an-application
+summary: >-
+  Starts a desktop application by executable path — the simplest form of process
+  orchestration in Robomotion.
+category: Desktop Automation
+level: Beginner
+tags: [application-launcher, desktop, process]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 04ffb135-bfcb-48a0-b14c-c58ea797d3e1
+schema_version: 1

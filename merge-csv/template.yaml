@@ -5,6 +5,7 @@ summary: >-
   subflows to read individual CSV files and combine their contents with a
   configurable separator.
 category: Data Processing
+level: Intermediate
 tags: [csv, merge, file-processing]
 author: Robomotion
 created: "2025-11-16"

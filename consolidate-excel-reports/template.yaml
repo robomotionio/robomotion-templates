@@ -1,0 +1,15 @@
+name: Consolidate Excel Reports
+slug: consolidate-excel-reports
+summary: >-
+  Combines rows from multiple Excel workbooks in a folder into one consolidated
+  sheet. A reporting helper that removes repetitive copy-paste work.
+category: Excel Automation
+level: Intermediate
+tags: [excel, consolidate, merge, subflow]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 7ef0a17b-e4da-4b67-8019-b65f98c6d90f
+schema_version: 1

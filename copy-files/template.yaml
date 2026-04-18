@@ -1,0 +1,16 @@
+name: Copy Files
+slug: copy-files
+summary: >-
+  Copies every file from a source directory into a destination, with optional
+  overwrite. Demonstrates how to enumerate files and drive file-system
+  operations from a subflow.
+category: Desktop Automation
+level: Beginner
+tags: [file, copy, folder, subflow]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: f16e8944-9f01-4fe0-b787-23b3d543f62c
+schema_version: 1

@@ -1,0 +1,15 @@
+name: Concatenate Text Files
+slug: concatenate-text-files
+summary: >-
+  Reads every .txt file in a directory and stitches their contents into a single
+  output file. Useful for log rollups.
+category: Text Manipulation
+level: Intermediate
+tags: [text, concatenate, file, subflow]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: a07ddc8e-02f0-4a3e-814e-a452561fb758
+schema_version: 1

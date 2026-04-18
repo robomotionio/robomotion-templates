@@ -5,6 +5,7 @@ summary: >-
   using a browser and comparing it against an expected value. Notifies the user
   whether the content has changed or remains the same.
 category: Monitoring
+level: Intermediate
 tags: [browser, monitoring, content, web-scraping]
 author: Robomotion
 created: "2025-11-17"

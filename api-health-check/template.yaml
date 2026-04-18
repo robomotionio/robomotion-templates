@@ -5,6 +5,7 @@ summary: >-
   and evaluating response status codes. Demonstrates how to test any service
   endpoint using the GET method.
 category: Monitoring
+level: Beginner
 tags: [api, health-check, http, monitoring]
 author: Robomotion
 created: "2025-11-16"

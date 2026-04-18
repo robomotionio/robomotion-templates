@@ -5,6 +5,7 @@ summary: >-
   in a message box. Defaults to querying https://ifconfig.me for your
   public IP address.
 category: Networking
+level: Beginner
 tags: [http, get, request, api]
 author: Robomotion
 created: "2025-11-17"

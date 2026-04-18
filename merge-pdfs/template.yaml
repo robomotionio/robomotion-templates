@@ -1,0 +1,15 @@
+name: Merge PDFs
+slug: merge-pdfs
+summary: >-
+  Combines every PDF in a folder into one consolidated document using a reusable
+  merge subflow.
+category: PDF
+level: Intermediate
+tags: [pdf, merge, concatenate, subflow]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 00869a9e-4673-4196-8e25-f65888447289
+schema_version: 1

@@ -5,6 +5,7 @@ summary: >-
   be provided directly or read from a file, and the result can be displayed in a
   dialog or saved to a text file.
 category: Productivity
+level: Intermediate
 tags: [browser, dialog, translation]
 author: Robomotion
 created: "2025-11-17"

@@ -1,0 +1,15 @@
+name: Print Current Week's Calendar
+slug: print-current-weeks-calendar
+summary: >-
+  Generates an HTML page for the current week and sends it to the default
+  printer. Useful for team dashboards or physical planning boards.
+category: Desktop Automation
+level: Intermediate
+tags: [calendar, print, datetime, html]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 80648b70-905d-4588-ac4d-e093699cde22
+schema_version: 1

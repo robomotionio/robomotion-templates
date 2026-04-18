@@ -4,6 +4,7 @@ summary: >-
   Reads the current clipboard content and displays it in a message box.
   Includes error handling for non-text clipboard content.
 category: System Utilities
+level: Beginner
 tags: [clipboard, read, system]
 author: Robomotion
 created: "2025-11-17"

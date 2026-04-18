@@ -1,0 +1,15 @@
+name: Delete Files of Specific Size Range
+slug: delete-files-of-specific-size-range
+summary: >-
+  Scans a directory and deletes files whose size falls inside a min/max range.
+  Useful for pruning oversized logs or clearing tiny scratch files.
+category: Desktop Automation
+level: Intermediate
+tags: [file, delete, size, filter, subflow]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: bfd491c1-40ac-4c16-838b-d48add842b43
+schema_version: 1

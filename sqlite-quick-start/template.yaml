@@ -5,6 +5,7 @@ summary: >-
   including creating a database, inserting rows, creating tables, and
   querying data.
 category: Databases
+level: Intermediate
 tags: [sqlite, database, sql]
 author: Robomotion
 created: "2025-11-17"

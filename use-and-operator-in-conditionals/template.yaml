@@ -1,0 +1,15 @@
+name: Use the AND Operator in Conditionals
+slug: use-and-operator-in-conditionals
+summary: >-
+  Shows how to branch a flow only when two conditions are both true using a
+  Switch node with a combined predicate.
+category: Flow Control
+level: Intermediate
+tags: [conditional, logic, and, switch]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 2077b07b-5e22-433b-97dc-1df0970dc29e
+schema_version: 1

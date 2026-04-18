@@ -1,0 +1,15 @@
+name: Display JavaScript Output
+slug: display-javascript-output
+summary: >-
+  Executes an inline JavaScript snippet and surfaces its return value in a
+  dialog. Demonstrates the JavaScript Run node.
+category: Scripting
+level: Intermediate
+tags: [javascript, script, output, dialog]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 9c1b90e6-2b25-4775-ace0-8f37ebb86e64
+schema_version: 1

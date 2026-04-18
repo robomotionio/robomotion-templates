@@ -5,6 +5,7 @@ summary: >-
   indentation, then exports the result to a file. Displays an error dialog if
   the input JSON is invalid.
 category: Data Processing
+level: Intermediate
 tags: [json, formatting, beautify, file-processing]
 author: Robomotion
 created: "2025-11-16"

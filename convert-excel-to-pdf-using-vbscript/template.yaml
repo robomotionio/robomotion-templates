@@ -1,0 +1,15 @@
+name: Convert Excel to PDF Using VBScript
+slug: convert-excel-to-pdf-using-vbscript
+summary: >-
+  Runs an inline VBScript that drives Excel COM to export a workbook as PDF.
+  Shows how to bridge Robomotion with Windows scripting.
+category: Scripting
+level: Advanced
+tags: [vbscript, excel, pdf, conversion, subflow]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 70e36839-1f44-4792-ab5d-06e9c2612969
+schema_version: 1

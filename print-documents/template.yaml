@@ -1,0 +1,15 @@
+name: Print Documents
+slug: print-documents
+summary: >-
+  Iterates a folder of documents and sends each one to the default printer. A
+  compact recipe for automating bulk print jobs.
+category: Desktop Automation
+level: Beginner
+tags: [print, file, desktop, subflow]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 3de32a36-de6a-41a0-97f8-75192297d291
+schema_version: 1

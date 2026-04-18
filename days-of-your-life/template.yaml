@@ -1,0 +1,16 @@
+name: Days of Your Life
+slug: days-of-your-life
+summary: >-
+  Calculates how many days you have been alive by subtracting your birthday from
+  today. Uses DateTime Now, Subtract, and a Function node to produce a clean day
+  count.
+category: Date & Time
+level: Intermediate
+tags: [datetime, calculation, interval, dialog]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 2762c4f4-e834-4d3b-945c-60d907406d89
+schema_version: 1
