@@ -5,7 +5,7 @@ const myFlow = flow.create('04ffb135-bfcb-48a0-b14c-c58ea797d3e1', 'Imported Run
 
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a10002', 'Core.Programming.Function', 'Build Desktop Path', {
-      func: `var home = (typeof global !== 'undefined' && global.get) ? global.get('$Home$') : ''; msg.desktop_folder_path = (home ? home : 'C:\\\\Users\\\\faik') + '\\\\Desktop'; return msg;`,
+      func: `msg.desktop_folder_path = global.get('$Home$') + '\\\\Desktop'; return msg;`,
     })
     .then('a10003', 'Core.Dialog.InputBox', 'Ask App Path', {
       inTitle: Custom('Run an application'),
