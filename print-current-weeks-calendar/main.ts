@@ -1,6 +1,6 @@
 import { flow, Message, Custom } from '@robomotion/sdk';
 
-const myFlow = flow.create('80648b70-905d-4588-ac4d-e093699cde22', 'Imported Print Current Week's Calendar', (f) => {
+const myFlow = flow.create('80648b70-905d-4588-ac4d-e093699cde22', 'Imported Print Current Week\'s Calendar', (f) => {
   f.addDependency('Robomotion.WindowsAutomation', '0.18.1');
 
   f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Print Current Week\'s Calendar\n\nGenerates an HTML page for the current week and sends it to the default printer. Useful for team dashboards or physical planning boards.' });
