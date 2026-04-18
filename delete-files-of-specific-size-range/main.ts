@@ -6,7 +6,12 @@ const myFlow = flow.create('bfd491c1-40ac-4c16-838b-d48add842b43', 'Imported Del
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('5355dc', 'Core.Programming.Function', 'Seed Sources', {
-      func: `var fixtures = global.get('$Home$') + '/templates/desktop-automation/delete-files-of-specific-size-range/fixtures'; msg.fixtures_dir = fixtures; msg.small_path = fixtures + '/small.txt'; msg.medium_path = fixtures + '/medium.txt'; msg.large_path = fixtures + '/large.txt'; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/desktop-automation/delete-files-of-specific-size-range/fixtures';
+msg.fixtures_dir = fixtures;
+msg.small_path = fixtures + '/small.txt';
+msg.medium_path = fixtures + '/medium.txt';
+msg.large_path = fixtures + '/large.txt';
+return msg;`,
     })
     .then('a10002', 'Core.FileSystem.WriteFile', 'Seed Small File', {
       inPath: Message('small_path'),
@@ -46,7 +51,10 @@ const myFlow = flow.create('bfd491c1-40ac-4c16-838b-d48add842b43', 'Imported Del
     })
     .then('a10008', 'Core.Programming.Function', 'Parse Inputs', {
       outputs: 2,
-      func: `msg.minimum_size = Number(msg.min_size_text); msg.maximum_size = Number(msg.max_size_text); if (!msg.selected_folder || isNaN(msg.minimum_size) || isNaN(msg.maximum_size)) return [null, msg]; return [msg, null];`,
+      func: `msg.minimum_size = Number(msg.min_size_text);
+msg.maximum_size = Number(msg.max_size_text);
+if (!msg.selected_folder || isNaN(msg.minimum_size) || isNaN(msg.maximum_size)) return [null, msg];
+return [msg, null];`,
     });
 
   f.node('a10009', 'Core.FileSystem.List', 'List Folder', {
@@ -69,11 +77,15 @@ const myFlow = flow.create('bfd491c1-40ac-4c16-838b-d48add842b43', 'Imported Del
 
   f.node('a10022', 'Core.Programming.Function', 'Size Range Check', {
     outputs: 2,
-    func: `var f = msg.current_file || {}; if (f.IsDir) return [null, msg]; var kb = Number(f.Size) / 1024; return (kb >= msg.minimum_size && kb <= msg.maximum_size) ? [msg, null] : [null, msg];`,
+    func: `var f = msg.current_file || {};
+if (f.IsDir) return [null, msg];
+var kb = Number(f.Size) / 1024;
+return (kb >= msg.minimum_size && kb <= msg.maximum_size) ? [msg, null] : [null, msg];`,
   });
 
   f.node('a10023', 'Core.Programming.Function', 'Build Target Path', {
-    func: `msg.file_to_delete = msg.current_file.Name; return msg;`,
+    func: `msg.file_to_delete = msg.current_file.Name;
+return msg;`,
   })
     .then('a10026', 'Core.FileSystem.Delete', 'Delete In-Range File', {
       inPath: Message('file_to_delete'),

@@ -13,7 +13,8 @@ subflow.create('Description', (f) => {
     });
 
   f.node('b30004', 'Core.Programming.Function', 'Build Found Text', {
-    func: `msg.dialog_text = 'The description for the given web page is:\\n\\n' + msg.web_page_description; return msg;`,
+    func: `msg.dialog_text = 'The description for the given web page is:\\n\\n' + msg.web_page_description;
+return msg;`,
   })
     .then('b30005', 'Core.Dialog.MessageBox', 'Show Description', {
       inTitle: Custom('Get metadata of a webpage.'),
@@ -22,7 +23,8 @@ subflow.create('Description', (f) => {
     });
 
   f.node('b30006', 'Core.Programming.Function', 'Build Missing Text', {
-    func: `msg.dialog_text = 'No description specified for the web page:\\n' + msg.url; return msg;`,
+    func: `msg.dialog_text = 'No description specified for the web page:\\n' + msg.url;
+return msg;`,
   })
     .then('b30007', 'Core.Dialog.MessageBox', 'Show No Description', {
       inTitle: Custom('Get metadata of a webpage.'),

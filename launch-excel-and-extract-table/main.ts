@@ -8,7 +8,9 @@ const myFlow = flow.create('50bb5c21-7c70-4f7c-b284-6c697d5759a6', 'Imported Lau
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('a10002', 'Core.Programming.Function', 'Build Default Path', {
-      func: `msg.default_excel_path = global.get('$Home$') + '/templates/excel-automation/launch-excel-and-extract-table/fixtures/sample.xlsx'; msg.retry_count = 0; return msg;`,
+      func: `msg.default_excel_path = global.get('$Home$') + '/templates/excel-automation/launch-excel-and-extract-table/fixtures/sample.xlsx';
+msg.retry_count = 0;
+return msg;`,
     })
     .then('a10003', 'Core.Dialog.InputBox', 'Ask Excel', {
       inTitle: Custom('Launch Excel and extract table'),
@@ -41,7 +43,9 @@ const myFlow = flow.create('50bb5c21-7c70-4f7c-b284-6c697d5759a6', 'Imported Lau
       applicationId: Message('excel_app_id'),
     })
     .then('a10008', 'Core.Programming.Function', 'Stringify Table', {
-      func: `var rows = (msg.excel_table && msg.excel_table.rows) || msg.excel_table || []; msg.excel_text = rows.map(function (row) { if (Array.isArray(row)) return row.join('\\t'); if (row && typeof row === 'object') return Object.keys(row).map(function (k) { return row[k]; }).join('\\t'); return String(row); }).join('\\n'); return msg;`,
+      func: `var rows = (msg.excel_table && msg.excel_table.rows) || msg.excel_table || [];
+msg.excel_text = rows.map(function (row) { if (Array.isArray(row)) return row.join('\\t'); if (row && typeof row === 'object') return Object.keys(row).map(function (k) { return row[k]; }).join('\\t'); return String(row); }).join('\\n');
+return msg;`,
     })
     .then('a10009', 'Core.Dialog.MessageBox', 'Show Table', {
       inTitle: Custom('Excel table values extracted:'),
@@ -54,7 +58,8 @@ const myFlow = flow.create('50bb5c21-7c70-4f7c-b284-6c697d5759a6', 'Imported Lau
   })
     .then('a10021', 'Core.Programming.Function', 'Check Retry', {
       outputs: 2,
-      func: `if ((msg.retry_count || 0) < 1) { msg.retry_count = (msg.retry_count || 0) + 1; return [msg, null]; } return [null, msg];`,
+      func: `if ((msg.retry_count || 0) < 1) { msg.retry_count = (msg.retry_count || 0) + 1;
+return [msg, null]; } return [null, msg];`,
     });
 
   f.node('a10022', 'Core.Programming.Sleep', 'Wait 2s', {

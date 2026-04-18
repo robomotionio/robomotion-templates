@@ -12,7 +12,9 @@ const myFlow = flow.create('61fc2c33-d57d-4a26-8e18-d1d828480019', 'Imported Get
     })
     .then('a10003', 'Core.Programming.Function', 'Branch On Cancel', {
       outputs: 2,
-      func: `var u = (msg.url_input || '').trim(); if (!u) return [null, msg]; if (!/^https?:\\/\\//i.test(u)) u = 'https://' + u; msg.url = u; return [msg, null];`,
+      func: `var u = (msg.url_input || '').trim();
+if (!u) return [null, msg];
+if (!/^https?:\\/\\//i.test(u)) u = 'https://' + u; msg.url = u; return [msg, null];`,
     });
 
   f.node('a10004', 'Core.Browser.Open', 'Launch Browser', {

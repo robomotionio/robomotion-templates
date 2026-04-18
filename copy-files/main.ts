@@ -6,7 +6,11 @@ const myFlow = flow.create('f16e8944-9f01-4fe0-b787-23b3d543f62c', 'Imported Cop
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('a10002', 'Core.Programming.Function', 'Seed Sources', {
-      func: `var fixtures = global.get('$Home$') + '/templates/desktop-automation/copy-files/fixtures'; msg.fixtures_dir = fixtures; msg.files_to_copy = [fixtures + '/source_a.txt', fixtures + '/source_b.txt']; msg.default_dest = fixtures + '/dest'; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/desktop-automation/copy-files/fixtures';
+msg.fixtures_dir = fixtures;
+msg.files_to_copy = [fixtures + '/source_a.txt', fixtures + '/source_b.txt'];
+msg.default_dest = fixtures + '/dest';
+return msg;`,
     })
     .then('a10003', 'Core.Dialog.InputBox', 'Ask Destination Folder', {
       inTitle: Custom('Copy files'),
@@ -36,7 +40,10 @@ const myFlow = flow.create('f16e8944-9f01-4fe0-b787-23b3d543f62c', 'Imported Cop
     });
 
   f.node('a10012', 'Core.Programming.Function', 'Build Dest Path', {
-    func: `var p = msg.current_file; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.dest_path = msg.destination_folder + '/' + p.substring(lastSlash + 1); return msg;`,
+    func: `var p = msg.current_file;
+var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\'));
+msg.dest_path = msg.destination_folder + '/' + p.substring(lastSlash + 1);
+return msg;`,
   })
     .then('a10013', 'Core.FileSystem.Copy', 'Copy File', {
       inSrcPath: Message('current_file'),

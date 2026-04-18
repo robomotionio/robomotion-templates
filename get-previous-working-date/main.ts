@@ -17,7 +17,9 @@ const myFlow = flow.create('1e63fc61-ecc8-40f3-9dee-e58a51d9debb', 'Imported Get
       outParts: Message('today_parts'),
     })
     .then('a10004', 'Core.Programming.Function', 'Compute Day Offset', {
-      func: `var w = msg.today_parts.weekday; msg.day_offset = (w === 'Sunday' || w === 0) ? -2 : (w === 'Monday' || w === 1) ? -3 : -1; return msg;`,
+      func: `var w = msg.today_parts.weekday;
+msg.day_offset = (w === 'Sunday' || w === 0) ? -2 : (w === 'Monday' || w === 1) ? -3 : -1;
+return msg;`,
     })
     .then('a10005', 'Robomotion.DateTime.Add', 'Previous Working Day', {
       inTime: Message('today'),
@@ -39,7 +41,8 @@ const myFlow = flow.create('1e63fc61-ecc8-40f3-9dee-e58a51d9debb', 'Imported Get
       outFormattedTime: Message('month_name'),
     })
     .then('a10008', 'Core.Programming.Function', 'Build Dialog Text', {
-      func: `msg.dialog_text = 'The last working day was:\\n\\nDay: ' + msg.previous_parts.day + '\\nMonth: ' + msg.month_name + '\\nYear: ' + msg.previous_parts.year; return msg;`,
+      func: `msg.dialog_text = 'The last working day was:\\n\\nDay: ' + msg.previous_parts.day + '\\nMonth: ' + msg.month_name + '\\nYear: ' + msg.previous_parts.year;
+return msg;`,
     })
     .then('a10009', 'Core.Dialog.MessageBox', 'Show Result', {
       inTitle: Custom(' '),

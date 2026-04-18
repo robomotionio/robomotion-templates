@@ -21,7 +21,16 @@ subflow.create('Set Variables', (f) => {
       outFormattedTime: Message('formatted_date_time'),
     })
     .then('b20005', 'Core.Programming.Function', 'Compose Paths', {
-      func: `var docs = global.get('$Home$') + '/Documents'; msg.app_name = 'Calculator'; msg.subflow_name = 'Main'; msg.fail_label = 'Fail'; msg.pass_label = 'Pass'; msg.special_folder_path = docs; msg.os_build = String(msg.os_build_raw || '').trim(); msg.temp_report_file_name = docs + '/TestReport_DemoGUIAutomationTestPass.csv'; msg.report_file_name = docs + '/TestReport_DemoGUIAutomationTestPass_' + msg.formatted_date_time + '.csv'; return msg;`,
+      func: `var docs = global.get('$Home$') + '/Documents';
+msg.app_name = 'Calculator';
+msg.subflow_name = 'Main';
+msg.fail_label = 'Fail';
+msg.pass_label = 'Pass';
+msg.special_folder_path = docs;
+msg.os_build = String(msg.os_build_raw || '').trim();
+msg.temp_report_file_name = docs + '/TestReport_DemoGUIAutomationTestPass.csv';
+msg.report_file_name = docs + '/TestReport_DemoGUIAutomationTestPass_' + msg.formatted_date_time + '.csv';
+return msg;`,
     })
     .then('b20006', 'Core.Flow.End', 'End', { sfPort: 0 });
 });

@@ -11,7 +11,10 @@ const myFlow = flow.create('3e677d4f-f651-41f3-a2f4-0f40ffd9bb97', 'Imported Dis
       outStdout: Message('powershell_output'),
     })
     .then('a10003', 'Core.Programming.Function', 'Trim Output', {
-      func: `var s = String(msg.powershell_output || ''); while (s.length && (s.charCodeAt(s.length - 1) === 10 || s.charCodeAt(s.length - 1) === 13)) s = s.slice(0, -1); msg.powershell_output = s; return msg;`,
+      func: `var s = String(msg.powershell_output || '');
+while (s.length && (s.charCodeAt(s.length - 1) === 10 || s.charCodeAt(s.length - 1) === 13)) s = s.slice(0, -1);
+msg.powershell_output = s;
+return msg;`,
     })
     .then('a10004', 'Core.Dialog.MessageBox', 'Show Output', {
       inTitle: Custom('Output from PowerShell script:'),

@@ -18,10 +18,17 @@ const myFlow = flow.create('fd197349-8ff0-4205-b6c5-ae440d8ea644', 'Imported Ext
     });
 
   f.node('a10004', 'Core.Programming.Function', 'Extract Entities', {
-    func: `var emailRe = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}/g; var phoneRe = /\\+?\\d[\\d\\s().-]{7,}\\d/g; msg.recognized_emails = msg.input_text.match(emailRe) || []; msg.recognized_phone_numbers = msg.input_text.match(phoneRe) || []; if (!msg.recognized_phone_numbers.length) msg.recognized_phone_numbers = ['No phone number found in the given text. ']; if (!msg.recognized_emails.length) msg.recognized_emails = ['No email found in the given text. ']; return msg;`,
+    func: `var emailRe = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}/g;
+var phoneRe = /\\+?\\d[\\d\\s().-]{7,}\\d/g;
+msg.recognized_emails = msg.input_text.match(emailRe) || [];
+msg.recognized_phone_numbers = msg.input_text.match(phoneRe) || [];
+if (!msg.recognized_phone_numbers.length) msg.recognized_phone_numbers = ['No phone number found in the given text. '];
+if (!msg.recognized_emails.length) msg.recognized_emails = ['No email found in the given text. '];
+return msg;`,
   })
     .then('a10005', 'Core.Programming.Function', 'Build Results Text', {
-      func: `msg.dialog_text = 'Recognized phone number(s):\\n' + msg.recognized_phone_numbers.join(', ') + '\\n\\nRecognized email(s):\\n' + msg.recognized_emails.join(', '); return msg;`,
+      func: `msg.dialog_text = 'Recognized phone number(s):\\n' + msg.recognized_phone_numbers.join(', ') + '\\n\\nRecognized email(s):\\n' + msg.recognized_emails.join(', ');
+return msg;`,
     })
     .then('a10006', 'Core.Dialog.MessageBox', 'Show Results', {
       inTitle: Custom('Flow ran succesfully...'),

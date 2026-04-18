@@ -3,7 +3,8 @@ import { subflow, Message, Custom } from '@robomotion/sdk';
 subflow.create('File Does Not Exist', (f) => {
   f.node('c10001', 'Core.Flow.Begin', 'Begin', {})
     .then('c10002', 'Core.Programming.Function', 'Build Missing Text', {
-      func: `msg.dialog_text = "Filename: '" + msg.user_input + "' doesn't exist in your desktop folder."; return msg;`,
+      func: `msg.dialog_text = "Filename: '" + msg.user_input + "' doesn't exist in your desktop folder.";
+return msg;`,
     })
     .then('c10003', 'Core.Dialog.MessageBox', 'Show Missing', {
       inTitle: Custom('File not found!'),

@@ -8,7 +8,8 @@ const myFlow = flow.create('91118709-f8ed-48ed-a134-27b76c421d46', 'Imported Get
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('a10020', 'Core.Programming.Function', 'Build Default', {
-      func: `msg.default_pdf = global.get('$Home$') + '/templates/pdf-automation/get-number-of-pages/fixtures/sample.pdf'; return msg;`,
+      func: `msg.default_pdf = global.get('$Home$') + '/templates/pdf-automation/get-number-of-pages/fixtures/sample.pdf';
+return msg;`,
     })
     .then('a10002', 'Core.Dialog.InputBox', 'Ask PDF Path', {
       inTitle: Custom('Find the number of pages in PDF'),
@@ -22,7 +23,10 @@ const myFlow = flow.create('91118709-f8ed-48ed-a134-27b76c421d46', 'Imported Get
     });
 
   f.node('a10004', 'Core.Programming.Function', 'Build Temp Dir', {
-    func: `var p = msg.pdf_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.count_dir = p.substring(0, lastSlash) + '/_page_count'; return msg;`,
+    func: `var p = msg.pdf_path;
+var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\'));
+msg.count_dir = p.substring(0, lastSlash) + '/_page_count';
+return msg;`,
   })
     .then('a10021', 'Core.FileSystem.Delete', 'Clear Temp Dir', {
       inPath: Message('count_dir'),
@@ -47,7 +51,11 @@ const myFlow = flow.create('91118709-f8ed-48ed-a134-27b76c421d46', 'Imported Get
       outFiles: Message('page_files'),
     })
     .then('a10008', 'Core.Programming.Function', 'Count And Clean', {
-      func: `var list = msg.page_files || []; var pages = 0; for (var i = 0; i < list.length; i++) { if (!list[i].IsDir) pages++; } msg.page_count = pages || 0; msg.dialog_text = 'The selected PDF file has ' + msg.page_count + ' pages.'; return msg;`,
+      func: `var list = msg.page_files || [];
+var pages = 0;
+for (var i = 0; i < list.length; i++) { if (!list[i].IsDir) pages++; } msg.page_count = pages || 0;
+msg.dialog_text = 'The selected PDF file has ' + msg.page_count + ' pages.';
+return msg;`,
     })
     .then('a10009', 'Core.FileSystem.Delete', 'Remove Temp Dir', {
       inPath: Message('count_dir'),

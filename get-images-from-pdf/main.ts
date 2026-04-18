@@ -8,7 +8,11 @@ const myFlow = flow.create('5ab692b4-ce12-48ab-abab-f0176f5f874a', 'Imported Get
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('5355dc', 'Core.Programming.Function', 'Build Paths', {
-      func: `var fixtures = global.get('$Home$') + '/templates/pdf-automation/get-images-from-pdf/fixtures'; msg.fixtures_dir = fixtures; msg.source_pdf = fixtures + '/with_images.pdf'; msg.images_dir = fixtures + '/images'; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/pdf-automation/get-images-from-pdf/fixtures';
+msg.fixtures_dir = fixtures;
+msg.source_pdf = fixtures + '/with_images.pdf';
+msg.images_dir = fixtures + '/images';
+return msg;`,
     })
     .then('a10002', 'Core.Dialog.InputBox', 'Ask PDF', {
       inTitle: Custom('Extract images from PDF'),

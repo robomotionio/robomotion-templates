@@ -6,7 +6,10 @@ const myFlow = flow.create('a07ddc8e-02f0-4a3e-814e-a452561fb758', 'Imported Con
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('5355dc', 'Core.Programming.Function', 'Build Paths', {
-      func: `var fixtures = global.get('$Home$') + '/templates/text-manipulation/concatenate-text-files/fixtures'; msg.fixtures_dir = fixtures; msg.output_file_path = fixtures + '/ConcatenatedFiles.txt'; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/text-manipulation/concatenate-text-files/fixtures';
+msg.fixtures_dir = fixtures;
+msg.output_file_path = fixtures + '/ConcatenatedFiles.txt';
+return msg;`,
     })
     .then('a10002', 'Core.Dialog.MessageBox', 'Show Description', {
       inTitle: Custom('Description'),
@@ -16,7 +19,8 @@ const myFlow = flow.create('a07ddc8e-02f0-4a3e-814e-a452561fb758', 'Imported Con
       optType: 'info',
     })
     .then('a10003', 'Core.Programming.Function', 'Seed File List', {
-      func: `msg.files_to_concatenate = [msg.fixtures_dir + '/part1.txt', msg.fixtures_dir + '/part2.txt']; return msg;`,
+      func: `msg.files_to_concatenate = [msg.fixtures_dir + '/part1.txt', msg.fixtures_dir + '/part2.txt'];
+return msg;`,
     })
     .then('a10004', 'Core.FileSystem.Delete', 'Clean Previous Output', {
       inPath: Message('output_file_path'),
@@ -39,7 +43,10 @@ const myFlow = flow.create('a07ddc8e-02f0-4a3e-814e-a452561fb758', 'Imported Con
     outContent: Message('current_file_contents'),
   })
     .then('a10011', 'Core.Programming.Function', 'Build Output Path', {
-      func: `var lastSlash = Math.max(msg.current_file.lastIndexOf('/'), msg.current_file.lastIndexOf('\\\\')); msg.output_path = msg.current_file.substring(0, lastSlash) + '/ConcatenatedFiles.txt'; msg.line_to_write = msg.current_file_contents + '\\n'; return msg;`,
+      func: `var lastSlash = Math.max(msg.current_file.lastIndexOf('/'), msg.current_file.lastIndexOf('\\\\'));
+msg.output_path = msg.current_file.substring(0, lastSlash) + '/ConcatenatedFiles.txt';
+msg.line_to_write = msg.current_file_contents + '\\n';
+return msg;`,
     })
     .then('a10012', 'Core.FileSystem.WriteFile', 'Append to Output', {
       inPath: Message('output_path'),

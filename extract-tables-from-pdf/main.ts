@@ -41,7 +41,10 @@ const myFlow = flow.create('e9375004-4206-4251-b855-d97fbb09c729', 'Imported Ext
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('5355dc', 'Core.Programming.Function', 'Build Paths', {
-      func: `var fixtures = global.get('$Home$') + '/templates/pdf-automation/extract-tables-from-pdf/fixtures'; msg.fixtures_dir = fixtures; msg.sample_pdf = fixtures + '/tables.pdf'; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/pdf-automation/extract-tables-from-pdf/fixtures';
+msg.fixtures_dir = fixtures;
+msg.sample_pdf = fixtures + '/tables.pdf';
+return msg;`,
     })
     .then('a10002', 'Core.Dialog.InputBox', 'Ask PDF', {
       inTitle: Custom('Extract PDF tables to Excel'),
@@ -51,7 +54,16 @@ const myFlow = flow.create('e9375004-4206-4251-b855-d97fbb09c729', 'Imported Ext
     })
     .then('a10003', 'Core.Programming.Function', 'Validate', {
       outputs: 2,
-      func: `if (!msg.pdf_path || !/\\.pdf$/i.test(msg.pdf_path)) return [null, msg]; var p = msg.pdf_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); var dir = p.substring(0, lastSlash); var stem = p.substring(lastSlash + 1).replace(/\\.pdf$/i, ''); msg.xlsx_path = dir + '/' + stem + '_tables.xlsx'; var stamp = Date.now(); msg.tables_json_path = dir + '/_tables_' + stamp + '.json'; msg.ps_script_path = dir + '/_write_xlsx_' + stamp + '.ps1'; return [msg, null];`,
+      func: `if (!msg.pdf_path || !/\\.pdf$/i.test(msg.pdf_path)) return [null, msg];
+var p = msg.pdf_path;
+var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\'));
+var dir = p.substring(0, lastSlash);
+var stem = p.substring(lastSlash + 1).replace(/\\.pdf$/i, '');
+msg.xlsx_path = dir + '/' + stem + '_tables.xlsx';
+var stamp = Date.now();
+msg.tables_json_path = dir + '/_tables_' + stamp + '.json';
+msg.ps_script_path = dir + '/_write_xlsx_' + stamp + '.ps1';
+return [msg, null];`,
     });
 
   f.node('a10004', 'Robomotion.Pandas.PdfToDataTable', 'Extract Tables', {
@@ -61,7 +73,9 @@ const myFlow = flow.create('e9375004-4206-4251-b855-d97fbb09c729', 'Imported Ext
     outTable: Message('table_list'),
   })
     .then('a10005', 'Core.Programming.Function', 'Serialize Tables JSON', {
-      func: `msg.tables_json = JSON.stringify(msg.table_list || []); msg.ps_script = ${JSON.stringify(psScript)}; return msg;`,
+      func: `msg.tables_json = JSON.stringify(msg.table_list || []);
+msg.ps_script = ${JSON.stringify(psScript)};
+return msg;`,
     })
     .then('a10006', 'Core.FileSystem.WriteFile', 'Write Tables JSON', {
       inPath: Message('tables_json_path'),
@@ -76,7 +90,8 @@ const myFlow = flow.create('e9375004-4206-4251-b855-d97fbb09c729', 'Imported Ext
       optMode: 'truncate',
     })
     .then('a10008', 'Core.Programming.Function', 'Build PS Args', {
-      func: `msg.ps_args = ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', msg.ps_script_path, '-JsonPath', msg.tables_json_path, '-XlsxPath', msg.xlsx_path]; return msg;`,
+      func: `msg.ps_args = ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', msg.ps_script_path, '-JsonPath', msg.tables_json_path, '-XlsxPath', msg.xlsx_path];
+return msg;`,
     })
     .then('a10009', 'Core.Process.StartProcess', 'Run PowerShell', {
       inFilePath: Custom('powershell'),
@@ -92,7 +107,8 @@ const myFlow = flow.create('e9375004-4206-4251-b855-d97fbb09c729', 'Imported Ext
       continueOnError: true,
     })
     .then('a10012', 'Core.Programming.Function', 'Build Done Text', {
-      func: `msg.dialog_text = 'Extracted tables saved in: ' + msg.xlsx_path; return msg;`,
+      func: `msg.dialog_text = 'Extracted tables saved in: ' + msg.xlsx_path;
+return msg;`,
     })
     .then('a10013', 'Core.Dialog.MessageBox', 'Show Done', {
       inTitle: Custom('Done!'),

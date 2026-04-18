@@ -38,10 +38,12 @@ const myFlow = flow.create('2762c4f4-e834-4d3b-945c-60d907406d89', 'Imported Day
       outSpan: Message('span_ms'),
     })
     .then('a10007', 'Core.Programming.Function', 'Milliseconds to Days', {
-      func: `msg.days_alive = Math.floor(msg.span_ms / 86400000); return msg;`,
+      func: `msg.days_alive = Math.floor(msg.span_ms / 86400000);
+return msg;`,
     })
     .then('a10008', 'Core.Programming.Function', 'Build Dialog Text', {
-      func: `msg.dialog_text = "Today is day #" + msg.days_alive + "\\n\\nEach day is unique. Make the most of it and don't forget to laugh!!!"; return msg;`,
+      func: `msg.dialog_text = "Today is day #" + msg.days_alive + "\\n\\nEach day is unique. Make the most of it and don't forget to laugh!!!";
+return msg;`,
     })
     .then('a10009', 'Core.Dialog.MessageBox', 'Show Age', {
       inTitle: Custom('Attention!'),

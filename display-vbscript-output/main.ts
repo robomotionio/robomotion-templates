@@ -12,7 +12,11 @@ const myFlow = flow.create('859c38a1-c104-4dc2-b547-8b271b497584', 'Imported Dis
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('a10002', 'Core.Programming.Function', 'Build Script', {
-      func: `msg.vbs_script = ${JSON.stringify(inlineVbscript)}; var tmp = global.get('$TempDir$') || 'C:/Windows/Temp'; msg.vbs_path = tmp + '/robomotion_inline_' + Date.now() + '.vbs'; msg.vbs_args = ['//Nologo', msg.vbs_path]; return msg;`,
+      func: `msg.vbs_script = ${JSON.stringify(inlineVbscript)};
+var tmp = global.get('$TempDir$') || 'C:/Windows/Temp';
+msg.vbs_path = tmp + '/robomotion_inline_' + Date.now() + '.vbs';
+msg.vbs_args = ['//Nologo', msg.vbs_path];
+return msg;`,
     })
     .then('a10003', 'Core.FileSystem.WriteFile', 'Write Temp VBS', {
       inPath: Message('vbs_path'),
@@ -31,7 +35,10 @@ const myFlow = flow.create('859c38a1-c104-4dc2-b547-8b271b497584', 'Imported Dis
       continueOnError: true,
     })
     .then('a10006', 'Core.Programming.Function', 'Trim Output', {
-      func: `var s = String(msg.vbscript_output || ''); while (s.length && (s.charCodeAt(s.length - 1) === 10 || s.charCodeAt(s.length - 1) === 13)) s = s.slice(0, -1); msg.vbscript_output = s; return msg;`,
+      func: `var s = String(msg.vbscript_output || '');
+while (s.length && (s.charCodeAt(s.length - 1) === 10 || s.charCodeAt(s.length - 1) === 13)) s = s.slice(0, -1);
+msg.vbscript_output = s;
+return msg;`,
     })
     .then('a10007', 'Core.Dialog.MessageBox', 'Show Output', {
       inTitle: Custom('Output from VBScript:'),

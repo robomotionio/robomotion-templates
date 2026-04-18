@@ -6,7 +6,11 @@ const myFlow = flow.create('ab2e1663-2766-4215-b465-3e1c1a2fd4e9', 'Imported Fin
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('5355dc', 'Core.Programming.Function', 'Seed Sources', {
-      func: `var fixtures = global.get('$Home$') + '/templates/desktop-automation/find-and-delete-empty-files/fixtures'; msg.fixtures_dir = fixtures; msg.empty_one_path = fixtures + '/empty_one.txt'; msg.empty_two_path = fixtures + '/empty_two.txt'; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/desktop-automation/find-and-delete-empty-files/fixtures';
+msg.fixtures_dir = fixtures;
+msg.empty_one_path = fixtures + '/empty_one.txt';
+msg.empty_two_path = fixtures + '/empty_two.txt';
+return msg;`,
     })
     .then('a10002', 'Core.FileSystem.Create', 'Seed Empty File 1', {
       inPath: Message('empty_one_path'),
@@ -49,11 +53,13 @@ const myFlow = flow.create('ab2e1663-2766-4215-b465-3e1c1a2fd4e9', 'Imported Fin
 
   f.node('a10012', 'Core.Programming.Function', 'Zero-Size Check', {
     outputs: 2,
-    func: `var f = msg.current_file || {}; return (!f.IsDir && Number(f.Size) === 0) ? [msg, null] : [null, msg];`,
+    func: `var f = msg.current_file || {};
+return (!f.IsDir && Number(f.Size) === 0) ? [msg, null] : [null, msg];`,
   });
 
   f.node('a10013', 'Core.Programming.Function', 'Build File Path', {
-    func: `msg.file_to_delete = msg.current_file.Name; return msg;`,
+    func: `msg.file_to_delete = msg.current_file.Name;
+return msg;`,
   })
     .then('a10014', 'Core.FileSystem.Delete', 'Delete Empty File', {
       inPath: Message('file_to_delete'),

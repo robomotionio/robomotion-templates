@@ -11,7 +11,10 @@ const myFlow = flow.create('c89dcd58-3c35-47b8-8d1c-9107ed5ff752', 'Imported Get
       outStdout: Message('login_name_raw'),
     })
     .then('a10003', 'Core.Programming.Function', 'Build Dialog Text', {
-      func: `var user = String(msg.login_name_raw || ''); while (user.length && (user.charCodeAt(user.length - 1) === 10 || user.charCodeAt(user.length - 1) === 13)) user = user.slice(0, -1); msg.dialog_text = 'Machine login name: ' + user; return msg;`,
+      func: `var user = String(msg.login_name_raw || '');
+while (user.length && (user.charCodeAt(user.length - 1) === 10 || user.charCodeAt(user.length - 1) === 13)) user = user.slice(0, -1);
+msg.dialog_text = 'Machine login name: ' + user;
+return msg;`,
     })
     .then('a10004', 'Core.Dialog.MessageBox', 'Show Output', {
       inTitle: Custom('Login name'),

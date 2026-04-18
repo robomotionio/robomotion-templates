@@ -7,7 +7,8 @@ subflow.create('Start Test Report', (f) => {
       continueOnError: true,
     })
     .then('b21003', 'Core.Programming.Function', 'Build Header', {
-      func: `msg.csv_line = 'Test,Outcome,Error,App Build,OS Build\\n'; return msg;`,
+      func: `msg.csv_line = 'Test,Outcome,Error,App Build,OS Build\\n';
+return msg;`,
     })
     .then('b21004', 'Core.FileSystem.WriteFile', 'Write Header', {
       inPath: Message('temp_report_file_name'),

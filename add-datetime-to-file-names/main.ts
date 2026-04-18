@@ -8,7 +8,8 @@ const myFlow = flow.create('3fcd90e9-d470-4ad7-9ddd-dccdaf2f2b1f', 'Imported Add
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('a10020', 'Core.Programming.Function', 'Build Default Folder', {
-      func: `msg.default_folder = global.get('$Home$') + '/templates/desktop-automation/add-datetime-to-file-names/fixtures'; return msg;`,
+      func: `msg.default_folder = global.get('$Home$') + '/templates/desktop-automation/add-datetime-to-file-names/fixtures';
+return msg;`,
     })
     .then('a10002', 'Core.Dialog.InputBox', 'Ask Folder', {
       inTitle: Custom('Add datetime to file names'),
@@ -44,7 +45,12 @@ const myFlow = flow.create('3fcd90e9-d470-4ad7-9ddd-dccdaf2f2b1f', 'Imported Add
 
   f.node('a10012', 'Core.Programming.Function', 'Skip Dirs And Stamped', {
     outputs: 2,
-    func: `var f = msg.current_file || {}; if (f.IsDir) return [null, msg]; msg.source_path = f.Name; msg.create_time = f.CreateTime; if (/-\\d{8}\\./.test(f.Name)) return [null, msg]; return [msg, null];`,
+    func: `var f = msg.current_file || {};
+if (f.IsDir) return [null, msg];
+msg.source_path = f.Name;
+msg.create_time = f.CreateTime;
+if (/-\\d{8}\\./.test(f.Name)) return [null, msg];
+return [msg, null];`,
   });
 
   f.node('a10013', 'Robomotion.DateTime.Format', 'Format Stamp', {
@@ -55,7 +61,15 @@ const myFlow = flow.create('3fcd90e9-d470-4ad7-9ddd-dccdaf2f2b1f', 'Imported Add
     outFormattedTime: Message('stamp'),
   })
     .then('a10014', 'Core.Programming.Function', 'Build New Path', {
-      func: `var p = msg.source_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); var dir = p.substring(0, lastSlash); var base = p.substring(lastSlash + 1); var dot = base.lastIndexOf('.'); var stem = dot === -1 ? base : base.substring(0, dot); var ext = dot === -1 ? '' : base.substring(dot); msg.target_path = dir + '/' + stem + '-' + msg.stamp + ext; return msg;`,
+      func: `var p = msg.source_path;
+var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\'));
+var dir = p.substring(0, lastSlash);
+var base = p.substring(lastSlash + 1);
+var dot = base.lastIndexOf('.');
+var stem = dot === -1 ? base : base.substring(0, dot);
+var ext = dot === -1 ? '' : base.substring(dot);
+msg.target_path = dir + '/' + stem + '-' + msg.stamp + ext;
+return msg;`,
     })
     .then('a10015', 'Core.FileSystem.PathExists', 'Target Exists?', {
       inPath: Message('target_path'),

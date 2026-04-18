@@ -3,7 +3,15 @@ import { subflow, Message, Custom } from '@robomotion/sdk';
 subflow.create('Download Fixtures', (f) => {
   f.node('b11001', 'Core.Flow.Begin', 'Begin', {})
     .then('b11002', 'Core.Programming.Function', 'Build Paths', {
-      func: `var fixtures = global.get('$Home$') + '/templates/excel-automation/consolidate-excel-reports/fixtures'; msg._dl_dir = fixtures; msg._dl_report_q1_csv = fixtures + '/report_q1.csv'; msg._dl_report_q1_xlsx = fixtures + '/report_q1.xlsx'; msg._dl_report_q2_csv = fixtures + '/report_q2.csv'; msg._dl_report_q2_xlsx = fixtures + '/report_q2.xlsx'; msg._dl_report_q3_csv = fixtures + '/report_q3.csv'; msg._dl_report_q3_xlsx = fixtures + '/report_q3.xlsx'; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/excel-automation/consolidate-excel-reports/fixtures';
+msg._dl_dir = fixtures;
+msg._dl_report_q1_csv = fixtures + '/report_q1.csv';
+msg._dl_report_q1_xlsx = fixtures + '/report_q1.xlsx';
+msg._dl_report_q2_csv = fixtures + '/report_q2.csv';
+msg._dl_report_q2_xlsx = fixtures + '/report_q2.xlsx';
+msg._dl_report_q3_csv = fixtures + '/report_q3.csv';
+msg._dl_report_q3_xlsx = fixtures + '/report_q3.xlsx';
+return msg;`,
     })
     .then('b11003', 'Core.FileSystem.Create', 'Create Fixtures Dir', {
       inPath: Message('_dl_dir'),

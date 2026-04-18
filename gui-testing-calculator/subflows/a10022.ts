@@ -3,7 +3,8 @@ import { subflow, Message, Custom } from '@robomotion/sdk';
 subflow.create('Launch App', (f) => {
   f.node('b22001', 'Core.Flow.Begin', 'Begin', {})
     .then('b22002', 'Core.Programming.Function', 'Label This Test', {
-      func: `msg.subflow_name = 'Verify the application can be launched'; return msg;`,
+      func: `msg.subflow_name = 'Verify the application can be launched';
+return msg;`,
     })
     .then('b22003', 'Core.Process.StartProcess', 'Start Calculator', {
       inFilePath: Custom('calc.exe'),
@@ -26,7 +27,9 @@ subflow.create('Launch App', (f) => {
       continueOnError: true,
     })
     .then('b22006', 'Core.Programming.Function', 'Build Pass Row', {
-      func: `var appBuild = msg.app_name + ' ' + String(msg.product_version || '').trim(); msg.csv_line = [msg.subflow_name, msg.pass_label, 'None', appBuild, msg.os_build].join(',') + '\\n'; return msg;`,
+      func: `var appBuild = msg.app_name + ' ' + String(msg.product_version || '').trim();
+msg.csv_line = [msg.subflow_name, msg.pass_label, 'None', appBuild, msg.os_build].join(',') + '\\n';
+return msg;`,
     })
     .then('b22007', 'Core.FileSystem.WriteFile', 'Append Pass Row', {
       inPath: Message('temp_report_file_name'),

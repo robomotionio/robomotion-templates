@@ -18,11 +18,13 @@ const myFlow = flow.create('507d615d-5c62-4cdb-9baf-95cd07933b45', 'Imported Get
     })
     .then('a10004', 'Core.Programming.Function', 'Find Position', {
       outputs: 2,
-      func: `msg.position = (msg.text_var || '').indexOf(msg.subtext_var || ''); return msg.position >= 0 ? [msg, null] : [null, msg];`,
+      func: `msg.position = (msg.text_var || '').indexOf(msg.subtext_var || '');
+return msg.position >= 0 ? [msg, null] : [null, msg];`,
     });
 
   f.node('a10005', 'Core.Programming.Function', 'Build Found Text', {
-    func: `msg.dialog_text = "The subtext '" + msg.subtext_var + "' begins at character  " + msg.position; return msg;`,
+    func: `msg.dialog_text = "The subtext '" + msg.subtext_var + "' begins at character  " + msg.position;
+return msg;`,
   })
     .then('a10006', 'Core.Dialog.MessageBox', 'Show Found', {
       inTitle: Custom('Flow ran successfully!'),
@@ -31,7 +33,8 @@ const myFlow = flow.create('507d615d-5c62-4cdb-9baf-95cd07933b45', 'Imported Get
     });
 
   f.node('a10007', 'Core.Programming.Function', 'Build Not Found Text', {
-    func: `msg.dialog_text = "The subtext '" + msg.subtext_var + "' wasn't found in the given text. "; return msg;`,
+    func: `msg.dialog_text = "The subtext '" + msg.subtext_var + "' wasn't found in the given text. ";
+return msg;`,
   })
     .then('a10008', 'Core.Dialog.MessageBox', 'Show Not Found', {
       inTitle: Custom('Flow ran successfully!'),

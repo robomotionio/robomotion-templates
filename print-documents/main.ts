@@ -6,7 +6,9 @@ const myFlow = flow.create('3de32a36-de6a-41a0-97f8-75192297d291', 'Imported Pri
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('5355dc', 'Core.Programming.Function', 'Seed Fixtures Dir', {
-      func: `var fixtures = global.get('$Home$') + '/templates/desktop-automation/print-documents/fixtures'; msg.fixtures_dir = fixtures; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/desktop-automation/print-documents/fixtures';
+msg.fixtures_dir = fixtures;
+return msg;`,
     })
     .then('a10002', 'Core.Dialog.MessageBox', 'Intro', {
       inTitle: Custom('Print documents'),
@@ -16,7 +18,8 @@ const myFlow = flow.create('3de32a36-de6a-41a0-97f8-75192297d291', 'Imported Pri
       optType: 'info',
     })
     .then('a10003', 'Core.Programming.Function', 'Seed File List', {
-      func: `msg.files_to_print = [msg.fixtures_dir + '/hello.txt']; return msg;`,
+      func: `msg.files_to_print = [msg.fixtures_dir + '/hello.txt'];
+return msg;`,
     })
     .then('a10004', 'Core.Flow.GoTo', 'Enter Loop', {
       optNodes: { type: 'goto', ids: ['a10010'], all: false },
@@ -29,7 +32,8 @@ const myFlow = flow.create('3de32a36-de6a-41a0-97f8-75192297d291', 'Imported Pri
     });
 
   f.node('a10012', 'Core.Programming.Function', 'Build Print Command', {
-    func: `msg.print_args = ['-NoProfile', '-Command', 'Start-Process -FilePath ' + JSON.stringify(msg.file_to_print) + ' -Verb Print']; return msg;`,
+    func: `msg.print_args = ['-NoProfile', '-Command', 'Start-Process -FilePath ' + JSON.stringify(msg.file_to_print) + ' -Verb Print'];
+return msg;`,
   })
     .then('a10013', 'Core.Process.StartProcess', 'Send To Printer', {
       inFilePath: Custom('powershell'),

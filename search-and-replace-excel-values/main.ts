@@ -8,7 +8,10 @@ const myFlow = flow.create('d6ffdf7e-2a44-408b-a784-5de7c89fc7f7', 'Imported Sea
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('5355dc', 'Core.Programming.Function', 'Build Default Path', {
-      func: `var fixtures = global.get('$Home$') + '/templates/excel-automation/search-and-replace-excel-values/fixtures'; msg.fixtures_dir = fixtures; msg.sample_xlsx = fixtures + '/sample.xlsx'; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/excel-automation/search-and-replace-excel-values/fixtures';
+msg.fixtures_dir = fixtures;
+msg.sample_xlsx = fixtures + '/sample.xlsx';
+return msg;`,
     })
     .then('a10002', 'Core.Dialog.InputBox', 'Ask Find Text', {
       inTitle: Custom('Search and replace Excel values'),
@@ -36,7 +39,9 @@ const myFlow = flow.create('d6ffdf7e-2a44-408b-a784-5de7c89fc7f7', 'Imported Sea
     })
     .then('a10006', 'Core.Programming.Function', 'Validate', {
       outputs: 2,
-      func: `if (!msg.text_to_find || !msg.selected_file || !/\\.(xls\\w*|csv)$/i.test(msg.selected_file)) return [null, msg]; msg.rename_function = (msg.rename_function || 'all').trim().toLowerCase() === 'first' ? 'first' : 'all'; return [msg, null];`,
+      func: `if (!msg.text_to_find || !msg.selected_file || !/\\.(xls\\w*|csv)$/i.test(msg.selected_file)) return [null, msg];
+msg.rename_function = (msg.rename_function || 'all').trim().toLowerCase() === 'first' ? 'first' : 'all';
+return [msg, null];`,
     });
 
   f.node('a10007', 'Robomotion.MicrosoftExcel.OpenExcel', 'Open Excel', {
@@ -51,7 +56,9 @@ const myFlow = flow.create('d6ffdf7e-2a44-408b-a784-5de7c89fc7f7', 'Imported Sea
       foundCells: Message('found_cells'),
     })
     .then('a10009', 'Core.Programming.Function', 'Pick Cells To Replace', {
-      func: `var cells = msg.found_cells || []; msg.cells_to_replace = (msg.rename_function === 'first') ? cells.slice(0, 1) : cells; return msg;`,
+      func: `var cells = msg.found_cells || [];
+msg.cells_to_replace = (msg.rename_function === 'first') ? cells.slice(0, 1) : cells;
+return msg;`,
     })
     .then('a10010', 'Core.Flow.GoTo', 'Enter Loop', {
       optNodes: { type: 'goto', ids: ['a10020'], all: false },
@@ -64,7 +71,9 @@ const myFlow = flow.create('d6ffdf7e-2a44-408b-a784-5de7c89fc7f7', 'Imported Sea
     });
 
   f.node('a10022', 'Core.Programming.Function', 'Extract Cell Address', {
-    func: `var c = msg.current_cell; if (typeof c === 'string') { msg.cell_address = c; } else if (c && c.address) { msg.cell_address = c.address; } else if (c && c.Cell) { msg.cell_address = c.Cell; } else if (c && typeof c.column === 'number' && typeof c.row === 'number') { var col = String.fromCharCode(64 + c.column); msg.cell_address = col + c.row; } else { msg.cell_address = ''; } return msg;`,
+    func: `var c = msg.current_cell;
+if (typeof c === 'string') { msg.cell_address = c; } else if (c && c.address) { msg.cell_address = c.address; } else if (c && c.Cell) { msg.cell_address = c.Cell; } else if (c && typeof c.column === 'number' && typeof c.row === 'number') { var col = String.fromCharCode(64 + c.column);
+msg.cell_address = col + c.row; } else { msg.cell_address = ''; } return msg;`,
   })
     .then('a10023', 'Robomotion.MicrosoftExcel.SetCellValue', 'Replace Value', {
       applicationId: Message('excel_app_id'),

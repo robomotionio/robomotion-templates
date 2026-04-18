@@ -8,7 +8,12 @@ const myFlow = flow.create('6204fa75-f522-416a-a565-b4c06fbd9c2b', 'Imported Mer
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('a10002', 'Core.Programming.Function', 'Build Defaults', {
-      func: `var fixtures = global.get('$Home$') + '/templates/pdf-automation/merge-two-pdfs/fixtures'; msg.fixtures_dir = fixtures; msg.default_first = fixtures + '/first_three.pdf'; msg.default_second = fixtures + '/last_two.pdf'; msg.default_dest = fixtures + '/output'; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/pdf-automation/merge-two-pdfs/fixtures';
+msg.fixtures_dir = fixtures;
+msg.default_first = fixtures + '/first_three.pdf';
+msg.default_second = fixtures + '/last_two.pdf';
+msg.default_dest = fixtures + '/output';
+return msg;`,
     })
     .then('a10003', 'Core.Dialog.InputBox', 'Ask First PDF', {
       inTitle: Custom(' Merge two PDFs into one.'),
@@ -30,7 +35,13 @@ const myFlow = flow.create('6204fa75-f522-416a-a565-b4c06fbd9c2b', 'Imported Mer
     })
     .then('a10006', 'Core.Programming.Function', 'Validate Inputs', {
       outputs: 2,
-      func: `if (!msg.first_doc || !msg.second_doc || !msg.destination_folder) return [null, msg]; msg.pdf_paths = [msg.second_doc, msg.first_doc]; msg.suffix_base = 'MergedFile'; msg.suffix_ext = '.pdf'; msg.suffix_idx = 0; msg.candidate_path = msg.destination_folder + '/' + msg.suffix_base + msg.suffix_ext; return [msg, null];`,
+      func: `if (!msg.first_doc || !msg.second_doc || !msg.destination_folder) return [null, msg];
+msg.pdf_paths = [msg.second_doc, msg.first_doc];
+msg.suffix_base = 'MergedFile';
+msg.suffix_ext = '.pdf';
+msg.suffix_idx = 0;
+msg.candidate_path = msg.destination_folder + '/' + msg.suffix_base + msg.suffix_ext;
+return [msg, null];`,
     });
 
   f.node('a10007', 'Core.FileSystem.Create', 'Create Dest Dir', {
@@ -49,7 +60,10 @@ const myFlow = flow.create('6204fa75-f522-416a-a565-b4c06fbd9c2b', 'Imported Mer
     })
     .then('a10012', 'Core.Programming.Function', 'Next Or Done', {
       outputs: 2,
-      func: `if (msg.candidate_exists) { msg.suffix_idx += 1; msg.candidate_path = msg.destination_folder + '/' + msg.suffix_base + '_' + (msg.suffix_idx + 1) + msg.suffix_ext; return [msg, null]; } msg.merged_path = msg.candidate_path; return [null, msg];`,
+      func: `if (msg.candidate_exists) { msg.suffix_idx += 1;
+msg.candidate_path = msg.destination_folder + '/' + msg.suffix_base + '_' + (msg.suffix_idx + 1) + msg.suffix_ext;
+return [msg, null]; } msg.merged_path = msg.candidate_path;
+return [null, msg];`,
     });
 
   f.node('a10013', 'Core.Flow.GoTo', 'Loop Back', {
@@ -61,7 +75,8 @@ const myFlow = flow.create('6204fa75-f522-416a-a565-b4c06fbd9c2b', 'Imported Mer
     inPDFPathSave: Message('merged_path'),
   })
     .then('a10015', 'Core.Programming.Function', 'Build Done Text', {
-      func: `msg.dialog_text = 'The merged file has been saved in: ' + msg.merged_path; return msg;`,
+      func: `msg.dialog_text = 'The merged file has been saved in: ' + msg.merged_path;
+return msg;`,
     })
     .then('a10016', 'Core.Dialog.MessageBox', 'Show Done', {
       inTitle: Custom('Done!'),

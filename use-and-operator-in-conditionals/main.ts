@@ -5,7 +5,9 @@ const myFlow = flow.create('2077b07b-5e22-433b-97dc-1df0970dc29e', 'Imported Use
 
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a10002', 'Core.Programming.Function', 'Seed Inputs', {
-      func: `msg.tool = 'Robomotion'; msg.company = 'Robomotion Inc.'; return msg;`,
+      func: `msg.tool = 'Robomotion';
+msg.company = 'Robomotion Inc.';
+return msg;`,
     })
     .then('a10003', 'Core.Programming.Function', 'AND Test', {
       outputs: 2,

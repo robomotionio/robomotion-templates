@@ -3,7 +3,8 @@ import { subflow, Message, Custom } from '@robomotion/sdk';
 subflow.create('Send PDF Via Outlook', (f) => {
   f.node('b10001', 'Core.Flow.Begin', 'Begin', {})
     .then('b10002', 'Core.Programming.Function', 'Build Attachment List', {
-      func: `msg.attachments = [msg.pdf_path]; return msg;`,
+      func: `msg.attachments = [msg.pdf_path];
+return msg;`,
     })
     .then('b10003', 'Robomotion.MicrosoftOutlook.SendMail', 'Send Mail', {
       to: Message('recipient_email'),

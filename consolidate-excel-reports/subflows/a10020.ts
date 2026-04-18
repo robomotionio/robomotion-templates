@@ -9,7 +9,9 @@ subflow.create('Get Excel Files Details', (f) => {
       outText: Message('recipient_email'),
     })
     .then('b10003', 'Core.Programming.Function', 'Seed File List', {
-      func: `var fixtures = msg.fixtures_dir || (global.get('$Home$') + '/templates/excel-automation/consolidate-excel-reports/fixtures'); msg.file_list = [fixtures + '/report_q1.csv', fixtures + '/report_q2.csv', fixtures + '/report_q3.csv']; return msg;`,
+      func: `var fixtures = msg.fixtures_dir || (global.get('$Home$') + '/templates/excel-automation/consolidate-excel-reports/fixtures');
+msg.file_list = [fixtures + '/report_q1.csv', fixtures + '/report_q2.csv', fixtures + '/report_q3.csv'];
+return msg;`,
     })
     .then('b10004', 'Core.Flow.End', 'End', { sfPort: 0 });
 });

@@ -6,7 +6,9 @@ const myFlow = flow.create('7b17397d-8ab0-4eaf-8792-adb3e49b24af', 'Imported Sor
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('5355dc', 'Core.Programming.Function', 'Build Default Path', {
-      func: `var fixtures = global.get('$Home$') + '/templates/text-manipulation/sort-lines-of-text-file/fixtures'; msg.fixture_path = fixtures + '/unsorted.txt'; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/text-manipulation/sort-lines-of-text-file/fixtures';
+msg.fixture_path = fixtures + '/unsorted.txt';
+return msg;`,
     })
     .then('a10002', 'Core.Dialog.MessageBox', 'Show Description', {
       inTitle: Custom('Description'),
@@ -23,7 +25,8 @@ const myFlow = flow.create('7b17397d-8ab0-4eaf-8792-adb3e49b24af', 'Imported Sor
     })
     .then('a10004', 'Core.Programming.Function', 'Branch On Selection', {
       outputs: 2,
-      func: `var p = (msg.selected_text_file || '').trim(); return (p && /\\.txt$/i.test(p)) ? [msg, null] : [null, msg];`,
+      func: `var p = (msg.selected_text_file || '').trim();
+return (p && /\\.txt$/i.test(p)) ? [msg, null] : [null, msg];`,
     });
 
   f.node('a10005', 'Core.FileSystem.ReadFile', 'Read File', {
@@ -32,10 +35,23 @@ const myFlow = flow.create('7b17397d-8ab0-4eaf-8792-adb3e49b24af', 'Imported Sor
     outContent: Message('file_contents_raw'),
   })
     .then('a10006', 'Core.Programming.Function', 'Sort Lines', {
-      func: `var lf = String.fromCharCode(10); var lines = msg.file_contents_raw.split(lf); if (lines.length && lines[lines.length - 1] === '') lines.pop(); lines.sort(function (a, b) { return a.localeCompare(b); }); msg.sorted_text = lines.join(lf) + lf; return msg;`,
+      func: `var lf = String.fromCharCode(10);
+var lines = msg.file_contents_raw.split(lf);
+if (lines.length && lines[lines.length - 1] === '') lines.pop();
+lines.sort(function (a, b) { return a.localeCompare(b); });
+msg.sorted_text = lines.join(lf) + lf;
+return msg;`,
     })
     .then('a10007', 'Core.Programming.Function', 'Build Sorted Path', {
-      func: `var p = msg.selected_text_file; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); var dir = p.substring(0, lastSlash); var base = p.substring(lastSlash + 1); var dot = base.lastIndexOf('.'); var stem = dot === -1 ? base : base.substring(0, dot); var ext = dot === -1 ? '' : base.substring(dot); msg.sorted_file_path = dir + '/' + stem + '_Sorted' + ext; return msg;`,
+      func: `var p = msg.selected_text_file;
+var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\'));
+var dir = p.substring(0, lastSlash);
+var base = p.substring(lastSlash + 1);
+var dot = base.lastIndexOf('.');
+var stem = dot === -1 ? base : base.substring(0, dot);
+var ext = dot === -1 ? '' : base.substring(dot);
+msg.sorted_file_path = dir + '/' + stem + '_Sorted' + ext;
+return msg;`,
     })
     .then('a10008', 'Core.FileSystem.WriteFile', 'Write Sorted File', {
       inPath: Message('sorted_file_path'),
@@ -44,7 +60,8 @@ const myFlow = flow.create('7b17397d-8ab0-4eaf-8792-adb3e49b24af', 'Imported Sor
       optMode: 'truncate',
     })
     .then('a10009', 'Core.Programming.Function', 'Build Results Text', {
-      func: `msg.dialog_text = 'The contents of the file:\\n\\n' + msg.selected_text_file + '\\n\\nhave been sorted and saved in:\\n\\n' + msg.sorted_file_path; return msg;`,
+      func: `msg.dialog_text = 'The contents of the file:\\n\\n' + msg.selected_text_file + '\\n\\nhave been sorted and saved in:\\n\\n' + msg.sorted_file_path;
+return msg;`,
     })
     .then('a10010', 'Core.Dialog.MessageBox', 'Show Results', {
       inTitle: Custom('Flow completed!'),

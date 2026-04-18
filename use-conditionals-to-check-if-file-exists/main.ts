@@ -16,7 +16,9 @@ const myFlow = flow.create('35cba3e6-c333-42f1-86af-2092663a6f7c', 'Imported Use
     });
 
   f.node('a10004', 'Core.Programming.Function', 'Build Desktop Path', {
-    func: `var desktop = global.get('$Home$') + '/Desktop'; msg.candidate_path = desktop + '/' + msg.user_input; return msg;`,
+    func: `var desktop = global.get('$Home$') + '/Desktop';
+msg.candidate_path = desktop + '/' + msg.user_input;
+return msg;`,
   })
     .then('a10005', 'Core.FileSystem.PathExists', 'Path Exists?', {
       inPath: Message('candidate_path'),
@@ -28,7 +30,8 @@ const myFlow = flow.create('35cba3e6-c333-42f1-86af-2092663a6f7c', 'Imported Use
     });
 
   f.node('a10007', 'Core.Programming.Function', 'Build Found Text', {
-    func: `msg.dialog_text = "Filename: '" + msg.user_input + "' exists in your desktop folder."; return msg;`,
+    func: `msg.dialog_text = "Filename: '" + msg.user_input + "' exists in your desktop folder.";
+return msg;`,
   })
     .then('a10008', 'Core.Dialog.MessageBox', 'Show Found', {
       inTitle: Custom('File found!'),
@@ -37,7 +40,8 @@ const myFlow = flow.create('35cba3e6-c333-42f1-86af-2092663a6f7c', 'Imported Use
     });
 
   f.node('a10009', 'Core.Programming.Function', 'Build Missing Text', {
-    func: `msg.dialog_text = "Filename: '" + msg.user_input + "' doesn't exist in your desktop folder."; return msg;`,
+    func: `msg.dialog_text = "Filename: '" + msg.user_input + "' doesn't exist in your desktop folder.";
+return msg;`,
   })
     .then('a10010', 'Core.Dialog.MessageBox', 'Show Missing', {
       inTitle: Custom('File not found!'),

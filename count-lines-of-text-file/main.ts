@@ -6,7 +6,9 @@ const myFlow = flow.create('681e3719-b6fc-4a07-bc58-050b30229b0b', 'Imported Cou
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('5355dc', 'Core.Programming.Function', 'Build Default Path', {
-      func: `var fixtures = global.get('$Home$') + '/templates/text-manipulation/count-lines-of-text-file/fixtures'; msg.fixture_path = fixtures + '/sample.txt'; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/text-manipulation/count-lines-of-text-file/fixtures';
+msg.fixture_path = fixtures + '/sample.txt';
+return msg;`,
     })
     .then('a10002', 'Core.Dialog.MessageBox', 'Show Description', {
       inTitle: Custom('Description'),
@@ -23,7 +25,8 @@ const myFlow = flow.create('681e3719-b6fc-4a07-bc58-050b30229b0b', 'Imported Cou
     })
     .then('a10004', 'Core.Programming.Function', 'Branch On Selection', {
       outputs: 2,
-      func: `var p = (msg.selected_text_file || '').trim(); return (p && /\\.txt$/i.test(p)) ? [msg, null] : [null, msg];`,
+      func: `var p = (msg.selected_text_file || '').trim();
+return (p && /\\.txt$/i.test(p)) ? [msg, null] : [null, msg];`,
     });
 
   f.node('a10005', 'Core.FileSystem.ReadFile', 'Read File', {
@@ -32,7 +35,12 @@ const myFlow = flow.create('681e3719-b6fc-4a07-bc58-050b30229b0b', 'Imported Cou
     outContent: Message('file_contents'),
   })
     .then('a10006', 'Core.Programming.Function', 'Count Lines', {
-      func: `var lf = String.fromCharCode(10); var lines = msg.file_contents.split(lf); if (lines.length && lines[lines.length - 1] === '') lines.pop(); msg.line_count = lines.length; msg.dialog_text = 'The file has ' + msg.line_count + ' lines!'; return msg;`,
+      func: `var lf = String.fromCharCode(10);
+var lines = msg.file_contents.split(lf);
+if (lines.length && lines[lines.length - 1] === '') lines.pop();
+msg.line_count = lines.length;
+msg.dialog_text = 'The file has ' + msg.line_count + ' lines!';
+return msg;`,
     })
     .then('a10007', 'Core.Dialog.MessageBox', 'Show Line Count', {
       inTitle: Custom('Results...'),

@@ -8,7 +8,9 @@ const myFlow = flow.create('c28d2bfc-5f2f-429f-bd49-a6642e5c6749', 'Imported Lau
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('a10002', 'Core.Programming.Function', 'Build Default Path', {
-      func: `msg.default_excel_path = global.get('$Home$') + '/templates/excel-automation/launch-excel/fixtures/sample.xlsx'; msg.retry_count = 0; return msg;`,
+      func: `msg.default_excel_path = global.get('$Home$') + '/templates/excel-automation/launch-excel/fixtures/sample.xlsx';
+msg.retry_count = 0;
+return msg;`,
     })
     .then('a10003', 'Core.Dialog.InputBox', 'Ask Excel', {
       inTitle: Custom('Launch Excel'),
@@ -38,7 +40,8 @@ const myFlow = flow.create('c28d2bfc-5f2f-429f-bd49-a6642e5c6749', 'Imported Lau
   })
     .then('a10021', 'Core.Programming.Function', 'Check Retry', {
       outputs: 2,
-      func: `if ((msg.retry_count || 0) < 1) { msg.retry_count = (msg.retry_count || 0) + 1; return [msg, null]; } return [null, msg];`,
+      func: `if ((msg.retry_count || 0) < 1) { msg.retry_count = (msg.retry_count || 0) + 1;
+return [msg, null]; } return [null, msg];`,
     });
 
   f.node('a10022', 'Core.Programming.Sleep', 'Wait 2s', {
