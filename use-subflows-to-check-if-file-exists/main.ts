@@ -16,7 +16,9 @@ const myFlow = flow.create('a45b07c3-25ee-453c-9c35-3f54f6edcb21', 'Imported Use
     });
 
   f.node('a10004', 'Core.Programming.Function', 'Build Desktop Path', {
-    func: `var desktop = global.get('$Home$') + '/Desktop'; msg.candidate_path = desktop + '/' + msg.user_input; return msg;`,
+    func: `var desktop = global.get('$Home$') + '/Desktop';
+msg.candidate_path = desktop + '/' + msg.user_input;
+return msg;`,
   })
     .then('a10005', 'Core.FileSystem.PathExists', 'Path Exists?', {
       inPath: Message('candidate_path'),

@@ -16,7 +16,9 @@ const myFlow = flow.create('7449d9f1-2aa8-4091-bcf3-84fdad6670b0', 'Imported Use
     });
 
   f.node('a10004', 'Core.Programming.Function', 'Build Desktop Path', {
-    func: `var desktop = global.get('$Home$') + '/Desktop'; msg.candidate_path = desktop + '/' + msg.user_input; return msg;`,
+    func: `var desktop = global.get('$Home$') + '/Desktop';
+msg.candidate_path = desktop + '/' + msg.user_input;
+return msg;`,
   })
     .then('a10005', 'Core.FileSystem.PathExists', 'Path Exists?', {
       inPath: Message('candidate_path'),
@@ -37,7 +39,8 @@ const myFlow = flow.create('7449d9f1-2aa8-4091-bcf3-84fdad6670b0', 'Imported Use
 
   f.node('a10020', 'Core.Flow.Label', 'File_Exists', {})
     .then('a10021', 'Core.Programming.Function', 'Build Found Text', {
-      func: `msg.dialog_text = "Filename: '" + msg.user_input + "' exists in your desktop folder."; return msg;`,
+      func: `msg.dialog_text = "Filename: '" + msg.user_input + "' exists in your desktop folder.";
+return msg;`,
     })
     .then('a10022', 'Core.Dialog.MessageBox', 'Show Found', {
       inTitle: Custom('File found!'),
@@ -48,7 +51,8 @@ const myFlow = flow.create('7449d9f1-2aa8-4091-bcf3-84fdad6670b0', 'Imported Use
 
   f.node('a10030', 'Core.Flow.Label', 'File_Does_Not_Exist', {})
     .then('a10031', 'Core.Programming.Function', 'Build Missing Text', {
-      func: `msg.dialog_text = "Filename: '" + msg.user_input + "' doesn't exist in your desktop folder."; return msg;`,
+      func: `msg.dialog_text = "Filename: '" + msg.user_input + "' doesn't exist in your desktop folder.";
+return msg;`,
     })
     .then('a10032', 'Core.Dialog.MessageBox', 'Show Missing', {
       inTitle: Custom('File not found!'),

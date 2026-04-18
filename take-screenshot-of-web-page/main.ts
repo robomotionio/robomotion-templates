@@ -14,11 +14,16 @@ const myFlow = flow.create('b3bf6a71-ad35-4750-819d-d5f687a182fd', 'Imported Tak
     })
     .then('a10003', 'Core.Programming.Function', 'Branch On Cancel', {
       outputs: 2,
-      func: `var u = (msg.url_input || '').trim(); if (!u) return [null, msg]; if (!/^https?:\\/\\//i.test(u)) u = 'https://' + u; msg.url = u; return [msg, null];`,
+      func: `var u = (msg.url_input || '').trim();
+if (!u) return [null, msg];
+if (!/^https?:\\/\\//i.test(u)) u = 'https://' + u; msg.url = u; return [msg, null];`,
     });
 
   f.node('a10004', 'Core.Programming.Function', 'Build Screenshot Path', {
-    func: `msg.desktop_path = global.get('$Home$') + '/Desktop'; msg.screenshot_path = msg.desktop_path + '/ScreenShot.png'; msg.retry_count = 0; return msg;`,
+    func: `msg.desktop_path = global.get('$Home$') + '/Desktop';
+msg.screenshot_path = msg.desktop_path + '/ScreenShot.png';
+msg.retry_count = 0;
+return msg;`,
   })
     .then('a10040', 'Core.Flow.GoTo', 'Enter Retry', {
       optNodes: { type: 'goto', ids: ['a10041'], all: false },
@@ -57,7 +62,8 @@ const myFlow = flow.create('b3bf6a71-ad35-4750-819d-d5f687a182fd', 'Imported Tak
       outFormattedTime: Message('stamp'),
     })
     .then('a10011', 'Core.Programming.Function', 'Build Stamped Path', {
-      func: `msg.renamed_path = msg.desktop_path + '/ScreenShot-' + msg.stamp + '.png'; return msg;`,
+      func: `msg.renamed_path = msg.desktop_path + '/ScreenShot-' + msg.stamp + '.png';
+return msg;`,
     })
     .then('a10012', 'Core.FileSystem.Move', 'Rename Screenshot', {
       inSrcPath: Message('screenshot_path'),
@@ -65,7 +71,8 @@ const myFlow = flow.create('b3bf6a71-ad35-4750-819d-d5f687a182fd', 'Imported Tak
       continueOnError: true,
     })
     .then('a10013', 'Core.Programming.Function', 'Build Results Text', {
-      func: `msg.dialog_text = 'The screenshot is stored at:\\n\\n' + msg.renamed_path; return msg;`,
+      func: `msg.dialog_text = 'The screenshot is stored at:\\n\\n' + msg.renamed_path;
+return msg;`,
     })
     .then('a10014', 'Core.Dialog.MessageBox', 'Show Result', {
       inTitle: Custom('Screenshot taken!'),
@@ -78,7 +85,8 @@ const myFlow = flow.create('b3bf6a71-ad35-4750-819d-d5f687a182fd', 'Imported Tak
   })
     .then('a10051', 'Core.Programming.Function', 'Check Retry', {
       outputs: 2,
-      func: `if ((msg.retry_count || 0) < 1) { msg.retry_count = (msg.retry_count || 0) + 1; return [msg, null]; } return [null, msg];`,
+      func: `if ((msg.retry_count || 0) < 1) { msg.retry_count = (msg.retry_count || 0) + 1;
+return [msg, null]; } return [null, msg];`,
     });
 
   f.node('a10052', 'Core.Programming.Sleep', 'Wait 2s', {

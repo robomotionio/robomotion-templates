@@ -30,7 +30,10 @@ const myFlow = flow.create('13ddd484-1a0a-4ef2-b3d0-b71f6c0ae7da', 'Imported Ext
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('5355dc', 'Core.Programming.Function', 'Build Default Path', {
-      func: `var fixtures = global.get('$Home$') + '/templates/scripting/extract-text-from-word-document/fixtures'; msg.fixtures_dir = fixtures; msg.sample_docx = fixtures + '/sample.docx'; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/scripting/extract-text-from-word-document/fixtures';
+msg.fixtures_dir = fixtures;
+msg.sample_docx = fixtures + '/sample.docx';
+return msg;`,
     })
     .then('a10002', 'Core.Dialog.InputBox', 'Ask Document', {
       inTitle: Custom('Extract text from Word document'),
@@ -40,11 +43,16 @@ const myFlow = flow.create('13ddd484-1a0a-4ef2-b3d0-b71f6c0ae7da', 'Imported Ext
     })
     .then('a10003', 'Core.Programming.Function', 'Validate', {
       outputs: 2,
-      func: `if (!msg.word_doc_path || !/\\.docx?$/i.test(msg.word_doc_path)) return [null, msg]; var p = msg.word_doc_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.script_path = p.substring(0, lastSlash) + '/_extract.vbs'; return [msg, null];`,
+      func: `if (!msg.word_doc_path || !/\\.docx?$/i.test(msg.word_doc_path)) return [null, msg];
+var p = msg.word_doc_path;
+var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\'));
+msg.script_path = p.substring(0, lastSlash) + '/_extract.vbs';
+return [msg, null];`,
     });
 
   f.node('a10004', 'Core.Programming.Function', 'Build Script', {
-    func: `var tpl = ${JSON.stringify(scriptTemplate)}; msg.vbs_body = tpl.replace('\${WORD_PATH}', '"' + msg.word_doc_path.replace(/\\\\/g, '\\\\\\\\').replace(/"/g, '""') + '"'); return msg;`,
+    func: `var tpl = ${JSON.stringify(scriptTemplate)};
+msg.vbs_body = tpl.replace('\${WORD_PATH}', '"' + msg.word_doc_path.replace(/\\\\/g, '\\\\\\\\').replace(/"/g, '""') + '"'); return msg;`,
   })
     .then('a10005', 'Core.FileSystem.WriteFile', 'Write VBS', {
       inPath: Message('script_path'),
@@ -53,7 +61,8 @@ const myFlow = flow.create('13ddd484-1a0a-4ef2-b3d0-b71f6c0ae7da', 'Imported Ext
       optMode: 'truncate',
     })
     .then('a10006', 'Core.Programming.Function', 'Build Args', {
-      func: `msg.vbs_args = ['//Nologo', msg.script_path]; return msg;`,
+      func: `msg.vbs_args = ['//Nologo', msg.script_path];
+return msg;`,
     })
     .then('a10007', 'Core.Process.StartProcess', 'Run VBScript', {
       inFilePath: Custom('cscript'),
@@ -66,7 +75,13 @@ const myFlow = flow.create('13ddd484-1a0a-4ef2-b3d0-b71f6c0ae7da', 'Imported Ext
       continueOnError: true,
     })
     .then('a10009', 'Core.Programming.Function', 'Trim Output', {
-      func: `var s = String(msg.vbs_output || ''); var start = 0; var end = s.length; while (start < end && (s.charCodeAt(start) === 10 || s.charCodeAt(start) === 13 || s.charCodeAt(start) === 32 || s.charCodeAt(start) === 9)) start++; while (end > start && (s.charCodeAt(end - 1) === 10 || s.charCodeAt(end - 1) === 13 || s.charCodeAt(end - 1) === 32 || s.charCodeAt(end - 1) === 9)) end--; msg.trimmed_text = s.substring(start, end); return msg;`,
+      func: `var s = String(msg.vbs_output || '');
+var start = 0;
+var end = s.length;
+while (start < end && (s.charCodeAt(start) === 10 || s.charCodeAt(start) === 13 || s.charCodeAt(start) === 32 || s.charCodeAt(start) === 9)) start++;
+while (end > start && (s.charCodeAt(end - 1) === 10 || s.charCodeAt(end - 1) === 13 || s.charCodeAt(end - 1) === 32 || s.charCodeAt(end - 1) === 9)) end--;
+msg.trimmed_text = s.substring(start, end);
+return msg;`,
     })
     .then('a10010', 'Core.Dialog.MessageBox', 'Show Output', {
       inTitle: Custom('Extracted text:'),

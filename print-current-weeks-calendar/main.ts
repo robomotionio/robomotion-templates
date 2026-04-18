@@ -7,7 +7,9 @@ const myFlow = flow.create('80648b70-905d-4588-ac4d-e093699cde22', 'Imported Pri
 
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a10002', 'Core.Programming.Function', 'Build Paths', {
-      func: `msg.desktop_folder = global.get('$Home$') + '/Desktop'; msg.image_path = msg.desktop_folder + '/calendar.jpg'; return msg;`,
+      func: `msg.desktop_folder = global.get('$Home$') + '/Desktop';
+msg.image_path = msg.desktop_folder + '/calendar.jpg';
+return msg;`,
     })
     .then('a10003', 'Core.Process.StartProcess', 'Launch Outlook', {
       inFilePath: Custom('C:/Program Files/Microsoft Office/root/Office16/OUTLOOK.EXE'),
@@ -43,7 +45,8 @@ const myFlow = flow.create('80648b70-905d-4588-ac4d-e093699cde22', 'Imported Pri
       optWaitTimeout: 10,
     })
     .then('a10009', 'Core.Programming.Function', 'Build Print Args', {
-      func: `msg.print_args = ['-NoProfile', '-Command', 'Start-Process -FilePath ' + JSON.stringify(msg.image_path) + ' -Verb Print']; return msg;`,
+      func: `msg.print_args = ['-NoProfile', '-Command', 'Start-Process -FilePath ' + JSON.stringify(msg.image_path) + ' -Verb Print'];
+return msg;`,
     })
     .then('a10010', 'Core.Process.StartProcess', 'Send To Printer', {
       inFilePath: Custom('powershell'),
@@ -59,7 +62,8 @@ const myFlow = flow.create('80648b70-905d-4588-ac4d-e093699cde22', 'Imported Pri
       continueOnError: true,
     })
     .then('a10013', 'Core.Programming.Function', 'Build Kill Args', {
-      func: `msg.kill_args = ['/F', '/IM', 'outlook.exe']; return msg;`,
+      func: `msg.kill_args = ['/F', '/IM', 'outlook.exe'];
+return msg;`,
     })
     .then('a10014', 'Core.Process.StartProcess', 'Close Outlook', {
       inFilePath: Custom('taskkill'),

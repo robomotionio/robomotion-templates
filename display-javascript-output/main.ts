@@ -11,7 +11,10 @@ const myFlow = flow.create('9c1b90e6-2b25-4775-ace0-8f37ebb86e64', 'Imported Dis
       outStdout: Message('javascript_output'),
     })
     .then('a10003', 'Core.Programming.Function', 'Trim Output', {
-      func: `var s = String(msg.javascript_output || ''); while (s.length && (s.charCodeAt(s.length - 1) === 10 || s.charCodeAt(s.length - 1) === 13)) s = s.slice(0, -1); msg.javascript_output = s; return msg;`,
+      func: `var s = String(msg.javascript_output || '');
+while (s.length && (s.charCodeAt(s.length - 1) === 10 || s.charCodeAt(s.length - 1) === 13)) s = s.slice(0, -1);
+msg.javascript_output = s;
+return msg;`,
     })
     .then('a10004', 'Core.Dialog.MessageBox', 'Show Output', {
       inTitle: Custom('Output from JavaScript:'),

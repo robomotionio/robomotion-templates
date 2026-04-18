@@ -30,7 +30,8 @@ const myFlow = flow.create('911c07de-689e-4c3e-a378-c9f6b65818e7', 'Imported Sen
       continueOnError: true,
     })
     .then('a10005', 'Core.Programming.Function', 'Seed Text', {
-      func: `msg.notepad_text = ${JSON.stringify(notepadText)}; return msg;`,
+      func: `msg.notepad_text = ${JSON.stringify(notepadText)};
+return msg;`,
     })
     .then('a10006', 'Robomotion.WindowsAutomation.SetText', 'Populate Editor', {
       inSelector: Custom('//Window[contains(@Name,"Notepad")]//Edit'),

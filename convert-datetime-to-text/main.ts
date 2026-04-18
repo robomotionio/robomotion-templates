@@ -19,7 +19,8 @@ const myFlow = flow.create('220659bb-c450-4654-af7b-ded057ed7c3b', 'Imported Con
       outFormattedTime: Message('formatted_date_time'),
     })
     .then('a10011', 'Core.Programming.Function', 'Build Short Date Text', {
-      func: `msg.dialog_text = "Current date in 'short date' text format:\\n" + msg.formatted_date_time; return msg;`,
+      func: `msg.dialog_text = "Current date in 'short date' text format:\\n" + msg.formatted_date_time;
+return msg;`,
     })
     .then('a10012', 'Core.Dialog.MessageBox', 'Show Short Date', {
       inTitle: Custom('Result'),
@@ -34,7 +35,8 @@ const myFlow = flow.create('220659bb-c450-4654-af7b-ded057ed7c3b', 'Imported Con
       outFormattedTime: Message('formatted_date_time'),
     })
     .then('a10021', 'Core.Programming.Function', 'Build Short Time Text', {
-      func: `msg.dialog_text = "Current time in 'short time' text format:\\n" + msg.formatted_date_time; return msg;`,
+      func: `msg.dialog_text = "Current time in 'short time' text format:\\n" + msg.formatted_date_time;
+return msg;`,
     })
     .then('a10022', 'Core.Dialog.MessageBox', 'Show Short Time', {
       inTitle: Custom('Result'),
@@ -49,7 +51,8 @@ const myFlow = flow.create('220659bb-c450-4654-af7b-ded057ed7c3b', 'Imported Con
       outFormattedTime: Message('formatted_date_time'),
     })
     .then('a10031', 'Core.Programming.Function', 'Build Long Date Text', {
-      func: `msg.dialog_text = "Current date in 'MMMM dd, yyyy' text format:\\n" + msg.formatted_date_time; return msg;`,
+      func: `msg.dialog_text = "Current date in 'MMMM dd, yyyy' text format:\\n" + msg.formatted_date_time;
+return msg;`,
     })
     .then('a10032', 'Core.Dialog.MessageBox', 'Show Long Date', {
       inTitle: Custom('Result'),
@@ -76,7 +79,8 @@ const myFlow = flow.create('220659bb-c450-4654-af7b-ded057ed7c3b', 'Imported Con
       outFormattedTime: Message('formatted_date_time'),
     })
     .then('a10051', 'Core.Programming.Function', 'Build 12-Hour Time Text', {
-      func: `msg.dialog_text = "Current time in 'hh:mm:ss tt' text format:\\n" + msg.formatted_date_time; return msg;`,
+      func: `msg.dialog_text = "Current time in 'hh:mm:ss tt' text format:\\n" + msg.formatted_date_time;
+return msg;`,
     })
     .then('a10052', 'Core.Dialog.MessageBox', 'Show 12-Hour Time', {
       inTitle: Custom('Result'),
@@ -103,7 +107,8 @@ const myFlow = flow.create('220659bb-c450-4654-af7b-ded057ed7c3b', 'Imported Con
       outFormattedTime: Message('formatted_date_time'),
     })
     .then('a10071', 'Core.Programming.Function', 'Build Full DateTime Text', {
-      func: `msg.dialog_text = "Today's date and time is " + msg.formatted_date_time; return msg;`,
+      func: `msg.dialog_text = "Today's date and time is " + msg.formatted_date_time;
+return msg;`,
     })
     .then('a10072', 'Core.Dialog.MessageBox', 'Show Full DateTime', {
       inTitle: Custom('Result'),

@@ -14,7 +14,8 @@ const myFlow = flow.create('ccebdc1e-d95a-4467-976b-62ce4b47cfd2', 'Imported Con
       outFormattedTime: Message('text_as_date_time'),
     })
     .then('a10012', 'Core.Programming.Function', 'Build Date Dialog Text', {
-      func: `msg.dialog_text = "The text '20220101' has been converted to the following datetime variable: " + msg.text_as_date_time; return msg;`,
+      func: `msg.dialog_text = "The text '20220101' has been converted to the following datetime variable: " + msg.text_as_date_time;
+return msg;`,
     })
     .then('a10013', 'Core.Dialog.MessageBox', 'Show Date', {
       inTitle: Custom('Result'),
@@ -29,7 +30,8 @@ const myFlow = flow.create('ccebdc1e-d95a-4467-976b-62ce4b47cfd2', 'Imported Con
       outFormattedTime: Message('text_as_date_time'),
     })
     .then('a10022', 'Core.Programming.Function', 'Build Time Dialog Text', {
-      func: `msg.dialog_text = "The text '23:45:00' has been converted to the following datetime variable: " + msg.text_as_date_time; return msg;`,
+      func: `msg.dialog_text = "The text '23:45:00' has been converted to the following datetime variable: " + msg.text_as_date_time;
+return msg;`,
     })
     .then('a10023', 'Core.Dialog.MessageBox', 'Show Time', {
       inTitle: Custom('Result'),
@@ -44,7 +46,8 @@ const myFlow = flow.create('ccebdc1e-d95a-4467-976b-62ce4b47cfd2', 'Imported Con
       outFormattedTime: Message('text_as_date_time'),
     })
     .then('a10032', 'Core.Programming.Function', 'Build DateTime Dialog Text', {
-      func: `msg.dialog_text = "The text 'January 01, 2022 23:45:00' has been converted to the following datetime variable: " + msg.text_as_date_time; return msg;`,
+      func: `msg.dialog_text = "The text 'January 01, 2022 23:45:00' has been converted to the following datetime variable: " + msg.text_as_date_time;
+return msg;`,
     })
     .then('a10033', 'Core.Dialog.MessageBox', 'Show DateTime', {
       inTitle: Custom('Result'),

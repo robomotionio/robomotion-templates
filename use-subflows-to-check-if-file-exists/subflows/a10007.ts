@@ -3,7 +3,8 @@ import { subflow, Message, Custom } from '@robomotion/sdk';
 subflow.create('File Exists', (f) => {
   f.node('b10001', 'Core.Flow.Begin', 'Begin', {})
     .then('b10002', 'Core.Programming.Function', 'Build Found Text', {
-      func: `msg.dialog_text = "Filename: '" + msg.user_input + "' exists in your desktop folder."; return msg;`,
+      func: `msg.dialog_text = "Filename: '" + msg.user_input + "' exists in your desktop folder.";
+return msg;`,
     })
     .then('b10003', 'Core.Dialog.MessageBox', 'Show Found', {
       inTitle: Custom('File found!'),

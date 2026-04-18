@@ -13,7 +13,8 @@ subflow.create('Keywords', (f) => {
     });
 
   f.node('b20004', 'Core.Programming.Function', 'Build Found Text', {
-    func: `msg.dialog_text = 'The keywords specified for the given web page are:\\n\\n' + msg.web_page_keywords; return msg;`,
+    func: `msg.dialog_text = 'The keywords specified for the given web page are:\\n\\n' + msg.web_page_keywords;
+return msg;`,
   })
     .then('b20005', 'Core.Dialog.MessageBox', 'Show Keywords', {
       inTitle: Custom('Get metadata of a webpage.'),
@@ -22,7 +23,8 @@ subflow.create('Keywords', (f) => {
     });
 
   f.node('b20006', 'Core.Programming.Function', 'Build Missing Text', {
-    func: `msg.dialog_text = 'No keywords specified for the web page:\\n' + msg.url; return msg;`,
+    func: `msg.dialog_text = 'No keywords specified for the web page:\\n' + msg.url;
+return msg;`,
   })
     .then('b20007', 'Core.Dialog.MessageBox', 'Show No Keywords', {
       inTitle: Custom('Get metadata of a webpage.'),

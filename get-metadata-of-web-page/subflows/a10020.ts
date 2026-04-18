@@ -8,7 +8,8 @@ subflow.create('Title', (f) => {
       outResult: Message('web_page_title'),
     })
     .then('b10003', 'Core.Programming.Function', 'Build Dialog Text', {
-      func: `msg.dialog_text = 'The title of the given web page is:\\n\\n' + (msg.web_page_title || ''); return msg;`,
+      func: `msg.dialog_text = 'The title of the given web page is:\\n\\n' + (msg.web_page_title || '');
+return msg;`,
     })
     .then('b10004', 'Core.Dialog.MessageBox', 'Show Title', {
       inTitle: Custom('Get metadata of a webpage.'),

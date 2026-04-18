@@ -8,7 +8,11 @@ const myFlow = flow.create('7ef0a17b-e4da-4b67-8019-b65f98c6d90f', 'Imported Con
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('a10002', 'Core.Programming.Function', 'Init Combined', {
-      func: `var fixtures = global.get('$Home$') + '/templates/excel-automation/consolidate-excel-reports/fixtures'; msg.fixtures_dir = fixtures; msg.combined_table = null; msg.output_path = fixtures + '/Consolidated Report.csv'; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/excel-automation/consolidate-excel-reports/fixtures';
+msg.fixtures_dir = fixtures;
+msg.combined_table = null;
+msg.output_path = fixtures + '/Consolidated Report.csv';
+return msg;`,
     })
     .then('a10020', 'Core.Flow.SubFlow', 'Get Excel Files Details', {})
     .then('a10003', 'Core.Programming.Function', 'Validate List', {
@@ -44,7 +48,9 @@ return msg;`,
       optMode: 'truncate',
     })
     .then('a10031', 'Core.Programming.Function', 'Build Attachments', {
-      func: `msg.attachments = [msg.output_path]; msg.retry_count = 0; return msg;`,
+      func: `msg.attachments = [msg.output_path];
+msg.retry_count = 0;
+return msg;`,
     })
     .then('a10040', 'Core.Flow.GoTo', 'Enter Retry', {
       optNodes: { type: 'goto', ids: ['a10041'], all: false },
@@ -60,7 +66,8 @@ return msg;`,
       replyAllMode: false,
     })
     .then('a10033', 'Core.Programming.Function', 'Build Done Text', {
-      func: `msg.dialog_text = 'The consolidated file has been saved in ' + msg.output_path + ' and emailed to ' + msg.recipient_email; return msg;`,
+      func: `msg.dialog_text = 'The consolidated file has been saved in ' + msg.output_path + ' and emailed to ' + msg.recipient_email;
+return msg;`,
     })
     .then('a10034', 'Core.Dialog.MessageBox', 'Show Done', {
       inTitle: Custom('Flow run successful'),
@@ -73,7 +80,8 @@ return msg;`,
   })
     .then('a10051', 'Core.Programming.Function', 'Check Retry', {
       outputs: 2,
-      func: `if ((msg.retry_count || 0) < 1) { msg.retry_count = (msg.retry_count || 0) + 1; return [msg, null]; } return [null, msg];`,
+      func: `if ((msg.retry_count || 0) < 1) { msg.retry_count = (msg.retry_count || 0) + 1;
+return [msg, null]; } return [null, msg];`,
     });
 
   f.node('a10052', 'Core.Programming.Sleep', 'Wait 5s', {

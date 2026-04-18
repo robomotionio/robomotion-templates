@@ -3,7 +3,13 @@ import { subflow, Message, Custom } from '@robomotion/sdk';
 subflow.create('Download Fixtures', (f) => {
   f.node('b11001', 'Core.Flow.Begin', 'Begin', {})
     .then('b11002', 'Core.Programming.Function', 'Build Paths', {
-      func: `var fixtures = global.get('$Home$') + '/templates/pdf-automation/merge-pdfs/fixtures'; msg._dl_dir = fixtures; msg._dl_doc_a_pdf = fixtures + '/doc_a.pdf'; msg._dl_doc_b_pdf = fixtures + '/doc_b.pdf'; msg._dl_doc_c_pdf = fixtures + '/doc_c.pdf'; msg._dl_doc_d_pdf = fixtures + '/doc_d.pdf'; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/pdf-automation/merge-pdfs/fixtures';
+msg._dl_dir = fixtures;
+msg._dl_doc_a_pdf = fixtures + '/doc_a.pdf';
+msg._dl_doc_b_pdf = fixtures + '/doc_b.pdf';
+msg._dl_doc_c_pdf = fixtures + '/doc_c.pdf';
+msg._dl_doc_d_pdf = fixtures + '/doc_d.pdf';
+return msg;`,
     })
     .then('b11003', 'Core.FileSystem.Create', 'Create Fixtures Dir', {
       inPath: Message('_dl_dir'),

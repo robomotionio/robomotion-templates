@@ -12,7 +12,9 @@ const myFlow = flow.create('01abdb64-744a-447d-a38d-f5389c5c4735', 'Imported Ope
     })
     .then('a10003', 'Core.Programming.Function', 'Branch On Cancel', {
       outputs: 2,
-      func: `var u = (msg.url_input || '').trim(); if (!u) return [null, msg]; if (!/^https?:\\/\\//i.test(u)) u = 'https://' + u; msg.url = u; msg.retry_count = 0; return [msg, null];`,
+      func: `var u = (msg.url_input || '').trim();
+if (!u) return [null, msg];
+if (!/^https?:\\/\\//i.test(u)) u = 'https://' + u; msg.url = u; msg.retry_count = 0; return [msg, null];`,
     })
     .then('a10010', 'Core.Flow.GoTo', 'Enter Retry', {
       optNodes: { type: 'goto', ids: ['a10011'], all: false },
@@ -36,7 +38,8 @@ const myFlow = flow.create('01abdb64-744a-447d-a38d-f5389c5c4735', 'Imported Ope
   })
     .then('a10021', 'Core.Programming.Function', 'Check Retry', {
       outputs: 2,
-      func: `if ((msg.retry_count || 0) < 1) { msg.retry_count = (msg.retry_count || 0) + 1; return [msg, null]; } return [null, msg];`,
+      func: `if ((msg.retry_count || 0) < 1) { msg.retry_count = (msg.retry_count || 0) + 1;
+return [msg, null]; } return [null, msg];`,
     });
 
   f.node('a10022', 'Core.Programming.Sleep', 'Wait 2s', {

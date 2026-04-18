@@ -8,7 +8,11 @@ const myFlow = flow.create('00869a9e-4673-4196-8e25-f65888447289', 'Imported Mer
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('a10002', 'Core.Programming.Function', 'Seed PDF List', {
-      func: `var fixtures = global.get('$Home$') + '/templates/pdf-automation/merge-pdfs/fixtures'; msg.fixtures_dir = fixtures; msg.default_dest = fixtures + '/output'; msg.pdf_list = [fixtures + '/doc_a.pdf', fixtures + '/doc_b.pdf', fixtures + '/doc_c.pdf', fixtures + '/doc_d.pdf']; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/pdf-automation/merge-pdfs/fixtures';
+msg.fixtures_dir = fixtures;
+msg.default_dest = fixtures + '/output';
+msg.pdf_list = [fixtures + '/doc_a.pdf', fixtures + '/doc_b.pdf', fixtures + '/doc_c.pdf', fixtures + '/doc_d.pdf'];
+return msg;`,
     })
     .then('a10003', 'Core.Dialog.InputBox', 'Ask Destination', {
       inTitle: Custom(' Merge multiple PDFs into one'),
@@ -18,7 +22,13 @@ const myFlow = flow.create('00869a9e-4673-4196-8e25-f65888447289', 'Imported Mer
     })
     .then('a10004', 'Core.Programming.Function', 'Reverse And Plan', {
       outputs: 2,
-      func: `if (!msg.destination_folder) return [null, msg]; msg.pdf_list = msg.pdf_list.slice().reverse(); msg.suffix_base = 'MergedFile'; msg.suffix_ext = '.pdf'; msg.suffix_idx = 0; msg.candidate_path = msg.destination_folder + '/' + msg.suffix_base + msg.suffix_ext; return [msg, null];`,
+      func: `if (!msg.destination_folder) return [null, msg];
+msg.pdf_list = msg.pdf_list.slice().reverse();
+msg.suffix_base = 'MergedFile';
+msg.suffix_ext = '.pdf';
+msg.suffix_idx = 0;
+msg.candidate_path = msg.destination_folder + '/' + msg.suffix_base + msg.suffix_ext;
+return [msg, null];`,
     });
 
   f.node('a10005', 'Core.FileSystem.Create', 'Create Dest Dir', {
@@ -37,7 +47,10 @@ const myFlow = flow.create('00869a9e-4673-4196-8e25-f65888447289', 'Imported Mer
     })
     .then('a10012', 'Core.Programming.Function', 'Next Or Done', {
       outputs: 2,
-      func: `if (msg.candidate_exists) { msg.suffix_idx += 1; msg.candidate_path = msg.destination_folder + '/' + msg.suffix_base + '_' + (msg.suffix_idx + 1) + msg.suffix_ext; return [msg, null]; } msg.merged_path = msg.candidate_path; return [null, msg];`,
+      func: `if (msg.candidate_exists) { msg.suffix_idx += 1;
+msg.candidate_path = msg.destination_folder + '/' + msg.suffix_base + '_' + (msg.suffix_idx + 1) + msg.suffix_ext;
+return [msg, null]; } msg.merged_path = msg.candidate_path;
+return [null, msg];`,
     });
 
   f.node('a10013', 'Core.Flow.GoTo', 'Loop Back', {
@@ -49,7 +62,8 @@ const myFlow = flow.create('00869a9e-4673-4196-8e25-f65888447289', 'Imported Mer
     inPDFPathSave: Message('merged_path'),
   })
     .then('a10007', 'Core.Programming.Function', 'Build Done Text', {
-      func: `msg.dialog_text = 'The merged file has been saved in: ' + msg.merged_path; return msg;`,
+      func: `msg.dialog_text = 'The merged file has been saved in: ' + msg.merged_path;
+return msg;`,
     })
     .then('a10008', 'Core.Dialog.MessageBox', 'Show Done', {
       inTitle: Custom('Done!'),

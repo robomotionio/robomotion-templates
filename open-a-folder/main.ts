@@ -5,7 +5,8 @@ const myFlow = flow.create('024d427e-0ed0-441d-974a-c56ac07215ca', 'Imported Ope
 
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a10002', 'Core.Programming.Function', 'Build Documents Path', {
-      func: `msg.documents_folder_path = global.get('$Home$') + '/Documents'; return msg;`,
+      func: `msg.documents_folder_path = global.get('$Home$') + '/Documents';
+return msg;`,
     })
     .then('a10003', 'Core.Dialog.InputBox', 'Ask Folder', {
       inTitle: Custom('Open a folder'),
@@ -19,7 +20,8 @@ const myFlow = flow.create('024d427e-0ed0-441d-974a-c56ac07215ca', 'Imported Ope
     });
 
   f.node('a10005', 'Core.Programming.Function', 'Build Args', {
-    func: `msg.explorer_args = [msg.selected_folder]; return msg;`,
+    func: `msg.explorer_args = [msg.selected_folder];
+return msg;`,
   })
     .then('a10006', 'Core.Process.StartProcess', 'Launch Explorer', {
       inFilePath: Custom('explorer.exe'),

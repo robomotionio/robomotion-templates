@@ -19,7 +19,8 @@ const myFlow = flow.create('3095c176-9538-487a-92a4-94970eb8d1e5', 'Imported Get
       outFormattedTime: Message('long_time'),
     })
     .then('a10004', 'Core.Programming.Function', 'Build Dialog Text', {
-      func: `msg.dialog_text = 'It is ' + msg.long_time + ' currently.'; return msg;`,
+      func: `msg.dialog_text = 'It is ' + msg.long_time + ' currently.';
+return msg;`,
     })
     .then('a10005', 'Core.Dialog.MessageBox', 'Show Information Dialog', {
       inTitle: Custom('Time right now'),

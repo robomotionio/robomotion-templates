@@ -22,7 +22,11 @@ const myFlow = flow.create('70e36839-1f44-4792-ab5d-06e9c2612969', 'Imported Con
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('5355dc', 'Core.Programming.Function', 'Build Paths', {
-      func: `var fixtures = global.get('$Home$') + '/templates/scripting/convert-excel-to-pdf-using-vbscript/fixtures'; msg.fixtures_dir = fixtures; msg.sample_xlsx = fixtures + '/sample.xlsx'; msg.output_dir = fixtures + '/output'; return msg;`,
+      func: `var fixtures = global.get('$Home$') + '/templates/scripting/convert-excel-to-pdf-using-vbscript/fixtures';
+msg.fixtures_dir = fixtures;
+msg.sample_xlsx = fixtures + '/sample.xlsx';
+msg.output_dir = fixtures + '/output';
+return msg;`,
     })
     .then('a10002', 'Core.Dialog.InputBox', 'Ask Excel', {
       inTitle: Custom('Convert Excel to PDF'),
@@ -38,7 +42,10 @@ const myFlow = flow.create('70e36839-1f44-4792-ab5d-06e9c2612969', 'Imported Con
     })
     .then('a10004', 'Core.Programming.Function', 'Validate', {
       outputs: 2,
-      func: `if (!msg.excel_path || !/\\.xlsx?$/i.test(msg.excel_path) || !msg.destination_folder) return [null, msg]; msg.pdf_path = msg.destination_folder + '/ConvertedPDFfile.pdf'; msg.script_path = msg.destination_folder + '/_convert.vbs'; return [msg, null];`,
+      func: `if (!msg.excel_path || !/\\.xlsx?$/i.test(msg.excel_path) || !msg.destination_folder) return [null, msg];
+msg.pdf_path = msg.destination_folder + '/ConvertedPDFfile.pdf';
+msg.script_path = msg.destination_folder + '/_convert.vbs';
+return [msg, null];`,
     });
 
   f.node('a10005', 'Core.FileSystem.Create', 'Ensure Dest Dir', {
@@ -47,7 +54,9 @@ const myFlow = flow.create('70e36839-1f44-4792-ab5d-06e9c2612969', 'Imported Con
     continueOnError: true,
   })
     .then('a10006', 'Core.Programming.Function', 'Build Script', {
-      func: `var tpl = ${JSON.stringify(scriptTemplate)}; msg.vbs_body = tpl.replace('\${EXCEL_PATH}', '"' + msg.excel_path.replace(/\\\\/g, '\\\\\\\\').replace(/"/g, '""') + '"').replace('\${PDF_PATH}', '"' + msg.pdf_path.replace(/\\\\/g, '\\\\\\\\').replace(/"/g, '""') + '"'); return msg;`,
+      func: `var tpl = ${JSON.stringify(scriptTemplate)};
+msg.vbs_body = tpl.replace('\${EXCEL_PATH}', '"' + msg.excel_path.replace(/\\\\/g, '\\\\\\\\').replace(/"/g, '""') + '"').replace('\${PDF_PATH}', '"' + msg.pdf_path.replace(/\\\\/g, '\\\\\\\\').replace(/"/g, '""') + '"');
+return msg;`,
     })
     .then('a10007', 'Core.FileSystem.WriteFile', 'Write VBS', {
       inPath: Message('script_path'),
@@ -56,7 +65,8 @@ const myFlow = flow.create('70e36839-1f44-4792-ab5d-06e9c2612969', 'Imported Con
       optMode: 'truncate',
     })
     .then('a10008', 'Core.Programming.Function', 'Build Args', {
-      func: `msg.vbs_args = ['//Nologo', msg.script_path]; return msg;`,
+      func: `msg.vbs_args = ['//Nologo', msg.script_path];
+return msg;`,
     })
     .then('a10009', 'Core.Process.StartProcess', 'Run VBScript', {
       inFilePath: Custom('cscript'),
@@ -69,7 +79,8 @@ const myFlow = flow.create('70e36839-1f44-4792-ab5d-06e9c2612969', 'Imported Con
       continueOnError: true,
     })
     .then('a10011', 'Core.Programming.Function', 'Build Done Text', {
-      func: `msg.dialog_text = 'The generated PDF file is stored at: ' + msg.pdf_path; return msg;`,
+      func: `msg.dialog_text = 'The generated PDF file is stored at: ' + msg.pdf_path;
+return msg;`,
     })
     .then('a10012', 'Core.Dialog.MessageBox', 'Show Done', {
       inTitle: Custom('The flow ran successfully.'),

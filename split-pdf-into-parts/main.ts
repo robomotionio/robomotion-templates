@@ -8,7 +8,8 @@ const myFlow = flow.create('d96f25dd-50c0-4d51-a885-fbc3b8977c1d', 'Imported Spl
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('a10040', 'Core.Programming.Function', 'Build Default', {
-      func: `msg.default_pdf = global.get('$Home$') + '/templates/pdf-automation/split-pdf-into-parts/fixtures/sample.pdf'; return msg;`,
+      func: `msg.default_pdf = global.get('$Home$') + '/templates/pdf-automation/split-pdf-into-parts/fixtures/sample.pdf';
+return msg;`,
     })
     .then('a10002', 'Core.Dialog.InputBox', 'Ask PDF', {
       inTitle: Custom('Split a PDF file'),
@@ -24,7 +25,16 @@ const myFlow = flow.create('d96f25dd-50c0-4d51-a885-fbc3b8977c1d', 'Imported Spl
     })
     .then('a10004', 'Core.Programming.Function', 'Validate', {
       outputs: 2,
-      func: `var n = Number(msg.n_text); if (!msg.pdf_path || !/\\.pdf$/i.test(msg.pdf_path) || !Number.isInteger(n) || n < 1) return [null, msg]; msg.pages_per_part = n; var p = msg.pdf_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.directory = p.substring(0, lastSlash); var stamp = Date.now(); msg.pages_dir = msg.directory + '/_pages_' + stamp; msg.split_output_dir = msg.directory + '/parts_' + stamp; return [msg, null];`,
+      func: `var n = Number(msg.n_text);
+if (!msg.pdf_path || !/\\.pdf$/i.test(msg.pdf_path) || !Number.isInteger(n) || n < 1) return [null, msg];
+msg.pages_per_part = n;
+var p = msg.pdf_path;
+var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\'));
+msg.directory = p.substring(0, lastSlash);
+var stamp = Date.now();
+msg.pages_dir = msg.directory + '/_pages_' + stamp;
+msg.split_output_dir = msg.directory + '/parts_' + stamp;
+return [msg, null];`,
     });
 
   f.node('a10005', 'Core.FileSystem.Create', 'Ensure Pages Dir', {
@@ -47,7 +57,14 @@ const myFlow = flow.create('d96f25dd-50c0-4d51-a885-fbc3b8977c1d', 'Imported Spl
       outFiles: Message('page_files'),
     })
     .then('a10008', 'Core.Programming.Function', 'Build Chunks', {
-      func: `var list = (msg.page_files || []).filter(function (x) { return !x.IsDir; }); list.sort(function (a, b) { return a.Name < b.Name ? -1 : (a.Name > b.Name ? 1 : 0); }); var paths = list.map(function (x) { return x.Name; }); var n = Number(msg.pages_per_part); var chunks = []; for (var i = 0; i < paths.length; i += n) chunks.push(paths.slice(i, i + n)); msg.chunks = chunks; return msg;`,
+      func: `var list = (msg.page_files || []).filter(function (x) { return !x.IsDir; });
+list.sort(function (a, b) { return a.Name < b.Name ? -1 : (a.Name > b.Name ? 1 : 0); });
+var paths = list.map(function (x) { return x.Name; });
+var n = Number(msg.pages_per_part);
+var chunks = [];
+for (var i = 0; i < paths.length; i += n) chunks.push(paths.slice(i, i + n));
+msg.chunks = chunks;
+return msg;`,
     })
     .then('a10009', 'Core.FileSystem.Create', 'Ensure Output Dir', {
       inPath: Message('split_output_dir'),
@@ -75,7 +92,8 @@ const myFlow = flow.create('d96f25dd-50c0-4d51-a885-fbc3b8977c1d', 'Imported Spl
     continueOnError: true,
   })
     .then('a10031', 'Core.Programming.Function', 'Build Done Text', {
-      func: `msg.dialog_text = 'The output PDF files are located in:\\n' + msg.split_output_dir; return msg;`,
+      func: `msg.dialog_text = 'The output PDF files are located in:\\n' + msg.split_output_dir;
+return msg;`,
     })
     .then('a10032', 'Core.Dialog.MessageBox', 'Show Done', {
       inTitle: Custom('Flow ran successfully!'),
