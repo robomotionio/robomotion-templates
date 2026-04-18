@@ -1,0 +1,60 @@
+examples:
+  datetime-handling:
+    - convert-datetime-to-text
+    - convert-text-to-datetime
+    - days-of-your-life
+    - get-current-time
+    - get-first-working-day-of-next-month
+    - get-previous-working-date
+  desktop-automation:
+    - add-datetime-to-file-names
+    - copy-files
+    - delete-files-of-specific-size-range
+    - find-and-delete-empty-files
+    - gui-testing-calculator
+    - open-a-folder
+    - print-current-weeks-calendar
+    - print-documents
+    - run-an-application
+    - send-text-to-notepad
+    - share-powerpoint-file-as-pdf
+  excel-automation:
+    - consolidate-excel-reports
+    - launch-excel
+    - launch-excel-and-extract-table
+    - manipulate-excel-data-using-sql
+    - search-and-replace-excel-values
+  flow-control:
+    - use-and-operator-in-conditionals
+    - use-conditionals-to-check-if-file-exists
+    - use-labels-to-check-if-file-exists
+    - use-or-operator-in-conditionals
+    - use-subflows-to-check-if-file-exists
+  pdf-automation:
+    - create-pdf-from-selected-pages
+    - extract-tables-from-pdf
+    - get-images-from-pdf
+    - get-number-of-pages
+    - merge-pdfs
+    - merge-two-pdfs
+    - split-pdf-by-half
+    - split-pdf-by-specified-page
+    - split-pdf-into-parts
+  scripting:
+    - convert-excel-to-pdf-using-vbscript
+    - display-javascript-output
+    - display-powershell-output
+    - display-python-output
+    - display-vbscript-output
+    - extract-text-from-word-document
+    - get-login-name-using-python
+  text-manipulation:
+    - concatenate-text-files
+    - count-lines-of-text-file
+    - extract-phone-numbers-and-emails
+    - get-position-of-subtext
+    - sort-lines-of-text-file
+  web-automation:
+    - get-metadata-of-web-page
+    - open-a-web-page
+    - take-screenshot-of-web-page
