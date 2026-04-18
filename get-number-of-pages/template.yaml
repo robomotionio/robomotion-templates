@@ -1,0 +1,15 @@
+name: Get Number of Pages in a PDF
+slug: get-number-of-pages
+summary: >-
+  Reports the page count of a PDF file as a single number. A small utility that
+  feeds splitters, paginators, and dashboards.
+category: PDF
+level: Intermediate
+tags: [pdf, metadata, pages, count, subflow]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 91118709-f8ed-48ed-a134-27b76c421d46
+schema_version: 1

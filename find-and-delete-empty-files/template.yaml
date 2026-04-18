@@ -1,0 +1,15 @@
+name: Find and Delete Empty Files
+slug: find-and-delete-empty-files
+summary: >-
+  Walks a directory, locates zero-byte files, and deletes them in a single pass.
+  Handy for cleaning up broken export folders.
+category: Desktop Automation
+level: Beginner
+tags: [file, delete, empty-file, cleanup, subflow]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: ab2e1663-2766-4215-b465-3e1c1a2fd4e9
+schema_version: 1

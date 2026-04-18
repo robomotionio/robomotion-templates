@@ -1,0 +1,15 @@
+name: Send Text to Notepad
+slug: send-text-to-notepad
+summary: >-
+  Opens Notepad and types a provided string into its editor window. Demonstrates
+  how to pair Application.Launch with keyboard automation.
+category: Desktop Automation
+level: Beginner
+tags: [notepad, text, keyboard, desktop]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 911c07de-689e-4c3e-a378-c9f6b65818e7
+schema_version: 1

@@ -1,0 +1,15 @@
+name: Get Position of Subtext
+slug: get-position-of-subtext
+summary: >-
+  Finds the character index of a substring inside a larger string. A concise
+  demo of the text-search primitives.
+category: Text Manipulation
+level: Beginner
+tags: [text, search, position, string]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 507d615d-5c62-4cdb-9baf-95cd07933b45
+schema_version: 1

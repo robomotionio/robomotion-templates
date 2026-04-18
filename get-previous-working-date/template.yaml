@@ -1,0 +1,15 @@
+name: Get Previous Working Date
+slug: get-previous-working-date
+summary: >-
+  Walks backwards from today to find the previous working day, handling weekends
+  through conditional logic. A building block for backdated reports or audits.
+category: Date & Time
+level: Advanced
+tags: [datetime, working-day, conditional, loop]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 1e63fc61-ecc8-40f3-9dee-e58a51d9debb
+schema_version: 1

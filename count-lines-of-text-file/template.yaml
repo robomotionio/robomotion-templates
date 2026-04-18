@@ -1,0 +1,15 @@
+name: Count Lines of a Text File
+slug: count-lines-of-text-file
+summary: >-
+  Opens a text file and reports the number of lines it contains. A tiny helper
+  you can drop into larger analytics flows.
+category: Text Manipulation
+level: Intermediate
+tags: [text, count, lines, statistics, subflow]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 681e3719-b6fc-4a07-bc58-050b30229b0b
+schema_version: 1

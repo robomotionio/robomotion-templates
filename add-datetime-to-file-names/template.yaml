@@ -1,0 +1,15 @@
+name: Add Datetime to File Names
+slug: add-datetime-to-file-names
+summary: >-
+  Renames every file in a directory by appending the current date to its name. A
+  quick way to version artefacts, snapshots, or export batches.
+category: Desktop Automation
+level: Beginner
+tags: [file, rename, datetime, subflow]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 3fcd90e9-d470-4ad7-9ddd-dccdaf2f2b1f
+schema_version: 1

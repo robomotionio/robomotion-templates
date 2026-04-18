@@ -4,6 +4,7 @@ summary: >-
   Reads the content of a text file from your file system using the
   FileSystem.ReadFile node and displays it in a message box.
 category: File Operations
+level: Beginner
 tags: [file, read, text]
 author: Robomotion
 created: "2025-11-17"

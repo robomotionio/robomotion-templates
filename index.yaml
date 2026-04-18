@@ -1,5 +1,19 @@
 schema_version: 1
 templates:
+  - name: Add Datetime to File Names
+    slug: add-datetime-to-file-names
+    summary: >-
+      Renames every file in a directory by appending the current date to its name. A
+      quick way to version artefacts, snapshots, or export batches.
+    category: Desktop Automation
+    level: Beginner
+    tags: [file, rename, datetime, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
   - name: API Health Check
     slug: api-health-check
     summary: >-
@@ -7,6 +21,7 @@ templates:
       and evaluating response status codes. Demonstrates how to test any service
       endpoint using the GET method.
     category: Monitoring
+    level: Beginner
     tags: [api, health-check, http, monitoring]
     author: Robomotion
     created: "2025-11-16"
@@ -21,6 +36,7 @@ templates:
       Prompts the user for weight and height, computes the BMI value, and displays
       the result.
     category: Other
+    level: Beginner
     tags: [bmi, calculator, dialog, example]
     author: Robomotion
     created: "2025-11-16"
@@ -36,12 +52,41 @@ templates:
       track daily calorie and macro goals through a natural conversational
       interface with support for photo-based food logging.
     category: AI
+    level: Advanced
     tags: [chat, ai, llm, agent, nutrition, calories]
     author: Robomotion
     created: "2026-03-21"
     updated: "2026-03-21"
     screenshot: screenshot.png
     has_subflows: false
+
+  - name: Concatenate Text Files
+    slug: concatenate-text-files
+    summary: >-
+      Reads every .txt file in a directory and stitches their contents into a single
+      output file. Useful for log rollups.
+    category: Text Manipulation
+    level: Intermediate
+    tags: [text, concatenate, file, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Consolidate Excel Reports
+    slug: consolidate-excel-reports
+    summary: >-
+      Combines rows from multiple Excel workbooks in a folder into one consolidated
+      sheet. A reporting helper that removes repetitive copy-paste work.
+    category: Excel Automation
+    level: Intermediate
+    tags: [excel, consolidate, merge, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
 
   - name: Content Checker
     slug: content-checker
@@ -50,10 +95,26 @@ templates:
       using a browser and comparing it against an expected value. Notifies the user
       whether the content has changed or remains the same.
     category: Monitoring
+    level: Intermediate
     tags: [browser, monitoring, content, web-scraping]
     author: Robomotion
     created: "2025-11-17"
     updated: "2025-11-17"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Convert Datetime to Text
+    slug: convert-datetime-to-text
+    summary: >-
+      Converts a datetime value into a formatted text string using the Robomotion
+      DateTime package. Demonstrates standard and custom output layouts for logging,
+      filenames, and reports.
+    category: Date & Time
+    level: Beginner
+    tags: [datetime, format, text, dialog]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -64,10 +125,168 @@ templates:
       configurable separator characters and optional sheet selection via subflows
       for reading Excel data and writing CSV output.
     category: Productivity
+    level: Intermediate
     tags: [excel, csv, conversion, file]
     author: Robomotion
     created: "2025-11-16"
     updated: "2025-11-16"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Convert Excel to PDF Using VBScript
+    slug: convert-excel-to-pdf-using-vbscript
+    summary: >-
+      Runs an inline VBScript that drives Excel COM to export a workbook as PDF.
+      Shows how to bridge Robomotion with Windows scripting.
+    category: Scripting
+    level: Advanced
+    tags: [vbscript, excel, pdf, conversion, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Convert Text to Datetime
+    slug: convert-text-to-datetime
+    summary: >-
+      Parses a text string like "2025-05-01 09:30:00" into a true datetime value the
+      flow can work with. Shows how to declare an input layout so downstream nodes
+      can format or compare the date.
+    category: Date & Time
+    level: Beginner
+    tags: [datetime, parsing, conversion, dialog]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Copy Files
+    slug: copy-files
+    summary: >-
+      Copies every file from a source directory into a destination, with optional
+      overwrite. Demonstrates how to enumerate files and drive file-system
+      operations from a subflow.
+    category: Desktop Automation
+    level: Beginner
+    tags: [file, copy, folder, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Count Lines of a Text File
+    slug: count-lines-of-text-file
+    summary: >-
+      Opens a text file and reports the number of lines it contains. A tiny helper
+      you can drop into larger analytics flows.
+    category: Text Manipulation
+    level: Intermediate
+    tags: [text, count, lines, statistics, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Create PDF from Selected Pages
+    slug: create-pdf-from-selected-pages
+    summary: >-
+      Pulls a chosen range of pages from a source PDF and writes them to a new
+      document. Useful for trimming or sharing parts of a report.
+    category: PDF
+    level: Beginner
+    tags: [pdf, pages, extract, selection, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Days of Your Life
+    slug: days-of-your-life
+    summary: >-
+      Calculates how many days you have been alive by subtracting your birthday from
+      today. Uses DateTime Now, Subtract, and a Function node to produce a clean day
+      count.
+    category: Date & Time
+    level: Intermediate
+    tags: [datetime, calculation, interval, dialog]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Delete Files of Specific Size Range
+    slug: delete-files-of-specific-size-range
+    summary: >-
+      Scans a directory and deletes files whose size falls inside a min/max range.
+      Useful for pruning oversized logs or clearing tiny scratch files.
+    category: Desktop Automation
+    level: Intermediate
+    tags: [file, delete, size, filter, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Display JavaScript Output
+    slug: display-javascript-output
+    summary: >-
+      Executes an inline JavaScript snippet and surfaces its return value in a
+      dialog. Demonstrates the JavaScript Run node.
+    category: Scripting
+    level: Intermediate
+    tags: [javascript, script, output, dialog]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Display PowerShell Output
+    slug: display-powershell-output
+    summary: >-
+      Runs a PowerShell script and displays the captured standard output in a
+      dialog.
+    category: Scripting
+    level: Intermediate
+    tags: [powershell, script, output, dialog]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Display Python Output
+    slug: display-python-output
+    summary: >-
+      Runs an inline Python script and shows its output in a dialog. Demonstrates
+      the Python Run node.
+    category: Scripting
+    level: Intermediate
+    tags: [python, script, output, dialog]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Display VBScript Output
+    slug: display-vbscript-output
+    summary: >-
+      Executes a VBScript snippet and displays its output. Useful when integrating
+      with legacy Windows tooling.
+    category: Scripting
+    level: Intermediate
+    tags: [vbscript, script, output, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -79,6 +298,7 @@ templates:
       certificate validity, and more by calling real world tools through an AI Agent,
       giving immediate, accurate answers inside your chat without manual lookups.
     category: System Administration
+    level: Advanced
     tags: [monitoring]
     author: Robomotion
     created: "2025-12-07"
@@ -94,6 +314,7 @@ templates:
       computer. Displays a confirmation message with the download path upon
       completion.
     category: File Operations
+    level: Beginner
     tags: [download, http, file, web]
     author: Robomotion
     created: "2025-11-16"
@@ -107,6 +328,7 @@ templates:
       Searches DuckDuckGo for a user-provided query and saves the result titles
       and links to an Excel file.
     category: Web Scraping
+    level: Intermediate
     tags: [scraping, search, duckduckgo, browser]
     author: Robomotion
     created: "2025-12-07"
@@ -121,12 +343,69 @@ templates:
       for each file and deleting any file whose hash has already been seen. Uses
       the Cryptography package for hashing and File System nodes for deletion.
     category: File Operations
+    level: Intermediate
     tags: [file, hash, duplicate, cleanup, cryptography]
     author: Robomotion
     created: "2025-11-16"
     updated: "2025-11-16"
     screenshot: screenshot.png
     has_subflows: false
+
+  - name: Extract Phone Numbers and Emails
+    slug: extract-phone-numbers-and-emails
+    summary: >-
+      Scans free-form text with regular expressions and pulls out every phone number
+      and email address. Foundation for contact-harvesting jobs.
+    category: Text Manipulation
+    level: Intermediate
+    tags: [regex, text, extract, phone, email]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Extract Tables from PDF
+    slug: extract-tables-from-pdf
+    summary: >-
+      Locates tables inside a PDF and extracts their rows into structured data. A
+      drop-in stage in any OCR-adjacent pipeline.
+    category: PDF
+    level: Intermediate
+    tags: [pdf, table, extract, data, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Extract Text from Word Document
+    slug: extract-text-from-word-document
+    summary: >-
+      Uses a VBScript bridge to pull raw text out of a .docx file for downstream NLP
+      or search indexing.
+    category: Scripting
+    level: Advanced
+    tags: [word, vbscript, text, extract, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Find and Delete Empty Files
+    slug: find-and-delete-empty-files
+    summary: >-
+      Walks a directory, locates zero-byte files, and deletes them in a single pass.
+      Handy for cleaning up broken export folders.
+    category: Desktop Automation
+    level: Beginner
+    tags: [file, delete, empty-file, cleanup, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
 
   - name: Fork Branch With Memory Queue
     slug: fork-branch-with-memory-queue
@@ -135,11 +414,13 @@ templates:
       Creates multiple concurrent browser instances that dequeue items from a shared
       queue, navigate to e-commerce websites, and take screenshots simultaneously.
     category: Concurrency
+    level: Advanced
     tags: [parallel, fork, queue, browser, memory-queue]
     author: Robomotion
     created: "2025-12-10"
     updated: "2025-12-10"
     screenshot: screenshot.png
+    video_url: "https://www.youtube.com/watch?v=QrWmtATwOMo"
     has_subflows: false
 
   - name: Generic Chat Assistant
@@ -150,12 +431,140 @@ templates:
       and receive answers from a large language model, with support for file
       attachments and graceful error handling.
     category: AI
+    level: Advanced
     tags: [chat, ai, llm, agent, assistant]
     author: Robomotion
     created: "2026-03-21"
     updated: "2026-03-21"
     screenshot: screenshot.png
     has_subflows: false
+
+  - name: Get Current Time
+    slug: get-current-time
+    summary: >-
+      Reads the local date and time and formats it as a long time string (HH:mm:ss).
+      Displays the result in an information dialog so you can verify the system
+      clock at a glance.
+    category: Date & Time
+    level: Beginner
+    tags: [datetime, now, timestamp, dialog]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Get First Working Day of the Next Month
+    slug: get-first-working-day-of-next-month
+    summary: >-
+      Computes the first business day of next month, skipping weekends. Useful for
+      scheduling invoices, reports, or reminders that must fire on a working day.
+    category: Date & Time
+    level: Intermediate
+    tags: [datetime, working-day, calendar, conditional]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Get Images from PDF
+    slug: get-images-from-pdf
+    summary: >-
+      Extracts every embedded image from a PDF file into a target directory. Useful
+      for downstream OCR or asset recovery.
+    category: PDF
+    level: Beginner
+    tags: [pdf, images, extract, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Get Login Name Using Python
+    slug: get-login-name-using-python
+    summary: >-
+      Retrieves the current Windows login user via an inline Python script. Handy
+      for audit trails or user-scoped paths.
+    category: Scripting
+    level: Advanced
+    tags: [python, system, credential, script]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Get Metadata of a Web Page
+    slug: get-metadata-of-web-page
+    summary: >-
+      Navigates to a URL, reads its title and meta tags, and returns them as
+      structured data. Useful for link previews or SEO audits.
+    category: Web Automation
+    level: Intermediate
+    tags: [web, metadata, scrape, html, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Get Number of Pages in a PDF
+    slug: get-number-of-pages
+    summary: >-
+      Reports the page count of a PDF file as a single number. A small utility that
+      feeds splitters, paginators, and dashboards.
+    category: PDF
+    level: Intermediate
+    tags: [pdf, metadata, pages, count, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Get Position of Subtext
+    slug: get-position-of-subtext
+    summary: >-
+      Finds the character index of a substring inside a larger string. A concise
+      demo of the text-search primitives.
+    category: Text Manipulation
+    level: Beginner
+    tags: [text, search, position, string]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Get Previous Working Date
+    slug: get-previous-working-date
+    summary: >-
+      Walks backwards from today to find the previous working day, handling weekends
+      through conditional logic. A building block for backdated reports or audits.
+    category: Date & Time
+    level: Advanced
+    tags: [datetime, working-day, conditional, loop]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: GUI Testing Calculator
+    slug: gui-testing-calculator
+    summary: >-
+      Drives the Windows Calculator through native UI automation to validate
+      arithmetic. A concrete template for end-to-end GUI testing of desktop apps.
+    category: Desktop Automation
+    level: Advanced
+    tags: [desktop, calculator, ui-automation, testing, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
 
   - name: Handle Errors
     slug: handle-errors
@@ -164,6 +573,7 @@ templates:
       for a number greater than 100, validates the input, and demonstrates catching
       specific error types with appropriate feedback.
     category: Error Handling
+    level: Beginner
     tags: [error-handling, catch, throw, validation]
     author: Robomotion
     created: "2025-11-16"
@@ -178,6 +588,7 @@ templates:
       indentation, then exports the result to a file. Displays an error dialog if
       the input JSON is invalid.
     category: Data Processing
+    level: Intermediate
     tags: [json, formatting, beautify, file-processing]
     author: Robomotion
     created: "2025-11-16"
@@ -192,12 +603,56 @@ templates:
       with no extra whitespace. The result is printed to the Output Panel via a
       Debug node.
     category: Data Processing
+    level: Beginner
     tags: [json, formatting, minify, file-processing]
     author: Robomotion
     created: "2025-11-16"
     updated: "2025-11-16"
     screenshot: screenshot.png
     has_subflows: false
+
+  - name: Launch Excel
+    slug: launch-excel
+    summary: >-
+      Opens Microsoft Excel and creates a new empty workbook. Starter template for
+      any Excel automation.
+    category: Excel Automation
+    level: Beginner
+    tags: [excel, spreadsheet, office, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Launch Excel and Extract Table
+    slug: launch-excel-and-extract-table
+    summary: >-
+      Opens an Excel workbook and reads its first table into a structured message
+      variable. Ideal starting point for data-driven flows.
+    category: Excel Automation
+    level: Beginner
+    tags: [excel, table, extract, data, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Manipulate Excel Data Using SQL
+    slug: manipulate-excel-data-using-sql
+    summary: >-
+      Loads Excel data into an in-memory SQL engine and runs a SELECT / UPDATE
+      statement against it. Gives you database-level expressiveness over spreadsheet
+      data.
+    category: Excel Automation
+    level: Advanced
+    tags: [excel, sql, query, data, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
 
   - name: Merge CSV
     slug: merge-csv
@@ -206,12 +661,68 @@ templates:
       subflows to read individual CSV files and combine their contents with a
       configurable separator.
     category: Data Processing
+    level: Intermediate
     tags: [csv, merge, file-processing]
     author: Robomotion
     created: "2025-11-16"
     updated: "2025-11-16"
     screenshot: screenshot.png
     has_subflows: true
+
+  - name: Merge PDFs
+    slug: merge-pdfs
+    summary: >-
+      Combines every PDF in a folder into one consolidated document using a reusable
+      merge subflow.
+    category: PDF
+    level: Intermediate
+    tags: [pdf, merge, concatenate, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Merge Two PDFs
+    slug: merge-two-pdfs
+    summary: >-
+      Joins two PDF files into a single output document — the minimal merge recipe.
+    category: PDF
+    level: Beginner
+    tags: [pdf, merge, concatenate, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Open a Folder
+    slug: open-a-folder
+    summary: >-
+      Launches the system file explorer pointed at a given path. Minimal template
+      demonstrating the Application.Launch node.
+    category: Desktop Automation
+    level: Beginner
+    tags: [folder, desktop, application-launcher]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Open a Web Page
+    slug: open-a-web-page
+    summary: >-
+      Launches a browser and navigates to a provided URL — the minimum viable
+      browser-automation template.
+    category: Web Automation
+    level: Beginner
+    tags: [web, browser, navigation]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
 
   - name: Password Generator
     slug: password-generator
@@ -220,6 +731,7 @@ templates:
       characters, then automatically copies it to the clipboard and displays it in
       a message box.
     category: IT Operations
+    level: Beginner
     tags: [password, security, generator, clipboard]
     author: Robomotion
     created: "2025-11-17"
@@ -227,12 +739,41 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Print Current Week's Calendar
+    slug: print-current-weeks-calendar
+    summary: >-
+      Generates an HTML page for the current week and sends it to the default
+      printer. Useful for team dashboards or physical planning boards.
+    category: Desktop Automation
+    level: Intermediate
+    tags: [calendar, print, datetime, html]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Print Documents
+    slug: print-documents
+    summary: >-
+      Iterates a folder of documents and sends each one to the default printer. A
+      compact recipe for automating bulk print jobs.
+    category: Desktop Automation
+    level: Beginner
+    tags: [print, file, desktop, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
   - name: Read From Clipboard
     slug: read-from-clipboard
     summary: >-
       Reads the current clipboard content and displays it in a message box.
       Includes error handling for non-text clipboard content.
     category: System Utilities
+    level: Beginner
     tags: [clipboard, read, system]
     author: Robomotion
     created: "2025-11-17"
@@ -246,6 +787,7 @@ templates:
       Reads the content of a text file from your file system using the
       FileSystem.ReadFile node and displays it in a message box.
     category: File Operations
+    level: Beginner
     tags: [file, read, text]
     author: Robomotion
     created: "2025-11-17"
@@ -259,10 +801,25 @@ templates:
       Creates a simple REST API server with GET and POST endpoints using the
       Net Http nodes. The default robot runs on http://localhost:9090.
     category: Networking
+    level: Intermediate
     tags: [rest, api, http, server]
     author: Robomotion
     created: "2025-11-17"
     updated: "2025-11-17"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Run an Application
+    slug: run-an-application
+    summary: >-
+      Starts a desktop application by executable path — the simplest form of process
+      orchestration in Robomotion.
+    category: Desktop Automation
+    level: Beginner
+    tags: [application-launcher, desktop, process]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -272,12 +829,27 @@ templates:
       Captures a screenshot of a web page by opening the specified URL in a
       browser and saving the screenshot to a given file path.
     category: Web Scraping
+    level: Beginner
     tags: [browser, screenshot, automation]
     author: Robomotion
     created: "2025-11-17"
     updated: "2025-11-17"
     screenshot: screenshot.png
     has_subflows: false
+
+  - name: Search and Replace Excel Values
+    slug: search-and-replace-excel-values
+    summary: >-
+      Performs a find-and-replace across an Excel worksheet and saves the result.
+      Handy for bulk corrections or masking sensitive fields.
+    category: Excel Automation
+    level: Beginner
+    tags: [excel, search-replace, text, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
 
   - name: Send GET Request
     slug: send-get-request
@@ -286,12 +858,97 @@ templates:
       in a message box. Defaults to querying https://ifconfig.me for your
       public IP address.
     category: Networking
+    level: Beginner
     tags: [http, get, request, api]
     author: Robomotion
     created: "2025-11-17"
     updated: "2025-11-17"
     screenshot: screenshot.png
     has_subflows: false
+
+  - name: Send Text to Notepad
+    slug: send-text-to-notepad
+    summary: >-
+      Opens Notepad and types a provided string into its editor window. Demonstrates
+      how to pair Application.Launch with keyboard automation.
+    category: Desktop Automation
+    level: Beginner
+    tags: [notepad, text, keyboard, desktop]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Share PowerPoint File as PDF
+    slug: share-powerpoint-file-as-pdf
+    summary: >-
+      Opens a .pptx file, exports it to PDF, and saves it next to the original.
+      Automates a common office pipeline end to end.
+    category: Desktop Automation
+    level: Advanced
+    tags: [powerpoint, pdf, conversion, office, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Sort Lines of a Text File
+    slug: sort-lines-of-text-file
+    summary: >-
+      Reads a text file, sorts its lines alphabetically, and writes the result back
+      out. Reusable for cleaning up exports and datasets.
+    category: Text Manipulation
+    level: Intermediate
+    tags: [text, sort, file, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Split PDF by Half
+    slug: split-pdf-by-half
+    summary: >-
+      Calculates a midpoint and splits a PDF into two evenly-sized halves.
+      Demonstrates arithmetic on page counts feeding a splitter.
+    category: PDF
+    level: Advanced
+    tags: [pdf, split, pages, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Split PDF by Specified Page
+    slug: split-pdf-by-specified-page
+    summary: >-
+      Splits a PDF into two files at a user-specified page number. Ideal when you
+      know exactly where a document should be divided.
+    category: PDF
+    level: Intermediate
+    tags: [pdf, split, pages, conditional, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Split PDF into Parts
+    slug: split-pdf-into-parts
+    summary: >-
+      Divides a PDF into N equal-sized slices and writes each part out as its own
+      file. A general-purpose chunker for large documents.
+    category: PDF
+    level: Advanced
+    tags: [pdf, split, pages, parts, subflow]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
 
   - name: SQLite Quick Start
     slug: sqlite-quick-start
@@ -300,6 +957,7 @@ templates:
       including creating a database, inserting rows, creating tables, and
       querying data.
     category: Databases
+    level: Intermediate
     tags: [sqlite, database, sql]
     author: Robomotion
     created: "2025-11-17"
@@ -316,12 +974,26 @@ templates:
       updates a Google Sheets file automatically through secure Vault stored
       credentials.
     category: System Administration
+    level: Advanced
     tags: [automation, ssl]
     author: Robomotion
     created: "2025-12-07"
     updated: "2025-12-07"
     screenshot: screenshot.png
     video_url: "https://www.youtube.com/watch?v=G2Cp1nW5Plc"
+    has_subflows: false
+
+  - name: Take Screenshot of a Web Page
+    slug: take-screenshot-of-web-page
+    summary: >-
+      Opens a URL in a browser and saves a screenshot of the rendered page to disk.
+    category: Web Automation
+    level: Beginner
+    tags: [web, screenshot, capture, browser]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
     has_subflows: false
 
   - name: Translator
@@ -331,6 +1003,7 @@ templates:
       be provided directly or read from a file, and the result can be displayed in a
       dialog or saved to a text file.
     category: Productivity
+    level: Intermediate
     tags: [browser, dialog, translation]
     author: Robomotion
     created: "2025-11-17"
@@ -338,12 +1011,83 @@ templates:
     screenshot: screenshot.png
     has_subflows: true
 
+  - name: Use Conditionals to Check if File Exists
+    slug: use-conditionals-to-check-if-file-exists
+    summary: >-
+      Checks whether a given file is present on disk and routes the flow
+      accordingly. A textbook conditional branching example.
+    category: Flow Control
+    level: Beginner
+    tags: [conditional, file, check, switch]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Use Labels to Check if File Exists
+    slug: use-labels-to-check-if-file-exists
+    summary: >-
+      Uses Label and GoTo to structure a loop that rechecks file existence — a
+      non-sequential flow pattern useful for polling.
+    category: Flow Control
+    level: Advanced
+    tags: [label, goto, conditional, file, loop]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Use Subflows to Check if File Exists
+    slug: use-subflows-to-check-if-file-exists
+    summary: >-
+      Encapsulates a "does this file exist?" check inside a reusable subflow so the
+      main flow stays linear and readable.
+    category: Flow Control
+    level: Intermediate
+    tags: [subflow, conditional, file, reuse]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Use the AND Operator in Conditionals
+    slug: use-and-operator-in-conditionals
+    summary: >-
+      Shows how to branch a flow only when two conditions are both true using a
+      Switch node with a combined predicate.
+    category: Flow Control
+    level: Intermediate
+    tags: [conditional, logic, and, switch]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Use the OR Operator in Conditionals
+    slug: use-or-operator-in-conditionals
+    summary: >-
+      Combines two conditions with a logical OR and branches the flow based on the
+      result. Complements the AND-operator variant.
+    category: Flow Control
+    level: Intermediate
+    tags: [conditional, logic, or, switch]
+    author: Robomotion
+    created: "2026-04-18"
+    updated: "2026-04-18"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Web Element To PDF
     slug: web-element-to-pdf
     summary: >-
       Converts any web element to a PDF file by injecting the html2pdf.js library
       into the page and rendering the selected element based on its XPath selector.
     category: Productivity
+    level: Intermediate
     tags: [browser, pdf, html, web]
     author: Robomotion
     created: "2025-11-17"
@@ -357,6 +1101,7 @@ templates:
       Receives text input from the user via a dialog box and copies it to the
       system clipboard, then confirms the operation with a message.
     category: System Utilities
+    level: Beginner
     tags: [clipboard, copy, system, dialog]
     author: Robomotion
     created: "2025-11-17"

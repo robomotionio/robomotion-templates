@@ -1,0 +1,15 @@
+name: Display PowerShell Output
+slug: display-powershell-output
+summary: >-
+  Runs a PowerShell script and displays the captured standard output in a
+  dialog.
+category: Scripting
+level: Intermediate
+tags: [powershell, script, output, dialog]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 3e677d4f-f651-41f3-a2f4-0f40ffd9bb97
+schema_version: 1

@@ -1,0 +1,16 @@
+name: Convert Datetime to Text
+slug: convert-datetime-to-text
+summary: >-
+  Converts a datetime value into a formatted text string using the Robomotion
+  DateTime package. Demonstrates standard and custom output layouts for logging,
+  filenames, and reports.
+category: Date & Time
+level: Beginner
+tags: [datetime, format, text, dialog]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 220659bb-c450-4654-af7b-ded057ed7c3b
+schema_version: 1

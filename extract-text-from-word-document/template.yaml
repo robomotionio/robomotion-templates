@@ -1,0 +1,15 @@
+name: Extract Text from Word Document
+slug: extract-text-from-word-document
+summary: >-
+  Uses a VBScript bridge to pull raw text out of a .docx file for downstream NLP
+  or search indexing.
+category: Scripting
+level: Advanced
+tags: [word, vbscript, text, extract, subflow]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 13ddd484-1a0a-4ef2-b3d0-b71f6c0ae7da
+schema_version: 1

@@ -1,0 +1,15 @@
+name: Split PDF by Half
+slug: split-pdf-by-half
+summary: >-
+  Calculates a midpoint and splits a PDF into two evenly-sized halves.
+  Demonstrates arithmetic on page counts feeding a splitter.
+category: PDF
+level: Advanced
+tags: [pdf, split, pages, subflow]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: e0cde9e6-363b-4cdd-a6f1-312fced760be
+schema_version: 1

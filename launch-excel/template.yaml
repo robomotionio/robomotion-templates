@@ -1,0 +1,15 @@
+name: Launch Excel
+slug: launch-excel
+summary: >-
+  Opens Microsoft Excel and creates a new empty workbook. Starter template for
+  any Excel automation.
+category: Excel Automation
+level: Beginner
+tags: [excel, spreadsheet, office, subflow]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: c28d2bfc-5f2f-429f-bd49-a6642e5c6749
+schema_version: 1

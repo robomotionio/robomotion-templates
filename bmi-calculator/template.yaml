@@ -5,6 +5,7 @@ summary: >-
   Prompts the user for weight and height, computes the BMI value, and displays
   the result.
 category: Other
+level: Beginner
 tags: [bmi, calculator, dialog, example]
 author: Robomotion
 created: "2025-11-16"

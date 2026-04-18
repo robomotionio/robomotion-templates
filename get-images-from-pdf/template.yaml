@@ -1,0 +1,15 @@
+name: Get Images from PDF
+slug: get-images-from-pdf
+summary: >-
+  Extracts every embedded image from a PDF file into a target directory. Useful
+  for downstream OCR or asset recovery.
+category: PDF
+level: Beginner
+tags: [pdf, images, extract, subflow]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 5ab692b4-ce12-48ab-abab-f0176f5f874a
+schema_version: 1

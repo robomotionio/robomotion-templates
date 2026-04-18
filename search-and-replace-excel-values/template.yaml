@@ -1,0 +1,15 @@
+name: Search and Replace Excel Values
+slug: search-and-replace-excel-values
+summary: >-
+  Performs a find-and-replace across an Excel worksheet and saves the result.
+  Handy for bulk corrections or masking sensitive fields.
+category: Excel Automation
+level: Beginner
+tags: [excel, search-replace, text, subflow]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: d6ffdf7e-2a44-408b-a784-5de7c89fc7f7
+schema_version: 1

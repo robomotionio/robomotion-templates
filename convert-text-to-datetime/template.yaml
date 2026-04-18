@@ -1,0 +1,16 @@
+name: Convert Text to Datetime
+slug: convert-text-to-datetime
+summary: >-
+  Parses a text string like "2025-05-01 09:30:00" into a true datetime value the
+  flow can work with. Shows how to declare an input layout so downstream nodes
+  can format or compare the date.
+category: Date & Time
+level: Beginner
+tags: [datetime, parsing, conversion, dialog]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: ccebdc1e-d95a-4467-976b-62ce4b47cfd2
+schema_version: 1

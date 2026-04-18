@@ -1,0 +1,14 @@
+name: Merge Two PDFs
+slug: merge-two-pdfs
+summary: >-
+  Joins two PDF files into a single output document — the minimal merge recipe.
+category: PDF
+level: Beginner
+tags: [pdf, merge, concatenate, subflow]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 6204fa75-f522-416a-a565-b4c06fbd9c2b
+schema_version: 1

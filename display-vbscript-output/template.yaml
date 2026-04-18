@@ -1,0 +1,15 @@
+name: Display VBScript Output
+slug: display-vbscript-output
+summary: >-
+  Executes a VBScript snippet and displays its output. Useful when integrating
+  with legacy Windows tooling.
+category: Scripting
+level: Intermediate
+tags: [vbscript, script, output, subflow]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 859c38a1-c104-4dc2-b547-8b271b497584
+schema_version: 1

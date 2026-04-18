@@ -5,6 +5,7 @@ summary: >-
   configurable separator characters and optional sheet selection via subflows
   for reading Excel data and writing CSV output.
 category: Productivity
+level: Intermediate
 tags: [excel, csv, conversion, file]
 author: Robomotion
 created: "2025-11-16"

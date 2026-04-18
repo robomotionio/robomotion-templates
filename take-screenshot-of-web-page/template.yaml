@@ -1,0 +1,14 @@
+name: Take Screenshot of a Web Page
+slug: take-screenshot-of-web-page
+summary: >-
+  Opens a URL in a browser and saves a screenshot of the rendered page to disk.
+category: Web Automation
+level: Beginner
+tags: [web, screenshot, capture, browser]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: b3bf6a71-ad35-4750-819d-d5f687a182fd
+schema_version: 1

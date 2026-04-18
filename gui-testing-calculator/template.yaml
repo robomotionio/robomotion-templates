@@ -1,0 +1,15 @@
+name: GUI Testing Calculator
+slug: gui-testing-calculator
+summary: >-
+  Drives the Windows Calculator through native UI automation to validate
+  arithmetic. A concrete template for end-to-end GUI testing of desktop apps.
+category: Desktop Automation
+level: Advanced
+tags: [desktop, calculator, ui-automation, testing, subflow]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 66f73520-18ba-4f07-910f-985ee80d343a
+schema_version: 1

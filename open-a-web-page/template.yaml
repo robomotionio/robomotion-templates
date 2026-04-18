@@ -1,0 +1,15 @@
+name: Open a Web Page
+slug: open-a-web-page
+summary: >-
+  Launches a browser and navigates to a provided URL — the minimum viable
+  browser-automation template.
+category: Web Automation
+level: Beginner
+tags: [web, browser, navigation]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 01abdb64-744a-447d-a38d-f5389c5c4735
+schema_version: 1

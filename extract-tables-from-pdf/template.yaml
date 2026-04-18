@@ -1,0 +1,15 @@
+name: Extract Tables from PDF
+slug: extract-tables-from-pdf
+summary: >-
+  Locates tables inside a PDF and extracts their rows into structured data. A
+  drop-in stage in any OCR-adjacent pipeline.
+category: PDF
+level: Intermediate
+tags: [pdf, table, extract, data, subflow]
+author: Robomotion
+created: "2026-04-18"
+updated: "2026-04-18"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: e9375004-4206-4251-b855-d97fbb09c729
+schema_version: 1
