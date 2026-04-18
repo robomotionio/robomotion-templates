@@ -2,7 +2,7 @@ import { flow } from '@robomotion/sdk';
 
 flow.create('cacd4633-c645-4f26-89bc-7c69d2cdc2de', 'Imported Merge CSV', (f) => {
   f.node('315158', 'Core.Trigger.Inject', 'Inject', {})
-    .then('330ee0', 'Core.Programming.Function', 'config', { func: 'msg.csv_path = \'/Users/ercanertuzun/Desktop/TEST/RobomotionTemplateTest/merge.csv\'; // [Required]\nmsg.in_dir = \'/Users/ercanertuzun/Desktop/TEST/RobomotionTemplateTest\' // [Required]\nmsg.separator = \';\'; // [Required] - [\',\', \';\', \'TAB\', \'SPACE\'] \n\n// DO NOT edit below.\nmsg.table = {columns: [], rows: []};\nreturn msg;' })
+    .then('330ee0', 'Core.Programming.Function', 'config', { func: 'var home = global.get("$Home$");\nmsg.csv_path = home + \'/merge.csv\'; // [Required]\nmsg.in_dir = home; // [Required]\nmsg.separator = \';\'; // [Required] - [\',\', \';\', \'TAB\', \'SPACE\'] \n\n// DO NOT edit below.\nmsg.table = {columns: [], rows: []};\nreturn msg;' })
     .then('4826d5', 'Core.Flow.SubFlow', 'Read CSV Files', {})
     .then('d2a1a6', 'Core.Flow.SubFlow', 'Merge CSV', {})
     .then('a1862c', 'Core.Flow.Stop', 'Stop', {});
