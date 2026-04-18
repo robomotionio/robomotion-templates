@@ -209,12 +209,63 @@ const COL_W = 260;
 const MAIN_X = 600;
 const START_X_OFFSET = 260;
 const STOP_X_OFFSET = 260;
-const TRIG_NUDGE = 6;
+const DEFAULT_NODE_H = 47;   // canonical height (default rectangular node)
+const DEFAULT_PORT_Y = DEFAULT_NODE_H / 2;   // 23.5
 const DETACHED_GAP = 150;
 const COMMENT_W = 440;
 const COMMENT_H = 214;
 const COMMENT_CLEARANCE = 80;
 const NODE_H_HALF = 24;   // approx vertical radius for collision check
+
+// Node height mirrors screenshot-generator/node-classifier getNodeDimensions.
+// Used to position node tops such that port centres (vertical middle) align.
+const BOX_NS = new Set([
+  'Core.Programming.Switch', 'Core.Programming.ForEach',
+  'Core.Flow.ForkBranch', 'Core.WaitGroup.Done',
+]);
+const RECT_NS = new Set(['Core.Programming.Function', 'Core.Flow.SubFlow']);
+const LABEL_SHAPE_NS = new Set(['Core.Flow.Label', 'Core.Flow.GoTo', 'Core.Flow.Begin', 'Core.Flow.End']);
+
+function nodeHeight(node) {
+  const ns = node.namespace;
+  if (INJECT_NS.has(ns) || ENDING_NS.has(ns) || LABEL_SHAPE_NS.has(ns)) return 36;
+  if (BOX_NS.has(ns)) {
+    // boxNode: BASE(50) + (MIN_PORTS(3)-1)*12 = 74 at 3 ports; +12 each extra.
+    // `outputs` counts branches; total ports = outputs + 1 (input).
+    const outs = node.outputs ?? 2;   // default ForEach has 2 outputs
+    const ports = Math.max(outs + 1, 3);
+    return 50 + (ports - 1) * 12;
+  }
+  if (RECT_NS.has(ns)) {
+    // rectangularNode: BASE(35) + (MIN_PORTS(2)-1)*12 = 47 at 2 ports; +12 each extra.
+    const outs = node.outputs ?? 1;
+    const ports = Math.max(outs + 1, 2);
+    return 35 + (ports - 1) * 12;
+  }
+  // defaultNode: flat 47
+  return DEFAULT_NODE_H;
+}
+
+// Given a row's port-y, return the top-y this node should use so its port
+// (vertical centre) coincides with the row.
+function topYForPort(portY, node) {
+  return Math.round(portY - nodeHeight(node) / 2);
+}
+
+// Row's canonical port-y (centre of a default-height node placed at grid).
+function rowPortY(y0, row) {
+  return y0 + row * ROW_H + DEFAULT_PORT_Y;
+}
+
+// Port-y (vertical centre) of an already-positioned node.
+function portYOf(topY, node) {
+  return topY + nodeHeight(node) / 2;
+}
+
+// Place `node` so its port sits at `portY`, column `x`.
+function placePort(positions, node, x, portY) {
+  positions[node.id] = { x, y: topYForPort(portY, node) };
+}
 
 // ---------------------------------------------------------------------------
 // Graph helpers
@@ -259,47 +310,49 @@ function buildMainChain(start, succ, layerableSet) {
 // Trigger placement
 // ---------------------------------------------------------------------------
 
-function placeInject(positions, start, succ) {
+function placeInject(positions, start, succ, nodeById) {
   if (!start) return;
   const succs = (succ.get(start.id) || []).filter(s => positions[s]);
   if (succs.length === 0) {
-    positions[start.id] = { x: MAIN_X - START_X_OFFSET, y: 100 + TRIG_NUDGE };
+    placePort(positions, start, MAIN_X - START_X_OFFSET, rowPortY(100, 0));
     return;
   }
-  // Align Inject with its first successor's y.
-  const first = positions[succs[0]];
-  positions[start.id] = { x: first.x - START_X_OFFSET, y: first.y + TRIG_NUDGE };
+  // Align Inject's port with its first successor's port.
+  const firstId = succs[0];
+  const firstNode = nodeById.get(firstId);
+  const firstPortY = portYOf(positions[firstId].y, firstNode);
+  placePort(positions, start, positions[firstId].x - START_X_OFFSET, firstPortY);
 }
 
-// Place an ending (Stop). x is right of the rightmost predecessor. y is
+// Place an ending (Stop). x is right of the rightmost predecessor. Port-y
 // aligned with that single predecessor when there's only one; otherwise
-// the arithmetic mean of predecessor ys (standard Sugiyama convergence).
-function placeEnding(positions, endingId, preds) {
+// the arithmetic mean of predecessor port-ys (standard Sugiyama convergence).
+function placeEnding(positions, ending, preds, nodeById) {
   const placedPreds = preds.filter(p => positions[p]);
   if (placedPreds.length === 0) {
-    positions[endingId] = { x: MAIN_X + STOP_X_OFFSET, y: 100 + TRIG_NUDGE };
+    placePort(positions, ending, MAIN_X + STOP_X_OFFSET, rowPortY(100, 0));
     return;
   }
   const rightmostX = Math.max(...placedPreds.map(p => positions[p].x));
   const x = rightmostX + STOP_X_OFFSET;
 
-  let y;
+  const predPortYs = placedPreds.map(p => portYOf(positions[p].y, nodeById.get(p)));
+  let portY;
   if (placedPreds.length === 1) {
-    y = positions[placedPreds[0]].y + TRIG_NUDGE;
+    portY = predPortYs[0];
   } else {
-    const meanY = placedPreds.reduce((s, p) => s + positions[p].y, 0) / placedPreds.length;
-    y = Math.round(meanY) + TRIG_NUDGE;
+    portY = predPortYs.reduce((s, v) => s + v, 0) / placedPreds.length;
   }
-  // If the target position overlaps another node at the same x, bump y.
+  let y = topYForPort(portY, ending);
   let attempts = 0;
   while (attempts < 6) {
     const clash = Object.entries(positions).some(([id, p]) =>
-      id !== endingId && Math.abs(p.x - x) < 20 && Math.abs(p.y - y) < NODE_H_HALF + 10);
+      id !== ending.id && Math.abs(p.x - x) < 20 && Math.abs(p.y - y) < NODE_H_HALF + 10);
     if (!clash) break;
     y += ROW_H;
     attempts++;
   }
-  positions[endingId] = { x, y };
+  positions[ending.id] = { x, y };
 }
 
 // ---------------------------------------------------------------------------
@@ -309,6 +362,7 @@ function placeEnding(positions, endingId, preds) {
 function layoutLinear1Col(parsed, graph) {
   const { succ, pred } = graph;
   const { nonComment } = classifyFlow(parsed);
+  const nodeById = new Map(parsed.nodes.map(n => [n.id, n]));
   const start = nonComment.find(n => n.kind === 'inject');
   const endings = nonComment.filter(n => n.kind === 'ending');
   const middle = nonComment.filter(n => n !== start && !endings.includes(n));
@@ -316,15 +370,10 @@ function layoutLinear1Col(parsed, graph) {
 
   const positions = {};
   const y0 = 100;
-  ordered.forEach((n, i) => {
-    positions[n.id] = { x: MAIN_X, y: y0 + i * ROW_H };
-  });
+  ordered.forEach((n, i) => placePort(positions, n, MAIN_X, rowPortY(y0, i)));
 
-  const layerSet = new Set(ordered.map(n => n.id));
-  const mainChain = buildMainChain(start, succ, layerSet);
-
-  placeInject(positions, start, succ);
-  for (const e of endings) placeEnding(positions, e.id, pred.get(e.id) || []);
+  placeInject(positions, start, succ, nodeById);
+  for (const e of endings) placeEnding(positions, e, pred.get(e.id) || [], nodeById);
 
   const lastY = ordered.length ? y0 + (ordered.length - 1) * ROW_H : y0;
   placeComments(positions, parsed, y0);
@@ -335,6 +384,7 @@ function layoutLinear1Col(parsed, graph) {
 function layoutLinear2Col(parsed, graph) {
   const { succ, pred } = graph;
   const { nonComment } = classifyFlow(parsed);
+  const nodeById = new Map(parsed.nodes.map(n => [n.id, n]));
   const start = nonComment.find(n => n.kind === 'inject');
   const endings = nonComment.filter(n => n.kind === 'ending');
   const middle = nonComment.filter(n => n !== start && !endings.includes(n));
@@ -348,14 +398,11 @@ function layoutLinear2Col(parsed, graph) {
   const y0 = 100;
   const col1X = MAIN_X;
   const col2X = MAIN_X + COL_W + 40;
-  col1.forEach((n, i) => { positions[n.id] = { x: col1X, y: y0 + i * ROW_H }; });
-  col2.forEach((n, i) => { positions[n.id] = { x: col2X, y: y0 + i * ROW_H }; });
+  col1.forEach((n, i) => placePort(positions, n, col1X, rowPortY(y0, i)));
+  col2.forEach((n, i) => placePort(positions, n, col2X, rowPortY(y0, i)));
 
-  const layerSet = new Set(ordered.map(n => n.id));
-  const mainChain = buildMainChain(start, succ, layerSet);
-
-  placeInject(positions, start, succ);
-  for (const e of endings) placeEnding(positions, e.id, pred.get(e.id) || []);
+  placeInject(positions, start, succ, nodeById);
+  for (const e of endings) placeEnding(positions, e, pred.get(e.id) || [], nodeById);
 
   const maxI = Math.max(col1.length, col2.length) - 1;
   placeComments(positions, parsed, y0);
@@ -415,7 +462,6 @@ function layoutDAG(parsed, graph) {
 
   // --- Step 4: group by row ---
   const rows = Array.from({ length: maxRow + 1 }, () => []);
-  const nodeById = new Map(layerable.map(n => [n.id, n]));
   for (const n of layerable) rows[row.get(n.id)].push(n);
 
   // Initial order: main-chain node first, then source-order for the rest.
@@ -465,18 +511,19 @@ function layoutDAG(parsed, graph) {
     if (!changed) break;
   }
 
-  // --- Step 6: assign coordinates ---
+  // --- Step 6: assign coordinates (port-aligned, not top-aligned) ---
   const positions = {};
   const y0 = 100;
+  const nodeById = new Map(parsed.nodes.map(n => [n.id, n]));
   for (let R = 0; R <= maxRow; R++) {
     rows[R].forEach((n, slot) => {
-      positions[n.id] = { x: MAIN_X + slot * COL_W, y: y0 + R * ROW_H };
+      placePort(positions, n, MAIN_X + slot * COL_W, rowPortY(y0, R));
     });
   }
 
   // --- Step 7: place triggers (Inject + endings) ---
-  placeInject(positions, start, succ);
-  for (const e of endings) placeEnding(positions, e.id, pred.get(e.id) || []);
+  placeInject(positions, start, succ, nodeById);
+  for (const e of endings) placeEnding(positions, e, pred.get(e.id) || [], nodeById);
 
   placeComments(positions, parsed, y0);
   placeDetached(positions, parsed, graph, y0 + maxRow * ROW_H);
@@ -508,10 +555,10 @@ function layoutLoop(parsed, graph) {
   const visited = new Set();
   const y0 = 200;
 
+  const mainPortY = cursorY + DEFAULT_PORT_Y;
   let cursorX = MAIN_X;
-  let cursorY = y0;
   if (start) {
-    positions[start.id] = { x: cursorX - START_X_OFFSET, y: cursorY + TRIG_NUDGE };
+    placePort(positions, start, cursorX - START_X_OFFSET, mainPortY);
     visited.add(start.id);
   }
 
@@ -520,7 +567,7 @@ function layoutLoop(parsed, graph) {
     while (id && !visited.has(id)) {
       const node = nodeById.get(id);
       if (!node) break;
-      positions[id] = { x: cursorX, y: cursorY + (isTrigger(node) ? TRIG_NUDGE : 0) };
+      placePort(positions, node, cursorX, mainPortY);
       visited.add(id);
       if (loopLabels.includes(id)) return id;
       if (node.kind === 'ending') return null;
@@ -538,12 +585,12 @@ function layoutLoop(parsed, graph) {
 
   if (labelReached) {
     let bodyX = positions[labelReached].x + COL_W;
-    const bodyY = cursorY + ROW_H + 20;
+    const bodyPortY = mainPortY + ROW_H + 20;
     let id = succ.get(labelReached)?.[0];
     while (id && !visited.has(id)) {
       const node = nodeById.get(id);
       if (!node) break;
-      positions[id] = { x: bodyX, y: bodyY + (isTrigger(node) ? TRIG_NUDGE : 0) };
+      placePort(positions, node, bodyX, bodyPortY);
       visited.add(id);
       if (node.kind === 'goto') break;
       const outs = succ.get(id) ?? [];
@@ -554,13 +601,12 @@ function layoutLoop(parsed, graph) {
   }
 
   placeComments(positions, parsed, y0 - 180);
-  // Place non-ending detached nodes first so endings' preds are known.
   const endingSet = new Set(endings.map(e => e.id));
   placeDetached(positions, parsed, graph, cursorY + 200,
     new Set([...visited, ...endingSet]));
   for (const e of endings) {
     if (visited.has(e.id)) continue;
-    placeEnding(positions, e.id, pred.get(e.id) || []);
+    placeEnding(positions, e, pred.get(e.id) || [], nodeById);
     visited.add(e.id);
   }
   return positions;
@@ -631,12 +677,9 @@ function placeDetached(positions, parsed, graph, mainBottomY, visited = null) {
 
   let y = mainBottomY + DETACHED_GAP;
   for (const comp of components) {
+    const portY = y + DEFAULT_PORT_Y;
     comp.forEach((id, i) => {
-      const node = nodeById.get(id);
-      positions[id] = {
-        x: MAIN_X + i * COL_W,
-        y: y + (isTrigger(node) ? TRIG_NUDGE : 0),
-      };
+      placePort(positions, nodeById.get(id), MAIN_X + i * COL_W, portY);
     });
     y += ROW_H + 40;
   }
