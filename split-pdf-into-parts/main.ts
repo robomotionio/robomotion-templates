@@ -24,7 +24,7 @@ const myFlow = flow.create('d96f25dd-50c0-4d51-a885-fbc3b8977c1d', 'Imported Spl
     })
     .then('a10004', 'Core.Programming.Function', 'Validate', {
       outputs: 2,
-      func: `var n = Number(msg.n_text); if (!msg.pdf_path || !/\\.pdf$/i.test(msg.pdf_path) || !Number.isInteger(n) || n < 1) return [null, msg]; msg.pages_per_part = n; var p = msg.pdf_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.directory = p.substring(0, lastSlash); var stamp = Date.now(); msg.pages_dir = msg.directory + '\\\\_pages_' + stamp; msg.split_output_dir = msg.directory + '\\\\parts_' + stamp; return [msg, null];`,
+      func: `var n = Number(msg.n_text); if (!msg.pdf_path || !/\\.pdf$/i.test(msg.pdf_path) || !Number.isInteger(n) || n < 1) return [null, msg]; msg.pages_per_part = n; var p = msg.pdf_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.directory = p.substring(0, lastSlash); var stamp = Date.now(); msg.pages_dir = msg.directory + '/_pages_' + stamp; msg.split_output_dir = msg.directory + '/parts_' + stamp; return [msg, null];`,
     });
 
   f.node('a10005', 'Core.FileSystem.Create', 'Ensure Pages Dir', {

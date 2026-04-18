@@ -40,7 +40,7 @@ const myFlow = flow.create('13ddd484-1a0a-4ef2-b3d0-b71f6c0ae7da', 'Imported Ext
     })
     .then('a10003', 'Core.Programming.Function', 'Validate', {
       outputs: 2,
-      func: `if (!msg.word_doc_path || !/\\.docx?$/i.test(msg.word_doc_path)) return [null, msg]; var p = msg.word_doc_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.script_path = p.substring(0, lastSlash) + '\\\\_extract.vbs'; return [msg, null];`,
+      func: `if (!msg.word_doc_path || !/\\.docx?$/i.test(msg.word_doc_path)) return [null, msg]; var p = msg.word_doc_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.script_path = p.substring(0, lastSlash) + '/_extract.vbs'; return [msg, null];`,
     });
 
   f.node('a10004', 'Core.Programming.Function', 'Build Script', {

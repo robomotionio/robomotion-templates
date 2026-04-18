@@ -22,7 +22,7 @@ const myFlow = flow.create('91118709-f8ed-48ed-a134-27b76c421d46', 'Imported Get
     });
 
   f.node('a10004', 'Core.Programming.Function', 'Build Temp Dir', {
-    func: `var p = msg.pdf_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.count_dir = p.substring(0, lastSlash) + '\\\\_page_count'; return msg;`,
+    func: `var p = msg.pdf_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.count_dir = p.substring(0, lastSlash) + '/_page_count'; return msg;`,
   })
     .then('a10021', 'Core.FileSystem.Delete', 'Clear Temp Dir', {
       inPath: Message('count_dir'),

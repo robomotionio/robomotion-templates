@@ -38,7 +38,7 @@ const myFlow = flow.create('70e36839-1f44-4792-ab5d-06e9c2612969', 'Imported Con
     })
     .then('a10004', 'Core.Programming.Function', 'Validate', {
       outputs: 2,
-      func: `if (!msg.excel_path || !/\\.xlsx?$/i.test(msg.excel_path) || !msg.destination_folder) return [null, msg]; msg.pdf_path = msg.destination_folder + '\\\\ConvertedPDFfile.pdf'; msg.script_path = msg.destination_folder + '\\\\_convert.vbs'; return [msg, null];`,
+      func: `if (!msg.excel_path || !/\\.xlsx?$/i.test(msg.excel_path) || !msg.destination_folder) return [null, msg]; msg.pdf_path = msg.destination_folder + '/ConvertedPDFfile.pdf'; msg.script_path = msg.destination_folder + '/_convert.vbs'; return [msg, null];`,
     });
 
   f.node('a10005', 'Core.FileSystem.Create', 'Ensure Dest Dir', {

@@ -12,7 +12,7 @@ const myFlow = flow.create('859c38a1-c104-4dc2-b547-8b271b497584', 'Imported Dis
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a11000', 'Core.Flow.SubFlow', 'Download Fixtures', {})
     .then('a10002', 'Core.Programming.Function', 'Build Script', {
-      func: `msg.vbs_script = ${JSON.stringify(inlineVbscript)}; var tmp = global.get('$TempDir$') || 'C:\\\\Windows\\\\Temp'; msg.vbs_path = tmp + '\\\\robomotion_inline_' + Date.now() + '.vbs'; msg.vbs_args = ['//Nologo', msg.vbs_path]; return msg;`,
+      func: `msg.vbs_script = ${JSON.stringify(inlineVbscript)}; var tmp = global.get('$TempDir$') || 'C:/Windows/Temp'; msg.vbs_path = tmp + '/robomotion_inline_' + Date.now() + '.vbs'; msg.vbs_args = ['//Nologo', msg.vbs_path]; return msg;`,
     })
     .then('a10003', 'Core.FileSystem.WriteFile', 'Write Temp VBS', {
       inPath: Message('vbs_path'),

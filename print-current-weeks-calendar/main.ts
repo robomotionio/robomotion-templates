@@ -7,10 +7,10 @@ const myFlow = flow.create('80648b70-905d-4588-ac4d-e093699cde22', 'Imported Pri
 
   f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
     .then('a10002', 'Core.Programming.Function', 'Build Paths', {
-      func: `msg.desktop_folder = global.get('$Home$') + '\\\\Desktop'; msg.image_path = msg.desktop_folder + '\\\\calendar.jpg'; return msg;`,
+      func: `msg.desktop_folder = global.get('$Home$') + '/Desktop'; msg.image_path = msg.desktop_folder + '/calendar.jpg'; return msg;`,
     })
     .then('a10003', 'Core.Process.StartProcess', 'Launch Outlook', {
-      inFilePath: Custom('C:\\\\Program Files\\\\Microsoft Office\\\\root\\\\Office16\\\\OUTLOOK.EXE'),
+      inFilePath: Custom('C:/Program Files/Microsoft Office/root/Office16/OUTLOOK.EXE'),
       optBackground: true,
       outPid: Message('outlook_pid'),
     })

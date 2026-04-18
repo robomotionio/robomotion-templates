@@ -13,7 +13,7 @@ subflow.create('HTML Source', (f) => {
     })
     .then('b40004', 'Core.Programming.Function', 'Branch On Yes', {
       outputs: 2,
-      func: `msg.default_save_path = global.get('$Home$') + '\\\\Desktop\\\\web_source.txt'; return msg.save_confirmed ? [msg, null] : [null, msg];`,
+      func: `msg.default_save_path = global.get('$Home$') + '/Desktop/web_source.txt'; return msg.save_confirmed ? [msg, null] : [null, msg];`,
     });
 
   f.node('b40005', 'Core.Dialog.InputBox', 'Ask For Save Path', {

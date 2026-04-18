@@ -18,7 +18,7 @@ const myFlow = flow.create('b3bf6a71-ad35-4750-819d-d5f687a182fd', 'Imported Tak
     });
 
   f.node('a10004', 'Core.Programming.Function', 'Build Screenshot Path', {
-    func: `msg.desktop_path = global.get('$Home$') + '\\\\Desktop'; msg.screenshot_path = msg.desktop_path + '\\\\ScreenShot.png'; msg.retry_count = 0; return msg;`,
+    func: `msg.desktop_path = global.get('$Home$') + '/Desktop'; msg.screenshot_path = msg.desktop_path + '/ScreenShot.png'; msg.retry_count = 0; return msg;`,
   })
     .then('a10040', 'Core.Flow.GoTo', 'Enter Retry', {
       optNodes: { type: 'goto', ids: ['a10041'], all: false },
@@ -57,7 +57,7 @@ const myFlow = flow.create('b3bf6a71-ad35-4750-819d-d5f687a182fd', 'Imported Tak
       outFormattedTime: Message('stamp'),
     })
     .then('a10011', 'Core.Programming.Function', 'Build Stamped Path', {
-      func: `msg.renamed_path = msg.desktop_path + '\\\\ScreenShot-' + msg.stamp + '.png'; return msg;`,
+      func: `msg.renamed_path = msg.desktop_path + '/ScreenShot-' + msg.stamp + '.png'; return msg;`,
     })
     .then('a10012', 'Core.FileSystem.Move', 'Rename Screenshot', {
       inSrcPath: Message('screenshot_path'),

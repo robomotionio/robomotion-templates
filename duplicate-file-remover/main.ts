@@ -5,7 +5,7 @@ flow.create('2927f4f3-ffde-4d00-90b4-18c84b2c90e1', 'Imported Duplicate File Rem
 
   f.node('af79f7', 'Core.Flow.Comment', 'Comment', { optText: 'This template uses *Cryptography* and *File System* nodes to remove, not recursively,\nduplicated files in a given directory in your file system.\n\nFollow these steps to test this template;\n\n**1.** Go to Flow Designer and press package icon on the left side.\n\n**2.** Search fpr Cryptography and install it.\n\n**3.** Edit the Config Node and Update Path\n\n**4.** Set the msg.dir field to the full filepath of the directory you want to\ncheck for duplicated files.' });
   f.node('8cfaf5', 'Core.Trigger.Inject', 'Inject', {})
-    .then('cf88a2', 'Core.Programming.Function', 'Config', { func: 'msg.dir = \'/Users/User/Desktop/TEST/RobomotionTemplateTest/\'; // [Required]\n\n// DO NOT edit below!\nmsg.hash_table = {};\nreturn msg;' })
+    .then('cf88a2', 'Core.Programming.Function', 'Config', { func: 'msg.dir = global.get("$Home$") + \'/Desktop\'; // [Required]\n\n// DO NOT edit below!\nmsg.hash_table = {};\nreturn msg;' })
     .then('585223', 'Core.FileSystem.List', 'List Directory', { inDirPath: Message('dir') });
   f.node('1ccc84', 'Core.Flow.Label', 'Next File', {});
   f.node('6a1348', 'Core.Programming.ForEach', 'For Each File', { optInput: Message('files'), optOutput: Message('file') })

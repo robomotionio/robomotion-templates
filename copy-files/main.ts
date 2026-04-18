@@ -36,7 +36,7 @@ const myFlow = flow.create('f16e8944-9f01-4fe0-b787-23b3d543f62c', 'Imported Cop
     });
 
   f.node('a10012', 'Core.Programming.Function', 'Build Dest Path', {
-    func: `var p = msg.current_file; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.dest_path = msg.destination_folder + '\\\\' + p.substring(lastSlash + 1); return msg;`,
+    func: `var p = msg.current_file; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.dest_path = msg.destination_folder + '/' + p.substring(lastSlash + 1); return msg;`,
   })
     .then('a10013', 'Core.FileSystem.Copy', 'Copy File', {
       inSrcPath: Message('current_file'),

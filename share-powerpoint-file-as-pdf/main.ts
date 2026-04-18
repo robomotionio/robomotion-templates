@@ -44,7 +44,7 @@ const myFlow = flow.create('e4c34dfa-6f0e-44db-9460-d54ea4766344', 'Imported Sha
     })
     .then('a10005', 'Core.Programming.Function', 'Derive Paths', {
       outputs: 2,
-      func: `if (!msg.selected_powerpoint || !/\\.pptx?$/i.test(msg.selected_powerpoint)) return [null, msg]; var p = msg.selected_powerpoint; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); var dir = p.substring(0, lastSlash); var base = p.substring(lastSlash + 1); var dot = base.lastIndexOf('.'); var stem = dot === -1 ? base : base.substring(0, dot); msg.directory = dir; msg.file_name_no_ext = stem; msg.pdf_path = dir + '\\\\' + stem + '.pdf'; return [msg, null];`,
+      func: `if (!msg.selected_powerpoint || !/\\.pptx?$/i.test(msg.selected_powerpoint)) return [null, msg]; var p = msg.selected_powerpoint; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); var dir = p.substring(0, lastSlash); var base = p.substring(lastSlash + 1); var dot = base.lastIndexOf('.'); var stem = dot === -1 ? base : base.substring(0, dot); msg.directory = dir; msg.file_name_no_ext = stem; msg.pdf_path = dir + '/' + stem + '.pdf'; return [msg, null];`,
     });
 
   f.node('a10006', 'Core.Programming.Function', 'Build Export Args', {

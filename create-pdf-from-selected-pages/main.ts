@@ -30,7 +30,7 @@ const myFlow = flow.create('200f475c-9ece-4120-8df2-235489362bbc', 'Imported Cre
     })
     .then('a10005', 'Core.Programming.Function', 'Validate And Parse', {
       outputs: 2,
-      func: `if (!msg.pdf_path || !/\\.pdf$/i.test(msg.pdf_path) || !msg.destination_folder) return [null, msg]; var pageSet = []; var groups = String(msg.pages_text || '').split(','); for (var i = 0; i < groups.length; i++) { var g = groups[i].trim(); if (!g) continue; var m = g.match(/^(\\d+)-(\\d+)$/); if (m) { var a = Number(m[1]), b = Number(m[2]); for (var j = a; j <= b; j++) pageSet.push(j); } else if (/^\\d+$/.test(g)) { pageSet.push(Number(g)); } } pageSet = pageSet.filter(function (x, idx, arr) { return arr.indexOf(x) === idx; }); pageSet.sort(function (a, b) { return a - b; }); if (!pageSet.length) return [null, msg]; msg.selected_pages = pageSet; var p = msg.pdf_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.pages_dir = p.substring(0, lastSlash) + '\\\\_pages'; msg.suffix_base = 'NewPDFfile'; msg.suffix_ext = '.pdf'; msg.suffix_idx = 0; msg.candidate_path = msg.destination_folder + '\\\\' + msg.suffix_base + msg.suffix_ext; return [msg, null];`,
+      func: `if (!msg.pdf_path || !/\\.pdf$/i.test(msg.pdf_path) || !msg.destination_folder) return [null, msg]; var pageSet = []; var groups = String(msg.pages_text || '').split(','); for (var i = 0; i < groups.length; i++) { var g = groups[i].trim(); if (!g) continue; var m = g.match(/^(\\d+)-(\\d+)$/); if (m) { var a = Number(m[1]), b = Number(m[2]); for (var j = a; j <= b; j++) pageSet.push(j); } else if (/^\\d+$/.test(g)) { pageSet.push(Number(g)); } } pageSet = pageSet.filter(function (x, idx, arr) { return arr.indexOf(x) === idx; }); pageSet.sort(function (a, b) { return a - b; }); if (!pageSet.length) return [null, msg]; msg.selected_pages = pageSet; var p = msg.pdf_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.pages_dir = p.substring(0, lastSlash) + '/_pages'; msg.suffix_base = 'NewPDFfile'; msg.suffix_ext = '.pdf'; msg.suffix_idx = 0; msg.candidate_path = msg.destination_folder + '/' + msg.suffix_base + msg.suffix_ext; return [msg, null];`,
     });
 
   f.node('a10006', 'Core.FileSystem.Create', 'Ensure Dest Dir', {
@@ -76,7 +76,7 @@ const myFlow = flow.create('200f475c-9ece-4120-8df2-235489362bbc', 'Imported Cre
     })
     .then('a10033', 'Core.Programming.Function', 'Next Or Done', {
       outputs: 2,
-      func: `if (msg.candidate_exists) { msg.suffix_idx += 1; msg.candidate_path = msg.destination_folder + '\\\\' + msg.suffix_base + '_' + (msg.suffix_idx + 1) + msg.suffix_ext; return [msg, null]; } msg.output_path = msg.candidate_path; return [null, msg];`,
+      func: `if (msg.candidate_exists) { msg.suffix_idx += 1; msg.candidate_path = msg.destination_folder + '/' + msg.suffix_base + '_' + (msg.suffix_idx + 1) + msg.suffix_ext; return [msg, null]; } msg.output_path = msg.candidate_path; return [null, msg];`,
     });
 
   f.node('a10034', 'Core.Flow.GoTo', 'Loop Back', {

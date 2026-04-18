@@ -23,7 +23,7 @@ const myFlow = flow.create('e0cde9e6-363b-4cdd-a6f1-312fced760be', 'Imported Spl
     });
 
   f.node('a10004', 'Core.Programming.Function', 'Derive Paths', {
-    func: `var p = msg.pdf_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.directory = p.substring(0, lastSlash); msg.split_output_dir = msg.directory + '\\\\split_halves_' + Date.now(); return msg;`,
+    func: `var p = msg.pdf_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.directory = p.substring(0, lastSlash); msg.split_output_dir = msg.directory + '/split_halves_' + Date.now(); return msg;`,
   })
     .then('a10020', 'Core.Flow.SubFlow', 'Get Page Count', {})
     .then('a10021', 'Core.Flow.SubFlow', 'Compute Half', {})

@@ -3,7 +3,7 @@ import { subflow, Message, Custom } from '@robomotion/sdk';
 subflow.create('Get Page Count', (f) => {
   f.node('b10001', 'Core.Flow.Begin', 'Begin', {})
     .then('b10002', 'Core.Programming.Function', 'Build Count Dir', {
-      func: `msg.count_dir = msg.directory + '\\\\_page_count'; return msg;`,
+      func: `msg.count_dir = msg.directory + '/_page_count'; return msg;`,
     })
     .then('b10003', 'Core.FileSystem.Create', 'Ensure Count Dir', {
       inPath: Message('count_dir'),

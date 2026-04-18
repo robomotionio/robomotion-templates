@@ -35,7 +35,7 @@ const myFlow = flow.create('7b17397d-8ab0-4eaf-8792-adb3e49b24af', 'Imported Sor
       func: `var lf = String.fromCharCode(10); var lines = msg.file_contents_raw.split(lf); if (lines.length && lines[lines.length - 1] === '') lines.pop(); lines.sort(function (a, b) { return a.localeCompare(b); }); msg.sorted_text = lines.join(lf) + lf; return msg;`,
     })
     .then('a10007', 'Core.Programming.Function', 'Build Sorted Path', {
-      func: `var p = msg.selected_text_file; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); var dir = p.substring(0, lastSlash); var base = p.substring(lastSlash + 1); var dot = base.lastIndexOf('.'); var stem = dot === -1 ? base : base.substring(0, dot); var ext = dot === -1 ? '' : base.substring(dot); msg.sorted_file_path = dir + '\\\\' + stem + '_Sorted' + ext; return msg;`,
+      func: `var p = msg.selected_text_file; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); var dir = p.substring(0, lastSlash); var base = p.substring(lastSlash + 1); var dot = base.lastIndexOf('.'); var stem = dot === -1 ? base : base.substring(0, dot); var ext = dot === -1 ? '' : base.substring(dot); msg.sorted_file_path = dir + '/' + stem + '_Sorted' + ext; return msg;`,
     })
     .then('a10008', 'Core.FileSystem.WriteFile', 'Write Sorted File', {
       inPath: Message('sorted_file_path'),

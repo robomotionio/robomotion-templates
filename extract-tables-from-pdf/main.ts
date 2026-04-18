@@ -51,7 +51,7 @@ const myFlow = flow.create('e9375004-4206-4251-b855-d97fbb09c729', 'Imported Ext
     })
     .then('a10003', 'Core.Programming.Function', 'Validate', {
       outputs: 2,
-      func: `if (!msg.pdf_path || !/\\.pdf$/i.test(msg.pdf_path)) return [null, msg]; var p = msg.pdf_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); var dir = p.substring(0, lastSlash); var stem = p.substring(lastSlash + 1).replace(/\\.pdf$/i, ''); msg.xlsx_path = dir + '\\\\' + stem + '_tables.xlsx'; var stamp = Date.now(); msg.tables_json_path = dir + '\\\\_tables_' + stamp + '.json'; msg.ps_script_path = dir + '\\\\_write_xlsx_' + stamp + '.ps1'; return [msg, null];`,
+      func: `if (!msg.pdf_path || !/\\.pdf$/i.test(msg.pdf_path)) return [null, msg]; var p = msg.pdf_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); var dir = p.substring(0, lastSlash); var stem = p.substring(lastSlash + 1).replace(/\\.pdf$/i, ''); msg.xlsx_path = dir + '/' + stem + '_tables.xlsx'; var stamp = Date.now(); msg.tables_json_path = dir + '/_tables_' + stamp + '.json'; msg.ps_script_path = dir + '/_write_xlsx_' + stamp + '.ps1'; return [msg, null];`,
     });
 
   f.node('a10004', 'Robomotion.Pandas.PdfToDataTable', 'Extract Tables', {

@@ -18,7 +18,7 @@ const myFlow = flow.create('00869a9e-4673-4196-8e25-f65888447289', 'Imported Mer
     })
     .then('a10004', 'Core.Programming.Function', 'Reverse And Plan', {
       outputs: 2,
-      func: `if (!msg.destination_folder) return [null, msg]; msg.pdf_list = msg.pdf_list.slice().reverse(); msg.suffix_base = 'MergedFile'; msg.suffix_ext = '.pdf'; msg.suffix_idx = 0; msg.candidate_path = msg.destination_folder + '\\\\' + msg.suffix_base + msg.suffix_ext; return [msg, null];`,
+      func: `if (!msg.destination_folder) return [null, msg]; msg.pdf_list = msg.pdf_list.slice().reverse(); msg.suffix_base = 'MergedFile'; msg.suffix_ext = '.pdf'; msg.suffix_idx = 0; msg.candidate_path = msg.destination_folder + '/' + msg.suffix_base + msg.suffix_ext; return [msg, null];`,
     });
 
   f.node('a10005', 'Core.FileSystem.Create', 'Create Dest Dir', {
@@ -37,7 +37,7 @@ const myFlow = flow.create('00869a9e-4673-4196-8e25-f65888447289', 'Imported Mer
     })
     .then('a10012', 'Core.Programming.Function', 'Next Or Done', {
       outputs: 2,
-      func: `if (msg.candidate_exists) { msg.suffix_idx += 1; msg.candidate_path = msg.destination_folder + '\\\\' + msg.suffix_base + '_' + (msg.suffix_idx + 1) + msg.suffix_ext; return [msg, null]; } msg.merged_path = msg.candidate_path; return [null, msg];`,
+      func: `if (msg.candidate_exists) { msg.suffix_idx += 1; msg.candidate_path = msg.destination_folder + '/' + msg.suffix_base + '_' + (msg.suffix_idx + 1) + msg.suffix_ext; return [msg, null]; } msg.merged_path = msg.candidate_path; return [null, msg];`,
     });
 
   f.node('a10013', 'Core.Flow.GoTo', 'Loop Back', {

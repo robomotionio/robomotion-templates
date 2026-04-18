@@ -55,7 +55,7 @@ const myFlow = flow.create('3fcd90e9-d470-4ad7-9ddd-dccdaf2f2b1f', 'Imported Add
     outFormattedTime: Message('stamp'),
   })
     .then('a10014', 'Core.Programming.Function', 'Build New Path', {
-      func: `var p = msg.source_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); var dir = p.substring(0, lastSlash); var base = p.substring(lastSlash + 1); var dot = base.lastIndexOf('.'); var stem = dot === -1 ? base : base.substring(0, dot); var ext = dot === -1 ? '' : base.substring(dot); msg.target_path = dir + '\\\\' + stem + '-' + msg.stamp + ext; return msg;`,
+      func: `var p = msg.source_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); var dir = p.substring(0, lastSlash); var base = p.substring(lastSlash + 1); var dot = base.lastIndexOf('.'); var stem = dot === -1 ? base : base.substring(0, dot); var ext = dot === -1 ? '' : base.substring(dot); msg.target_path = dir + '/' + stem + '-' + msg.stamp + ext; return msg;`,
     })
     .then('a10015', 'Core.FileSystem.PathExists', 'Target Exists?', {
       inPath: Message('target_path'),

@@ -24,7 +24,7 @@ const myFlow = flow.create('6474eb64-a9c9-4919-8ff2-a3de299ec8a9', 'Imported Spl
     })
     .then('a10004', 'Core.Programming.Function', 'Validate Inputs', {
       outputs: 2,
-      func: `var n = Number(msg.split_at_text); if (!msg.pdf_path || !/\\.pdf$/i.test(msg.pdf_path) || !Number.isInteger(n) || n < 1) return [null, msg]; msg.split_at_page = n; var p = msg.pdf_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.directory = p.substring(0, lastSlash); var base = p.substring(lastSlash + 1); var dot = base.lastIndexOf('.'); msg.stem = dot === -1 ? base : base.substring(0, dot); var stamp = Date.now(); msg.pages_dir = msg.directory + '\\\\_pages_' + stamp; msg.split_output_dir = msg.directory + '\\\\split_parts_' + stamp; return [msg, null];`,
+      func: `var n = Number(msg.split_at_text); if (!msg.pdf_path || !/\\.pdf$/i.test(msg.pdf_path) || !Number.isInteger(n) || n < 1) return [null, msg]; msg.split_at_page = n; var p = msg.pdf_path; var lastSlash = Math.max(p.lastIndexOf('/'), p.lastIndexOf('\\\\')); msg.directory = p.substring(0, lastSlash); var base = p.substring(lastSlash + 1); var dot = base.lastIndexOf('.'); msg.stem = dot === -1 ? base : base.substring(0, dot); var stamp = Date.now(); msg.pages_dir = msg.directory + '/_pages_' + stamp; msg.split_output_dir = msg.directory + '/split_parts_' + stamp; return [msg, null];`,
     });
 
   f.node('a10005', 'Core.FileSystem.Create', 'Ensure Pages Dir', {
@@ -48,7 +48,7 @@ const myFlow = flow.create('6474eb64-a9c9-4919-8ff2-a3de299ec8a9', 'Imported Spl
     })
     .then('a10008', 'Core.Programming.Function', 'Plan Halves', {
       outputs: 2,
-      func: `var list = (msg.page_files || []).filter(function (x) { return !x.IsDir; }); list.sort(function (a, b) { return a.Name < b.Name ? -1 : (a.Name > b.Name ? 1 : 0); }); var c = list.length; var n = Number(msg.split_at_page); if (!c || c < 2 || n < 1 || n >= c) return [null, msg]; msg.page_count = c; msg.first_paths = list.slice(0, n).map(function (x) { return x.Name; }); msg.second_paths = list.slice(n).map(function (x) { return x.Name; }); msg.first_out = msg.split_output_dir + '\\\\' + msg.stem + '-1.pdf'; msg.second_out = msg.split_output_dir + '\\\\' + msg.stem + '-2.pdf'; return [msg, null];`,
+      func: `var list = (msg.page_files || []).filter(function (x) { return !x.IsDir; }); list.sort(function (a, b) { return a.Name < b.Name ? -1 : (a.Name > b.Name ? 1 : 0); }); var c = list.length; var n = Number(msg.split_at_page); if (!c || c < 2 || n < 1 || n >= c) return [null, msg]; msg.page_count = c; msg.first_paths = list.slice(0, n).map(function (x) { return x.Name; }); msg.second_paths = list.slice(n).map(function (x) { return x.Name; }); msg.first_out = msg.split_output_dir + '/' + msg.stem + '-1.pdf'; msg.second_out = msg.split_output_dir + '/' + msg.stem + '-2.pdf'; return [msg, null];`,
     });
 
   f.node('a10009', 'Core.FileSystem.Create', 'Ensure Split Dir', {

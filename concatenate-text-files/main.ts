@@ -39,7 +39,7 @@ const myFlow = flow.create('a07ddc8e-02f0-4a3e-814e-a452561fb758', 'Imported Con
     outContent: Message('current_file_contents'),
   })
     .then('a10011', 'Core.Programming.Function', 'Build Output Path', {
-      func: `var lastSlash = Math.max(msg.current_file.lastIndexOf('/'), msg.current_file.lastIndexOf('\\\\')); msg.output_path = msg.current_file.substring(0, lastSlash) + '\\\\ConcatenatedFiles.txt'; msg.line_to_write = msg.current_file_contents + '\\n'; return msg;`,
+      func: `var lastSlash = Math.max(msg.current_file.lastIndexOf('/'), msg.current_file.lastIndexOf('\\\\')); msg.output_path = msg.current_file.substring(0, lastSlash) + '/ConcatenatedFiles.txt'; msg.line_to_write = msg.current_file_contents + '\\n'; return msg;`,
     })
     .then('a10012', 'Core.FileSystem.WriteFile', 'Append to Output', {
       inPath: Message('output_path'),
