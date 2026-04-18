@@ -104,7 +104,7 @@ Every template declares a `level` (Beginner / Intermediate / Advanced) so you ca
 | [Print Documents](print-documents) | Beginner | Iterates a folder of documents and sends each one to the default printer. |
 | [Run an Application](run-an-application) | Beginner | Starts a desktop application by executable path — the simplest form of process orchestration in Robomotion. |
 | [Send Text to Notepad](send-text-to-notepad) | Beginner | Opens Notepad and types a provided string into its editor window. |
-| [Share PowerPoint File as PDF](share-powerpoint-file-as-pdf) | Advanced | Opens a . |
+| [Share PowerPoint File as PDF](share-powerpoint-file-as-pdf) | Advanced | Opens a .pptx via PowerShell + PowerPoint COM, exports it to PDF, and emails the result through Outlook. |
 
 ### Excel Automation
 
@@ -146,7 +146,7 @@ Every template declares a `level` (Beginner / Intermediate / Advanced) so you ca
 
 | Template | Level | Description |
 |----------|-------|-------------|
-| [Concatenate Text Files](concatenate-text-files) | Intermediate | Reads every . |
+| [Concatenate Text Files](concatenate-text-files) | Intermediate | Iterates a list of text files, appending each one's contents into a single consolidated output file. |
 | [Count Lines of a Text File](count-lines-of-text-file) | Intermediate | Opens a text file and reports the number of lines it contains. |
 | [Extract Phone Numbers and Emails](extract-phone-numbers-and-emails) | Intermediate | Scans free-form text with regular expressions and pulls out every phone number and email address. |
 | [Get Position of Subtext](get-position-of-subtext) | Beginner | Finds the character index of a substring inside a larger string. |
@@ -158,7 +158,7 @@ Every template declares a `level` (Beginner / Intermediate / Advanced) so you ca
 |----------|-------|-------------|
 | [Use Conditionals to Check if File Exists](use-conditionals-to-check-if-file-exists) | Beginner | Checks whether a given file is present on disk and routes the flow accordingly. |
 | [Use Labels to Check if File Exists](use-labels-to-check-if-file-exists) | Advanced | Uses Label and GoTo to structure a loop that rechecks file existence — a non-sequential flow pattern useful for polling. |
-| [Use Subflows to Check if File Exists](use-subflows-to-check-if-file-exists) | Intermediate | Encapsulates a "does this file exist? |
+| [Use Subflows to Check if File Exists](use-subflows-to-check-if-file-exists) | Intermediate | Encapsulates "file exists" and "file missing" branches as separate subflows — teaches modular conditional routing. |
 | [Use the AND Operator in Conditionals](use-and-operator-in-conditionals) | Intermediate | Shows how to branch a flow only when two conditions are both true using a Switch node with a combined predicate. |
 | [Use the OR Operator in Conditionals](use-or-operator-in-conditionals) | Intermediate | Combines two conditions with a logical OR and branches the flow based on the result. |
 
