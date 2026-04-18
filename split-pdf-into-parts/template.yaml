@@ -1,0 +1,15 @@
+name: Split PDF into Parts
+slug: split-pdf-into-parts
+summary: >-
+  Divides a PDF into N equal-sized slices and writes each part out as its own
+  file. A general-purpose chunker for large documents.
+category: PDF
+level: Advanced
+tags: [pdf, split, pages, parts, subflow]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: d96f25dd-50c0-4d51-a885-fbc3b8977c1d
+schema_version: 1

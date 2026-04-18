@@ -1,0 +1,15 @@
+name: Sort Lines of a Text File
+slug: sort-lines-of-text-file
+summary: >-
+  Reads a text file, sorts its lines alphabetically, and writes the result back
+  out. Reusable for cleaning up exports and datasets.
+category: Text Manipulation
+level: Intermediate
+tags: [text, sort, file, subflow]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 7b17397d-8ab0-4eaf-8792-adb3e49b24af
+schema_version: 1

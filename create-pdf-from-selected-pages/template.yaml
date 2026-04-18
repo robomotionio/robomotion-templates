@@ -1,0 +1,15 @@
+name: Create PDF from Selected Pages
+slug: create-pdf-from-selected-pages
+summary: >-
+  Pulls a chosen range of pages from a source PDF and writes them to a new
+  document. Useful for trimming or sharing parts of a report.
+category: PDF
+level: Beginner
+tags: [pdf, pages, extract, selection, subflow]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 200f475c-9ece-4120-8df2-235489362bbc
+schema_version: 1

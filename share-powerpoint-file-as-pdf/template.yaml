@@ -1,0 +1,15 @@
+name: Share PowerPoint File as PDF
+slug: share-powerpoint-file-as-pdf
+summary: >-
+  Opens a .pptx file, exports it to PDF, and saves it next to the original.
+  Automates a common office pipeline end to end.
+category: Desktop Automation
+level: Advanced
+tags: [powerpoint, pdf, conversion, office, subflow]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: e4c34dfa-6f0e-44db-9460-d54ea4766344
+schema_version: 1

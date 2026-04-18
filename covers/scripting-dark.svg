@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-labelledby="coverTitle">
+  <title id="coverTitle">Scripting</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a20"/><stop offset="100%" stop-color="#101015"/>
+    </linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#2a2a31" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glowLeft" cx="0" cy="0.5" r="0.8">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#22c55e" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowRight" cx="1" cy="0" r="0.9">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.15"/>
+      <stop offset="60%" stop-color="#f97316" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="cardClip"><rect x="0" y="0" width="600" height="300" rx="20" ry="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#cardClip)">
+    <rect width="600" height="300" fill="url(#bg)"/>
+    <rect width="600" height="300" fill="url(#grid)"/>
+    <rect width="600" height="300" fill="url(#glowLeft)" opacity="0.9"/>
+    <rect width="600" height="300" fill="url(#glowRight)" opacity="0.9"/>
+
+    <!-- Terminal window -->
+    <g transform="translate(400, 40)">
+      <rect x="0" y="0" width="170" height="130" rx="8" fill="#0c0c10" stroke="#2f2f37" stroke-width="1"/>
+      <rect x="0" y="0" width="170" height="22" rx="8" fill="#1b1b22"/>
+      <rect x="0" y="14" width="170" height="8" fill="#1b1b22"/>
+      <circle cx="10" cy="11" r="3" fill="#ef4444" opacity="0.7"/>
+      <circle cx="22" cy="11" r="3" fill="#f59e0b" opacity="0.7"/>
+      <circle cx="34" cy="11" r="3" fill="#22c55e" opacity="0.7"/>
+      <!-- Terminal text -->
+      <g font-family="ui-monospace, Menlo, monospace" font-size="9">
+        <text x="10" y="40" fill="#22c55e">$</text>
+        <text x="22" y="40" fill="#d4d4d8">python script.py</text>
+        <text x="10" y="56" fill="#a855f7">def</text>
+        <text x="30" y="56" fill="#06b6d4">process</text>
+        <text x="65" y="56" fill="#d4d4d8">(data):</text>
+        <text x="18" y="72" fill="#a855f7">return</text>
+        <text x="52" y="72" fill="#d4d4d8">data.map(</text>
+        <text x="18" y="88" fill="#a855f7">  x =&gt; x *</text>
+        <text x="70" y="88" fill="#f97316">2</text>
+        <text x="18" y="104" fill="#d4d4d8">)</text>
+        <text x="10" y="122" fill="#22c55e">$</text>
+        <text x="22" y="122" fill="#22c55e">✓</text>
+        <text x="34" y="122" fill="#d4d4d8">done</text>
+      </g>
+      <!-- Cursor -->
+      <rect x="62" y="114" width="6" height="10" fill="#22c55e" opacity="0.8"/>
+    </g>
+
+    <text x="40" y="218" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="44" font-weight="700" fill="#ffffff" letter-spacing="-1.2">Scripting</text>
+    <text x="40" y="248" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="15" font-weight="400" fill="#a1a1aa">JavaScript, Python, PowerShell, VBScript</text>
+    <rect x="1" y="1" width="598" height="298" rx="19" ry="19" fill="none" stroke="#22c55e" stroke-opacity="0.2" stroke-width="1"/>
+  </g>
+</svg>

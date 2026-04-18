@@ -1,0 +1,15 @@
+name: Use the OR Operator in Conditionals
+slug: use-or-operator-in-conditionals
+summary: >-
+  Combines two conditions with a logical OR and branches the flow based on the
+  result. Complements the AND-operator variant.
+category: Flow Control
+level: Intermediate
+tags: [conditional, logic, or, switch]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 12ed202a-d649-4f9d-bbe9-60e3000d2b65
+schema_version: 1

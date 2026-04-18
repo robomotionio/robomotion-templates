@@ -1,0 +1,15 @@
+name: Launch Excel and Extract Table
+slug: launch-excel-and-extract-table
+summary: >-
+  Opens an Excel workbook and reads its first table into a structured message
+  variable. Ideal starting point for data-driven flows.
+category: Excel Automation
+level: Beginner
+tags: [excel, table, extract, data, subflow]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 50bb5c21-7c70-4f7c-b284-6c697d5759a6
+schema_version: 1

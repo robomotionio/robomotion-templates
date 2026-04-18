@@ -1,0 +1,15 @@
+name: Use Conditionals to Check if File Exists
+slug: use-conditionals-to-check-if-file-exists
+summary: >-
+  Checks whether a given file is present on disk and routes the flow
+  accordingly. A textbook conditional branching example.
+category: Flow Control
+level: Beginner
+tags: [conditional, file, check, switch]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 35cba3e6-c333-42f1-86af-2092663a6f7c
+schema_version: 1

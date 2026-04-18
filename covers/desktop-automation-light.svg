@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-labelledby="coverTitle">
+  <title id="coverTitle">Desktop Automation</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fafafa"/><stop offset="100%" stop-color="#f1f1f4"/>
+    </linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#e4e4e8" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glowLeft" cx="0" cy="0.5" r="0.8">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#6366f1" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowRight" cx="1" cy="0" r="0.9">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.1"/>
+      <stop offset="60%" stop-color="#f97316" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="cardClip"><rect x="0" y="0" width="600" height="300" rx="20" ry="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#cardClip)">
+    <rect width="600" height="300" fill="url(#bg)"/>
+    <rect width="600" height="300" fill="url(#grid)"/>
+    <rect width="600" height="300" fill="url(#glowLeft)"/>
+    <rect width="600" height="300" fill="url(#glowRight)"/>
+
+    <g transform="translate(390, 45)">
+      <rect x="12" y="12" width="150" height="100" rx="8" fill="#ffffff" stroke="#d4d4d8" stroke-width="1"/>
+      <rect x="12" y="12" width="150" height="18" rx="8" fill="#f4f4f5"/>
+      <rect x="12" y="22" width="150" height="8" fill="#f4f4f5"/>
+      <circle cx="22" cy="21" r="3" fill="#ef4444" opacity="0.85"/>
+      <circle cx="32" cy="21" r="3" fill="#f59e0b" opacity="0.85"/>
+      <circle cx="42" cy="21" r="3" fill="#22c55e" opacity="0.85"/>
+      <g fill="#6366f1" opacity="0.85">
+        <rect x="24" y="42" width="16" height="18" rx="2"/>
+        <rect x="52" y="42" width="16" height="18" rx="2"/>
+        <rect x="80" y="42" width="16" height="18" rx="2"/>
+        <rect x="24" y="74" width="16" height="18" rx="2"/>
+        <rect x="52" y="74" width="16" height="18" rx="2"/>
+      </g>
+      <rect x="0" y="0" width="150" height="100" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+      <rect x="0" y="0" width="150" height="18" rx="8" fill="#f4f4f5"/>
+      <rect x="0" y="10" width="150" height="8" fill="#f4f4f5"/>
+      <circle cx="10" cy="9" r="3" fill="#ef4444"/>
+      <circle cx="20" cy="9" r="3" fill="#f59e0b"/>
+      <circle cx="30" cy="9" r="3" fill="#22c55e"/>
+      <g transform="translate(55, 35)" opacity="1">
+        <path d="M 0 8 L 0 46 L 40 46 L 40 14 L 22 14 L 18 8 Z" fill="#6366f1"/>
+        <rect x="4" y="14" width="32" height="28" rx="2" fill="#a5b4fc"/>
+      </g>
+      <rect x="16" y="86" width="40" height="3" rx="1" fill="#9ca3af"/>
+      <rect x="60" y="86" width="30" height="3" rx="1" fill="#9ca3af"/>
+    </g>
+
+    <text x="40" y="218" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="44" font-weight="700" fill="#0f172a" letter-spacing="-1.2">Desktop Automation</text>
+    <text x="40" y="248" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="15" font-weight="400" fill="#64748b">Files, folders, and application control</text>
+    <rect x="1" y="1" width="598" height="298" rx="19" ry="19" fill="none" stroke="#6366f1" stroke-opacity="0.25" stroke-width="1"/>
+  </g>
+</svg>

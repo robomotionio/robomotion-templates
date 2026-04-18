@@ -5,6 +5,7 @@ summary: >-
   for each file and deleting any file whose hash has already been seen. Uses
   the Cryptography package for hashing and File System nodes for deletion.
 category: File Operations
+level: Intermediate
 tags: [file, hash, duplicate, cleanup, cryptography]
 author: Robomotion
 created: "2025-11-16"

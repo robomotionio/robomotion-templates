@@ -5,6 +5,7 @@ summary: >-
   Creates multiple concurrent browser instances that dequeue items from a shared
   queue, navigate to e-commerce websites, and take screenshots simultaneously.
 category: Concurrency
+level: Advanced
 tags: [parallel, fork, queue, browser, memory-queue]
 author: Robomotion
 created: "2025-12-10"

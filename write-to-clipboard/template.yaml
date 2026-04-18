@@ -4,6 +4,7 @@ summary: >-
   Receives text input from the user via a dialog box and copies it to the
   system clipboard, then confirms the operation with a message.
 category: System Utilities
+level: Beginner
 tags: [clipboard, copy, system, dialog]
 author: Robomotion
 created: "2025-11-17"

@@ -1,0 +1,124 @@
+schema_version: 2
+sections:
+  - slug: excel-automation
+    display_name: Excel Automation
+    description: Automate repetitive Excel tasks, extract and store data into
+      Excel files, read and manipulate cells, and manage spreadsheets.
+    cover_image: covers/excel-automation-light.svg
+    cover_image_light: covers/excel-automation-light.svg
+    cover_image_dark: covers/excel-automation-dark.svg
+    examples:
+      - consolidate-excel-reports
+      - launch-excel
+      - launch-excel-and-extract-table
+      - manipulate-excel-data-using-sql
+      - search-and-replace-excel-values
+
+  - slug: web-automation
+    display_name: Web Automation
+    description: Interact with web pages, scrape metadata, open URLs, and capture
+      screenshots to automate browser-based workflows.
+    cover_image: covers/web-automation-light.svg
+    cover_image_light: covers/web-automation-light.svg
+    cover_image_dark: covers/web-automation-dark.svg
+    examples:
+      - get-metadata-of-web-page
+      - open-a-web-page
+      - take-screenshot-of-web-page
+
+  - slug: desktop-automation
+    display_name: Desktop Automation
+    description: Control desktop applications, manage files and folders, launch
+      applications, and interact with the local operating system.
+    cover_image: covers/desktop-automation-light.svg
+    cover_image_light: covers/desktop-automation-light.svg
+    cover_image_dark: covers/desktop-automation-dark.svg
+    examples:
+      - add-datetime-to-file-names
+      - copy-files
+      - delete-files-of-specific-size-range
+      - find-and-delete-empty-files
+      - gui-testing-calculator
+      - open-a-folder
+      - print-current-weeks-calendar
+      - print-documents
+      - run-an-application
+      - send-text-to-notepad
+      - share-powerpoint-file-as-pdf
+
+  - slug: datetime-handling
+    display_name: Datetime Handling
+    description: Parse, format, and calculate dates and times to drive schedules,
+      timestamps, and working-day logic.
+    cover_image: covers/datetime-handling-light.svg
+    cover_image_light: covers/datetime-handling-light.svg
+    cover_image_dark: covers/datetime-handling-dark.svg
+    examples:
+      - convert-datetime-to-text
+      - convert-text-to-datetime
+      - days-of-your-life
+      - get-current-time
+      - get-first-working-day-of-next-month
+      - get-previous-working-date
+
+  - slug: pdf-automation
+    display_name: PDF Automation
+    description: Create, split, merge, and extract content from PDF documents to
+      automate document processing tasks.
+    cover_image: covers/pdf-automation-light.svg
+    cover_image_light: covers/pdf-automation-light.svg
+    cover_image_dark: covers/pdf-automation-dark.svg
+    examples:
+      - create-pdf-from-selected-pages
+      - extract-tables-from-pdf
+      - get-images-from-pdf
+      - get-number-of-pages
+      - merge-pdfs
+      - merge-two-pdfs
+      - split-pdf-by-half
+      - split-pdf-by-specified-page
+      - split-pdf-into-parts
+
+  - slug: text-manipulation
+    display_name: Text Manipulation
+    description: Read, transform, and analyze text files — concatenate content,
+      extract patterns, and sort lines for downstream processing.
+    cover_image: covers/text-manipulation-light.svg
+    cover_image_light: covers/text-manipulation-light.svg
+    cover_image_dark: covers/text-manipulation-dark.svg
+    examples:
+      - concatenate-text-files
+      - count-lines-of-text-file
+      - extract-phone-numbers-and-emails
+      - get-position-of-subtext
+      - sort-lines-of-text-file
+
+  - slug: scripting
+    display_name: Scripting
+    description: Run custom scripts in JavaScript, Python, PowerShell, and
+      VBScript to extend flows with embedded automation logic.
+    cover_image: covers/scripting-light.svg
+    cover_image_light: covers/scripting-light.svg
+    cover_image_dark: covers/scripting-dark.svg
+    examples:
+      - convert-excel-to-pdf-using-vbscript
+      - display-javascript-output
+      - display-powershell-output
+      - display-python-output
+      - display-vbscript-output
+      - extract-text-from-word-document
+      - get-login-name-using-python
+
+  - slug: flow-control
+    display_name: Flow Control
+    description: Branch, loop, and orchestrate flow execution using conditionals,
+      labels, and subflows.
+    cover_image: covers/flow-control-light.svg
+    cover_image_light: covers/flow-control-light.svg
+    cover_image_dark: covers/flow-control-dark.svg
+    examples:
+      - use-and-operator-in-conditionals
+      - use-conditionals-to-check-if-file-exists
+      - use-labels-to-check-if-file-exists
+      - use-or-operator-in-conditionals
+      - use-subflows-to-check-if-file-exists

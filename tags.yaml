@@ -1,60 +1,137 @@
 tags:
+  - agent
+  - ai
+  - and
   - api
+  - application-launcher
+  - assistant
   - automation
   - beautify
   - bmi
   - browser
+  - calculation
   - calculator
+  - calendar
+  - calories
+  - capture
   - catch
+  - chat
+  - check
   - cleanup
   - clipboard
+  - concatenate
+  - conditional
+  - consolidate
   - content
   - conversion
   - copy
+  - count
+  - credential
   - cryptography
   - csv
+  - data
   - database
+  - datetime
+  - delete
+  - desktop
   - dialog
   - download
   - duckduckgo
   - duplicate
+  - email
+  - empty-file
   - error-handling
   - example
   - excel
+  - extract
   - file
   - file-processing
+  - filter
+  - folder
   - fork
+  - format
   - formatting
   - generator
   - get
+  - goto
   - hash
   - health-check
   - html
   - http
+  - images
+  - interval
+  - javascript
   - json
+  - keyboard
+  - label
+  - lines
+  - llm
+  - logic
+  - loop
   - memory-queue
   - merge
+  - metadata
   - minify
   - monitoring
+  - navigation
+  - notepad
+  - now
+  - nutrition
+  - office
+  - or
+  - output
+  - pages
   - parallel
+  - parsing
+  - parts
   - password
   - pdf
+  - phone
+  - position
+  - powerpoint
+  - powershell
+  - print
+  - process
+  - python
+  - query
   - queue
   - read
+  - regex
+  - rename
   - request
   - rest
+  - reuse
+  - scrape
   - scraping
   - screenshot
+  - script
   - search
+  - search-replace
   - security
+  - selection
   - server
+  - size
+  - sort
+  - split
+  - spreadsheet
   - sql
   - sqlite
   - ssl
+  - statistics
+  - string
+  - subflow
+  - switch
   - system
+  - table
+  - testing
   - text
   - throw
+  - timestamp
   - translation
+  - ui-automation
   - validation
+  - vbscript
   - web
   - web-scraping
+  - word
+  - working-day

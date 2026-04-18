@@ -4,6 +4,7 @@ summary: >-
   Creates a simple REST API server with GET and POST endpoints using the
   Net Http nodes. The default robot runs on http://localhost:9090.
 category: Networking
+level: Intermediate
 tags: [rest, api, http, server]
 author: Robomotion
 created: "2025-11-17"

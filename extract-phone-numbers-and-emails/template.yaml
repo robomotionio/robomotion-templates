@@ -1,0 +1,15 @@
+name: Extract Phone Numbers and Emails
+slug: extract-phone-numbers-and-emails
+summary: >-
+  Scans free-form text with regular expressions and pulls out every phone number
+  and email address. Foundation for contact-harvesting jobs.
+category: Text Manipulation
+level: Intermediate
+tags: [regex, text, extract, phone, email]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: fd197349-8ff0-4205-b6c5-ae440d8ea644
+schema_version: 1

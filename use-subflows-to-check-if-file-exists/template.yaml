@@ -1,0 +1,15 @@
+name: Use Subflows to Check if File Exists
+slug: use-subflows-to-check-if-file-exists
+summary: >-
+  Encapsulates a "does this file exist?" check inside a reusable subflow so the
+  main flow stays linear and readable.
+category: Flow Control
+level: Intermediate
+tags: [subflow, conditional, file, reuse]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: a45b07c3-25ee-453c-9c35-3f54f6edcb21
+schema_version: 1

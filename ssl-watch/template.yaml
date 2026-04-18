@@ -7,6 +7,7 @@ summary: >-
   updates a Google Sheets file automatically through secure Vault stored
   credentials.
 category: System Administration
+level: Advanced
 tags: [automation, ssl]
 author: Robomotion
 downloads: 13

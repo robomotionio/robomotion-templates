@@ -1,0 +1,15 @@
+name: Open a Folder
+slug: open-a-folder
+summary: >-
+  Launches the system file explorer pointed at a given path. Minimal template
+  demonstrating the Application.Launch node.
+category: Desktop Automation
+level: Beginner
+tags: [folder, desktop, application-launcher]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 024d427e-0ed0-441d-974a-c56ac07215ca
+schema_version: 1

@@ -5,6 +5,7 @@ summary: >-
   for a number greater than 100, validates the input, and demonstrates catching
   specific error types with appropriate feedback.
 category: Error Handling
+level: Beginner
 tags: [error-handling, catch, throw, validation]
 author: Robomotion
 created: "2025-11-16"

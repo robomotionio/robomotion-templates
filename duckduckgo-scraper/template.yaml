@@ -4,6 +4,7 @@ summary: >-
   Searches DuckDuckGo for a user-provided query and saves the result titles
   and links to an Excel file.
 category: Web Scraping
+level: Intermediate
 tags: [scraping, search, duckduckgo, browser]
 author: Robomotion
 created: "2025-12-07"

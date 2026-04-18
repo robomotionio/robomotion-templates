@@ -1,0 +1,16 @@
+name: Manipulate Excel Data Using SQL
+slug: manipulate-excel-data-using-sql
+summary: >-
+  Loads Excel data into an in-memory SQL engine and runs a SELECT / UPDATE
+  statement against it. Gives you database-level expressiveness over spreadsheet
+  data.
+category: Excel Automation
+level: Advanced
+tags: [excel, sql, query, data, subflow]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: true
+flow_id: 5893ef96-e317-4797-b2a6-0c5530aa1bed
+schema_version: 1

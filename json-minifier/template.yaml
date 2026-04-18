@@ -5,6 +5,7 @@ summary: >-
   with no extra whitespace. The result is printed to the Output Panel via a
   Debug node.
 category: Data Processing
+level: Beginner
 tags: [json, formatting, minify, file-processing]
 author: Robomotion
 created: "2025-11-16"

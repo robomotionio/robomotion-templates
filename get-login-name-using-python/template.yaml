@@ -1,0 +1,15 @@
+name: Get Login Name Using Python
+slug: get-login-name-using-python
+summary: >-
+  Retrieves the current Windows login user via an inline Python script. Handy
+  for audit trails or user-scoped paths.
+category: Scripting
+level: Advanced
+tags: [python, system, credential, script]
+author: Robomotion
+created: "2025-11-15"
+updated: "2025-11-15"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: c89dcd58-3c35-47b8-8d1c-9107ed5ff752
+schema_version: 1
