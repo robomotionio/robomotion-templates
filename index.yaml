@@ -9,8 +9,8 @@ templates:
     level: Beginner
     tags: [file, rename, datetime, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -69,8 +69,8 @@ templates:
     level: Intermediate
     tags: [text, concatenate, file, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -83,8 +83,8 @@ templates:
     level: Intermediate
     tags: [excel, consolidate, merge, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -113,8 +113,8 @@ templates:
     level: Beginner
     tags: [datetime, format, text, dialog]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -142,8 +142,8 @@ templates:
     level: Advanced
     tags: [vbscript, excel, pdf, conversion, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -157,8 +157,8 @@ templates:
     level: Beginner
     tags: [datetime, parsing, conversion, dialog]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -172,8 +172,8 @@ templates:
     level: Beginner
     tags: [file, copy, folder, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -186,8 +186,8 @@ templates:
     level: Intermediate
     tags: [text, count, lines, statistics, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -200,8 +200,8 @@ templates:
     level: Beginner
     tags: [pdf, pages, extract, selection, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -215,8 +215,8 @@ templates:
     level: Intermediate
     tags: [datetime, calculation, interval, dialog]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -229,8 +229,8 @@ templates:
     level: Intermediate
     tags: [file, delete, size, filter, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -243,8 +243,8 @@ templates:
     level: Intermediate
     tags: [javascript, script, output, dialog]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -257,8 +257,8 @@ templates:
     level: Intermediate
     tags: [powershell, script, output, dialog]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -271,8 +271,8 @@ templates:
     level: Intermediate
     tags: [python, script, output, dialog]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -285,8 +285,8 @@ templates:
     level: Intermediate
     tags: [vbscript, script, output, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -360,8 +360,8 @@ templates:
     level: Intermediate
     tags: [regex, text, extract, phone, email]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -374,8 +374,8 @@ templates:
     level: Intermediate
     tags: [pdf, table, extract, data, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -388,8 +388,8 @@ templates:
     level: Advanced
     tags: [word, vbscript, text, extract, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -402,8 +402,8 @@ templates:
     level: Beginner
     tags: [file, delete, empty-file, cleanup, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -449,8 +449,8 @@ templates:
     level: Beginner
     tags: [datetime, now, timestamp, dialog]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -463,8 +463,8 @@ templates:
     level: Intermediate
     tags: [datetime, working-day, calendar, conditional]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -477,8 +477,8 @@ templates:
     level: Beginner
     tags: [pdf, images, extract, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -491,8 +491,8 @@ templates:
     level: Advanced
     tags: [python, system, credential, script]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -505,8 +505,8 @@ templates:
     level: Intermediate
     tags: [web, metadata, scrape, html, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -519,8 +519,8 @@ templates:
     level: Intermediate
     tags: [pdf, metadata, pages, count, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -533,8 +533,8 @@ templates:
     level: Beginner
     tags: [text, search, position, string]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -547,8 +547,8 @@ templates:
     level: Advanced
     tags: [datetime, working-day, conditional, loop]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -561,8 +561,8 @@ templates:
     level: Advanced
     tags: [desktop, calculator, ui-automation, testing, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -620,8 +620,8 @@ templates:
     level: Beginner
     tags: [excel, spreadsheet, office, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -634,8 +634,8 @@ templates:
     level: Beginner
     tags: [excel, table, extract, data, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -649,8 +649,8 @@ templates:
     level: Advanced
     tags: [excel, sql, query, data, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -678,8 +678,8 @@ templates:
     level: Intermediate
     tags: [pdf, merge, concatenate, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -691,8 +691,8 @@ templates:
     level: Beginner
     tags: [pdf, merge, concatenate, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -705,8 +705,8 @@ templates:
     level: Beginner
     tags: [folder, desktop, application-launcher]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -719,8 +719,8 @@ templates:
     level: Beginner
     tags: [web, browser, navigation]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -748,8 +748,8 @@ templates:
     level: Intermediate
     tags: [calendar, print, datetime, html]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -762,8 +762,8 @@ templates:
     level: Beginner
     tags: [print, file, desktop, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -818,8 +818,8 @@ templates:
     level: Beginner
     tags: [application-launcher, desktop, process]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -846,8 +846,8 @@ templates:
     level: Beginner
     tags: [excel, search-replace, text, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -875,8 +875,8 @@ templates:
     level: Beginner
     tags: [notepad, text, keyboard, desktop]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -889,8 +889,8 @@ templates:
     level: Advanced
     tags: [powerpoint, pdf, conversion, office, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -903,8 +903,8 @@ templates:
     level: Intermediate
     tags: [text, sort, file, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -917,8 +917,8 @@ templates:
     level: Advanced
     tags: [pdf, split, pages, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -931,8 +931,8 @@ templates:
     level: Intermediate
     tags: [pdf, split, pages, conditional, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -945,8 +945,8 @@ templates:
     level: Advanced
     tags: [pdf, split, pages, parts, subflow]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -991,8 +991,8 @@ templates:
     level: Beginner
     tags: [web, screenshot, capture, browser]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -1020,8 +1020,8 @@ templates:
     level: Beginner
     tags: [conditional, file, check, switch]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -1034,8 +1034,8 @@ templates:
     level: Advanced
     tags: [label, goto, conditional, file, loop]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -1048,8 +1048,8 @@ templates:
     level: Intermediate
     tags: [subflow, conditional, file, reuse]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
 
@@ -1062,8 +1062,8 @@ templates:
     level: Intermediate
     tags: [conditional, logic, and, switch]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -1076,8 +1076,8 @@ templates:
     level: Intermediate
     tags: [conditional, logic, or, switch]
     author: Robomotion
-    created: "2026-04-18"
-    updated: "2026-04-18"
+    created: "2025-11-15"
+    updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: false
 
