@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` â
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 6
+- Done (`[x]`): 7
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 49
-- Backlog (`[ ]`): 167
+- Backlog (`[ ]`): 166
 
 ## Cases
 
@@ -124,7 +124,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` â
 
 ### Crypto / financial
 
-- [ ] extract-coinmarketcap-coins-list-prices
+- [x] extract-coinmarketcap-coins-list-prices â€” CMC homepage table, 13 cols, runs in 5s
 - [ ] extract-coin-details-category-coinmarketcap
 - [ ] extract-single-crypto-coin-details-coinmarketcap
 - [ ] extract-coins-list-info-binance
