@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 74
+- Done (`[x]`): 77
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 113
-- Backlog (`[ ]`): 35
+- Backlog (`[ ]`): 32
 
 ## Cases
 
@@ -267,9 +267,9 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 
 - [x] extract-tools-keyword-future-tools — Future Tools keyword search, 6 cols, 24 rows, 2.4s
 - [x] extract-tool-details-future-tools — Future Tools single tool detail, 5 cols, 1 row, 2.6s
-- [ ] extract-trending-ai-tools-futurepedia
-- [ ] extract-ai-tool-details-futurepedia
-- [ ] extract-ai-tools-futurepedia-categories
+- [x] extract-trending-ai-tools-futurepedia — Futurepedia homepage tools, 5 cols, 9 rows, 2.4s
+- [x] extract-ai-tool-details-futurepedia — Futurepedia single tool detail, 6 cols, 1 row, 2.6s
+- [x] extract-ai-tools-futurepedia-categories — Futurepedia homepage by category, 6 cols, 9 rows, 2.6s
 - [!] extract-gpts-list-gptsapp-search — gptsapp.io 502 outage, defer
 - [!] extract-gpts-details-gptsapp — gptsapp.io 502 outage, defer
 - [ ] scrape-app-details-zapier
