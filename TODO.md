@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 45
+- Done (`[x]`): 46
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 95
-- Backlog (`[ ]`): 82
+- Backlog (`[ ]`): 81
 
 ## Cases
 
@@ -184,7 +184,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [x] extract-job-details-problogger — ProBlogger single job page, 5 cols, 1 row, 3.0s
 - [x] extract-jobs-dribbble — Dribbble /jobs, 7 cols, 49 rows, 3.4s
 - [x] extract-job-details-dribbble — Dribbble single job page, 8 cols, 1 row, 2.8s
-- [ ] extract-job-postings-list-seek
+- [x] extract-job-postings-list-seek — SEEK /jobs, 6 cols, 32 rows, 6.6s
 - [ ] scrape-job-posting-details-seek
 - [ ] extract-courses-seek-business
 - [ ] extract-businesses-sale-from-seek-business
