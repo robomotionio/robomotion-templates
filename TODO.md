@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 43
+- Done (`[x]`): 44
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 90
-- Backlog (`[ ]`): 89
+- Backlog (`[ ]`): 88
 
 ## Cases
 
@@ -148,7 +148,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-businesses-biz-buy-sell — BizBuySell 403 anti-bot, defer
 - [!] extract-business-details-yell-com — Yell.com 403 anti-bot, defer
 - [!] extract-business-search-yell-com — Yell.com 403 anti-bot, defer
-- [ ] extract-top-companies-built-in
+- [x] extract-top-companies-built-in — Built In /companies, 6 cols, 24 rows, 3.6s
 - [!] extract-service-list-yellow-pages — YellowPages 403 anti-bot, defer
 - [!] extract-popular-providers-bark-category — Bark category page is empty without a location/customer flow; provider list isn't directly indexable
 - [!] extract-provider-reviews-bark — same, requires customer flow input
