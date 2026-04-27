@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 28
+- Done (`[x]`): 31
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 90
-- Backlog (`[ ]`): 104
+- Backlog (`[ ]`): 101
 
 ## Cases
 
@@ -172,9 +172,9 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [ ] extract-jobs-welcome-to-the-jungle-search
 - [ ] extract-jobs-justremote
 - [ ] extract-job-details-justremote
-- [ ] extract-jobs-we-work-remotely
+- [x] extract-jobs-we-work-remotely — WWR homepage, 7 cols, 230 rows, 6.0s
 - [ ] extract-job-details-we-work-remotely
-- [ ] extract-jobs-working-nomads
+- [x] extract-jobs-working-nomads — Working Nomads /jobs, 12 cols, 100 rows, 3.6s
 - [ ] extract-job-details-working-nomads
 - [ ] extract-jobs-remote
 - [ ] extract-job-details-remote
@@ -196,7 +196,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [ ] scrape-job-posting-details-flexjobs
 - [ ] scrape-job-postings-list-flexjobs
 - [ ] scrape-job-posting-details-remoteok
-- [ ] scrape-job-postings-list-remoteok
+- [x] scrape-job-postings-list-remoteok — RemoteOK homepage, 9 cols, 49 rows, 3.0s
 - [!] extract-job-postings-list-upwork — Upwork anti-bot
 - [!] extract-job-postings-details-upwork — Upwork anti-bot
 - [!] extract-talent-keyword-search-upwork — Upwork anti-bot
