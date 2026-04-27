@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 9
+- Done (`[x]`): 10
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 51
-- Backlog (`[ ]`): 162
+- Backlog (`[ ]`): 161
 
 ## Cases
 
@@ -112,7 +112,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ### Search engines
 
 - [x] extract-related-search-results-duckduckgo — 3 cols, runs in 3.6s
-- [ ] scrape-duckduckgo-search-results
+- [x] scrape-duckduckgo-search-results — DDG search results, 7 cols (4 + 3 ad placeholders), 10 rows, 3.2s
 - [!] extract-related-search-results-bing — Bing rarely shows related-searches block on automation, defer
 - [!] scrape-bing-us-search-results — Bing serves stripped layout to automation; titles blank, defer
 - [!] scrape-google-search-results — Google anti-bot
