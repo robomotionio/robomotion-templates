@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 11
+- Done (`[x]`): 12
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 51
-- Backlog (`[ ]`): 160
+- Backlog (`[ ]`): 159
 
 ## Cases
 
@@ -311,7 +311,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 
 ### Web utility (any URL)
 
-- [ ] extract-html-screenshot-from-webpage
+- [x] extract-html-screenshot-from-webpage — fetch HTML + screenshot, single-row CSV, 2.6s
 - [ ] extract-full-text-screenshot-from-webpage
 - [x] extract-headings-paragraphs-from-webpage — any URL → IMG/H1/H3/P grid, 5 cols, 2s
 - [x] extract-sitemap-links-sitemap-index — sitemap-index XML → CSV via HTTP+regex, runs in 0.6s
