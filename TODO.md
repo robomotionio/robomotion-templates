@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 70
+- Done (`[x]`): 71
 - In workdir (`[~]`): 0
-- Deferred (`[!]`): 110
-- Backlog (`[ ]`): 42
+- Deferred (`[!]`): 113
+- Backlog (`[ ]`): 38
 
 ## Cases
 
@@ -252,10 +252,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-product-hunts-coming-soon-page — ProductHunt Cloudflare anti-bot
 - [x] scrape-extension-info-chrome-web-store — Chrome Web Store extension detail, 5 cols, 1 row, 3.0s
 - [x] scrape-extension-review-chrome-web-store — Chrome Web Store extension reviews, 6 cols, reviews lazy-loaded, 3.2s
-- [ ] scrape-product-list-best-buy
-- [ ] extract-product-details-info-bestbuy
-- [ ] scrape-product-list-from-ebay
-- [ ] extract-reviews-ebay-seller
+- [!] scrape-product-list-best-buy — Best Buy geo-blocks non-US IPs with country selector; robot IP from Turkey, defer
+- [!] extract-product-details-info-bestbuy — Best Buy geo-blocks non-US IPs with country selector; robot IP from Turkey, defer
+- [x] scrape-product-list-from-ebay — eBay search results, 5 cols, 62 rows, 4.8s
+- [!] extract-reviews-ebay-seller — eBay seller feedback loads via Ajax after page render; feedback items not in initial DOM, defer
 - [ ] extract-craigslist-search-results-page
 - [!] scrape-amazon-search-results-via-url — Amazon anti-bot
 - [!] scrape-amazon-us-search-results — Amazon anti-bot
