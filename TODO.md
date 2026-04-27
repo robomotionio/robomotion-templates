@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 84
+- Done (`[x]`): 90
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 115
-- Backlog (`[ ]`): 23
+- Backlog (`[ ]`): 17
 
 ## Cases
 
@@ -286,20 +286,20 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ### Templates / themes / plugins / media
 
 - [!] extract-search-results-from-themeforest — ThemeForest 403 anti-bot, defer
-- [ ] extract-templates-framer-category
-- [ ] extract-framer-template-details
+- [x] extract-templates-framer-category — Framer marketplace templates, 5 cols, 16 rows, 3.2s
+- [x] extract-framer-template-details — Framer template detail, 5 cols, 1 row, 5.0s
 - [x] extract-search-results-plugins-wordpress-org — WordPress plugins search, 6 cols, 20 rows, 4.0s
 - [x] extract-wordpress-themes-search-results — WordPress themes search, 4 cols, 20 rows, 4.0s
 - [!] extract-envato-elements-stock-video-search-results — Envato Elements 403 anti-bot, defer
-- [ ] extract-envato-elements-video-template-search-results
+- [x] extract-envato-elements-video-template-search-results — Envato Elements video template categories, 5 cols, 24 rows, 4.2s
 - [!] extract-envato-elements-audio-search-results — Envato Elements 403 anti-bot, defer
 - [x] extract-popular-movies-genre-imdb — IMDb /search/title/?genres=<g>, 10 cols, 50 rows, 6.6s
 - [x] extract-top-box-office-movies-imdb — IMDb /chart/boxoffice/, 10 cols, 10 rows, 5.4s
 - [x] extract-upcoming-movie-releases-imdb — IMDb /calendar/, 11 cols, 169 rows, 5.0s
 - [!] extract-audible-titles-keyword-search — Audible 503 anti-bot, defer
-- [ ] extract-courses-topic-udemy
-- [ ] extract-course-details-udemy
-- [ ] extract-course-reviews-udemy
+- [x] extract-courses-topic-udemy — Udemy topic courses listing, 5 cols, 16 rows, 4.0s
+- [x] extract-course-details-udemy — Udemy single course detail, 5 cols, 1 row, 3.8s
+- [x] extract-course-reviews-udemy — Udemy course reviews, 5 cols, 1 row, 3.8s
 
 ### Patents, trademarks, scientific
 
