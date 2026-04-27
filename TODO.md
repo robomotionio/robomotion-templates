@@ -72,8 +72,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 2
-- In workdir (`[~]`): 2 — backfill: promote these first
+- Done (`[x]`): 3
+- In workdir (`[~]`): 1 — backfill: promote these first
 - Deferred (`[!]`): 49
 - Backlog (`[ ]`): 169
 
@@ -82,7 +82,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ### News, aggregators, blogs
 
 - [x] extract-news-items-hacker-news — HN front page, 4 cols, runs in 6s
-- [~] extract-news-items-by-keyword-hacker-news — HN Algolia search, 6 cols, runs in 3s
+- [x] extract-news-items-by-keyword-hacker-news — HN Algolia search, 6 cols, runs in 3s
 - [~] extract-top-headlines-espn — ESPN homepage, 3 cols, runs in 4s
 - [ ] extract-top-posts-substack-publication
 - [ ] extract-stories-substack-publication-archive
