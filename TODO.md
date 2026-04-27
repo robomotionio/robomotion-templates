@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 14
+- Done (`[x]`): 15
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 86
-- Backlog (`[ ]`): 122
+- Backlog (`[ ]`): 121
 
 ## Cases
 
@@ -85,7 +85,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [x] extract-news-items-by-keyword-hacker-news — HN Algolia search, 6 cols, runs in 3s
 - [x] extract-top-headlines-espn — ESPN homepage, 3 cols, runs in 4s
 - [x] extract-top-posts-substack-publication — Substack /archive?sort=top, 10 cols, 24 rows, 3.6s
-- [ ] extract-stories-substack-publication-archive
+- [x] extract-stories-substack-publication-archive — Substack /archive?sort=new, 8 cols, 24 rows, 4.2s
 - [ ] extract-posts-leaderboard-substack-topic
 - [ ] extract-posts-search-substack
 - [!] extract-stories-medium-publication-archive — Medium 403 anti-bot, defer
