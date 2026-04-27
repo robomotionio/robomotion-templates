@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 71
+- Done (`[x]`): 72
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 113
-- Backlog (`[ ]`): 38
+- Backlog (`[ ]`): 37
 
 ## Cases
 
@@ -256,7 +256,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-product-details-info-bestbuy — Best Buy geo-blocks non-US IPs with country selector; robot IP from Turkey, defer
 - [x] scrape-product-list-from-ebay — eBay search results, 5 cols, 62 rows, 4.8s
 - [!] extract-reviews-ebay-seller — eBay seller feedback loads via Ajax after page render; feedback items not in initial DOM, defer
-- [ ] extract-craigslist-search-results-page
+- [x] extract-craigslist-search-results-page — Craigslist apartments search, 7 cols, 200 rows, 9.0s
 - [!] scrape-amazon-search-results-via-url — Amazon anti-bot
 - [!] scrape-amazon-us-search-results — Amazon anti-bot
 - [!] monitor-amazon-ca-search-results — Amazon anti-bot
