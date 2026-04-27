@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 49
+- Done (`[x]`): 50
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 97
-- Backlog (`[ ]`): 76
+- Backlog (`[ ]`): 75
 
 ## Cases
 
@@ -246,7 +246,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [ ] extract-product-listings-trendyol
 - [x] scrape-products-list-appsumo — AppSumo /browse, 5 cols, 20 rows, 6.2s
 - [x] scrape-products-reviews-appsumo — AppSumo product page reviews, 6 cols, 5 rows, 13.3s
-- [ ] extract-questions-appsumo-product
+- [x] extract-questions-appsumo-product — AppSumo product Q&A, 5 cols, 5 rows, 8.2s
 - [!] extract-product-details-producthunt — ProductHunt Cloudflare anti-bot
 - [!] scrape-producthunt-search-results — ProductHunt Cloudflare anti-bot
 - [!] extract-product-hunts-coming-soon-page — ProductHunt Cloudflare anti-bot
