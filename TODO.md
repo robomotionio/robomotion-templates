@@ -74,8 +74,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` â
 - Total cases: 222
 - Done (`[x]`): 66
 - In workdir (`[~]`): 0
-- Deferred (`[!]`): 108
-- Backlog (`[ ]`): 48
+- Deferred (`[!]`): 110
+- Backlog (`[ ]`): 46
 
 ## Cases
 
@@ -240,8 +240,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` â
 
 ### E-commerce, marketplaces, app stores
 
-- [ ] extract-list-products-etsy
-- [ ] extract-details-reviews-product-etsy
+- [!] extract-list-products-etsy â€” Etsy DataDome anti-bot challenge, defer
+- [!] extract-details-reviews-product-etsy â€” Etsy DataDome anti-bot challenge, defer
 - [ ] extract-product-detail-page-trendyol
 - [ ] extract-product-listings-trendyol
 - [x] scrape-products-list-appsumo â€” AppSumo /browse, 5 cols, 20 rows, 6.2s
