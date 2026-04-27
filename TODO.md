@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 4
+- Done (`[x]`): 5
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 49
-- Backlog (`[ ]`): 169
+- Backlog (`[ ]`): 168
 
 ## Cases
 
@@ -315,7 +315,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [ ] extract-full-text-screenshot-from-webpage
 - [ ] extract-headings-paragraphs-from-webpage
 - [ ] extract-sitemap-links-sitemap-index
-- [ ] extract-urls-sitemap-url-set
+- [x] extract-urls-sitemap-url-set — XML urlset → CSV via HTTP+regex, runs in 0.6s
 - [!] translate-text-google-translate — Google anti-bot
 - [!] monitor-country-google-trends — Google anti-bot
 
