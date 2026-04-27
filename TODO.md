@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 35
+- Done (`[x]`): 36
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 90
-- Backlog (`[ ]`): 97
+- Backlog (`[ ]`): 96
 
 ## Cases
 
@@ -171,7 +171,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [ ] extract-jobs-built-in
 - [ ] extract-jobs-welcome-to-the-jungle-search
 - [x] extract-jobs-justremote — JustRemote /remote-jobs, 5 cols, 16 rows, 4.0s
-- [ ] extract-job-details-justremote
+- [x] extract-job-details-justremote — JustRemote single job page, 5 cols, 1 row, 3.4s
 - [x] extract-jobs-we-work-remotely — WWR homepage, 7 cols, 230 rows, 6.0s
 - [ ] extract-job-details-we-work-remotely
 - [x] extract-jobs-working-nomads — Working Nomads /jobs, 12 cols, 100 rows, 3.6s
