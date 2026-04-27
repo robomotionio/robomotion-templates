@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 59
+- Done (`[x]`): 60
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 102
-- Backlog (`[ ]`): 61
+- Backlog (`[ ]`): 60
 
 ## Cases
 
@@ -217,7 +217,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-list-properties-compass — Compass 202 challenge, defer
 - [!] extract-property-details-compass — Compass 410, defer
 - [x] scrape-list-properties-redfin — Redfin city search results, 8 cols, 41 rows, 9.6s
-- [ ] scrape-property-details-redfin
+- [x] scrape-property-details-redfin — Redfin single property detail page, 2 cols (Field/Value), 6 rows, 9.8s
 - [ ] extract-real-estate-agents-redfin
 - [ ] extract-real-estate-agent-details-redfin
 - [ ] extract-real-estate-agents-rightmove
