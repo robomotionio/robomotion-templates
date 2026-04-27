@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` â
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 8
+- Done (`[x]`): 9
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 49
-- Backlog (`[ ]`): 165
+- Backlog (`[ ]`): 164
 
 ## Cases
 
@@ -163,7 +163,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` â
 
 ### Jobs
 
-- [ ] extract-job-postings-y-combinator
+- [x] extract-job-postings-y-combinator â€” YC jobs page, 5 cols, 20 rows, 10s
 - [ ] extract-jobs-company-lever-page
 - [ ] extract-details-single-job-lever
 - [ ] extract-search-results-workable
