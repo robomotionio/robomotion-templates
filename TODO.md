@@ -74,8 +74,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - Total cases: 222
 - Done (`[x]`): 44
 - In workdir (`[~]`): 0
-- Deferred (`[!]`): 90
-- Backlog (`[ ]`): 88
+- Deferred (`[!]`): 91
+- Backlog (`[ ]`): 87
 
 ## Cases
 
@@ -169,7 +169,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [x] extract-search-results-workable — Workable /search?query=, 8 cols, 21 rows, 3.4s
 - [x] extract-job-post-details-workable — Workable single job page, 5 cols, 1 row, 2.8s
 - [x] extract-jobs-built-in — Built In /jobs, 5 cols, 25 rows, 3.4s
-- [ ] extract-jobs-welcome-to-the-jungle-search
+- [!] extract-jobs-welcome-to-the-jungle-search — WTTJ blocks anonymous browsers behind cookie consent + spec file empty, defer
 - [x] extract-jobs-justremote — JustRemote /remote-jobs, 5 cols, 16 rows, 4.0s
 - [x] extract-job-details-justremote — JustRemote single job page, 5 cols, 1 row, 3.4s
 - [x] extract-jobs-we-work-remotely — WWR homepage, 7 cols, 230 rows, 6.0s
