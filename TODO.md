@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 57
+- Done (`[x]`): 58
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 97
-- Backlog (`[ ]`): 68
+- Backlog (`[ ]`): 67
 
 ## Cases
 
@@ -189,7 +189,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-courses-seek-business — SEEK careers page crashed browser repeatedly (SIGBUS), defer
 - [!] extract-businesses-sale-from-seek-business — browser launcher failed, defer
 - [x] extract-freelance-projects-from-freelancer-com — Freelancer.com jobs listing, 5 cols, 50 rows, 3.4s
-- [ ] extract-project-details-from-freelancer-com
+- [x] extract-project-details-from-freelancer-com — Freelancer.com single project detail, 5 cols, 1 row, 3.4s
 - [ ] extract-job-posting-details-monster-com
 - [ ] scrape-job-postings-list-monster-com
 - [ ] extract-salaries-based-job-title-monster
