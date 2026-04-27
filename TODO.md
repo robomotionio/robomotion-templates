@@ -74,8 +74,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - Total cases: 222
 - Done (`[x]`): 63
 - In workdir (`[~]`): 0
-- Deferred (`[!]`): 104
-- Backlog (`[ ]`): 55
+- Deferred (`[!]`): 107
+- Backlog (`[ ]`): 52
 
 ## Cases
 
@@ -223,9 +223,9 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [x] extract-real-estate-agents-rightmove — Rightmove estate agents listing, 6 cols, 30 rows, 4.4s
 - [x] extract-property-details-airbnb — Airbnb listing detail page, 5 cols, 1 row (Overall Rating/Cleanliness/Communication from JSON), 3.4s
 - [x] extract-list-places-search-result-airbnb — Airbnb search results, 5 cols, 28 rows, 4.4s
-- [ ] extract-hotels-list-info-expedia
-- [ ] extract-flights-list-info-expedia
-- [ ] extract-cars-list-info-expedia
+- [!] extract-hotels-list-info-expedia — Expedia bot challenge blocks automated browsers, defer
+- [!] extract-flights-list-info-expedia — Expedia bot challenge blocks automated browsers, defer
+- [!] extract-cars-list-info-expedia — Expedia bot challenge blocks automated browsers, defer
 - [ ] scrape-eventbrite-online-events
 - [ ] extract-online-event-details-eventbrite
 - [ ] scrape-meetup-events-near-location
