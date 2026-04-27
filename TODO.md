@@ -72,8 +72,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 1
-- In workdir (`[~]`): 3 — backfill: promote these first
+- Done (`[x]`): 2
+- In workdir (`[~]`): 2 — backfill: promote these first
 - Deferred (`[!]`): 49
 - Backlog (`[ ]`): 169
 
@@ -111,7 +111,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 
 ### Search engines
 
-- [~] extract-related-search-results-duckduckgo — 3 cols, runs in 3.6s
+- [x] extract-related-search-results-duckduckgo — 3 cols, runs in 3.6s
 - [ ] scrape-duckduckgo-search-results
 - [ ] extract-related-search-results-bing
 - [ ] scrape-bing-us-search-results
