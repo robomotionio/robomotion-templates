@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 54
+- Done (`[x]`): 55
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 97
-- Backlog (`[ ]`): 71
+- Backlog (`[ ]`): 70
 
 ## Cases
 
@@ -129,7 +129,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [x] extract-single-crypto-coin-details-coinmarketcap — CMC coin detail page, 18 cols, 1 row, 3.8s
 - [x] extract-coins-list-info-binance — Binance spot markets USDT page, 9 cols, 8 rows, 4.8s
 - [x] extract-crypto-data-binance — Binance markets Cryptos tab, 6 cols, 8 rows, 3.8s
-- [ ] extract-profile-data-debank
+- [x] extract-profile-data-debank — DeBank wallet profile chain distribution, 5 cols, 6 rows, 10.0s
 - [!] extract-market-indices-investing-com — Investing.com 403 anti-bot, defer
 - [!] extract-search-results-investing-com — Investing.com 403 anti-bot, defer
 - [!] extract-single-index-details-investing-com — Investing.com 403 anti-bot, defer
