@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 23
+- Done (`[x]`): 25
 - In workdir (`[~]`): 0
-- Deferred (`[!]`): 87
-- Backlog (`[ ]`): 112
+- Deferred (`[!]`): 88
+- Backlog (`[ ]`): 109
 
 ## Cases
 
@@ -143,8 +143,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-company-detail-page-clutch — Clutch 403 anti-bot, defer
 - [x] extract-companies-yc-startup-directory — YC company directory, 4 cols, 40 rows, 3.4s
 - [ ] extract-company-details-y-combinator
-- [ ] extract-trending-websites-similarweb
-- [ ] extract-top-ranking-websites-similarweb
+- [!] extract-trending-websites-similarweb — Similarweb /trending/ returns 404; trending-websites page no longer exists
+- [x] extract-top-ranking-websites-similarweb — Similarweb /top-websites/, 7 cols, 50 rows, 5.2s
 - [!] extract-businesses-biz-buy-sell — BizBuySell 403 anti-bot, defer
 - [!] extract-business-details-yell-com — Yell.com 403 anti-bot, defer
 - [!] extract-business-search-yell-com — Yell.com 403 anti-bot, defer
@@ -164,7 +164,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ### Jobs
 
 - [x] extract-job-postings-y-combinator — YC jobs page, 5 cols, 20 rows, 10s
-- [ ] extract-jobs-company-lever-page
+- [x] extract-jobs-company-lever-page — Lever-hosted job board, 6 cols, 390 rows, 3.0s
 - [ ] extract-details-single-job-lever
 - [ ] extract-search-results-workable
 - [ ] extract-job-post-details-workable
