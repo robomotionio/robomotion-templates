@@ -74,8 +74,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - Total cases: 222
 - Done (`[x]`): 58
 - In workdir (`[~]`): 0
-- Deferred (`[!]`): 97
-- Backlog (`[ ]`): 67
+- Deferred (`[!]`): 100
+- Backlog (`[ ]`): 64
 
 ## Cases
 
@@ -190,9 +190,9 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-businesses-sale-from-seek-business — browser launcher failed, defer
 - [x] extract-freelance-projects-from-freelancer-com — Freelancer.com jobs listing, 5 cols, 50 rows, 3.4s
 - [x] extract-project-details-from-freelancer-com — Freelancer.com single project detail, 5 cols, 1 row, 3.4s
-- [ ] extract-job-posting-details-monster-com
-- [ ] scrape-job-postings-list-monster-com
-- [ ] extract-salaries-based-job-title-monster
+- [!] extract-job-posting-details-monster-com — Monster.com DataDome anti-bot blocks all access, defer
+- [!] scrape-job-postings-list-monster-com — Monster.com DataDome anti-bot blocks all access, defer
+- [!] extract-salaries-based-job-title-monster — Monster.com DataDome anti-bot blocks all access, defer
 - [ ] scrape-job-posting-details-flexjobs
 - [ ] scrape-job-postings-list-flexjobs
 - [x] scrape-job-posting-details-remoteok — RemoteOK single job page, 7 cols, 1 row, 3.2s (Views/Applied empty — not on public page)
