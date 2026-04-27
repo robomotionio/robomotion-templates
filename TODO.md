@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 55
+- Done (`[x]`): 56
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 97
-- Backlog (`[ ]`): 70
+- Backlog (`[ ]`): 69
 
 ## Cases
 
@@ -142,7 +142,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-companies-info-from-clutch — Clutch 403 anti-bot, defer
 - [!] extract-company-detail-page-clutch — Clutch 403 anti-bot, defer
 - [x] extract-companies-yc-startup-directory — YC company directory, 4 cols, 40 rows, 3.4s
-- [ ] extract-company-details-y-combinator
+- [x] extract-company-details-y-combinator — YC company directory detail, 5 cols, 40 rows, 4.2s
 - [!] extract-trending-websites-similarweb — Similarweb /trending/ returns 404; trending-websites page no longer exists
 - [x] extract-top-ranking-websites-similarweb — Similarweb /top-websites/, 7 cols, 50 rows, 5.2s
 - [!] extract-businesses-biz-buy-sell — BizBuySell 403 anti-bot, defer
