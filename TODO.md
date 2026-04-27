@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` â
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 7
+- Done (`[x]`): 8
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 49
-- Backlog (`[ ]`): 166
+- Backlog (`[ ]`): 165
 
 ## Cases
 
@@ -141,7 +141,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` â
 - [ ] extract-companies-category-trustpilot
 - [ ] extract-companies-info-from-clutch
 - [ ] extract-company-detail-page-clutch
-- [ ] extract-companies-yc-startup-directory
+- [x] extract-companies-yc-startup-directory â€” YC company directory, 4 cols, 40 rows, 3.4s
 - [ ] extract-company-details-y-combinator
 - [ ] extract-trending-websites-similarweb
 - [ ] extract-top-ranking-websites-similarweb
