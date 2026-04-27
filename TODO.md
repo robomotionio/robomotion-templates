@@ -74,8 +74,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - Total cases: 222
 - Done (`[x]`): 44
 - In workdir (`[~]`): 0
-- Deferred (`[!]`): 91
-- Backlog (`[ ]`): 87
+- Deferred (`[!]`): 93
+- Backlog (`[ ]`): 85
 
 ## Cases
 
@@ -176,8 +176,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [x] extract-job-details-we-work-remotely — WWR single job page, 6 cols, 1 row, 5.2s
 - [x] extract-jobs-working-nomads — Working Nomads /jobs, 12 cols, 100 rows, 3.6s
 - [x] extract-job-details-working-nomads — Working Nomads single job page, 6 cols, 1 row, 4.0s
-- [ ] extract-jobs-remote
-- [ ] extract-job-details-remote
+- [!] extract-jobs-remote — remote.com URL fails to load (Cloudflare anti-bot timeout), defer
+- [!] extract-job-details-remote — remote.com URL fails to load (Cloudflare anti-bot timeout), defer
 - [ ] extract-jobs-remotive
 - [ ] extract-job-details-remotive
 - [x] extract-jobs-problogger — ProBlogger /jobs/, 5 cols, 7 rows, 2.6s
