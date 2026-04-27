@@ -74,8 +74,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` â
 - Total cases: 222
 - Done (`[x]`): 101
 - In workdir (`[~]`): 0
-- Deferred (`[!]`): 119
-- Backlog (`[ ]`): 2
+- Deferred (`[!]`): 121
+- Backlog (`[ ]`): 0
 
 ## Cases
 
