@@ -74,8 +74,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - Total cases: 222
 - Done (`[x]`): 60
 - In workdir (`[~]`): 0
-- Deferred (`[!]`): 102
-- Backlog (`[ ]`): 60
+- Deferred (`[!]`): 104
+- Backlog (`[ ]`): 58
 
 ## Cases
 
@@ -218,8 +218,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-property-details-compass — Compass 410, defer
 - [x] scrape-list-properties-redfin — Redfin city search results, 8 cols, 41 rows, 9.6s
 - [x] scrape-property-details-redfin — Redfin single property detail page, 2 cols (Field/Value), 6 rows, 9.8s
-- [ ] extract-real-estate-agents-redfin
-- [ ] extract-real-estate-agent-details-redfin
+- [!] extract-real-estate-agents-redfin — Redfin agent search requires JS interaction; city-specific URLs redirect to landing page without listings, defer
+- [!] extract-real-estate-agent-details-redfin — Redfin agent detail pages may load but parent search unreachable without search interaction, defer
 - [ ] extract-real-estate-agents-rightmove
 - [ ] extract-property-details-airbnb
 - [ ] extract-list-places-search-result-airbnb
