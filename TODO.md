@@ -74,8 +74,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - Total cases: 222
 - Done (`[x]`): 58
 - In workdir (`[~]`): 0
-- Deferred (`[!]`): 100
-- Backlog (`[ ]`): 64
+- Deferred (`[!]`): 102
+- Backlog (`[ ]`): 62
 
 ## Cases
 
@@ -193,8 +193,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-job-posting-details-monster-com — Monster.com DataDome anti-bot blocks all access, defer
 - [!] scrape-job-postings-list-monster-com — Monster.com DataDome anti-bot blocks all access, defer
 - [!] extract-salaries-based-job-title-monster — Monster.com DataDome anti-bot blocks all access, defer
-- [ ] scrape-job-posting-details-flexjobs
-- [ ] scrape-job-postings-list-flexjobs
+- [!] scrape-job-posting-details-flexjobs — FlexJobs Akamai anti-bot blocks access; requires paid subscription, defer
+- [!] scrape-job-postings-list-flexjobs — FlexJobs Akamai anti-bot blocks access; requires paid subscription, defer
 - [x] scrape-job-posting-details-remoteok — RemoteOK single job page, 7 cols, 1 row, 3.2s (Views/Applied empty — not on public page)
 - [x] scrape-job-postings-list-remoteok — RemoteOK homepage, 9 cols, 49 rows, 3.0s
 - [!] extract-job-postings-list-upwork — Upwork anti-bot
