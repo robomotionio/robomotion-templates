@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` â
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 31
+- Done (`[x]`): 34
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 90
-- Backlog (`[ ]`): 101
+- Backlog (`[ ]`): 98
 
 ## Cases
 
@@ -170,7 +170,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` â
 - [ ] extract-job-post-details-workable
 - [ ] extract-jobs-built-in
 - [ ] extract-jobs-welcome-to-the-jungle-search
-- [ ] extract-jobs-justremote
+- [x] extract-jobs-justremote â€” JustRemote /remote-jobs, 5 cols, 16 rows, 4.0s
 - [ ] extract-job-details-justremote
 - [x] extract-jobs-we-work-remotely â€” WWR homepage, 7 cols, 230 rows, 6.0s
 - [ ] extract-job-details-we-work-remotely
@@ -180,9 +180,9 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` â
 - [ ] extract-job-details-remote
 - [ ] extract-jobs-remotive
 - [ ] extract-job-details-remotive
-- [ ] extract-jobs-problogger
+- [x] extract-jobs-problogger â€” ProBlogger /jobs/, 5 cols, 7 rows, 2.6s
 - [ ] extract-job-details-problogger
-- [ ] extract-jobs-dribbble
+- [x] extract-jobs-dribbble â€” Dribbble /jobs, 7 cols, 49 rows, 3.4s
 - [ ] extract-job-details-dribbble
 - [ ] extract-job-postings-list-seek
 - [ ] scrape-job-posting-details-seek
