@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 63
+- Done (`[x]`): 64
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 107
-- Backlog (`[ ]`): 52
+- Backlog (`[ ]`): 51
 
 ## Cases
 
@@ -226,7 +226,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-hotels-list-info-expedia — Expedia bot challenge blocks automated browsers, defer
 - [!] extract-flights-list-info-expedia — Expedia bot challenge blocks automated browsers, defer
 - [!] extract-cars-list-info-expedia — Expedia bot challenge blocks automated browsers, defer
-- [ ] scrape-eventbrite-online-events
+- [x] scrape-eventbrite-online-events — Eventbrite online events listing, 4 cols, 8 rows, 5.2s
 - [ ] extract-online-event-details-eventbrite
 - [ ] scrape-meetup-events-near-location
 - [ ] extract-groups-keyword-search-meetup
