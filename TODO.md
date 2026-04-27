@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 82
+- Done (`[x]`): 84
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 115
-- Backlog (`[ ]`): 25
+- Backlog (`[ ]`): 23
 
 ## Cases
 
@@ -288,8 +288,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-search-results-from-themeforest — ThemeForest 403 anti-bot, defer
 - [ ] extract-templates-framer-category
 - [ ] extract-framer-template-details
-- [ ] extract-search-results-plugins-wordpress-org
-- [ ] extract-wordpress-themes-search-results
+- [x] extract-search-results-plugins-wordpress-org — WordPress plugins search, 6 cols, 20 rows, 4.0s
+- [x] extract-wordpress-themes-search-results — WordPress themes search, 4 cols, 20 rows, 4.0s
 - [!] extract-envato-elements-stock-video-search-results — Envato Elements 403 anti-bot, defer
 - [ ] extract-envato-elements-video-template-search-results
 - [!] extract-envato-elements-audio-search-results — Envato Elements 403 anti-bot, defer
