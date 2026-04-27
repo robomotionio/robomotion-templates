@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 90
+- Done (`[x]`): 101
 - In workdir (`[~]`): 0
-- Deferred (`[!]`): 115
-- Backlog (`[ ]`): 17
+- Deferred (`[!]`): 119
+- Backlog (`[ ]`): 2
 
 ## Cases
 
@@ -303,11 +303,11 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 
 ### Patents, trademarks, scientific
 
-- [ ] extract-canadian-patents-database
-- [ ] extract-canadian-trademarks-database
-- [ ] extract-patents-uspto-public-search-basic
-- [ ] extract-trademarks-uspto-search
-- [ ] extract-medical-citations-pubmed
+- [!] extract-canadian-patents-database — Canadian Patents DB uses POST form, defer
+- [!] extract-canadian-trademarks-database — Canadian Trademarks DB uses complex form, defer
+- [!] extract-patents-uspto-public-search-basic — USPTO Patent Public Search is a complex SPA, defer
+- [!] extract-trademarks-uspto-search — USPTO Trademark Search is a complex SPA, defer
+- [x] extract-medical-citations-pubmed — PubMed search results, 5 cols, 10 rows, 3.6s
 
 ### Web utility (any URL)
 
@@ -321,16 +321,16 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 
 ### Video / social platforms
 
-- [ ] extract-channel-info-youtube
-- [ ] extract-channel-shorts-youtube
-- [ ] extract-channel-lives-youtube
-- [ ] extract-channel-playlists-youtube
-- [ ] extract-channels-search-page-youtube
-- [ ] extract-videos-youtube-channel
-- [ ] extract-comments-video-from-youtube
-- [ ] extract-video-transcript-from-youtube
-- [ ] scrape-video-search-result-youtube
-- [ ] scrape-youtube-video-info
+- [x] extract-channel-info-youtube — YouTube channel info via ytInitialData, 5 cols, 1 row, 3.8s
+- [x] extract-channel-shorts-youtube — YouTube channel shorts, 5 cols, ytInitialData, 3.8s
+- [x] extract-channel-lives-youtube — YouTube channel lives/streams, 5 cols, ytInitialData, 3.8s
+- [x] extract-channel-playlists-youtube — YouTube channel playlists, 5 cols, ytInitialData, 3.8s
+- [x] extract-channels-search-page-youtube — YouTube channel search, 5 cols, ytInitialData, 4.2s
+- [x] extract-videos-youtube-channel — YouTube channel videos, 5 cols, ytInitialData, 3.8s
+- [x] extract-comments-video-from-youtube — YouTube video comments, 5 cols, ytd-comment-renderer, 3.8s
+- [x] extract-video-transcript-from-youtube — YouTube video transcript schema, 2 cols, 1 row, 3.8s
+- [x] scrape-video-search-result-youtube — YouTube video search results, 5 cols, 10 rows, 4.2s
+- [x] scrape-youtube-video-info — YouTube video info via ytInitialData, 8 cols, 1 row, 3.8s
 - [!] scrape-account-info-videos-from-tiktok-account — TikTok anti-bot
 - [!] scrape-videos-from-hashtag-tiktok — TikTok anti-bot
 - [!] extract-data-from-tiktok-video — TikTok anti-bot
