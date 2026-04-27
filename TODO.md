@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 68
+- Done (`[x]`): 70
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 110
-- Backlog (`[ ]`): 44
+- Backlog (`[ ]`): 42
 
 ## Cases
 
@@ -250,8 +250,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-product-details-producthunt — ProductHunt Cloudflare anti-bot
 - [!] scrape-producthunt-search-results — ProductHunt Cloudflare anti-bot
 - [!] extract-product-hunts-coming-soon-page — ProductHunt Cloudflare anti-bot
-- [ ] scrape-extension-info-chrome-web-store
-- [ ] scrape-extension-review-chrome-web-store
+- [x] scrape-extension-info-chrome-web-store — Chrome Web Store extension detail, 5 cols, 1 row, 3.0s
+- [x] scrape-extension-review-chrome-web-store — Chrome Web Store extension reviews, 6 cols, reviews lazy-loaded, 3.2s
 - [ ] scrape-product-list-best-buy
 - [ ] extract-product-details-info-bestbuy
 - [ ] scrape-product-list-from-ebay
