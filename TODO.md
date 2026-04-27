@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 25
+- Done (`[x]`): 28
 - In workdir (`[~]`): 0
-- Deferred (`[!]`): 88
-- Backlog (`[ ]`): 109
+- Deferred (`[!]`): 90
+- Backlog (`[ ]`): 104
 
 ## Cases
 
@@ -150,8 +150,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-business-search-yell-com — Yell.com 403 anti-bot, defer
 - [ ] extract-top-companies-built-in
 - [!] extract-service-list-yellow-pages — YellowPages 403 anti-bot, defer
-- [ ] extract-popular-providers-bark-category
-- [ ] extract-provider-reviews-bark
+- [!] extract-popular-providers-bark-category — Bark category page is empty without a location/customer flow; provider list isn't directly indexable
+- [!] extract-provider-reviews-bark — same, requires customer flow input
 - [!] extract-fiverr-pros-keyword-search — Fiverr 403 anti-bot, defer
 - [!] extract-fiverr-gigs-category — Fiverr 403 anti-bot, defer
 - [!] extract-fiverr-gig-reviews — Fiverr 403 anti-bot, defer
@@ -293,9 +293,9 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-envato-elements-stock-video-search-results — Envato Elements 403 anti-bot, defer
 - [ ] extract-envato-elements-video-template-search-results
 - [!] extract-envato-elements-audio-search-results — Envato Elements 403 anti-bot, defer
-- [ ] extract-popular-movies-genre-imdb
-- [ ] extract-top-box-office-movies-imdb
-- [ ] extract-upcoming-movie-releases-imdb
+- [x] extract-popular-movies-genre-imdb — IMDb /search/title/?genres=<g>, 10 cols, 50 rows, 6.6s
+- [x] extract-top-box-office-movies-imdb — IMDb /chart/boxoffice/, 10 cols, 10 rows, 5.4s
+- [x] extract-upcoming-movie-releases-imdb — IMDb /calendar/, 11 cols, 169 rows, 5.0s
 - [!] extract-audible-titles-keyword-search — Audible 503 anti-bot, defer
 - [ ] extract-courses-topic-udemy
 - [ ] extract-course-details-udemy
