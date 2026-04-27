@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` â
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 72
+- Done (`[x]`): 74
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 113
-- Backlog (`[ ]`): 37
+- Backlog (`[ ]`): 35
 
 ## Cases
 
@@ -265,8 +265,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` â
 
 ### AI / SaaS / integrations
 
-- [ ] extract-tools-keyword-future-tools
-- [ ] extract-tool-details-future-tools
+- [x] extract-tools-keyword-future-tools â€” Future Tools keyword search, 6 cols, 24 rows, 2.4s
+- [x] extract-tool-details-future-tools â€” Future Tools single tool detail, 5 cols, 1 row, 2.6s
 - [ ] extract-trending-ai-tools-futurepedia
 - [ ] extract-ai-tool-details-futurepedia
 - [ ] extract-ai-tools-futurepedia-categories
