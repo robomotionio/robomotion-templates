@@ -74,8 +74,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - Total cases: 222
 - Done (`[x]`): 13
 - In workdir (`[~]`): 0
-- Deferred (`[!]`): 51
-- Backlog (`[ ]`): 158
+- Deferred (`[!]`): 86
+- Backlog (`[ ]`): 123
 
 ## Cases
 
@@ -88,12 +88,12 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [ ] extract-stories-substack-publication-archive
 - [ ] extract-posts-leaderboard-substack-topic
 - [ ] extract-posts-search-substack
-- [ ] extract-stories-medium-publication-archive
-- [ ] extract-stories-tagged-medium-publication
-- [ ] extract-stories-medium-user-profile
-- [ ] extract-following-medium-user-profile
-- [ ] extract-stories-more-medium-topic
-- [ ] extract-posts-search-results-medium
+- [!] extract-stories-medium-publication-archive — Medium 403 anti-bot, defer
+- [!] extract-stories-tagged-medium-publication — Medium 403 anti-bot, defer
+- [!] extract-stories-medium-user-profile — Medium 403 anti-bot, defer
+- [!] extract-following-medium-user-profile — Medium 403 anti-bot, defer
+- [!] extract-stories-more-medium-topic — Medium 403 anti-bot, defer
+- [!] extract-posts-search-results-medium — Medium 403 anti-bot, defer
 - [ ] extract-creators-search-ghost-explore-page
 - [ ] extract-creators-topic-ghost-explore-page
 - [ ] extract-experts-ghost
@@ -130,32 +130,32 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [ ] extract-coins-list-info-binance
 - [ ] extract-crypto-data-binance
 - [ ] extract-profile-data-debank
-- [ ] extract-market-indices-investing-com
-- [ ] extract-search-results-investing-com
-- [ ] extract-single-index-details-investing-com
+- [!] extract-market-indices-investing-com — Investing.com 403 anti-bot, defer
+- [!] extract-search-results-investing-com — Investing.com 403 anti-bot, defer
+- [!] extract-single-index-details-investing-com — Investing.com 403 anti-bot, defer
 
 ### Companies, reviews, directories
 
-- [ ] extract-company-details-trustpilot
-- [ ] extract-company-reviews-trustpilot
-- [ ] extract-companies-category-trustpilot
-- [ ] extract-companies-info-from-clutch
-- [ ] extract-company-detail-page-clutch
+- [!] extract-company-details-trustpilot — Trustpilot 403 anti-bot, defer
+- [!] extract-company-reviews-trustpilot — Trustpilot 403 anti-bot, defer
+- [!] extract-companies-category-trustpilot — Trustpilot 403 anti-bot, defer
+- [!] extract-companies-info-from-clutch — Clutch 403 anti-bot, defer
+- [!] extract-company-detail-page-clutch — Clutch 403 anti-bot, defer
 - [x] extract-companies-yc-startup-directory — YC company directory, 4 cols, 40 rows, 3.4s
 - [ ] extract-company-details-y-combinator
 - [ ] extract-trending-websites-similarweb
 - [ ] extract-top-ranking-websites-similarweb
-- [ ] extract-businesses-biz-buy-sell
-- [ ] extract-business-details-yell-com
-- [ ] extract-business-search-yell-com
+- [!] extract-businesses-biz-buy-sell — BizBuySell 403 anti-bot, defer
+- [!] extract-business-details-yell-com — Yell.com 403 anti-bot, defer
+- [!] extract-business-search-yell-com — Yell.com 403 anti-bot, defer
 - [ ] extract-top-companies-built-in
-- [ ] extract-service-list-yellow-pages
+- [!] extract-service-list-yellow-pages — YellowPages 403 anti-bot, defer
 - [ ] extract-popular-providers-bark-category
 - [ ] extract-provider-reviews-bark
-- [ ] extract-fiverr-pros-keyword-search
-- [ ] extract-fiverr-gigs-category
-- [ ] extract-fiverr-gig-reviews
-- [ ] extract-sellers-services-fiverr-search-results
+- [!] extract-fiverr-pros-keyword-search — Fiverr 403 anti-bot, defer
+- [!] extract-fiverr-gigs-category — Fiverr 403 anti-bot, defer
+- [!] extract-fiverr-gig-reviews — Fiverr 403 anti-bot, defer
+- [!] extract-sellers-services-fiverr-search-results — Fiverr 403 anti-bot, defer
 - [!] scrape-company-information-from-zoominfo — ZoomInfo blocks
 - [!] extract-top-ten-companies-zoominfo — ZoomInfo blocks
 - [!] scrape-list-services-yelp — Yelp anti-bot
@@ -213,9 +213,9 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 
 ### Real estate, travel, hospitality, events
 
-- [ ] extract-list-properties-loopnet
-- [ ] extract-list-properties-compass
-- [ ] extract-property-details-compass
+- [!] extract-list-properties-loopnet — LoopNet 403 anti-bot, defer
+- [!] extract-list-properties-compass — Compass 202 challenge, defer
+- [!] extract-property-details-compass — Compass 410, defer
 - [ ] scrape-list-properties-redfin
 - [ ] scrape-property-details-redfin
 - [ ] extract-real-estate-agents-redfin
@@ -270,33 +270,33 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [ ] extract-trending-ai-tools-futurepedia
 - [ ] extract-ai-tool-details-futurepedia
 - [ ] extract-ai-tools-futurepedia-categories
-- [ ] extract-gpts-list-gptsapp-search
-- [ ] extract-gpts-details-gptsapp
+- [!] extract-gpts-list-gptsapp-search — gptsapp.io 502 outage, defer
+- [!] extract-gpts-details-gptsapp — gptsapp.io 502 outage, defer
 - [ ] scrape-app-details-zapier
 - [ ] scrape-apps-list-zapier
 - [ ] extract-services-list-ifttt
 - [ ] extract-integrations-list-n8n
-- [ ] extract-integrations-make
+- [!] extract-integrations-make — Make.com 403 anti-bot, defer
 - [ ] extract-integrations-pipedream
 - [ ] extract-integrations-list-workato
-- [ ] scrape-software-list-from-capterra
-- [ ] extract-software-list-capterra-com
-- [ ] extract-reviews-capterra-listing
+- [!] scrape-software-list-from-capterra — Capterra 403 anti-bot, defer
+- [!] extract-software-list-capterra-com — Capterra 403 anti-bot, defer
+- [!] extract-reviews-capterra-listing — Capterra 403 anti-bot, defer
 
 ### Templates / themes / plugins / media
 
-- [ ] extract-search-results-from-themeforest
+- [!] extract-search-results-from-themeforest — ThemeForest 403 anti-bot, defer
 - [ ] extract-templates-framer-category
 - [ ] extract-framer-template-details
 - [ ] extract-search-results-plugins-wordpress-org
 - [ ] extract-wordpress-themes-search-results
-- [ ] extract-envato-elements-stock-video-search-results
+- [!] extract-envato-elements-stock-video-search-results — Envato Elements 403 anti-bot, defer
 - [ ] extract-envato-elements-video-template-search-results
-- [ ] extract-envato-elements-audio-search-results
+- [!] extract-envato-elements-audio-search-results — Envato Elements 403 anti-bot, defer
 - [ ] extract-popular-movies-genre-imdb
 - [ ] extract-top-box-office-movies-imdb
 - [ ] extract-upcoming-movie-releases-imdb
-- [ ] extract-audible-titles-keyword-search
+- [!] extract-audible-titles-keyword-search — Audible 503 anti-bot, defer
 - [ ] extract-courses-topic-udemy
 - [ ] extract-course-details-udemy
 - [ ] extract-course-reviews-udemy
