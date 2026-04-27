@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 44
+- Done (`[x]`): 45
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 95
-- Backlog (`[ ]`): 83
+- Backlog (`[ ]`): 82
 
 ## Cases
 
@@ -195,7 +195,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [ ] extract-salaries-based-job-title-monster
 - [ ] scrape-job-posting-details-flexjobs
 - [ ] scrape-job-postings-list-flexjobs
-- [ ] scrape-job-posting-details-remoteok
+- [x] scrape-job-posting-details-remoteok — RemoteOK single job page, 7 cols, 1 row, 3.2s (Views/Applied empty — not on public page)
 - [x] scrape-job-postings-list-remoteok — RemoteOK homepage, 9 cols, 49 rows, 3.0s
 - [!] extract-job-postings-list-upwork — Upwork anti-bot
 - [!] extract-job-postings-details-upwork — Upwork anti-bot
