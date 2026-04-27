@@ -74,8 +74,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - Total cases: 222
 - Done (`[x]`): 66
 - In workdir (`[~]`): 0
-- Deferred (`[!]`): 107
-- Backlog (`[ ]`): 49
+- Deferred (`[!]`): 108
+- Backlog (`[ ]`): 48
 
 ## Cases
 
@@ -229,7 +229,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [x] scrape-eventbrite-online-events — Eventbrite online events listing, 4 cols, 8 rows, 5.2s
 - [x] extract-online-event-details-eventbrite — Eventbrite single event detail, 5 cols, 1 row, 5.4s
 - [x] scrape-meetup-events-near-location — Meetup event search results, 8 cols, 11 rows, 21.1s
-- [ ] extract-groups-keyword-search-meetup
+- [!] extract-groups-keyword-search-meetup — Meetup groups search URL structure differs from events; groups page returns no matching links, defer
 - [!] extract-hotel-data-from-booking — Booking.com anti-bot
 - [!] extract-hotel-reviews-from-booking — Booking.com anti-bot
 - [!] scrape-booking-com-hotel-listings-reviews-prices — Booking.com anti-bot
