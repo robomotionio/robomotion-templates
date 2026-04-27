@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 18
+- Done (`[x]`): 21
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 87
-- Backlog (`[ ]`): 117
+- Backlog (`[ ]`): 114
 
 ## Cases
 
@@ -96,9 +96,9 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-posts-search-results-medium — Medium 403 anti-bot, defer
 - [x] extract-creators-search-ghost-explore-page — Ghost Explore /?q=, 8 cols, 138 rows, 2.4s
 - [x] extract-creators-topic-ghost-explore-page — Ghost Explore /top, 7 cols, 50 rows, 4.0s
-- [ ] extract-experts-ghost
-- [ ] extract-themes-ghost-marketplace
-- [ ] extract-integrations-ghost
+- [x] extract-experts-ghost — Ghost experts directory, 4 cols, 56 rows, 3.4s
+- [x] extract-themes-ghost-marketplace — Ghost theme marketplace, 7 cols, 32 rows, 2.4s
+- [x] extract-integrations-ghost — Ghost integrations directory, 3 cols, 106 rows, 3.4s
 - [ ] extract-group-posts-indie-hackers
 - [ ] scrape-posts-indie-hackers
 - [!] extract-articles-keyword-google-news — Google anti-bot
