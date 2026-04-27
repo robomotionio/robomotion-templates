@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 77
+- Done (`[x]`): 82
 - In workdir (`[~]`): 0
-- Deferred (`[!]`): 113
-- Backlog (`[ ]`): 32
+- Deferred (`[!]`): 115
+- Backlog (`[ ]`): 25
 
 ## Cases
 
@@ -272,13 +272,13 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [x] extract-ai-tools-futurepedia-categories — Futurepedia homepage by category, 6 cols, 9 rows, 2.6s
 - [!] extract-gpts-list-gptsapp-search — gptsapp.io 502 outage, defer
 - [!] extract-gpts-details-gptsapp — gptsapp.io 502 outage, defer
-- [ ] scrape-app-details-zapier
-- [ ] scrape-apps-list-zapier
-- [ ] extract-services-list-ifttt
-- [ ] extract-integrations-list-n8n
+- [x] scrape-app-details-zapier — Zapier single app detail, 5 cols, 1 row, 2.8s
+- [x] scrape-apps-list-zapier — Zapier apps directory, 4 cols, 23 rows, 2.6s
+- [x] extract-services-list-ifttt — IFTTT services listing, 4 cols, 9 rows, 2.6s
+- [x] extract-integrations-list-n8n — n8n integrations listing, 4 cols, 50 rows, 2.0s
 - [!] extract-integrations-make — Make.com 403 anti-bot, defer
-- [ ] extract-integrations-pipedream
-- [ ] extract-integrations-list-workato
+- [x] extract-integrations-pipedream — Pipedream apps listing, 5 cols, 24 rows, 2.6s
+- [!] extract-integrations-list-workato — Workato blocks access (URL timeout), defer
 - [!] scrape-software-list-from-capterra — Capterra 403 anti-bot, defer
 - [!] extract-software-list-capterra-com — Capterra 403 anti-bot, defer
 - [!] extract-reviews-capterra-listing — Capterra 403 anti-bot, defer
