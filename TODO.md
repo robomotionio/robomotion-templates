@@ -72,10 +72,10 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 34
+- Done (`[x]`): 35
 - In workdir (`[~]`): 0
 - Deferred (`[!]`): 90
-- Backlog (`[ ]`): 98
+- Backlog (`[ ]`): 97
 
 ## Cases
 
@@ -165,7 +165,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 
 - [x] extract-job-postings-y-combinator — YC jobs page, 5 cols, 20 rows, 10s
 - [x] extract-jobs-company-lever-page — Lever-hosted job board, 6 cols, 390 rows, 3.0s
-- [ ] extract-details-single-job-lever
+- [x] extract-details-single-job-lever — Lever single job page, 5 cols, 1 row, 4.6s
 - [ ] extract-search-results-workable
 - [ ] extract-job-post-details-workable
 - [ ] extract-jobs-built-in
@@ -247,9 +247,9 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [ ] scrape-products-list-appsumo
 - [ ] scrape-products-reviews-appsumo
 - [ ] extract-questions-appsumo-product
-- [ ] extract-product-details-producthunt
-- [ ] scrape-producthunt-search-results
-- [ ] extract-product-hunts-coming-soon-page
+- [!] extract-product-details-producthunt — ProductHunt Cloudflare anti-bot
+- [!] scrape-producthunt-search-results — ProductHunt Cloudflare anti-bot
+- [!] extract-product-hunts-coming-soon-page — ProductHunt Cloudflare anti-bot
 - [ ] scrape-extension-info-chrome-web-store
 - [ ] scrape-extension-review-chrome-web-store
 - [ ] scrape-product-list-best-buy
