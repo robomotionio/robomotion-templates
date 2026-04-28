@@ -187,7 +187,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [x] extract-job-postings-list-seek — SEEK /jobs, 6 cols, 32 rows, 6.6s
 - [x] scrape-job-posting-details-seek — SEEK single job page, 5 cols, 1 row, 3.6s
 - [x] extract-courses-seek-business — SEEK explore-careers page, 4/4 spec cols, 48 rows, 3.4s
-- [!] extract-businesses-sale-from-seek-business — browser launcher failed, defer
+- [x] extract-businesses-sale-from-seek-business — seekbusiness.com.au /businesses-for-sale, 9/9 spec cols, 20 rows, 4.4s
 - [x] extract-freelance-projects-from-freelancer-com — Freelancer.com jobs listing, 5 cols, 50 rows, 3.4s
 - [x] extract-project-details-from-freelancer-com — Freelancer.com single project detail, 5 cols, 1 row, 3.4s
 - [!] extract-job-posting-details-monster-com — Monster.com DataDome anti-bot blocks all access, defer
