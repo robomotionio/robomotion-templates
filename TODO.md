@@ -143,7 +143,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-company-detail-page-clutch — Clutch 403 anti-bot, defer
 - [x] extract-companies-yc-startup-directory — YC company directory, 4 cols, 40 rows, 3.4s
 - [x] extract-company-details-y-combinator — YC company directory detail, 5 cols, 40 rows, 4.2s
-- [!] extract-trending-websites-similarweb — Similarweb /trending/ returns 404; trending-websites page no longer exists
+- [x] extract-trending-websites-similarweb — Similarweb /top-websites/trending/, 6 cols, 5 rows, 4.1s
 - [x] extract-top-ranking-websites-similarweb — Similarweb /top-websites/, 7 cols, 50 rows, 5.2s
 - [!] extract-businesses-biz-buy-sell — BizBuySell 403 anti-bot, defer
 - [!] extract-business-details-yell-com — Yell.com 403 anti-bot, defer
