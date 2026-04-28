@@ -72,9 +72,9 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 ## Counts
 
 - Total cases: 222
-- Done (`[x]`): 101
+- Done (`[x]`): 105
 - In workdir (`[~]`): 0
-- Deferred (`[!]`): 121
+- Deferred (`[!]`): 117
 - Backlog (`[ ]`): 0
 
 ## Cases
@@ -105,7 +105,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [!] extract-articles-topic-google-news — Google anti-bot
 - [!] extract-top-stories-google-news-homepage — Google anti-bot
 - [!] scrape-posts-reddit-search — Reddit blocks anonymous
-- [!] scrape-reddit-post-homepage-subreddit — Reddit blocks anonymous
+- [x] scrape-reddit-post-homepage-subreddit — old.reddit.com bypass, 8 cols, 25 rows, 3.6s
 - [!] extract-comments-from-reddit-search-results — Reddit blocks anonymous
 - [!] extract-users-reddit-search-results — Reddit blocks anonymous
 
