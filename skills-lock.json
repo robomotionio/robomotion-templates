@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "skills": {
+    "creating-flow": {
+      "source": "robomotionio/agent-skills",
+      "sourceType": "github",
+      "computedHash": "2552d35491a2aca53deb000bcd9cad40e8ab5bc095d8119c243f07a9991dadf8"
+    },
+    "exploring-browser": {
+      "source": "robomotionio/agent-skills",
+      "sourceType": "github",
+      "computedHash": "a17cc2a629cb0ed4676143a28f3d8d76cd4838b0c75f5d418feb6747c20fdf04"
+    },
+    "reversing-network": {
+      "source": "robomotionio/agent-skills",
+      "sourceType": "github",
+      "computedHash": "066d8f7b1b3d936181079fe3791d237c1f6eeefed1ee09a6e60c48b403206030"
+    },
+    "running-flow": {
+      "source": "robomotionio/agent-skills",
+      "sourceType": "github",
+      "computedHash": "a2a3d292a3f7f30a19ca6f510d05cb9eb95b4a0b62a36324057f917b1574d7c8"
+    },
+    "searching-packages": {
+      "source": "robomotionio/agent-skills",
+      "sourceType": "github",
+      "computedHash": "c3c5f09fb387f99b4ceda3599d8ca16051c5405fbb6a2f00b3de0875bcbedf23"
+    },
+    "testing-flow": {
+      "source": "robomotionio/agent-skills",
+      "sourceType": "github",
+      "computedHash": "f878b2bb2edba64a786099d18905a8248623054f1ffc43ce2beca1697e6308a3"
+    },
+    "validating-flow": {
+      "source": "robomotionio/agent-skills",
+      "sourceType": "github",
+      "computedHash": "ba93fc8301235c3d1271893b987a589d7262b010a86659241c2480f809a96559"
+    }
+  }
+}

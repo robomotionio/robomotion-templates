@@ -86,7 +86,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [x] extract-top-headlines-espn — ESPN homepage, 3 cols, runs in 4s
 - [x] extract-top-posts-substack-publication — Substack /archive?sort=top, 10 cols, 24 rows, 3.6s
 - [x] extract-stories-substack-publication-archive — Substack /archive?sort=new, 8 cols, 24 rows, 4.2s
-- [x] extract-posts-leaderboard-substack-topic
+- [!] extract-posts-leaderboard-substack-topic — Substack /browse/<topic> renders posts, but spec column "Time of Read" (e.g. "13 MIN") no longer exists on cards or post pages. Holding the bar: 4/5 columns deliverable, defer until spec is revised or Substack restores read-time.
 - [x] extract-posts-search-substack — Substack /search?searching=focused_post, 5 cols, 15 rows, 4.2s
 - [!] extract-stories-medium-publication-archive — Medium 403 anti-bot, defer
 - [!] extract-stories-tagged-medium-publication — Medium 403 anti-bot, defer
@@ -270,8 +270,8 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [x] extract-trending-ai-tools-futurepedia — Futurepedia homepage tools, 5 cols, 9 rows, 2.4s
 - [x] extract-ai-tool-details-futurepedia — Futurepedia single tool detail, 6 cols, 1 row, 2.6s
 - [x] extract-ai-tools-futurepedia-categories — Futurepedia homepage by category, 6 cols, 9 rows, 2.6s
-- [!] extract-gpts-list-gptsapp-search — gptsapp.io 502 outage, defer
-- [!] extract-gpts-details-gptsapp — gptsapp.io 502 outage, defer
+- [!] extract-gpts-list-gptsapp-search — gptsapp.io 502; allgpts.co was working alternative but exposes only Name + Description, not spec's Creator + Rating. 3/5 columns deliverable, defer.
+- [!] extract-gpts-details-gptsapp — gptsapp.io 502; allgpts.co detail pages give Name + Description + ChatGPT link only — spec wants Creator/Rate/Reviews/Total Rating/Conversation/Feature. 2/8 deliverable, defer.
 - [x] scrape-app-details-zapier — Zapier single app detail, 5 cols, 1 row, 2.8s
 - [x] scrape-apps-list-zapier — Zapier apps directory, 4 cols, 23 rows, 2.6s
 - [x] extract-services-list-ifttt — IFTTT services listing, 4 cols, 9 rows, 2.6s
