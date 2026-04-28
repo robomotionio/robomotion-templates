@@ -86,7 +86,7 @@ One commit per template. Do not batch. Update the checkbox in this file (`[~]` �
 - [x] extract-top-headlines-espn — ESPN homepage, 3 cols, runs in 4s
 - [x] extract-top-posts-substack-publication — Substack /archive?sort=top, 10 cols, 24 rows, 3.6s
 - [x] extract-stories-substack-publication-archive — Substack /archive?sort=new, 8 cols, 24 rows, 4.2s
-- [!] extract-posts-leaderboard-substack-topic — Substack topic leaderboard layout no longer exposes article-level data (publication-only); spec mismatch
+- [x] extract-posts-leaderboard-substack-topic
 - [x] extract-posts-search-substack — Substack /search?searching=focused_post, 5 cols, 15 rows, 4.2s
 - [!] extract-stories-medium-publication-archive — Medium 403 anti-bot, defer
 - [!] extract-stories-tagged-medium-publication — Medium 403 anti-bot, defer
