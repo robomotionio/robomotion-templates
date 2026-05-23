@@ -1,0 +1,14 @@
+name: Chrome Web Store Extension Info
+slug: scrape-extension-info-chrome-web-store
+summary: >-
+  Chrome extension scraper extracting names, ratings, users, and categories from Web Store listings.
+category: Web Scraping
+level: Intermediate
+tags: [extension, chrome, web, store, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: s0t1u2
+schema_version: 1

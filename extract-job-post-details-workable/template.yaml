@@ -1,0 +1,14 @@
+name: Workable Job Details
+slug: extract-job-post-details-workable
+summary: >-
+  Workable jobs scraper extracting job titles, descriptions, requirements, and company details.
+category: Web Scraping
+level: Intermediate
+tags: [job, post, workable, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1c008
+schema_version: 1

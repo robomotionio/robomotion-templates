@@ -1,0 +1,14 @@
+name: Y Combinator Company Details
+slug: extract-company-details-y-combinator
+summary: >-
+  Y Combinator scraper that extracts startup profiles - names, batch years, team sizes, and details. No API key needed.
+category: Web Scraping
+level: Intermediate
+tags: [company, y, combinator, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: e3f4a5
+schema_version: 1

@@ -1,0 +1,14 @@
+name: Indie Hackers Posts
+slug: scrape-posts-indie-hackers
+summary: >-
+  Indie Hackers scraper that extracts post titles, authors, upvotes, and comments from the startup community.
+category: Web Scraping
+level: Intermediate
+tags: [posts, indie, hackers, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1b2cc
+schema_version: 1

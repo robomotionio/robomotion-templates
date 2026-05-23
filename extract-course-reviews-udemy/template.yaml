@@ -1,0 +1,14 @@
+name: Udemy Course Reviews
+slug: extract-course-reviews-udemy
+summary: >-
+  Udemy review scraper extracts student feedback - course names, ratings, text, and dates. No API needed.
+category: Web Scraping
+level: Intermediate
+tags: [course, reviews, udemy, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: p3q4r5s
+schema_version: 1

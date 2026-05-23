@@ -1,0 +1,14 @@
+name: Ghost Integrations
+slug: extract-integrations-ghost
+summary: >-
+  Ghost integrations scraper extracts tool names, positions, and links from Ghost's directory.
+category: Web Scraping
+level: Intermediate
+tags: [integrations, ghost, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1b2ca
+schema_version: 1

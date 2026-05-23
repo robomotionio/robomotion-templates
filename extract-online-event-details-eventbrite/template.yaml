@@ -1,0 +1,14 @@
+name: Eventbrite Event Details
+slug: extract-online-event-details-eventbrite
+summary: >-
+  Eventbrite scraper extracts event names, dates, times, locations, prices, and descriptions. Build event databases free.
+category: Web Scraping
+level: Intermediate
+tags: [online, event, eventbrite, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: n5o6p7
+schema_version: 1

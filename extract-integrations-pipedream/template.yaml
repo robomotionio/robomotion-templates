@@ -1,0 +1,14 @@
+name: Pipedream Integrations
+slug: extract-integrations-pipedream
+summary: >-
+  Pipedream integrations scraper that extracts app names, descriptions, and logos.
+category: Web Scraping
+level: Intermediate
+tags: [integrations, pipedream, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: g4h5i6j
+schema_version: 1

@@ -1,0 +1,14 @@
+name: Substack Post Search
+slug: extract-posts-search-substack
+summary: >-
+  Substack search scraper extracts posts, writers, and publication data.
+category: Web Scraping
+level: Intermediate
+tags: [posts, substack, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1b2c5
+schema_version: 1

@@ -1,0 +1,14 @@
+name: CoinMarketCap Coin Details
+slug: extract-single-crypto-coin-details-coinmarketcap
+summary: >-
+  CoinMarketCap scraper extracts crypto prices, market cap, volume, supply, and token data.
+category: Web Scraping
+level: Intermediate
+tags: [crypto, coin, coinmarketcap, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: b8c9d0
+schema_version: 1

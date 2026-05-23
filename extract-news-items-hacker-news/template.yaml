@@ -1,0 +1,14 @@
+name: Hacker News Front Page
+slug: extract-news-items-hacker-news
+summary: >-
+  Extract hacker news posts from the front page into structured data. Track tech trends free with Browse AI.
+category: Web Scraping
+level: Intermediate
+tags: [news, items, hacker, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 
+schema_version: 1

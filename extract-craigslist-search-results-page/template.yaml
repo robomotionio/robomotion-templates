@@ -1,0 +1,14 @@
+name: Craigslist Search Results
+slug: extract-craigslist-search-results-page
+summary: >-
+  Craigslist scraper extracts listing titles, locations, dates, bedrooms, and images from search results. No API key needed.
+category: Web Scraping
+level: Intermediate
+tags: [craigslist, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: w4x5y6
+schema_version: 1

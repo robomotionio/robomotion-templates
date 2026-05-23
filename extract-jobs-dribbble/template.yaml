@@ -1,0 +1,14 @@
+name: Dribbble Job Board
+slug: extract-jobs-dribbble
+summary: >-
+  Dribbble job board scraper that extracts design job titles, companies, and locations.
+category: Web Scraping
+level: Intermediate
+tags: [jobs, dribbble, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1b2d7
+schema_version: 1

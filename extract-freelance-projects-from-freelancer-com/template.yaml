@@ -1,0 +1,14 @@
+name: Freelancer.com Projects
+slug: extract-freelance-projects-from-freelancer-com
+summary: >-
+  Freelancer.com scraper extracts project titles, budgets, bid counts, and skills from listings. No coding needed.
+category: Web Scraping
+level: Intermediate
+tags: [freelance, projects, freelancer, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: f5a6b7
+schema_version: 1

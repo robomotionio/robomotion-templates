@@ -1,0 +1,14 @@
+name: CoinMarketCap Coin Prices
+slug: extract-coinmarketcap-coins-list-prices
+summary: >-
+  Crypto scraper extracts CoinMarketCap rankings - prices, market caps, volume, icons and links. No code needed.
+category: Web Scraping
+level: Intermediate
+tags: [coinmarketcap, coins, prices, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 
+schema_version: 1

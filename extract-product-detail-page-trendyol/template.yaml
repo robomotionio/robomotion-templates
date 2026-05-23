@@ -1,0 +1,14 @@
+name: Trendyol Product Details
+slug: extract-product-detail-page-trendyol
+summary: >-
+  Trendyol scraper extracts product details, prices, ratings, reviews, and materials.
+category: Web Scraping
+level: Intermediate
+tags: [product, trendyol, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: r9s0t1
+schema_version: 1

@@ -1,0 +1,14 @@
+name: YouTube Video Info
+slug: scrape-youtube-video-info
+summary: >-
+  YouTube video scraper extracting titles, views, likes, channel info, descriptions, tags, and metadata.
+category: Web Scraping
+level: Intermediate
+tags: [youtube, video, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: u8v9w0x
+schema_version: 1

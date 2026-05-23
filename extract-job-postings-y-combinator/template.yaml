@@ -1,0 +1,14 @@
+name: Y Combinator Jobs
+slug: extract-job-postings-y-combinator
+summary: >-
+  Y Combinator jobs scraper extracting startup job titles, companies, locations, and employment types.
+category: Web Scraping
+level: Intermediate
+tags: [job, postings, y, combinator, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 
+schema_version: 1

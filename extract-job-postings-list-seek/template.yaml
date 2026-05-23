@@ -1,0 +1,14 @@
+name: SEEK Job Listings
+slug: extract-job-postings-list-seek
+summary: >-
+  SEEK jobs scraper extracts job titles, salaries, and company details from Australia's largest job board.
+category: Web Scraping
+level: Intermediate
+tags: [job, postings, seek, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1c00d
+schema_version: 1

@@ -1,0 +1,14 @@
+name: YouTube Channel Shorts
+slug: extract-channel-shorts-youtube
+summary: >-
+  YouTube Shorts scraper that extracts positions, titles, and views from any channel. No API key needed.
+category: Web Scraping
+level: Intermediate
+tags: [channel, shorts, youtube, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: y2z3a4b
+schema_version: 1

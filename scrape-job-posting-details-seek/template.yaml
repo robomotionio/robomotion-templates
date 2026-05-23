@@ -1,0 +1,14 @@
+name: SEEK Job Details
+slug: scrape-job-posting-details-seek
+summary: >-
+  Seek.com scraper extracts job titles, company names, descriptions, and posting details from Seek job postings.
+category: Web Scraping
+level: Intermediate
+tags: [job, posting, seek, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1c00e
+schema_version: 1

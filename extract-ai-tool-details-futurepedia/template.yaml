@@ -1,0 +1,14 @@
+name: Futurepedia AI Tool Details
+slug: extract-ai-tool-details-futurepedia
+summary: >-
+  Futurepedia scraper extracts AI tool details - name, pricing, ratings, pros, cons, and 19+ data fields. No code needed.
+category: Web Scraping
+level: Intermediate
+tags: [ai, tool, futurepedia, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a8b9c0
+schema_version: 1

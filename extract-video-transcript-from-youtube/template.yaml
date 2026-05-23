@@ -1,0 +1,14 @@
+name: YouTube Video Transcript
+slug: extract-video-transcript-from-youtube
+summary: >-
+  YouTube transcript extractor that pulls full video text and timestamps from any video.
+category: Web Scraping
+level: Intermediate
+tags: [video, transcript, youtube, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: c6d7e8f
+schema_version: 1

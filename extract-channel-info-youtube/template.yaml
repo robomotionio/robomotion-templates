@@ -1,0 +1,14 @@
+name: YouTube Channel Info
+slug: extract-channel-info-youtube
+summary: >-
+  YouTube channel scraper extracts subscribers, views, videos, IDs, logos & descriptions. No API key needed.
+category: Web Scraping
+level: Intermediate
+tags: [channel, youtube, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: t7u8v9w
+schema_version: 1

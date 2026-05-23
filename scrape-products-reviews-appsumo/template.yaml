@@ -1,0 +1,14 @@
+name: AppSumo Product Reviews
+slug: scrape-products-reviews-appsumo
+summary: >-
+  AppSumo reviews scraper extracts star ratings, review text, reviewer names, and dates.
+category: Web Scraping
+level: Intermediate
+tags: [products, reviews, appsumo, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: f7a9b1
+schema_version: 1

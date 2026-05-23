@@ -1,0 +1,14 @@
+name: Trendyol Product Listings
+slug: extract-product-listings-trendyol
+summary: >-
+  Scrape Trendyol products from search and category pages. Get position, price, discount, image, and links.
+category: Web Scraping
+level: Intermediate
+tags: [product, listings, trendyol, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: q8r9s0
+schema_version: 1

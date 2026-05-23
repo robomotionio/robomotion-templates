@@ -1,0 +1,14 @@
+name: YouTube Video Comments
+slug: extract-comments-video-from-youtube
+summary: >-
+  YouTube comments scraper that extracts comment text, likes, authors, and timestamps from any video. No API key needed.
+category: Web Scraping
+level: Intermediate
+tags: [comments, video, youtube, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: b5c6d7e
+schema_version: 1

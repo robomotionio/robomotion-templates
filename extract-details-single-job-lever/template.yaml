@@ -1,0 +1,14 @@
+name: Lever Job Details
+slug: extract-details-single-job-lever
+summary: >-
+  Lever job scraper extracts titles, descriptions, requirements, and locations from Lever career pages.
+category: Web Scraping
+level: Intermediate
+tags: [job, lever, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1c001
+schema_version: 1

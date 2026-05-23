@@ -1,0 +1,14 @@
+name: RemoteOK Job Details
+slug: scrape-job-posting-details-remoteok
+summary: >-
+  RemoteOK job scraper extracting titles, salaries, tags, locations, and company links from remote job listings.
+category: Web Scraping
+level: Intermediate
+tags: [job, posting, remoteok, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1c00c
+schema_version: 1

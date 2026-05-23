@@ -1,0 +1,14 @@
+name: IFTTT Services
+slug: extract-services-list-ifttt
+summary: >-
+  IFTTT integrations scraper extracts services, positions, URLs, and images. Map automation platforms.
+category: Web Scraping
+level: Intermediate
+tags: [services, ifttt, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: e2f3g4h
+schema_version: 1

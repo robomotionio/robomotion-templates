@@ -1,0 +1,14 @@
+name: IMDb Box Office
+slug: extract-top-box-office-movies-imdb
+summary: >-
+  IMDb box office scraper extracting movie rankings, ratings, and earnings data.
+category: Web Scraping
+level: Intermediate
+tags: [top, box, office, movies, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1b2cf
+schema_version: 1

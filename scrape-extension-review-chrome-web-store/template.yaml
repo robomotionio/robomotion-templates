@@ -1,0 +1,14 @@
+name: Chrome Web Store Extension Reviews
+slug: scrape-extension-review-chrome-web-store
+summary: >-
+  Chrome extension reviews scraper that extracts ratings, text, and user feedback from Web Store extensions.
+category: Web Scraping
+level: Intermediate
+tags: [extension, review, chrome, web, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: t1u2v3
+schema_version: 1

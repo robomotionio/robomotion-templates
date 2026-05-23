@@ -1,0 +1,14 @@
+name: DeBank Wallet Portfolio
+slug: extract-profile-data-debank
+summary: >-
+  DeBank portfolio tracker that extracts DeFi wallet data and token holdings from profiles.
+category: Web Scraping
+level: Intermediate
+tags: [profile, debank, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: d1e2f3
+schema_version: 1

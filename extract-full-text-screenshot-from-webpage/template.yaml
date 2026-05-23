@@ -1,0 +1,14 @@
+name: Webpage Text & Full-Page Screenshot
+slug: extract-full-text-screenshot-from-webpage
+summary: >-
+  Extract text from any website and capture a full-page screenshot. No code needed.
+category: Web Scraping
+level: Beginner
+tags: [full, text, screenshot, webpage, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 
+schema_version: 1
