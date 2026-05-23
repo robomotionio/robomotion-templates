@@ -693,7 +693,6 @@ templates:
 
   - name: Extract Tables from PDF
     slug: extract-tables-from-pdf
-    featured: true
     summary: >-
       Locates tables inside a PDF and extracts their rows into structured data. A
       drop-in stage in any OCR-adjacent pipeline.
