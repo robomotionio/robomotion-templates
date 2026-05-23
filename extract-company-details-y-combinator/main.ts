@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('e3f4a5', 'Extract Company Details Y Combinator', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Y Combinator Company Details\n\nExtracts startup profiles from Y Combinator — company name, batch, location, tags, and team size — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

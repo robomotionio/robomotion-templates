@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('b5c6d7e', 'Extract Comments Video From YouTube', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### YouTube Video Comments\n\nExtracts comments from a YouTube video — comment text, author, likes, and reply count — into a CSV.\n\nEnter a video URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Video URL', {
       inText: Custom('Enter YouTube video URL (e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ)'),

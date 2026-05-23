@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('e2f3g4h', 'Extract Services List IFTTT', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### IFTTT Services\n\nExtracts services from the IFTTT directory — service name, URL, and image — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

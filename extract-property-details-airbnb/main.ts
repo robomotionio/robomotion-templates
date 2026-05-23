@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('k2l3m4', 'Extract Property Details Airbnb', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Airbnb Property Details\n\nExtracts an Airbnb listing\'s ratings and reviews — overall rating, price, cleanliness, communication, and review text — into a CSV.\n\nEnter a listing URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Listing URL', {
       inText: Custom('Enter Airbnb listing URL (e.g. https://www.airbnb.com/rooms/20669368)'),

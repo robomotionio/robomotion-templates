@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('m0n1o2p', 'Extract Framer Template Details', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Framer Template Details\n\nExtracts a Framer template\'s details — name, creator, price, publish date, page count, and features — into a CSV.\n\nEnter a template URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Template URL', {
       inText: Custom('Enter Framer template URL (e.g. https://www.framer.com/marketplace/templates/my-template/)'),

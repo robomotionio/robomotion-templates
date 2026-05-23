@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1c008', 'Extract Job Post Details Workable', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Workable Job Details\n\nExtracts a Workable job posting — title, company, location, employment type, and date — into a CSV.\n\nEnter a job URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

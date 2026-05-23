@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1c009', 'Extract Jobs Built In', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Built In Jobs\n\nExtracts tech jobs from Built In — title, company, location, and salary — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

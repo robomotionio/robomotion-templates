@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('rd0001', 'Scrape Reddit Post Homepage Subreddit', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Reddit Homepage & Subreddit Post Scraper\n\nExtracts posts from Reddit\'s homepage or any subreddit — position, link, title, author, comment and upvote counts, post time, and image URL — and saves them to a CSV.\n\nEnter a Reddit URL when prompted to run.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Reddit URL', {
       inText: Custom('Enter Reddit homepage or subreddit URL (e.g. https://www.reddit.com/r/programming/)'),

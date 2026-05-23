@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('p3q4r5s', 'Extract Course Reviews Udemy', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Udemy Course Reviews\n\nExtracts student reviews from a Udemy course — course name, rating, reviewer, review text, and date — into a CSV.\n\nEnter a course URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Course URL', {
       inText: Custom('Enter Udemy course URL (e.g. https://www.udemy.com/course/python-bootcamp/)'),

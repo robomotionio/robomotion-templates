@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1c00d', 'Extract Job Postings List Seek', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### SEEK Job Listings\n\nExtracts SEEK job listings — title, company, location, salary, and listing date — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

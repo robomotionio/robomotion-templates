@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('x1y2z3a', 'Extract Channel Playlists YouTube', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### YouTube Channel Playlists\n\nExtracts a channel\'s playlists — title, video count, thumbnail, and link — into a CSV.\n\nEnter a channel URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Playlists URL', {
       inText: Custom('Enter YouTube channel playlists URL (e.g. https://www.youtube.com/@Google/playlists)'),

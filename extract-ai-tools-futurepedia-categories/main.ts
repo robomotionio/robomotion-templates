@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('b9c0d1', 'Extract AI Tools Futurepedia Categories', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Futurepedia AI Tools by Category\n\nScrapes AI tool listings from a Futurepedia category — tool name, rating, pricing model, description, categories, links, and logo — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Category URL', {
       inText: Custom('Enter Futurepedia category URL (e.g. https://www.futurepedia.io/)'),

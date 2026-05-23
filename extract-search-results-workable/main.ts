@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1c007', 'Extract Search Results Workable', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Workable Job Search\n\nExtracts Workable job results — name, link, type, location, employment type, company, and date — into a CSV.\n\nEnter a search query when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

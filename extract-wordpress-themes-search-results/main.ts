@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('j7k8l9m', 'Extract WordPress Themes Search Results', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### WordPress Theme Search\n\nExtracts WordPress.org theme search results — theme name, link, and image — into a CSV.\n\nEnter a search keyword when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Themes URL', {
       inText: Custom('Enter WordPress themes URL (e.g. https://wordpress.org/themes/search/blog/)'),

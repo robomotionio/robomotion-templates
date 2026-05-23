@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1b2d9', 'Scrape Products List AppSumo', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### AppSumo Deals\n\nExtracts AppSumo deals — product name, category, discounted price, and original price — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

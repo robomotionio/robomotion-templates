@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1b2d2', 'Extract Jobs We Work Remotely', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### We Work Remotely Jobs\n\nExtracts remote jobs from We Work Remotely — company, title, job type, location, date, and link — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

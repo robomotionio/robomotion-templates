@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1b2d6', 'Extract Jobs ProBlogger', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### ProBlogger Job Board\n\nExtracts writing jobs from ProBlogger — title, company, location, and job type — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

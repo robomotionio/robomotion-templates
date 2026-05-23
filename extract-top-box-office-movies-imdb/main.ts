@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1b2cf', 'Extract Top Box Office Movies IMDb', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### IMDb Box Office\n\nExtracts IMDb top box-office movies — weekend gross, total gross, weeks released, rating, votes, poster, and link — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

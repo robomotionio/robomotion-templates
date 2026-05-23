@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('i0j1k2', 'Scrape Property Details Redfin', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Redfin Property Details\n\nExtracts a single Redfin property\'s details as field/value rows — address, price, beds, baths, and more — into a CSV.\n\nEnter a property URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Property URL', {
       inText: Custom('Enter Redfin property detail URL (e.g. https://www.redfin.com/CA/San-Jose/123-Main-St/home/12345)'),

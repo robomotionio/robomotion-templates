@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('j1k2l3', 'Extract Real Estate Agents Rightmove', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Rightmove Estate Agents\n\nExtracts estate agents from Rightmove — name, phone, service type, description, and logo — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Agents URL', {
       inText: Custom('Enter Rightmove estate agents URL (e.g. https://www.rightmove.co.uk/estate-agents/london.html)'),

@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('m4n5o6', 'Scrape Eventbrite Online Events', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Eventbrite Online Events\n\nExtracts Eventbrite online-event listings — title, image, and event link — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Events URL', {
       inText: Custom('Enter Eventbrite events URL (e.g. https://www.eventbrite.com/d/online/events--online/)'),

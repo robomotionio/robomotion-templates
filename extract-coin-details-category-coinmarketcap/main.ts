@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('e5f6a7', 'Extract Coin Details Category CoinMarketCap', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### CoinMarketCap Category Coins\n\nExtracts coins in a CoinMarketCap category — name, symbol, price, market cap, volume, ranking, and 1h/24h/7d changes — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Category URL', {
       inText: Custom('Enter a CoinMarketCap category URL (e.g. https://coinmarketcap.com/view/defi/)'),

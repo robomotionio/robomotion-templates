@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('n1o2p3q', 'Extract Envato Elements Video Template Search Results', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Envato Elements Video Templates\n\nExtracts Envato Elements video template results — title, thumbnail, creator, and link — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Search URL', {
       inText: Custom('Enter Envato Elements video templates URL (e.g. https://elements.envato.com/video-templates)'),

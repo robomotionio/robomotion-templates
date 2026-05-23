@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('s4k5b6s', 'Extract Businesses For Sale SEEK Business', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### SEEK Businesses for Sale\n\nExtracts businesses-for-sale listings from SEEK Business — title, location, price, business type, description, and images — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Listings URL', {
       inText: Custom('Enter SEEK Business listings URL (e.g. https://www.seekbusiness.com.au/businesses-for-sale/all/in-Sydney+New-South-Wales)'),

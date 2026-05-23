@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('c0d1e2', 'Extract Crypto Data Binance', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Binance Crypto Market Data\n\nExtracts Binance crypto market data — price, popularity, market cap, volume, and fully-diluted market cap — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('x5y6z7', 'Extract Tools Keyword Future Tools', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Future Tools Keyword Search\n\nExtracts AI tools from a Future Tools search — name, description, category, upvotes, and image — into a CSV.\n\nEnter a keyword when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Search URL', {
       inText: Custom('Enter Future Tools search URL (e.g. https://www.futuretools.io/?search=writing)'),

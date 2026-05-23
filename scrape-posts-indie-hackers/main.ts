@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1b2cc', 'Scrape Posts Indie Hackers', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Indie Hackers Posts\n\nExtracts posts from the Indie Hackers feed — title, author, upvotes, comments, and topic — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

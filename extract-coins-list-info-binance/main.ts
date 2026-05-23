@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a9b0c1', 'Extract Coins List Info Binance', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Binance Coin List\n\nExtracts Binance market coins — name, symbol, price, 24h change, 24h volume, market cap, and trade links — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

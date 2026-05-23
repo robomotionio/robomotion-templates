@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('q8r9s0', 'Extract Product Listings Trendyol', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Trendyol Product Listings\n\nExtracts Trendyol search and category products — name, price, discount, image, and link — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Search URL', {
       inText: Custom('Enter Trendyol search or category URL (e.g. https://www.trendyol.com/sr?q=ceramic+mug)'),

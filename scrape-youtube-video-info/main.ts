@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('u8v9w0x', 'Scrape YouTube Video Info', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### YouTube Video Info\n\nExtracts a single YouTube video\'s details — title, views, likes, channel info, and more — into a CSV.\n\nEnter a video URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Video URL', {
       inText: Custom('Enter YouTube video URL (e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ)'),

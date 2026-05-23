@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('l9m0n1o', 'Extract Courses Topic Udemy', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Udemy Courses by Topic\n\nExtracts Udemy courses for a topic — title, instructor, rating, and learner count — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Courses URL', {
       inText: Custom('Enter Udemy courses URL (e.g. https://www.udemy.com/courses/design/)'),

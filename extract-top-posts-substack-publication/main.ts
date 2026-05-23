@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1b2c3', 'Extract Top Posts Substack Publication', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Substack Top Posts\n\nExtracts a Substack\'s top-performing posts — title, description, date, author, likes, comments, and URLs — into a CSV.\n\nEnter a publication URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

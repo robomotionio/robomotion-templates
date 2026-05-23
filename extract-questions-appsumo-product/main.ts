@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('d4e5f6', 'Extract Questions AppSumo Product', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### AppSumo Product Questions\n\nExtracts an AppSumo product\'s Q&A — question, user, date, and link — into a CSV.\n\nEnter a product URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Product URL', {
       inText: Custom('Enter the AppSumo product page URL (e.g. https://appsumo.com/products/tidycal/)'),

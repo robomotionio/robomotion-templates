@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('s2w3t4r', 'Extract Trending Websites Similarweb', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Similarweb Trending Websites\n\nExtracts rising domains from Similarweb — rank, domain, change, website link, and favicon — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `msg.target_url = 'https://www.similarweb.com/top-websites/trending/'; msg.csv_path = global.get('$Home$') + '/extract-trending-websites-similarweb.csv'; return msg;`

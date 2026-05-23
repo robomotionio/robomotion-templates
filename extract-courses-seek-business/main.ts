@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('s3k4c5r', 'Extract Careers SEEK Explore', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### SEEK Business Courses\n\nExtracts career/course listings from SEEK explore-careers — role name, typical salary, and image — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Target URL', {
       inText: Custom('Enter SEEK explore-careers URL (e.g. https://www.seek.com.au/career-advice/explore-careers)'),

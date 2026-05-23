@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('d1e2f3g', 'Scrape App Details Zapier', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Zapier App Details\n\nExtracts a Zapier app — categories, type, triggers/actions, and time to run — into a CSV.\n\nEnter an app URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get App URL', {
       inText: Custom('Enter Zapier app integrations URL (e.g. https://zapier.com/apps/slack/integrations)'),

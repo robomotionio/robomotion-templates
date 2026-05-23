@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('q4r5s6t', 'Extract Medical Citations PubMed', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### PubMed Medical Citations\n\nExtracts medical citations from PubMed search results — title, authors, PMID, and abstract — into a CSV.\n\nEnter a search query when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Programming.Function', 'Set Query', {
       func: `

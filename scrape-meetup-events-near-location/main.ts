@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('o6p7q8', 'Scrape Meetup Events Near Location', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Meetup Events Near Location\n\nExtracts Meetup events near a location — name, date, group, attendees, spots left, image, and link — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Search URL', {
       inText: Custom('Enter Meetup find URL (e.g. https://www.meetup.com/find/?location=New+York&keywords=technology)'),

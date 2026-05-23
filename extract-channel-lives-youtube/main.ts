@@ -1,5 +1,7 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 flow.create('z3a4b5c', 'Extract Channel Lives YouTube', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### YouTube Channel Live Streams\n\nExtracts a channel\'s live streams — stream title, date, viewers, duration, and status — into a CSV.\n\nEnter a channel URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Streams URL', { inText: Custom('Enter YouTube channel streams URL (e.g. https://www.youtube.com/@Google/streams)'), outText: Message('url') })
     .then('222222', 'Core.Programming.Function', 'Setup', { func: `msg.csv_path = global.get('$Home$') + '/extract-channel-lives-youtube.csv'; return msg;` })

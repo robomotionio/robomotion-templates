@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('v9w0x1y', 'Scrape Video Search Result YouTube', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### YouTube Video Search\n\nExtracts YouTube search results — title, channel, views, and publication time — into a CSV.\n\nEnter a search query when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Search Query', {
       inText: Custom('Enter YouTube search query (e.g. machine learning tutorial)'),

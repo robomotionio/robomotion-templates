@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1b2d0', 'Extract Popular Movies Genre IMDb', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### IMDb Popular Movies by Genre\n\nExtracts popular IMDb movies by genre — title, year, duration, rating, votes, Metascore, description, poster, and link — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

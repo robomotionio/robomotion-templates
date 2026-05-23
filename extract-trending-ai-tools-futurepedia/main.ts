@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('z7a8b9', 'Extract Trending AI Tools Futurepedia', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Futurepedia Trending AI Tools\n\nExtracts trending AI tools from Futurepedia — name, rating, pricing model, and category tags — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Page URL', {
       inText: Custom('Enter Futurepedia URL (e.g. https://www.futurepedia.io/)'),

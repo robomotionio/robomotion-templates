@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('i6j7k8l', 'Extract Search Results Plugins WordPress Org', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### WordPress.org Plugin Search\n\nExtracts WordPress.org plugin results — name, rating, active installs, tested-up-to version, and link — into a CSV.\n\nEnter a search keyword when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Search URL', {
       inText: Custom('Enter WordPress plugins search URL (e.g. https://wordpress.org/plugins/search/seo/)'),

@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1b2d1', 'Extract Upcoming Movie Releases IMDb', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### IMDb Upcoming Releases\n\nExtracts upcoming IMDb movie releases — title, genres, lead and supporting cast, poster, and link — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

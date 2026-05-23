@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1b2d5', 'Extract Jobs JustRemote', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### JustRemote Jobs\n\nExtracts remote jobs from JustRemote — company, title, job type, and date posted — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

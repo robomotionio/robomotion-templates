@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('u2v3w4', 'Scrape Product List From eBay', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### eBay Product Listings\n\nExtracts eBay search listings — title, image, sale price, and link — into a CSV.\n\nEnter an eBay search URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Search URL', {
       inText: Custom('Enter eBay search URL (e.g. https://www.ebay.com/sch/i.html?_nkw=laptop)'),

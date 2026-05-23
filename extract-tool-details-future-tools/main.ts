@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('y6z7a8', 'Extract Tool Details Future Tools', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Future Tools Tool Details\n\nExtracts an AI tool from Future Tools — description, pricing, upvotes, and website — into a CSV.\n\nEnter a tool URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Tool URL', {
       inText: Custom('Enter Future Tools tool URL (e.g. https://www.futuretools.io/tools/chatgpt)'),

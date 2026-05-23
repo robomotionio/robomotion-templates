@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1b2c6', 'Extract Creators Search Ghost Explore Page', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Ghost Explore Creator Search\n\nExtracts creators from a Ghost Explore search — title, description, image, website, category, member count, and MRR — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

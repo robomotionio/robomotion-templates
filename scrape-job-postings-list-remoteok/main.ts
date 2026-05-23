@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1b2d3', 'Scrape Job Postings List RemoteOK', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### RemoteOK Job Listings\n\nExtracts RemoteOK job listings — title, company, location, salary, time, tags, link, and logo — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

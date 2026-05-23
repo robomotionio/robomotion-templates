@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a8b9c0', 'Extract AI Tool Details Futurepedia', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Futurepedia AI Tool Details\n\nExtracts a single AI tool\'s profile from Futurepedia — name, categories, pricing model, rating, and key features — and saves it to a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Tool URL', {
       inText: Custom('Enter Futurepedia tool URL (e.g. https://www.futurepedia.io/tool/chatgpt)'),

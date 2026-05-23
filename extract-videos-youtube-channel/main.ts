@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('w0x1y2z', 'Extract Videos YouTube Channel', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### YouTube Channel Videos\n\nExtracts a channel\'s videos — title, views, date, and duration — into a CSV.\n\nEnter a channel URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Channel Videos URL', {
       inText: Custom('Enter YouTube channel videos URL (e.g. https://www.youtube.com/@Google/videos)'),

@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1c00a', 'Extract Top Companies Built In', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Built In Top Companies\n\nExtracts Built In best-workplace rankings — company, page, industries, location, and employee count — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

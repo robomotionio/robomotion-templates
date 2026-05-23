@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('t1u2v3', 'Scrape Extension Review Chrome Web Store', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Chrome Web Store Extension Reviews\n\nExtracts a Chrome extension\'s reviews — reviewer, avatar, rating, date, and review text — into a CSV.\n\nEnter an extension URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Extension URL', {
       inText: Custom('Enter Chrome Web Store extension URL (e.g. https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)'),

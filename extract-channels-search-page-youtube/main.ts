@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a4b5c6d', 'Extract Channels Search Page YouTube', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### YouTube Channel Search\n\nScrapes YouTube channel search results — position, channel name, subscribers, link, and channel ID — into a CSV.\n\nEnter a search keyword when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Search Query', {
       inText: Custom('Enter YouTube channel search query (e.g. technology review)'),

@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1b2cd', 'Extract Jobs Company Lever Page', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Lever Careers Page Jobs\n\nExtracts every job from a Lever careers page — title, type, employment type, location, and link — into a CSV.\n\nEnter a Lever board URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('w4x5y6', 'Extract Craigslist Search Results Page', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Craigslist Search Results\n\nExtracts Craigslist listings — title, link, image, date, location, and bedrooms — into a CSV.\n\nEnter a Craigslist search URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Search URL', {
       inText: Custom('Enter Craigslist search URL (e.g. https://sfbay.craigslist.org/search/apa)'),

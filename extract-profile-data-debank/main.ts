@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('d1e2f3', 'Extract Profile Data DeBank', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### DeBank Wallet Portfolio\n\nExtracts a DeBank wallet\'s DeFi holdings — asset name, blockchain, value, portfolio percentage, and position — into a CSV.\n\nEnter a wallet address URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Wallet URL', {
       inText: Custom('Enter DeBank profile URL (e.g. https://debank.com/profile/0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045)'),

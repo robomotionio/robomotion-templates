@@ -1,5 +1,7 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 flow.create('y2z3a4b', 'Extract Channel Shorts YouTube', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### YouTube Channel Shorts\n\nExtracts a channel\'s Shorts — position, title, views, thumbnail, and link — into a CSV.\n\nEnter a channel URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Shorts URL', { inText: Custom('Enter YouTube channel shorts URL (e.g. https://www.youtube.com/@Google/shorts)'), outText: Message('url') })
     .then('222222', 'Core.Programming.Function', 'Setup', { func: `msg.csv_path = global.get('$Home$') + '/extract-channel-shorts-youtube.csv'; return msg;` })

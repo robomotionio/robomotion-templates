@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('a1b2ca', 'Extract Integrations Ghost', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Ghost Integrations\n\nExtracts integrations from the Ghost directory — position, integration name, and link — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

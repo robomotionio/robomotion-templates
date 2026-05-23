@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('n5o6p7', 'Extract Online Event Details Eventbrite', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Eventbrite Event Details\n\nExtracts an Eventbrite online event — name, date and time, location, price, and description — into a CSV.\n\nEnter an event URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Event URL', {
       inText: Custom('Enter Eventbrite event URL (e.g. https://www.eventbrite.com/e/event-name-tickets-12345)'),

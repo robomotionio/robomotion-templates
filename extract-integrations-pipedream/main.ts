@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('g4h5i6j', 'Extract Integrations Pipedream', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Pipedream Integrations\n\nExtracts apps from the Pipedream directory — name, description, logo, and link — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('b8c9d0', 'Extract Single Crypto Coin Details CoinMarketCap', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### CoinMarketCap Coin Details\n\nExtracts detailed metrics for a crypto coin from CoinMarketCap — price, market cap, volume, supply, and more — into a CSV.\n\nEnter a coin URL when prompted.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Coin URL', {
       inText: Custom('Enter a CoinMarketCap coin page URL (e.g. https://coinmarketcap.com/currencies/bitcoin/)'),

@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('f3g4h5i', 'Extract Integrations List N8n', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### n8n Integrations\n\nExtracts integration nodes from the n8n directory — position, app name, link, and logo — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('222222', 'Core.Programming.Function', 'Setup Vars', {
       func: `

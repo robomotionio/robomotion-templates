@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('f5a6b7', 'Extract Freelance Projects From Freelancer Com', function (f) {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Freelancer.com Projects\n\nExtracts project listings from Freelancer.com — title, budget, bid count, skills, and client rating — into a CSV.' });
+
   f.node('111111', 'Core.Trigger.Inject', 'Start', {})
     .then('111112', 'Core.Dialog.InputBox', 'Get Search URL', {
       inText: Custom('Enter Freelancer.com jobs URL (e.g. https://www.freelancer.com/jobs/)'),
