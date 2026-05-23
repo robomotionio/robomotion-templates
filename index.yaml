@@ -500,6 +500,7 @@ templates:
 
   - name: Domain Inspector
     slug: domain-inspector
+    featured: true
     summary: >-
       Domain Inspector is an AI powered tool that instantly analyzes live DNS and SSL
       data using Robomotion's Monitoring package. It checks domain records, SSL
@@ -692,6 +693,7 @@ templates:
 
   - name: Extract Tables from PDF
     slug: extract-tables-from-pdf
+    featured: true
     summary: >-
       Locates tables inside a PDF and extracts their rows into structured data. A
       drop-in stage in any OCR-adjacent pipeline.
@@ -734,6 +736,7 @@ templates:
 
   - name: Fork Branch With Memory Queue
     slug: fork-branch-with-memory-queue
+    featured: true
     summary: >-
       Demonstrates parallel browser automation using Fork Branch and Memory Queue.
       Creates multiple concurrent browser instances that dequeue items from a shared
@@ -867,6 +870,7 @@ templates:
 
   - name: Generic Chat Assistant
     slug: generic-chat-assistant
+    featured: true
     summary: >-
       A ready-to-use conversational AI template powered by Chat Assistant and LLM
       Agent nodes. Provides a simple chat interface where users can ask questions
@@ -1101,6 +1105,7 @@ templates:
 
   - name: Handle Errors
     slug: handle-errors
+    featured: true
     summary: >-
       Shows how to throw and handle errors in a Robomotion flow. Prompts the user
       for a number greater than 100, validates the input, and demonstrates catching
@@ -1304,6 +1309,7 @@ templates:
 
   - name: Manipulate Excel Data Using SQL
     slug: manipulate-excel-data-using-sql
+    featured: true
     summary: >-
       Loads Excel data into an in-memory SQL engine and runs a SELECT / UPDATE
       statement against it. Gives you database-level expressiveness over spreadsheet
@@ -1890,6 +1896,7 @@ templates:
 
   - name: SSL Watch
     slug: ssl-watch
+    featured: true
     summary: >-
       SSL Watch is an automation that monitors domain expiration dates and SSL
       certificate validity using Robomotion's Monitoring package. It checks each
