@@ -1,0 +1,14 @@
+name: Redfin Property Listings
+slug: scrape-list-properties-redfin
+summary: >-
+  Redfin scraper that extracts property listings, prices, beds, baths, square footage, images and links from search results.
+category: Web Scraping
+level: Intermediate
+tags: [properties, redfin, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: h8i9j0
+schema_version: 1

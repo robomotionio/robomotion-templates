@@ -14,6 +14,32 @@ templates:
     screenshot: screenshot.png
     has_subflows: true
 
+  - name: Airbnb Property Details
+    slug: extract-property-details-airbnb
+    summary: >-
+      Airbnb scraper extracting ratings, reviews, pricing, amenities, and guest feedback.
+    category: Web Scraping
+    level: Intermediate
+    tags: [property, airbnb, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Airbnb Search Results
+    slug: extract-list-places-search-result-airbnb
+    summary: >-
+      Airbnb data scraper that extracts listing titles, prices, ratings, and locations from search results.
+    category: Web Scraping
+    level: Intermediate
+    tags: [places, airbnb, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: API Health Check
     slug: api-health-check
     summary: >-
@@ -26,6 +52,71 @@ templates:
     author: Robomotion
     created: "2025-11-16"
     updated: "2025-11-16"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: AppSumo Deals
+    slug: scrape-products-list-appsumo
+    summary: >-
+      AppSumo deals scraper extracting product listings, prices, descriptions, and reviews. No coding.
+    category: Web Scraping
+    level: Intermediate
+    tags: [products, appsumo, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: AppSumo Product Questions
+    slug: extract-questions-appsumo-product
+    summary: >-
+      AppSumo scraper that extracts product questions, users, and links.
+    category: Web Scraping
+    level: Intermediate
+    tags: [questions, appsumo, product, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: AppSumo Product Reviews
+    slug: scrape-products-reviews-appsumo
+    summary: >-
+      AppSumo reviews scraper extracts star ratings, review text, reviewer names, and dates.
+    category: Web Scraping
+    level: Intermediate
+    tags: [products, reviews, appsumo, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Binance Coin List
+    slug: extract-coins-list-info-binance
+    summary: >-
+      Binance scraper extracts coin data, prices, volume, and trading links. No API key needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [coins, binance, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Binance Crypto Market Data
+    slug: extract-crypto-data-binance
+    summary: >-
+      Binance scraper extracts crypto prices, volumes, market caps, and rankings. No API key needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [crypto, binance, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -44,6 +135,32 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Built In Jobs
+    slug: extract-jobs-built-in
+    summary: >-
+      Built In jobs scraper extracting tech job titles, salaries, locations, and company data from Built In listings.
+    category: Web Scraping
+    level: Intermediate
+    tags: [jobs, built, in, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Built In Top Companies
+    slug: extract-top-companies-built-in
+    summary: >-
+      Built In best places to work scraper. Extract company data and rankings.
+    category: Web Scraping
+    level: Intermediate
+    tags: [top, companies, built, in, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Calorie Coach Agent
     slug: calorie-coach-agent
     summary: >-
@@ -57,6 +174,71 @@ templates:
     author: Robomotion
     created: "2026-03-21"
     updated: "2026-03-21"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Chrome Web Store Extension Info
+    slug: scrape-extension-info-chrome-web-store
+    summary: >-
+      Chrome extension scraper extracting names, ratings, users, and categories from Web Store listings.
+    category: Web Scraping
+    level: Intermediate
+    tags: [extension, chrome, web, store, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Chrome Web Store Extension Reviews
+    slug: scrape-extension-review-chrome-web-store
+    summary: >-
+      Chrome extension reviews scraper that extracts ratings, text, and user feedback from Web Store extensions.
+    category: Web Scraping
+    level: Intermediate
+    tags: [extension, review, chrome, web, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: CoinMarketCap Category Coins
+    slug: extract-coin-details-category-coinmarketcap
+    summary: >-
+      CoinMarketCap scraper extracts coin prices, market caps, volumes, rankings, and price changes. No code needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [coin, category, coinmarketcap, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: CoinMarketCap Coin Details
+    slug: extract-single-crypto-coin-details-coinmarketcap
+    summary: >-
+      CoinMarketCap scraper extracts crypto prices, market cap, volume, supply, and token data.
+    category: Web Scraping
+    level: Intermediate
+    tags: [crypto, coin, coinmarketcap, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: CoinMarketCap Coin Prices
+    slug: extract-coinmarketcap-coins-list-prices
+    summary: >-
+      Crypto scraper extracts CoinMarketCap rankings - prices, market caps, volume, icons and links. No code needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [coinmarketcap, coins, prices, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -191,6 +373,19 @@ templates:
     screenshot: screenshot.png
     has_subflows: true
 
+  - name: Craigslist Search Results
+    slug: extract-craigslist-search-results-page
+    summary: >-
+      Craigslist scraper extracts listing titles, locations, dates, bedrooms, and images from search results. No API key needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [craigslist, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Create PDF from Selected Pages
     slug: create-pdf-from-selected-pages
     summary: >-
@@ -217,6 +412,19 @@ templates:
     author: Robomotion
     created: "2025-11-15"
     updated: "2025-11-15"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: DeBank Wallet Portfolio
+    slug: extract-profile-data-debank
+    summary: >-
+      DeBank portfolio tracker that extracts DeFi wallet data and token holdings from profiles.
+    category: Web Scraping
+    level: Intermediate
+    tags: [profile, debank, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -322,6 +530,45 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Dribbble Job Board
+    slug: extract-jobs-dribbble
+    summary: >-
+      Dribbble job board scraper that extracts design job titles, companies, and locations.
+    category: Web Scraping
+    level: Intermediate
+    tags: [jobs, dribbble, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Dribbble Job Details
+    slug: extract-job-details-dribbble
+    summary: >-
+      Dribbble jobs scraper extracts design job titles, companies, locations, and job details.
+    category: Web Scraping
+    level: Intermediate
+    tags: [job, dribbble, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: DuckDuckGo Related Searches
+    slug: extract-related-search-results-duckduckgo
+    summary: >-
+      DuckDuckGo scraper extracts related search suggestions for SEO and content research.
+    category: Web Scraping
+    level: Intermediate
+    tags: [related, duckduckgo, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: DuckDuckGo Scraper
     slug: duckduckgo-scraper
     summary: >-
@@ -333,6 +580,19 @@ templates:
     author: Robomotion
     created: "2025-12-07"
     updated: "2025-12-07"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: DuckDuckGo Search Results
+    slug: scrape-duckduckgo-search-results
+    summary: >-
+      DuckDuckGo scraper extracts search results, ads, titles, descriptions, and positions.
+    category: Web Scraping
+    level: Intermediate
+    tags: [duckduckgo, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -348,6 +608,71 @@ templates:
     author: Robomotion
     created: "2025-11-16"
     updated: "2025-11-16"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: eBay Product Listings
+    slug: scrape-product-list-from-ebay
+    summary: >-
+      eBay scraper that extracts item titles, prices, images, and links from eBay search results.
+    category: Web Scraping
+    level: Intermediate
+    tags: [product, ebay, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Envato Elements Video Templates
+    slug: extract-envato-elements-video-template-search-results
+    summary: >-
+      Extract Envato Elements video templates from search results with titles, creators, and direct links.
+    category: Web Scraping
+    level: Intermediate
+    tags: [envato, elements, video, template, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: ESPN Top Headlines
+    slug: extract-top-headlines-espn
+    summary: >-
+      ESPN top headlines scraper that extracts headline positions and links from ESPN's homepage.
+    category: Web Scraping
+    level: Intermediate
+    tags: [top, headlines, espn, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Eventbrite Event Details
+    slug: extract-online-event-details-eventbrite
+    summary: >-
+      Eventbrite scraper extracts event names, dates, times, locations, prices, and descriptions. Build event databases free.
+    category: Web Scraping
+    level: Intermediate
+    tags: [online, event, eventbrite, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Eventbrite Online Events
+    slug: scrape-eventbrite-online-events
+    summary: >-
+      Eventbrite scraper extracts event titles, images, and links from search results.
+    category: Web Scraping
+    level: Intermediate
+    tags: [eventbrite, online, events, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -421,6 +746,123 @@ templates:
     updated: "2025-12-10"
     screenshot: screenshot.png
     video_url: "https://www.youtube.com/watch?v=QrWmtATwOMo"
+    has_subflows: false
+
+  - name: Framer Template Details
+    slug: extract-framer-template-details
+    summary: >-
+      Extract Framer templates data - names, prices, creators, publish dates, features.
+    category: Web Scraping
+    level: Intermediate
+    tags: [framer, template, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Framer Templates by Category
+    slug: extract-templates-framer-category
+    summary: >-
+      Framer templates scraper extracting listings, pricing, creators, and images from category pages.
+    category: Web Scraping
+    level: Intermediate
+    tags: [templates, framer, category, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Freelancer.com Project Details
+    slug: extract-project-details-from-freelancer-com
+    summary: >-
+      Freelancer.com scraper that extracts project details, budgets, bid counts, and skills from project pages.
+    category: Web Scraping
+    level: Intermediate
+    tags: [project, freelancer, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Freelancer.com Projects
+    slug: extract-freelance-projects-from-freelancer-com
+    summary: >-
+      Freelancer.com scraper extracts project titles, budgets, bid counts, and skills from listings. No coding needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [freelance, projects, freelancer, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Future Tools Keyword Search
+    slug: extract-tools-keyword-future-tools
+    summary: >-
+      Future Tools AI directory scraper extracting tool listings, categories, and upvotes from keyword searches.
+    category: Web Scraping
+    level: Intermediate
+    tags: [tools, keyword, future, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Future Tools Tool Details
+    slug: extract-tool-details-future-tools
+    summary: >-
+      Extract AI tool details, pricing, upvotes & more from Future Tools. Research Future Tools AI data. No coding required.
+    category: Web Scraping
+    level: Intermediate
+    tags: [tool, future, tools, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Futurepedia AI Tool Details
+    slug: extract-ai-tool-details-futurepedia
+    summary: >-
+      Futurepedia scraper extracts AI tool details - name, pricing, ratings, pros, cons, and 19+ data fields. No code needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [ai, tool, futurepedia, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Futurepedia AI Tools by Category
+    slug: extract-ai-tools-futurepedia-categories
+    summary: >-
+      AI tools directory scraper for Futurepedia. Extract tool data including ratings, categories, and links.
+    category: Web Scraping
+    level: Intermediate
+    tags: [ai, tools, futurepedia, categories, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Futurepedia Trending AI Tools
+    slug: extract-trending-ai-tools-futurepedia
+    summary: >-
+      Futurepedia AI tools scraper extracts trending tool listings with ratings, categories, and pricing.
+    category: Web Scraping
+    level: Intermediate
+    tags: [trending, ai, tools, futurepedia, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
     has_subflows: false
 
   - name: Generic Chat Assistant
@@ -552,6 +994,71 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Ghost Experts Directory
+    slug: extract-experts-ghost
+    summary: >-
+      Ghost experts directory scraper extracts names, images, and profile links from Ghost's official listings.
+    category: Web Scraping
+    level: Intermediate
+    tags: [experts, ghost, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Ghost Explore Creator Search
+    slug: extract-creators-search-ghost-explore-page
+    summary: >-
+      Ghost scraper extracting creator listings from Ghost Explore. Get positions, titles, images, categories, members, MRR.
+    category: Web Scraping
+    level: Intermediate
+    tags: [creators, ghost, explore, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Ghost Explore Creators by Topic
+    slug: extract-creators-topic-ghost-explore-page
+    summary: >-
+      Ghost Explore scraper extracts creators, descriptions, websites, MRR and member data from topic pages. No API needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [creators, topic, ghost, explore, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Ghost Integrations
+    slug: extract-integrations-ghost
+    summary: >-
+      Ghost integrations scraper extracts tool names, positions, and links from Ghost's directory.
+    category: Web Scraping
+    level: Intermediate
+    tags: [integrations, ghost, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Ghost Theme Marketplace
+    slug: extract-themes-ghost-marketplace
+    summary: >-
+      Ghost themes marketplace scraper extracting listings, pricing, and preview images.
+    category: Web Scraping
+    level: Intermediate
+    tags: [themes, ghost, marketplace, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: GUI Testing Calculator
     slug: gui-testing-calculator
     summary: >-
@@ -566,6 +1073,32 @@ templates:
     screenshot: screenshot.png
     has_subflows: true
 
+  - name: Hacker News Front Page
+    slug: extract-news-items-hacker-news
+    summary: >-
+      Extract hacker news posts from the front page into structured data. Track tech trends free with Browse AI.
+    category: Web Scraping
+    level: Intermediate
+    tags: [news, items, hacker, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Hacker News Keyword Search
+    slug: extract-news-items-by-keyword-hacker-news
+    summary: >-
+      Hacker News scraper extracting keyword-filtered posts and discussions.
+    category: Web Scraping
+    level: Intermediate
+    tags: [news, items, keyword, hacker, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Handle Errors
     slug: handle-errors
     summary: >-
@@ -578,6 +1111,84 @@ templates:
     author: Robomotion
     created: "2025-11-16"
     updated: "2025-11-16"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: IFTTT Services
+    slug: extract-services-list-ifttt
+    summary: >-
+      IFTTT integrations scraper extracts services, positions, URLs, and images. Map automation platforms.
+    category: Web Scraping
+    level: Intermediate
+    tags: [services, ifttt, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: IMDb Box Office
+    slug: extract-top-box-office-movies-imdb
+    summary: >-
+      IMDb box office scraper extracting movie rankings, ratings, and earnings data.
+    category: Web Scraping
+    level: Intermediate
+    tags: [top, box, office, movies, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: IMDb Popular Movies by Genre
+    slug: extract-popular-movies-genre-imdb
+    summary: >-
+      IMDb scraper that extracts popular movies, ratings, and detailed data from genre pages.
+    category: Web Scraping
+    level: Intermediate
+    tags: [popular, movies, genre, imdb, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: IMDb Upcoming Releases
+    slug: extract-upcoming-movie-releases-imdb
+    summary: >-
+      IMDb upcoming movies scraper extracting titles, cast info, genres, and posters.
+    category: Web Scraping
+    level: Intermediate
+    tags: [upcoming, movie, releases, imdb, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Indie Hackers Group Posts
+    slug: extract-group-posts-indie-hackers
+    summary: >-
+      Indie Hackers groups scraper extracts post titles, authors, upvotes, and dates. No coding.
+    category: Web Scraping
+    level: Intermediate
+    tags: [group, posts, indie, hackers, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Indie Hackers Posts
+    slug: scrape-posts-indie-hackers
+    summary: >-
+      Indie Hackers scraper that extracts post titles, authors, upvotes, and comments from the startup community.
+    category: Web Scraping
+    level: Intermediate
+    tags: [posts, indie, hackers, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -611,6 +1222,32 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: JustRemote Job Details
+    slug: extract-job-details-justremote
+    summary: >-
+      JustRemote job scraper extracts remote job titles, companies, types, locations, and salaries.
+    category: Web Scraping
+    level: Intermediate
+    tags: [job, justremote, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: JustRemote Jobs
+    slug: extract-jobs-justremote
+    summary: >-
+      JustRemote jobs scraper extracts verified remote job titles, companies, and dates.
+    category: Web Scraping
+    level: Intermediate
+    tags: [jobs, justremote, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Launch Excel
     slug: launch-excel
     summary: >-
@@ -639,6 +1276,32 @@ templates:
     screenshot: screenshot.png
     has_subflows: true
 
+  - name: Lever Careers Page Jobs
+    slug: extract-jobs-company-lever-page
+    summary: >-
+      Lever careers page scraper that extracts job titles, employment types, and locations.
+    category: Web Scraping
+    level: Intermediate
+    tags: [jobs, company, lever, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Lever Job Details
+    slug: extract-details-single-job-lever
+    summary: >-
+      Lever job scraper extracts titles, descriptions, requirements, and locations from Lever career pages.
+    category: Web Scraping
+    level: Intermediate
+    tags: [job, lever, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Manipulate Excel Data Using SQL
     slug: manipulate-excel-data-using-sql
     summary: >-
@@ -653,6 +1316,19 @@ templates:
     updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
+
+  - name: Meetup Events Near Location
+    slug: scrape-meetup-events-near-location
+    summary: >-
+      Meetup scraper extracts event names, groups, dates, attendee counts, and spots left from Meetup search results.
+    category: Web Scraping
+    level: Intermediate
+    tags: [meetup, events, near, location, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
 
   - name: Merge CSV
     slug: merge-csv
@@ -695,6 +1371,19 @@ templates:
     updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
+
+  - name: n8n Integrations
+    slug: extract-integrations-list-n8n
+    summary: >-
+      N8n integrations scraper extracting app names, links, and logos from N8n's directory.
+    category: Web Scraping
+    level: Intermediate
+    tags: [integrations, n8n, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
 
   - name: Open a Folder
     slug: open-a-folder
@@ -739,6 +1428,19 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Pipedream Integrations
+    slug: extract-integrations-pipedream
+    summary: >-
+      Pipedream integrations scraper that extracts app names, descriptions, and logos.
+    category: Web Scraping
+    level: Intermediate
+    tags: [integrations, pipedream, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Print Current Week's Calendar
     slug: print-current-weeks-calendar
     summary: >-
@@ -766,6 +1468,45 @@ templates:
     updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
+
+  - name: ProBlogger Job Board
+    slug: extract-jobs-problogger
+    summary: >-
+      ProBlogger job board scraper extracting writing job titles, locations, and listings.
+    category: Web Scraping
+    level: Intermediate
+    tags: [jobs, problogger, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: ProBlogger Job Details
+    slug: extract-job-details-problogger
+    summary: >-
+      ProBlogger jobs scraper extracts writing job titles, locations, and employer details.
+    category: Web Scraping
+    level: Intermediate
+    tags: [job, problogger, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: PubMed Medical Citations
+    slug: extract-medical-citations-pubmed
+    summary: >-
+      PubMed scraper that extracts medical citations, authors, and abstracts.
+    category: Web Scraping
+    level: Intermediate
+    tags: [medical, citations, pubmed, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
 
   - name: Read From Clipboard
     slug: read-from-clipboard
@@ -795,6 +1536,71 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Reddit Homepage & Subreddit Post Scraper
+    slug: scrape-reddit-post-homepage-subreddit
+    summary: >-
+      Reddit post scraper extracts titles, authors, upvotes, comments, and position from homepage or subreddits.
+    category: Web Scraping
+    level: Intermediate
+    tags: [reddit, post, homepage, subreddit, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Redfin Property Details
+    slug: scrape-property-details-redfin
+    summary: >-
+      Redfin property details scraper that extracts address, price, beds, baths, sqft, year built, and home facts from listings.
+    category: Web Scraping
+    level: Intermediate
+    tags: [property, redfin, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Redfin Property Listings
+    slug: scrape-list-properties-redfin
+    summary: >-
+      Redfin scraper that extracts property listings, prices, beds, baths, square footage, images and links from search results.
+    category: Web Scraping
+    level: Intermediate
+    tags: [properties, redfin, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: RemoteOK Job Details
+    slug: scrape-job-posting-details-remoteok
+    summary: >-
+      RemoteOK job scraper extracting titles, salaries, tags, locations, and company links from remote job listings.
+    category: Web Scraping
+    level: Intermediate
+    tags: [job, posting, remoteok, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: RemoteOK Job Listings
+    slug: scrape-job-postings-list-remoteok
+    summary: >-
+      RemoteOK job listings scraper extracts job titles, companies, salaries, tags, and logos.
+    category: Web Scraping
+    level: Intermediate
+    tags: [job, postings, remoteok, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: REST API
     slug: rest-api
     summary: >-
@@ -806,6 +1612,19 @@ templates:
     author: Robomotion
     created: "2025-11-17"
     updated: "2025-11-17"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Rightmove Estate Agents
+    slug: extract-real-estate-agents-rightmove
+    summary: >-
+      Rightmove agent scraper extracts estate agent names, phone numbers, service types, and logos.
+    category: Web Scraping
+    level: Intermediate
+    tags: [real, estate, agents, rightmove, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -851,6 +1670,58 @@ templates:
     screenshot: screenshot.png
     has_subflows: true
 
+  - name: SEEK Business Courses
+    slug: extract-courses-seek-business
+    summary: >-
+      SEEK job scraper extracts business listings - titles, salaries, employers. No API needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [courses, seek, business, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: SEEK Businesses for Sale
+    slug: extract-businesses-sale-from-seek-business
+    summary: >-
+      SEEK Business scraper extracts listings with prices, locations, and descriptions. Build deal databases. No code needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [businesses, sale, seek, business, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: SEEK Job Details
+    slug: scrape-job-posting-details-seek
+    summary: >-
+      Seek.com scraper extracts job titles, company names, descriptions, and posting details from Seek job postings.
+    category: Web Scraping
+    level: Intermediate
+    tags: [job, posting, seek, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: SEEK Job Listings
+    slug: extract-job-postings-list-seek
+    summary: >-
+      SEEK jobs scraper extracts job titles, salaries, and company details from Australia's largest job board.
+    category: Web Scraping
+    level: Intermediate
+    tags: [job, postings, seek, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Send GET Request
     slug: send-get-request
     summary: >-
@@ -893,6 +1764,58 @@ templates:
     updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
+
+  - name: Similarweb Top Websites
+    slug: extract-top-ranking-websites-similarweb
+    summary: >-
+      Similarweb top websites scraper extracting rankings, visit metrics, and category data.
+    category: Web Scraping
+    level: Intermediate
+    tags: [top, ranking, websites, similarweb, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Similarweb Trending Websites
+    slug: extract-trending-websites-similarweb
+    summary: >-
+      Scrape Similarweb trending websites for rising domains and traffic growth data.
+    category: Web Scraping
+    level: Intermediate
+    tags: [trending, websites, similarweb, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Sitemap Index Links
+    slug: extract-sitemap-links-sitemap-index
+    summary: >-
+      Sitemap extractor that pulls positions, URLs, and last modified dates from XML sitemaps and sitemap index files.
+    category: Web Scraping
+    level: Beginner
+    tags: [sitemap, links, index, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Sitemap URL Set
+    slug: extract-urls-sitemap-url-set
+    summary: >-
+      Sitemap URL extractor that pulls every page URL position, loc, and lastmod from XML sitemaps.
+    category: Web Scraping
+    level: Beginner
+    tags: [urls, sitemap, url, set, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
 
   - name: Sort Lines of a Text File
     slug: sort-lines-of-text-file
@@ -983,6 +1906,45 @@ templates:
     video_url: "https://www.youtube.com/watch?v=G2Cp1nW5Plc"
     has_subflows: false
 
+  - name: Substack Archive Posts
+    slug: extract-stories-substack-publication-archive
+    summary: >-
+      Substack scraper extracts posts, dates, engagement data, and images from archives.
+    category: Web Scraping
+    level: Intermediate
+    tags: [stories, substack, publication, archive, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Substack Post Search
+    slug: extract-posts-search-substack
+    summary: >-
+      Substack search scraper extracts posts, writers, and publication data.
+    category: Web Scraping
+    level: Intermediate
+    tags: [posts, substack, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Substack Top Posts
+    slug: extract-top-posts-substack-publication
+    summary: >-
+      Substack top posts scraper extracts highest-performing newsletter content with engagement metrics.
+    category: Web Scraping
+    level: Intermediate
+    tags: [top, posts, substack, publication, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Take Screenshot of a Web Page
     slug: take-screenshot-of-web-page
     summary: >-
@@ -1010,6 +1972,71 @@ templates:
     updated: "2025-11-17"
     screenshot: screenshot.png
     has_subflows: true
+
+  - name: Trendyol Product Details
+    slug: extract-product-detail-page-trendyol
+    summary: >-
+      Trendyol scraper extracts product details, prices, ratings, reviews, and materials.
+    category: Web Scraping
+    level: Intermediate
+    tags: [product, trendyol, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Trendyol Product Listings
+    slug: extract-product-listings-trendyol
+    summary: >-
+      Scrape Trendyol products from search and category pages. Get position, price, discount, image, and links.
+    category: Web Scraping
+    level: Intermediate
+    tags: [product, listings, trendyol, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Udemy Course Details
+    slug: extract-course-details-udemy
+    summary: >-
+      Udemy scraper extracts course titles, ratings, reviews, prices, and more. No API key needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [course, udemy, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Udemy Course Reviews
+    slug: extract-course-reviews-udemy
+    summary: >-
+      Udemy review scraper extracts student feedback - course names, ratings, text, and dates. No API needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [course, reviews, udemy, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Udemy Courses by Topic
+    slug: extract-courses-topic-udemy
+    summary: >-
+      Scrape Udemy courses by topic - get titles, descriptions, ratings, enrollments, prices & more from category pages. No API key needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [courses, topic, udemy, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
 
   - name: Use Conditionals to Check if File Exists
     slug: use-conditionals-to-check-if-file-exists
@@ -1081,6 +2108,32 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: We Work Remotely Job Details
+    slug: extract-job-details-we-work-remotely
+    summary: >-
+      We Work Remotely scraper extracts remote job listings with titles, companies, types, locations, and links.
+    category: Web Scraping
+    level: Intermediate
+    tags: [job, we, work, remotely, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: We Work Remotely Jobs
+    slug: extract-jobs-we-work-remotely
+    summary: >-
+      We Work Remotely jobs scraper that extracts remote job listings with titles, companies, and types in bulk from search results.
+    category: Web Scraping
+    level: Intermediate
+    tags: [jobs, we, work, remotely, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Web Element To PDF
     slug: web-element-to-pdf
     summary: >-
@@ -1095,6 +2148,123 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Webpage Headings & Paragraphs
+    slug: extract-headings-paragraphs-from-webpage
+    summary: >-
+      Extract headings, paragraphs, and images from any webpage. Get H1, H3 tags, body text, and image URLs.
+    category: Web Scraping
+    level: Beginner
+    tags: [headings, paragraphs, webpage, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Webpage HTML & Screenshot
+    slug: extract-html-screenshot-from-webpage
+    summary: >-
+      HTML scraper that extracts source code from any webpage instantly. No coding needed.
+    category: Web Scraping
+    level: Beginner
+    tags: [html, screenshot, webpage, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Webpage Text & Full-Page Screenshot
+    slug: extract-full-text-screenshot-from-webpage
+    summary: >-
+      Extract text from any website and capture a full-page screenshot. No code needed.
+    category: Web Scraping
+    level: Beginner
+    tags: [full, text, screenshot, webpage, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: WordPress Theme Search
+    slug: extract-wordpress-themes-search-results
+    summary: >-
+      WordPress themes directory scraper extracting theme names, links, and images from search results.
+    category: Web Scraping
+    level: Intermediate
+    tags: [wordpress, themes, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: WordPress.org Plugin Search
+    slug: extract-search-results-plugins-wordpress-org
+    summary: >-
+      WordPress.org plugins scraper: extract listings, install counts, ratings & data.
+    category: Web Scraping
+    level: Intermediate
+    tags: [plugins, wordpress, org, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Workable Job Details
+    slug: extract-job-post-details-workable
+    summary: >-
+      Workable jobs scraper extracting job titles, descriptions, requirements, and company details.
+    category: Web Scraping
+    level: Intermediate
+    tags: [job, post, workable, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Workable Job Search
+    slug: extract-search-results-workable
+    summary: >-
+      Workable job scraper extracts job listings, links, and hiring data from search results.
+    category: Web Scraping
+    level: Intermediate
+    tags: [workable, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Working Nomads Job Details
+    slug: extract-job-details-working-nomads
+    summary: >-
+      Working Nomads scraper extracts job titles, companies, locations, and details from the digital nomad job board.
+    category: Web Scraping
+    level: Intermediate
+    tags: [job, working, nomads, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Working Nomads Jobs
+    slug: extract-jobs-working-nomads
+    summary: >-
+      Working Nomads job board scraper extracts location-independent job listings in bulk. No coding required.
+    category: Web Scraping
+    level: Intermediate
+    tags: [jobs, working, nomads, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Write To Clipboard
     slug: write-to-clipboard
     summary: >-
@@ -1106,5 +2276,200 @@ templates:
     author: Robomotion
     created: "2025-11-17"
     updated: "2025-11-17"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Y Combinator Company Details
+    slug: extract-company-details-y-combinator
+    summary: >-
+      Y Combinator scraper that extracts startup profiles - names, batch years, team sizes, and details. No API key needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [company, y, combinator, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Y Combinator Jobs
+    slug: extract-job-postings-y-combinator
+    summary: >-
+      Y Combinator jobs scraper extracting startup job titles, companies, locations, and employment types.
+    category: Web Scraping
+    level: Intermediate
+    tags: [job, postings, y, combinator, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Y Combinator Startup Directory
+    slug: extract-companies-yc-startup-directory
+    summary: >-
+      Y Combinator startup directory scraper that extracts company names, descriptions, locations, and batch data. No code needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [companies, yc, startup, directory, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: YouTube Channel Info
+    slug: extract-channel-info-youtube
+    summary: >-
+      YouTube channel scraper extracts subscribers, views, videos, IDs, logos & descriptions. No API key needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [channel, youtube, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: YouTube Channel Live Streams
+    slug: extract-channel-lives-youtube
+    summary: >-
+      YouTube live stream scraper that extracts stream titles, dates, viewer counts, and durations from any channel. No API key needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [channel, lives, youtube, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: YouTube Channel Playlists
+    slug: extract-channel-playlists-youtube
+    summary: >-
+      YouTube playlist scraper that extracts titles, video counts, and images from any channel. No API key needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [channel, playlists, youtube, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: YouTube Channel Search
+    slug: extract-channels-search-page-youtube
+    summary: >-
+      Scrape YouTube search results for channels - names, subscribers, and descriptions. No API key needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [channels, youtube, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: YouTube Channel Shorts
+    slug: extract-channel-shorts-youtube
+    summary: >-
+      YouTube Shorts scraper that extracts positions, titles, and views from any channel. No API key needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [channel, shorts, youtube, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: YouTube Channel Videos
+    slug: extract-videos-youtube-channel
+    summary: >-
+      YouTube channel scraper extracts video titles, views, dates, and links from any channel.
+    category: Web Scraping
+    level: Intermediate
+    tags: [videos, youtube, channel, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: YouTube Video Comments
+    slug: extract-comments-video-from-youtube
+    summary: >-
+      YouTube comments scraper that extracts comment text, likes, authors, and timestamps from any video. No API key needed.
+    category: Web Scraping
+    level: Intermediate
+    tags: [comments, video, youtube, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: YouTube Video Info
+    slug: scrape-youtube-video-info
+    summary: >-
+      YouTube video scraper extracting titles, views, likes, channel info, descriptions, tags, and metadata.
+    category: Web Scraping
+    level: Intermediate
+    tags: [youtube, video, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: YouTube Video Search
+    slug: scrape-video-search-result-youtube
+    summary: >-
+      YouTube search scraper extracts video titles, channels, views, dates, descriptions & more. No coding required.
+    category: Web Scraping
+    level: Intermediate
+    tags: [video, youtube, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: YouTube Video Transcript
+    slug: extract-video-transcript-from-youtube
+    summary: >-
+      YouTube transcript extractor that pulls full video text and timestamps from any video.
+    category: Web Scraping
+    level: Intermediate
+    tags: [video, transcript, youtube, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Zapier App Details
+    slug: scrape-app-details-zapier
+    summary: >-
+      Zapier app directory scraper extracting integration details, triggers, actions, and workflow data.
+    category: Web Scraping
+    level: Intermediate
+    tags: [app, zapier, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Zapier Apps Directory
+    slug: scrape-apps-list-zapier
+    summary: >-
+      Zapier apps list scraper extracting app names, positions, logos, and links.
+    category: Web Scraping
+    level: Intermediate
+    tags: [apps, zapier, scraping]
+    author: Robomotion
+    created: "2026-05-23"
+    updated: "2026-05-23"
     screenshot: screenshot.png
     has_subflows: false

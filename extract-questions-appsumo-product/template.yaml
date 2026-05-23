@@ -1,0 +1,14 @@
+name: AppSumo Product Questions
+slug: extract-questions-appsumo-product
+summary: >-
+  AppSumo scraper that extracts product questions, users, and links.
+category: Web Scraping
+level: Intermediate
+tags: [questions, appsumo, product, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: d4e5f6
+schema_version: 1

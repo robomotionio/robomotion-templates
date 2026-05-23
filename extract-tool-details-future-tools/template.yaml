@@ -1,0 +1,14 @@
+name: Future Tools Tool Details
+slug: extract-tool-details-future-tools
+summary: >-
+  Extract AI tool details, pricing, upvotes & more from Future Tools. Research Future Tools AI data. No coding required.
+category: Web Scraping
+level: Intermediate
+tags: [tool, future, tools, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: y6z7a8
+schema_version: 1

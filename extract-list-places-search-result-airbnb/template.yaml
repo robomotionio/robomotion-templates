@@ -1,0 +1,14 @@
+name: Airbnb Search Results
+slug: extract-list-places-search-result-airbnb
+summary: >-
+  Airbnb data scraper that extracts listing titles, prices, ratings, and locations from search results.
+category: Web Scraping
+level: Intermediate
+tags: [places, airbnb, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: l3m4n5
+schema_version: 1

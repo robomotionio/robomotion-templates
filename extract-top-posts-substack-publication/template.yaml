@@ -1,0 +1,14 @@
+name: Substack Top Posts
+slug: extract-top-posts-substack-publication
+summary: >-
+  Substack top posts scraper extracts highest-performing newsletter content with engagement metrics.
+category: Web Scraping
+level: Intermediate
+tags: [top, posts, substack, publication, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1b2c3
+schema_version: 1

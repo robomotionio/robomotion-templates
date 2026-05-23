@@ -1,0 +1,14 @@
+name: Ghost Explore Creator Search
+slug: extract-creators-search-ghost-explore-page
+summary: >-
+  Ghost scraper extracting creator listings from Ghost Explore. Get positions, titles, images, categories, members, MRR.
+category: Web Scraping
+level: Intermediate
+tags: [creators, ghost, explore, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1b2c6
+schema_version: 1

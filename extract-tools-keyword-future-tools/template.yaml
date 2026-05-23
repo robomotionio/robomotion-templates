@@ -1,0 +1,14 @@
+name: Future Tools Keyword Search
+slug: extract-tools-keyword-future-tools
+summary: >-
+  Future Tools AI directory scraper extracting tool listings, categories, and upvotes from keyword searches.
+category: Web Scraping
+level: Intermediate
+tags: [tools, keyword, future, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: x5y6z7
+schema_version: 1

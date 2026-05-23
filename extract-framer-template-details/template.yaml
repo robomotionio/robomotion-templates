@@ -1,0 +1,14 @@
+name: Framer Template Details
+slug: extract-framer-template-details
+summary: >-
+  Extract Framer templates data - names, prices, creators, publish dates, features.
+category: Web Scraping
+level: Intermediate
+tags: [framer, template, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: m0n1o2p
+schema_version: 1

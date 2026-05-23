@@ -1,0 +1,14 @@
+name: Meetup Events Near Location
+slug: scrape-meetup-events-near-location
+summary: >-
+  Meetup scraper extracts event names, groups, dates, attendee counts, and spots left from Meetup search results.
+category: Web Scraping
+level: Intermediate
+tags: [meetup, events, near, location, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: o6p7q8
+schema_version: 1

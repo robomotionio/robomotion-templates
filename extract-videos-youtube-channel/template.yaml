@@ -1,0 +1,14 @@
+name: YouTube Channel Videos
+slug: extract-videos-youtube-channel
+summary: >-
+  YouTube channel scraper extracts video titles, views, dates, and links from any channel.
+category: Web Scraping
+level: Intermediate
+tags: [videos, youtube, channel, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: w0x1y2z
+schema_version: 1

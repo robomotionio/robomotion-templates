@@ -1,0 +1,14 @@
+name: SEEK Businesses for Sale
+slug: extract-businesses-sale-from-seek-business
+summary: >-
+  SEEK Business scraper extracts listings with prices, locations, and descriptions. Build deal databases. No code needed.
+category: Web Scraping
+level: Intermediate
+tags: [businesses, sale, seek, business, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: s4k5b6s
+schema_version: 1

@@ -1,0 +1,14 @@
+name: n8n Integrations
+slug: extract-integrations-list-n8n
+summary: >-
+  N8n integrations scraper extracting app names, links, and logos from N8n's directory.
+category: Web Scraping
+level: Intermediate
+tags: [integrations, n8n, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: f3g4h5i
+schema_version: 1

@@ -1,0 +1,14 @@
+name: ProBlogger Job Details
+slug: extract-job-details-problogger
+summary: >-
+  ProBlogger jobs scraper extracts writing job titles, locations, and employer details.
+category: Web Scraping
+level: Intermediate
+tags: [job, problogger, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1c005
+schema_version: 1

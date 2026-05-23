@@ -1,0 +1,14 @@
+name: YouTube Channel Playlists
+slug: extract-channel-playlists-youtube
+summary: >-
+  YouTube playlist scraper that extracts titles, video counts, and images from any channel. No API key needed.
+category: Web Scraping
+level: Intermediate
+tags: [channel, playlists, youtube, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: x1y2z3a
+schema_version: 1

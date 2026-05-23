@@ -1,0 +1,14 @@
+name: Framer Templates by Category
+slug: extract-templates-framer-category
+summary: >-
+  Framer templates scraper extracting listings, pricing, creators, and images from category pages.
+category: Web Scraping
+level: Intermediate
+tags: [templates, framer, category, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: k8l9m0n
+schema_version: 1

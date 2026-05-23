@@ -1,0 +1,14 @@
+name: Lever Careers Page Jobs
+slug: extract-jobs-company-lever-page
+summary: >-
+  Lever careers page scraper that extracts job titles, employment types, and locations.
+category: Web Scraping
+level: Intermediate
+tags: [jobs, company, lever, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1b2cd
+schema_version: 1

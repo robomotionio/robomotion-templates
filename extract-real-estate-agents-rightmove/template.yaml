@@ -1,0 +1,14 @@
+name: Rightmove Estate Agents
+slug: extract-real-estate-agents-rightmove
+summary: >-
+  Rightmove agent scraper extracts estate agent names, phone numbers, service types, and logos.
+category: Web Scraping
+level: Intermediate
+tags: [real, estate, agents, rightmove, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: j1k2l3
+schema_version: 1

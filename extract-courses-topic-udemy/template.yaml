@@ -1,0 +1,14 @@
+name: Udemy Courses by Topic
+slug: extract-courses-topic-udemy
+summary: >-
+  Scrape Udemy courses by topic - get titles, descriptions, ratings, enrollments, prices & more from category pages. No API key needed.
+category: Web Scraping
+level: Intermediate
+tags: [courses, topic, udemy, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: l9m0n1o
+schema_version: 1

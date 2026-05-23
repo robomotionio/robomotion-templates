@@ -1,0 +1,14 @@
+name: Zapier Apps Directory
+slug: scrape-apps-list-zapier
+summary: >-
+  Zapier apps list scraper extracting app names, positions, logos, and links.
+category: Web Scraping
+level: Intermediate
+tags: [apps, zapier, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: c0d1e2f
+schema_version: 1

@@ -1,0 +1,14 @@
+name: WordPress.org Plugin Search
+slug: extract-search-results-plugins-wordpress-org
+summary: >-
+  WordPress.org plugins scraper: extract listings, install counts, ratings & data.
+category: Web Scraping
+level: Intermediate
+tags: [plugins, wordpress, org, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: i6j7k8l
+schema_version: 1

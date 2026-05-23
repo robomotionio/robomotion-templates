@@ -1,0 +1,14 @@
+name: YouTube Video Search
+slug: scrape-video-search-result-youtube
+summary: >-
+  YouTube search scraper extracts video titles, channels, views, dates, descriptions & more. No coding required.
+category: Web Scraping
+level: Intermediate
+tags: [video, youtube, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: v9w0x1y
+schema_version: 1

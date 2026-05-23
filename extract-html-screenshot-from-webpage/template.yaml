@@ -1,0 +1,14 @@
+name: Webpage HTML & Screenshot
+slug: extract-html-screenshot-from-webpage
+summary: >-
+  HTML scraper that extracts source code from any webpage instantly. No coding needed.
+category: Web Scraping
+level: Beginner
+tags: [html, screenshot, webpage, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 
+schema_version: 1

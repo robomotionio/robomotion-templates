@@ -1,0 +1,14 @@
+name: Working Nomads Jobs
+slug: extract-jobs-working-nomads
+summary: >-
+  Working Nomads job board scraper extracts location-independent job listings in bulk. No coding required.
+category: Web Scraping
+level: Intermediate
+tags: [jobs, working, nomads, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1b2d4
+schema_version: 1

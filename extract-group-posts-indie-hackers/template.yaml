@@ -1,0 +1,14 @@
+name: Indie Hackers Group Posts
+slug: extract-group-posts-indie-hackers
+summary: >-
+  Indie Hackers groups scraper extracts post titles, authors, upvotes, and dates. No coding.
+category: Web Scraping
+level: Intermediate
+tags: [group, posts, indie, hackers, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1b2cb
+schema_version: 1

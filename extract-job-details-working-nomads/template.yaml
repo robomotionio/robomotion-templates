@@ -1,0 +1,14 @@
+name: Working Nomads Job Details
+slug: extract-job-details-working-nomads
+summary: >-
+  Working Nomads scraper extracts job titles, companies, locations, and details from the digital nomad job board.
+category: Web Scraping
+level: Intermediate
+tags: [job, working, nomads, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1c004
+schema_version: 1

@@ -1,0 +1,14 @@
+name: PubMed Medical Citations
+slug: extract-medical-citations-pubmed
+summary: >-
+  PubMed scraper that extracts medical citations, authors, and abstracts.
+category: Web Scraping
+level: Intermediate
+tags: [medical, citations, pubmed, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: q4r5s6t
+schema_version: 1

@@ -1,0 +1,14 @@
+name: Zapier App Details
+slug: scrape-app-details-zapier
+summary: >-
+  Zapier app directory scraper extracting integration details, triggers, actions, and workflow data.
+category: Web Scraping
+level: Intermediate
+tags: [app, zapier, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: d1e2f3g
+schema_version: 1

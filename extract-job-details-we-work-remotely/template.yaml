@@ -1,0 +1,14 @@
+name: We Work Remotely Job Details
+slug: extract-job-details-we-work-remotely
+summary: >-
+  We Work Remotely scraper extracts remote job listings with titles, companies, types, locations, and links.
+category: Web Scraping
+level: Intermediate
+tags: [job, we, work, remotely, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1c003
+schema_version: 1

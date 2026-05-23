@@ -1,0 +1,14 @@
+name: Redfin Property Details
+slug: scrape-property-details-redfin
+summary: >-
+  Redfin property details scraper that extracts address, price, beds, baths, sqft, year built, and home facts from listings.
+category: Web Scraping
+level: Intermediate
+tags: [property, redfin, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: i0j1k2
+schema_version: 1

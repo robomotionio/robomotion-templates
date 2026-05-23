@@ -1,0 +1,14 @@
+name: Similarweb Top Websites
+slug: extract-top-ranking-websites-similarweb
+summary: >-
+  Similarweb top websites scraper extracting rankings, visit metrics, and category data.
+category: Web Scraping
+level: Intermediate
+tags: [top, ranking, websites, similarweb, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1b2ce
+schema_version: 1

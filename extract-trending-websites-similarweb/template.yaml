@@ -1,0 +1,14 @@
+name: Similarweb Trending Websites
+slug: extract-trending-websites-similarweb
+summary: >-
+  Scrape Similarweb trending websites for rising domains and traffic growth data.
+category: Web Scraping
+level: Intermediate
+tags: [trending, websites, similarweb, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: s2w3t4r
+schema_version: 1

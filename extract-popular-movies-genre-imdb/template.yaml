@@ -1,0 +1,14 @@
+name: IMDb Popular Movies by Genre
+slug: extract-popular-movies-genre-imdb
+summary: >-
+  IMDb scraper that extracts popular movies, ratings, and detailed data from genre pages.
+category: Web Scraping
+level: Intermediate
+tags: [popular, movies, genre, imdb, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1b2d0
+schema_version: 1

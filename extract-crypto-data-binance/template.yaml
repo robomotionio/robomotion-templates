@@ -1,0 +1,14 @@
+name: Binance Crypto Market Data
+slug: extract-crypto-data-binance
+summary: >-
+  Binance scraper extracts crypto prices, volumes, market caps, and rankings. No API key needed.
+category: Web Scraping
+level: Intermediate
+tags: [crypto, binance, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: c0d1e2
+schema_version: 1

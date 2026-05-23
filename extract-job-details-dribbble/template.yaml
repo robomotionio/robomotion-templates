@@ -1,0 +1,14 @@
+name: Dribbble Job Details
+slug: extract-job-details-dribbble
+summary: >-
+  Dribbble jobs scraper extracts design job titles, companies, locations, and job details.
+category: Web Scraping
+level: Intermediate
+tags: [job, dribbble, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1c006
+schema_version: 1

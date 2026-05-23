@@ -1,0 +1,14 @@
+name: Envato Elements Video Templates
+slug: extract-envato-elements-video-template-search-results
+summary: >-
+  Extract Envato Elements video templates from search results with titles, creators, and direct links.
+category: Web Scraping
+level: Intermediate
+tags: [envato, elements, video, template, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: n1o2p3q
+schema_version: 1

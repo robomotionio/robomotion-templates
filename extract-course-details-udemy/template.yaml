@@ -1,0 +1,14 @@
+name: Udemy Course Details
+slug: extract-course-details-udemy
+summary: >-
+  Udemy scraper extracts course titles, ratings, reviews, prices, and more. No API key needed.
+category: Web Scraping
+level: Intermediate
+tags: [course, udemy, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: o2p3q4r
+schema_version: 1

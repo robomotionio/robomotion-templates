@@ -1,0 +1,14 @@
+name: IMDb Upcoming Releases
+slug: extract-upcoming-movie-releases-imdb
+summary: >-
+  IMDb upcoming movies scraper extracting titles, cast info, genres, and posters.
+category: Web Scraping
+level: Intermediate
+tags: [upcoming, movie, releases, imdb, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1b2d1
+schema_version: 1

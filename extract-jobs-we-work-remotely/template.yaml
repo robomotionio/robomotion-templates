@@ -1,0 +1,14 @@
+name: We Work Remotely Jobs
+slug: extract-jobs-we-work-remotely
+summary: >-
+  We Work Remotely jobs scraper that extracts remote job listings with titles, companies, and types in bulk from search results.
+category: Web Scraping
+level: Intermediate
+tags: [jobs, we, work, remotely, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1b2d2
+schema_version: 1

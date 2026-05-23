@@ -1,0 +1,14 @@
+name: YouTube Channel Live Streams
+slug: extract-channel-lives-youtube
+summary: >-
+  YouTube live stream scraper that extracts stream titles, dates, viewer counts, and durations from any channel. No API key needed.
+category: Web Scraping
+level: Intermediate
+tags: [channel, lives, youtube, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: z3a4b5c
+schema_version: 1

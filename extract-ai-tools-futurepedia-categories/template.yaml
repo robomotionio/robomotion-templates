@@ -1,0 +1,14 @@
+name: Futurepedia AI Tools by Category
+slug: extract-ai-tools-futurepedia-categories
+summary: >-
+  AI tools directory scraper for Futurepedia. Extract tool data including ratings, categories, and links.
+category: Web Scraping
+level: Intermediate
+tags: [ai, tools, futurepedia, categories, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: b9c0d1
+schema_version: 1

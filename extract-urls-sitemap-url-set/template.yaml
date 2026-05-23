@@ -1,0 +1,14 @@
+name: Sitemap URL Set
+slug: extract-urls-sitemap-url-set
+summary: >-
+  Sitemap URL extractor that pulls every page URL position, loc, and lastmod from XML sitemaps.
+category: Web Scraping
+level: Beginner
+tags: [urls, sitemap, url, set, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 
+schema_version: 1

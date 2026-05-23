@@ -1,0 +1,14 @@
+name: JustRemote Job Details
+slug: extract-job-details-justremote
+summary: >-
+  JustRemote job scraper extracts remote job titles, companies, types, locations, and salaries.
+category: Web Scraping
+level: Intermediate
+tags: [job, justremote, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1c002
+schema_version: 1

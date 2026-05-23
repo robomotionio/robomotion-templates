@@ -1,0 +1,14 @@
+name: YouTube Channel Search
+slug: extract-channels-search-page-youtube
+summary: >-
+  Scrape YouTube search results for channels - names, subscribers, and descriptions. No API key needed.
+category: Web Scraping
+level: Intermediate
+tags: [channels, youtube, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a4b5c6d
+schema_version: 1

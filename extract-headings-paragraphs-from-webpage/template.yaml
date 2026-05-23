@@ -1,0 +1,14 @@
+name: Webpage Headings & Paragraphs
+slug: extract-headings-paragraphs-from-webpage
+summary: >-
+  Extract headings, paragraphs, and images from any webpage. Get H1, H3 tags, body text, and image URLs.
+category: Web Scraping
+level: Beginner
+tags: [headings, paragraphs, webpage, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: 
+schema_version: 1

@@ -1,0 +1,14 @@
+name: JustRemote Jobs
+slug: extract-jobs-justremote
+summary: >-
+  JustRemote jobs scraper extracts verified remote job titles, companies, and dates.
+category: Web Scraping
+level: Intermediate
+tags: [jobs, justremote, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: a1b2d5
+schema_version: 1

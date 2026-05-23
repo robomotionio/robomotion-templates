@@ -1,0 +1,14 @@
+name: WordPress Theme Search
+slug: extract-wordpress-themes-search-results
+summary: >-
+  WordPress themes directory scraper extracting theme names, links, and images from search results.
+category: Web Scraping
+level: Intermediate
+tags: [wordpress, themes, scraping]
+author: Robomotion
+created: "2026-05-23"
+updated: "2026-05-23"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: j7k8l9m
+schema_version: 1
