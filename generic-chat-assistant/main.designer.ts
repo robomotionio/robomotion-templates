@@ -1,6 +1,6 @@
 export default {
-  flowId: 'f08902d8-5831-4bc5-b612-a16bbef665d9',
-  sourceHash: 'c750065c',
+  flowId: '3fb6feaf-6f5a-4b32-a100-8f31ced922da',
+  sourceHash: '450253ce',
   positions: {
     '274314': { x: 1834, y: 354 },
     'c04699': { x: 427, y: 20 },
@@ -8,8 +8,11 @@ export default {
     'ecf3af': { x: 1056, y: 354 },
     'c223fe': { x: 1056, y: 261 },
     'f280e2': { x: 1281, y: 349 },
-    'ac82cf': { x: 1281, y: 230 },
+    '3d3702': { x: 1281, y: 230 },
     '9aa22e': { x: 1557, y: 349 },
+  },
+  cameraPositions: {
+    'main': { x: -322, y: 158, zoom: 1.04 },
   },
   nodeColors: {
     '4e9867': 'hsl(var(--comment-dark-gray))',
