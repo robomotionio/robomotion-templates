@@ -1,5 +1,6 @@
 name: Manipulate Excel Data Using SQL
 slug: manipulate-excel-data-using-sql
+featured: true
 summary: >-
   Loads Excel data into an in-memory SQL engine and runs a SELECT / UPDATE
   statement against it. Gives you database-level expressiveness over spreadsheet

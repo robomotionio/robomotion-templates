@@ -1,5 +1,6 @@
 name: Handle Errors
 slug: handle-errors
+featured: true
 summary: >-
   Shows how to throw and handle errors in a Robomotion flow. Prompts the user
   for a number greater than 100, validates the input, and demonstrates catching
