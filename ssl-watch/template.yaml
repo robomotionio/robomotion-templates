@@ -1,5 +1,6 @@
 name: SSL Watch
 slug: ssl-watch
+featured: true
 summary: >-
   SSL Watch is an automation that monitors domain expiration dates and SSL
   certificate validity using Robomotion's Monitoring package. It checks each

@@ -1,0 +1,21 @@
+name: Bulk Shipment Tracking Sweep
+slug: bulk-shipment-tracking-sweep
+summary: >-
+  Checks 200 shipment tracking numbers on a public carrier tracker using eight
+  parallel workers pulling from a shared in-memory queue. Reads the tracking
+  list straight from the carrier's bulk page, scrapes status, latest event and
+  ETA for each shipment, and writes a full status CSV plus an exceptions-only
+  CSV covering customs holds, failed deliveries and delays. No login required.
+category: Concurrency
+level: Advanced
+tags: [concurrency, fork-branch, memory-queue, web-scraping, logistics]
+author: Robomotion
+created: "2026-07-10"
+updated: "2026-07-10"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.MemoryQueue
+    version: "0.2.0"
+has_subflows: false
+flow_id: b5e1c07
+schema_version: 1

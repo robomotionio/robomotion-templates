@@ -161,6 +161,23 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Bulk Shipment Tracking Sweep
+    slug: bulk-shipment-tracking-sweep
+    summary: >-
+      Checks 200 shipment tracking numbers on a public carrier tracker using eight
+      parallel workers pulling from a shared in-memory queue. Reads the tracking
+      list straight from the carrier's bulk page, scrapes status, latest event and
+      ETA for each shipment, and writes a full status CSV plus an exceptions-only
+      CSV covering customs holds, failed deliveries and delays. No login required.
+    category: Concurrency
+    level: Advanced
+    tags: [concurrency, fork-branch, memory-queue, web-scraping, logistics]
+    author: Robomotion
+    created: "2026-07-10"
+    updated: "2026-07-10"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Calorie Coach Agent
     slug: calorie-coach-agent
     summary: >-
@@ -200,6 +217,24 @@ templates:
     author: Robomotion
     created: "2026-05-23"
     updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Clinic Eligibility Morning Run
+    slug: clinic-eligibility-morning-run
+    summary: >-
+      Verifies insurance for every appointment on a clinic's eligibility worklist,
+      running the payer checks on nine parallel browsers instead of one at a time.
+      Signs in, reads the worklist, fans out into workers that each claim an
+      appointment from a shared queue, click its eligibility check and read the
+      coverage answer. Writes a full status CSV plus a coverage-problems CSV listing
+      the lapsed and not-covered patients the front desk has to chase.
+    category: Concurrency
+    level: Advanced
+    tags: [concurrency, fork-branch, memory-queue, healthcare, web-automation]
+    author: Robomotion
+    created: "2026-07-10"
+    updated: "2026-07-10"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -442,6 +477,24 @@ templates:
     screenshot: screenshot.png
     has_subflows: true
 
+  - name: Denial Worklist Triage
+    slug: denial-worklist-triage
+    summary: >-
+      Works a clinic's denied insurance claims, choosing a different action for each
+      denial code: fix and resubmit the ones missing a field the chart already has,
+      write off what the payer will never cover, void duplicates of already-paid
+      claims, and escalate the ones that need a human to call the payer. Waits for
+      the resubmitted claims to be re-adjudicated, then reads each claim's real
+      status back off the table and writes denial-actions.csv.
+    category: Flow Control
+    level: Advanced
+    tags: [flow-control, switch, branching, healthcare, web-automation]
+    author: Robomotion
+    created: "2026-07-10"
+    updated: "2026-07-10"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Display JavaScript Output
     slug: display-javascript-output
     summary: >-
@@ -609,6 +662,24 @@ templates:
     author: Robomotion
     created: "2025-11-16"
     updated: "2025-11-16"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: E-Invoice Portal Harvest
+    slug: einvoice-portal-harvest
+    summary: >-
+      Downloads every e-invoice for a tax period from a government portal and builds
+      an index spreadsheet of what was collected. Signs in with a one-time code,
+      walks the paged register until the portal says there are no more pages, then
+      opens each document to read its government reference number and pull down both
+      the XML and the PDF. Every download is gated behind a confirmation dialog and
+      an "I am not a robot" checkbox.
+    category: Web Automation
+    level: Advanced
+    tags: [web-automation, downloads, pagination, two-factor, memory-queue]
+    author: Robomotion
+    created: "2026-07-10"
+    updated: "2026-07-10"
     screenshot: screenshot.png
     has_subflows: false
 

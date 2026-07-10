@@ -136,6 +136,7 @@ Every template declares a `level` (Beginner / Intermediate / Advanced) so you ca
 
 | Template | Level | Description |
 |----------|-------|-------------|
+| [E-Invoice Portal Harvest](einvoice-portal-harvest) | Advanced | Downloads every e-invoice for a tax period from a government portal and builds an index spreadsheet of what was collected. |
 | [Get Metadata of a Web Page](get-metadata-of-web-page) | Intermediate | Navigates to a URL, reads its title and meta tags, and returns them as structured data. |
 | [Open a Web Page](open-a-web-page) | Beginner | Launches a browser and navigates to a provided URL — the minimum viable browser-automation template. |
 | [Take Screenshot of a Web Page](take-screenshot-of-web-page) | Beginner | Opens a URL in a browser and saves a screenshot of the rendered page to disk. |
@@ -261,6 +262,7 @@ Every template declares a `level` (Beginner / Intermediate / Advanced) so you ca
 
 | Template | Level | Description |
 |----------|-------|-------------|
+| [Denial Worklist Triage](denial-worklist-triage) | Advanced | Works a clinic's denied insurance claims, choosing a different action for each denial code: fix and resubmit the ones missing a field the chart already has, write off what the payer will never cover, void duplicates of already-paid claims, and escalate the ones that need a human to call the payer. |
 | [Use Conditionals to Check if File Exists](use-conditionals-to-check-if-file-exists) | Beginner | Checks whether a given file is present on disk and routes the flow accordingly. |
 | [Use Labels to Check if File Exists](use-labels-to-check-if-file-exists) | Advanced | Uses Label and GoTo to structure a loop that rechecks file existence — a non-sequential flow pattern useful for polling. |
 | [Use Subflows to Check if File Exists](use-subflows-to-check-if-file-exists) | Intermediate | Encapsulates a "does this file exist? |
@@ -271,6 +273,8 @@ Every template declares a `level` (Beginner / Intermediate / Advanced) so you ca
 
 | Template | Level | Description |
 |----------|-------|-------------|
+| [Bulk Shipment Tracking Sweep](bulk-shipment-tracking-sweep) | Advanced | Checks 200 shipment tracking numbers on a public carrier tracker using eight parallel workers pulling from a shared in-memory queue. |
+| [Clinic Eligibility Morning Run](clinic-eligibility-morning-run) | Advanced | Verifies insurance for every appointment on a clinic's eligibility worklist, running the payer checks on nine parallel browsers instead of one at a time. |
 | [Fork Branch With Memory Queue](fork-branch-with-memory-queue) | Advanced | Demonstrates parallel browser automation — 6 browser instances process a shared queue of URLs concurrently |
 
 ### Error Handling

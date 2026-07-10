@@ -1,5 +1,6 @@
 name: Generic Chat Assistant
 slug: generic-chat-assistant
+featured: true
 summary: >-
   A ready-to-use conversational AI template powered by Chat Assistant and LLM
   Agent nodes. Provides a simple chat interface where users can ask questions

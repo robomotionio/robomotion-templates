@@ -1,5 +1,6 @@
 name: Domain Inspector
 slug: domain-inspector
+featured: true
 summary: >-
   Domain Inspector is an AI powered tool that instantly analyzes live DNS and SSL
   data using Robomotion's Monitoring package. It checks domain records, SSL

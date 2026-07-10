@@ -1,5 +1,6 @@
 name: Fork Branch With Memory Queue
 slug: fork-branch-with-memory-queue
+featured: true
 summary: >-
   Demonstrates parallel browser automation using Fork Branch and Memory Queue.
   Creates multiple concurrent browser instances that dequeue items from a shared
