@@ -1,0 +1,19 @@
+name: Payroll Validation Gate
+slug: payroll-validation-gate
+summary: >-
+  Checks a month's payroll before it is posted. Signs in, opens the draft run,
+  reads the register and refuses to finalize when a row is missing its cost
+  centre, then confirms the register's net total matches the salary debit in the
+  operating account. Writes a check report. The story is judgment: the robot
+  stops on bad data rather than posting it, and proves one number agrees across
+  the HR system and the bank.
+category: Web Automation
+level: Intermediate
+tags: [web-automation, payroll, finance, validation, reconciliation]
+author: Robomotion
+created: "2026-07-10"
+updated: "2026-07-10"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: e13a7c0
+schema_version: 1
