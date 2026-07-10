@@ -139,6 +139,7 @@ Every template declares a `level` (Beginner / Intermediate / Advanced) so you ca
 | [E-Invoice Portal Harvest](einvoice-portal-harvest) | Advanced | Downloads every e-invoice for a tax period from a government portal and builds an index spreadsheet of what was collected. |
 | [Get Metadata of a Web Page](get-metadata-of-web-page) | Intermediate | Navigates to a URL, reads its title and meta tags, and returns them as structured data. |
 | [Open a Web Page](open-a-web-page) | Beginner | Launches a browser and navigates to a provided URL — the minimum viable browser-automation template. |
+| [Refund Request Triage](refund-request-triage) | Advanced | Verifies customer refund requests against the bank before approving them. |
 | [Take Screenshot of a Web Page](take-screenshot-of-web-page) | Beginner | Opens a URL in a browser and saves a screenshot of the rendered page to disk. |
 
 ### File Operations

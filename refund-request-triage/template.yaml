@@ -1,0 +1,22 @@
+name: Refund Request Triage
+slug: refund-request-triage
+summary: >-
+  Verifies customer refund requests against the bank before approving them.
+  Signs in to AcmeBank through two-factor, pulls every shipment charge from the
+  operating account and groups them by reference; then works the helpdesk's
+  refund queue, and for each ticket looks up the disputed charge to decide
+  whether the customer was really billed twice. Approves the genuine duplicates
+  and escalates the rest to a human with evidence. Writes a decision CSV.
+category: Web Automation
+level: Advanced
+tags: [web-automation, two-factor, reconciliation, branching, memory-queue]
+author: Robomotion
+created: "2026-07-10"
+updated: "2026-07-10"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.MemoryQueue
+    version: "0.2.0"
+has_subflows: false
+flow_id: e09a7c0
+schema_version: 1
