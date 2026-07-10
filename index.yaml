@@ -873,6 +873,24 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Friday Payment Run
+    slug: friday-payment-run
+    summary: >-
+      Prepares a weekly vendor payment run in the ERP. Signs in, proposes every bill
+      due within seven days and confirms the run, then separately opens the bills
+      list, filters to the blocked bills the run left out, and reports each one with
+      the reason it is on hold - a pending goods receipt, a quantity or price
+      mismatch against the purchase order, or a missing PO reference. Writes a CSV
+      of what will be paid and what will not.
+    category: Web Automation
+    level: Intermediate
+    tags: [web-automation, erp, finance, payment-run, exceptions]
+    author: Robomotion
+    created: "2026-07-10"
+    updated: "2026-07-10"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Future Tools Keyword Search
     slug: extract-tools-keyword-future-tools
     summary: >-
