@@ -1369,6 +1369,23 @@ templates:
     screenshot: screenshot.png
     has_subflows: true
 
+  - name: Leave Request Policing
+    slug: leave-request-policing
+    summary: >-
+      Processes the pending leave requests in an HR system by policy: approves the
+      ones that are clean and denies the ones that break a rule - an insufficient
+      balance, an overlap with a teammate already off, or a request inside the
+      month-end blackout - writing the reason into the required comment box. Brings
+      only the edge cases to a human. Writes a decision CSV.
+    category: Flow Control
+    level: Intermediate
+    tags: [flow-control, hr, policy, branching, memory-queue]
+    author: Robomotion
+    created: "2026-07-10"
+    updated: "2026-07-10"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Lever Careers Page Jobs
     slug: extract-jobs-company-lever-page
     summary: >-

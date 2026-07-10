@@ -265,6 +265,7 @@ Every template declares a `level` (Beginner / Intermediate / Advanced) so you ca
 | Template | Level | Description |
 |----------|-------|-------------|
 | [Denial Worklist Triage](denial-worklist-triage) | Advanced | Works a clinic's denied insurance claims, choosing a different action for each denial code: fix and resubmit the ones missing a field the chart already has, write off what the payer will never cover, void duplicates of already-paid claims, and escalate the ones that need a human to call the payer. |
+| [Leave Request Policing](leave-request-policing) | Intermediate | Processes the pending leave requests in an HR system by policy: approves the ones that are clean and denies the ones that break a rule - an insufficient balance, an overlap with a teammate already off, or a request inside the month-end blackout - writing the reason into the required comment box. |
 | [Use Conditionals to Check if File Exists](use-conditionals-to-check-if-file-exists) | Beginner | Checks whether a given file is present on disk and routes the flow accordingly. |
 | [Use Labels to Check if File Exists](use-labels-to-check-if-file-exists) | Advanced | Uses Label and GoTo to structure a loop that rechecks file existence — a non-sequential flow pattern useful for polling. |
 | [Use Subflows to Check if File Exists](use-subflows-to-check-if-file-exists) | Intermediate | Encapsulates a "does this file exist? |

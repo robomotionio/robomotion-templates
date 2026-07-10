@@ -1,0 +1,21 @@
+name: Leave Request Policing
+slug: leave-request-policing
+summary: >-
+  Processes the pending leave requests in an HR system by policy: approves the
+  ones that are clean and denies the ones that break a rule - an insufficient
+  balance, an overlap with a teammate already off, or a request inside the
+  month-end blackout - writing the reason into the required comment box. Brings
+  only the edge cases to a human. Writes a decision CSV.
+category: Flow Control
+level: Intermediate
+tags: [flow-control, hr, policy, branching, memory-queue]
+author: Robomotion
+created: "2026-07-10"
+updated: "2026-07-10"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.MemoryQueue
+    version: "0.2.0"
+has_subflows: false
+flow_id: e14a7c0
+schema_version: 1
