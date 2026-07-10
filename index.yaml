@@ -477,6 +477,24 @@ templates:
     screenshot: screenshot.png
     has_subflows: true
 
+  - name: Denial Worklist Triage
+    slug: denial-worklist-triage
+    summary: >-
+      Works a clinic's denied insurance claims, choosing a different action for each
+      denial code: fix and resubmit the ones missing a field the chart already has,
+      write off what the payer will never cover, void duplicates of already-paid
+      claims, and escalate the ones that need a human to call the payer. Waits for
+      the resubmitted claims to be re-adjudicated, then reads each claim's real
+      status back off the table and writes denial-actions.csv.
+    category: Flow Control
+    level: Advanced
+    tags: [flow-control, switch, branching, healthcare, web-automation]
+    author: Robomotion
+    created: "2026-07-10"
+    updated: "2026-07-10"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Display JavaScript Output
     slug: display-javascript-output
     summary: >-
