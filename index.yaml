@@ -1636,6 +1636,22 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Quote-to-Cash Gap Audit
+    slug: quote-to-cash-gap-audit
+    summary: >-
+      Finds revenue the business won but never billed: deals marked Won in the CRM
+      that were never turned into an invoice. Reads the deal board, keeps the cards
+      flagged unbilled, totals what is owed, and writes the list finance needs to
+      raise the missing invoices. The "robot that finds money" demo.
+    category: Web Automation
+    level: Beginner
+    tags: [web-automation, crm, finance, audit, revenue-recovery]
+    author: Robomotion
+    created: "2026-07-10"
+    updated: "2026-07-10"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Read From Clipboard
     slug: read-from-clipboard
     summary: >-
