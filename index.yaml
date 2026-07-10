@@ -220,6 +220,24 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Clinic Eligibility Morning Run
+    slug: clinic-eligibility-morning-run
+    summary: >-
+      Verifies insurance for every appointment on a clinic's eligibility worklist,
+      running the payer checks on nine parallel browsers instead of one at a time.
+      Signs in, reads the worklist, fans out into workers that each claim an
+      appointment from a shared queue, click its eligibility check and read the
+      coverage answer. Writes a full status CSV plus a coverage-problems CSV listing
+      the lapsed and not-covered patients the front desk has to chase.
+    category: Concurrency
+    level: Advanced
+    tags: [concurrency, fork-branch, memory-queue, healthcare, web-automation]
+    author: Robomotion
+    created: "2026-07-10"
+    updated: "2026-07-10"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: CoinMarketCap Category Coins
     slug: extract-coin-details-category-coinmarketcap
     summary: >-
