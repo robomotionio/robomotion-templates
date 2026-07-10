@@ -145,6 +145,7 @@ Every template declares a `level` (Beginner / Intermediate / Advanced) so you ca
 | [Quote-to-Cash Gap Audit](quote-to-cash-gap-audit) | Beginner | Finds revenue the business won but never billed: deals marked Won in the CRM that were never turned into an invoice. |
 | [Refund Request Triage](refund-request-triage) | Advanced | Verifies customer refund requests against the bank before approving them. |
 | [Take Screenshot of a Web Page](take-screenshot-of-web-page) | Beginner | Opens a URL in a browser and saves a screenshot of the rendered page to disk. |
+| [Tax Portal ERP Reconciliation](portal-erp-reconciliation) | Advanced | Reconciles the e-invoices a government tax portal received against the vendor bills booked in the ERP, and reports the three ways the two can disagree: an amount that drifted, an e-invoice with no matching bill (arrived in the portal, never booked), and a bill with no e-invoice (booked, never filed). |
 | [Tax Portal Morning Board](tax-portal-morning-board) | Advanced | Checks every client mandate on a government tax portal and builds one status board. |
 | [Vendor Onboarding](vendor-onboarding) | Intermediate | Turns a procurement onboarding request into a vendor master record across two systems. |
 

@@ -2139,6 +2139,27 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Tax Portal ERP Reconciliation
+    slug: portal-erp-reconciliation
+    summary: >-
+      Reconciles the e-invoices a government tax portal received against the vendor
+      bills booked in the ERP, and reports the three ways the two can disagree: an
+      amount that drifted, an e-invoice with no matching bill (arrived in the portal,
+      never booked), and a bill with no e-invoice (booked, never filed). Two-factor
+      signs in to the portal, pages the received register, then filters the ERP
+      vendor-bill worklist per enrolled vendor to compare counts. Writes a
+      reconciliation CSV. The story is a control: two systems that should hold the
+      same set of documents, checked against each other so a gap is caught rather
+      than discovered at audit.
+    category: Web Automation
+    level: Advanced
+    tags: [web-automation, finance, reconciliation, tax, two-factor, pagination]
+    author: Robomotion
+    created: "2026-07-10"
+    updated: "2026-07-10"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Tax Portal Morning Board
     slug: tax-portal-morning-board
     summary: >-
