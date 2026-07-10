@@ -1,0 +1,21 @@
+name: Invoice Inbox to Ledger
+slug: invoice-inbox-to-ledger
+summary: >-
+  Reads vendor-invoice e-mails out of the mailbox and posts each one as a bill in
+  the ERP. It reads the vendor, reference, gross and purchase-order number from
+  each message, derives the net, and keys a new bill - handling the two controls
+  that fire mid-batch: a duplicate reference (cancelled rather than paid twice)
+  and a failed 3-way match against the purchase order (posted but blocked).
+  Writes a posting report. The story is straight-through processing with
+  judgment: the clean invoices post themselves, and the two that should not go
+  through are caught and reported.
+category: Web Automation
+level: Advanced
+tags: [web-automation, finance, accounts-payable, email, data-entry, invoice]
+author: Robomotion
+created: "2026-07-10"
+updated: "2026-07-10"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: f01d9e3
+schema_version: 1
