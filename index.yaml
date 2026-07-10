@@ -94,6 +94,26 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Bank Reconciliation
+    slug: bank-reconciliation
+    summary: >-
+      Takes the payments and receipts the ERP could not reconcile and confirms each
+      one against the real bank statement. It pulls the ERP's flagged paid-bill
+      exceptions and open invoices awaiting cash, then signs in to the bank, searches
+      the operating account by reference and reads what actually settled - quantifying
+      the four ways money and ledger drift apart: a missing payment, a transposed
+      amount, a double payment and unapplied cash. Writes a reconciliation CSV. The
+      story is evidence: the ledger raises the question, the bank statement answers
+      it, and every discrepancy comes out with a number attached.
+    category: Web Automation
+    level: Advanced
+    tags: [web-automation, finance, reconciliation, banking, two-factor, accounts-receivable]
+    author: Robomotion
+    created: "2026-07-11"
+    updated: "2026-07-11"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Binance Coin List
     slug: extract-coins-list-info-binance
     summary: >-

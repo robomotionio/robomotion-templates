@@ -136,6 +136,7 @@ Every template declares a `level` (Beginner / Intermediate / Advanced) so you ca
 
 | Template | Level | Description |
 |----------|-------|-------------|
+| [Bank Reconciliation](bank-reconciliation) | Advanced | Takes the payments and receipts the ERP could not reconcile and confirms each one against the real bank statement. |
 | [CRM Duplicate Cleanup](crm-duplicate-cleanup) | Intermediate | Cleans up a CRM by merging duplicate contacts - the same person entered twice under name variants like Bob and Robert. |
 | [E-Invoice Portal Harvest](einvoice-portal-harvest) | Advanced | Downloads every e-invoice for a tax period from a government portal and builds an index spreadsheet of what was collected. |
 | [Friday Payment Run](friday-payment-run) | Intermediate | Prepares a weekly vendor payment run in the ERP. |
