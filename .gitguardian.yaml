@@ -1,0 +1,24 @@
+# GitGuardian configuration.
+#
+# Several templates sign in to Robomotion's public training sites (Epoch, FRS).
+# Those sites are fictional, serve entirely synthetic data, and publish their own
+# credentials in their documentation -- Epoch even prints its password on the login
+# screen. The values below are those published training credentials. They guard
+# nothing, they are not reused anywhere, and a template that cannot sign in is not
+# a template anyone can run.
+#
+# They are declared here rather than obfuscated in the source. Hiding a string from
+# a scanner while leaving it in the repository would defeat the scanner without
+# removing the string.
+#
+# A credential for a real system belongs in the Robomotion Vault, never in a flow.
+version: 2
+
+secret:
+  ignored_matches:
+    - name: Epoch training site password (published, synthetic data, printed on its own login page)
+      match: f2eb21460e5c7dd49501e8b38aec59dd8bd7efe5a826a8394b990546b054a390
+    - name: FRS training site password (published, synthetic data)
+      match: f1b7a953b37c9b67868941bde4033b0bb810d2661e6eaf0238930531d77ca8f8
+    - name: FRS training site static one-time code (published, synthetic data)
+      match: 074f95a84db12374a02ff1ce69284da2e76c484f7144e7aac130cd2debaad6cd

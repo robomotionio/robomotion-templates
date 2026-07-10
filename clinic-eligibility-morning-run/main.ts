@@ -42,6 +42,9 @@ msg.login_url = msg.base_url + '/login';
 // stay on the URL. Drop '?chaos=eligibility-slow' and each check takes 3-8s instead
 // of 10-25s; the flow is identical either way.
 msg.worklist_url = msg.base_url + '/eligibility?chaos=eligibility-slow';
+// Published training credentials for a fictional clinic system serving entirely
+// synthetic data -- Epoch prints this password on its own login screen. Credentials
+// for a real system belong in the Robomotion Vault, never in a flow.
 msg.email = 'diego.ramirez@harborview.example';
 msg.password = 'EpochTraining2026!';
 msg.home = global.get('$Home$');

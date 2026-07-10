@@ -42,6 +42,9 @@ flow.create('e06a7c0', 'E-Invoice Portal Harvest', function (f) {
 msg.chaos = '?chaos=toast-kill';
 msg.login_url = msg.base_url + '/login' + msg.chaos;
 msg.register_url = msg.base_url + '/einvoices' + msg.chaos;
+// Published training credentials for a fictional government portal serving entirely
+// synthetic data, including its static one-time code. Credentials for a real portal
+// belong in the Robomotion Vault, never in a flow.
 msg.tax_id = 'FD-380417225';
 msg.password = 'FrsTraining2026!';
 msg.otp = '550612';

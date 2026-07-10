@@ -45,6 +45,9 @@ msg.login_url = msg.base_url + '/login';
 // nothing happens. The toast-kill flag turns them off for the whole session; chaos
 // flags are parsed once when the page loads and survive client-side navigation.
 msg.claims_url = msg.base_url + '/claims?chaos=toast-kill';
+// Published training credentials for a fictional clinic system serving entirely
+// synthetic data -- Epoch prints this password on its own login screen. Credentials
+// for a real system belong in the Robomotion Vault, never in a flow.
 msg.email = 'diego.ramirez@harborview.example';
 msg.password = 'EpochTraining2026!';
 msg.writeoff_reason = 'Service not covered by the payer contract - write-off approved';
