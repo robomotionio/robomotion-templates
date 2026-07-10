@@ -1,0 +1,21 @@
+name: Vendor Onboarding
+slug: vendor-onboarding
+summary: >-
+  Turns a procurement onboarding request into a vendor master record across two
+  systems. Reads the "new vendor onboarding" e-mail, takes the vendor name,
+  category and terms straight from the request, then creates the vendor in the
+  ERP - filling the General, Payment and Contact tabs with the bank and tax
+  details from the onboarding packet. The IBAN is mod-97 checked on save, so a
+  bad account number is refused before it can ever become a payable. Writes a
+  record of the created vendor. The story is a clean hand-off: a request in one
+  system becomes a validated master record in another, with no re-keying.
+category: Web Automation
+level: Intermediate
+tags: [web-automation, finance, vendor-management, data-entry, email, validation]
+author: Robomotion
+created: "2026-07-10"
+updated: "2026-07-10"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: f04b2d1
+schema_version: 1
