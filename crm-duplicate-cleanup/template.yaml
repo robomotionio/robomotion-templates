@@ -1,0 +1,18 @@
+name: CRM Duplicate Cleanup
+slug: crm-duplicate-cleanup
+summary: >-
+  Cleans up a CRM by merging duplicate contacts - the same person entered twice
+  under name variants like Bob and Robert. Signs in, switches the contact list
+  to its duplicates view, and merges the first remaining pair until none are
+  left, keeping the primary record and folding each variant into it. Writes a
+  before-and-after report. The "your CRM cleaned itself while you slept" demo.
+category: Web Automation
+level: Intermediate
+tags: [web-automation, crm, deduplication, data-hygiene, loop]
+author: Robomotion
+created: "2026-07-10"
+updated: "2026-07-10"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: e11a7c0
+schema_version: 1
