@@ -1,0 +1,21 @@
+name: Logistics Exception Center
+slug: logistics-exception-center
+summary: >-
+  Builds one worklist of every active delivery exception from the carrier, then
+  dedupes it against the systems that may already be handling it - the mailbox
+  that was notified, and the help desk where a ticket may already exist. Joining
+  the three on the tracking number tells the robot which exceptions were mailed,
+  which already have a ticket, and which nobody has picked up yet. Writes a
+  consolidated exception CSV. The story is consolidation: three systems each hold
+  part of the picture, and the robot joins them so a stuck shipment is neither
+  missed nor double-worked.
+category: Web Automation
+level: Advanced
+tags: [web-automation, logistics, deduplication, email, help-desk, reconciliation]
+author: Robomotion
+created: "2026-07-11"
+updated: "2026-07-11"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: f10e5a6
+schema_version: 1
