@@ -271,6 +271,7 @@ Every template declares a `level` (Beginner / Intermediate / Advanced) so you ca
 
 | Template | Level | Description |
 |----------|-------|-------------|
+| [Bulk Shipment Tracking Sweep](bulk-shipment-tracking-sweep) | Advanced | Checks 200 shipment tracking numbers on a public carrier tracker using eight parallel workers pulling from a shared in-memory queue. |
 | [Fork Branch With Memory Queue](fork-branch-with-memory-queue) | Advanced | Demonstrates parallel browser automation — 6 browser instances process a shared queue of URLs concurrently |
 
 ### Error Handling

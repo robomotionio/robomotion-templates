@@ -161,6 +161,23 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Bulk Shipment Tracking Sweep
+    slug: bulk-shipment-tracking-sweep
+    summary: >-
+      Checks 200 shipment tracking numbers on a public carrier tracker using eight
+      parallel workers pulling from a shared in-memory queue. Reads the tracking
+      list straight from the carrier's bulk page, scrapes status, latest event and
+      ETA for each shipment, and writes a full status CSV plus an exceptions-only
+      CSV covering customs holds, failed deliveries and delays. No login required.
+    category: Concurrency
+    level: Advanced
+    tags: [concurrency, fork-branch, memory-queue, web-scraping, logistics]
+    author: Robomotion
+    created: "2026-07-10"
+    updated: "2026-07-10"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Calorie Coach Agent
     slug: calorie-coach-agent
     summary: >-
