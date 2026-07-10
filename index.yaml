@@ -2088,6 +2088,24 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Tax Portal Morning Board
+    slug: tax-portal-morning-board
+    summary: >-
+      Checks every client mandate on a government tax portal and builds one status
+      board. Signs in as an authorised representative, reads all the mandates, then
+      switches the active company for each and reads its dashboard - unread official
+      notices, open penalties and upcoming deadlines. Flags any client with a
+      penalty, an audit request or a late filing, and writes a board sorted worst
+      first. Built for accountants and agencies watching many companies at once.
+    category: Web Automation
+    level: Advanced
+    tags: [web-automation, two-factor, monitoring, multi-tenant, memory-queue]
+    author: Robomotion
+    created: "2026-07-10"
+    updated: "2026-07-10"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Translator
     slug: translator
     summary: >-

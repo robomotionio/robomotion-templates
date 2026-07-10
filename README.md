@@ -142,6 +142,7 @@ Every template declares a `level` (Beginner / Intermediate / Advanced) so you ca
 | [Open a Web Page](open-a-web-page) | Beginner | Launches a browser and navigates to a provided URL — the minimum viable browser-automation template. |
 | [Refund Request Triage](refund-request-triage) | Advanced | Verifies customer refund requests against the bank before approving them. |
 | [Take Screenshot of a Web Page](take-screenshot-of-web-page) | Beginner | Opens a URL in a browser and saves a screenshot of the rendered page to disk. |
+| [Tax Portal Morning Board](tax-portal-morning-board) | Advanced | Checks every client mandate on a government tax portal and builds one status board. |
 
 ### File Operations
 
