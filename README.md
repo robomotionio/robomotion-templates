@@ -143,6 +143,7 @@ Every template declares a `level` (Beginner / Intermediate / Advanced) so you ca
 | [Get Metadata of a Web Page](get-metadata-of-web-page) | Intermediate | Navigates to a URL, reads its title and meta tags, and returns them as structured data. |
 | [Invoice Inbox to Ledger](invoice-inbox-to-ledger) | Advanced | Reads vendor-invoice e-mails out of the mailbox and posts each one as a bill in the ERP. |
 | [Logistics Exception Center](logistics-exception-center) | Advanced | Builds one worklist of every active delivery exception from the carrier, then dedupes it against the systems that may already be handling it - the mailbox that was notified, and the help desk where a ticket may already exist. |
+| [Monday Morning Briefing](monday-morning-briefing) | Intermediate | One robot, every system, the whole week's work on a single page. |
 | [Open a Web Page](open-a-web-page) | Beginner | Launches a browser and navigates to a provided URL — the minimum viable browser-automation template. |
 | [Payroll Validation Gate](payroll-validation-gate) | Intermediate | Checks a month's payroll before it is posted. |
 | [Quote-to-Cash Gap Audit](quote-to-cash-gap-audit) | Beginner | Finds revenue the business won but never billed: deals marked Won in the CRM that were never turned into an invoice. |

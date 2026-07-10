@@ -1,0 +1,20 @@
+name: Monday Morning Briefing
+slug: monday-morning-briefing
+summary: >-
+  One robot, every system, the whole week's work on a single page. It signs in to
+  the CRM, the mailbox, the ERP, the carrier and the help desk in turn, reads the
+  one number that matters from each - duplicate contacts, invoices to post, ledger
+  exceptions, stuck shipments and refund requests - and writes a consolidated
+  briefing with a total across all five. The story is reach: the back-office
+  queues a team would open one browser tab at a time, gathered into one report
+  before anyone has had coffee.
+category: Web Automation
+level: Intermediate
+tags: [web-automation, dashboard, operations, multi-system, reporting, monitoring]
+author: Robomotion
+created: "2026-07-11"
+updated: "2026-07-11"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: f17c0de
+schema_version: 1
