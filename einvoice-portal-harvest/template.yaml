@@ -1,0 +1,22 @@
+name: E-Invoice Portal Harvest
+slug: einvoice-portal-harvest
+summary: >-
+  Downloads every e-invoice for a tax period from a government portal and builds
+  an index spreadsheet of what was collected. Signs in with a one-time code,
+  walks the paged register until the portal says there are no more pages, then
+  opens each document to read its government reference number and pull down both
+  the XML and the PDF. Every download is gated behind a confirmation dialog and
+  an "I am not a robot" checkbox.
+category: Web Automation
+level: Advanced
+tags: [web-automation, downloads, pagination, two-factor, memory-queue]
+author: Robomotion
+created: "2026-07-10"
+updated: "2026-07-10"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.MemoryQueue
+    version: "0.2.0"
+has_subflows: false
+flow_id: e06a7c0
+schema_version: 1
