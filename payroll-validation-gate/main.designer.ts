@@ -5,7 +5,7 @@ export default {
     'c00001': { x: 60, y: 0 },
 
     // ---- 1. open the draft run ---------------------------------------------
-    'c00002': { x: 560, y: 0 },
+    'c00002': { x: 536, y: 0 },
     'a10001': { x: 600, y: 250 },
     'a10002': { x: 600, y: 320 },
     'a10003': { x: 600, y: 390 },
@@ -28,7 +28,7 @@ export default {
     'a10011': { x: 1460, y: 250 },
 
     // ---- 4. report ---------------------------------------------------------
-    'c00005': { x: 1900, y: 0 },
+    'c00005': { x: 1876, y: 0 },
     'c30001': { x: 1940, y: 250 },
     'c30002': { x: 1940, y: 320 },
     'c30003': { x: 1940, y: 390 },
@@ -51,9 +51,9 @@ export default {
   },
   commentExtras: {
     'c00001': { colorIndex: 4, size: { width: 440, height: 230 } },
-    'c00002': { size: { width: 720, height: 1050 } },
+    'c00002': { size: { width: 744, height: 1047 } },
     'c00003': { colorIndex: 2, size: { width: 380, height: 330 } },
     'c00004': { colorIndex: 6, size: { width: 380, height: 300 } },
-    'c00005': { size: { width: 460, height: 516 } },
+    'c00005': { size: { width: 484, height: 546 } },
   },
 };

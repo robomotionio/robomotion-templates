@@ -5,8 +5,8 @@ export default {
     'c00001': { x: 60, y: 0 },
 
     // ---- 1. open the leave desk / 2. read pending --------------------------
-    'c00002': { x: 560, y: 0 },
-    'c00003': { x: 920, y: 0 },
+    'c00002': { x: 536, y: 0 },
+    'c00003': { x: 916, y: 0 },
     'a10001': { x: 600, y: 250 },
     'a10002': { x: 600, y: 320 },
     'a10003': { x: 600, y: 390 },
@@ -23,7 +23,7 @@ export default {
     'a1000e': { x: 960, y: 460 },
 
     // ---- 3. approve the clean, deny the rest -------------------------------
-    'c00004': { x: 1420, y: 0 },
+    'c00004': { x: 1396, y: 0 },
     'b20001': { x: 1460, y: 250 },
     'b20000': { x: 1820, y: 250 },
     'b20002': { x: 1460, y: 320 },
@@ -43,7 +43,7 @@ export default {
     'b20032': { x: 2000, y: 870 },
 
     // ---- 4. report ---------------------------------------------------------
-    'c00005': { x: 2200, y: 0 },
+    'c00005': { x: 2192, y: 0 },
     'c30001': { x: 2240, y: 250 },
     'c30002': { x: 2240, y: 320 },
     'c30003': { x: 2240, y: 390 },
@@ -66,9 +66,9 @@ export default {
   },
   commentExtras: {
     'c00001': { colorIndex: 4, size: { width: 440, height: 230 } },
-    'c00002': { size: { width: 340, height: 947 } },
-    'c00003': { size: { width: 340, height: 560 } },
-    'c00004': { colorIndex: 2, size: { width: 756, height: 1000 } },
-    'c00005': { size: { width: 460, height: 586 } },
+    'c00002': { size: { width: 364, height: 977 } },
+    'c00003': { size: { width: 344, height: 557 } },
+    'c00004': { colorIndex: 2, size: { width: 780, height: 1037 } },
+    'c00005': { size: { width: 468, height: 616 } },
   },
 };

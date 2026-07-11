@@ -6,7 +6,7 @@ export default {
     'c00001': { x: 60, y: 0 },
 
     // ---- 1. read the worklist (two columns: sign in, then read + queue) -----
-    'c00002': { x: 560, y: 0 },
+    'c00002': { x: 536, y: 0 },
     'a10001': { x: 600, y: 250 },
     'a10002': { x: 600, y: 320 },
     'a10003': { x: 600, y: 390 },
@@ -25,7 +25,7 @@ export default {
     'a10010': { x: 960, y: 740 },
 
     // ---- 2. parallel eligibility checks (sign in, then the per-row loop) ----
-    'c00003': { x: 1320, y: 0 },
+    'c00003': { x: 1296, y: 0 },
     'b20000': { x: 1360, y: 250 },
     'b20001': { x: 1360, y: 320 },
     'b20002': { x: 1360, y: 390 },
@@ -60,7 +60,7 @@ export default {
     'c30004': { x: 2480, y: 860 },
 
     // ---- 5. sort and report -------------------------------------------------
-    'c00006': { x: 3320, y: 0 },
+    'c00006': { x: 3296, y: 0 },
     'c30005': { x: 3360, y: 250 },
     'c30006': { x: 3360, y: 320 },
     'c30007': { x: 3360, y: 390 },
@@ -86,10 +86,10 @@ export default {
   },
   commentExtras: {
     'c00001': { colorIndex: 4, size: { width: 440, height: 230 } },
-    'c00002': { size: { width: 700, height: 830 } },
-    'c00003': { size: { width: 1060, height: 970 } },
+    'c00002': { size: { width: 724, height: 864 } },
+    'c00003': { size: { width: 1084, height: 977 } },
     'c00004': { colorIndex: 6, size: { width: 460, height: 480 } },
     'c00005': { size: { width: 820, height: 430 } },
-    'c00006': { size: { width: 460, height: 620 } },
+    'c00006': { size: { width: 484, height: 616 } },
   },
 };

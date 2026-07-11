@@ -6,7 +6,7 @@ export default {
     'c00001': { x: 60, y: 0 },
 
     // ---- 1. scan the bank first (two columns) ------------------------------
-    'c00002': { x: 560, y: 0 },
+    'c00002': { x: 536, y: 0 },
     'a10001': { x: 600, y: 250 },
     'a10002': { x: 600, y: 320 },
     'a10003': { x: 600, y: 390 },
@@ -29,7 +29,7 @@ export default {
     'a10014': { x: 960, y: 880 },
 
     // ---- 2. read the refund queue (two columns) ----------------------------
-    'c00003': { x: 1420, y: 0 },
+    'c00003': { x: 1396, y: 0 },
     'b20001': { x: 1460, y: 250 },
     'b20002': { x: 1460, y: 320 },
     'b20003': { x: 1460, y: 390 },
@@ -44,7 +44,7 @@ export default {
     'b2000c': { x: 1820, y: 390 },
 
     // ---- 3. decide each ticket against the bank ----------------------------
-    'c00004': { x: 2280, y: 0 },
+    'c00004': { x: 2256, y: 0 },
     'd40001': { x: 2320, y: 250 },
     'd40000': { x: 2680, y: 250 },
     'd40002': { x: 2320, y: 320 },
@@ -55,7 +55,7 @@ export default {
     'd40007': { x: 2320, y: 670 },
 
     // ---- 4. approve or escalate --------------------------------------------
-    'c00005': { x: 2740, y: 0 },
+    'c00005': { x: 2736, y: 0 },
     'd40010': { x: 2780, y: 250 },
     'd40011': { x: 2780, y: 320 },
     'd40020': { x: 2780, y: 470 },
@@ -89,10 +89,10 @@ export default {
   },
   commentExtras: {
     'c00001': { colorIndex: 4, size: { width: 440, height: 230 } },
-    'c00002': { size: { width: 700, height: 1000 } },
-    'c00003': { size: { width: 700, height: 877 } },
-    'c00004': { size: { width: 440, height: 764 } },
-    'c00005': { colorIndex: 2, size: { width: 620, height: 830 } },
-    'c00006': { size: { width: 460, height: 620 } },
+    'c00002': { size: { width: 724, height: 977 } },
+    'c00003': { size: { width: 724, height: 907 } },
+    'c00004': { size: { width: 464, height: 794 } },
+    'c00005': { colorIndex: 2, size: { width: 568, height: 857 } },
+    'c00006': { size: { width: 460, height: 616 } },
   },
 };

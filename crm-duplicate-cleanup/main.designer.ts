@@ -5,7 +5,7 @@ export default {
     'c00001': { x: 60, y: 0 },
 
     // ---- 1. open the duplicates view ---------------------------------------
-    'c00002': { x: 560, y: 0 },
+    'c00002': { x: 536, y: 0 },
     'a10001': { x: 600, y: 250 },
     'a10002': { x: 600, y: 320 },
     'a10003': { x: 600, y: 390 },
@@ -21,7 +21,7 @@ export default {
     'a1000d': { x: 600, y: 1090 },
 
     // ---- 2. merge every pair (loop) ----------------------------------------
-    'c00003': { x: 1080, y: 0 },
+    'c00003': { x: 1056, y: 0 },
     'b20001': { x: 1120, y: 250 },
     'b20000': { x: 1480, y: 250 },
     'b20002': { x: 1120, y: 320 },
@@ -54,8 +54,8 @@ export default {
   },
   commentExtras: {
     'c00001': { colorIndex: 4, size: { width: 440, height: 230 } },
-    'c00002': { size: { width: 460, height: 1190 } },
-    'c00003': { colorIndex: 2, size: { width: 720, height: 767 } },
-    'c00004': { size: { width: 460, height: 516 } },
+    'c00002': { size: { width: 484, height: 1187 } },
+    'c00003': { colorIndex: 2, size: { width: 614, height: 797 } },
+    'c00004': { size: { width: 460, height: 546 } },
   },
 };
