@@ -25,7 +25,7 @@ Register page 1/10 - 10 rows so far
 ...
 Harvesting 96 of 96 invoices across 10 pages
 Harvested 96 invoices (62 received, 34 issued) in 187s
-The portal flagged 3: FRS-2026-004011 Amount drift; FRS-2026-004417 Not found in ERP; FRS-2026-004432 Not found in ERP
+The portal flagged 3: FRS-2026-004001 Amount drift; FRS-2026-004417 Not found in ERP; FRS-2026-004432 Not found in ERP
 Downloaded 192 files
 ```
 
