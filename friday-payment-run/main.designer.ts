@@ -59,7 +59,7 @@ export default {
   nodeIcons: {
   },
   commentExtras: {
-    'c00001': { colorIndex: 4, size: { width: 440, height: 230 } },
+    'c00001': { colorIndex: 4, size: { width: 440, height: 247 } },
     'c00002': { size: { width: 484, height: 977 } },
     'c00003': { size: { width: 484, height: 1047 } },
     'c00004': { colorIndex: 6, size: { width: 484, height: 627 } },

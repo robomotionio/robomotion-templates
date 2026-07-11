@@ -88,7 +88,7 @@ export default {
   nodeIcons: {
   },
   commentExtras: {
-    'c00001': { colorIndex: 4, size: { width: 440, height: 230 } },
+    'c00001': { colorIndex: 4, size: { width: 440, height: 283 } },
     'c00002': { size: { width: 1224, height: 907 } },
     'c00003': { size: { width: 1220, height: 1047 } },
     'c00004': { size: { width: 468, height: 616 } },
