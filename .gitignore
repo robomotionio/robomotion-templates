@@ -1,0 +1,7 @@
+cases
+workdir
+.claude/
+.mcp.json
+skills-lock.json
+TODO.md
+deferred-todo.md
