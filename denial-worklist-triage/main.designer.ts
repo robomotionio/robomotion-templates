@@ -99,7 +99,7 @@ export default {
     'c00001': { colorIndex: 4, size: { width: 440, height: 230 } },
     'c00002': { size: { width: 700, height: 830 } },
     'c00003': { size: { width: 700, height: 830 } },
-    'c00004': { colorIndex: 2, size: { width: 1780, height: 830 } },
+    'c00004': { colorIndex: 2, size: { width: 1780, height: 597 } },
     'c00005': { size: { width: 460, height: 600 } },
     'c00006': { size: { width: 1020, height: 830 } },
   },

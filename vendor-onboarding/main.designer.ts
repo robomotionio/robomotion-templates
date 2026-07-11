@@ -73,8 +73,8 @@ export default {
   },
   commentExtras: {
     'c00001': { colorIndex: 4, size: { width: 440, height: 230 } },
-    'c00002': { size: { width: 760, height: 660 } },
-    'c00003': { size: { width: 1120, height: 730 } },
-    'c00004': { size: { width: 460, height: 400 } },
+    'c00002': { size: { width: 760, height: 877 } },
+    'c00003': { size: { width: 1120, height: 947 } },
+    'c00004': { size: { width: 460, height: 516 } },
   },
 };

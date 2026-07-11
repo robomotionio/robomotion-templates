@@ -90,7 +90,7 @@ export default {
   commentExtras: {
     'c00001': { colorIndex: 4, size: { width: 440, height: 230 } },
     'c00002': { size: { width: 1200, height: 840 } },
-    'c00003': { size: { width: 1160, height: 1020 } },
-    'c00004': { size: { width: 460, height: 400 } },
+    'c00003': { size: { width: 1196, height: 1020 } },
+    'c00004': { size: { width: 460, height: 586 } },
   },
 };

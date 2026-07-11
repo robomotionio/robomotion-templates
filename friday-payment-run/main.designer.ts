@@ -60,9 +60,9 @@ export default {
   },
   commentExtras: {
     'c00001': { colorIndex: 4, size: { width: 440, height: 230 } },
-    'c00002': { size: { width: 460, height: 720 } },
-    'c00003': { size: { width: 460, height: 780 } },
-    'c00004': { colorIndex: 6, size: { width: 460, height: 400 } },
-    'c00005': { size: { width: 460, height: 340 } },
+    'c00002': { size: { width: 460, height: 947 } },
+    'c00003': { size: { width: 460, height: 1017 } },
+    'c00004': { colorIndex: 6, size: { width: 460, height: 597 } },
+    'c00005': { size: { width: 460, height: 516 } },
   },
 };

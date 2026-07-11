@@ -90,8 +90,8 @@ export default {
   commentExtras: {
     'c00001': { colorIndex: 4, size: { width: 440, height: 230 } },
     'c00002': { size: { width: 700, height: 1000 } },
-    'c00003': { size: { width: 700, height: 620 } },
-    'c00004': { size: { width: 440, height: 700 } },
+    'c00003': { size: { width: 700, height: 877 } },
+    'c00004': { size: { width: 440, height: 764 } },
     'c00005': { colorIndex: 2, size: { width: 620, height: 830 } },
     'c00006': { size: { width: 460, height: 620 } },
   },

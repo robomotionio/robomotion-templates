@@ -69,6 +69,6 @@ export default {
     'c00002': { size: { width: 460, height: 1050 } },
     'c00003': { size: { width: 460, height: 700 } },
     'c00004': { colorIndex: 2, size: { width: 720, height: 980 } },
-    'c00005': { size: { width: 460, height: 420 } },
+    'c00005': { size: { width: 460, height: 586 } },
   },
 };

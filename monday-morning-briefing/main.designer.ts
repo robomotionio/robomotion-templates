@@ -94,10 +94,10 @@ export default {
   },
   commentExtras: {
     'c00001': { colorIndex: 4, size: { width: 440, height: 230 } },
-    'c00002': { size: { width: 760, height: 740 } },
-    'c00003': { size: { width: 380, height: 640 } },
-    'c00004': { size: { width: 760, height: 740 } },
-    'c00005': { size: { width: 380, height: 740 } },
+    'c00002': { size: { width: 760, height: 947 } },
+    'c00003': { size: { width: 380, height: 807 } },
+    'c00004': { size: { width: 760, height: 947 } },
+    'c00005': { size: { width: 380, height: 947 } },
     'c00006': { size: { width: 740, height: 1020 } },
   },
 };

@@ -55,7 +55,7 @@ export default {
   commentExtras: {
     'c00001': { colorIndex: 4, size: { width: 440, height: 230 } },
     'c00002': { size: { width: 460, height: 1190 } },
-    'c00003': { colorIndex: 2, size: { width: 720, height: 640 } },
-    'c00004': { size: { width: 460, height: 400 } },
+    'c00003': { colorIndex: 2, size: { width: 720, height: 767 } },
+    'c00004': { size: { width: 460, height: 516 } },
   },
 };

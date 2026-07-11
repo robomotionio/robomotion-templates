@@ -66,9 +66,9 @@ export default {
   },
   commentExtras: {
     'c00001': { colorIndex: 4, size: { width: 440, height: 230 } },
-    'c00002': { size: { width: 340, height: 780 } },
+    'c00002': { size: { width: 340, height: 947 } },
     'c00003': { size: { width: 340, height: 560 } },
-    'c00004': { colorIndex: 2, size: { width: 720, height: 1000 } },
-    'c00005': { size: { width: 460, height: 420 } },
+    'c00004': { colorIndex: 2, size: { width: 756, height: 1000 } },
+    'c00005': { size: { width: 460, height: 586 } },
   },
 };
