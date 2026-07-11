@@ -15,18 +15,18 @@ carrier), [Lookout Mail](https://lookout.robomotion.online) and
 
 ## What it produces
 
-`logistics-exceptions.csv` in your home folder: every active exception with its status and, joined on
-the tracking number, whether it was mailed and whether a ticket already exists — with an action of
-`has ticket` or `NEEDS TICKET`. On the seeded data that is **30 active exceptions, 6 already mailed, 2
-already ticketed, and 28 that still need a ticket**.
+`logistics-exceptions.csv` in your home folder: every active exception with its consignee,
+destination and status, and — joined on the tracking number — whether it was mailed and whether a
+ticket already exists, with an action of `has ticket` or `NEEDS TICKET`. On the seeded data that is
+**30 active exceptions, 6 already mailed, 2 already ticketed, and 28 that still need a ticket**.
 
 ## How it works
 
 ### 1. The carrier's exception worklist
 
 Sign in to the carrier portal and open the exception worklist — every shipment on customs hold,
-failed delivery or delay. Read the tracking number and status for each. This is the master list
-everything else is checked against.
+failed delivery or delay. Read the tracking number, consignee, destination and status for each. This
+is the master list everything else is checked against.
 
 ### 2. Who already knows
 

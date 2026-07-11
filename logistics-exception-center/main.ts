@@ -250,7 +250,7 @@ return msg;`
   });
 
   f.node('e50002', 'Core.Programming.Function', 'Reconcile', {
-    func: `function clean(s) { return String(s == null ? '' : s).replace(/,/g, ' ').replace(/[^A-Za-z0-9 .:_\\/-]/g, '').replace(/\\s+/g, ' ').trim(); }
+    func: `function clean(s) { return String(s == null ? '' : s).replace(/[\\x00-\\x1F\\x7F]/g, ' ').replace(/\\s+/g, ' ').trim(); }
 var mailed = {};
 for (var i = 0; i < msg.mailed.length; i++) { mailed[msg.mailed[i]] = true; }
 var ticketed = {};
@@ -263,22 +263,14 @@ for (var k = 0; k < msg.exceptions.length; k++) {
   var tk = ticketed[e.id] ? 'yes' : '';
   if (m) { nMailed++; }
   if (tk) { nTicketed++; } else { nNeed++; }
-  rows.push({ tracking: clean(e.id), status: clean(e.status), mailed: m, ticketed: tk, action: tk ? 'has ticket' : 'NEEDS TICKET' });
+  rows.push({ tracking: clean(e.id), consignee: clean(e.consignee), destination: clean(e.dest), status: clean(e.status), mailed: m, ticketed: tk, action: tk ? 'has ticket' : 'NEEDS TICKET' });
 }
-var summary = { tracking: 'SUMMARY', status: String(msg.exceptions.length) + ' active exceptions', mailed: String(nMailed) + ' mailed', ticketed: String(nTicketed) + ' ticketed', action: nNeed + ' need a ticket' };
+var summary = { tracking: 'SUMMARY', consignee: msg.exceptions.length + ' active exceptions', destination: '', status: '', mailed: String(nMailed) + ' mailed', ticketed: String(nTicketed) + ' ticketed', action: nNeed + ' need a ticket' };
 var table = [summary];
 for (var z = 0; z < rows.length; z++) { table.push(rows[z]); }
-msg.report_table = { columns: ['tracking', 'status', 'mailed', 'ticketed', 'action'], rows: table };
+msg.report_table = { columns: ['tracking', 'consignee', 'destination', 'status', 'mailed', 'ticketed', 'action'], rows: table };
 var elapsed = Math.round((Date.now() - msg.t0) / 1000);
 console.log('Exception center in ' + elapsed + 's: ' + msg.exceptions.length + ' exceptions, ' + nMailed + ' mailed, ' + nTicketed + ' ticketed, ' + nNeed + ' need a ticket');
-// The raw scrape strings carry non-ASCII (accented consignee/city names) that can
-// break the message on serialize; drop them now that the report is built and clean.
-delete msg.exc_json; delete msg.mailed_json; delete msg.tickets_json;
-delete msg.exceptions; delete msg.mailed; delete msg.ticketed; delete msg.gd_ticket_ids;
-delete msg.tk_track; delete msg.tk_url; delete msg.tkid;
-delete msg.slug_login; delete msg.lookout_login; delete msg.gd_login; delete msg.gd_tickets; delete msg.gd_url;
-delete msg.slug_email; delete msg.slug_pw; delete msg.lookout_email; delete msg.lookout_pw; delete msg.gd_email; delete msg.gd_pw;
-delete msg.t0;
 return msg;`
   });
   f.edge('e50001', 0, 'e50002', 0);
