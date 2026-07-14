@@ -45,7 +45,7 @@ msg.t0 = Date.now();
 return msg;`
     })
     .then('a10003', 'Core.Browser.Open', 'Open Browser', {
-      optBrowser: 'headlesschrome', outBrowserId: Message('browser')
+      optBrowser: 'chrome', outBrowserId: Message('browser')
     })
     .then('a10004', 'Core.Browser.OpenLink', 'Open Mailbox', {
       inBrowserId: Message('browser'), inUrl: Message('lookout_url'), outPageId: Message('page')

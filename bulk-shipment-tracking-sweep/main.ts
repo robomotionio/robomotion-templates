@@ -41,7 +41,7 @@ msg.t0 = Date.now();
 return msg;`
     })
     .then('a10003', 'Core.Browser.Open', 'Open Reader Browser', {
-      optBrowser: 'headlesschrome',
+      optBrowser: 'chrome',
       outBrowserId: Message('reader_browser')
     })
     .then('a10004', 'Core.Browser.OpenLink', 'Open Bulk Page', {
@@ -105,7 +105,7 @@ return msg;`
   f.edge('b20000', 0, 'b2000f', 0);
 
   f.node('b20001', 'Core.Browser.Open', 'Worker Browser', {
-    optBrowser: 'headlesschrome',
+    optBrowser: 'chrome',
     optUserDataDir: Message('user_data_dir'),
     outBrowserId: Message('worker_browser')
   });

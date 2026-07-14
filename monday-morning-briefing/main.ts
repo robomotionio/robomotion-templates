@@ -60,7 +60,7 @@ msg.briefing = [];
 return msg;`
     })
     .then('a10003', 'Core.Browser.Open', 'Open Browser', {
-      optBrowser: 'headlesschrome', outBrowserId: Message('browser')
+      optBrowser: 'chrome', outBrowserId: Message('browser')
     })
     // ---------------------------------------------------- 1. CRM duplicates (Zapspot)
     .then('a10004', 'Core.Browser.OpenLink', 'Open CRM Login', {

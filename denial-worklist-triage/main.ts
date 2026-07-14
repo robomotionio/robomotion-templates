@@ -58,7 +58,7 @@ msg.t0 = Date.now();
 return msg;`
     })
     .then('a10003', 'Core.Browser.Open', 'Open Browser', {
-      optBrowser: 'headlesschrome',
+      optBrowser: 'chrome',
       outBrowserId: Message('browser')
     })
     .then('a10004', 'Core.Browser.OpenLink', 'Open Login Page', {
