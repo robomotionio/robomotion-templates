@@ -64,7 +64,7 @@ return msg;`
       outPath: Message('download_dir_created')
     })
     .then('a10004', 'Core.Browser.Open', 'Open Browser', {
-      optBrowser: 'headlesschrome',
+      optBrowser: 'chrome',
       optDownloadDir: Message('download_dir'),
       outBrowserId: Message('browser')
     })

@@ -54,7 +54,7 @@ msg.t0 = Date.now();
 return msg;`
     })
     .then('a10003', 'Core.Browser.Open', 'Open Reader Browser', {
-      optBrowser: 'headlesschrome',
+      optBrowser: 'chrome',
       outBrowserId: Message('reader_browser')
     })
     .then('a10004', 'Core.Browser.OpenLink', 'Open Login Page', {
@@ -161,7 +161,7 @@ return msg;`
   f.edge('b20000', 0, 'b20001', 0);
 
   f.node('b20002', 'Core.Browser.Open', 'Worker Browser', {
-    optBrowser: 'headlesschrome',
+    optBrowser: 'chrome',
     optUserDataDir: Message('user_data_dir'),
     outBrowserId: Message('worker_browser')
   });
