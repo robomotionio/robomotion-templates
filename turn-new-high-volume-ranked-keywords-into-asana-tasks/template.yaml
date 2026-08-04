@@ -1,0 +1,28 @@
+name: High-Volume Keywords to Asana Tasks
+slug: turn-new-high-volume-ranked-keywords-into-asana-tasks
+summary: >-
+  Each week, finds the keywords above your search-volume bar that your domains
+  have started ranking for and turns them into an Asana task, so the opportunity
+  lands in someone's queue instead of a spreadsheet nobody opens.
+category: Productivity
+level: Intermediate
+tags: [seo,dataforseo,ranked-keywords,asana,slack]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+  - package: Robomotion.Slack
+    version: "0.7.0"
+  - package: Robomotion.Asana
+    version: "1.1.0"
+has_subflows: false
+flow_id: 8a3cd557-b69e-420a-f4d8-e1759ab16203
+schema_version: 1
+ported_from:
+  - slug: turn-new-high-volume-ranked-keywords-into-asana-tasks-with-dataforseo-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/turn-new-high-volume-ranked-keywords-into-asana-tasks-with-dataforseo-n8n/

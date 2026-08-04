@@ -1,0 +1,24 @@
+name: Bulk Referring Domain Data
+slug: fetch-bulk-live-referring-domain-data-into-google-sheets
+summary: >-
+  Reads a column of domains from a Google Sheet and pulls the live
+  referring-domain counts for all of them in one DataForSEO call, writing the
+  follow and nofollow breakdown back next to each domain.
+category: Data Processing
+level: Beginner
+tags: [seo,dataforseo,backlinks,referring-domains,google-sheets]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+has_subflows: false
+flow_id: 5d8b2fa1-063c-4e79-b4a5-2c917e0d6b38
+schema_version: 1
+ported_from:
+  - slug: fetch-bulk-live-referring-domain-data-into-google-sheets-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/fetch-bulk-live-referring-domain-data-into-google-sheets-with-dataforseo-make/

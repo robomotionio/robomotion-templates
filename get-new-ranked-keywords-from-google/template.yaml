@@ -1,0 +1,25 @@
+name: New Ranked Keywords to Slack
+slug: get-new-ranked-keywords-from-google
+summary: >-
+  Each week, pulls every keyword your target domains rank for, compares it
+  against last week's snapshot, and posts whatever is new to Slack.
+category: Monitoring
+level: Intermediate
+tags: [seo,dataforseo,ranked-keywords,google-sheets,slack]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+  - package: Robomotion.Slack
+    version: "0.7.0"
+has_subflows: false
+flow_id: 13c5a8e0-4f27-4b93-8d61-7a0e29b4f5c3
+schema_version: 1
+ported_from:
+  - slug: get-new-ranked-keywords-from-google-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/get-new-ranked-keywords-from-google-with-dataforseo-make/

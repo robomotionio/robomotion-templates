@@ -1,0 +1,24 @@
+name: App Reviews to ClickUp Tasks
+slug: create-tasks-in-clickup-for-new-app-reviews-automatically-n8n
+summary: >-
+  Every morning, pulls the newest reviews for your app from both Google Play and
+  the App Store, keeps only the ones written since the last run, and opens one
+  ClickUp task per store holding the digest.
+category: Productivity
+level: Advanced
+tags: [seo,dataforseo,app-reviews,clickup,google-play,app-store]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.ClickUp
+    version: "1.1.0"
+has_subflows: false
+flow_id: 84a6c20f-b790-420b-b58d-43f9c0e6a875
+schema_version: 1
+ported_from:
+  - slug: create-tasks-in-clickup-for-new-app-reviews-automatically-with-dataforseo-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/create-tasks-in-clickup-for-new-app-reviews-automatically-with-dataforseo-n8n/

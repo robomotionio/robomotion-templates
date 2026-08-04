@@ -1,0 +1,24 @@
+name: Google Ads Metrics to Sheets
+slug: pull-google-ads-metrics-api-to-google-sheets
+summary: >-
+  Reads a column of keywords from a Google Sheet and fills in the Google Ads
+  planner numbers for all of them in one call: monthly search volume,
+  competition and cost per click.
+category: Data Processing
+level: Beginner
+tags: [seo,dataforseo,keywords-data,google-ads,google-sheets]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+has_subflows: false
+flow_id: a6c8e421-d9b2-4420-d70f-65b1e208a977
+schema_version: 1
+ported_from:
+  - slug: pull-google-ads-metrics-from-dataforseo-api-to-google-sheets-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/pull-google-ads-metrics-from-dataforseo-api-to-google-sheets-with-dataforseo-make/

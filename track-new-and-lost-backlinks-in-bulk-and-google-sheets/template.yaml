@@ -1,0 +1,23 @@
+name: Track New and Lost Backlinks
+slug: track-new-and-lost-backlinks-in-bulk-and-google-sheets
+summary: >-
+  Reads a column of domains from a Google Sheet and pulls, in one DataForSEO
+  call, how many backlinks each of them gained and lost, stamped with the date.
+category: Monitoring
+level: Beginner
+tags: [seo,dataforseo,backlinks,google-sheets,monitoring]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+has_subflows: false
+flow_id: 6e2d9a04-5f18-4c73-b906-8d1a37f0c2e5
+schema_version: 1
+ported_from:
+  - slug: track-new-and-lost-backlinks-in-bulk-with-dataforseo-and-google-sheets-make
+    platform: make
+    url: https://dataforseo.com/templates/track-new-and-lost-backlinks-in-bulk-with-dataforseo-and-google-sheets-make/

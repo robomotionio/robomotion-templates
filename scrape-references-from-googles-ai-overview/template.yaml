@@ -1,0 +1,23 @@
+name: Scrape AI Overview References
+slug: scrape-references-from-googles-ai-overview
+summary: >-
+  Polls the Google SERP for a keyword every 15 minutes with the AI Overview
+  block loaded and appends every source the overview cites to a Google Sheet.
+category: Web Scraping
+level: Beginner
+tags: [seo,dataforseo,ai-overview,google-sheets,serp]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+has_subflows: false
+flow_id: d1e94b26-5c73-4a08-9f52-6b0e83a7c4d5
+schema_version: 1
+ported_from:
+  - slug: scrape-references-from-googles-ai-overview-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/scrape-references-from-googles-ai-overview-with-dataforseo-make/

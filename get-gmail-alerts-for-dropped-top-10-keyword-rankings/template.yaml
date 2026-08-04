@@ -1,0 +1,26 @@
+name: Top-10 Rank Drop Alerts by Email
+slug: get-gmail-alerts-for-dropped-top-10-keyword-rankings
+summary: >-
+  Every day, pulls the keywords each target domain currently holds a top-10
+  position for, compares against yesterday's snapshot, and emails a digest of
+  everything that slipped.
+category: Monitoring
+level: Advanced
+tags: [seo,dataforseo,rank-tracking,gmail,google-sheets,alerting]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+  - package: Robomotion.Gmail
+    version: "1.1.0"
+has_subflows: false
+flow_id: 3f516dbe-624b-4db6-c038-9ea47bf15320
+schema_version: 1
+ported_from:
+  - slug: get-gmail-alerts-for-dropped-top-10-keyword-rankings-with-dataforseo-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/get-gmail-alerts-for-dropped-top-10-keyword-rankings-with-dataforseo-n8n/

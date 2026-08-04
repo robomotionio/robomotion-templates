@@ -1,0 +1,24 @@
+name: Keyword Position Dynamics by URL
+slug: track-keyword-position-dynamics-by-url-in-google-sheets
+summary: >-
+  Every two weeks, checks where each tracked URL ranks for its keyword and
+  appends a dated row carrying the new position, the delta and a status - up,
+  down, same, new or lost.
+category: Monitoring
+level: Advanced
+tags: [seo,dataforseo,serp,rank-tracking,google-sheets]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+has_subflows: false
+flow_id: 2e405cad-513a-4ca5-bf27-8d936ae0421b
+schema_version: 1
+ported_from:
+  - slug: track-keyword-position-dynamics-by-url-in-google-sheets-with-dataforseo-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/track-keyword-position-dynamics-by-url-in-google-sheets-with-dataforseo-n8n/

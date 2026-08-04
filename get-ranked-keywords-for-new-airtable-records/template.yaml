@@ -1,0 +1,24 @@
+name: Ranked Keywords for New Airtable Records
+slug: get-ranked-keywords-for-new-airtable-records
+summary: >-
+  Watches an Airtable table for target domains that have not been looked up yet,
+  pulls the keywords each one ranks for, writes them into a second table, and
+  ticks the source record off so it is never processed twice.
+category: Data Processing
+level: Intermediate
+tags: [seo,dataforseo,ranked-keywords,airtable]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.Airtable
+    version: "0.7.0"
+has_subflows: false
+flow_id: df82ba0c-0be3-4750-c93d-3620aef6b584
+schema_version: 1
+ported_from:
+  - slug: get-ranked-keywords-for-new-airtable-records-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/get-ranked-keywords-for-new-airtable-records-with-dataforseo-make/

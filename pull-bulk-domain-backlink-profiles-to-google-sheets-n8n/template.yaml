@@ -1,0 +1,24 @@
+name: Bulk Domain Backlink Profiles (n8n variant)
+slug: pull-bulk-domain-backlink-profiles-to-google-sheets-n8n
+summary: >-
+  Reads a column of domains from a Google Sheet and pulls the full backlink
+  profile for all of them in one DataForSEO call. Port of the n8n edition of the
+  bulk backlink profile puller.
+category: Data Processing
+level: Intermediate
+tags: [seo,dataforseo,backlinks,google-sheets,audit]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+has_subflows: false
+flow_id: 2b47f6a9-c815-4e30-9d76-a41c08e5b3f2
+schema_version: 1
+ported_from:
+  - slug: pull-bulk-domain-backlink-profiles-to-google-sheets-with-dataforseo-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/pull-bulk-domain-backlink-profiles-to-google-sheets-with-dataforseo-n8n/

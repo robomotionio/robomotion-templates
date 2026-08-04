@@ -1,0 +1,24 @@
+name: Add Backlinks to Google Sheets
+slug: add-backlinks-to-google-sheets
+summary: >-
+  Pulls the live backlinks pointing at a domain every 15 minutes and appends
+  them to a Google Sheet, one row per link, with the source page, anchor text,
+  follow status, ranks and first/last seen dates.
+category: Data Processing
+level: Beginner
+tags: [seo,dataforseo,backlinks,google-sheets]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+has_subflows: false
+flow_id: 3f7a04e8-b269-4d51-9c83-a05e17b2d6c4
+schema_version: 1
+ported_from:
+  - slug: add-backlinks-to-google-sheets-from-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/add-backlinks-to-google-sheets-from-dataforseo-make/

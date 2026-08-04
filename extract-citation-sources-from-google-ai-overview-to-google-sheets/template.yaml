@@ -1,0 +1,25 @@
+name: AI Overview Citations to Sheets
+slug: extract-citation-sources-from-google-ai-overview-to-google-sheets
+summary: >-
+  Tracks which websites Google's AI Overview cites for a keyword. Every 7 days
+  it pulls the Google SERP with the AI Overview block loaded, collects every
+  source the answer references, de-duplicates them by URL and appends them to a
+  Google Sheet.
+category: Web Scraping
+level: Beginner
+tags: [seo,dataforseo,ai-overview,google-sheets,serp]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+has_subflows: false
+flow_id: a4f1c9d2-6b83-4e17-9c05-2fd8a1e7b430
+schema_version: 1
+ported_from:
+  - slug: extract-citation-sources-from-google-ai-overview-to-google-sheets-with-dataforseo-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/extract-citation-sources-from-google-ai-overview-to-google-sheets-with-dataforseo-n8n/

@@ -1,0 +1,26 @@
+name: Slack Alert on Keyword Rank Drop
+slug: send-a-slack-message-when-keyword-rank-drops
+summary: >-
+  Every morning, checks where each tracked URL ranks for its keyword, compares
+  against the position recorded on the last run, and posts to Slack only when a
+  keyword has moved down.
+category: Monitoring
+level: Intermediate
+tags: [seo,dataforseo,serp,rank-tracking,slack,google-sheets]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+  - package: Robomotion.Slack
+    version: "0.7.0"
+has_subflows: false
+flow_id: 0c2e4a8b-3f16-4a83-9d05-6b7148ce20f9
+schema_version: 1
+ported_from:
+  - slug: send-a-slack-message-when-keyword-rank-drops-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/send-a-slack-message-when-keyword-rank-drops-with-dataforseo-make/

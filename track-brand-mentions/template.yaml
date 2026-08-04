@@ -1,0 +1,27 @@
+name: Track Brand Mentions
+slug: track-brand-mentions
+summary: >-
+  Every evening, searches the web for pages that mentioned your brand in the
+  last 24 hours, classifies each mention as positive, negative or neutral,
+  writes them into a dated Google Doc, and posts a Slack summary with the
+  sentiment split and a link to the doc.
+category: Monitoring
+level: Intermediate
+tags: [seo,dataforseo,content-analysis,brand-monitoring,slack,google-docs]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleDocs
+    version: "1.6.0"
+  - package: Robomotion.Slack
+    version: "0.7.0"
+has_subflows: false
+flow_id: 95b7d310-c8a1-431c-c69e-54a0d1f79866
+schema_version: 1
+ported_from:
+  - slug: track-brand-mentions-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/track-brand-mentions-with-dataforseo-make/

@@ -1,0 +1,27 @@
+name: New Top-10 Keywords to Airtable
+slug: log-new-ranked-keywords-in-top-10-google-results-in-airtable
+summary: >-
+  Each week, finds the keywords where your domains have broken into Google's
+  first page, writes them to an Airtable base, and posts a summary to Slack.
+category: Monitoring
+level: Intermediate
+tags: [seo,dataforseo,ranked-keywords,airtable,slack]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+  - package: Robomotion.Airtable
+    version: "0.7.0"
+  - package: Robomotion.Slack
+    version: "0.7.0"
+has_subflows: false
+flow_id: 9b4de668-c7af-431b-a5e9-f286ab273140
+schema_version: 1
+ported_from:
+  - slug: log-new-ranked-keywords-in-top-10-google-results-in-airtable-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/log-new-ranked-keywords-in-top-10-google-results-in-airtable-with-dataforseo-make/

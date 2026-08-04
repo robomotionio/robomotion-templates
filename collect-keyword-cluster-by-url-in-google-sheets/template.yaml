@@ -1,0 +1,25 @@
+name: Keyword Cluster by URL
+slug: collect-keyword-cluster-by-url-in-google-sheets
+summary: >-
+  Every two weeks, takes a list of URLs from an input sheet and, for each one,
+  pulls the full set of keywords that URL ranks for into its own tab of an
+  output spreadsheet - keyword, position, volume, difficulty, CPC, competition,
+  intent, SERP feature type and estimated traffic.
+category: Data Processing
+level: Intermediate
+tags: [seo,dataforseo,keyword-clustering,google-sheets]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+has_subflows: false
+flow_id: e093cb1d-1cf4-4861-da4e-4731bf07c695
+schema_version: 1
+ported_from:
+  - slug: collect-keyword-cluster-by-url-in-google-sheets-with-dataforseo-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/collect-keyword-cluster-by-url-in-google-sheets-with-dataforseo-n8n/

@@ -1,0 +1,25 @@
+name: Bulk Domain Rank Checker (n8n variant)
+slug: check-bulk-domain-ranks-and-save-results-to-google-sheets-n8n
+summary: >-
+  Reads a column of target domains from a Google Sheet, scores all of them in
+  one DataForSEO Bulk Ranks call, and writes each rank back next to its domain
+  with the date it was measured. Port of the n8n edition of the bulk rank
+  checker.
+category: Data Processing
+level: Beginner
+tags: [seo,dataforseo,backlinks,google-sheets,bulk]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+has_subflows: false
+flow_id: f39b1d47-2e60-4c85-a713-98d02f6b5ea1
+schema_version: 1
+ported_from:
+  - slug: check-bulk-domain-ranks-and-save-results-to-google-sheets-with-dataforseo-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/check-bulk-domain-ranks-and-save-results-to-google-sheets-with-dataforseo-n8n/

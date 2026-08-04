@@ -1,0 +1,26 @@
+name: Broken Backlink Recovery Tasks
+slug: track-broken-backlinks-and-create-recovery-tasks-in-asana
+summary: >-
+  Pulls every backlink pointing at a URL on your domain that now returns an
+  error, logs them to a dated Google Sheet, and opens one Asana task pointing at
+  that sheet.
+category: Monitoring
+level: Intermediate
+tags: [seo,dataforseo,backlinks,asana,google-sheets,link-building]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+  - package: Robomotion.Asana
+    version: "1.1.0"
+has_subflows: false
+flow_id: 8f4c26a3-7b05-4e91-b3d8-05f172e6ca94
+schema_version: 1
+ported_from:
+  - slug: track-broken-backlinks-and-create-recovery-tasks-in-asana-with-dataforseo-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/track-broken-backlinks-and-create-recovery-tasks-in-asana-with-dataforseo-n8n/

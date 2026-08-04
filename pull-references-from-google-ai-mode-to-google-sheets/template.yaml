@@ -1,0 +1,28 @@
+name: AI Mode References to Sheets
+slug: pull-references-from-google-ai-mode-to-google-sheets
+summary: >-
+  Tracks which websites Google's AI Mode cites when it answers a question. Every
+  7 days it queries the AI Mode SERP for a keyword, flattens the references of
+  every answer block, de-duplicates them by URL and appends them to a Google
+  Sheet.
+category: Web Scraping
+level: Beginner
+tags: [seo,dataforseo,ai-mode,google-sheets,serp]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+has_subflows: false
+flow_id: b8d3e0f1-4a52-4c96-8e71-05c3a9d6f2b7
+schema_version: 1
+ported_from:
+  - slug: pull-references-from-google-ai-mode-to-google-sheets
+    platform: n8n
+    url: https://dataforseo.com/templates/pull-references-from-google-ai-mode-to-google-sheets/
+  - slug: pull-references-from-google-ai-mode-to-google-sheets-with-dataforseo-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/pull-references-from-google-ai-mode-to-google-sheets-with-dataforseo-n8n/

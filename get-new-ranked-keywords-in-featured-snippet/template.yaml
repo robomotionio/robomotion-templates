@@ -1,0 +1,26 @@
+name: New Featured Snippet Keywords by Email
+slug: get-new-ranked-keywords-in-featured-snippet
+summary: >-
+  Each week, finds the keywords where your domains now hold Google's featured
+  snippet - position zero, above the first organic result - and emails the ones
+  that are new since last week.
+category: Monitoring
+level: Intermediate
+tags: [seo,dataforseo,featured-snippet,google-sheets,gmail]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+  - package: Robomotion.Gmail
+    version: "1.1.0"
+has_subflows: false
+flow_id: 35e7c002-6149-4db5-af83-9c204bd61758
+schema_version: 1
+ported_from:
+  - slug: get-new-ranked-keywords-in-featured-snippet-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/get-new-ranked-keywords-in-featured-snippet-with-dataforseo-make/

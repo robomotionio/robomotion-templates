@@ -1,0 +1,24 @@
+name: Pipedrive Lead Traffic Stats
+slug: get-traffic-stats-for-pipedrive-leads
+summary: >-
+  Every 15 minutes, takes the leads Pipedrive has touched most recently, turns
+  each website into a bare domain, estimates how much organic search traffic
+  that domain gets, and writes the numbers back onto the Pipedrive record.
+category: Productivity
+level: Intermediate
+tags: [seo,dataforseo,crm,lead-enrichment,pipedrive]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.Pipedrive
+    version: "0.1.10"
+has_subflows: false
+flow_id: 5fcbef72-0d2f-4d3d-ea12-ea81ab390f5d
+schema_version: 1
+ported_from:
+  - slug: get-traffic-stats-for-pipedrive-leads-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/get-traffic-stats-for-pipedrive-leads-with-dataforseo-make/

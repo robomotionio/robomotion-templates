@@ -1,0 +1,26 @@
+name: Weekly Toxic Backlink Report
+slug: monitor-toxic-backlinks-and-email-weekly-google-sheets-reports
+summary: >-
+  Every week, pulls every backlink first seen in the last seven days whose spam
+  score is above the threshold, drops them into a fresh Google Sheet named after
+  the domain and the date, and emails you the link.
+category: Monitoring
+level: Intermediate
+tags: [seo,dataforseo,backlinks,spam-score,gmail,google-sheets]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+  - package: Robomotion.Gmail
+    version: "1.1.0"
+has_subflows: false
+flow_id: 2d67b3f0-8e14-4c95-a70b-51fd928c6ea3
+schema_version: 1
+ported_from:
+  - slug: monitor-toxic-backlinks-and-email-weekly-google-sheets-reports-with-dataforseo-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/monitor-toxic-backlinks-and-email-weekly-google-sheets-reports-with-dataforseo-n8n/

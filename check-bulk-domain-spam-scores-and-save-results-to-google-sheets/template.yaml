@@ -1,0 +1,24 @@
+name: Bulk Domain Spam Score Checker
+slug: check-bulk-domain-spam-scores-and-save-results-to-google-sheets
+summary: >-
+  Reads a column of domains from a Google Sheet, scores all of them in one
+  DataForSEO Bulk Spam Score call, and writes each 0-100 score back next to its
+  domain with the date it was measured.
+category: Data Processing
+level: Beginner
+tags: [seo,dataforseo,backlinks,spam-score,google-sheets]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+has_subflows: false
+flow_id: a91c6e33-47b8-4d02-95fa-1e7b0c8d43f6
+schema_version: 1
+ported_from:
+  - slug: check-bulk-domain-spam-scores-and-save-results-to-google-sheets-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/check-bulk-domain-spam-scores-and-save-results-to-google-sheets-with-dataforseo-make/
