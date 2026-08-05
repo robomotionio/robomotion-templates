@@ -1,5 +1,52 @@
 schema_version: 1
 templates:
+  - name: ActiveCampaign Lead Business Data
+    slug: get-business-data-for-activecampaign-leads
+    summary: >-
+      Every 15 minutes, takes the leads ActiveCampaign has touched most recently,
+      turns each website into a bare domain, looks the company up in the Google
+      Business listings database, and writes the name, description, categories,
+      address, rating and price level back onto the ActiveCampaign record.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,crm,lead-enrichment,activecampaign]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: ActiveCampaign Lead Traffic Stats
+    slug: get-traffic-stats-for-activecampaign-leads
+    summary: >-
+      Every 15 minutes, takes the leads ActiveCampaign has touched most recently,
+      turns each website into a bare domain, estimates how much organic search
+      traffic that domain gets, and writes the numbers back onto the ActiveCampaign
+      record.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,crm,lead-enrichment,activecampaign]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Add Backlinks to Google Sheets
+    slug: add-backlinks-to-google-sheets
+    summary: >-
+      Pulls the live backlinks pointing at a domain every 15 minutes and appends
+      them to a Google Sheet, one row per link, with the source page, anchor text,
+      follow status, ranks and first/last seen dates.
+    category: SEO
+    level: Beginner
+    tags: [seo,dataforseo,backlinks,google-sheets]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Add Datetime to File Names
     slug: add-datetime-to-file-names
     summary: >-
@@ -13,6 +60,53 @@ templates:
     updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
+
+  - name: AI Mode References to Sheets
+    slug: pull-references-from-google-ai-mode-to-google-sheets
+    summary: >-
+      Tracks which websites Google's AI Mode cites when it answers a question. Every
+      7 days it queries the AI Mode SERP for a keyword, flattens the references of
+      every answer block, de-duplicates them by URL and appends them to a Google
+      Sheet.
+    category: SEO
+    level: Beginner
+    tags: [seo,dataforseo,ai-mode,google-sheets,serp]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: AI Overview Citations to Sheets
+    slug: extract-citation-sources-from-google-ai-overview-to-google-sheets
+    summary: >-
+      Tracks which websites Google's AI Overview cites for a keyword. Every 7 days
+      it pulls the Google SERP with the AI Overview block loaded, collects every
+      source the answer references, de-duplicates them by URL and appends them to a
+      Google Sheet.
+    category: SEO
+    level: Beginner
+    tags: [seo,dataforseo,ai-overview,google-sheets,serp]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: AI Overview Keyword Wins by Email
+    slug: get-new-ranked-google-ai-overview-keywords-via-email
+    summary: >-
+      Each week, finds the keywords where your domains are newly cited inside
+      Google's AI Overview, saves the full picture to Google Sheets, and emails the
+      new placements.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,ai-overview,google-sheets,gmail]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
 
   - name: Airbnb Property Details
     slug: extract-property-details-airbnb
@@ -52,6 +146,65 @@ templates:
     author: Robomotion
     created: "2025-11-16"
     updated: "2025-11-16"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: App Review Alerts to Slack
+    slug: send-slack-alerts-for-new-app-reviews-from-google-play-and-app-store-n8n
+    summary: >-
+      Every morning, pulls the newest reviews for your app from both Google Play and
+      the App Store, keeps only the ones written since the last run, and posts a
+      digest per store to Slack.
+    category: SEO
+    level: Advanced
+    tags: [seo,dataforseo,app-reviews,slack,google-play,app-store]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: App Review Alerts to Slack (Make variant)
+    slug: send-slack-alerts-for-new-app-reviews-from-google-play-and-app-store-make
+    summary: >-
+      Every morning, pulls the newest reviews for your app from both Google Play and
+      the App Store and posts a digest per store to Slack. Port of the Make edition.
+    category: SEO
+    level: Advanced
+    tags: [seo,dataforseo,app-reviews,slack,google-play,app-store]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: App Reviews to ClickUp Tasks
+    slug: create-tasks-in-clickup-for-new-app-reviews-automatically-n8n
+    summary: >-
+      Every morning, pulls the newest reviews for your app from both Google Play and
+      the App Store, keeps only the ones written since the last run, and opens one
+      ClickUp task per store holding the digest.
+    category: SEO
+    level: Advanced
+    tags: [seo,dataforseo,app-reviews,clickup,google-play,app-store]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: App Reviews to ClickUp Tasks (Make variant)
+    slug: create-tasks-in-clickup-for-new-app-reviews-automatically-make
+    summary: >-
+      Every morning, pulls the newest reviews for your app from both Google Play and
+      the App Store and opens one ClickUp task per store holding the digest. Port of
+      the Make edition.
+    category: SEO
+    level: Advanced
+    tags: [seo,dataforseo,app-reviews,clickup,google-play,app-store]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -155,6 +308,21 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Broken Backlink Recovery Tasks
+    slug: track-broken-backlinks-and-create-recovery-tasks-in-asana
+    summary: >-
+      Pulls every backlink pointing at a URL on your domain that now returns an
+      error, logs them to a dated Google Sheet, and opens one Asana task pointing at
+      that sheet.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,backlinks,asana,google-sheets,link-building]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Built In Jobs
     slug: extract-jobs-built-in
     summary: >-
@@ -178,6 +346,113 @@ templates:
     author: Robomotion
     created: "2026-05-23"
     updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Bulk Domain Backlink Profiles
+    slug: pull-bulk-domain-backlink-profiles-to-google-sheets-make
+    summary: >-
+      Reads a column of domains from a Google Sheet and pulls the full backlink
+      profile for all of them in one DataForSEO call - rank, spam score, broken
+      links, referring domains, IPs, subnets and the TLD, type, attribute, platform,
+      location and country breakdowns.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,backlinks,google-sheets,audit]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Bulk Domain Backlink Profiles (n8n variant)
+    slug: pull-bulk-domain-backlink-profiles-to-google-sheets-n8n
+    summary: >-
+      Reads a column of domains from a Google Sheet and pulls the full backlink
+      profile for all of them in one DataForSEO call. Port of the n8n edition of the
+      bulk backlink profile puller.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,backlinks,google-sheets,audit]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Bulk Domain Rank Checker
+    slug: check-bulk-domain-ranks-and-save-results-to-google-sheets-make
+    summary: >-
+      Reads a column of target domains from a Google Sheet, scores all of them in
+      one DataForSEO Bulk Ranks call, and writes each rank back next to its domain
+      with the date it was measured.
+    category: SEO
+    level: Beginner
+    tags: [seo,dataforseo,backlinks,google-sheets,bulk]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Bulk Domain Rank Checker (n8n variant)
+    slug: check-bulk-domain-ranks-and-save-results-to-google-sheets-n8n
+    summary: >-
+      Reads a column of target domains from a Google Sheet, scores all of them in
+      one DataForSEO Bulk Ranks call, and writes each rank back next to its domain
+      with the date it was measured. Port of the n8n edition of the bulk rank
+      checker.
+    category: SEO
+    level: Beginner
+    tags: [seo,dataforseo,backlinks,google-sheets,bulk]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Bulk Domain Spam Score Checker
+    slug: check-bulk-domain-spam-scores-and-save-results-to-google-sheets
+    summary: >-
+      Reads a column of domains from a Google Sheet, scores all of them in one
+      DataForSEO Bulk Spam Score call, and writes each 0-100 score back next to its
+      domain with the date it was measured.
+    category: SEO
+    level: Beginner
+    tags: [seo,dataforseo,backlinks,spam-score,google-sheets]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Bulk Live Backlink Counts
+    slug: pull-bulk-live-backlink-counts-into-google-sheets
+    summary: >-
+      Reads a column of domains from a Google Sheet and pulls the live backlink
+      count for all of them in one DataForSEO call, stamping each count with the
+      date it was measured.
+    category: SEO
+    level: Beginner
+    tags: [seo,dataforseo,backlinks,google-sheets,bulk]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Bulk Referring Domain Data
+    slug: fetch-bulk-live-referring-domain-data-into-google-sheets
+    summary: >-
+      Reads a column of domains from a Google Sheet and pulls the live
+      referring-domain counts for all of them in one DataForSEO call, writing the
+      follow and nofollow breakdown back next to each domain.
+    category: SEO
+    level: Beginner
+    tags: [seo,dataforseo,backlinks,referring-domains,google-sheets]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -294,6 +569,22 @@ templates:
     author: Robomotion
     created: "2026-05-23"
     updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Competitor Keyword Gaps to Notion
+    slug: find-competitor-keyword-gaps-and-log-opportunities-to-notion
+    summary: >-
+      Pulls every keyword your site ranks for, pulls every keyword a competitor
+      ranks for, and writes the difference - the keywords they own and you do not -
+      into a Notion database with search volume, their position, their URL and the
+      keyword competition score.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,keyword-gap,notion,competitor-analysis]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -827,6 +1118,21 @@ templates:
     screenshot: screenshot.png
     has_subflows: true
 
+  - name: Featured Snippet Wins by Email
+    slug: track-new-featured-snippet-keyword-wins-via-email
+    summary: >-
+      Each week, finds the keywords where your domains now hold Google's featured
+      snippet and emails the new ones with position, search volume and the ranking
+      URL.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,featured-snippet,google-sheets,gmail]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Find and Delete Empty Files
     slug: find-and-delete-empty-files
     summary: >-
@@ -1188,6 +1494,52 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: GoHighLevel Lead Business Data
+    slug: get-business-data-for-gohighlevel-leads
+    summary: >-
+      Every 15 minutes, takes the leads GoHighLevel has touched most recently, turns
+      each website into a bare domain, looks the company up in the Google Business
+      listings database, and writes the name, description, categories, address,
+      rating and price level back onto the GoHighLevel record.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,crm,lead-enrichment,gohighlevel]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: GoHighLevel Lead Traffic Stats
+    slug: get-traffic-stats-for-gohighlevel-leads
+    summary: >-
+      Every 15 minutes, takes the leads GoHighLevel has touched most recently, turns
+      each website into a bare domain, estimates how much organic search traffic
+      that domain gets, and writes the numbers back onto the GoHighLevel record.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,crm,lead-enrichment,gohighlevel]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Google Ads Metrics to Sheets
+    slug: pull-google-ads-metrics-api-to-google-sheets
+    summary: >-
+      Reads a column of keywords from a Google Sheet and fills in the Google Ads
+      planner numbers for all of them in one call: monthly search volume,
+      competition and cost per click.
+    category: SEO
+    level: Beginner
+    tags: [seo,dataforseo,keywords-data,google-ads,google-sheets]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: GUI Testing Calculator
     slug: gui-testing-calculator
     summary: >-
@@ -1241,6 +1593,52 @@ templates:
     author: Robomotion
     created: "2025-11-16"
     updated: "2025-11-16"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: High-Volume Keywords to Asana Tasks
+    slug: turn-new-high-volume-ranked-keywords-into-asana-tasks
+    summary: >-
+      Each week, finds the keywords above your search-volume bar that your domains
+      have started ranking for and turns them into an Asana task, so the opportunity
+      lands in someone's queue instead of a spreadsheet nobody opens.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,ranked-keywords,asana,slack]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Hubspot Lead Business Data
+    slug: get-business-data-for-hubspot-leads
+    summary: >-
+      Every 15 minutes, takes the leads HubSpot has touched most recently, turns
+      each website into a bare domain, looks the company up in the Google Business
+      listings database, and writes the name, description, categories, address,
+      rating and price level back onto the HubSpot record.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,crm,lead-enrichment,hubspot]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Hubspot Lead Traffic Stats
+    slug: get-traffic-stats-for-hubspot-leads
+    summary: >-
+      Every 15 minutes, takes the leads HubSpot has touched most recently, turns
+      each website into a bare domain, estimates how much organic search traffic
+      that domain gets, and writes the numbers back onto the HubSpot record.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,crm,lead-enrichment,hubspot]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -1398,6 +1796,37 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Keyword Cluster by URL
+    slug: collect-keyword-cluster-by-url-in-google-sheets
+    summary: >-
+      Every two weeks, takes a list of URLs from an input sheet and, for each one,
+      pulls the full set of keywords that URL ranks for into its own tab of an
+      output spreadsheet - keyword, position, volume, difficulty, CPC, competition,
+      intent, SERP feature type and estimated traffic.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,keyword-clustering,google-sheets]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Keyword Position Dynamics by URL
+    slug: track-keyword-position-dynamics-by-url-in-google-sheets
+    summary: >-
+      Every two weeks, checks where each tracked URL ranks for its keyword and
+      appends a dated row carrying the new position, the delta and a status - up,
+      down, same, new or lost.
+    category: SEO
+    level: Advanced
+    tags: [seo,dataforseo,serp,rank-tracking,google-sheets]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Launch Excel
     slug: launch-excel
     summary: >-
@@ -1489,6 +1918,22 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Low-Competition Keyword Finder
+    slug: find-low-competition-keyword-opportunities
+    summary: >-
+      For each seed domain in an input sheet, pulls every keyword the domain is
+      relevant for, scores all of them for ranking difficulty in one bulk call, and
+      writes the combined picture - volume, trend, difficulty, intent and average
+      backlinks - to an opportunities sheet.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,keyword-research,google-sheets,keyword-difficulty]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Manipulate Excel Data Using SQL
     slug: manipulate-excel-data-using-sql
     featured: true
@@ -1560,6 +2005,37 @@ templates:
     screenshot: screenshot.png
     has_subflows: true
 
+  - name: Monday CRM Lead Business Data
+    slug: get-business-data-for-monday-crm-leads
+    summary: >-
+      Every 15 minutes, takes the leads monday has touched most recently, turns each
+      website into a bare domain, looks the company up in the Google Business
+      listings database, and writes the name, description, categories, address,
+      rating and price level back onto the monday record.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,crm,lead-enrichment,monday-crm]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Monday CRM Lead Traffic Stats
+    slug: get-traffic-stats-for-monday-crm-leads
+    summary: >-
+      Every 15 minutes, takes the leads monday has touched most recently, turns each
+      website into a bare domain, estimates how much organic search traffic that
+      domain gets, and writes the numbers back onto the monday record.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,crm,lead-enrichment,monday-crm]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Monday Morning Briefing
     slug: monday-morning-briefing
     summary: >-
@@ -1589,6 +2065,78 @@ templates:
     author: Robomotion
     created: "2026-05-23"
     updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: New AI Overview Keywords by Email
+    slug: get-new-ranked-keywords-in-google-aio
+    summary: >-
+      Each week, finds the keywords where your domains are now cited inside Google's
+      AI Overview and emails the new ones.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,ai-overview,google-sheets,gmail]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: New Featured Snippet Keywords by Email
+    slug: get-new-ranked-keywords-in-featured-snippet
+    summary: >-
+      Each week, finds the keywords where your domains now hold Google's featured
+      snippet - position zero, above the first organic result - and emails the ones
+      that are new since last week.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,featured-snippet,google-sheets,gmail]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: New High-Volume Ranked Keywords
+    slug: get-new-high-volume-ranked-keywords-on-google
+    summary: >-
+      Each week, finds the keywords above your search-volume bar that your domains
+      have started ranking for, opens one Asana task holding the list, and posts a
+      summary to Slack.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,ranked-keywords,asana,slack,google-sheets]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: New Ranked Keywords to Slack
+    slug: get-new-ranked-keywords-from-google
+    summary: >-
+      Each week, pulls every keyword your target domains rank for, compares it
+      against last week's snapshot, and posts whatever is new to Slack.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,ranked-keywords,google-sheets,slack]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: New Top-10 Keywords to Airtable
+    slug: log-new-ranked-keywords-in-top-10-google-results-in-airtable
+    summary: >-
+      Each week, finds the keywords where your domains have broken into Google's
+      first page, writes them to an Airtable base, and posts a summary to Slack.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,ranked-keywords,airtable,slack]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -1663,6 +2211,37 @@ templates:
     author: Robomotion
     created: "2026-05-23"
     updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Pipedrive Lead Business Data
+    slug: get-business-data-for-pipedrive-leads
+    summary: >-
+      Every 15 minutes, takes the leads Pipedrive has touched most recently, turns
+      each website into a bare domain, looks the company up in the Google Business
+      listings database, and writes the name, description, categories, address,
+      rating and price level back onto the Pipedrive record.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,crm,lead-enrichment,pipedrive]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Pipedrive Lead Traffic Stats
+    slug: get-traffic-stats-for-pipedrive-leads
+    summary: >-
+      Every 15 minutes, takes the leads Pipedrive has touched most recently, turns
+      each website into a bare domain, estimates how much organic search traffic
+      that domain gets, and writes the numbers back onto the Pipedrive record.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,crm,lead-enrichment,pipedrive]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -1746,6 +2325,35 @@ templates:
     author: Robomotion
     created: "2026-07-10"
     updated: "2026-07-10"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Ranked Keyword Gap Analysis to Notion
+    slug: run-a-ranked-keyword-gap-analysis-and-notion
+    summary: >-
+      Runs a ranked keyword gap analysis between your domain and a competitor's, and
+      logs every keyword they rank for and you do not into a Notion database.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,keyword-gap,notion,competitor-analysis]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Ranked Keywords for New Airtable Records
+    slug: get-ranked-keywords-for-new-airtable-records
+    summary: >-
+      Watches an Airtable table for target domains that have not been looked up yet,
+      pulls the keywords each one ranks for, writes them into a second table, and
+      ticks the source record off so it is never processed twice.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,ranked-keywords,airtable]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -1901,6 +2509,66 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Salesforce Lead Business Data
+    slug: get-business-data-for-salesforce-leads
+    summary: >-
+      Every 15 minutes, takes the leads Salesforce has touched most recently, turns
+      each website into a bare domain, looks the company up in the Google Business
+      listings database, and writes the name, description, categories, address,
+      rating and price level back onto the Salesforce record.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,crm,lead-enrichment,salesforce]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Salesforce Lead Traffic Stats
+    slug: get-traffic-stats-for-salesforce-leads
+    summary: >-
+      Every 15 minutes, takes the leads Salesforce has touched most recently, turns
+      each website into a bare domain, estimates how much organic search traffic
+      that domain gets, and writes the numbers back onto the Salesforce record.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,crm,lead-enrichment,salesforce]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Scrape AI Mode References
+    slug: scrape-references-from-google-ai-mode
+    summary: >-
+      Watches, in near real time, which sites Google's AI Mode pulls from when it
+      answers questions about your brand. Polls the AI Mode SERP every 15 minutes
+      and appends every cited source to a Google Sheet.
+    category: SEO
+    level: Beginner
+    tags: [seo,dataforseo,ai-mode,google-sheets,brand-monitoring]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Scrape AI Overview References
+    slug: scrape-references-from-googles-ai-overview
+    summary: >-
+      Polls the Google SERP for a keyword every 15 minutes with the AI Overview
+      block loaded and appends every source the overview cites to a Google Sheet.
+    category: SEO
+    level: Beginner
+    tags: [seo,dataforseo,ai-overview,google-sheets,serp]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Screen Capture
     slug: screen-capture
     summary: >-
@@ -2010,6 +2678,21 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: SERP Position for Airtable Records
+    slug: get-google-serp-position-for-new-airtable-records
+    summary: >-
+      Watches an Airtable table for keyword/domain pairs that have not been checked
+      yet, looks up where the domain ranks for that keyword on Google, and writes
+      the position back onto the record.
+    category: SEO
+    level: Beginner
+    tags: [seo,dataforseo,serp,rank-tracking,airtable]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Share PowerPoint File as PDF
     slug: share-powerpoint-file-as-pdf
     summary: >-
@@ -2073,6 +2756,21 @@ templates:
     author: Robomotion
     created: "2026-05-23"
     updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Slack Alert on Keyword Rank Drop
+    slug: send-a-slack-message-when-keyword-rank-drops
+    summary: >-
+      Every morning, checks where each tracked URL ranks for its keyword, compares
+      against the position recorded on the last run, and posts to Slack only when a
+      keyword has moved down.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,serp,rank-tracking,slack,google-sheets]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -2254,6 +2952,125 @@ templates:
     author: Robomotion
     created: "2026-07-10"
     updated: "2026-07-10"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Top-10 Keywords to Airtable with Slack Alerts
+    slug: log-new-google-top-10-keywords-to-airtable-and-slack-alerts
+    summary: >-
+      Each week, finds the keywords where your domains have broken into Google's
+      first page, logs them to Airtable, and alerts Slack.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,ranked-keywords,airtable,slack]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Top-10 Rank Drop Alert via Gmail
+    slug: get-keywords-top-10-rank-drop-alert-via-gmail
+    summary: >-
+      Every day, pulls the keywords each target domain currently holds a top-10
+      position for, compares against yesterday's snapshot, and emails a digest of
+      everything that slipped.
+    category: SEO
+    level: Advanced
+    tags: [seo,dataforseo,rank-tracking,gmail,google-sheets,alerting]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Top-10 Rank Drop Alerts by Email
+    slug: get-gmail-alerts-for-dropped-top-10-keyword-rankings
+    summary: >-
+      Every day, pulls the keywords each target domain currently holds a top-10
+      position for, compares against yesterday's snapshot, and emails a digest of
+      everything that slipped.
+    category: SEO
+    level: Advanced
+    tags: [seo,dataforseo,rank-tracking,gmail,google-sheets,alerting]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Toxic Backlink Disavow File
+    slug: detect-toxic-backlinks-and-build-a-disavow-file-google-drive-and-gmail
+    summary: >-
+      Pages through every backlink pointing at your domain with a spam score above
+      the threshold, writes the source URLs into a Google-compliant disavow.txt,
+      uploads it to Google Drive and emails you the link.
+    category: SEO
+    level: Advanced
+    tags: [seo,dataforseo,backlinks,disavow,google-drive,gmail]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Track Brand Mentions
+    slug: track-brand-mentions
+    summary: >-
+      Every evening, searches the web for pages that mentioned your brand in the
+      last 24 hours, classifies each mention as positive, negative or neutral,
+      writes them into a dated Google Doc, and posts a Slack summary with the
+      sentiment split and a link to the doc.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,content-analysis,brand-monitoring,slack,google-docs]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Track New and Lost Backlinks
+    slug: track-new-and-lost-backlinks-in-bulk-and-google-sheets
+    summary: >-
+      Reads a column of domains from a Google Sheet and pulls, in one DataForSEO
+      call, how many backlinks each of them gained and lost, stamped with the date.
+    category: SEO
+    level: Beginner
+    tags: [seo,dataforseo,backlinks,google-sheets,monitoring]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Track New and Lost Referring Domains
+    slug: track-new-and-lost-referring-domains-in-bulk-and-google-sheets
+    summary: >-
+      Reads a column of domains from a Google Sheet and pulls, in one DataForSEO
+      call, how many referring domains each of them gained and lost - counted both
+      per domain and per main domain - stamped with the date.
+    category: SEO
+    level: Beginner
+    tags: [seo,dataforseo,backlinks,referring-domains,monitoring]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Track New Ranked Keywords with Slack Alerts
+    slug: track-new-ranked-keywords-in-google-sheets-and-slack-alerts
+    summary: >-
+      Once a week, fetches every keyword your domains rank for on Google, saves the
+      current picture to Google Sheets, and sends a Slack summary of what is newly
+      ranking.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,ranked-keywords,google-sheets,slack]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -2503,6 +3320,21 @@ templates:
     author: Robomotion
     created: "2026-05-23"
     updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Weekly Toxic Backlink Report
+    slug: monitor-toxic-backlinks-and-email-weekly-google-sheets-reports
+    summary: >-
+      Every week, pulls every backlink first seen in the last seven days whose spam
+      score is above the threshold, drops them into a fresh Google Sheet named after
+      the domain and the date, and emails you the link.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,backlinks,spam-score,gmail,google-sheets]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -2790,5 +3622,36 @@ templates:
     author: Robomotion
     created: "2026-05-23"
     updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Zoho CRM Lead Business Data
+    slug: get-business-data-for-zoho-crm-leads
+    summary: >-
+      Every 15 minutes, takes the leads Zoho CRM has touched most recently, turns
+      each website into a bare domain, looks the company up in the Google Business
+      listings database, and writes the name, description, categories, address,
+      rating and price level back onto the Zoho CRM record.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,crm,lead-enrichment,zoho-crm]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Zoho CRM Lead Traffic Stats
+    slug: get-traffic-stats-for-zoho-crm-leads
+    summary: >-
+      Every 15 minutes, takes the leads Zoho CRM has touched most recently, turns
+      each website into a bare domain, estimates how much organic search traffic
+      that domain gets, and writes the numbers back onto the Zoho CRM record.
+    category: SEO
+    level: Intermediate
+    tags: [seo,dataforseo,crm,lead-enrichment,zoho-crm]
+    author: Robomotion
+    created: "2026-08-05"
+    updated: "2026-08-05"
     screenshot: screenshot.png
     has_subflows: false

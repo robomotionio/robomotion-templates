@@ -9,6 +9,7 @@ tags: [seo,dataforseo,ranked-keywords,google-sheets,slack]
 author: Robomotion
 created: "2026-08-05"
 updated: "2026-08-05"
+screenshot: screenshot.png
 dependencies:
   - package: Robomotion.DataForSEO
     version: "1.0.0"
