@@ -4,7 +4,7 @@ summary: >-
   Watches an Airtable table for target domains that have not been looked up yet,
   pulls the keywords each one ranks for, writes them into a second table, and
   ticks the source record off so it is never processed twice.
-category: Data Processing
+category: SEO
 level: Intermediate
 tags: [seo,dataforseo,ranked-keywords,airtable]
 author: Robomotion

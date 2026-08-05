@@ -4,7 +4,7 @@ summary: >-
   Every week, pulls every backlink first seen in the last seven days whose spam
   score is above the threshold, drops them into a fresh Google Sheet named after
   the domain and the date, and emails you the link.
-category: Monitoring
+category: SEO
 level: Intermediate
 tags: [seo,dataforseo,backlinks,spam-score,gmail,google-sheets]
 author: Robomotion

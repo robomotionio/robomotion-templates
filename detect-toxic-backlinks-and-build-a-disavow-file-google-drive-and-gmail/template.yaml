@@ -4,7 +4,7 @@ summary: >-
   Pages through every backlink pointing at your domain with a spam score above
   the threshold, writes the source URLs into a Google-compliant disavow.txt,
   uploads it to Google Drive and emails you the link.
-category: Monitoring
+category: SEO
 level: Advanced
 tags: [seo,dataforseo,backlinks,disavow,google-drive,gmail]
 author: Robomotion

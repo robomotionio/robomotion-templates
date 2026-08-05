@@ -4,7 +4,7 @@ summary: >-
   Reads a column of target domains from a Google Sheet, scores all of them in
   one DataForSEO Bulk Ranks call, and writes each rank back next to its domain
   with the date it was measured.
-category: Data Processing
+category: SEO
 level: Beginner
 tags: [seo,dataforseo,backlinks,google-sheets,bulk]
 author: Robomotion

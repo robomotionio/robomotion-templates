@@ -4,7 +4,7 @@ summary: >-
   Each week, finds the keywords above your search-volume bar that your domains
   have started ranking for, opens one Asana task holding the list, and posts a
   summary to Slack.
-category: Monitoring
+category: SEO
 level: Intermediate
 tags: [seo,dataforseo,ranked-keywords,asana,slack,google-sheets]
 author: Robomotion

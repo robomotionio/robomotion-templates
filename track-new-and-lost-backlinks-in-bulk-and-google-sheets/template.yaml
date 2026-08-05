@@ -3,7 +3,7 @@ slug: track-new-and-lost-backlinks-in-bulk-and-google-sheets
 summary: >-
   Reads a column of domains from a Google Sheet and pulls, in one DataForSEO
   call, how many backlinks each of them gained and lost, stamped with the date.
-category: Monitoring
+category: SEO
 level: Beginner
 tags: [seo,dataforseo,backlinks,google-sheets,monitoring]
 author: Robomotion

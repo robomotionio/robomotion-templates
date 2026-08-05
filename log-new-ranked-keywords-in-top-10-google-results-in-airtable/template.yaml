@@ -3,7 +3,7 @@ slug: log-new-ranked-keywords-in-top-10-google-results-in-airtable
 summary: >-
   Each week, finds the keywords where your domains have broken into Google's
   first page, writes them to an Airtable base, and posts a summary to Slack.
-category: Monitoring
+category: SEO
 level: Intermediate
 tags: [seo,dataforseo,ranked-keywords,airtable,slack]
 author: Robomotion

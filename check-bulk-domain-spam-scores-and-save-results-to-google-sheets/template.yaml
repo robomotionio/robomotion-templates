@@ -4,7 +4,7 @@ summary: >-
   Reads a column of domains from a Google Sheet, scores all of them in one
   DataForSEO Bulk Spam Score call, and writes each 0-100 score back next to its
   domain with the date it was measured.
-category: Data Processing
+category: SEO
 level: Beginner
 tags: [seo,dataforseo,backlinks,spam-score,google-sheets]
 author: Robomotion

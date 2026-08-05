@@ -4,7 +4,7 @@ summary: >-
   Reads a column of domains from a Google Sheet and pulls, in one DataForSEO
   call, how many referring domains each of them gained and lost - counted both
   per domain and per main domain - stamped with the date.
-category: Monitoring
+category: SEO
 level: Beginner
 tags: [seo,dataforseo,backlinks,referring-domains,monitoring]
 author: Robomotion

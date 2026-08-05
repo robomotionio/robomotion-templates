@@ -4,7 +4,7 @@ summary: >-
   Every morning, pulls the newest reviews for your app from both Google Play and
   the App Store, keeps only the ones written since the last run, and posts a
   digest per store to Slack.
-category: Monitoring
+category: SEO
 level: Advanced
 tags: [seo,dataforseo,app-reviews,slack,google-play,app-store]
 author: Robomotion

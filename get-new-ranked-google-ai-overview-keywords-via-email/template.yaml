@@ -4,7 +4,7 @@ summary: >-
   Each week, finds the keywords where your domains are newly cited inside
   Google's AI Overview, saves the full picture to Google Sheets, and emails the
   new placements.
-category: Monitoring
+category: SEO
 level: Intermediate
 tags: [seo,dataforseo,ai-overview,google-sheets,gmail]
 author: Robomotion

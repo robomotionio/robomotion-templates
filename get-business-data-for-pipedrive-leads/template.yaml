@@ -5,7 +5,7 @@ summary: >-
   each website into a bare domain, looks the company up in the Google Business
   listings database, and writes the name, description, categories, address,
   rating and price level back onto the Pipedrive record.
-category: Productivity
+category: SEO
 level: Intermediate
 tags: [seo,dataforseo,crm,lead-enrichment,pipedrive]
 author: Robomotion

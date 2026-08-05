@@ -5,7 +5,7 @@ summary: >-
   7 days it queries the AI Mode SERP for a keyword, flattens the references of
   every answer block, de-duplicates them by URL and appends them to a Google
   Sheet.
-category: Web Scraping
+category: SEO
 level: Beginner
 tags: [seo,dataforseo,ai-mode,google-sheets,serp]
 author: Robomotion

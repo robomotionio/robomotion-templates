@@ -4,7 +4,7 @@ summary: >-
   Watches, in near real time, which sites Google's AI Mode pulls from when it
   answers questions about your brand. Polls the AI Mode SERP every 15 minutes
   and appends every cited source to a Google Sheet.
-category: Web Scraping
+category: SEO
 level: Beginner
 tags: [seo,dataforseo,ai-mode,google-sheets,brand-monitoring]
 author: Robomotion

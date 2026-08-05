@@ -4,7 +4,7 @@ summary: >-
   Every morning, pulls the newest reviews for your app from both Google Play and
   the App Store and opens one ClickUp task per store holding the digest. Port of
   the Make edition.
-category: Productivity
+category: SEO
 level: Advanced
 tags: [seo,dataforseo,app-reviews,clickup,google-play,app-store]
 author: Robomotion

@@ -4,7 +4,7 @@ summary: >-
   Every 15 minutes, takes the leads Zoho CRM has touched most recently, turns
   each website into a bare domain, estimates how much organic search traffic
   that domain gets, and writes the numbers back onto the Zoho CRM record.
-category: Productivity
+category: SEO
 level: Intermediate
 tags: [seo,dataforseo,crm,lead-enrichment,zoho-crm]
 author: Robomotion

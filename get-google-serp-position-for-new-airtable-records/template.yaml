@@ -4,7 +4,7 @@ summary: >-
   Watches an Airtable table for keyword/domain pairs that have not been checked
   yet, looks up where the domain ranks for that keyword on Google, and writes
   the position back onto the record.
-category: Monitoring
+category: SEO
 level: Beginner
 tags: [seo,dataforseo,serp,rank-tracking,airtable]
 author: Robomotion

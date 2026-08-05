@@ -3,7 +3,7 @@ slug: send-slack-alerts-for-new-app-reviews-from-google-play-and-app-store-make
 summary: >-
   Every morning, pulls the newest reviews for your app from both Google Play and
   the App Store and posts a digest per store to Slack. Port of the Make edition.
-category: Monitoring
+category: SEO
 level: Advanced
 tags: [seo,dataforseo,app-reviews,slack,google-play,app-store]
 author: Robomotion

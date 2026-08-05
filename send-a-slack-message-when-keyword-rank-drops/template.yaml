@@ -4,7 +4,7 @@ summary: >-
   Every morning, checks where each tracked URL ranks for its keyword, compares
   against the position recorded on the last run, and posts to Slack only when a
   keyword has moved down.
-category: Monitoring
+category: SEO
 level: Intermediate
 tags: [seo,dataforseo,serp,rank-tracking,slack,google-sheets]
 author: Robomotion

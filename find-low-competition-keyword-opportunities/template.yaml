@@ -5,7 +5,7 @@ summary: >-
   relevant for, scores all of them for ranking difficulty in one bulk call, and
   writes the combined picture - volume, trend, difficulty, intent and average
   backlinks - to an opportunities sheet.
-category: Data Processing
+category: SEO
 level: Intermediate
 tags: [seo,dataforseo,keyword-research,google-sheets,keyword-difficulty]
 author: Robomotion

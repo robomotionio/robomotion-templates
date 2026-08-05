@@ -4,7 +4,7 @@ summary: >-
   Pulls the live backlinks pointing at a domain every 15 minutes and appends
   them to a Google Sheet, one row per link, with the source page, anchor text,
   follow status, ranks and first/last seen dates.
-category: Data Processing
+category: SEO
 level: Beginner
 tags: [seo,dataforseo,backlinks,google-sheets]
 author: Robomotion

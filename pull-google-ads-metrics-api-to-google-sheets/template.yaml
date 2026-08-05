@@ -4,7 +4,7 @@ summary: >-
   Reads a column of keywords from a Google Sheet and fills in the Google Ads
   planner numbers for all of them in one call: monthly search volume,
   competition and cost per click.
-category: Data Processing
+category: SEO
 level: Beginner
 tags: [seo,dataforseo,keywords-data,google-ads,google-sheets]
 author: Robomotion

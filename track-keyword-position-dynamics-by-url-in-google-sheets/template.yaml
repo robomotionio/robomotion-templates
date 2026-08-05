@@ -4,7 +4,7 @@ summary: >-
   Every two weeks, checks where each tracked URL ranks for its keyword and
   appends a dated row carrying the new position, the delta and a status - up,
   down, same, new or lost.
-category: Monitoring
+category: SEO
 level: Advanced
 tags: [seo,dataforseo,serp,rank-tracking,google-sheets]
 author: Robomotion

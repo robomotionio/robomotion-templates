@@ -5,7 +5,7 @@ summary: >-
   last 24 hours, classifies each mention as positive, negative or neutral,
   writes them into a dated Google Doc, and posts a Slack summary with the
   sentiment split and a link to the doc.
-category: Monitoring
+category: SEO
 level: Intermediate
 tags: [seo,dataforseo,content-analysis,brand-monitoring,slack,google-docs]
 author: Robomotion

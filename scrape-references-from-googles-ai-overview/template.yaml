@@ -3,7 +3,7 @@ slug: scrape-references-from-googles-ai-overview
 summary: >-
   Polls the Google SERP for a keyword every 15 minutes with the AI Overview
   block loaded and appends every source the overview cites to a Google Sheet.
-category: Web Scraping
+category: SEO
 level: Beginner
 tags: [seo,dataforseo,ai-overview,google-sheets,serp]
 author: Robomotion

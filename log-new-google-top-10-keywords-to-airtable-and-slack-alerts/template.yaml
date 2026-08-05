@@ -3,7 +3,7 @@ slug: log-new-google-top-10-keywords-to-airtable-and-slack-alerts
 summary: >-
   Each week, finds the keywords where your domains have broken into Google's
   first page, logs them to Airtable, and alerts Slack.
-category: Monitoring
+category: SEO
 level: Intermediate
 tags: [seo,dataforseo,ranked-keywords,airtable,slack]
 author: Robomotion

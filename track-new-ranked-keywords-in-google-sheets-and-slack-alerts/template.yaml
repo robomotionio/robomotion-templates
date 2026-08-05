@@ -4,7 +4,7 @@ summary: >-
   Once a week, fetches every keyword your domains rank for on Google, saves the
   current picture to Google Sheets, and sends a Slack summary of what is newly
   ranking.
-category: Monitoring
+category: SEO
 level: Intermediate
 tags: [seo,dataforseo,ranked-keywords,google-sheets,slack]
 author: Robomotion

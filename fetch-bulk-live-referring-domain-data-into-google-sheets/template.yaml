@@ -4,7 +4,7 @@ summary: >-
   Reads a column of domains from a Google Sheet and pulls the live
   referring-domain counts for all of them in one DataForSEO call, writing the
   follow and nofollow breakdown back next to each domain.
-category: Data Processing
+category: SEO
 level: Beginner
 tags: [seo,dataforseo,backlinks,referring-domains,google-sheets]
 author: Robomotion

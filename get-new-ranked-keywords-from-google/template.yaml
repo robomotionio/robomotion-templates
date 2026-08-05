@@ -3,7 +3,7 @@ slug: get-new-ranked-keywords-from-google
 summary: >-
   Each week, pulls every keyword your target domains rank for, compares it
   against last week's snapshot, and posts whatever is new to Slack.
-category: Monitoring
+category: SEO
 level: Intermediate
 tags: [seo,dataforseo,ranked-keywords,google-sheets,slack]
 author: Robomotion

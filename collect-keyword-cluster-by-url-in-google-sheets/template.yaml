@@ -5,7 +5,7 @@ summary: >-
   pulls the full set of keywords that URL ranks for into its own tab of an
   output spreadsheet - keyword, position, volume, difficulty, CPC, competition,
   intent, SERP feature type and estimated traffic.
-category: Data Processing
+category: SEO
 level: Intermediate
 tags: [seo,dataforseo,keyword-clustering,google-sheets]
 author: Robomotion

@@ -5,7 +5,7 @@ summary: >-
   it pulls the Google SERP with the AI Overview block loaded, collects every
   source the answer references, de-duplicates them by URL and appends them to a
   Google Sheet.
-category: Web Scraping
+category: SEO
 level: Beginner
 tags: [seo,dataforseo,ai-overview,google-sheets,serp]
 author: Robomotion

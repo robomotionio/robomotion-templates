@@ -4,7 +4,7 @@ summary: >-
   Pulls every backlink pointing at a URL on your domain that now returns an
   error, logs them to a dated Google Sheet, and opens one Asana task pointing at
   that sheet.
-category: Monitoring
+category: SEO
 level: Intermediate
 tags: [seo,dataforseo,backlinks,asana,google-sheets,link-building]
 author: Robomotion
