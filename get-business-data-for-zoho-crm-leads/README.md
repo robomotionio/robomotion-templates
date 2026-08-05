@@ -4,7 +4,7 @@ Every 15 minutes, takes the leads Zoho CRM has touched most recently, turns each
 
 ## How it works
 
-1. **Every 15 Minutes** — an Inject trigger on the source scenario's 900-second interval. **Set Parameters** holds
+1. **Every 15 Minutes** — an Inject trigger repeating every 900 seconds. **Set Parameters** holds
    all the configuration: the location and language for the lookup, and `field_map`, which says where each
    enrichment value lands on the Zoho CRM side.
 3. **List Recent Contacts** — reads the ten most recently touched records via the `Records.List` node over the `Contacts` module, sorted by `Modified_Time`.
@@ -23,7 +23,7 @@ The DataForSEO node runs with `continueOnError`, so one unresolvable domain cann
 
 - **DataForSEO credential** — API login and password from <https://app.dataforseo.com/api-access>.
 - **Zoho CRM credential** — attached to the Zoho CRM node.
-- **`field_map`** — the values shipped here are the field names the original template used. Replace them with your
+- **`field_map`** — the values shipped here are the field names shipped as defaults. Replace them with your
   own: the enrichment keys are `title`, `description`, `category`, `additional_categories`, `address`, `rating`, `price_level`.
 
 ## Cost
@@ -32,4 +32,4 @@ One Business Listings call per lead with a website.
 
 ## Ported from
 
-- [Get Business Data for Zoho CRM leads with DataForSEO + Make](https://dataforseo.com/templates/get-business-data-for-zoho-crm-leads-with-dataforseo-make/) — original make template
+- [Get Business Data for Zoho CRM leads with DataForSEO](https://dataforseo.com/templates/get-business-data-for-zoho-crm-leads-with-dataforseo-make/) — DataForSEO template

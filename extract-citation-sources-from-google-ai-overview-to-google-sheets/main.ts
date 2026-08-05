@@ -5,7 +5,7 @@ flow.create('a4f1c9d2-6b83-4e17-9c05-2fd8a1e7b430', 'AI Overview Citations to Sh
   f.addDependency('Robomotion.GoogleSheets', '1.7.0');
 
   f.node('c1a204', 'Core.Flow.Comment', 'About', {
-    optText: '### Extract citation sources from Google AI Overview\nEvery 7 days, pull the Google SERP for a keyword with the AI Overview block loaded, collect every source the AI Overview cites, and append them to a Google Sheet with the Source, Domain, URL, Title and Text columns.\n\nPorted from the DataForSEO + n8n template of the same name.'
+    optText: '### Extract citation sources from Google AI Overview\nEvery 7 days, pull the Google SERP for a keyword with the AI Overview block loaded, collect every source the AI Overview cites, and append them to a Google Sheet with the Source, Domain, URL, Title and Text columns.'
   });
 
   f.node('b71f38', 'Core.Flow.Comment', 'Configure', {

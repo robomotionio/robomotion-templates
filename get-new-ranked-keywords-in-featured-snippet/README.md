@@ -20,4 +20,4 @@ Same delta-detection shape as the other ranked-keyword templates in this set, wi
 
 ## Ported from
 
-- [Get New Ranked Keywords in Featured Snippet with DataForSEO + Make](https://dataforseo.com/templates/get-new-ranked-keywords-in-featured-snippet-with-dataforseo-make/) — original make template
+- [Get New Ranked Keywords in Featured Snippet with DataForSEO](https://dataforseo.com/templates/get-new-ranked-keywords-in-featured-snippet-with-dataforseo-make/) — DataForSEO template

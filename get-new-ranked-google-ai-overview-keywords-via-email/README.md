@@ -4,8 +4,6 @@ Each week, finds the keywords where your domains are newly cited inside Google's
 
 ## How it works
 
-The n8n edition of the AI Overview keyword tracker.
-
 1. **Weekly** — Inject trigger.
 2. **Index Previous Keywords** → **Clear Keywords Sheet** — the diff baseline.
 3. **For Each Target** → **Get Ranked Keywords**, filtered server-side to `serp_item.type = ai_overview` → **Accumulate Page** → **Go To Next Page**.
@@ -20,4 +18,4 @@ The n8n edition of the AI Overview keyword tracker.
 
 ## Ported from
 
-- [Get new ranked Google AI Overview keywords via email with DataForSEO + n8n](https://dataforseo.com/templates/get-new-ranked-google-ai-overview-keywords-via-email-with-dataforseo-n8n/) — original n8n template
+- [Get new ranked Google AI Overview keywords via email with DataForSEO](https://dataforseo.com/templates/get-new-ranked-google-ai-overview-keywords-via-email-with-dataforseo-n8n/) — DataForSEO template

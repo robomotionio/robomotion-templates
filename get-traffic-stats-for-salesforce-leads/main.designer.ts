@@ -1,6 +1,6 @@
 export default {
   flowId: '60dcf083-1e30-4e4e-fb23-fb92bc4a106e',
-  sourceHash: 'aed36104',
+  sourceHash: '40808b94',
   positions: {
     '2e51ba': { x: 600, y: 100 },
     'b5d817': { x: 860, y: 106 },
@@ -16,7 +16,7 @@ export default {
     '50b9de': { x: 860, y: 316 },
     'f19b52': { x: -180, y: 100 },
     '30ea7d': { x: -180, y: 426 },
-    '9c6e20': { x: -180, y: 600 },
+    '9c6e20': { x: -180, y: 584 },
   },
   cameraPositions: {
     'main': { x: 20, y: 139, zoom: 1.0 },
@@ -27,7 +27,7 @@ export default {
   },
   commentExtras: {
     'f19b52': { colorIndex: 4, size: { width: 440, height: 286 } },
-    '30ea7d': { colorIndex: 0, size: { width: 440, height: 134 } },
+    '30ea7d': { colorIndex: 0, size: { width: 440, height: 118 } },
     '9c6e20': { colorIndex: 0, size: { width: 440, height: 150 } },
   },
 };

@@ -4,7 +4,7 @@ Pulls every keyword your site ranks for, pulls every keyword a competitor ranks 
 
 ## How it works
 
-1. **Run** — an Inject trigger; the n8n original used a manual trigger.
+1. **Run** — an Inject trigger; run it on demand, or give it a repeat interval.
 2. **Read Notion Token** → **Build Notion Headers** — `Core.Vault.GetItem` supplies the integration token.
 3. **Get My Ranked Keywords** → **Index My Keywords** — reduced to a lookup set of phrases.
 4. **Get Competitor Keywords** → **Find The Gaps** — everything the competitor ranks for that is not in that set.
@@ -28,4 +28,4 @@ Two Ranked Keywords calls per run. Raise `msg.limit` on both to widen the compar
 
 ## Ported from
 
-- [Find competitor keyword gaps and log opportunities to Notion with DataForSEO + n8n](https://dataforseo.com/templates/find-competitor-keyword-gaps-and-log-opportunities-to-notion-with-dataforseo-n8n/) — original n8n template
+- [Find competitor keyword gaps and log opportunities to Notion with DataForSEO](https://dataforseo.com/templates/find-competitor-keyword-gaps-and-log-opportunities-to-notion-with-dataforseo-n8n/) — DataForSEO template

@@ -6,7 +6,7 @@ flow.create('4c8e15b7-3d92-4a06-8f57-e1b204d9c73a', 'Toxic Backlink Disavow File
   f.addDependency('Robomotion.Gmail', '1.1.0');
 
   f.node('a03e71', 'Core.Flow.Comment', 'About', {
-    optText: '### Detect toxic backlinks and build a disavow file\nPages through every backlink pointing at your domain with a spam score above the threshold, writes the source URLs into a Google-compliant `disavow.txt`, uploads it to Google Drive and emails you the link.\n\nTwo guards match the original workflow and exist because Google rejects oversized submissions: the run stops with an explanatory email if there are more than 100,000 toxic links, or if the finished file would exceed 2 MB.\n\n**Review the file before uploading it to Search Console.** Disavowing a good link costs you the equity it was passing, and the action is slow to reverse.'
+    optText: '### Detect toxic backlinks and build a disavow file\nPages through every backlink pointing at your domain with a spam score above the threshold, writes the source URLs into a Google-compliant `disavow.txt`, uploads it to Google Drive and emails you the link.\n\nTwo guards exist because Google rejects oversized submissions: the run stops with an explanatory email if there are more than 100,000 toxic links, or if the finished file would exceed 2 MB.\n\n**Review the file before uploading it to Search Console.** Disavowing a good link costs you the equity it was passing, and the action is slow to reverse.'
   });
 
   f.node('7b2f04', 'Core.Flow.Comment', 'Collect', {

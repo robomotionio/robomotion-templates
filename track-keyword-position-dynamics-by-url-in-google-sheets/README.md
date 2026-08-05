@@ -20,4 +20,4 @@ Because every run appends rather than overwrites, the sheet becomes a position h
 
 ## Ported from
 
-- [Track keyword position dynamics by URL in Google Sheets with DataForSEO + n8n](https://dataforseo.com/templates/track-keyword-position-dynamics-by-url-in-google-sheets-with-dataforseo-n8n/) — original n8n template
+- [Track keyword position dynamics by URL in Google Sheets with DataForSEO](https://dataforseo.com/templates/track-keyword-position-dynamics-by-url-in-google-sheets-with-dataforseo-n8n/) — DataForSEO template

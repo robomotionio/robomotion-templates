@@ -22,4 +22,4 @@ A run that finds nothing broken takes the third branch out of *Accumulate Page* 
 
 ## Ported from
 
-- [Track broken backlinks and create recovery tasks in Asana with DataForSEO + n8n](https://dataforseo.com/templates/track-broken-backlinks-and-create-recovery-tasks-in-asana-with-dataforseo-n8n/) — original n8n template
+- [Track broken backlinks and create recovery tasks in Asana with DataForSEO](https://dataforseo.com/templates/track-broken-backlinks-and-create-recovery-tasks-in-asana-with-dataforseo-n8n/) — DataForSEO template

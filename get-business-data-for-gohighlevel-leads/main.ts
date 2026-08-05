@@ -9,7 +9,7 @@ flow.create('bb2145d8-63e5-4f79-a012-4c8d6e1f9b53', 'GoHighLevel Lead Business D
   });
 
   f.node('30ea7d', 'Core.Flow.Comment', 'Poll the CRM', {
-    optText: '#### Poll the CRM\nThe ten most recently touched GoHighLevel records, every 15 minutes - the same cadence as the source scenario. Records with no website are dropped before the loop.'
+    optText: '#### Poll the CRM\nThe ten most recently touched GoHighLevel records, every 15 minutes. Records with no website are dropped before the loop.'
   });
 
   f.node('84c0f6', 'Core.Trigger.Inject', 'Every 15 Minutes', {

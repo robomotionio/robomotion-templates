@@ -29,4 +29,7 @@ The App Data **reviews** endpoints have no dedicated node in `Robomotion.DataFor
 
 ## Ported from
 
-- [Send Slack alerts for new app reviews from Google Play and App Store with DataForSEO + n8n](https://dataforseo.com/templates/send-slack-alerts-for-new-app-reviews-from-google-play-and-app-store-with-dataforseo-n8n/) — original n8n template
+This flow covers both DataForSEO template pages for the same automation.
+
+- [App Review Alerts to Slack](https://dataforseo.com/templates/send-slack-alerts-for-new-app-reviews-from-google-play-and-app-store-with-dataforseo-make/) — DataForSEO template
+- [App Review Alerts to Slack](https://dataforseo.com/templates/send-slack-alerts-for-new-app-reviews-from-google-play-and-app-store-with-dataforseo-n8n/) — DataForSEO template

@@ -4,7 +4,7 @@ Every day, pulls the keywords each target domain currently holds a top-10 positi
 
 ## How it works
 
-The Make edition of the top-10 rank drop alert — the largest scenario in the source collection at 47 modules, reduced here to one snapshot-and-diff loop.
+The largest automation in the source collection at 47 steps, reduced here to a single snapshot-and-diff loop.
 
 1. **Daily** — Inject trigger.
 2. **Get Yesterday Positions** → **Index Yesterday Positions** → **Clear Keywords Sheet**.
@@ -21,4 +21,4 @@ The Make edition of the top-10 rank drop alert — the largest scenario in the s
 
 ## Ported from
 
-- [Get Keyword’s Top-10 Rank Drop Alert via Gmail with DataForSEO + Make](https://dataforseo.com/templates/get-keywords-top-10-rank-drop-alert-via-gmail-with-dataforseo-make/) — original make template
+- [Get Keyword’s Top-10 Rank Drop Alert via Gmail with DataForSEO](https://dataforseo.com/templates/get-keywords-top-10-rank-drop-alert-via-gmail-with-dataforseo-make/) — DataForSEO template

@@ -21,4 +21,4 @@ The volume filter is the point. A domain gains dozens of long-tail keywords a we
 
 ## Ported from
 
-- [Get New High-Volume Ranked Keywords on Google with DataForSEO + Make](https://dataforseo.com/templates/get-new-high-volume-ranked-keywords-on-google-with-dataforseo-make/) — original make template
+- [Get New High-Volume Ranked Keywords on Google with DataForSEO](https://dataforseo.com/templates/get-new-high-volume-ranked-keywords-on-google-with-dataforseo-make/) — DataForSEO template

@@ -1,8 +1,9 @@
-name: App Review Alerts to Slack (Make variant)
-slug: send-slack-alerts-for-new-app-reviews-from-google-play-and-app-store-make
+name: App Review Alerts to Slack
+slug: send-slack-alerts-for-new-app-reviews-from-google-play-and-app-store
 summary: >-
   Every morning, pulls the newest reviews for your app from both Google Play and
-  the App Store and posts a digest per store to Slack. Port of the Make edition.
+  the App Store, keeps only the ones written since the last run, and posts a
+  digest per store to Slack.
 category: SEO
 level: Advanced
 tags: [seo,dataforseo,app-reviews,slack,google-play,app-store]
@@ -16,9 +17,12 @@ dependencies:
   - package: Robomotion.Slack
     version: "0.7.0"
 has_subflows: false
-flow_id: 6284a0ed-957e-40e9-f36b-21d7aec48653
+flow_id: 51738fdc-846d-4fd8-e25a-10c69db37542
 schema_version: 1
 ported_from:
   - slug: send-slack-alerts-for-new-app-reviews-from-google-play-and-app-store-with-dataforseo-make
     platform: make
     url: https://dataforseo.com/templates/send-slack-alerts-for-new-app-reviews-from-google-play-and-app-store-with-dataforseo-make/
+  - slug: send-slack-alerts-for-new-app-reviews-from-google-play-and-app-store-with-dataforseo-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/send-slack-alerts-for-new-app-reviews-from-google-play-and-app-store-with-dataforseo-n8n/

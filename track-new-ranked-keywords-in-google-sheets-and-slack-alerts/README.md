@@ -4,8 +4,6 @@ Once a week, fetches every keyword your domains rank for on Google, saves the cu
 
 ## How it works
 
-The n8n edition of the new-ranked-keywords tracker, same shape as the Make one.
-
 1. **Every Monday** — an Inject trigger repeating weekly.
 2. **Get Previous Keywords** → **Index Previous Keywords** → **Clear Keywords Sheet** — the diff baseline, indexed by `target|keyword`.
 3. **Get Targets** / **Collect Targets** — domain, location and language per row.
@@ -21,4 +19,4 @@ The n8n edition of the new-ranked-keywords tracker, same shape as the Make one.
 
 ## Ported from
 
-- [Track new ranked keywords in Google Sheets with DataForSEO and Slack alerts + n8n](https://dataforseo.com/templates/track-new-ranked-keywords-in-google-sheets-with-dataforseo-and-slack-alerts-n8n/) — original n8n template
+- [Track new ranked keywords in Google Sheets with DataForSEO and Slack alerts](https://dataforseo.com/templates/track-new-ranked-keywords-in-google-sheets-with-dataforseo-and-slack-alerts-n8n/) — DataForSEO template

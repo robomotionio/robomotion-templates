@@ -9,7 +9,7 @@ flow.create('71ed0184-2f41-4f5f-ac34-0ca3cd5b217f', 'Zoho CRM Lead Traffic Stats
   });
 
   f.node('30ea7d', 'Core.Flow.Comment', 'Poll the CRM', {
-    optText: '#### Poll the CRM\nThe ten most recently touched Zoho CRM records, every 15 minutes - the same cadence as the source scenario. Records with no website are dropped before the loop.'
+    optText: '#### Poll the CRM\nThe ten most recently touched Zoho CRM records, every 15 minutes. Records with no website are dropped before the loop.'
   });
 
   f.node('84c0f6', 'Core.Trigger.Inject', 'Every 15 Minutes', {

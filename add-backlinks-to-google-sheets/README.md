@@ -4,7 +4,7 @@ Pulls the live backlinks pointing at a domain every 15 minutes and appends them 
 
 ## How it works
 
-1. **Every 15 Minutes** — an Inject trigger on the source scenario's 900-second interval.
+1. **Every 15 Minutes** — an Inject trigger repeating every 900 seconds.
 2. **Set Parameters** — the target domain, the destination sheet, and the two flags that widen the result set: `include_subdomains` counts links to `blog.example.com`, `include_indirect_links` surfaces links that reach you through a redirect or canonical.
 3. **Get Backlinks** — `DataForSEO.Backlinks.Backlinks`, live status, mode `as_is`, 100 links per call.
 4. **Build Rows** — sixteen columns in the source spreadsheet's order. `indirect_link_path` is an array of hops, so it is JSON-stringified into its cell.
@@ -22,4 +22,4 @@ Raise `optLimit` (up to 1000), or wrap the call in a `Core.Flow.Label` / `Core.F
 
 ## Ported from
 
-- [Add backlinks to Google Sheets from DataForSEO + Make](https://dataforseo.com/templates/add-backlinks-to-google-sheets-from-dataforseo-make/) — original make template
+- [Add backlinks to Google Sheets from DataForSEO](https://dataforseo.com/templates/add-backlinks-to-google-sheets-from-dataforseo-make/) — DataForSEO template

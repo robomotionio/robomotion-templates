@@ -8,8 +8,8 @@ flow.create('d1e94b26-5c73-4a08-9f52-6b0e83a7c4d5', 'Scrape AI Overview Referenc
     optText: "### Scrape references from Google's AI Overview\n" +
       'Polls the Google SERP for a keyword every 15 minutes with the AI Overview block loaded and appends every ' +
       'source the overview cites to a Google Sheet.\n\n' +
-      'The SERP is fetched 100 results deep with organic results grouped, matching the parsed-SERP settings of the ' +
-      'original Make scenario.'
+      'The SERP is fetched 100 results deep with organic results grouped, which is what the AI Overview block '  +
+      'needs in order to resolve.'
   });
 
   f.node('2b60fa', 'Core.Flow.Comment', 'Configure', {
@@ -28,7 +28,7 @@ msg.language_name = 'English';
 msg.spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1XCjkjyVxrtpTUQenHeR3B07xfEZ489mhuVidjhGOO7I/edit#gid=0';
 
 // load_async_ai_overview pulls in the AI Overview block, which Google renders
-// asynchronously; group_organic_results matches the source scenario's parsing.
+// asynchronously; group_organic_results keeps the organic block together.
 msg.extra_params = {
   load_async_ai_overview: true,
   group_organic_results: true,
@@ -48,7 +48,7 @@ return msg;`
       optCredentials: { vaultId: '_', itemId: '_' }
     })
     .then('c53709', 'Core.Programming.Function', 'Collect References', {
-      func: `// The Make scenario iterates every SERP element and then every references entry
+      func: `// Iterate every SERP element and then every references entry
 // on it, so blocks other than ai_overview that carry sources are picked up too.
 var rows = [];
 var seen = {};

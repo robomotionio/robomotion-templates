@@ -4,9 +4,9 @@ Runs a ranked keyword gap analysis between your domain and a competitor's, and l
 
 ## How it works
 
-The Make edition of the keyword gap analysis — same two-call comparison, same Notion output.
+Two ranked-keyword calls, one comparison, and the difference written straight to Notion.
 
-1. **Run** — an Inject trigger; the source scenario was on-demand.
+1. **Run** — an Inject trigger; run it on demand, or give it a repeat interval.
 2. **Read Notion Token** → **Build Notion Headers**.
 3. **Get My Ranked Keywords** → **Index My Keywords**.
 4. **Get Competitor Keywords** → **Find The Gaps**.
@@ -24,4 +24,4 @@ The database needs typed **number** and **url** properties, which `Robomotion.No
 
 ## Ported from
 
-- [Run a Ranked Keyword Gap Analysis Using DataForSEO and Notion + Make](https://dataforseo.com/templates/run-a-ranked-keyword-gap-analysis-using-dataforseo-and-notion-make/) — original make template
+- [Run a Ranked Keyword Gap Analysis Using DataForSEO and Notion](https://dataforseo.com/templates/run-a-ranked-keyword-gap-analysis-using-dataforseo-and-notion-make/) — DataForSEO template

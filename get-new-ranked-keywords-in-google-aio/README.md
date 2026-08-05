@@ -22,4 +22,4 @@ An AI Overview citation is becoming the position-zero of the AI era: it is what 
 
 ## Ported from
 
-- [Get New Ranked Keywords in Google AIO with DataForSEO + Make](https://dataforseo.com/templates/get-new-ranked-keywords-in-google-aio-with-dataforseo-make/) — original make template
+- [Get New Ranked Keywords in Google AIO with DataForSEO](https://dataforseo.com/templates/get-new-ranked-keywords-in-google-aio-with-dataforseo-make/) — DataForSEO template

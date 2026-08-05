@@ -27,4 +27,4 @@ One live SERP call per tracked keyword per day. Depth 100 counts as one paid SER
 
 ## Ported from
 
-- [Send a Slack message when keyword rank drops with DataForSEO + Make](https://dataforseo.com/templates/send-a-slack-message-when-keyword-rank-drops-with-dataforseo-make/) — original make template
+- [Send a Slack message when keyword rank drops with DataForSEO](https://dataforseo.com/templates/send-a-slack-message-when-keyword-rank-drops-with-dataforseo-make/) — DataForSEO template

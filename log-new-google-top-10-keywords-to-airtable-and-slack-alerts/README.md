@@ -4,8 +4,6 @@ Each week, finds the keywords where your domains have broken into Google's first
 
 ## How it works
 
-The n8n edition of the top-10 keyword logger.
-
 1. **Weekly** — Inject trigger.
 2. **Index Previous Keywords** → **Clear Keywords Sheet** — the diff baseline.
 3. **For Each Target** → **Get Ranked Keywords**, filtered on `rank_group <= 10` → **Accumulate Page** → **Go To Next Page**.
@@ -23,4 +21,4 @@ This is deliberately the narrowest of the ranked-keyword alerts in this set: it 
 
 ## Ported from
 
-- [Log new top-10 Google keywords to Airtable with Slack alerts [DataForSEO + n8n]](https://dataforseo.com/templates/log-new-google-top-10-keywords-to-airtable-with-dataforseo-and-slack-alerts-n8n/) — original n8n template
+- [Log new top-10 Google keywords to Airtable with Slack alerts [DataForSEO]](https://dataforseo.com/templates/log-new-google-top-10-keywords-to-airtable-with-dataforseo-and-slack-alerts-n8n/) — DataForSEO template

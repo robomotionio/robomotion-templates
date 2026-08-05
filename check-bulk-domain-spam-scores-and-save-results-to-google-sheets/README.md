@@ -4,7 +4,7 @@ Reads a column of domains from a Google Sheet, scores all of them in one DataFor
 
 ## How it works
 
-1. **Run** — an Inject trigger; the source scenario was on-demand.
+1. **Run** — an Inject trigger; run it on demand, or give it a repeat interval.
 2. **Get Targets** — reads the whole sheet with headers on.
 3. **Collect Targets** — flattens the `Target` column into one array of up to 1000 entries.
 4. **Get Spam Scores** — `DataForSEO.Backlinks.BulkSpamScore`, a first-class node in the package.
@@ -21,4 +21,4 @@ Run it over a prospect list before you buy links, or over your own referring dom
 
 ## Ported from
 
-- [Check bulk domain spam scores and save results to Google Sheets with DataForSEO + Make](https://dataforseo.com/templates/check-bulk-domain-spam-scores-and-save-results-to-google-sheets-with-dataforseo-make/) — original make template
+- [Check bulk domain spam scores and save results to Google Sheets with DataForSEO](https://dataforseo.com/templates/check-bulk-domain-spam-scores-and-save-results-to-google-sheets-with-dataforseo-make/) — DataForSEO template

@@ -4,7 +4,7 @@ Reads a column of domains from a Google Sheet and pulls the live backlink count 
 
 ## How it works
 
-1. **Run** — an Inject trigger; the source scenario was on-demand.
+1. **Run** — an Inject trigger; run it on demand, or give it a repeat interval.
 2. **Get Targets** / **Collect Targets** — the `Target` column becomes one array of up to 1000 entries.
 3. **Get Backlink Counts** — `Account.RawRequest` posts to `/backlinks/bulk_backlinks/live`.
 4. **Merge Results Into Rows** — writes `Date` and `Backlinks` onto the matching row.
@@ -24,4 +24,4 @@ Bulk Backlinks has no dedicated node in `Robomotion.DataForSEO` 1.0.0, so the ca
 
 ## Ported from
 
-- [Pull Bulk Live Backlink Counts into Google Sheets with DataForSEO + Make](https://dataforseo.com/templates/pull-bulk-live-backlink-counts-into-google-sheets-with-dataforseo-make/) — original make template
+- [Pull Bulk Live Backlink Counts into Google Sheets with DataForSEO](https://dataforseo.com/templates/pull-bulk-live-backlink-counts-into-google-sheets-with-dataforseo-make/) — DataForSEO template

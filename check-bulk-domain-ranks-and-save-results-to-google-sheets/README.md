@@ -4,7 +4,7 @@ Reads a column of target domains from a Google Sheet, scores all of them in one 
 
 ## How it works
 
-1. **Run** — an Inject trigger; the source scenario was on-demand.
+1. **Run** — an Inject trigger; run it on demand, or give it a repeat interval.
 2. **Get Targets** — reads the whole sheet with headers on, so each row is an object keyed by column name.
 3. **Collect Targets** — flattens the `Target` column into one array. Bulk Ranks accepts up to 1000 targets per call, which is what makes this cheap: 500 domains cost the same as one.
 4. **Get Bulk Ranks** — `DataForSEO.Account.RawRequest` posts to `/backlinks/bulk_ranks/live` with `rank_scale: one_thousand`.
@@ -23,4 +23,7 @@ Bulk Ranks has no dedicated node in `Robomotion.DataForSEO` 1.0.0, so the call g
 
 ## Ported from
 
-- [Check Bulk Domain Ranks and Save Results to Google Sheets with DataForSEO](https://dataforseo.com/templates/check-bulk-domain-ranks-and-save-results-to-google-sheets-with-dataforseo/) — original make template
+This flow covers both DataForSEO template pages for the same automation.
+
+- [Bulk Domain Rank Checker](https://dataforseo.com/templates/check-bulk-domain-ranks-and-save-results-to-google-sheets-with-dataforseo/) — DataForSEO template
+- [Bulk Domain Rank Checker](https://dataforseo.com/templates/check-bulk-domain-ranks-and-save-results-to-google-sheets-with-dataforseo-n8n/) — DataForSEO template
