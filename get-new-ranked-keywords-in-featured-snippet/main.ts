@@ -6,14 +6,11 @@ flow.create('35e7c002-6149-4db5-af83-9c204bd61758', 'New Featured Snippet Keywor
   f.addDependency('Robomotion.Gmail', '1.1.0');
 
   f.node('a1f307', 'Core.Flow.Comment', 'About', {
-    optText: '### Get new ranked keywords in the featured snippet\n' +
-      'Each week, find the keywords where your domains now hold Google\'s featured snippet - position zero, above the first organic result - and email you the ones that are new since last week.\n' +
-      'The filter runs server-side on serp_item.type, so you are not paying to download and discard every other keyword.'
+    optText: '### Get new ranked keywords in the featured snippet\nEach week, find the keywords where your domains now hold Google\'s featured snippet - position zero, above the first organic result - and email you the ones that are new since last week.\nThe filter runs server-side on serp_item.type, so you are not paying to download and discard every other keyword.'
   });
 
   f.node('58b2ce', 'Core.Flow.Comment', 'Snapshot the past', {
-    optText: '#### Snapshot the past\n' +
-      'Read the Keywords sheet, index it by target + keyword, then clear it. The index is what the diff runs against.'
+    optText: '#### Snapshot the past\nRead the Keywords sheet, index it by target + keyword, then clear it. The index is what the diff runs against.'
   });
 
   f.node('0d69e4', 'Core.Trigger.Inject', 'Weekly', {
@@ -102,8 +99,7 @@ return msg;`
     });
 
   f.node('e91daf', 'Core.Flow.Comment', 'Pull current rankings', {
-    optText: '#### Pull current rankings\n' +
-      'One pass per target domain, filtered to featured snippet placements, paging 1000 at a time.'
+    optText: '#### Pull current rankings\nOne pass per target domain, filtered to featured snippet placements, paging 1000 at a time.'
   });
 
   // Both Labels are jump targets only - the first pass enters each loop body
@@ -164,8 +160,7 @@ return [null, msg];`
   f.edge('5da9e2', 0, '9e04b7', 0);
 
   f.node('cf1826', 'Core.Flow.Comment', 'Diff and announce', {
-    optText: '#### Diff and announce\n' +
-      'Every current snippet win is written back to the sheet. Only the new ones are emailed.'
+    optText: '#### Diff and announce\nEvery current snippet win is written back to the sheet. Only the new ones are emailed.'
   });
 
   f.node('62b7fa', 'Core.Programming.Function', 'Find New Keywords', {

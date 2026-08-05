@@ -5,16 +5,11 @@ flow.create('a6c8e421-d9b2-4420-d70f-65b1e208a977', 'Google Ads Metrics to Sheet
   f.addDependency('Robomotion.GoogleSheets', '1.7.0');
 
   f.node('b5721e', 'Core.Flow.Comment', 'About', {
-    optText: '### Pull Google Ads metrics into Google Sheets\n' +
-      'Reads a column of keywords from a Google Sheet and fills in the Google Ads planner numbers for all of ' +
-      'them in **one** call: monthly search volume, competition and cost per click.\n' +
-      'One call covers up to 1000 keywords, so a full keyword list costs the same as a single lookup. Run it on ' +
-      'a schedule and the sheet stays current without anyone opening Keyword Planner.'
+    optText: '### Pull Google Ads metrics into Google Sheets\nReads a column of keywords from a Google Sheet and fills in the Google Ads planner numbers for all of them in **one** call: monthly search volume, competition and cost per click.\nOne call covers up to 1000 keywords, so a full keyword list costs the same as a single lookup. Run it on a schedule and the sheet stays current without anyone opening Keyword Planner.'
   });
 
   f.node('0d3fa9', 'Core.Flow.Comment', 'Read the keywords', {
-    optText: '#### Read the keywords\nThe sheet needs a `Keyword` column, and optionally `Location` and ' +
-      '`Language` on the first row to set the market. The metric columns are filled in by this flow.'
+    optText: '#### Read the keywords\nThe sheet needs a `Keyword` column, and optionally `Location` and `Language` on the first row to set the market. The metric columns are filled in by this flow.'
   });
 
   f.node('e40c17', 'Core.Trigger.Inject', 'Every 15 Minutes', {

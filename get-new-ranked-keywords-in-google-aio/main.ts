@@ -6,14 +6,11 @@ flow.create('5709e224-836b-4fd7-c1a5-be426df83970', 'New AI Overview Keywords by
   f.addDependency('Robomotion.Gmail', '1.1.0');
 
   f.node('a1f307', 'Core.Flow.Comment', 'About', {
-    optText: '### Get new ranked keywords in Google AIO\n' +
-      'Each week, find the keywords where your domains are now cited inside Google\'s AI Overview and email the new ones.\n' +
-      'An AI Overview citation is becoming the position-zero of the AI era: it is what the answer is built from, whether or not the user ever clicks through. Tracking it weekly tells you which pages Google trusts as a source.'
+    optText: '### Get new ranked keywords in Google AIO\nEach week, find the keywords where your domains are now cited inside Google\'s AI Overview and email the new ones.\nAn AI Overview citation is becoming the position-zero of the AI era: it is what the answer is built from, whether or not the user ever clicks through. Tracking it weekly tells you which pages Google trusts as a source.'
   });
 
   f.node('58b2ce', 'Core.Flow.Comment', 'Snapshot the past', {
-    optText: '#### Snapshot the past\n' +
-      'Read the Keywords sheet, index it by target + keyword, then clear it. The index is what the diff runs against.'
+    optText: '#### Snapshot the past\nRead the Keywords sheet, index it by target + keyword, then clear it. The index is what the diff runs against.'
   });
 
   f.node('0d69e4', 'Core.Trigger.Inject', 'Weekly', {
@@ -102,8 +99,7 @@ return msg;`
     });
 
   f.node('e91daf', 'Core.Flow.Comment', 'Pull current rankings', {
-    optText: '#### Pull current rankings\n' +
-      'One pass per target domain, filtered to AI Overview placements, paging 1000 at a time.'
+    optText: '#### Pull current rankings\nOne pass per target domain, filtered to AI Overview placements, paging 1000 at a time.'
   });
 
   // Both Labels are jump targets only - the first pass enters each loop body
@@ -164,8 +160,7 @@ return [null, msg];`
   f.edge('5da9e2', 0, '9e04b7', 0);
 
   f.node('cf1826', 'Core.Flow.Comment', 'Diff and announce', {
-    optText: '#### Diff and announce\n' +
-      'Every current AI Overview placement is written back to the sheet. Only the new ones are emailed.'
+    optText: '#### Diff and announce\nEvery current AI Overview placement is written back to the sheet. Only the new ones are emailed.'
   });
 
   f.node('62b7fa', 'Core.Programming.Function', 'Find New Keywords', {

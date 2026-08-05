@@ -6,18 +6,11 @@ flow.create('0c2e4a8b-3f16-4a83-9d05-6b7148ce20f9', 'Slack Alert on Keyword Rank
   f.addDependency('Robomotion.Slack', '0.7.0');
 
   f.node('a71e05', 'Core.Flow.Comment', 'About', {
-    optText: '### Send a Slack message when a keyword rank drops\n' +
-      'Every morning, check where each tracked URL ranks for its keyword, compare against the position recorded ' +
-      'on the last run, and post to Slack only when a keyword has moved *down*.\n\n' +
-      'The sheet is the memory: the previous rank sits in a column and is overwritten each run, so the flow ' +
-      'needs no database. That also means the first run establishes the baseline and alerts on nothing.\n\n' +
-      'A keyword that falls out of the top 100 entirely is reported as lost rather than silently skipped - which ' +
-      'is the drop you most want to hear about.'
+    optText: '### Send a Slack message when a keyword rank drops\nEvery morning, check where each tracked URL ranks for its keyword, compare against the position recorded on the last run, and post to Slack only when a keyword has moved *down*.\n\nThe sheet is the memory: the previous rank sits in a column and is overwritten each run, so the flow needs no database. That also means the first run establishes the baseline and alerts on nothing.\n\nA keyword that falls out of the top 100 entirely is reported as lost rather than silently skipped - which is the drop you most want to hear about.'
   });
 
   f.node('5d3fb2', 'Core.Flow.Comment', 'Read what to track', {
-    optText: '#### Read what to track\nThe sheet needs `Keyword`, `Target`, `Location`, `Language`, `Rank` and ' +
-      '`Checked` columns. The last two are written back by this flow.'
+    optText: '#### Read what to track\nThe sheet needs `Keyword`, `Target`, `Location`, `Language`, `Rank` and `Checked` columns. The last two are written back by this flow.'
   });
 
   f.node('e6087c', 'Core.Trigger.Inject', 'Daily', {
@@ -78,8 +71,7 @@ return msg;`
     });
 
   f.node('0b95d7', 'Core.Flow.Comment', 'Check and compare', {
-    optText: '#### Check and compare\nOne live Google SERP call per tracked keyword. The organic result whose ' +
-      'URL sits on the tracked domain gives the current position.'
+    optText: '#### Check and compare\nOne live Google SERP call per tracked keyword. The organic result whose URL sits on the tracked domain gives the current position.'
   });
 
   // Label is a jump target only - the first pass enters through the ForEach.

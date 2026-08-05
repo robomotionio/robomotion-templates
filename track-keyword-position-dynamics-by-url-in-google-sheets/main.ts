@@ -5,19 +5,11 @@ flow.create('2e405cad-513a-4ca5-bf27-8d936ae0421b', 'Keyword Position Dynamics b
   f.addDependency('Robomotion.GoogleSheets', '1.7.0');
 
   f.node('c93147', 'Core.Flow.Comment', 'About', {
-    optText: '### Track keyword position dynamics by URL\n' +
-      'Every two weeks, check where each tracked URL ranks for its keyword, compare against the last recorded ' +
-      'position, and append a dated row carrying the new position, the delta and a status - **up**, **down**, ' +
-      '**same**, **new** or **lost**.\n\n' +
-      'Because every run appends rather than overwrites, the sheet becomes a position history you can chart. ' +
-      'The delta column is what makes it readable at a glance: you are looking for runs of negative numbers, ' +
-      'not absolute values.\n\n' +
-      'One tab per URL keeps each page\'s story separate.'
+    optText: '### Track keyword position dynamics by URL\nEvery two weeks, check where each tracked URL ranks for its keyword, compare against the last recorded position, and append a dated row carrying the new position, the delta and a status - **up**, **down**, **same**, **new** or **lost**.\n\nBecause every run appends rather than overwrites, the sheet becomes a position history you can chart. The delta column is what makes it readable at a glance: you are looking for runs of negative numbers, not absolute values.\n\nOne tab per URL keeps each page\'s story separate.'
   });
 
   f.node('05b8e2', 'Core.Flow.Comment', 'Read what to track', {
-    optText: '#### Read what to track\nThe input sheet needs `Keyword`, `Target`, `Active` and optionally ' +
-      '`Location` and `Language`. Only rows marked active are checked.'
+    optText: '#### Read what to track\nThe input sheet needs `Keyword`, `Target`, `Active` and optionally `Location` and `Language`. Only rows marked active are checked.'
   });
 
   f.node('7f2a49', 'Core.Trigger.Inject', 'Every Two Weeks', {
@@ -83,8 +75,7 @@ return msg;`
     });
 
   f.node('e71d05', 'Core.Flow.Comment', 'Check, compare, append', {
-    optText: '#### Check, compare, append\nOne live SERP call per row. The previous position is read from the ' +
-      'last line already in that URL\'s tab, so the history is both the record and the memory.'
+    optText: '#### Check, compare, append\nOne live SERP call per row. The previous position is read from the last line already in that URL\'s tab, so the history is both the record and the memory.'
   });
 
   // Label is a jump target only - the first pass enters through the ForEach.

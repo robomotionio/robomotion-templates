@@ -5,18 +5,11 @@ flow.create('1d3f5b9c-4027-4b94-ae16-7c8259df310a', 'SERP Position for Airtable 
   f.addDependency('Robomotion.Airtable', '0.7.0');
 
   f.node('b8203e', 'Core.Flow.Comment', 'About', {
-    optText: '### Get Google SERP position for new Airtable records\n' +
-      'Watches an Airtable table for keyword/domain pairs that have not been checked yet, looks up where the ' +
-      'domain ranks for that keyword on Google, and writes the position back onto the record.\n\n' +
-      'The lookup uses the SERP API\'s `target` parameter, so DataForSEO filters the results to the domain ' +
-      'server-side and returns its position directly - no scanning a hundred results client-side.\n\n' +
-      'The `Processed` checkbox is what turns a poll into a trigger: without it a 15-minute schedule would ' +
-      're-check every row on every pass.'
+    optText: '### Get Google SERP position for new Airtable records\nWatches an Airtable table for keyword/domain pairs that have not been checked yet, looks up where the domain ranks for that keyword on Google, and writes the position back onto the record.\n\nThe lookup uses the SERP API\'s `target` parameter, so DataForSEO filters the results to the domain server-side and returns its position directly - no scanning a hundred results client-side.\n\nThe `Processed` checkbox is what turns a poll into a trigger: without it a 15-minute schedule would re-check every row on every pass.'
   });
 
   f.node('7e4c16', 'Core.Flow.Comment', 'Find work', {
-    optText: '#### Find work\nRecords where `Processed` is unticked, ten at a time. Each carries a `Keyword` ' +
-      'and a `Target`, and optionally a `Location` and `Language`.'
+    optText: '#### Find work\nRecords where `Processed` is unticked, ten at a time. Each carries a `Keyword` and a `Target`, and optionally a `Location` and `Language`.'
   });
 
   f.node('c0f92b', 'Core.Trigger.Inject', 'Every 15 Minutes', {
@@ -66,8 +59,7 @@ return msg;`
     });
 
   f.node('60ac83', 'Core.Flow.Comment', 'Look up the position', {
-    optText: '#### Look up the position\nOne live Google SERP call per record. `target` in Extra Parameters ' +
-      'narrows the response to the tracked domain, so the first item is the position.'
+    optText: '#### Look up the position\nOne live Google SERP call per record. `target` in Extra Parameters narrows the response to the tracked domain, so the first item is the position.'
   });
 
   // Label is a jump target only - the first pass enters through the ForEach.

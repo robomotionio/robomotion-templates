@@ -4,17 +4,11 @@ flow.create('4ebade61-fc1e-4c2c-d901-df70fba28e4c', 'Monday CRM Lead Traffic Sta
   f.addDependency('Robomotion.DataForSEO', '1.0.0');
 
   f.node('f19b52', 'Core.Flow.Comment', 'About', {
-    optText: '### Get Traffic Stats for Monday CRM leads\n' +
-      'Every 15 minutes, take the leads Monday CRM has touched most recently, turn each one\'s website into a bare domain, estimate how much organic search traffic that domain gets, and write the numbers back onto the Monday CRM record.\n' +
-      '\n' +
-      'Estimated traffic value (ETV) is the single most useful qualifying number you can attach to an inbound lead: it separates the agency with 200 visits a month from the one with 200,000, before anyone picks up the phone.\n' +
-      '\n' +
-      'A lead whose domain returns no estimate is skipped rather than overwritten with zeros.'
+    optText: '### Get Traffic Stats for Monday CRM leads\nEvery 15 minutes, take the leads Monday CRM has touched most recently, turn each one\'s website into a bare domain, estimate how much organic search traffic that domain gets, and write the numbers back onto the Monday CRM record.\n\nEstimated traffic value (ETV) is the single most useful qualifying number you can attach to an inbound lead: it separates the agency with 200 visits a month from the one with 200,000, before anyone picks up the phone.\n\nA lead whose domain returns no estimate is skipped rather than overwritten with zeros.'
   });
 
   f.node('30ea7d', 'Core.Flow.Comment', 'Poll the CRM', {
-    optText: '#### Poll the CRM\n' +
-      'The ten most recently touched Monday CRM records, every 15 minutes - the same cadence as the source scenario. Records with no website are dropped before the loop.'
+    optText: '#### Poll the CRM\nThe ten most recently touched Monday CRM records, every 15 minutes - the same cadence as the source scenario. Records with no website are dropped before the loop.'
   });
 
   f.node('84c0f6', 'Core.Trigger.Inject', 'Every 15 Minutes', {
@@ -81,8 +75,7 @@ return msg;`
     });
 
   f.node('9c6e20', 'Core.Flow.Comment', 'Enrich each lead', {
-    optText: '#### Enrich each lead\n' +
-      'One Bulk Traffic Estimation call per lead. The endpoint accepts up to 1000 targets at once, so if you are enriching a large backlog it is worth batching the domains rather than looping - see the bulk backlink templates in this set for that shape.'
+    optText: '#### Enrich each lead\nOne Bulk Traffic Estimation call per lead. The endpoint accepts up to 1000 targets at once, so if you are enriching a large backlog it is worth batching the domains rather than looping - see the bulk backlink templates in this set for that shape.'
   });
 
   // Label is a jump target only - it has no input port, so the first pass enters

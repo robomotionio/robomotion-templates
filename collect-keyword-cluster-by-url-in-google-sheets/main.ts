@@ -5,18 +5,11 @@ flow.create('e093cb1d-1cf4-4861-da4e-4731bf07c695', 'Keyword Cluster by URL', (f
   f.addDependency('Robomotion.GoogleSheets', '1.7.0');
 
   f.node('c28a04', 'Core.Flow.Comment', 'About', {
-    optText: '### Collect keyword cluster by URL\n' +
-      'Every two weeks, take a list of URLs from an input sheet and, for each one, pull the full set of keywords ' +
-      'that URL ranks for into its own tab of an output spreadsheet - keyword, position, volume, difficulty, ' +
-      'CPC, competition, intent, SERP feature type and estimated traffic.\n\n' +
-      'The set of keywords one URL ranks for *is* the cluster. Reading it back tells you what Google thinks the ' +
-      'page is about, which is usually more useful than what you intended it to be about.\n\n' +
-      'One tab per URL keeps each cluster readable and lets you diff a tab against its own history.'
+    optText: '### Collect keyword cluster by URL\nEvery two weeks, take a list of URLs from an input sheet and, for each one, pull the full set of keywords that URL ranks for into its own tab of an output spreadsheet - keyword, position, volume, difficulty, CPC, competition, intent, SERP feature type and estimated traffic.\n\nThe set of keywords one URL ranks for *is* the cluster. Reading it back tells you what Google thinks the page is about, which is usually more useful than what you intended it to be about.\n\nOne tab per URL keeps each cluster readable and lets you diff a tab against its own history.'
   });
 
   f.node('7b1f65', 'Core.Flow.Comment', 'Read the URL list', {
-    optText: '#### Read the URL list\nThe input sheet needs a `Target` column with the URL, and an `Active` ' +
-      'column - only rows marked active are processed, so you can park a URL without deleting it.'
+    optText: '#### Read the URL list\nThe input sheet needs a `Target` column with the URL, and an `Active` column - only rows marked active are processed, so you can park a URL without deleting it.'
   });
 
   f.node('4e70da', 'Core.Trigger.Inject', 'Every Two Weeks', {
@@ -77,9 +70,7 @@ return msg;`
     });
 
   f.node('b40592', 'Core.Flow.Comment', 'One cluster per URL', {
-    optText: '#### One cluster per URL\nA tab is added per URL - `AddSheet` is set to continue on error so a ' +
-      'tab that already exists from a previous run is reused rather than failing the whole run. The rows are ' +
-      'then appended with the header row on top.'
+    optText: '#### One cluster per URL\nA tab is added per URL - `AddSheet` is set to continue on error so a tab that already exists from a previous run is reused rather than failing the whole run. The rows are then appended with the header row on top.'
   });
 
   // Label is a jump target only - the first pass enters through the ForEach.

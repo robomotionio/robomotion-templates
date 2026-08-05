@@ -5,18 +5,11 @@ flow.create('7395b1fe-a68f-41fa-a47c-32e8bfd59764', 'App Reviews to ClickUp Task
   f.addDependency('Robomotion.ClickUp', '1.1.0');
 
   f.node('e1740b', 'Core.Flow.Comment', 'About', {
-    optText: '### Create ClickUp tasks for new app reviews\n' +
-      'Every morning, pull the newest reviews for your app from both Google Play and the App Store, keep only ' +
-      'the ones written since the last run, and open one ClickUp task per store holding the digest.\n\n' +
-      'A task rather than a message because reviews usually need a reply or a bug filed - putting them in the ' +
-      'tracker means they get triaged instead of scrolled past.\n\n' +
-      'App reviews have no live endpoint, so each store call submits a task and polls until it is ready - the ' +
-      'Label/GoTo pairs below are that wait.'
+    optText: '### Create ClickUp tasks for new app reviews\nEvery morning, pull the newest reviews for your app from both Google Play and the App Store, keep only the ones written since the last run, and open one ClickUp task per store holding the digest.\n\nA task rather than a message because reviews usually need a reply or a bug filed - putting them in the tracker means they get triaged instead of scrolled past.\n\nApp reviews have no live endpoint, so each store call submits a task and polls until it is ready - the Label/GoTo pairs below are that wait.'
   });
 
   f.node('3c92e5', 'Core.Flow.Comment', 'Configure', {
-    optText: '#### Configure\nThe Google Play package name, the App Store numeric id, the ClickUp list that receives ' +
-      'the tasks, how many reviews to pull, and how far back counts as new.'
+    optText: '#### Configure\nThe Google Play package name, the App Store numeric id, the ClickUp list that receives the tasks, how many reviews to pull, and how far back counts as new.'
   });
 
   f.node('a06d17', 'Core.Trigger.Inject', 'Daily', {
@@ -58,8 +51,7 @@ return msg;`
     });
 
   f.node('80c4ea', 'Core.Flow.Comment', 'Google Play', {
-    optText: '#### Google Play\nSubmit the review task, then poll `task_get` every 15 seconds until DataForSEO ' +
-      'reports it finished (status 20000) or the attempt budget runs out.'
+    optText: '#### Google Play\nSubmit the review task, then poll `task_get` every 15 seconds until DataForSEO reports it finished (status 20000) or the attempt budget runs out.'
   });
 
   f.node('5b28f1', 'Robomotion.DataForSEO.Account.RawRequest', 'Submit Google Play Task', {
@@ -159,8 +151,7 @@ return [msg, null];`
   f.edge('b71fd6', 0, '4d09a7', 0);
 
   f.node('62ce80', 'Core.Flow.Comment', 'App Store', {
-    optText: '#### App Store\nThe same submit-and-poll shape against the Apple endpoint, run after Google so ' +
-      'the two digests arrive in a predictable order.'
+    optText: '#### App Store\nThe same submit-and-poll shape against the Apple endpoint, run after Google so the two digests arrive in a predictable order.'
   });
 
   f.node('a3861f', 'Robomotion.DataForSEO.Account.RawRequest', 'Submit App Store Task', {

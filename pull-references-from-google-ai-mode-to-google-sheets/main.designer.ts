@@ -1,20 +1,29 @@
 export default {
   flowId: 'b8d3e0f1-4a52-4c96-8e71-05c3a9d6f2b7',
-  sourceHash: 'eda853ee',
+  sourceHash: '2bf42146',
   positions: {
-    'a72f16': { x: 0, y: 0 },
-    '5c9b24': { x: 0, y: 97 },
-    '3e81da': { x: 25, y: 194 },
-    '9f4c07': { x: 250, y: 189 },
-    '6b20e5': { x: 500, y: 189 },
-    'c14a93': { x: 750, y: 189 },
-    'd5730c': { x: 1020, y: 240 },
-    'e9c418': { x: 0, y: 280 },
-    '20fa6d': { x: 1000, y: 143 },
-    '7ab851': { x: 1250, y: 143 },
-    'f36e2b': { x: 1500, y: 148 },
+    '9f4c07': { x: 600, y: 100 },
+    '6b20e5': { x: 600, y: 170 },
+    'c14a93': { x: 600, y: 240 },
+    'd5730c': { x: 600, y: 310 },
+    '20fa6d': { x: 600, y: 380 },
+    '7ab851': { x: 600, y: 450 },
+    '3e81da': { x: 340, y: 106 },
+    'f36e2b': { x: 860, y: 456 },
+    'a72f16': { x: -180, y: 100 },
+    '5c9b24': { x: -180, y: 358 },
+    'e9c418': { x: -180, y: 516 },
   },
   cameraPositions: {
-    'b8d3e0f1-4a52-4c96-8e71-05c3a9d6f2b7': { x: 850, y: 164, zoom: 0.83 },
+    'main': { x: 20, y: 139, zoom: 1.0 },
+  },
+  nodeColors: {
+  },
+  nodeIcons: {
+  },
+  commentExtras: {
+    'a72f16': { colorIndex: 4, size: { width: 440, height: 218 } },
+    '5c9b24': { colorIndex: 0, size: { width: 440, height: 118 } },
+    'e9c418': { colorIndex: 0, size: { width: 440, height: 110 } },
   },
 };

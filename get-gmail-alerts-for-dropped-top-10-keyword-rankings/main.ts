@@ -6,19 +6,11 @@ flow.create('3f516dbe-624b-4db6-c038-9ea47bf15320', 'Top-10 Rank Drop Alerts by 
   f.addDependency('Robomotion.Gmail', '1.1.0');
 
   f.node('d05a72', 'Core.Flow.Comment', 'About', {
-    optText: '### Get Gmail alerts for dropped top-10 keyword rankings\n' +
-      'Every day, pull the keywords each target domain currently holds a top-10 position for, compare against ' +
-      'yesterday\'s snapshot, and email a digest of everything that slipped - keywords that moved down inside ' +
-      'the top 10, and keywords that fell out of it entirely.\n\n' +
-      'Losing page one is the most expensive ranking event there is, and it is usually silent. This is the ' +
-      'alert that makes it loud.\n\n' +
-      'The Keywords sheet holds the current picture and is rewritten every run; the diff is taken against what ' +
-      'was in it beforehand, so the first run establishes the baseline and alerts on nothing.'
+    optText: '### Get Gmail alerts for dropped top-10 keyword rankings\nEvery day, pull the keywords each target domain currently holds a top-10 position for, compare against yesterday\'s snapshot, and email a digest of everything that slipped - keywords that moved down inside the top 10, and keywords that fell out of it entirely.\n\nLosing page one is the most expensive ranking event there is, and it is usually silent. This is the alert that makes it loud.\n\nThe Keywords sheet holds the current picture and is rewritten every run; the diff is taken against what was in it beforehand, so the first run establishes the baseline and alerts on nothing.'
   });
 
   f.node('91e6b3', 'Core.Flow.Comment', 'Snapshot yesterday', {
-    optText: '#### Snapshot yesterday\nRead the Keywords sheet and index it by target + keyword, keeping the ' +
-      'position. That index is what today\'s positions are compared against.'
+    optText: '#### Snapshot yesterday\nRead the Keywords sheet and index it by target + keyword, keeping the position. That index is what today\'s positions are compared against.'
   });
 
   f.node('72c0da', 'Core.Trigger.Inject', 'Daily', {
@@ -104,8 +96,7 @@ return msg;`
     });
 
   f.node('27bc95', 'Core.Flow.Comment', "Today's top 10", {
-    optText: '#### Today\'s top 10\nOne pass per target, filtered server-side to `rank_group <= 10`, paging ' +
-      '1000 keywords at a time until DataForSEO\'s total_count is exhausted.'
+    optText: '#### Today\'s top 10\nOne pass per target, filtered server-side to `rank_group <= 10`, paging 1000 keywords at a time until DataForSEO\'s total_count is exhausted.'
   });
 
   // Both Labels are jump targets only - the first pass enters each loop body
@@ -166,8 +157,7 @@ return [null, msg];`
   f.edge('cb0184', 0, '7d2ea6', 0);
 
   f.node('a1fb70', 'Core.Flow.Comment', 'Find the drops', {
-    optText: '#### Find the drops\nTwo kinds of loss are reported: a keyword still on page one but at a worse ' +
-      'position, and a keyword that was on page one yesterday and is not in today\'s set at all.'
+    optText: '#### Find the drops\nTwo kinds of loss are reported: a keyword still on page one but at a worse position, and a keyword that was on page one yesterday and is not in today\'s set at all.'
   });
 
   f.node('58e0c3', 'Core.Programming.Function', 'Find Rank Drops', {

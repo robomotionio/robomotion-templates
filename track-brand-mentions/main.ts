@@ -6,18 +6,11 @@ flow.create('95b7d310-c8a1-431c-c69e-54a0d1f79866', 'Track Brand Mentions', (f) 
   f.addDependency('Robomotion.Slack', '0.7.0');
 
   f.node('a4610d', 'Core.Flow.Comment', 'About', {
-    optText: '### Track brand mentions\n' +
-      'Every evening, search the web for pages that mentioned your brand in the last 24 hours, classify each ' +
-      'mention as positive, negative or neutral, write them all into a dated Google Doc, and post a Slack ' +
-      'summary with the sentiment split and a link to the doc.\n\n' +
-      'The sentiment counts in the Slack message are the point: three positive mentions is a good day, three ' +
-      'negative ones is something to look at tonight. The doc is there for when the number surprises you.\n\n' +
-      'A day with no mentions posts nothing and creates no document.'
+    optText: '### Track brand mentions\nEvery evening, search the web for pages that mentioned your brand in the last 24 hours, classify each mention as positive, negative or neutral, write them all into a dated Google Doc, and post a Slack summary with the sentiment split and a link to the doc.\n\nThe sentiment counts in the Slack message are the point: three positive mentions is a good day, three negative ones is something to look at tonight. The doc is there for when the number surprises you.\n\nA day with no mentions posts nothing and creates no document.'
   });
 
   f.node('7cd82b', 'Core.Flow.Comment', 'Search', {
-    optText: '#### Search\nThe keyword is quoted so Content Analysis matches the phrase rather than the words ' +
-      'in it, and a `fetch_time` filter keeps the result set to the last day.'
+    optText: '#### Search\nThe keyword is quoted so Content Analysis matches the phrase rather than the words in it, and a `fetch_time` filter keeps the result set to the last day.'
   });
 
   f.node('20e953', 'Core.Trigger.Inject', 'Daily', {
@@ -99,8 +92,7 @@ return [msg, null];`
     });
 
   f.node('16fa73', 'Core.Flow.Comment', 'Record and announce', {
-    optText: '#### Record and announce\nOne Google Doc per day holds the full text of every mention; Slack ' +
-      'gets the counts and the link.'
+    optText: '#### Record and announce\nOne Google Doc per day holds the full text of every mention; Slack gets the counts and the link.'
   });
 
   f.node('4b0e28', 'Robomotion.GoogleDocs.CreateDocument', 'Create Mentions Doc', {

@@ -5,16 +5,11 @@ flow.create('6e2d9a04-5f18-4c73-b906-8d1a37f0c2e5', 'Track New and Lost Backlink
   f.addDependency('Robomotion.GoogleSheets', '1.7.0');
 
   f.node('d13f8a', 'Core.Flow.Comment', 'About', {
-    optText: '### Track new and lost backlinks in bulk\n' +
-      'Reads a column of domains from a Google Sheet and pulls, in **one** DataForSEO call, how many backlinks each of them gained and lost, stamped with the date.\n' +
-      'Run it weekly and the sheet becomes a link velocity log: a spike in lost backlinks on one domain is the earliest warning that a placement was pulled or a partner site went down.\n' +
-      'Bulk New/Lost Backlinks has no dedicated node in the DataForSEO package yet, so the call goes through **Raw Request**.'
+    optText: '### Track new and lost backlinks in bulk\nReads a column of domains from a Google Sheet and pulls, in **one** DataForSEO call, how many backlinks each of them gained and lost, stamped with the date.\nRun it weekly and the sheet becomes a link velocity log: a spike in lost backlinks on one domain is the earliest warning that a placement was pulled or a partner site went down.\nBulk New/Lost Backlinks has no dedicated node in the DataForSEO package yet, so the call goes through **Raw Request**.'
   });
 
   f.node('6c04b7', 'Core.Flow.Comment', 'Read targets', {
-    optText: '#### Read targets\n' +
-      'The sheet needs a `Target` column; `Date`, `New backlinks` and `Lost backlinks` are filled in by this flow.\n' +
-      'Example sheet: https://docs.google.com/spreadsheets/d/1WZRTNkHfOmgyvG8bfdfYuMUNlEXFle4hXVOoWuBQvGQ/edit'
+    optText: '#### Read targets\nThe sheet needs a `Target` column; `Date`, `New backlinks` and `Lost backlinks` are filled in by this flow.\nExample sheet: https://docs.google.com/spreadsheets/d/1WZRTNkHfOmgyvG8bfdfYuMUNlEXFle4hXVOoWuBQvGQ/edit'
   });
 
   f.node('91be2d', 'Core.Trigger.Inject', 'Run', { optOnce: true, optOnceDelay: 1 })

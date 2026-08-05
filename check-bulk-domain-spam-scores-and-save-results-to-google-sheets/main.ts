@@ -5,16 +5,11 @@ flow.create('a91c6e33-47b8-4d02-95fa-1e7b0c8d43f6', 'Bulk Domain Spam Score Chec
   f.addDependency('Robomotion.GoogleSheets', '1.7.0');
 
   f.node('d13f8a', 'Core.Flow.Comment', 'About', {
-    optText: '### Check bulk domain spam scores\n' +
-      'Reads a column of domains from a Google Sheet, scores all of them in **one** DataForSEO Bulk Spam Score ' +
-      'call, and writes each 0-100 score back next to its domain with the date it was measured.\n\n' +
-      'One call covers up to 1000 targets. Run it over a prospect list before you buy links, or over your own ' +
-      'referring domains to spot a toxic neighbourhood early.'
+    optText: '### Check bulk domain spam scores\nReads a column of domains from a Google Sheet, scores all of them in **one** DataForSEO Bulk Spam Score call, and writes each 0-100 score back next to its domain with the date it was measured.\n\nOne call covers up to 1000 targets. Run it over a prospect list before you buy links, or over your own referring domains to spot a toxic neighbourhood early.'
   });
 
   f.node('6c04b7', 'Core.Flow.Comment', 'Read targets', {
-    optText: '#### Read targets\nThe sheet needs a `Target` column; `Date` and `Spam Score` are filled in by this flow.\n\n' +
-      'Example sheet: https://docs.google.com/spreadsheets/d/1VZfCa4w8YgGtHRQpGYDT6rq6UhwVOZxLhKzAHx5QyzY/edit'
+    optText: '#### Read targets\nThe sheet needs a `Target` column; `Date` and `Spam Score` are filled in by this flow.\n\nExample sheet: https://docs.google.com/spreadsheets/d/1VZfCa4w8YgGtHRQpGYDT6rq6UhwVOZxLhKzAHx5QyzY/edit'
   });
 
   f.node('91be2d', 'Core.Trigger.Inject', 'Run', { optOnce: true, optOnceDelay: 1 })

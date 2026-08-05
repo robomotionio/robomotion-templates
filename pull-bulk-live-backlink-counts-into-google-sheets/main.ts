@@ -5,16 +5,11 @@ flow.create('7f0c93e5-4b81-4d26-9a37-e5b8140c7d29', 'Bulk Live Backlink Counts',
   f.addDependency('Robomotion.GoogleSheets', '1.7.0');
 
   f.node('d13f8a', 'Core.Flow.Comment', 'About', {
-    optText: '### Pull bulk live backlink counts\n' +
-      'Reads a column of domains from a Google Sheet and pulls the live backlink count for all of them in **one** DataForSEO call, stamping each count with the date it was measured.\n' +
-      'Run it on a schedule and the sheet becomes a link-growth log you can chart.\n' +
-      'Bulk Backlinks has no dedicated node in the DataForSEO package yet, so the call goes through **Raw Request**.'
+    optText: '### Pull bulk live backlink counts\nReads a column of domains from a Google Sheet and pulls the live backlink count for all of them in **one** DataForSEO call, stamping each count with the date it was measured.\nRun it on a schedule and the sheet becomes a link-growth log you can chart.\nBulk Backlinks has no dedicated node in the DataForSEO package yet, so the call goes through **Raw Request**.'
   });
 
   f.node('6c04b7', 'Core.Flow.Comment', 'Read targets', {
-    optText: '#### Read targets\n' +
-      'The sheet needs a `Target` column; `Date` and `Backlinks` are filled in by this flow.\n' +
-      'Example sheet: https://docs.google.com/spreadsheets/d/1dgXcUenn-lTznKVeugADYrubs15-jFiY1QWPH21kLPc/edit'
+    optText: '#### Read targets\nThe sheet needs a `Target` column; `Date` and `Backlinks` are filled in by this flow.\nExample sheet: https://docs.google.com/spreadsheets/d/1dgXcUenn-lTznKVeugADYrubs15-jFiY1QWPH21kLPc/edit'
   });
 
   f.node('91be2d', 'Core.Trigger.Inject', 'Run', { optOnce: true, optOnceDelay: 1 })

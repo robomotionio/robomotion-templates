@@ -5,16 +5,11 @@ flow.create('8a5f3c17-9b04-4e28-a6d1-72c53e0b94f6', 'Track New and Lost Referrin
   f.addDependency('Robomotion.GoogleSheets', '1.7.0');
 
   f.node('d13f8a', 'Core.Flow.Comment', 'About', {
-    optText: '### Track new and lost referring domains in bulk\n' +
-      'Reads a column of domains from a Google Sheet and pulls, in **one** DataForSEO call, how many referring domains each of them gained and lost - counted both per domain and per main domain - stamped with the date.\n' +
-      'Referring domains move slower than raw backlink counts, which makes them the better signal that a link-building campaign is actually landing.\n' +
-      'Bulk New/Lost Referring Domains has no dedicated node in the DataForSEO package yet, so the call goes through **Raw Request**.'
+    optText: '### Track new and lost referring domains in bulk\nReads a column of domains from a Google Sheet and pulls, in **one** DataForSEO call, how many referring domains each of them gained and lost - counted both per domain and per main domain - stamped with the date.\nReferring domains move slower than raw backlink counts, which makes them the better signal that a link-building campaign is actually landing.\nBulk New/Lost Referring Domains has no dedicated node in the DataForSEO package yet, so the call goes through **Raw Request**.'
   });
 
   f.node('6c04b7', 'Core.Flow.Comment', 'Read targets', {
-    optText: '#### Read targets\n' +
-      'The sheet needs a `Target` column; the four count columns and `Date` are filled in by this flow.\n' +
-      'Example sheet: https://docs.google.com/spreadsheets/d/1txJAMEdy3E6wtfXzlf6TkTS_rD5mC_xeXUJYc6zfVzE/edit'
+    optText: '#### Read targets\nThe sheet needs a `Target` column; the four count columns and `Date` are filled in by this flow.\nExample sheet: https://docs.google.com/spreadsheets/d/1txJAMEdy3E6wtfXzlf6TkTS_rD5mC_xeXUJYc6zfVzE/edit'
   });
 
   f.node('91be2d', 'Core.Trigger.Inject', 'Run', { optOnce: true, optOnceDelay: 1 })

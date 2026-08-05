@@ -6,17 +6,11 @@ flow.create('2d67b3f0-8e14-4c95-a70b-51fd928c6ea3', 'Weekly Toxic Backlink Repor
   f.addDependency('Robomotion.Gmail', '1.1.0');
 
   f.node('c9084a', 'Core.Flow.Comment', 'About', {
-    optText: '### Monitor toxic backlinks, email a weekly report\n' +
-      'Every week, pull every backlink first seen in the last seven days whose spam score is above the threshold, ' +
-      'drop them into a fresh Google Sheet named after the domain and the date, and email you the link.\n\n' +
-      'The `first_seen` filter is what makes this a *weekly* report rather than a full audit: you only ever see ' +
-      'links that appeared since the last run, so the report stays short enough to actually read.\n\n' +
-      'A week with no new toxic links sends no email at all.'
+    optText: '### Monitor toxic backlinks, email a weekly report\nEvery week, pull every backlink first seen in the last seven days whose spam score is above the threshold, drop them into a fresh Google Sheet named after the domain and the date, and email you the link.\n\nThe `first_seen` filter is what makes this a *weekly* report rather than a full audit: you only ever see links that appeared since the last run, so the report stays short enough to actually read.\n\nA week with no new toxic links sends no email at all.'
   });
 
   f.node('35e7b1', 'Core.Flow.Comment', 'Collect', {
-    optText: '#### Collect\n1000 backlinks per pass, filtered server-side on spam score **and** first-seen date. ' +
-      'The Label/GoTo pair walks Offset until `total_count` is exhausted.'
+    optText: '#### Collect\n1000 backlinks per pass, filtered server-side on spam score **and** first-seen date. The Label/GoTo pair walks Offset until `total_count` is exhausted.'
   });
 
   f.node('7f1ad6', 'Core.Trigger.Inject', 'Weekly', {

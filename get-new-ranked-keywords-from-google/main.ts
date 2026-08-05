@@ -6,14 +6,11 @@ flow.create('13c5a8e0-4f27-4b93-8d61-7a0e29b4f5c3', 'New Ranked Keywords to Slac
   f.addDependency('Robomotion.Slack', '0.7.0');
 
   f.node('a1f307', 'Core.Flow.Comment', 'About', {
-    optText: '### Get new ranked keywords from Google\n' +
-      'Each week, pull every keyword your target domains rank for, compare it against last week\'s snapshot, and post whatever is new to Slack.\n' +
-      'The Keywords sheet always holds the current picture: it is cleared and rewritten on every run, and the diff is taken against what was in it beforehand. That means the sheet stays honest about the present while Slack tells you what changed.'
+    optText: '### Get new ranked keywords from Google\nEach week, pull every keyword your target domains rank for, compare it against last week\'s snapshot, and post whatever is new to Slack.\nThe Keywords sheet always holds the current picture: it is cleared and rewritten on every run, and the diff is taken against what was in it beforehand. That means the sheet stays honest about the present while Slack tells you what changed.'
   });
 
   f.node('58b2ce', 'Core.Flow.Comment', 'Snapshot the past', {
-    optText: '#### Snapshot the past\n' +
-      'Read the Keywords sheet, index it by target + keyword, then clear it. The index is what the diff runs against.'
+    optText: '#### Snapshot the past\nRead the Keywords sheet, index it by target + keyword, then clear it. The index is what the diff runs against.'
   });
 
   f.node('0d69e4', 'Core.Trigger.Inject', 'Weekly', {
@@ -101,8 +98,7 @@ return msg;`
     });
 
   f.node('e91daf', 'Core.Flow.Comment', 'Pull current rankings', {
-    optText: '#### Pull current rankings\n' +
-      'One pass per target domain, paging 1000 keywords at a time until DataForSEO\'s total_count is exhausted.'
+    optText: '#### Pull current rankings\nOne pass per target domain, paging 1000 keywords at a time until DataForSEO\'s total_count is exhausted.'
   });
 
   // Both Labels are jump targets only - the first pass enters each loop body
@@ -163,8 +159,7 @@ return [null, msg];`
   f.edge('5da9e2', 0, '9e04b7', 0);
 
   f.node('cf1826', 'Core.Flow.Comment', 'Diff and announce', {
-    optText: '#### Diff and announce\n' +
-      'Every current keyword is written back to the sheet. Only the ones missing from the previous snapshot are announced.'
+    optText: '#### Diff and announce\nEvery current keyword is written back to the sheet. Only the ones missing from the previous snapshot are announced.'
   });
 
   f.node('62b7fa', 'Core.Programming.Function', 'Find New Keywords', {

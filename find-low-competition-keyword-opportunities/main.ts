@@ -5,19 +5,11 @@ flow.create('f1a4dc2e-2d05-4972-eb5f-5842ca180da6', 'Low-Competition Keyword Fin
   f.addDependency('Robomotion.GoogleSheets', '1.7.0');
 
   f.node('d3906b', 'Core.Flow.Comment', 'About', {
-    optText: '### Find low-competition keyword opportunities\n' +
-      'For each seed domain in an input sheet, pull every keyword the domain is relevant for, score all of them ' +
-      'for ranking difficulty in one bulk call, and write the combined picture - volume, trend, difficulty, ' +
-      'intent and average backlinks - to an opportunities sheet.\n\n' +
-      'The point is the join. Search volume alone tells you what people want; difficulty alone tells you what is ' +
-      'hard. Only together do they identify a keyword worth writing for, which is why this flow always fetches ' +
-      'both rather than filtering on either one.\n\n' +
-      'Sort the output sheet by difficulty ascending and volume descending and the opportunities are at the top.'
+    optText: '### Find low-competition keyword opportunities\nFor each seed domain in an input sheet, pull every keyword the domain is relevant for, score all of them for ranking difficulty in one bulk call, and write the combined picture - volume, trend, difficulty, intent and average backlinks - to an opportunities sheet.\n\nThe point is the join. Search volume alone tells you what people want; difficulty alone tells you what is hard. Only together do they identify a keyword worth writing for, which is why this flow always fetches both rather than filtering on either one.\n\nSort the output sheet by difficulty ascending and volume descending and the opportunities are at the top.'
   });
 
   f.node('82e5f4', 'Core.Flow.Comment', 'Read the seeds', {
-    optText: '#### Read the seeds\nThe input sheet carries one row per domain: `seed`, `location_name`, ' +
-      '`language_name` and `limit`. The last three fall back to the defaults when blank.'
+    optText: '#### Read the seeds\nThe input sheet carries one row per domain: `seed`, `location_name`, `language_name` and `limit`. The last three fall back to the defaults when blank.'
   });
 
   f.node('571cba', 'Core.Trigger.Inject', 'Monthly', {
@@ -70,10 +62,7 @@ return msg;`
     });
 
   f.node('a17df5', 'Core.Flow.Comment', 'Keywords, then difficulty', {
-    optText: '#### Keywords, then difficulty\nTwo calls per seed. `keywords_for_site` returns everything the ' +
-      'domain is relevant for; `bulk_keyword_difficulty` scores up to 1000 of those keywords in a single ' +
-      'request, which is far cheaper than asking for difficulty per keyword.\n\n' +
-      'Neither endpoint has a dedicated node in the DataForSEO package yet, so both go through **Raw Request**.'
+    optText: '#### Keywords, then difficulty\nTwo calls per seed. `keywords_for_site` returns everything the domain is relevant for; `bulk_keyword_difficulty` scores up to 1000 of those keywords in a single request, which is far cheaper than asking for difficulty per keyword.\n\nNeither endpoint has a dedicated node in the DataForSEO package yet, so both go through **Raw Request**.'
   });
 
   // Label is a jump target only - the first pass enters through the ForEach.

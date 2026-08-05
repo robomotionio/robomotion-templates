@@ -4,18 +4,11 @@ flow.create('bd60f88a-e9c1-453d-a71b-14082cd49362', 'Competitor Keyword Gaps to 
   f.addDependency('Robomotion.DataForSEO', '1.0.0');
 
   f.node('e04b7c', 'Core.Flow.Comment', 'About', {
-    optText: '### Find competitor keyword gaps, log them to Notion\n' +
-      'Pulls every keyword your site ranks for, pulls every keyword a competitor ranks for, and writes the ' +
-      'difference - the keywords they own and you do not - into a Notion database with search volume, their ' +
-      'position, their URL and the keyword competition score.\n\n' +
-      'That difference is a content brief you did not have to write. Each row is a phrase with proven demand ' +
-      'that someone in your market is already being found for.\n\n' +
-      'Both lookups use the same location and language, so the comparison is like for like.'
+    optText: '### Find competitor keyword gaps, log them to Notion\nPulls every keyword your site ranks for, pulls every keyword a competitor ranks for, and writes the difference - the keywords they own and you do not - into a Notion database with search volume, their position, their URL and the keyword competition score.\n\nThat difference is a content brief you did not have to write. Each row is a phrase with proven demand that someone in your market is already being found for.\n\nBoth lookups use the same location and language, so the comparison is like for like.'
   });
 
   f.node('3a91d5', 'Core.Flow.Comment', 'Both sides', {
-    optText: '#### Both sides\nOne Ranked Keywords call per domain. Raise Limit on both to widen the ' +
-      'comparison - the gap is only as complete as the two lists behind it.'
+    optText: '#### Both sides\nOne Ranked Keywords call per domain. Raise Limit on both to widen the comparison - the gap is only as complete as the two lists behind it.'
   });
 
   f.node('c2680b', 'Core.Trigger.Inject', 'Run', { optOnce: true, optOnceDelay: 1 })
@@ -110,9 +103,7 @@ return msg;`
     });
 
   f.node('4b8f13', 'Core.Flow.Comment', 'Log to Notion', {
-    optText: '#### Log to Notion\nThe page is created over the Notion REST API rather than through the ' +
-      'package node, because the database needs typed number and url properties that `Pages.Create` does ' +
-      'not expose.'
+    optText: '#### Log to Notion\nThe page is created over the Notion REST API rather than through the package node, because the database needs typed number and url properties that `Pages.Create` does not expose.'
   });
 
   // Label is a jump target only - the first pass enters through the ForEach.

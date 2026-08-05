@@ -5,16 +5,11 @@ flow.create('9c31e7d0-8a45-4b62-83f1-0d76b2e594ac', 'Bulk Domain Backlink Profil
   f.addDependency('Robomotion.GoogleSheets', '1.7.0');
 
   f.node('d13f8a', 'Core.Flow.Comment', 'About', {
-    optText: '### Pull bulk domain backlink profiles\n' +
-      'Reads a column of domains from a Google Sheet and pulls the **full** backlink profile for all of them in one DataForSEO call - rank, spam score, broken links, referring domains, IPs, subnets and the TLD, type, attribute, platform, location and country breakdowns.\n' +
-      'Twenty-two metrics per domain, one request, up to 1000 domains.\n' +
-      'Bulk Pages Summary has no dedicated node in the DataForSEO package yet, so the call goes through **Raw Request**.'
+    optText: '### Pull bulk domain backlink profiles\nReads a column of domains from a Google Sheet and pulls the **full** backlink profile for all of them in one DataForSEO call - rank, spam score, broken links, referring domains, IPs, subnets and the TLD, type, attribute, platform, location and country breakdowns.\nTwenty-two metrics per domain, one request, up to 1000 domains.\nBulk Pages Summary has no dedicated node in the DataForSEO package yet, so the call goes through **Raw Request**.'
   });
 
   f.node('6c04b7', 'Core.Flow.Comment', 'Read targets', {
-    optText: '#### Read targets\n' +
-      'The sheet needs a `Target` column; the twenty-two metric columns are filled in by this flow.\n' +
-      'Example sheet: https://docs.google.com/spreadsheets/d/1SE3EZWnjSGLTxNc9pO17bOJQGUd_pFds7xOwOvc6cU8/edit'
+    optText: '#### Read targets\nThe sheet needs a `Target` column; the twenty-two metric columns are filled in by this flow.\nExample sheet: https://docs.google.com/spreadsheets/d/1SE3EZWnjSGLTxNc9pO17bOJQGUd_pFds7xOwOvc6cU8/edit'
   });
 
   f.node('91be2d', 'Core.Trigger.Inject', 'Run', { optOnce: true, optOnceDelay: 1 })

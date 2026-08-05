@@ -7,14 +7,11 @@ flow.create('792bc446-a58d-41f9-e3c7-d0648fa05192', 'New High-Volume Ranked Keyw
   f.addDependency('Robomotion.Asana', '1.1.0');
 
   f.node('a1f307', 'Core.Flow.Comment', 'About', {
-    optText: '### Get new high-volume ranked keywords on Google\n' +
-      'Each week, find the keywords above your search-volume bar that your domains have started ranking for, open one Asana task holding the list, and post a summary to Slack.\n' +
-      'The volume filter is the point: a domain gains dozens of long-tail keywords a week and almost none of them matter. Filtering server-side on search volume means the alert only fires for the ones worth a content or link decision.'
+    optText: '### Get new high-volume ranked keywords on Google\nEach week, find the keywords above your search-volume bar that your domains have started ranking for, open one Asana task holding the list, and post a summary to Slack.\nThe volume filter is the point: a domain gains dozens of long-tail keywords a week and almost none of them matter. Filtering server-side on search volume means the alert only fires for the ones worth a content or link decision.'
   });
 
   f.node('58b2ce', 'Core.Flow.Comment', 'Snapshot the past', {
-    optText: '#### Snapshot the past\n' +
-      'Read the Keywords sheet, index it by target + keyword, then clear it. The index is what the diff runs against.'
+    optText: '#### Snapshot the past\nRead the Keywords sheet, index it by target + keyword, then clear it. The index is what the diff runs against.'
   });
 
   f.node('0d69e4', 'Core.Trigger.Inject', 'Weekly', {
@@ -105,8 +102,7 @@ return msg;`
     });
 
   f.node('e91daf', 'Core.Flow.Comment', 'Pull current rankings', {
-    optText: '#### Pull current rankings\n' +
-      'One pass per target domain, filtered on search volume, paging 1000 at a time.'
+    optText: '#### Pull current rankings\nOne pass per target domain, filtered on search volume, paging 1000 at a time.'
   });
 
   // Both Labels are jump targets only - the first pass enters each loop body
@@ -167,8 +163,7 @@ return [null, msg];`
   f.edge('5da9e2', 0, '9e04b7', 0);
 
   f.node('cf1826', 'Core.Flow.Comment', 'Diff and announce', {
-    optText: '#### Diff and announce\n' +
-      'Every current high-volume keyword is written back to the sheet. The new ones become an Asana task and a Slack message.'
+    optText: '#### Diff and announce\nEvery current high-volume keyword is written back to the sheet. The new ones become an Asana task and a Slack message.'
   });
 
   f.node('62b7fa', 'Core.Programming.Function', 'Find New Keywords', {

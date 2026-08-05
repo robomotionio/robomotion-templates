@@ -4,17 +4,11 @@ flow.create('aa10b3c7-52d4-4e68-9f01-3b7c5d0e8a42', 'ActiveCampaign Lead Busines
   f.addDependency('Robomotion.DataForSEO', '1.0.0');
 
   f.node('f19b52', 'Core.Flow.Comment', 'About', {
-    optText: '### Get Business Data for ActiveCampaign leads\n' +
-      'Every 15 minutes, take the leads ActiveCampaign has touched most recently, turn each one\'s website into a bare domain, look the company up in the Google Business listings database, and write the listing back onto the ActiveCampaign record.\n' +
-      '\n' +
-      'What comes back is the public face of the business: its Google name, description, primary and additional categories, address, star rating and price level. Enough to segment a lead list by industry, size and quality without anyone opening a browser.\n' +
-      '\n' +
-      'A lead whose domain has no Google Business listing is skipped rather than overwritten with blanks.'
+    optText: '### Get Business Data for ActiveCampaign leads\nEvery 15 minutes, take the leads ActiveCampaign has touched most recently, turn each one\'s website into a bare domain, look the company up in the Google Business listings database, and write the listing back onto the ActiveCampaign record.\n\nWhat comes back is the public face of the business: its Google name, description, primary and additional categories, address, star rating and price level. Enough to segment a lead list by industry, size and quality without anyone opening a browser.\n\nA lead whose domain has no Google Business listing is skipped rather than overwritten with blanks.'
   });
 
   f.node('30ea7d', 'Core.Flow.Comment', 'Poll the CRM', {
-    optText: '#### Poll the CRM\n' +
-      'The ten most recently touched ActiveCampaign records, every 15 minutes - the same cadence as the source scenario. Records with no website are dropped before the loop.'
+    optText: '#### Poll the CRM\nThe ten most recently touched ActiveCampaign records, every 15 minutes - the same cadence as the source scenario. Records with no website are dropped before the loop.'
   });
 
   f.node('84c0f6', 'Core.Trigger.Inject', 'Every 15 Minutes', {
@@ -81,8 +75,7 @@ return msg;`
     });
 
   f.node('9c6e20', 'Core.Flow.Comment', 'Enrich each lead', {
-    optText: '#### Enrich each lead\n' +
-      'One Business Listings lookup per lead, filtered on the exact domain and limited to the single best match. The DataForSEO node is set to continue on error so one bad domain cannot stop the batch.'
+    optText: '#### Enrich each lead\nOne Business Listings lookup per lead, filtered on the exact domain and limited to the single best match. The DataForSEO node is set to continue on error so one bad domain cannot stop the batch.'
   });
 
   // Label is a jump target only - it has no input port, so the first pass enters

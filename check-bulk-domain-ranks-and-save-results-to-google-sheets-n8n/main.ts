@@ -5,16 +5,11 @@ flow.create('f39b1d47-2e60-4c85-a713-98d02f6b5ea1', 'Bulk Domain Rank Checker', 
   f.addDependency('Robomotion.GoogleSheets', '1.7.0');
 
   f.node('d13f8a', 'Core.Flow.Comment', 'About', {
-    optText: '### Check bulk domain ranks\n' +
-      'Reads a column of target domains from a Google Sheet, scores all of them in **one** DataForSEO Bulk Ranks ' +
-      'call, and writes each rank back next to its domain along with the date it was measured.\n\n' +
-      'One call covers up to 1000 targets, which is what makes this far cheaper than looping a per-domain endpoint.\n\n' +
-      'Bulk Ranks has no dedicated node in the DataForSEO package yet, so the call goes through **Raw Request**.'
+    optText: '### Check bulk domain ranks\nReads a column of target domains from a Google Sheet, scores all of them in **one** DataForSEO Bulk Ranks call, and writes each rank back next to its domain along with the date it was measured.\n\nOne call covers up to 1000 targets, which is what makes this far cheaper than looping a per-domain endpoint.\n\nBulk Ranks has no dedicated node in the DataForSEO package yet, so the call goes through **Raw Request**.'
   });
 
   f.node('6c04b7', 'Core.Flow.Comment', 'Read targets', {
-    optText: '#### Read targets\nThe sheet needs a `Target` column; `Date` and `Rank` are filled in by this flow.\n\n' +
-      'Example sheet: https://docs.google.com/spreadsheets/d/1VZfCa4w8YgGtHRQpGYDT6rq6UhwVOZxLhKzAHx5QyzY/edit'
+    optText: '#### Read targets\nThe sheet needs a `Target` column; `Date` and `Rank` are filled in by this flow.\n\nExample sheet: https://docs.google.com/spreadsheets/d/1VZfCa4w8YgGtHRQpGYDT6rq6UhwVOZxLhKzAHx5QyzY/edit'
   });
 
   f.node('91be2d', 'Core.Trigger.Inject', 'Run', { optOnce: true, optOnceDelay: 1 })

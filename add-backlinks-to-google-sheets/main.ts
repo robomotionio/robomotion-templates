@@ -5,16 +5,11 @@ flow.create('3f7a04e8-b269-4d51-9c83-a05e17b2d6c4', 'Add Backlinks to Google She
   f.addDependency('Robomotion.GoogleSheets', '1.7.0');
 
   f.node('e18a35', 'Core.Flow.Comment', 'About', {
-    optText: '### Add backlinks to Google Sheets\n' +
-      'Pulls the live backlinks pointing at a domain every 15 minutes and appends them to a Google Sheet, one row ' +
-      'per link, with the source page, anchor text, follow status, ranks and first/last seen dates.\n\n' +
-      'Indirect links (redirects and canonicals that pass equity) and subdomain links are included, so the sheet ' +
-      'shows the full picture rather than just direct root-domain links.'
+    optText: '### Add backlinks to Google Sheets\nPulls the live backlinks pointing at a domain every 15 minutes and appends them to a Google Sheet, one row per link, with the source page, anchor text, follow status, ranks and first/last seen dates.\n\nIndirect links (redirects and canonicals that pass equity) and subdomain links are included, so the sheet shows the full picture rather than just direct root-domain links.'
   });
 
   f.node('5b90c2', 'Core.Flow.Comment', 'Fetch', {
-    optText: '#### Fetch\nOne page of up to 100 live backlinks. Raise Limit, or walk Offset on a Label/GoTo loop, ' +
-      'to pull a bigger profile.'
+    optText: '#### Fetch\nOne page of up to 100 live backlinks. Raise Limit, or walk Offset on a Label/GoTo loop, to pull a bigger profile.'
   });
 
   f.node('a4c761', 'Core.Trigger.Inject', 'Every 15 Minutes', {

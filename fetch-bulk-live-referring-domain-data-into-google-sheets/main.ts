@@ -5,16 +5,11 @@ flow.create('5d8b2fa1-063c-4e79-b4a5-2c917e0d6b38', 'Bulk Referring Domain Data'
   f.addDependency('Robomotion.GoogleSheets', '1.7.0');
 
   f.node('d13f8a', 'Core.Flow.Comment', 'About', {
-    optText: '### Fetch bulk live referring domain data\n' +
-      'Reads a column of domains from a Google Sheet and pulls the live referring-domain counts for all of them in **one** DataForSEO call, writing the follow and nofollow breakdown back next to each domain.\n' +
-      'One call covers up to 1000 targets, so a 500-domain portfolio costs the same as a single lookup.\n' +
-      'Bulk Referring Domains has no dedicated node in the DataForSEO package yet, so the call goes through **Raw Request**.'
+    optText: '### Fetch bulk live referring domain data\nReads a column of domains from a Google Sheet and pulls the live referring-domain counts for all of them in **one** DataForSEO call, writing the follow and nofollow breakdown back next to each domain.\nOne call covers up to 1000 targets, so a 500-domain portfolio costs the same as a single lookup.\nBulk Referring Domains has no dedicated node in the DataForSEO package yet, so the call goes through **Raw Request**.'
   });
 
   f.node('6c04b7', 'Core.Flow.Comment', 'Read targets', {
-    optText: '#### Read targets\n' +
-      'The sheet needs a `Target` column; the remaining columns are filled in by this flow.\n' +
-      'Example sheet: https://docs.google.com/spreadsheets/d/1Cp4YEGB8sX3YjJQPo1NOMNcU4GUTUIgzytDg2zxANZQ/edit'
+    optText: '#### Read targets\nThe sheet needs a `Target` column; the remaining columns are filled in by this flow.\nExample sheet: https://docs.google.com/spreadsheets/d/1Cp4YEGB8sX3YjJQPo1NOMNcU4GUTUIgzytDg2zxANZQ/edit'
   });
 
   f.node('91be2d', 'Core.Trigger.Inject', 'Run', { optOnce: true, optOnceDelay: 1 })

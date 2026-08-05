@@ -5,11 +5,7 @@ flow.create('b8d3e0f1-4a52-4c96-8e71-05c3a9d6f2b7', 'AI Mode References to Sheet
   f.addDependency('Robomotion.GoogleSheets', '1.7.0');
 
   f.node('a72f16', 'Core.Flow.Comment', 'About', {
-    optText: '### Pull references from Google AI Mode\n' +
-      'Every 7 days, ask DataForSEO for the Google AI Mode answer to a keyword, collect every source the answer ' +
-      'references and append them to a Google Sheet with the Source, Domain, URL, Title and Text columns.\n\n' +
-      'AI Mode has no dedicated node in the DataForSEO package yet, so the call goes through **Raw Request**, ' +
-      'which reaches any DataForSEO v3 endpoint by path.'
+    optText: '### Pull references from Google AI Mode\nEvery 7 days, ask DataForSEO for the Google AI Mode answer to a keyword, collect every source the answer references and append them to a Google Sheet with the Source, Domain, URL, Title and Text columns.\n\nAI Mode has no dedicated node in the DataForSEO package yet, so the call goes through **Raw Request**, which reaches any DataForSEO v3 endpoint by path.'
   });
 
   f.node('5c9b24', 'Core.Flow.Comment', 'Configure', {

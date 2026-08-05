@@ -5,17 +5,11 @@ flow.create('0a769a2d-b8da-4ece-f567-9b3cbd6e4a08', 'Zoho CRM Lead Business Data
   f.addDependency('Robomotion.ZohoCRM', '1.0.2');
 
   f.node('f19b52', 'Core.Flow.Comment', 'About', {
-    optText: '### Get Business Data for Zoho CRM leads\n' +
-      'Every 15 minutes, take the leads Zoho CRM has touched most recently, turn each one\'s website into a bare domain, look the company up in the Google Business listings database, and write the listing back onto the Zoho CRM record.\n' +
-      '\n' +
-      'What comes back is the public face of the business: its Google name, description, primary and additional categories, address, star rating and price level. Enough to segment a lead list by industry, size and quality without anyone opening a browser.\n' +
-      '\n' +
-      'A lead whose domain has no Google Business listing is skipped rather than overwritten with blanks.'
+    optText: '### Get Business Data for Zoho CRM leads\nEvery 15 minutes, take the leads Zoho CRM has touched most recently, turn each one\'s website into a bare domain, look the company up in the Google Business listings database, and write the listing back onto the Zoho CRM record.\n\nWhat comes back is the public face of the business: its Google name, description, primary and additional categories, address, star rating and price level. Enough to segment a lead list by industry, size and quality without anyone opening a browser.\n\nA lead whose domain has no Google Business listing is skipped rather than overwritten with blanks.'
   });
 
   f.node('30ea7d', 'Core.Flow.Comment', 'Poll the CRM', {
-    optText: '#### Poll the CRM\n' +
-      'The ten most recently touched Zoho CRM records, every 15 minutes - the same cadence as the source scenario. Records with no website are dropped before the loop.'
+    optText: '#### Poll the CRM\nThe ten most recently touched Zoho CRM records, every 15 minutes - the same cadence as the source scenario. Records with no website are dropped before the loop.'
   });
 
   f.node('84c0f6', 'Core.Trigger.Inject', 'Every 15 Minutes', {
@@ -59,8 +53,7 @@ return msg;`
     });
 
   f.node('9c6e20', 'Core.Flow.Comment', 'Enrich each lead', {
-    optText: '#### Enrich each lead\n' +
-      'One Business Listings lookup per lead, filtered on the exact domain and limited to the single best match. The DataForSEO node is set to continue on error so one bad domain cannot stop the batch.'
+    optText: '#### Enrich each lead\nOne Business Listings lookup per lead, filtered on the exact domain and limited to the single best match. The DataForSEO node is set to continue on error so one bad domain cannot stop the batch.'
   });
 
   // Label is a jump target only - it has no input port, so the first pass enters

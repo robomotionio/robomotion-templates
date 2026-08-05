@@ -5,11 +5,7 @@ flow.create('c60a17b4-9d28-4f35-b1e6-73f0c5a2d891', 'Scrape AI Mode References',
   f.addDependency('Robomotion.GoogleSheets', '1.7.0');
 
   f.node('b409e2', 'Core.Flow.Comment', 'About', {
-    optText: '### Scrape references from Google AI Mode\n' +
-      'Polls the Google AI Mode answer for a brand keyword every 15 minutes and appends every cited source to a ' +
-      'Google Sheet. Use it to watch, in near real time, which sites AI Mode pulls from when it answers questions ' +
-      'about your brand.\n\n' +
-      'AI Mode has no dedicated node in the DataForSEO package yet, so the call goes through **Raw Request**.'
+    optText: '### Scrape references from Google AI Mode\nPolls the Google AI Mode answer for a brand keyword every 15 minutes and appends every cited source to a Google Sheet. Use it to watch, in near real time, which sites AI Mode pulls from when it answers questions about your brand.\n\nAI Mode has no dedicated node in the DataForSEO package yet, so the call goes through **Raw Request**.'
   });
 
   f.node('8d15c7', 'Core.Flow.Comment', 'Configure', {

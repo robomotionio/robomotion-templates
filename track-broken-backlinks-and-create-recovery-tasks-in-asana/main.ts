@@ -6,17 +6,11 @@ flow.create('8f4c26a3-7b05-4e91-b3d8-05f172e6ca94', 'Broken Backlink Recovery Ta
   f.addDependency('Robomotion.Asana', '1.1.0');
 
   f.node('b02f8e', 'Core.Flow.Comment', 'About', {
-    optText: '### Track broken backlinks, open an Asana recovery task\n' +
-      'Pulls every backlink pointing at a URL on your domain that now returns an error, logs them to a dated ' +
-      'Google Sheet, and opens one Asana task pointing at that sheet.\n\n' +
-      'Broken backlinks are the cheapest link building there is: the other site already decided to link to you, ' +
-      'so recovering the link is a redirect or a corrected URL rather than an outreach campaign.\n\n' +
-      'A run that finds nothing broken creates no sheet and no task.'
+    optText: '### Track broken backlinks, open an Asana recovery task\nPulls every backlink pointing at a URL on your domain that now returns an error, logs them to a dated Google Sheet, and opens one Asana task pointing at that sheet.\n\nBroken backlinks are the cheapest link building there is: the other site already decided to link to you, so recovering the link is a redirect or a corrected URL rather than an outreach campaign.\n\nA run that finds nothing broken creates no sheet and no task.'
   });
 
   f.node('6a1d47', 'Core.Flow.Comment', 'Collect', {
-    optText: '#### Collect\n1000 backlinks per pass with `is_broken = true` applied server-side. ' +
-      'The Label/GoTo pair walks Offset until `total_count` is exhausted.'
+    optText: '#### Collect\n1000 backlinks per pass with `is_broken = true` applied server-side. The Label/GoTo pair walks Offset until `total_count` is exhausted.'
   });
 
   f.node('c3702b', 'Core.Trigger.Inject', 'Daily', {
@@ -84,8 +78,7 @@ return [null, null, msg];`
   f.edge('157e3f', 0, 'e8420d', 0);
 
   f.node('2fb069', 'Core.Flow.Comment', 'Log & assign', {
-    optText: '#### Log & assign\nOne dated sheet holds the evidence; one Asana task points at it so the work ' +
-      'lands in someone\'s queue instead of an inbox.'
+    optText: '#### Log & assign\nOne dated sheet holds the evidence; one Asana task points at it so the work lands in someone\'s queue instead of an inbox.'
   });
 
   f.node('74c1a8', 'Core.Programming.Function', 'Build Report Table', {

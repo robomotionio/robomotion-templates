@@ -7,14 +7,11 @@ flow.create('8a3cd557-b69e-420a-f4d8-e1759ab16203', 'High-Volume Keywords to Asa
   f.addDependency('Robomotion.Asana', '1.1.0');
 
   f.node('a1f307', 'Core.Flow.Comment', 'About', {
-    optText: '### Turn new high-volume ranked keywords into Asana tasks\n' +
-      'Each week, find the keywords above your search-volume bar that your domains have started ranking for, and turn them into an Asana task so the opportunity lands in someone\'s queue instead of a spreadsheet nobody opens.\n' +
-      'A Slack message goes out alongside the task with the same list.'
+    optText: '### Turn new high-volume ranked keywords into Asana tasks\nEach week, find the keywords above your search-volume bar that your domains have started ranking for, and turn them into an Asana task so the opportunity lands in someone\'s queue instead of a spreadsheet nobody opens.\nA Slack message goes out alongside the task with the same list.'
   });
 
   f.node('58b2ce', 'Core.Flow.Comment', 'Snapshot the past', {
-    optText: '#### Snapshot the past\n' +
-      'Read the Keywords sheet, index it by target + keyword, then clear it. The index is what the diff runs against.'
+    optText: '#### Snapshot the past\nRead the Keywords sheet, index it by target + keyword, then clear it. The index is what the diff runs against.'
   });
 
   f.node('0d69e4', 'Core.Trigger.Inject', 'Weekly', {
@@ -105,8 +102,7 @@ return msg;`
     });
 
   f.node('e91daf', 'Core.Flow.Comment', 'Pull current rankings', {
-    optText: '#### Pull current rankings\n' +
-      'One pass per target domain, filtered on search volume, paging 1000 at a time.'
+    optText: '#### Pull current rankings\nOne pass per target domain, filtered on search volume, paging 1000 at a time.'
   });
 
   // Both Labels are jump targets only - the first pass enters each loop body
@@ -167,8 +163,7 @@ return [null, msg];`
   f.edge('5da9e2', 0, '9e04b7', 0);
 
   f.node('cf1826', 'Core.Flow.Comment', 'Diff and announce', {
-    optText: '#### Diff and announce\n' +
-      'Every current high-volume keyword is written back to the sheet. The new ones become an Asana task and a Slack message.'
+    optText: '#### Diff and announce\nEvery current high-volume keyword is written back to the sheet. The new ones become an Asana task and a Slack message.'
   });
 
   f.node('62b7fa', 'Core.Programming.Function', 'Find New Keywords', {

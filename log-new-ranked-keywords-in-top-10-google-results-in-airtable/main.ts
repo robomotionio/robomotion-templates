@@ -7,14 +7,11 @@ flow.create('9b4de668-c7af-431b-a5e9-f286ab273140', 'New Top-10 Keywords to Airt
   f.addDependency('Robomotion.Slack', '0.7.0');
 
   f.node('a1f307', 'Core.Flow.Comment', 'About', {
-    optText: '### Log new ranked keywords in the top 10 to Airtable\n' +
-      'Each week, find the keywords where your domains have broken into Google\'s first page, write them to an Airtable base, and post a summary to Slack.\n' +
-      'Page one is where the traffic is - a keyword moving from 14 to 9 is worth more than ten new keywords ranking at 60, and this is the alert that catches it.'
+    optText: '### Log new ranked keywords in the top 10 to Airtable\nEach week, find the keywords where your domains have broken into Google\'s first page, write them to an Airtable base, and post a summary to Slack.\nPage one is where the traffic is - a keyword moving from 14 to 9 is worth more than ten new keywords ranking at 60, and this is the alert that catches it.'
   });
 
   f.node('58b2ce', 'Core.Flow.Comment', 'Snapshot the past', {
-    optText: '#### Snapshot the past\n' +
-      'Read the Keywords sheet, index it by target + keyword, then clear it. The index is what the diff runs against.'
+    optText: '#### Snapshot the past\nRead the Keywords sheet, index it by target + keyword, then clear it. The index is what the diff runs against.'
   });
 
   f.node('0d69e4', 'Core.Trigger.Inject', 'Weekly', {
@@ -104,8 +101,7 @@ return msg;`
     });
 
   f.node('e91daf', 'Core.Flow.Comment', 'Pull current rankings', {
-    optText: '#### Pull current rankings\n' +
-      'One pass per target domain, filtered to rank_group 10 or better, paging 1000 at a time.'
+    optText: '#### Pull current rankings\nOne pass per target domain, filtered to rank_group 10 or better, paging 1000 at a time.'
   });
 
   // Both Labels are jump targets only - the first pass enters each loop body
@@ -166,8 +162,7 @@ return [null, msg];`
   f.edge('5da9e2', 0, '9e04b7', 0);
 
   f.node('cf1826', 'Core.Flow.Comment', 'Diff and announce', {
-    optText: '#### Diff and announce\n' +
-      'Every current top-10 keyword is written back to the sheet. The new ones go to Airtable in batches of ten - the bulk endpoint\'s limit - and then to Slack.'
+    optText: '#### Diff and announce\nEvery current top-10 keyword is written back to the sheet. The new ones go to Airtable in batches of ten - the bulk endpoint\'s limit - and then to Slack.'
   });
 
   f.node('62b7fa', 'Core.Programming.Function', 'Find New Keywords', {

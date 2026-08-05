@@ -5,17 +5,11 @@ flow.create('df82ba0c-0be3-4750-c93d-3620aef6b584', 'Ranked Keywords for New Air
   f.addDependency('Robomotion.Airtable', '0.7.0');
 
   f.node('b17e2d', 'Core.Flow.Comment', 'About', {
-    optText: '### Get ranked keywords for new Airtable records\n' +
-      'Watches an Airtable table for target domains that have not been looked up yet, pulls the keywords each ' +
-      'one ranks for, writes them into a second table, and ticks the source record off so it is never processed ' +
-      'twice.\n\n' +
-      'The `Processed` checkbox is what turns a poll into a trigger: without it a 15-minute schedule would ' +
-      're-run every row on every pass.'
+    optText: '### Get ranked keywords for new Airtable records\nWatches an Airtable table for target domains that have not been looked up yet, pulls the keywords each one ranks for, writes them into a second table, and ticks the source record off so it is never processed twice.\n\nThe `Processed` checkbox is what turns a poll into a trigger: without it a 15-minute schedule would re-run every row on every pass.'
   });
 
   f.node('4c93f0', 'Core.Flow.Comment', 'Find work', {
-    optText: '#### Find work\nRecords where `Processed` is unticked, ten at a time. Each carries a `Target`, ' +
-      'and optionally a `Location` and `Language`.'
+    optText: '#### Find work\nRecords where `Processed` is unticked, ten at a time. Each carries a `Target`, and optionally a `Location` and `Language`.'
   });
 
   f.node('a5e106', 'Core.Trigger.Inject', 'Every 15 Minutes', {
@@ -65,8 +59,7 @@ return msg;`
     });
 
   f.node('96af31', 'Core.Flow.Comment', 'Look up and store', {
-    optText: '#### Look up and store\nOne Ranked Keywords call per target, then the rows go back to Airtable ' +
-      'in batches of ten - the bulk endpoint\'s limit.'
+    optText: '#### Look up and store\nOne Ranked Keywords call per target, then the rows go back to Airtable in batches of ten - the bulk endpoint\'s limit.'
   });
 
   // Label is a jump target only - the first pass enters through the ForEach.
