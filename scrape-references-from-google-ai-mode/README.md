@@ -5,7 +5,7 @@ your brand. Polls the AI Mode SERP every 15 minutes and appends every cited sour
 
 ## How it works
 
-1. **Every 15 Minutes** — an Inject trigger repeating on the source scenario's 900-second interval.
+1. **Every 15 Minutes** — an Inject trigger repeating every 900 seconds.
 2. **Set Parameters** — the brand keyword to watch and the destination spreadsheet.
 3. **Get AI Mode SERP** — `DataForSEO.Account.RawRequest` posts to `/serp/google/ai_mode/live/advanced`.
 4. **Collect References** — one row per cited source, de-duplicated by URL.
@@ -24,4 +24,4 @@ if you only need a daily picture.
 
 ## Ported from
 
-- [Scrape references from Google AI Mode with DataForSEO + Make](https://dataforseo.com/templates/scrape-references-from-google-ai-mode-with-dataforseo-make/) — original make template
+- [Scrape references from Google AI Mode with DataForSEO](https://dataforseo.com/templates/scrape-references-from-google-ai-mode-with-dataforseo-make/) — DataForSEO template

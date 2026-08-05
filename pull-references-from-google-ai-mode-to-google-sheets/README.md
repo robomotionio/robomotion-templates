@@ -22,10 +22,9 @@ by URL and appends them to a Google Sheet.
 
 ## Note on the source templates
 
-Two DataForSEO template pages (`pull-references-from-google-ai-mode-to-google-sheets` and its `-n8n`
-variant) point at the same n8n workflow, so they are covered by this one flow.
+Two DataForSEO template pages describe the same automation, so this one flow covers both.
 
 ## Ported from
 
-- [Pull references from Google AI mode to Google Sheets with DataForSEO](https://dataforseo.com/templates/pull-references-from-google-ai-mode-to-google-sheets/) — original n8n template
-- [Pull references from Google AI mode to Google Sheets with DataForSEO + n8n](https://dataforseo.com/templates/pull-references-from-google-ai-mode-to-google-sheets-with-dataforseo-n8n/) — original n8n template
+- [Pull references from Google AI mode to Google Sheets with DataForSEO](https://dataforseo.com/templates/pull-references-from-google-ai-mode-to-google-sheets/) — DataForSEO template
+- [Pull references from Google AI mode to Google Sheets with DataForSEO](https://dataforseo.com/templates/pull-references-from-google-ai-mode-to-google-sheets-with-dataforseo-n8n/) — DataForSEO template

@@ -1,5 +1,5 @@
 name: App Reviews to ClickUp Tasks
-slug: create-tasks-in-clickup-for-new-app-reviews-automatically-n8n
+slug: create-tasks-in-clickup-for-new-app-reviews-automatically
 summary: >-
   Every morning, pulls the newest reviews for your app from both Google Play and
   the App Store, keeps only the ones written since the last run, and opens one
@@ -20,6 +20,9 @@ has_subflows: false
 flow_id: 84a6c20f-b790-420b-b58d-43f9c0e6a875
 schema_version: 1
 ported_from:
+  - slug: create-tasks-in-clickup-for-new-app-reviews-automatically-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/create-tasks-in-clickup-for-new-app-reviews-automatically-with-dataforseo-make/
   - slug: create-tasks-in-clickup-for-new-app-reviews-automatically-with-dataforseo-n8n
     platform: n8n
     url: https://dataforseo.com/templates/create-tasks-in-clickup-for-new-app-reviews-automatically-with-dataforseo-n8n/

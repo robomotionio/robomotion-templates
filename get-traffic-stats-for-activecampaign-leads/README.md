@@ -4,7 +4,7 @@ Every 15 minutes, takes the leads ActiveCampaign has touched most recently, turn
 
 ## How it works
 
-1. **Every 15 Minutes** — an Inject trigger on the source scenario's 900-second interval. **Set Parameters** holds
+1. **Every 15 Minutes** — an Inject trigger repeating every 900 seconds. **Set Parameters** holds
    all the configuration: the location and language for the lookup, and `field_map`, which says where each
    enrichment value lands on the ActiveCampaign side.
 2. **Read API Token** — `Core.Vault.GetItem` pulls the API token, and **Build Request Headers** turns it into the header object the HTTP nodes send.
@@ -24,7 +24,7 @@ The DataForSEO node runs with `continueOnError`, so one unresolvable domain cann
 
 - **DataForSEO credential** — API login and password from <https://app.dataforseo.com/api-access>.
 - **ActiveCampaign credential** — a vault item holding the API token.
-- **`field_map`** — the values shipped here are the field names the original template used. Replace them with your
+- **`field_map`** — the values shipped here are the field names shipped as defaults. Replace them with your
   own: the enrichment keys are `etv`, `organic_keywords`, `organic_traffic_cost`, `paid_etv`.
 
 ## Cost
@@ -33,4 +33,4 @@ One Bulk Traffic Estimation call per lead. The endpoint takes up to 1000 targets
 
 ## Ported from
 
-- [Get Traffic Stats for ActiveCampaign leads with DataForSEO + Make](https://dataforseo.com/templates/get-traffic-stats-for-activecampaign-leads-with-dataforseo-make/) — original make template
+- [Get Traffic Stats for ActiveCampaign leads with DataForSEO](https://dataforseo.com/templates/get-traffic-stats-for-activecampaign-leads-with-dataforseo-make/) — DataForSEO template

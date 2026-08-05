@@ -9,7 +9,7 @@ flow.create('3da9cd50-eb0d-4b1b-c890-ce6fea917d3b', 'Hubspot Lead Traffic Stats'
   });
 
   f.node('30ea7d', 'Core.Flow.Comment', 'Poll the CRM', {
-    optText: '#### Poll the CRM\nThe ten most recently touched Hubspot records, every 15 minutes - the same cadence as the source scenario. Records with no website are dropped before the loop.'
+    optText: '#### Poll the CRM\nThe ten most recently touched Hubspot records, every 15 minutes. Records with no website are dropped before the loop.'
   });
 
   f.node('84c0f6', 'Core.Trigger.Inject', 'Every 15 Minutes', {

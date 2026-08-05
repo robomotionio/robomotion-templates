@@ -5,9 +5,9 @@ every source the overview cites to a Google Sheet.
 
 ## How it works
 
-1. **Every 15 Minutes** — an Inject trigger repeating on the source scenario's 900-second interval.
+1. **Every 15 Minutes** — an Inject trigger repeating every 900 seconds.
 2. **Set Parameters** — keyword, location, language and the extra SERP parameters
-   (`load_async_ai_overview`, `group_organic_results`) that the original parsed-SERP module used.
+   (`load_async_ai_overview`, `group_organic_results`) that the AI Overview block needs in order to resolve.
 3. **Get SERP With AI Overview** — `DataForSEO.Serp.GoogleOrganic`, 100 results deep, desktop device.
 4. **Collect References** — walks every SERP element and its nested blocks, collecting each
    `references` entry and de-duplicating by URL.
@@ -25,4 +25,4 @@ Depth 100 counts as one paid SERP page per call.
 
 ## Ported from
 
-- [Scrape references from Google’s AI Overview with DataForSEO + Make](https://dataforseo.com/templates/scrape-references-from-googles-ai-overview-with-dataforseo-make/) — original make template
+- [Scrape references from Google’s AI Overview with DataForSEO](https://dataforseo.com/templates/scrape-references-from-googles-ai-overview-with-dataforseo-make/) — DataForSEO template

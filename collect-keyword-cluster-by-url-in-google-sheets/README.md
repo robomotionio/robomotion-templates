@@ -20,4 +20,4 @@ The set of keywords one URL ranks for *is* the cluster. Reading it back tells yo
 
 ## Ported from
 
-- [Collect keyword cluster by URL in Google Sheets with DataForSEO + n8n](https://dataforseo.com/templates/collect-keyword-cluster-by-url-in-google-sheets-with-dataforseo-n8n/) — original n8n template
+- [Collect keyword cluster by URL in Google Sheets with DataForSEO](https://dataforseo.com/templates/collect-keyword-cluster-by-url-in-google-sheets-with-dataforseo-n8n/) — DataForSEO template

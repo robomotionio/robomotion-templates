@@ -4,7 +4,7 @@ Reads a column of domains from a Google Sheet and pulls the full backlink profil
 
 ## How it works
 
-1. **Run** — an Inject trigger; the source scenario was on-demand.
+1. **Run** — an Inject trigger; run it on demand, or give it a repeat interval.
 2. **Get Targets** / **Collect Targets** — the `Target` column becomes one array of up to 1000 entries.
 3. **Get Backlink Profiles** — `Account.RawRequest` posts to `/backlinks/bulk_pages_summary/live` with `rank_scale: one_thousand` and `include_subdomains: true`.
 4. **Merge Results Into Rows** — twenty-two metric columns per domain. The distribution fields (`Referring links TLD`, `types`, `attributes`, `platform types`, `semantic locations`, `countries`) are objects, so they are JSON-stringified into their cell rather than dropped.
@@ -24,4 +24,7 @@ Bulk Pages Summary has no dedicated node in `Robomotion.DataForSEO` 1.0.0, so th
 
 ## Ported from
 
-- [Pull Bulk Domain Backlink Profiles to Google Sheets with DataForSEO + Make](https://dataforseo.com/templates/pull-bulk-domain-backlink-profiles-to-google-sheets-with-dataforseo-make/) — original make template
+This flow covers both DataForSEO template pages for the same automation.
+
+- [Bulk Domain Backlink Profiles](https://dataforseo.com/templates/pull-bulk-domain-backlink-profiles-to-google-sheets-with-dataforseo-make/) — DataForSEO template
+- [Bulk Domain Backlink Profiles](https://dataforseo.com/templates/pull-bulk-domain-backlink-profiles-to-google-sheets-with-dataforseo-n8n/) — DataForSEO template

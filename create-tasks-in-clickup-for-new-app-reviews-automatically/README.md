@@ -25,4 +25,7 @@ The App Data **reviews** endpoints have no dedicated node in `Robomotion.DataFor
 
 ## Ported from
 
-- [Create Tasks in ClickUp for New App Reviews Automatically with DataForSEO + n8n](https://dataforseo.com/templates/create-tasks-in-clickup-for-new-app-reviews-automatically-with-dataforseo-n8n/) — original n8n template
+This flow covers both DataForSEO template pages for the same automation.
+
+- [App Reviews to ClickUp Tasks](https://dataforseo.com/templates/create-tasks-in-clickup-for-new-app-reviews-automatically-with-dataforseo-make/) — DataForSEO template
+- [App Reviews to ClickUp Tasks](https://dataforseo.com/templates/create-tasks-in-clickup-for-new-app-reviews-automatically-with-dataforseo-n8n/) — DataForSEO template

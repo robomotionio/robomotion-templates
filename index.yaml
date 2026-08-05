@@ -150,7 +150,7 @@ templates:
     has_subflows: false
 
   - name: App Review Alerts to Slack
-    slug: send-slack-alerts-for-new-app-reviews-from-google-play-and-app-store-n8n
+    slug: send-slack-alerts-for-new-app-reviews-from-google-play-and-app-store
     summary: >-
       Every morning, pulls the newest reviews for your app from both Google Play and
       the App Store, keeps only the ones written since the last run, and posts a
@@ -164,41 +164,12 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
-  - name: App Review Alerts to Slack (Make variant)
-    slug: send-slack-alerts-for-new-app-reviews-from-google-play-and-app-store-make
-    summary: >-
-      Every morning, pulls the newest reviews for your app from both Google Play and
-      the App Store and posts a digest per store to Slack. Port of the Make edition.
-    category: SEO
-    level: Advanced
-    tags: [seo,dataforseo,app-reviews,slack,google-play,app-store]
-    author: Robomotion
-    created: "2026-08-05"
-    updated: "2026-08-05"
-    screenshot: screenshot.png
-    has_subflows: false
-
   - name: App Reviews to ClickUp Tasks
-    slug: create-tasks-in-clickup-for-new-app-reviews-automatically-n8n
+    slug: create-tasks-in-clickup-for-new-app-reviews-automatically
     summary: >-
       Every morning, pulls the newest reviews for your app from both Google Play and
       the App Store, keeps only the ones written since the last run, and opens one
       ClickUp task per store holding the digest.
-    category: SEO
-    level: Advanced
-    tags: [seo,dataforseo,app-reviews,clickup,google-play,app-store]
-    author: Robomotion
-    created: "2026-08-05"
-    updated: "2026-08-05"
-    screenshot: screenshot.png
-    has_subflows: false
-
-  - name: App Reviews to ClickUp Tasks (Make variant)
-    slug: create-tasks-in-clickup-for-new-app-reviews-automatically-make
-    summary: >-
-      Every morning, pulls the newest reviews for your app from both Google Play and
-      the App Store and opens one ClickUp task per store holding the digest. Port of
-      the Make edition.
     category: SEO
     level: Advanced
     tags: [seo,dataforseo,app-reviews,clickup,google-play,app-store]
@@ -350,7 +321,7 @@ templates:
     has_subflows: false
 
   - name: Bulk Domain Backlink Profiles
-    slug: pull-bulk-domain-backlink-profiles-to-google-sheets-make
+    slug: pull-bulk-domain-backlink-profiles-to-google-sheets
     summary: >-
       Reads a column of domains from a Google Sheet and pulls the full backlink
       profile for all of them in one DataForSEO call - rank, spam score, broken
@@ -365,43 +336,12 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
-  - name: Bulk Domain Backlink Profiles (n8n variant)
-    slug: pull-bulk-domain-backlink-profiles-to-google-sheets-n8n
-    summary: >-
-      Reads a column of domains from a Google Sheet and pulls the full backlink
-      profile for all of them in one DataForSEO call. Port of the n8n edition of the
-      bulk backlink profile puller.
-    category: SEO
-    level: Intermediate
-    tags: [seo,dataforseo,backlinks,google-sheets,audit]
-    author: Robomotion
-    created: "2026-08-05"
-    updated: "2026-08-05"
-    screenshot: screenshot.png
-    has_subflows: false
-
   - name: Bulk Domain Rank Checker
-    slug: check-bulk-domain-ranks-and-save-results-to-google-sheets-make
+    slug: check-bulk-domain-ranks-and-save-results-to-google-sheets
     summary: >-
       Reads a column of target domains from a Google Sheet, scores all of them in
       one DataForSEO Bulk Ranks call, and writes each rank back next to its domain
       with the date it was measured.
-    category: SEO
-    level: Beginner
-    tags: [seo,dataforseo,backlinks,google-sheets,bulk]
-    author: Robomotion
-    created: "2026-08-05"
-    updated: "2026-08-05"
-    screenshot: screenshot.png
-    has_subflows: false
-
-  - name: Bulk Domain Rank Checker (n8n variant)
-    slug: check-bulk-domain-ranks-and-save-results-to-google-sheets-n8n
-    summary: >-
-      Reads a column of target domains from a Google Sheet, scores all of them in
-      one DataForSEO Bulk Ranks call, and writes each rank back next to its domain
-      with the date it was measured. Port of the n8n edition of the bulk rank
-      checker.
     category: SEO
     level: Beginner
     tags: [seo,dataforseo,backlinks,google-sheets,bulk]

@@ -22,4 +22,4 @@ A week with no new toxic links takes the third branch out of *Accumulate Page* a
 
 ## Ported from
 
-- [Monitor toxic backlinks and email weekly Google Sheets reports with DataForSEO + n8n](https://dataforseo.com/templates/monitor-toxic-backlinks-and-email-weekly-google-sheets-reports-with-dataforseo-n8n/) — original n8n template
+- [Monitor toxic backlinks and email weekly Google Sheets reports with DataForSEO](https://dataforseo.com/templates/monitor-toxic-backlinks-and-email-weekly-google-sheets-reports-with-dataforseo-n8n/) — DataForSEO template

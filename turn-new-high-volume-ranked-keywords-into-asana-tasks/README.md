@@ -4,8 +4,6 @@ Each week, finds the keywords above your search-volume bar that your domains hav
 
 ## How it works
 
-The n8n edition of the high-volume keyword tracker.
-
 1. **Weekly** — Inject trigger.
 2. **Index Previous Keywords** → **Clear Keywords Sheet** — the diff baseline.
 3. **For Each Target** → **Get Ranked Keywords**, filtered on search volume → **Accumulate Page** → **Go To Next Page**.
@@ -23,4 +21,4 @@ The task body lists each keyword with its position, monthly volume and ranking U
 
 ## Ported from
 
-- [Turn new high-volume ranked keywords into Asana tasks with DataForSEO + n8n](https://dataforseo.com/templates/turn-new-high-volume-ranked-keywords-into-asana-tasks-with-dataforseo-n8n/) — original n8n template
+- [Turn new high-volume ranked keywords into Asana tasks with DataForSEO](https://dataforseo.com/templates/turn-new-high-volume-ranked-keywords-into-asana-tasks-with-dataforseo-n8n/) — DataForSEO template

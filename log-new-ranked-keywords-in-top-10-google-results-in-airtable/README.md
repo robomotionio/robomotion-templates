@@ -23,4 +23,4 @@ Page one is where the traffic is — a keyword moving from 14 to 9 is worth more
 
 ## Ported from
 
-- [Log New Ranked Keywords in Top 10 Google Results in Airtable with DataForSEO + Make](https://dataforseo.com/templates/log-new-ranked-keywords-in-top-10-google-results-in-airtable-with-dataforseo-make/) — original make template
+- [Log New Ranked Keywords in Top 10 Google Results in Airtable with DataForSEO](https://dataforseo.com/templates/log-new-ranked-keywords-in-top-10-google-results-in-airtable-with-dataforseo-make/) — DataForSEO template

@@ -8,7 +8,7 @@ flow.create('1b87ab3e-c9eb-4fdf-a678-ac4dce7f5b19', 'ActiveCampaign Lead Traffic
   });
 
   f.node('30ea7d', 'Core.Flow.Comment', 'Poll the CRM', {
-    optText: '#### Poll the CRM\nThe ten most recently touched ActiveCampaign records, every 15 minutes - the same cadence as the source scenario. Records with no website are dropped before the loop.'
+    optText: '#### Poll the CRM\nThe ten most recently touched ActiveCampaign records, every 15 minutes. Records with no website are dropped before the loop.'
   });
 
   f.node('84c0f6', 'Core.Trigger.Inject', 'Every 15 Minutes', {

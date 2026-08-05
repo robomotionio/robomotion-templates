@@ -4,7 +4,7 @@ Watches an Airtable table for keyword/domain pairs that have not been checked ye
 
 ## How it works
 
-1. **Every 15 Minutes** — an Inject trigger on the source scenario's 900-second interval.
+1. **Every 15 Minutes** — an Inject trigger repeating every 900 seconds.
 2. **List Unchecked Records** — `filterByFormula=NOT({Processed})`, ten at a time.
 3. **For Each Record** → **Build SERP Request** → **Get SERP Position**.
 4. **Build Record Update** → **Write Position Back** — sets `Position`, `URL`, `Checked` and `Processed`.
@@ -19,4 +19,4 @@ The lookup passes `target` through Extra Parameters, so DataForSEO filters the S
 
 ## Ported from
 
-- [Get Google SERP position for new Airtable records with DataForSEO + Make](https://dataforseo.com/templates/get-google-serp-position-for-new-airtable-records-with-dataforseo-make/) — original make template
+- [Get Google SERP position for new Airtable records with DataForSEO](https://dataforseo.com/templates/get-google-serp-position-for-new-airtable-records-with-dataforseo-make/) — DataForSEO template

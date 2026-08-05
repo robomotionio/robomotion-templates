@@ -4,7 +4,7 @@ Pages through every backlink pointing at your domain with a spam score above the
 
 ## How it works
 
-1. **Run** — an Inject trigger; the n8n original used a manual trigger.
+1. **Run** — an Inject trigger; run it on demand, or give it a repeat interval.
 2. **Set Parameters** — target domain, notification address, Drive folder, and the spam threshold (50 by default, which is DataForSEO's own toxic line).
 3. **Get Spam Backlinks** → **Accumulate Page** → **Go To Next Page** — a `Label` / `GoTo` loop that walks `optOffset` 1000 at a time until `total_count` is exhausted, collecting `url_from` as it goes.
 4. **Build Disavow File** — joins the URLs one per line and measures the UTF-8 byte length.
@@ -31,8 +31,8 @@ Both paths land on the same *Compose Error Mail* → *Send Error Mail* branch an
 
 ## Implementation note
 
-The byte count is done by hand rather than with `Buffer.byteLength` — the Function node runs in a pure JS sandbox with no Node built-ins, so the original n8n code node's `Buffer` call does not carry over.
+The byte count is done by hand rather than with `Buffer.byteLength` — the Function node runs in a pure JS sandbox with no Node built-ins, so `Buffer` is unavailable.
 
 ## Ported from
 
-- [Detect toxic backlinks and build a disavow file with DataForSEO, Google Drive, and Gmail + n8n](https://dataforseo.com/templates/detect-toxic-backlinks-and-build-a-disavow-file-with-dataforseo-google-drive-and-gmail-n8n/) — original n8n template
+- [Detect toxic backlinks and build a disavow file with DataForSEO, Google Drive, and Gmail](https://dataforseo.com/templates/detect-toxic-backlinks-and-build-a-disavow-file-with-dataforseo-google-drive-and-gmail-n8n/) — DataForSEO template

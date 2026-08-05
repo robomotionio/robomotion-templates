@@ -27,4 +27,4 @@ One live Google Organic SERP call per run.
 
 ## Ported from
 
-- [Extract citation sources from Google AI overview to Google Sheets with DataForSEO + n8n](https://dataforseo.com/templates/extract-citation-sources-from-google-ai-overview-to-google-sheets-with-dataforseo-n8n/) — original n8n template
+- [Extract citation sources from Google AI overview to Google Sheets with DataForSEO](https://dataforseo.com/templates/extract-citation-sources-from-google-ai-overview-to-google-sheets-with-dataforseo-n8n/) — DataForSEO template

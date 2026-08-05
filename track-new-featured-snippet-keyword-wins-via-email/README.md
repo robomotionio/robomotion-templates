@@ -4,8 +4,6 @@ Each week, finds the keywords where your domains now hold Google's featured snip
 
 ## How it works
 
-The n8n edition of the featured-snippet tracker.
-
 1. **Weekly** — Inject trigger.
 2. **Index Previous Keywords** → **Clear Keywords Sheet** — the diff baseline.
 3. **For Each Target** → **Get Ranked Keywords**, filtered server-side to `serp_item.type = featured_snippet` → **Accumulate Page** → **Go To Next Page**.
@@ -22,4 +20,4 @@ Featured snippets change hands week to week, which is exactly why a weekly diff 
 
 ## Ported from
 
-- [Track new Featured Snippet keyword wins via email with DataForSEO + n8n](https://dataforseo.com/templates/track-new-featured-snippet-keyword-wins-via-email-with-dataforseo-n8n/) — original n8n template
+- [Track new Featured Snippet keyword wins via email with DataForSEO](https://dataforseo.com/templates/track-new-featured-snippet-keyword-wins-via-email-with-dataforseo-n8n/) — DataForSEO template

@@ -23,4 +23,4 @@ The snapshot is written for every target; only targets with drops get mail. The 
 
 ## Ported from
 
-- [Get Gmail alerts for dropped top 10 keyword rankings with DataForSEO + n8n](https://dataforseo.com/templates/get-gmail-alerts-for-dropped-top-10-keyword-rankings-with-dataforseo-n8n/) — original n8n template
+- [Get Gmail alerts for dropped top 10 keyword rankings with DataForSEO](https://dataforseo.com/templates/get-gmail-alerts-for-dropped-top-10-keyword-rankings-with-dataforseo-n8n/) — DataForSEO template

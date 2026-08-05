@@ -26,4 +26,4 @@ With an empty Keywords sheet every keyword counts as new, so the first Slack mes
 
 ## Ported from
 
-- [Get New Ranked Keywords from Google with DataForSEO + Make](https://dataforseo.com/templates/get-new-ranked-keywords-from-google-with-dataforseo-make/) — original make template
+- [Get New Ranked Keywords from Google with DataForSEO](https://dataforseo.com/templates/get-new-ranked-keywords-from-google-with-dataforseo-make/) — DataForSEO template

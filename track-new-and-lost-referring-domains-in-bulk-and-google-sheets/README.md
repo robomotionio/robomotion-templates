@@ -4,7 +4,7 @@ Reads a column of domains from a Google Sheet and pulls, in one DataForSEO call,
 
 ## How it works
 
-1. **Run** — an Inject trigger; the source scenario was on-demand.
+1. **Run** — an Inject trigger; run it on demand, or give it a repeat interval.
 2. **Get Targets** / **Collect Targets** — the `Target` column becomes one array of up to 1000 entries.
 3. **Get New and Lost Referring Domains** — `Account.RawRequest` posts to `/backlinks/bulk_new_lost_referring_domains/live`.
 4. **Merge Results Into Rows** — writes the four count columns and `Date` onto the matching row.
@@ -24,4 +24,4 @@ Bulk New/Lost Referring Domains has no dedicated node in `Robomotion.DataForSEO`
 
 ## Ported from
 
-- [Track New and Lost Referring Domains in Bulk with DataForSEO and Google Sheets + Make](https://dataforseo.com/templates/track-new-and-lost-referring-domains-in-bulk-with-dataforseo-and-google-sheets-make/) — original make template
+- [Track New and Lost Referring Domains in Bulk with DataForSEO and Google Sheets](https://dataforseo.com/templates/track-new-and-lost-referring-domains-in-bulk-with-dataforseo-and-google-sheets-make/) — DataForSEO template

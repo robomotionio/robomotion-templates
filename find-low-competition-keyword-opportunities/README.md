@@ -4,7 +4,7 @@ For each seed domain in an input sheet, pulls every keyword the domain is releva
 
 ## How it works
 
-1. **Monthly** — an Inject trigger; the n8n original ran on a months interval.
+1. **Monthly** — an Inject trigger repeating monthly.
 2. **Read Seeds** / **Collect Seeds** — one row per domain: `seed`, `location_name`, `language_name`, `limit`. The last three fall back to defaults when blank.
 3. **For Each Seed** → **Get Keywords For Site** — `/dataforseo_labs/google/keywords_for_site/live`.
 4. **Build Difficulty Request** → **Get Keyword Difficulty** — `/dataforseo_labs/google/bulk_keyword_difficulty/live` scores up to 1000 keywords in a single request, which is far cheaper than asking per keyword. A seed that returned nothing takes the second output and skips straight to the next seed.
@@ -24,4 +24,4 @@ Neither endpoint has a dedicated node in `Robomotion.DataForSEO` 1.0.0, so both 
 
 ## Ported from
 
-- [Find low-competition keyword opportunities with DataForSEO](https://dataforseo.com/templates/find-low-competition-keyword-opportunities-with-dataforseo/) — original n8n template
+- [Find low-competition keyword opportunities with DataForSEO](https://dataforseo.com/templates/find-low-competition-keyword-opportunities-with-dataforseo/) — DataForSEO template

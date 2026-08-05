@@ -9,7 +9,7 @@ flow.create('60dcf083-1e30-4e4e-fb23-fb92bc4a106e', 'Salesforce Lead Traffic Sta
   });
 
   f.node('30ea7d', 'Core.Flow.Comment', 'Poll the CRM', {
-    optText: '#### Poll the CRM\nThe ten most recently touched Salesforce records, every 15 minutes - the same cadence as the source scenario. Records with no website are dropped before the loop.'
+    optText: '#### Poll the CRM\nThe ten most recently touched Salesforce records, every 15 minutes. Records with no website are dropped before the loop.'
   });
 
   f.node('84c0f6', 'Core.Trigger.Inject', 'Every 15 Minutes', {

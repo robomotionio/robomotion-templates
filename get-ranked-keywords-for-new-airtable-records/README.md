@@ -4,7 +4,7 @@ Watches an Airtable table for target domains that have not been looked up yet, p
 
 ## How it works
 
-1. **Every 15 Minutes** — an Inject trigger on the source scenario's 900-second interval.
+1. **Every 15 Minutes** — an Inject trigger repeating every 900 seconds.
 2. **List Unprocessed Targets** — `filterByFormula=NOT({Processed})`, ten at a time.
 3. **For Each Target** → **Get Ranked Keywords** → **Build Airtable Batches** — rows chunked into tens, the bulk-create limit.
 4. **For Each Batch** → **Create Keyword Records**.
@@ -21,4 +21,4 @@ The `Processed` checkbox is what turns a poll into a trigger: without it a 15-mi
 
 ## Ported from
 
-- [Get Ranked Keywords for new Airtable records with DataForSEO + Make](https://dataforseo.com/templates/get-ranked-keywords-for-new-airtable-records-with-dataforseo-make/) — original make template
+- [Get Ranked Keywords for new Airtable records with DataForSEO](https://dataforseo.com/templates/get-ranked-keywords-for-new-airtable-records-with-dataforseo-make/) — DataForSEO template

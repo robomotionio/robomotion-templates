@@ -21,4 +21,4 @@ The sentiment counts in the Slack message are the point: three positive mentions
 
 ## Ported from
 
-- [Track Brand Mentions with DataForSEO + Make](https://dataforseo.com/templates/track-brand-mentions-with-dataforseo-make/) — original make template
+- [Track Brand Mentions with DataForSEO](https://dataforseo.com/templates/track-brand-mentions-with-dataforseo-make/) — DataForSEO template
