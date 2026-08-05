@@ -1,0 +1,27 @@
+name: AI Overview Keyword Wins by Email
+slug: get-new-ranked-google-ai-overview-keywords-via-email
+summary: >-
+  Each week, finds the keywords where your domains are newly cited inside
+  Google's AI Overview, saves the full picture to Google Sheets, and emails the
+  new placements.
+category: SEO
+level: Intermediate
+tags: [seo,dataforseo,ai-overview,google-sheets,gmail]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+  - package: Robomotion.Gmail
+    version: "1.1.0"
+has_subflows: false
+flow_id: 681af335-947c-40e8-d2b6-cf537ea94081
+schema_version: 1
+ported_from:
+  - slug: get-new-ranked-google-ai-overview-keywords-via-email-with-dataforseo-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/get-new-ranked-google-ai-overview-keywords-via-email-with-dataforseo-n8n/

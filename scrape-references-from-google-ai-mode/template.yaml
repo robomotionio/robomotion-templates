@@ -1,0 +1,25 @@
+name: Scrape AI Mode References
+slug: scrape-references-from-google-ai-mode
+summary: >-
+  Watches, in near real time, which sites Google's AI Mode pulls from when it
+  answers questions about your brand. Polls the AI Mode SERP every 15 minutes
+  and appends every cited source to a Google Sheet.
+category: SEO
+level: Beginner
+tags: [seo,dataforseo,ai-mode,google-sheets,brand-monitoring]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+has_subflows: false
+flow_id: c60a17b4-9d28-4f35-b1e6-73f0c5a2d891
+schema_version: 1
+ported_from:
+  - slug: scrape-references-from-google-ai-mode-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/scrape-references-from-google-ai-mode-with-dataforseo-make/

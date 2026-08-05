@@ -1,0 +1,25 @@
+name: SERP Position for Airtable Records
+slug: get-google-serp-position-for-new-airtable-records
+summary: >-
+  Watches an Airtable table for keyword/domain pairs that have not been checked
+  yet, looks up where the domain ranks for that keyword on Google, and writes
+  the position back onto the record.
+category: SEO
+level: Beginner
+tags: [seo,dataforseo,serp,rank-tracking,airtable]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.Airtable
+    version: "0.7.0"
+has_subflows: false
+flow_id: 1d3f5b9c-4027-4b94-ae16-7c8259df310a
+schema_version: 1
+ported_from:
+  - slug: get-google-serp-position-for-new-airtable-records-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/get-google-serp-position-for-new-airtable-records-with-dataforseo-make/

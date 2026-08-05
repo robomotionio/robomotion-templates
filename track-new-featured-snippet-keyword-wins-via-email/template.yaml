@@ -1,0 +1,27 @@
+name: Featured Snippet Wins by Email
+slug: track-new-featured-snippet-keyword-wins-via-email
+summary: >-
+  Each week, finds the keywords where your domains now hold Google's featured
+  snippet and emails the new ones with position, search volume and the ranking
+  URL.
+category: SEO
+level: Intermediate
+tags: [seo,dataforseo,featured-snippet,google-sheets,gmail]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+  - package: Robomotion.Gmail
+    version: "1.1.0"
+has_subflows: false
+flow_id: 46f8d113-725a-4ec6-b094-ad315ce72869
+schema_version: 1
+ported_from:
+  - slug: track-new-featured-snippet-keyword-wins-via-email-with-dataforseo-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/track-new-featured-snippet-keyword-wins-via-email-with-dataforseo-n8n/

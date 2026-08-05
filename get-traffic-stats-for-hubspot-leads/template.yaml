@@ -1,0 +1,25 @@
+name: Hubspot Lead Traffic Stats
+slug: get-traffic-stats-for-hubspot-leads
+summary: >-
+  Every 15 minutes, takes the leads HubSpot has touched most recently, turns
+  each website into a bare domain, estimates how much organic search traffic
+  that domain gets, and writes the numbers back onto the HubSpot record.
+category: SEO
+level: Intermediate
+tags: [seo,dataforseo,crm,lead-enrichment,hubspot]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.HubSpot
+    version: "1.1.0"
+has_subflows: false
+flow_id: 3da9cd50-eb0d-4b1b-c890-ce6fea917d3b
+schema_version: 1
+ported_from:
+  - slug: get-traffic-stats-for-hubspot-leads-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/get-traffic-stats-for-hubspot-leads-with-dataforseo-make/

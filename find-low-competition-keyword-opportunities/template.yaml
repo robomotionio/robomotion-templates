@@ -1,0 +1,26 @@
+name: Low-Competition Keyword Finder
+slug: find-low-competition-keyword-opportunities
+summary: >-
+  For each seed domain in an input sheet, pulls every keyword the domain is
+  relevant for, scores all of them for ranking difficulty in one bulk call, and
+  writes the combined picture - volume, trend, difficulty, intent and average
+  backlinks - to an opportunities sheet.
+category: SEO
+level: Intermediate
+tags: [seo,dataforseo,keyword-research,google-sheets,keyword-difficulty]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+has_subflows: false
+flow_id: f1a4dc2e-2d05-4972-eb5f-5842ca180da6
+schema_version: 1
+ported_from:
+  - slug: find-low-competition-keyword-opportunities-with-dataforseo
+    platform: n8n
+    url: https://dataforseo.com/templates/find-low-competition-keyword-opportunities-with-dataforseo/

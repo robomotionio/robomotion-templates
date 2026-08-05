@@ -1,0 +1,22 @@
+name: Ranked Keyword Gap Analysis to Notion
+slug: run-a-ranked-keyword-gap-analysis-and-notion
+summary: >-
+  Runs a ranked keyword gap analysis between your domain and a competitor's, and
+  logs every keyword they rank for and you do not into a Notion database.
+category: SEO
+level: Intermediate
+tags: [seo,dataforseo,keyword-gap,notion,competitor-analysis]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+has_subflows: false
+flow_id: ce71a99b-fad2-464e-b82c-25193de5a473
+schema_version: 1
+ported_from:
+  - slug: run-a-ranked-keyword-gap-analysis-using-dataforseo-and-notion-make
+    platform: make
+    url: https://dataforseo.com/templates/run-a-ranked-keyword-gap-analysis-using-dataforseo-and-notion-make/

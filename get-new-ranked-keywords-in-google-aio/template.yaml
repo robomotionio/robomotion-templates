@@ -1,0 +1,26 @@
+name: New AI Overview Keywords by Email
+slug: get-new-ranked-keywords-in-google-aio
+summary: >-
+  Each week, finds the keywords where your domains are now cited inside Google's
+  AI Overview and emails the new ones.
+category: SEO
+level: Intermediate
+tags: [seo,dataforseo,ai-overview,google-sheets,gmail]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+  - package: Robomotion.Gmail
+    version: "1.1.0"
+has_subflows: false
+flow_id: 5709e224-836b-4fd7-c1a5-be426df83970
+schema_version: 1
+ported_from:
+  - slug: get-new-ranked-keywords-in-google-aio-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/get-new-ranked-keywords-in-google-aio-with-dataforseo-make/

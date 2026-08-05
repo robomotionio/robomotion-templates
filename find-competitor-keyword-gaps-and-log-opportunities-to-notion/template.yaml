@@ -1,0 +1,24 @@
+name: Competitor Keyword Gaps to Notion
+slug: find-competitor-keyword-gaps-and-log-opportunities-to-notion
+summary: >-
+  Pulls every keyword your site ranks for, pulls every keyword a competitor
+  ranks for, and writes the difference - the keywords they own and you do not -
+  into a Notion database with search volume, their position, their URL and the
+  keyword competition score.
+category: SEO
+level: Intermediate
+tags: [seo,dataforseo,keyword-gap,notion,competitor-analysis]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+has_subflows: false
+flow_id: bd60f88a-e9c1-453d-a71b-14082cd49362
+schema_version: 1
+ported_from:
+  - slug: find-competitor-keyword-gaps-and-log-opportunities-to-notion-with-dataforseo-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/find-competitor-keyword-gaps-and-log-opportunities-to-notion-with-dataforseo-n8n/

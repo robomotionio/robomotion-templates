@@ -1,0 +1,29 @@
+name: New High-Volume Ranked Keywords
+slug: get-new-high-volume-ranked-keywords-on-google
+summary: >-
+  Each week, finds the keywords above your search-volume bar that your domains
+  have started ranking for, opens one Asana task holding the list, and posts a
+  summary to Slack.
+category: SEO
+level: Intermediate
+tags: [seo,dataforseo,ranked-keywords,asana,slack,google-sheets]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+  - package: Robomotion.Slack
+    version: "0.7.0"
+  - package: Robomotion.Asana
+    version: "1.1.0"
+has_subflows: false
+flow_id: 792bc446-a58d-41f9-e3c7-d0648fa05192
+schema_version: 1
+ported_from:
+  - slug: get-new-high-volume-ranked-keywords-on-google-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/get-new-high-volume-ranked-keywords-on-google-with-dataforseo-make/

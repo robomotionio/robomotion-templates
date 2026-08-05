@@ -1,0 +1,27 @@
+name: Toxic Backlink Disavow File
+slug: detect-toxic-backlinks-and-build-a-disavow-file-google-drive-and-gmail
+summary: >-
+  Pages through every backlink pointing at your domain with a spam score above
+  the threshold, writes the source URLs into a Google-compliant disavow.txt,
+  uploads it to Google Drive and emails you the link.
+category: SEO
+level: Advanced
+tags: [seo,dataforseo,backlinks,disavow,google-drive,gmail]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleDrive
+    version: "1.2.0"
+  - package: Robomotion.Gmail
+    version: "1.1.0"
+has_subflows: false
+flow_id: 4c8e15b7-3d92-4a06-8f57-e1b204d9c73a
+schema_version: 1
+ported_from:
+  - slug: detect-toxic-backlinks-and-build-a-disavow-file-with-dataforseo-google-drive-and-gmail-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/detect-toxic-backlinks-and-build-a-disavow-file-with-dataforseo-google-drive-and-gmail-n8n/

@@ -1,0 +1,25 @@
+name: Bulk Live Backlink Counts
+slug: pull-bulk-live-backlink-counts-into-google-sheets
+summary: >-
+  Reads a column of domains from a Google Sheet and pulls the live backlink
+  count for all of them in one DataForSEO call, stamping each count with the
+  date it was measured.
+category: SEO
+level: Beginner
+tags: [seo,dataforseo,backlinks,google-sheets,bulk]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+has_subflows: false
+flow_id: 7f0c93e5-4b81-4d26-9a37-e5b8140c7d29
+schema_version: 1
+ported_from:
+  - slug: pull-bulk-live-backlink-counts-into-google-sheets-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/pull-bulk-live-backlink-counts-into-google-sheets-with-dataforseo-make/

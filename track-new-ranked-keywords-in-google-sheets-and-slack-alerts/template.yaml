@@ -1,0 +1,27 @@
+name: Track New Ranked Keywords with Slack Alerts
+slug: track-new-ranked-keywords-in-google-sheets-and-slack-alerts
+summary: >-
+  Once a week, fetches every keyword your domains rank for on Google, saves the
+  current picture to Google Sheets, and sends a Slack summary of what is newly
+  ranking.
+category: SEO
+level: Intermediate
+tags: [seo,dataforseo,ranked-keywords,google-sheets,slack]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.GoogleSheets
+    version: "1.7.0"
+  - package: Robomotion.Slack
+    version: "0.7.0"
+has_subflows: false
+flow_id: 24d6b9f1-5038-4ca4-9e72-8b1f3ac50647
+schema_version: 1
+ported_from:
+  - slug: track-new-ranked-keywords-in-google-sheets-with-dataforseo-and-slack-alerts-n8n
+    platform: n8n
+    url: https://dataforseo.com/templates/track-new-ranked-keywords-in-google-sheets-with-dataforseo-and-slack-alerts-n8n/

@@ -1,0 +1,25 @@
+name: Zoho CRM Lead Traffic Stats
+slug: get-traffic-stats-for-zoho-crm-leads
+summary: >-
+  Every 15 minutes, takes the leads Zoho CRM has touched most recently, turns
+  each website into a bare domain, estimates how much organic search traffic
+  that domain gets, and writes the numbers back onto the Zoho CRM record.
+category: SEO
+level: Intermediate
+tags: [seo,dataforseo,crm,lead-enrichment,zoho-crm]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.ZohoCRM
+    version: "1.0.2"
+has_subflows: false
+flow_id: 71ed0184-2f41-4f5f-ac34-0ca3cd5b217f
+schema_version: 1
+ported_from:
+  - slug: get-traffic-stats-for-zoho-crm-leads-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/get-traffic-stats-for-zoho-crm-leads-with-dataforseo-make/

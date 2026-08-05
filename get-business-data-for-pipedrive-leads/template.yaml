@@ -1,0 +1,26 @@
+name: Pipedrive Lead Business Data
+slug: get-business-data-for-pipedrive-leads
+summary: >-
+  Every 15 minutes, takes the leads Pipedrive has touched most recently, turns
+  each website into a bare domain, looks the company up in the Google Business
+  listings database, and writes the name, description, categories, address,
+  rating and price level back onto the Pipedrive record.
+category: SEO
+level: Intermediate
+tags: [seo,dataforseo,crm,lead-enrichment,pipedrive]
+author: Robomotion
+created: "2026-08-05"
+updated: "2026-08-05"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.DataForSEO
+    version: "1.0.0"
+  - package: Robomotion.Pipedrive
+    version: "0.1.10"
+has_subflows: false
+flow_id: ee54780b-96b8-4cac-d345-7f1a9b4c2e86
+schema_version: 1
+ported_from:
+  - slug: get-business-data-for-pipedrive-leads-with-dataforseo-make
+    platform: make
+    url: https://dataforseo.com/templates/get-business-data-for-pipedrive-leads-with-dataforseo-make/
