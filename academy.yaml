@@ -1,0 +1,137 @@
+# Robomotion Academy - the video series rendered on the Flow Designer Home page.
+#
+# GENERATED FILE. Regenerate with:  python3 tools/build-academy-yaml.py
+# Edit CURATION in that script (not this file) to change a level or topic;
+# every other field is read from the playlist and will be overwritten.
+schema_version: 1
+playlist_id: PLie2idTJ_1wvlEgLuDUDt_bbAs-29xtmL
+playlist_url: https://www.youtube.com/playlist?list=PLie2idTJ_1wvlEgLuDUDt_bbAs-29xtmL
+title: Robomotion Academy
+description: >-
+  Short lessons that take you from your first flow to production automations, one node
+  and one idea at a time.
+videos:
+  - id: F-Gi97ODx2s
+    episode: 1
+    title: "Running Your First Flow in Robomotion"
+    summary: >-
+      A flow does not run in your browser. It runs on a robot, and in this video we
+      connect one three different ways.
+    duration: "6:35"
+    duration_seconds: 395
+    published: "2026-08-21"
+    level: Beginner
+    topic: "Getting Started"
+
+  - id: aNLQIXtkyqU
+    episode: 2
+    title: "Understanding the Inject and Debug Nodes"
+    summary: >-
+      Two nodes turn up in every flow you will ever build. Inject starts it, and Debug
+      lets you see inside it.
+    duration: "5:35"
+    duration_seconds: 335
+    published: "2026-08-21"
+    level: Beginner
+    topic: "Core Nodes"
+
+  - id: emCSlgmyEL4
+    episode: 3
+    title: "Using JavaScript With the Function Node"
+    summary: >-
+      The Function node is where JavaScript goes in a Robomotion flow, and it is what
+      makes a flow able to do something you did not spell out in advance.
+    duration: "6:52"
+    duration_seconds: 412
+    published: "2026-08-21"
+    level: Beginner
+    topic: "Scripting"
+
+  - id: YaJEw729Vkk
+    episode: 4
+    title: "If/Else/Switch"
+    summary: >-
+      Sooner or later a flow has to decide something. There are two ways to make it
+      decide in Robomotion, and we build the same decision both ways.
+    duration: "7:54"
+    duration_seconds: 474
+    published: "2026-08-21"
+    level: Beginner
+    topic: "Branching"
+
+  - id: QhzterofTC4
+    episode: 5
+    title: "Looping over Items with the For Each Node"
+    summary: >-
+      Almost every automation ends up repeating itself: every row in a spreadsheet,
+      every link in a search result, every item a node hands back as an array. The For
+      Each node is how a flow walks a list one item at a time.
+    duration: "3:20"
+    duration_seconds: 200
+    published: "2026-08-21"
+    level: Beginner
+    topic: "Iteration"
+
+  - id: vaj_pqvyfJA
+    episode: 6
+    title: "Securing Credentials with Vaults"
+    summary: >-
+      A password does not belong in a flow. Anyone who can open the flow can read it,
+      and every copy of that flow carries it along. Vaults are where credentials go
+      instead.
+    duration: "8:53"
+    duration_seconds: 533
+    published: "2026-08-21"
+    level: Intermediate
+    topic: "Security"
+
+  - id: J_BaSeHnmhU
+    episode: 7
+    title: "Exception Handling with the Catch Node"
+    summary: >-
+      Real data has holes in it. Somebody leaves a cell empty, a page will not load, an
+      API is down. This video is about what a flow does when that happens, and about the
+      two ways to decide it yourself instead of letting a run stop where it broke.
+    duration: "9:55"
+    duration_seconds: 595
+    published: "2026-08-21"
+    level: Intermediate
+    topic: "Error Handling"
+
+  - id: CFNHmF-DbPw
+    episode: 8
+    title: "Scraping Websites with the Web Recorder"
+    summary: >-
+      Do the job once by hand, and get a flow that does it every day. That is the
+      Robomotion Web Recorder, and in this video we point it at a page of deals and come
+      back with a spreadsheet.
+    duration: "7:22"
+    duration_seconds: 442
+    published: "2026-08-21"
+    level: Intermediate
+    topic: "Web Scraping"
+
+  - id: bxAkfUO8P-Y
+    episode: 9
+    title: "Proxy Setup for Scraping Automations"
+    summary: >-
+      Send a few hundred requests to the same site from the same address and that
+      address gets blocked. A proxy is how you stop being one address, and this video
+      sets one up three different ways.
+    duration: "7:44"
+    duration_seconds: 464
+    published: "2026-08-21"
+    level: Advanced
+    topic: "Web Scraping"
+
+  - id: qtKmRoyMKZo
+    episode: 10
+    title: "Function vs Run Script"
+    summary: >-
+      Both of these nodes let you write JavaScript. They run it in two completely
+      different places, and knowing which is which saves a lot of confusion.
+    duration: "13:03"
+    duration_seconds: 783
+    published: "2026-08-21"
+    level: Intermediate
+    topic: "Scripting"
