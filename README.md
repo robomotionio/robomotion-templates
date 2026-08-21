@@ -4,6 +4,18 @@ Ready-to-use flow templates for the [Robomotion](https://robomotion.io) RPA plat
 
 Every template declares a `level` (Beginner / Intermediate / Advanced) so you can pick an entry point that matches your experience. See [docs/level-field.md](docs/level-field.md).
 
+## Robomotion Academy
+
+[`academy.yaml`](academy.yaml) mirrors the [Robomotion Academy YouTube playlist](https://www.youtube.com/playlist?list=PLie2idTJ_1wvlEgLuDUDt_bbAs-29xtmL). The Flow Designer's Home page renders its Academy section from this file, because a browser cannot read the playlist directly: neither the playlist page nor its RSS feed sends CORS headers.
+
+After adding a video to the playlist, regenerate the file and commit it:
+
+```bash
+python3 tools/build-academy-yaml.py
+```
+
+The script reads titles, order, runtimes and publish dates from the playlist itself. Per-video `level` and `topic` are hand-curated in the `CURATION` map inside the script (not in the YAML, so regenerating cannot drop them); a new video with no entry there still lands in the file and the script prints a warning naming it.
+
 ## Templates
 
 ### Monitoring
