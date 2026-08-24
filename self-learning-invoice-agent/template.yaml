@@ -1,0 +1,22 @@
+name: Self-Learning Invoice Agent
+slug: self-learning-invoice-agent
+summary: >-
+  An invoice-processing DeepSeek Agent that teaches itself vendors. The first
+  invoice from a supplier is worked out from scratch and the procedure is
+  written down as a learned skill in the agent's memory; every invoice after
+  runs on what it learned. Extracted fields are recorded to a CSV ledger
+  through a Tool In / Tool Out pair, and memory syncs to the workspace so a
+  whole fleet can run what one robot learned.
+category: AI
+level: Advanced
+tags: [ai, agent, deepseek, invoice, self-learning, memory, rpa]
+author: Robomotion
+created: "2026-08-24"
+updated: "2026-08-24"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.DeepSeekAgent
+    version: "0.7.5"
+has_subflows: false
+flow_id: 8f7cf54a-6ed6-4f53-abc8-d1f6e0b50a4c
+schema_version: 1
