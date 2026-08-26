@@ -1,6 +1,6 @@
 # RAG with DeepSeek
 
-RAG with DeepSeek answers questions about your own documents — the ones no model was trained on. Documents in `~/Knowledge/docs` are read, split into chunks, embedded and written to a **LanceDB** table on disk. A DeepSeek Agent then answers questions against them through a `search_knowledge` tool built from ordinary flow nodes.
+RAG with DeepSeek answers questions about your own documents — the ones no model was trained on. The flow is a service rather than a script: it listens on an HTTP endpoint, so you talk to it from a terminal, a chat window or another automation. Documents in `~/Knowledge/docs` are read, split into chunks, embedded and written to a **LanceDB** table on disk. A DeepSeek Agent then answers questions against them through a `search_knowledge` tool built from ordinary flow nodes.
 
 The part worth studying is what the agent is given. Most RAG pipelines search once with the user's question, paste the results into the prompt, and ask the model to summarise. This flow hands the agent the **search tool itself** and lets it decide what to look for. A question that spans several documents becomes several searches, each one phrased by the agent, and every fact in the answer carries the document it came from.
 
@@ -35,8 +35,15 @@ The tool's description is the whole of what the agent knows about it. It says to
 1. **Put your documents in place:** `mkdir -p ~/Knowledge/docs` and copy your files in. PDF, DOCX, PPTX, Markdown, HTML and plain text are all read. To try it with the bundled corpus, copy `assets/docs/*.md` there.
 2. **Configure the API key:** put an OpenRouter API key into a Vault item (type: API Key) and select it in the **Policy Agent** node's **API Key** property. The node's default Base URL and model already match OpenRouter.
 3. **Embeddings need no key.** *Embed Chunks* and *Embed Query* are set to **Use Robomotion AI Credits**. If you would rather pay OpenAI directly, clear that option and select your own OpenAI key on both nodes.
-4. **Edit the question** in the **Ask A Question** node.
-5. **Run the flow** on a robot and watch the turn in the Dev Console's **Agents** tab — one question, several searches, one answer.
+4. **Run the flow** on a robot. It does not do anything yet: it listens on `http://127.0.0.1:3000/ask` and waits for a question.
+5. **Ask it something** with the client that ships in `assets/ask.py`:
+
+   ```bash
+   python3 assets/ask.py
+   you > how much can I claim for a client dinner?
+   ```
+
+   Standard library only, so there is nothing to install. The first question builds the knowledge base and takes a minute; every question after it comes back in seconds. Watch the turn in the Dev Console's **Agents** tab while you wait.
 
 Re-running never re-reads the documents. Delete `~/Knowledge/lancedb` to rebuild the knowledge base from scratch, or add documents and delete the directory to pick them up.
 

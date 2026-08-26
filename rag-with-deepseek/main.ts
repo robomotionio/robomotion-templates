@@ -27,7 +27,15 @@ flow.create('7d3e1a94-2c6b-4f08-9a51-8be4d7c02f13', 'RAG with DeepSeek', (f) => 
   f.node('c10002', 'Core.Flow.Comment', 'Setup Guide', { optText: '#### 🚀 Setup Guide\n\n1. `mkdir -p ~/Knowledge/docs` and copy your PDFs, Word files, Markdown or text files into it.\n2. Put an OpenRouter API key into a Vault item (type: API Key), then select it in the **Policy Agent** node API Key property. The default Base URL and model already match OpenRouter.\n3. Embeddings need no key of their own — **Embed Chunks** and **Embed Query** are set to *Use Robomotion AI Credits*. Switch them to your own OpenAI key if you would rather pay OpenAI directly.\n4. Edit the question in **Ask a Question** and run the flow on a robot.\n5. Watch the agent work in the Dev Console **Agents** tab: one question, several searches, one answer.\n\nRe-running never re-reads the documents. Delete `~/Knowledge/lancedb` to rebuild from scratch.' });
 
   // ---- setup -----------------------------------------------------------
-  f.node('a10001', 'Core.Trigger.Inject', 'Start', {})
+  // The flow is a service, not a script. A question arrives as a POST and the answer
+  // goes back on the same request, which is what makes it something you can talk to from
+  // a terminal, a chat window or another automation.
+  f.node('a10001', 'Core.Net.HttpIn', 'Ask Endpoint', {
+    optMethod: 'POST',
+    optEndpointV2: Custom('/ask'),
+    optIPv2: Custom('127.0.0.1'),
+    optPortv2: Custom('3000'),
+  })
     .then('a10002', 'Core.Programming.Function', 'Prepare Paths', {
       func:
         "var home = global.get('$Home$');\n" +
@@ -252,17 +260,26 @@ flow.create('7d3e1a94-2c6b-4f08-9a51-8be4d7c02f13', 'RAG with DeepSeek', (f) => 
 
   // ---- ask -------------------------------------------------------------
   f.node('d30001', 'Core.Flow.Label', 'Ask', {})
-    .then('d30002', 'Core.Programming.Function', 'Ask A Question', {
+    .then('d30002', 'Core.Programming.Function', 'Read Question', {
       func:
-        '// Change this to ask something else. It deliberately spans several documents:\n' +
-        '// one search cannot answer it, so the agent has to run several.\n' +
-        "msg.query = 'I am flying to Berlin for four nights next month to meet a client, '\n" +
-        "  + 'and I will take them to dinner. What are my spending limits, what do I have '\n" +
-        "  + 'to do before I travel, and how long do I have to claim it all back? '\n" +
+        'var b = msg.body;\n' +
+        "if (typeof b === 'string') {\n" +
+        '  try { b = JSON.parse(b); } catch (e) { b = { question: b }; }\n' +
+        '}\n' +
+        'b = b || {};\n' +
+        "var q = b.question || b.q || '';\n" +
+        'if (!q) {\n' +
+        "  msg.answer = 'Ask me something: POST {\"question\": \"...\"} to this endpoint.';\n" +
+        '  return [null, msg];\n' +
+        '}\n' +
+        '// The instructions travel with the question so the endpoint is a plain\n' +
+        '// question in, answer out - the caller sends prose, not prompt engineering.\n' +
+        "msg.query = q + '\\n\\n'\n" +
         "  + 'Search the knowledge base for each part of this separately. '\n" +
         "  + 'Name the document behind every figure you give me, and if the documents do '\n" +
         "  + 'not cover something, say so instead of filling the gap.';\n" +
-        'return msg;',
+        'return [msg, null];',
+      outputs: 2,
     });
 
   // The API Key property is set from a Vault item after import — see the Setup Guide.
@@ -270,12 +287,31 @@ flow.create('7d3e1a94-2c6b-4f08-9a51-8be4d7c02f13', 'RAG with DeepSeek', (f) => 
   f.edge('d30002', 0, 'd30003', 0);
 
   // Agent output port 2 is the response.
-  f.node('d30004', 'Core.Programming.Debug', 'Show Answer', {
-    optDebugData: Message('response'),
+  // Agent output port 2 is the response. It becomes the HTTP body.
+  f.node('d30004', 'Core.Programming.Function', 'Build Response', {
+    func:
+      'msg.body = {\n' +
+      "  answer: msg.response || '',\n" +
+      '  chunks: msg.row_count || null\n' +
+      '};\n' +
+      'return msg;',
   });
-  f.node('d30005', 'Core.Flow.Stop', 'Stop', {});
   f.edge('d30003', 2, 'd30004', 0);
-  f.edge('d30003', 2, 'd30005', 0);
+
+  f.node('d30005', 'Core.Net.HttpOut', 'Answer', {
+    inBody: Message('body'),
+    inStatus: Custom('200'),
+  });
+  f.edge('d30004', 0, 'd30005', 0);
+
+  // An empty question still gets a civil reply rather than a hung request.
+  f.node('d30006', 'Core.Programming.Function', 'Build Hint', {
+    func:
+      'msg.body = { answer: msg.answer };\n' +
+      'return msg;',
+  });
+  f.edge('d30002', 1, 'd30006', 0);
+  f.edge('d30006', 0, 'd30005', 0);
 
   // ---- the tool: search_knowledge --------------------------------------
   // The description is the whole interface. The agent never sees these nodes — only this
