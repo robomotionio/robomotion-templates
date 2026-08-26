@@ -157,6 +157,7 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | [Logistics Exception Center](logistics-exception-center) | Advanced | Builds one worklist of every active delivery exception from the carrier, then dedupes it against the systems that may already be handling it - the mailbox that was notified, and the help desk where a ticket may already exist. |
 | [Monday Morning Briefing](monday-morning-briefing) | Intermediate | One robot, every system, the whole week's work on a single page. |
 | [Open a Web Page](open-a-web-page) | Beginner | Launches a browser and navigates to a provided URL — the minimum viable browser-automation template. |
+| [Payment Run with Hold Report](payment-run-hold-report) | Intermediate | Runs the weekly vendor payment run in a SAP-style ERP and then accounts for every bill it refused to pay. |
 | [Payroll Validation Gate](payroll-validation-gate) | Intermediate | Checks a month's payroll before it is posted. |
 | [Quote-to-Cash Gap Audit](quote-to-cash-gap-audit) | Beginner | Finds revenue the business won but never billed: deals marked Won in the CRM that were never turned into an invoice. |
 | [Refund Request Triage](refund-request-triage) | Advanced | Verifies customer refund requests against the bank before approving them. |
