@@ -19,7 +19,7 @@ import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomo
 flow.create('7d3e1a94-2c6b-4f08-9a51-8be4d7c02f13', 'RAG with DeepSeek', (f) => {
   f.addDependency('Robomotion.LanceDB', '0.1.0');
   f.addDependency('Robomotion.DeepSeekAgent', '0.7.5');
-  f.addDependency('Robomotion.DocumentProcessor', '1.0.13');
+  f.addDependency('Robomotion.DocumentProcessor', '1.0.16');
   f.addDependency('Robomotion.OpenAI', '3.3.2');
 
   f.node('c10001', 'Core.Flow.Comment', 'Comment', { optText: '#### RAG with DeepSeek\nPut your documents in `~/Knowledge/docs` and run. The first run turns them into a searchable knowledge base in **LanceDB** — an embedded vector database that is just a directory on disk, with no server to run. Every run after that answers straight away.\n\nThe agent is given a **search tool**, not a pile of retrieved text. It writes its own queries, searches as many times as the question needs, and names the document behind every fact.' });

@@ -6,7 +6,7 @@ The part worth studying is what the agent is given. Most RAG pipelines search on
 
 That difference is measurable. Against the sample corpus in `assets/docs`, a single search on the raw question returns three of the six facts the answer needs — including the €180 hotel cap, but *not* that Berlin is a tier-1 city, so it cannot tell you which cap applies. Letting the agent write its own queries returns all six.
 
-Run on a robot, the agent issued **seven searches on one run and nine on the next** for the same question — the count is not fixed, and that is the point. Its answer named the document behind every figure, said explicitly which parts the documents *do not* cover, and caught something nobody asked it for: that claiming the client dinner under EXP-114 forfeits that day's per diem — a rule that only exists by reading the travel policy and the expense policy together.
+Run on a robot, the agent issued **five, seven and nine searches across three runs** of the same question — the count is not fixed, and that is the point. Its answer named the document behind every figure, said explicitly which parts the documents *do not* cover, and caught something nobody asked it for: that claiming the client dinner under EXP-114 forfeits that day's per diem — a rule that only exists by reading the travel policy and the expense policy together.
 
 ## What RAG with DeepSeek can do
 
@@ -24,7 +24,7 @@ The flow lists the tables in the LanceDB database first. If `policies` is alread
 
 The ingest loop reads each document with **Read Document**, splits it with **Chunk Text** at 500 characters with 100 of overlap, and collects the chunks with the filename kept against each one. When every document has been read, all the chunks are embedded in a **single batch call** and written to LanceDB as one table by **Create Table**, with the embedding stored in a `vector` column.
 
-Then two indexes, and the difference between them matters. The **full-text index** on `text` is not optional: keyword and hybrid search return nothing at all without it. The **vector index** is optional, and the flow checks before building it — LanceDB's IVF_PQ index trains a codebook from the data and needs at least 256 rows to do it. Below that the flow skips it deliberately, and LanceDB scans the column instead, which at that size is the faster answer anyway. The sample corpus lands at roughly 67 chunks, so the index is skipped and the flow says so rather than failing.
+Then two indexes, and the difference between them matters. The **full-text index** on `text` is not optional: keyword and hybrid search return nothing at all without it. The **vector index** is optional, and the flow checks before building it — LanceDB's IVF_PQ index trains a codebook from the data and needs at least 256 rows to do it. Below that the flow skips it deliberately, and LanceDB scans the column instead, which at that size is the faster answer anyway. The sample corpus lands at 82 chunks as PDFs (67 as Markdown), so the index is skipped and the flow says so rather than failing.
 
 The question goes to the agent, and the agent's `search_knowledge` tool is plain flow: **Tool In** receives the query the agent wrote, **Generate Embedding** turns it into a vector, **Search** runs a hybrid vector-plus-keyword query against LanceDB, a Function node shapes the passages with their source filenames, and **Tool Out** hands them back. The agent calls it as many times as it wants before answering. Its reply leaves on the response port.
 
@@ -58,7 +58,7 @@ Re-running never re-reads the documents. Delete `~/Knowledge/lancedb` to rebuild
 
 - `Robomotion.LanceDB` 0.1.0 — the embedded vector database
 - `Robomotion.DeepSeekAgent` 0.7.5 — the agent, its tool ports and memory
-- `Robomotion.DocumentProcessor` — document reading and chunking. The flow pins **1.0.13**, which is the latest published version, but **1.0.13 cannot read any file on Linux or macOS**: every call fails with `could not find any valid magic files!` before a parser runs. The fix is [packages-main#1930](https://github.com/robomotionio/packages-main/pull/1930) — once 1.0.14 is published, bump the pin in `main.ts` and `template.yaml`.
+- `Robomotion.DocumentProcessor` 1.0.14 — document reading and chunking. **1.0.13 could not read any file on Linux or macOS**; if you are pinned to it, upgrade.
 - `Robomotion.OpenAI` 3.3.2 — embeddings
 - An OpenRouter API key in a Vault item, for the agent
 - Robomotion AI Credits for embeddings, or your own OpenAI key
