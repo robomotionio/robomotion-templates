@@ -2665,6 +2665,25 @@ templates:
     screenshot: screenshot.png
     has_subflows: true
 
+  - name: Shipment Status Report
+    slug: shipment-status-report
+    summary: >-
+      Signs in to a carrier portal and sweeps every page of the shipments list into
+      one report, then narrows that sweep to the shipments that need a person.
+      Reads the login from the Robomotion Vault, walks the pager with a Label and a
+      GoTo until the Next control is disabled, and writes two CSVs: the full book,
+      and an exceptions file covering customs holds, failed deliveries and delays,
+      oldest booking first, with the billed value stuck in each one. Closes with a
+      Log line carrying the counts and the total.
+    category: Web Automation
+    level: Intermediate
+    tags: [web-automation, web-scraping, pagination, logistics, exceptions, vault, csv]
+    author: Robomotion
+    created: "2026-08-26"
+    updated: "2026-08-26"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Similarweb Top Websites
     slug: extract-top-ranking-websites-similarweb
     summary: >-
