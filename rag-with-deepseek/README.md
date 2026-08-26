@@ -4,7 +4,9 @@ RAG with DeepSeek answers questions about your own documents — the ones no mod
 
 The part worth studying is what the agent is given. Most RAG pipelines search once with the user's question, paste the results into the prompt, and ask the model to summarise. This flow hands the agent the **search tool itself** and lets it decide what to look for. A question that spans several documents becomes several searches, each one phrased by the agent, and every fact in the answer carries the document it came from.
 
-That difference is measurable. Against the sample corpus in `assets/docs`, a single search on the raw question returns three of the six facts the answer needs — including the €180 hotel cap, but *not* that Berlin is a tier-1 city, so it cannot tell you which cap applies. The agent's own six searches return all six.
+That difference is measurable. Against the sample corpus in `assets/docs`, a single search on the raw question returns three of the six facts the answer needs — including the €180 hotel cap, but *not* that Berlin is a tier-1 city, so it cannot tell you which cap applies. Letting the agent write its own queries returns all six.
+
+Run on a robot, the agent issued **seven searches on one run and nine on the next** for the same question — the count is not fixed, and that is the point. Its answer named the document behind every figure, said explicitly which parts the documents *do not* cover, and caught something nobody asked it for: that claiming the client dinner under EXP-114 forfeits that day's per diem — a rule that only exists by reading the travel policy and the expense policy together.
 
 ## What RAG with DeepSeek can do
 
@@ -56,7 +58,7 @@ Re-running never re-reads the documents. Delete `~/Knowledge/lancedb` to rebuild
 
 - `Robomotion.LanceDB` 0.1.0 — the embedded vector database
 - `Robomotion.DeepSeekAgent` 0.7.5 — the agent, its tool ports and memory
-- `Robomotion.DocumentProcessor` 1.0.13 — document reading and chunking
+- `Robomotion.DocumentProcessor` — document reading and chunking. The flow pins **1.0.13**, which is the latest published version, but **1.0.13 cannot read any file on Linux or macOS**: every call fails with `could not find any valid magic files!` before a parser runs. The fix is [packages-main#1930](https://github.com/robomotionio/packages-main/pull/1930) — once 1.0.14 is published, bump the pin in `main.ts` and `template.yaml`.
 - `Robomotion.OpenAI` 3.3.2 — embeddings
 - An OpenRouter API key in a Vault item, for the agent
 - Robomotion AI Credits for embeddings, or your own OpenAI key

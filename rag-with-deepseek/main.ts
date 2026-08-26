@@ -102,9 +102,13 @@ flow.create('7d3e1a94-2c6b-4f08-9a51-8be4d7c02f13', 'RAG with DeepSeek', (f) => 
         'msg.source = parts[parts.length - 1];\n' +
         'return msg;',
     })
+    // Deliberately NOT continueOnError. An earlier version of this template swallowed
+    // parse failures here; when Read Document then failed on every single document, the
+    // run still reported success — having indexed nothing at all. A knowledge base that
+    // is quietly empty is worse than a run that stops, because every answer built on it
+    // afterwards is confidently wrong.
     .then('b20006', 'Robomotion.DocumentProcessor.ReadDocument', 'Read Document', {
       inFilePath: Message('filePath'),
-      continueOnError: true,
     })
     .then('b20007', 'Robomotion.DocumentProcessor.ChunkText', 'Chunk Text', {
       inText: Message('text'),
@@ -113,7 +117,6 @@ flow.create('7d3e1a94-2c6b-4f08-9a51-8be4d7c02f13', 'RAG with DeepSeek', (f) => 
       // search either finds the clause or visibly does not.
       optMaxCharacters: Custom('500'),
       optOverlap: Custom('100'),
-      continueOnError: true,
     })
     .then('b20008', 'Core.Programming.Function', 'Collect Chunks', {
       func:
@@ -155,7 +158,14 @@ flow.create('7d3e1a94-2c6b-4f08-9a51-8be4d7c02f13', 'RAG with DeepSeek', (f) => 
       'var pending = msg.pending || [];\n' +
       'msg.chunk_total = pending.length;\n' +
       'if (pending.length === 0) {\n' +
-      "  msg.summary = 'No readable documents in ' + msg.docs_dir + ' - nothing to index.';\n" +
+      '  // Two very different situations, and saying which one it is saves an hour:\n' +
+      '  // an empty folder, or documents that were read but yielded nothing.\n' +
+      '  if ((msg.doc_count || 0) === 0) {\n' +
+      "    msg.summary = 'No documents found in ' + msg.docs_dir + ' - nothing to index.';\n" +
+      '  } else {\n' +
+      "    msg.summary = 'Read ' + msg.doc_count + ' document(s) from ' + msg.docs_dir +\n" +
+      "      ' but extracted no text from any of them. Check that the files are readable.';\n" +
+      '  }\n' +
       '  return [null, msg];\n' +
       '}\n' +
       'var texts = [];\n' +
