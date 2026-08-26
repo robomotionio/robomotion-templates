@@ -1,0 +1,22 @@
+name: Payment Run with Hold Report
+slug: payment-run-hold-report
+summary: >-
+  Runs the weekly vendor payment run in a SAP-style ERP and then accounts for
+  every bill it refused to pay. Signs in with credentials read from the
+  Robomotion Vault, proposes the bills due within seven days, confirms the run
+  so a journal entry is posted per document, and verifies the posted summary
+  against the proposal before going on. Then it opens the bills list, filters to
+  the blocked bills, and reports each one with the reason it is on hold - a
+  pending goods receipt, a quantity or price mismatch against the purchase
+  order, or a missing PO reference. Writes a two-section CSV covering what was
+  paid and what was held back, with the value held back totalled.
+category: Web Automation
+level: Intermediate
+tags: [web-automation, erp, finance, payment-run, exceptions, vault]
+author: Robomotion
+created: "2026-08-26"
+updated: "2026-08-26"
+screenshot: screenshot.png
+has_subflows: false
+flow_id: c56050d7-2952-4623-a63a-ed16294f98ff
+schema_version: 1
