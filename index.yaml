@@ -2296,12 +2296,12 @@ templates:
       handed to the agent instead of done for it. Documents are read, chunked,
       embedded and stored in LanceDB - an embedded vector database that is just a
       directory on disk. A DeepSeek Agent then answers questions through a
-      search_knowledge tool built from ordinary flow nodes, writing its own
-      queries and searching as many times as a question needs, with the source
-      document named against every fact.
+      search_knowledge tool built from ordinary flow nodes, writing its own queries
+      and searching as many times as a question needs, with the source document
+      named against every fact.
     category: AI
     level: Advanced
-    tags: [ai,agent,deepseek,rag,lancedb,vector-database,embeddings,search,rpa]
+    tags: [ai, agent, deepseek, rag, lancedb, vector-database, embeddings, search, rpa]
     author: Robomotion
     created: "2026-08-26"
     updated: "2026-08-26"
