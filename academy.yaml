@@ -135,3 +135,30 @@ videos:
     published: "2026-08-21"
     level: Intermediate
     topic: "Scripting"
+
+  - id: 00BweGh8ISo
+    episode: 11
+    title: "Sharing Work Between Robots with Queues"
+    summary: >-
+      Some work does not arrive as one job. It arrives as a hundred small ones, all day,
+      from somewhere else. A queue is where that work waits.
+    duration: "6:41"
+    duration_seconds: 401
+    published: "2026-08-28"
+    level: Intermediate
+    topic: "Orchestration"
+
+  - id: 8FUPGnAYWA0
+    episode: 12
+    title: "Answering Questions From Your Own Documents with Knowledge Bases"
+    summary: >-
+      A knowledge base in Robomotion is a set of your own documents, prepared once so
+      that a flow can search them. PDFs, Word files, spreadsheets, markdown, plain text
+      and images all go in. It belongs to the workspace rather than to any one flow,
+      like a vault or a queue, so every flow in the workspace can ask it a question by
+      name.
+    duration: "7:41"
+    duration_seconds: 461
+    published: "2026-08-28"
+    level: Advanced
+    topic: "Retrieval"

@@ -12,7 +12,18 @@ playlist, then commit the regenerated academy.yaml.
 
 Two sources are combined:
   * the playlist page  - canonical order, titles and runtimes
-  * the playlist RSS   - publish dates and the opening line of each description
+  * each video's watch page - publish date and the opening line of the description
+
+It used to read the second from the playlist RSS feed. That feed is gone: both
+https://www.youtube.com/feeds/videos.xml?playlist_id=... and the channel_id form
+answer 404 as of 2026-08-28, so a regeneration died on an HTTPError before it
+wrote anything. The watch page carries the same two fields in
+ytInitialPlayerResponse, and reproduces every value the feed used to give,
+provided the timestamp is normalised to UTC first - YouTube serves it with a
+-07:00 offset, and taking the date off that shifts half the series back a day.
+
+The cost is one request per video instead of one for the playlist. At a dozen
+videos that is fine; if the series grows past a few dozen, cache them.
 
 Only stdlib is used, so there is nothing to install.
 
@@ -23,15 +34,14 @@ warning naming it so the gap gets filled.
 """
 
 import argparse
+import datetime
 import json
 import re
 import sys
 import urllib.request
-import xml.etree.ElementTree as ET
 
 PLAYLIST_ID = "PLie2idTJ_1wvlEgLuDUDt_bbAs-29xtmL"
 PLAYLIST_URL = f"https://www.youtube.com/playlist?list={PLAYLIST_ID}"
-FEED_URL = f"https://www.youtube.com/feeds/videos.xml?playlist_id={PLAYLIST_ID}"
 
 # Shown above the video row in the designer. Kept here (not scraped) because the
 # YouTube playlist blurb is written for YouTube's audience, not for the product.
@@ -55,6 +65,8 @@ CURATION = {
     "CFNHmF-DbPw": ("Intermediate", "Web Scraping"),
     "bxAkfUO8P-Y": ("Advanced", "Web Scraping"),
     "qtKmRoyMKZo": ("Intermediate", "Scripting"),
+    "00BweGh8ISo": ("Intermediate", "Orchestration"),
+    "8FUPGnAYWA0": ("Advanced", "Retrieval"),
 }
 
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
@@ -126,22 +138,31 @@ def fetch_playlist_items():
     return items
 
 
-def fetch_feed_details():
-    """Publish date + first description paragraph per video, from the RSS feed."""
-    ns = {
-        "a": "http://www.w3.org/2005/Atom",
-        "yt": "http://www.youtube.com/xml/schemas/2015",
-        "m": "http://search.yahoo.com/mrss/",
-    }
-    root = ET.fromstring(get(FEED_URL))
-    details = {}
-    for entry in root.findall("a:entry", ns):
-        video_id = entry.findtext("yt:videoId", "", ns)
-        published = entry.findtext("a:published", "", ns)[:10]
-        description = entry.findtext("m:group/m:description", "", ns) or ""
-        summary = description.strip().split("\n\n")[0].strip().replace("\n", " ")
-        details[video_id] = {"published": published, "summary": summary}
-    return details
+def video_details(video_id: str):
+    """Publish date (UTC) + first description paragraph, from the video's watch page."""
+    html = get(f"https://www.youtube.com/watch?v={video_id}")
+    match = re.search(r"var ytInitialPlayerResponse = (\{.*?\});", html, re.S)
+    if not match:
+        return {"published": "", "summary": ""}
+    data = json.loads(match.group(1))
+
+    description = data.get("videoDetails", {}).get("shortDescription", "") or ""
+    summary = description.strip().split("\n\n")[0].strip().replace("\n", " ")
+
+    # "2026-08-20T23:23:04-07:00" is the same instant the RSS feed reported as
+    # 2026-08-21. Take the date off the local-offset string and half the series
+    # moves back a day, so convert first.
+    stamp = (data.get("microformat", {})
+                 .get("playerMicroformatRenderer", {})
+                 .get("publishDate", "") or "")
+    published = ""
+    if stamp:
+        try:
+            published = (datetime.datetime.fromisoformat(stamp)
+                         .astimezone(datetime.timezone.utc).date().isoformat())
+        except ValueError:
+            published = stamp[:10]
+    return {"published": published, "summary": summary}
 
 
 def wrap(text: str, indent: str, width: int = 88):
@@ -199,7 +220,7 @@ def main():
     args = parser.parse_args()
 
     items = fetch_playlist_items()
-    details = fetch_feed_details()
+    details = {item["id"]: video_details(item["id"]) for item in items}
 
     videos = []
     uncurated = []
