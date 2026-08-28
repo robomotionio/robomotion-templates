@@ -1,0 +1,23 @@
+name: Knowledge Base Endpoint
+slug: knowledge-base-endpoint
+summary: >-
+  Ask your own documents a question over HTTP. A Robomotion Knowledge Base is
+  indexed by a workspace agent on your machine and searched locally by the
+  robot; one Query Knowledge Base node returns the passages that answer a
+  question, each with the document and heading it came from. Http In and Http
+  Out turn the flow into a service anything can call, and a Min Score fence
+  means it answers "I could not find that" instead of inventing something.
+  Ships four sample documents and a thirty-line Python client.
+category: AI
+level: Advanced
+tags: [ai, knowledge-base, rag, retrieval, embeddings, search, http, api]
+author: Robomotion
+created: "2026-08-28"
+updated: "2026-08-28"
+screenshot: screenshot.png
+dependencies:
+  - package: Robomotion.KnowledgeBase
+    version: "0.1.7"
+has_subflows: false
+flow_id: 7862039e-7946-4bb9-96a0-d4808e64a3d5
+schema_version: 1
