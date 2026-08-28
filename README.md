@@ -303,6 +303,7 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | [Bulk Shipment Tracking Sweep](bulk-shipment-tracking-sweep) | Advanced | Checks 200 shipment tracking numbers on a public carrier tracker using eight parallel workers pulling from a shared in-memory queue. |
 | [Clinic Eligibility Morning Run](clinic-eligibility-morning-run) | Advanced | Verifies insurance for every appointment on a clinic's eligibility worklist, running the payer checks on nine parallel browsers instead of one at a time. |
 | [Fork Branch With Memory Queue](fork-branch-with-memory-queue) | Advanced | Demonstrates parallel browser automation — 6 browser instances process a shared queue of URLs concurrently |
+| [Refund Queue](refund-queue) | Intermediate | A workspace queue with both halves built for real: an intake that fills it and a worker loop that drains it, with every item encrypted by a key from your own vault. |
 
 ### Error Handling
 
@@ -316,6 +317,7 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 |----------|-------|-------------|
 | [Calorie Coach Agent](calorie-coach-agent) | Advanced | A chat-based nutrition tracker that logs meals into SQLite and coaches the user toward calorie and macro goals |
 | [Generic Chat Assistant](generic-chat-assistant) | Advanced | Minimal Chat Assistant + LLM Agent starter for building custom conversational robots |
+| [Knowledge Base Endpoint](knowledge-base-endpoint) | Advanced | Ask your own documents a question over HTTP. One Query Knowledge Base node answers with the passage, the document and the page, and a Min Score fence so it can say it does not know. |
 | [RAG with DeepSeek](rag-with-deepseek) | Advanced | Answers questions about your own documents. Reads a folder, embeds it into LanceDB, and lets a DeepSeek Agent write its own searches and cite the source of every fact. |
 | [Self-Learning Invoice Agent](self-learning-invoice-agent) | Advanced | An invoice-processing DeepSeek Agent that teaches itself vendors. |
 

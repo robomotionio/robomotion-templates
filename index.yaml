@@ -1767,6 +1767,25 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Knowledge Base Endpoint
+    slug: knowledge-base-endpoint
+    summary: >-
+      Ask your own documents a question over HTTP. A Robomotion Knowledge Base is
+      indexed by a workspace agent on your machine and searched locally by the
+      robot; one Query Knowledge Base node returns the passages that answer a
+      question, each with the document and heading it came from. Http In and Http
+      Out turn the flow into a service anything can call, and a Min Score fence
+      means it answers "I could not find that" instead of inventing something.
+      Ships four sample documents and a thirty-line Python client.
+    category: AI
+    level: Advanced
+    tags: [ai, knowledge-base, rag, retrieval, embeddings, search, http, api]
+    author: Robomotion
+    created: "2026-08-28"
+    updated: "2026-08-28"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Launch Excel
     slug: launch-excel
     summary: >-
@@ -2401,6 +2420,25 @@ templates:
     author: Robomotion
     created: "2026-05-23"
     updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Refund Queue
+    slug: refund-queue
+    summary: >-
+      A work queue with both halves built for real: an intake that puts refund
+      requests on a workspace queue one at a time, and a worker loop that takes
+      them off, decides each one, and records Successful or Failed against it.
+      Items are encrypted with an AES key from your vault before they leave the
+      robot, so the Admin Console keeps the history of every item without ever
+      being able to read one. Cut a single wire and the two halves become an
+      intake you can schedule and a worker you can run on any number of robots.
+    category: Concurrency
+    level: Intermediate
+    tags: [queue, orchestration, encryption, vault, foreach, loop, automation]
+    author: Robomotion
+    created: "2026-08-28"
+    updated: "2026-08-28"
     screenshot: screenshot.png
     has_subflows: false
 
