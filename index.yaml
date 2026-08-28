@@ -2994,6 +2994,29 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Tax Portal MCP Server
+    slug: tax-portal-mcp-server
+    summary: >-
+      Serves an ordinary RPA automation to an AI assistant as MCP tools, so a model
+      can ask a question of a system it could never sign into. One Listen HTTP node
+      makes the flow a stateless MCP server; three Tool In nodes declare the
+      contracts a model reads, with no arguments, one required argument and one
+      optional. Behind them a sign in subflow answers a government portal's tax
+      number, password and one-time code from the vault, and two more subflows read
+      VAT returns, penalties and electronic invoices off the page. The caller is
+      given a bearer token and nothing else, and Tool Out's Is Error flag lets the
+      flow refuse a company it holds no mandate for instead of returning an empty
+      answer the model will fill in for itself.
+    category: AI
+    level: Advanced
+    tags: [ai, mcp, mcp-server, agent, claude, web-automation, two-factor, vault, stateless, rpa]
+    author: Robomotion
+    created: "2026-08-28"
+    updated: "2026-08-28"
+    screenshot: screenshot.png
+    video_url: "https://www.youtube.com/watch?v=hTxNBpKqfz8"
+    has_subflows: true
+
   - name: Tax Portal Morning Board
     slug: tax-portal-morning-board
     summary: >-

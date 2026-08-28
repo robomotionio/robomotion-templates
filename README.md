@@ -320,6 +320,7 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | [Knowledge Base Endpoint](knowledge-base-endpoint) | Advanced | Ask your own documents a question over HTTP. One Query Knowledge Base node answers with the passage, the document and the page, and a Min Score fence so it can say it does not know. |
 | [RAG with DeepSeek](rag-with-deepseek) | Advanced | Answers questions about your own documents. Reads a folder, embeds it into LanceDB, and lets a DeepSeek Agent write its own searches and cite the source of every fact. |
 | [Self-Learning Invoice Agent](self-learning-invoice-agent) | Advanced | An invoice-processing DeepSeek Agent that teaches itself vendors. |
+| [Tax Portal MCP Server](tax-portal-mcp-server) | Advanced | Serves an RPA automation to an AI assistant as MCP tools. Three Tool In nodes are the whole contract; behind them a robot signs into a portal with a one-time code and reads what the model asked for. |
 
 ### Other
 
