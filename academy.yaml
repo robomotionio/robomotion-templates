@@ -150,7 +150,7 @@ videos:
 
   - id: 8FUPGnAYWA0
     episode: 12
-    title: "Answering Questions From Your Own Documents with Knowledge Bases"
+    title: "Creating a Knowledge Base"
     summary: >-
       A knowledge base in Robomotion is a set of your own documents, prepared once so
       that a flow can search them. PDFs, Word files, spreadsheets, markdown, plain text
