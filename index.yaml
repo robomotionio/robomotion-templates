@@ -1784,6 +1784,7 @@ templates:
     created: "2026-08-28"
     updated: "2026-08-28"
     screenshot: screenshot.png
+    video_url: "https://www.youtube.com/watch?v=8FUPGnAYWA0"
     has_subflows: false
 
   - name: Launch Excel
@@ -2440,6 +2441,7 @@ templates:
     created: "2026-08-28"
     updated: "2026-08-28"
     screenshot: screenshot.png
+    video_url: "https://www.youtube.com/watch?v=00BweGh8ISo"
     has_subflows: false
 
   - name: Refund Request Triage
