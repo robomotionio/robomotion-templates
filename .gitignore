@@ -5,3 +5,7 @@ workdir
 skills-lock.json
 TODO.md
 deferred-todo.md
+
+# Python bytecode, from running tools/*.py in place
+__pycache__/
+*.pyc

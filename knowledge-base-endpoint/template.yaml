@@ -15,6 +15,7 @@ author: Robomotion
 created: "2026-08-28"
 updated: "2026-08-28"
 screenshot: screenshot.png
+video_url: "https://www.youtube.com/watch?v=8FUPGnAYWA0"
 dependencies:
   - package: Robomotion.KnowledgeBase
     version: "0.1.7"
