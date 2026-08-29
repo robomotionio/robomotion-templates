@@ -1660,6 +1660,26 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Internship Application Intake
+    slug: internship-application-intake
+    summary: >-
+      Collect work from people who are not in your workspace. A published Robomotion
+      form is a public web page with its own link: whoever answers it needs no
+      account and installs nothing, and every submission becomes one item on a
+      workspace queue. Submissions are encrypted in the visitor's own browser with
+      the public half of an RSA key pair from your vault, so the platform stores
+      the history of every application and can never read one. Three nodes take the
+      next application off the queue, decrypt it with the private half, and show
+      every field the applicant filled in.
+    category: Productivity
+    level: Intermediate
+    tags: [forms, intake, queue, rsa, encryption, vault, no-code, file-upload]
+    author: Robomotion
+    created: "2026-08-29"
+    updated: "2026-08-29"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Invoice Inbox to Ledger
     slug: invoice-inbox-to-ledger
     summary: >-

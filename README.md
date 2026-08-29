@@ -201,6 +201,7 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | Template | Level | Description |
 |----------|-------|-------------|
 | [Convert Excel Document to CSV File](convert-excel-document-to-csv-file) | Intermediate | Converts an Excel file (.xls/.xlsx) into a CSV file with a configurable delimiter |
+| [Internship Application Intake](internship-application-intake) | Intermediate | A published form collects submissions from people with no account, encrypted in their own browser; three nodes take one off the queue and decrypt it with a key that never leaves your vault. |
 | [Translator](translator) | Intermediate | Translates text between languages using Google Translate via headless browser automation |
 | [Web Element To PDF](web-element-to-pdf) | Intermediate | Converts a specific element on a web page into a downloadable PDF |
 
