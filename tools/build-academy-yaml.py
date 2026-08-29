@@ -67,7 +67,7 @@ CURATION = {
     "qtKmRoyMKZo": ("Intermediate", "Scripting"),
     "00BweGh8ISo": ("Intermediate", "Orchestration"),
     "8FUPGnAYWA0": ("Advanced", "Retrieval"),
-    "hM8DaZ0MkhU": ("Intermediate", "Intake"),
+    "hM8DaZ0MkhU": ("Intermediate", "Forms"),
     "YnBsUuHYnRc": ("Advanced", "Assistants"),
 }
 
