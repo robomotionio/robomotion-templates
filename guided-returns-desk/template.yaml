@@ -11,6 +11,7 @@ tags: [chat, assistant, guided, support, returns, no-code]
 author: Robomotion
 created: "2026-08-29"
 updated: "2026-08-29"
+video_url: "https://www.youtube.com/watch?v=YnBsUuHYnRc"
 dependencies:
   - package: Robomotion.ChatAssistant
     version: "1.8.6"
