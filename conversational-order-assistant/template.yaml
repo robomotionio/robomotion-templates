@@ -1,0 +1,21 @@
+name: Conversational Order Assistant
+slug: conversational-order-assistant
+summary: >-
+  A conversational chat assistant that takes a return in whatever order the
+  customer explains it. An LLM Agent asks for whatever is missing, and an
+  ordinary automation wired to its tools port looks the order up mid
+  conversation and hands the answer back.
+category: AI
+level: Advanced
+tags: [chat, assistant, conversational, ai, llm, agent, tools]
+author: Robomotion
+created: "2026-08-29"
+updated: "2026-08-29"
+dependencies:
+  - package: Robomotion.ChatAssistant
+    version: "1.8.6"
+  - package: Robomotion.ADK
+    version: "0.22.2"
+has_subflows: false
+flow_id: 0974b6c8-396e-446c-8d03-c39c9c62d80b
+schema_version: 1

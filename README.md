@@ -317,7 +317,9 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | Template | Level | Description |
 |----------|-------|-------------|
 | [Calorie Coach Agent](calorie-coach-agent) | Advanced | A chat-based nutrition tracker that logs meals into SQLite and coaches the user toward calorie and macro goals |
+| [Conversational Order Assistant](conversational-order-assistant) | Advanced | Takes a return in whatever order the customer explains it. An LLM Agent asks for what is missing, and an ordinary automation on its tools port looks the order up mid conversation. |
 | [Generic Chat Assistant](generic-chat-assistant) | Advanced | Minimal Chat Assistant + LLM Agent starter for building custom conversational robots |
+| [Guided Returns Desk](guided-returns-desk) | Intermediate | A guided chat assistant that opens a return one question at a time, with a Textbox, buttons and tick boxes, and a loop back to the question when it does not recognise the order number. |
 | [Knowledge Base Endpoint](knowledge-base-endpoint) | Advanced | Ask your own documents a question over HTTP. One Query Knowledge Base node answers with the passage, the document and the page, and a Min Score fence so it can say it does not know. |
 | [RAG with DeepSeek](rag-with-deepseek) | Advanced | Answers questions about your own documents. Reads a folder, embeds it into LanceDB, and lets a DeepSeek Agent write its own searches and cite the source of every fact. |
 | [Self-Learning Invoice Agent](self-learning-invoice-agent) | Advanced | An invoice-processing DeepSeek Agent that teaches itself vendors. |
