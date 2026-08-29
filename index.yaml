@@ -585,6 +585,7 @@ templates:
     created: "2026-08-29"
     updated: "2026-08-29"
     screenshot: undefined
+    video_url: "https://www.youtube.com/watch?v=YnBsUuHYnRc"
     has_subflows: false
 
   - name: Convert Datetime to Text
@@ -1524,6 +1525,7 @@ templates:
     created: "2026-08-29"
     updated: "2026-08-29"
     screenshot: undefined
+    video_url: "https://www.youtube.com/watch?v=YnBsUuHYnRc"
     has_subflows: false
 
   - name: Hacker News Front Page
@@ -1710,6 +1712,7 @@ templates:
     created: "2026-08-29"
     updated: "2026-08-29"
     screenshot: screenshot.png
+    video_url: "https://www.youtube.com/watch?v=hM8DaZ0MkhU"
     has_subflows: false
 
   - name: Invoice Inbox to Ledger

@@ -150,7 +150,7 @@ videos:
 
   - id: 8FUPGnAYWA0
     episode: 12
-    title: "Creating a Knowledge Base"
+    title: "Answering Questions From Your Own Documents with Knowledge Bases"
     summary: >-
       A knowledge base in Robomotion is a set of your own documents, prepared once so
       that a flow can search them. PDFs, Word files, spreadsheets, markdown, plain text
@@ -162,3 +162,30 @@ videos:
     published: "2026-08-28"
     level: Advanced
     topic: "Retrieval"
+
+  - id: hM8DaZ0MkhU
+    episode: 13
+    title: "Collecting Data and Files From Anyone with Forms"
+    summary: >-
+      Most automation starts with something a person outside your company has to send
+      you: an application, a claim, a request, a file. A Robomotion form is how you
+      collect it, and what happens to it afterwards is the interesting part.
+    duration: "8:58"
+    duration_seconds: 538
+    published: "2026-08-29"
+    level: Intermediate
+    topic: "Intake"
+
+  - id: YnBsUuHYnRc
+    episode: 14
+    title: "Using the Chat Assistant to Talk to Your Automations"
+    summary: >-
+      Every automation you have built so far waits for somebody to hand it something. A
+      spreadsheet in a watched folder, an email, a form. And if what arrives is wrong,
+      all a robot can do is throw an exception into a log nobody reads. A chat assistant
+      lets it ask instead.
+    duration: "11:00"
+    duration_seconds: 660
+    published: "2026-08-29"
+    level: Advanced
+    topic: "Assistants"
