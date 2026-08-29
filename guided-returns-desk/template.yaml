@@ -1,0 +1,19 @@
+name: Guided Returns Desk
+slug: guided-returns-desk
+summary: >-
+  A guided chat assistant that opens a product return, one question at a time.
+  Uses Chat Assistant widget nodes for the questions, checks the order number
+  while the customer is still in the conversation, and loops back to the
+  question when it does not recognise one instead of throwing an exception.
+category: AI
+level: Intermediate
+tags: [chat, assistant, guided, support, returns, no-code]
+author: Robomotion
+created: "2026-08-29"
+updated: "2026-08-29"
+dependencies:
+  - package: Robomotion.ChatAssistant
+    version: "1.8.6"
+has_subflows: false
+flow_id: 5b3e9ffd-3eef-49af-95ae-f0ac9d2f6ad8
+schema_version: 1

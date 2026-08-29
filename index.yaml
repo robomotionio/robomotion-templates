@@ -571,6 +571,22 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Conversational Order Assistant
+    slug: conversational-order-assistant
+    summary: >-
+      A conversational chat assistant that takes a return in whatever order the
+      customer explains it. An LLM Agent asks for whatever is missing, and an
+      ordinary automation wired to its tools port looks the order up mid
+      conversation and hands the answer back.
+    category: AI
+    level: Advanced
+    tags: [chat, assistant, conversational, ai, llm, agent, tools]
+    author: Robomotion
+    created: "2026-08-29"
+    updated: "2026-08-29"
+    screenshot: undefined
+    has_subflows: false
+
   - name: Convert Datetime to Text
     slug: convert-datetime-to-text
     summary: >-
@@ -1493,6 +1509,22 @@ templates:
     updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
+
+  - name: Guided Returns Desk
+    slug: guided-returns-desk
+    summary: >-
+      A guided chat assistant that opens a product return, one question at a time.
+      Uses Chat Assistant widget nodes for the questions, checks the order number
+      while the customer is still in the conversation, and loops back to the
+      question when it does not recognise one instead of throwing an exception.
+    category: AI
+    level: Intermediate
+    tags: [chat, assistant, guided, support, returns, no-code]
+    author: Robomotion
+    created: "2026-08-29"
+    updated: "2026-08-29"
+    screenshot: undefined
+    has_subflows: false
 
   - name: Hacker News Front Page
     slug: extract-news-items-hacker-news
