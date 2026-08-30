@@ -189,3 +189,27 @@ videos:
     published: "2026-08-29"
     level: Advanced
     topic: "Assistants"
+
+  - id: -IK6DQTcDW0
+    episode: 15
+    title: "Trigger Any Flow with Webhooks"
+    summary: >-
+      Every flow you have built so far started itself, on a schedule or on a button.
+      This one waits to be called, and anything on the internet can call it.
+    duration: "6:27"
+    duration_seconds: 387
+    published: "2026-08-30"
+    level: Intermediate
+    topic: "Webhooks"
+
+  - id: oqqpZ1RfbgY
+    episode: 16
+    title: "Calling any API with Http Request"
+    summary: >-
+      Almost every system worth automating has an API, and a Robomotion flow can call
+      one directly. It takes one node.
+    duration: "7:31"
+    duration_seconds: 451
+    published: "2026-08-30"
+    level: Intermediate
+    topic: "APIs"

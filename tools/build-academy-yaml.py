@@ -69,6 +69,8 @@ CURATION = {
     "8FUPGnAYWA0": ("Advanced", "Retrieval"),
     "hM8DaZ0MkhU": ("Intermediate", "Forms"),
     "YnBsUuHYnRc": ("Advanced", "Assistants"),
+    "-IK6DQTcDW0": ("Intermediate", "Webhooks"),
+    "oqqpZ1RfbgY": ("Intermediate", "APIs"),
 }
 
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
