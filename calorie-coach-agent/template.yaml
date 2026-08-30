@@ -11,6 +11,7 @@ tags: [chat, ai, llm, agent, nutrition, calories]
 author: Robomotion
 created: "2026-03-21"
 updated: "2026-03-21"
+video_url: "https://www.youtube.com/watch?v=p4HpqTXUU8U"
 screenshot: screenshot.png
 dependencies:
   - package: Robomotion.ChatAssistant

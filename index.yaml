@@ -427,6 +427,7 @@ templates:
     created: "2026-03-21"
     updated: "2026-03-21"
     screenshot: screenshot.png
+    video_url: "https://www.youtube.com/watch?v=p4HpqTXUU8U"
     has_subflows: false
 
   - name: Chrome Web Store Extension Info
@@ -1189,6 +1190,7 @@ templates:
     created: "2026-07-10"
     updated: "2026-07-10"
     screenshot: screenshot.png
+    video_url: "https://www.youtube.com/watch?v=iQcmz3SDnU0"
     has_subflows: false
 
   - name: Future Tools Keyword Search
@@ -2381,6 +2383,7 @@ templates:
     created: "2026-08-26"
     updated: "2026-08-26"
     screenshot: screenshot.png
+    video_url: "https://www.youtube.com/watch?v=0T7NZ2mWdiI"
     has_subflows: false
 
   - name: Ranked Keyword Gap Analysis to Notion
@@ -2740,6 +2743,7 @@ templates:
     created: "2026-08-24"
     updated: "2026-08-24"
     screenshot: screenshot.png
+    video_url: "https://www.youtube.com/watch?v=YankuBeSaGY"
     has_subflows: false
 
   - name: Send GET Request
@@ -2817,6 +2821,7 @@ templates:
     created: "2026-08-26"
     updated: "2026-08-26"
     screenshot: screenshot.png
+    video_url: "https://www.youtube.com/watch?v=kHGmWFyGytQ"
     has_subflows: false
 
   - name: Similarweb Top Websites
