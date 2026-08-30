@@ -16,6 +16,7 @@ tags: [ai, agent, hermes-agent, customer-support, chat, mcp, mcp-server, knowled
 author: Robomotion
 created: "2026-08-30"
 updated: "2026-08-30"
+video_url: "https://www.youtube.com/watch?v=Ej9lWmLEZDM"
 dependencies:
   - package: Robomotion.MCP
     version: "0.6.0"

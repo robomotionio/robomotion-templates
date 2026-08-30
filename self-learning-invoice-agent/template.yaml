@@ -13,6 +13,7 @@ tags: [ai, agent, deepseek, invoice, self-learning, memory, rpa]
 author: Robomotion
 created: "2026-08-24"
 updated: "2026-08-24"
+video_url: "https://www.youtube.com/watch?v=YankuBeSaGY"
 screenshot: screenshot.png
 dependencies:
   - package: Robomotion.DeepSeekAgent

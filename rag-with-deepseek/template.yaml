@@ -14,6 +14,7 @@ tags: [ai, agent, deepseek, rag, lancedb, vector-database, embeddings, search, r
 author: Robomotion
 created: "2026-08-26"
 updated: "2026-08-26"
+video_url: "https://www.youtube.com/watch?v=0T7NZ2mWdiI"
 screenshot: screenshot.png
 dependencies:
   - package: Robomotion.LanceDB
