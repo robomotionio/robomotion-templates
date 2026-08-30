@@ -187,8 +187,10 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 
 | Template | Level | Description |
 |----------|-------|-------------|
+| [API Calls with Http Request](api-calls-with-http-request) | Intermediate | Three HTTP calls with one node — a plain read, the same call behind a password, and one that carries a file |
 | [REST API](rest-api) | Intermediate | Creates a local HTTP server with GET and POST endpoints as a starting point for HTTP-triggered robots |
 | [Send GET Request](send-get-request) | Beginner | Sends an HTTP GET request and displays the response body in a message box |
+| [Webhook Screenshot Service](webhook-screenshot-service) | Intermediate | Gives a flow a public URL, puts a real browser behind it, and answers the request with a screenshot of the page |
 
 ### Databases
 

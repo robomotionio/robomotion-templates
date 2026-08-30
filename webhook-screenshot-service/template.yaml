@@ -1,0 +1,20 @@
+name: Webhook Screenshot Service
+slug: webhook-screenshot-service
+summary: >-
+  A flow that waits to be called. Http In gives it a public URL that Robomotion
+  hosts for you, with no port to open and no tunnel to run, and Http Out answers
+  on the same held-open request. Between the two, the robot does what a web
+  service cannot do for itself: it opens a real browser, loads the page it was
+  asked about, waits three seconds for it to settle, and photographs it. The
+  reply is the PNG, attached to the response, so curl -o shot.png is a complete
+  client and nothing about the caller needs to know what Robomotion is.
+category: Networking
+level: Intermediate
+tags: [http, webhook, api, server, browser, screenshot, request, web]
+author: Robomotion
+created: "2026-08-30"
+updated: "2026-08-30"
+video_url: "https://www.youtube.com/watch?v=-IK6DQTcDW0"
+has_subflows: false
+flow_id: 073ee472-5082-4d91-8720-af9f78d2cae9
+schema_version: 1

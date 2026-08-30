@@ -134,6 +134,26 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: API Calls with Http Request
+    slug: api-calls-with-http-request
+    summary: >-
+      Three HTTP calls, one node. A plain read of a public exchange rate service, the
+      same call behind a password, and a call that carries a file. They differ only
+      in their properties, which is the point: authentication is a property and not a
+      different node, and neither is a multipart body. Basic Authentication takes a
+      vault item and nothing else, so no password is written into the flow, and an
+      at-sign in front of a path is what makes the node open that file and send it as
+      a form part, exactly the way curl does it.
+    category: Networking
+    level: Intermediate
+    tags: [http, api, request, rest, json, credential, security, file, upload]
+    author: Robomotion
+    created: "2026-08-30"
+    updated: "2026-08-30"
+    screenshot: undefined
+    video_url: "https://www.youtube.com/watch?v=oqqpZ1RfbgY"
+    has_subflows: false
+
   - name: API Health Check
     slug: api-health-check
     summary: >-
@@ -3444,6 +3464,26 @@ templates:
     created: "2025-11-17"
     updated: "2025-11-17"
     screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Webhook Screenshot Service
+    slug: webhook-screenshot-service
+    summary: >-
+      A flow that waits to be called. Http In gives it a public URL that Robomotion
+      hosts for you, with no port to open and no tunnel to run, and Http Out answers
+      on the same held-open request. Between the two, the robot does what a web
+      service cannot do for itself: it opens a real browser, loads the page it was
+      asked about, waits three seconds for it to settle, and photographs it. The
+      reply is the PNG, attached to the response, so curl -o shot.png is a complete
+      client and nothing about the caller needs to know what Robomotion is.
+    category: Networking
+    level: Intermediate
+    tags: [http, webhook, api, server, browser, screenshot, request, web]
+    author: Robomotion
+    created: "2026-08-30"
+    updated: "2026-08-30"
+    screenshot: undefined
+    video_url: "https://www.youtube.com/watch?v=-IK6DQTcDW0"
     has_subflows: false
 
   - name: Webpage Headings & Paragraphs
