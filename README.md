@@ -317,6 +317,7 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | Template | Level | Description |
 |----------|-------|-------------|
 | [Calorie Coach Agent](calorie-coach-agent) | Advanced | A chat-based nutrition tracker that logs meals into SQLite and coaches the user toward calorie and macro goals |
+| [Clinic Support Assistant](clinic-support-assistant) | Advanced | A website support assistant served to the page as one MCP tool. A visitor and a signed-in patient are answered by two different Hermes Agents, and only the patient's is wired to their own record. |
 | [Conversational Order Assistant](conversational-order-assistant) | Advanced | Takes a return in whatever order the customer explains it. An LLM Agent asks for what is missing, and an ordinary automation on its tools port looks the order up mid conversation. |
 | [Generic Chat Assistant](generic-chat-assistant) | Advanced | Minimal Chat Assistant + LLM Agent starter for building custom conversational robots |
 | [Guided Returns Desk](guided-returns-desk) | Intermediate | A guided chat assistant that opens a return one question at a time, with a Textbox, buttons and tick boxes, and a loop back to the question when it does not recognise the order number. |

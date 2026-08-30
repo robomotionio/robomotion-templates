@@ -474,6 +474,27 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Clinic Support Assistant
+    slug: clinic-support-assistant
+    summary: >-
+      A customer support assistant for a website, served to the page as one MCP
+      tool. A visitor and a signed-in patient are answered by two different Hermes
+      Agents, and the difference is not a prompt or a flag, it is two wires: the
+      visitor's agent is wired to the practice documents and to nothing else, so
+      nothing on that side of the canvas can reach a patient record whatever the
+      model is asked. The signed-in tools take no arguments at all. They read the
+      record number the website established from a session cookie, so the model
+      cannot name a patient, and every turn is written to a dialog log the practice
+      can read in the morning.
+    category: AI
+    level: Advanced
+    tags: [ai, agent, hermes-agent, customer-support, chat, mcp, mcp-server, knowledge-base, sqlite, vault]
+    author: Robomotion
+    created: "2026-08-30"
+    updated: "2026-08-30"
+    screenshot: undefined
+    has_subflows: false
+
   - name: CoinMarketCap Category Coins
     slug: extract-coin-details-category-coinmarketcap
     summary: >-
