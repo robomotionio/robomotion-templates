@@ -493,6 +493,7 @@ templates:
     created: "2026-08-30"
     updated: "2026-08-30"
     screenshot: undefined
+    video_url: "https://www.youtube.com/watch?v=Ej9lWmLEZDM"
     has_subflows: false
 
   - name: CoinMarketCap Category Coins
