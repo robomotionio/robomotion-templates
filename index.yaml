@@ -1212,7 +1212,6 @@ templates:
     created: "2026-07-10"
     updated: "2026-07-10"
     screenshot: screenshot.png
-    video_url: "https://www.youtube.com/watch?v=iQcmz3SDnU0"
     has_subflows: false
 
   - name: Future Tools Keyword Search
@@ -2241,6 +2240,7 @@ templates:
     created: "2026-08-26"
     updated: "2026-08-26"
     screenshot: screenshot.png
+    video_url: "https://www.youtube.com/watch?v=iQcmz3SDnU0"
     has_subflows: false
 
   - name: Payroll Validation Gate
