@@ -213,3 +213,21 @@ videos:
     published: "2026-08-30"
     level: Intermediate
     topic: "APIs"
+
+  - id: 9JzXs2FHgl4
+    episode: 17
+    title: "Reading What Changed with Visual Diff"
+    summary: >-
+      An agent can write a whole flow for you now. In this episode Claude Code is handed
+      an empty Robomotion project and builds one against Grumpdesk, the help desk in our
+      training universe: sign in as a service account, open the saved SLA breach view,
+      read the ticket table, and write the report a support lead would act on. It
+      commits and pushes three times, on its own, while nobody is watching. What comes
+      back is a few paragraphs and a git history you cannot read, because a flow's
+      source is generated TypeScript and a renamed node, a rewired port and a new
+      selector all look the same in it.
+    duration: "10:38"
+    duration_seconds: 638
+    published: "2026-09-01"
+    level: Intermediate
+    topic: "Version Control"
