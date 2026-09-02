@@ -1,0 +1,26 @@
+name: Website Pitch Builder
+slug: website-pitch-builder
+summary: >-
+  Finds a shop that has no website and builds it one. Google Maps is searched
+  through the scrape.do API, the listings are filtered down to businesses with a
+  phone, enough reviews to prove they have customers, and no real site of their
+  own - a Facebook page or a Wix subdomain counts as no site - and the best one
+  is scored out. Its opening hours, ten best reviews and four public domain
+  photographs are gathered, and a DeepSeek Agent writes a single self-contained
+  page from that brief and nothing else. A real browser then photographs the
+  page, and the screenshot and a CSV row are mailed to you. Google Maps has no
+  email column, so the packet comes to you with the shop's phone number in it,
+  and a person makes the call.
+category: AI
+level: Advanced
+tags: [ai, agent, deepseek, lead-generation, google-maps, scrape-do, web-scraping, subflow, email, browser, screenshot]
+author: Robomotion
+created: "2026-09-02"
+updated: "2026-09-02"
+video_url: "https://www.youtube.com/watch?v=XWTFAp83FBo"
+dependencies:
+  - package: Robomotion.DeepSeekAgent
+    version: "0.7.5"
+has_subflows: true
+flow_id: e25280b2-f023-42b3-b962-d982b7eec07e
+schema_version: 1

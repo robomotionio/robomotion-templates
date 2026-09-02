@@ -327,6 +327,7 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | [RAG with DeepSeek](rag-with-deepseek) | Advanced | Answers questions about your own documents. Reads a folder, embeds it into LanceDB, and lets a DeepSeek Agent write its own searches and cite the source of every fact. |
 | [Self-Learning Invoice Agent](self-learning-invoice-agent) | Advanced | An invoice-processing DeepSeek Agent that teaches itself vendors. |
 | [Tax Portal MCP Server](tax-portal-mcp-server) | Advanced | Serves an RPA automation to an AI assistant as MCP tools. Three Tool In nodes are the whole contract; behind them a robot signs into a portal with a one-time code and reads what the model asked for. |
+| [Website Pitch Builder](website-pitch-builder) | Advanced | Finds a shop with no website on Google Maps and builds it one. A DeepSeek Agent writes the page from the shop's own reviews and opening hours, a real browser photographs it, and the screenshot is mailed to you with the phone number. |
 
 ### Other
 
