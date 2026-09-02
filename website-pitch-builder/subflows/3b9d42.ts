@@ -1,0 +1,20 @@
+import { subflow, Credential, Message } from '@robomotion/sdk';
+
+subflow.create('Find The Lead', (f) => {
+  f.node('5a1f38', 'Core.Flow.Begin', 'Begin', {})
+    .then('b7e2d5', 'Core.Programming.Function', 'Niche & Minimum Reviews', { func: '\nmsg.niche = \'shoe repair Los Angeles\';\nmsg.min_reviews = 20;\nreturn msg;\n' })
+    .then('c93a18', 'Core.Vault.GetItem', 'Get Scrape.do Token', { optCredentials: Credential({ vaultId: '_', itemId: '_' }) })
+    .then('d16b4f', 'Core.Programming.Function', 'Build Search URL', { func: '\nvar token = msg.credentials && msg.credentials.value;\nif (!token) {\n  throw new Error(\'Scrape.do token is empty in the vault item\');\n}\nmsg.search_url = \'https://api.scrape.do/plugin/google/maps/search\' +\n  \'?token=\' + encodeURIComponent(token) +\n  \'&q=\' + encodeURIComponent(msg.niche) +\n  \'&hl=en\';\nreturn msg;\n' })
+    .then('e58c26', 'Core.Net.HttpRequest', 'Search Google Maps', {
+    outBody: Message('maps'),
+    outStatus: Message('maps_status'),
+    optMethod: 'get',
+    optUrl: Message('search_url'),
+    optTimeout: 90
+  })
+    .then('f2a973', 'Core.Programming.Function', 'Pick Best Prospect', { outputs: 2, func: '\nvar results = (msg.maps && msg.maps.local_results) || [];\nvar minReviews = msg.min_reviews;\nvar placeholderHosts = [\n  \'facebook.com\',\n  \'instagram.com\',\n  \'linktr.ee\',\n  \'wixsite.com\',\n  \'business.site\',\n  \'sites.google.com\',\n  \'yelp.com\'\n];\n\nfunction hostOf(url) {\n  if (!url) {\n    return \'\';\n  }\n  var s = String(url);\n  var scheme = s.indexOf(\'://\');\n  if (scheme !== -1) {\n    s = s.substring(scheme + 3);\n  }\n  s = s.split(\'/\')[0].split(\'?\')[0].split(\'#\')[0];\n  var at = s.indexOf(\'@\');\n  if (at !== -1) {\n    s = s.substring(at + 1);\n  }\n  s = s.split(\':\')[0].toLowerCase();\n  if (s.indexOf(\'www.\') === 0) {\n    s = s.substring(4);\n  }\n  return s;\n}\n\nfunction isRealWebsite(url) {\n  var host = hostOf(url);\n  if (!host) {\n    return false;\n  }\n  for (var i = 0; i < placeholderHosts.length; i++) {\n    var bad = placeholderHosts[i];\n    if (host === bad) {\n      return false;\n    }\n    if (host.length > bad.length + 1 &&\n        host.substring(host.length - bad.length - 1) === \'.\' + bad) {\n      return false;\n    }\n  }\n  return true;\n}\n\nfunction toNumber(v) {\n  if (typeof v === \'number\') {\n    return v;\n  }\n  if (!v) {\n    return 0;\n  }\n  var n = parseFloat(String(v).split(\',\').join(\'\'));\n  return isNaN(n) ? 0 : n;\n}\n\nvar best = null;\nvar bestScore = -1;\nvar qualified = 0;\n\nfor (var i = 0; i < results.length; i++) {\n  var place = results[i];\n  if (!place) {\n    continue;\n  }\n  var phone = place.phone;\n  if (!phone) {\n    continue;\n  }\n  var reviews = toNumber(place.reviews);\n  if (reviews < minReviews) {\n    continue;\n  }\n  if (isRealWebsite(place.website)) {\n    continue;\n  }\n  qualified++;\n  var rating = toNumber(place.rating);\n  var score = rating * (Math.log(reviews + 1) / Math.LN10);\n  if (score > bestScore) {\n    bestScore = score;\n    best = {\n      name: place.title || place.name || \'\',\n      place_id: place.place_id || \'\',\n      data_id: place.data_id || \'\',\n      phone: phone,\n      rating: rating,\n      reviews: reviews,\n      score: Math.round(score * 1000) / 1000,\n      address: place.address || \'\',\n      placeholder_site: place.website || \'(none)\',\n      niche: msg.niche\n    };\n  }\n}\n\nmsg.places_seen = results.length;\nmsg.places_qualified = qualified;\n\nif (!best) {\n  msg.reason = \'No shop qualified out of \' + results.length + \' for niche: \' + msg.niche;\n  return [null, msg];\n}\n\nmsg.winner = best;\nmsg.reason = \'Pitching \' + best.name;\nreturn [msg, null];\n' })
+    .then('6c2049', 'Core.Flow.End', 'Found A Lead', { sfPort: 0 });
+  f.node('7d3150', 'Core.Flow.End', 'Nothing Qualified', { sfPort: 1 });
+
+  f.edge('f2a973', 1, '7d3150', 0);
+});
