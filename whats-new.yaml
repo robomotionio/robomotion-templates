@@ -34,34 +34,6 @@ entries:
       - "Apps show up on the Home page beside your flows, with an app icon"
     image: whats-new/robomotion-apps.svg
 
-  - id: claude-code-build-automations
-    date: "2026-09-16"
-    tag: New
-    title: "Build automations with Claude Code or Codex"
-    summary: >-
-      Every Robomotion project is a git repository, and a flow is TypeScript
-      inside it. Run one command and Claude Code or Codex knows how to read the
-      project, write the flow, validate it, run it on a real robot and commit
-      the result. Academy episode 18 films the whole loop once, end to end.
-    bullets:
-      - "robomotion skills install sets a project up for Claude Code or Codex in one step"
-      - "robomotion auth login signs the CLI in from the terminal"
-      - "robomotion create app | flow starts a project; app dev serves the preview the Designer shows"
-      - "Validation refuses a flow the Designer could not open, before it ever reaches a robot"
-    video: r6_6i1Rcbbc
-    link:
-      label: Watch episode 18
-      url: https://www.youtube.com/watch?v=r6_6i1Rcbbc&list=PLie2idTJ_1wvlEgLuDUDt_bbAs-29xtmL
-
-  - id: subflow-hide-ports
-    date: "2026-09-14"
-    tag: Improved
-    title: "Sub Flow: hide the input and output ports"
-    summary: >-
-      A subflow that only wraps a screen or a helper does not need to show its
-      Begin and End ports on the canvas. A new option on the Sub Flow node
-      hides them, and a bare Begin-to-End wire no longer stands in the way.
-
   - id: visual-diff
     date: "2026-09-01"
     tag: New
