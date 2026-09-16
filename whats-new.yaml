@@ -34,9 +34,8 @@ entries:
       - "Every app runs on its own Application Robot, next to your data"
       - "Apps show up on the Home page beside your flows, with an app icon"
     try: >-
-      Build an app where my team uploads supplier invoice PDFs, the key
-      details (supplier, amount, due date) are read out automatically, and I
-      approve or reject each invoice from a review screen.
+      Build a simple app where I add a task with a title and a due date, and
+      see my tasks in a list where I can mark each one done.
     image: whats-new/robomotion-apps.svg
 
   - id: visual-diff
