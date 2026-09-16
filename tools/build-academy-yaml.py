@@ -72,6 +72,7 @@ CURATION = {
     "-IK6DQTcDW0": ("Intermediate", "Webhooks"),
     "oqqpZ1RfbgY": ("Intermediate", "APIs"),
     "9JzXs2FHgl4": ("Intermediate", "Version Control"),
+    "r6_6i1Rcbbc": ("Intermediate", "Claude Code"),
 }
 
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
