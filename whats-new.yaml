@@ -14,6 +14,8 @@
 #               shown 16:9 above the text
 #   video     - a YouTube video id; wins over image and plays in place
 #   link      - { label, url } rendered as the entry's call to action
+#   try       - a prompt; the dialog shows a "Try it now" box and a button that
+#               puts it in the Home page's Build box
 #   tag       - short label such as "New", "Improved", "Academy"
 schema_version: 1
 entries:
@@ -22,16 +24,19 @@ entries:
     tag: New
     title: "Robomotion Apps: give any flow a real user interface"
     summary: >-
-      An app is a flow with screens in front of it. Describe what the people
-      using it should see, and the Build view writes the screens, wires them to
-      your flow and runs everything on your own robot. Apps are dark and light
-      by default, and every one of them has an assistant in the corner.
+      An app is a flow with screens in front of it. You do not draw the
+      screens: on the Home page, describe the app you want in the Build box
+      and the AI writes the screens, wires them to a flow and runs it all on
+      your own robot. Change it the same way, one sentence at a time.
     bullets:
-      - "Build it by conversation in the Build view, one screen at a time"
-      - "Preview the app live while it takes shape, then publish a version"
+      - "Start on the Home page: type what the app should do and press Build"
+      - "Watch the app take shape in a live preview, then publish a version"
       - "Every app runs on its own Application Robot, next to your data"
-      - "One repository per app: the screens live beside the flow that serves them"
       - "Apps show up on the Home page beside your flows, with an app icon"
+    try: >-
+      Build an app where my team uploads supplier invoice PDFs, the key
+      details (supplier, amount, due date) are read out automatically, and I
+      approve or reject each invoice from a review screen.
     image: whats-new/robomotion-apps.svg
 
   - id: visual-diff
