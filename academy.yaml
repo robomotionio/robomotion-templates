@@ -231,3 +231,18 @@ videos:
     published: "2026-09-01"
     level: Intermediate
     topic: "Version Control"
+
+  - id: r6_6i1Rcbbc
+    episode: 18
+    title: "How to Build Automations with Claude Code"
+    summary: >-
+      Every Robomotion project is a git repository, and a flow is TypeScript inside it.
+      That is what makes an agent genuinely useful here: Claude Code can read the
+      project, write the flow, validate it, run it on a real robot and commit the
+      result, without anybody dragging a node onto a canvas. This episode films the
+      whole loop once, end to end, with nothing cut out.
+    duration: "7:33"
+    duration_seconds: 453
+    published: "2026-09-16"
+    level: Intermediate
+    topic: "Claude Code"
