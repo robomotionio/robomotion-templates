@@ -1,0 +1,68 @@
+# What's New - the release notes the Flow Designer shows in its "What's new"
+# dialog. Newest entry first.
+#
+# Every entry needs a unique, stable `id` (kebab-case, never reused or renamed
+# once shipped: the designer records the ids a user has acknowledged, so
+# renaming one brings it back for everybody) and a `date` (YYYY-MM-DD). The
+# designer opens the dialog on its own when there is an entry the user has not
+# acknowledged yet, and lists all of them in the header's "What's new" button.
+#
+# Optional per entry:
+#   summary   - one or two sentences under the title
+#   bullets   - a short list of concrete things the feature does
+#   image     - repo-relative path (whats-new/<file>.png) or an absolute URL,
+#               shown 16:9 above the text
+#   video     - a YouTube video id; wins over image and plays in place
+#   link      - { label, url } rendered as the entry's call to action
+#   try       - a prompt; the dialog shows a "Try it now" box and a button that
+#               puts it in the Home page's Build box
+#   tag       - short label such as "New", "Improved", "Academy"
+schema_version: 1
+entries:
+  - id: robomotion-apps
+    date: "2026-09-16"
+    tag: New
+    title: "Robomotion Apps: give any flow a real user interface"
+    summary: >-
+      An app is a flow with screens in front of it. You do not draw the
+      screens: on the Home page, describe the app you want in the Build box
+      and the AI writes the screens, wires them to a flow and runs it all on
+      your own robot. Change it the same way, one sentence at a time.
+    bullets:
+      - "Start on the Home page: type what the app should do and press Build"
+      - "Watch the app take shape in a live preview, then publish a version"
+      - "Every app runs on its own Application Robot, next to your data"
+      - "Apps show up on the Home page beside your flows, with an app icon"
+    try: >-
+      Build a simple app where I add a task with a title and a due date, and
+      see my tasks in a list where I can mark each one done.
+    image: whats-new/robomotion-apps.svg
+
+  - id: visual-diff
+    date: "2026-09-01"
+    tag: New
+    title: "Visual Diff: read what changed in a flow"
+    summary: >-
+      A flow's source is generated TypeScript, so a renamed node, a rewired
+      port and a new selector all look the same in git. Visual Diff shows the
+      change on the canvas instead, version against version, with a bar that
+      walks you through every difference.
+    video: 9JzXs2FHgl4
+    link:
+      label: Watch the walkthrough
+      url: https://www.youtube.com/watch?v=9JzXs2FHgl4
+
+  - id: academy-and-templates-september
+    date: "2026-08-30"
+    tag: Academy
+    title: "Robomotion Academy: eighteen short lessons, and the templates that go with them"
+    summary: >-
+      The Home page now carries the Academy series: from your first run to
+      queues, knowledge bases, forms, chat assistants, webhooks and HTTP calls,
+      one node and one idea at a time. New companion templates ship beside the
+      episodes: Refund Queue, Knowledge Base Endpoint, Tax Portal MCP Server,
+      RAG with DeepSeek, Clinic Support Assistant and Website Pitch Builder.
+    video: F-Gi97ODx2s
+    link:
+      label: Open the Academy playlist
+      url: https://www.youtube.com/playlist?list=PLie2idTJ_1wvlEgLuDUDt_bbAs-29xtmL
