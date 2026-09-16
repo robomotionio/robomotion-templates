@@ -30,7 +30,7 @@ entries:
       - "Preview the app live while it takes shape, then publish a version"
       - "Every app runs on its own Application Robot, next to your data"
       - "Apps show up on the Home page beside your flows, with an app icon"
-    image: whats-new/robomotion-apps.png
+    image: whats-new/robomotion-apps.svg
 
   - id: claude-code-build-automations
     date: "2026-09-16"
