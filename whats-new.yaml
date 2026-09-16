@@ -24,27 +24,43 @@ entries:
     summary: >-
       An app is a flow with screens in front of it. Describe what the people
       using it should see, and the Build view writes the screens, wires them to
-      your flow and runs everything on your own robot.
+      your flow and runs everything on your own robot. Apps are dark and light
+      by default, and every one of them has an assistant in the corner.
     bullets:
       - "Build it by conversation in the Build view, one screen at a time"
       - "Preview the app live while it takes shape, then publish a version"
       - "Every app runs on its own Application Robot, next to your data"
+      - "One repository per app: the screens live beside the flow that serves them"
       - "Apps show up on the Home page beside your flows, with an app icon"
     image: whats-new/robomotion-apps.svg
 
   - id: claude-code-build-automations
     date: "2026-09-16"
-    tag: Academy
-    title: "Build automations with Claude Code"
+    tag: New
+    title: "Build automations with Claude Code or Codex"
     summary: >-
       Every Robomotion project is a git repository, and a flow is TypeScript
-      inside it. Claude Code can read the project, write the flow, validate it,
-      run it on a real robot and commit the result. Episode 18 films the whole
-      loop once, end to end.
+      inside it. Run one command and Claude Code or Codex knows how to read the
+      project, write the flow, validate it, run it on a real robot and commit
+      the result. Academy episode 18 films the whole loop once, end to end.
+    bullets:
+      - "robomotion skills install sets a project up for Claude Code or Codex in one step"
+      - "robomotion auth login signs the CLI in from the terminal"
+      - "robomotion create app | flow starts a project; app dev serves the preview the Designer shows"
+      - "Validation refuses a flow the Designer could not open, before it ever reaches a robot"
     video: r6_6i1Rcbbc
     link:
-      label: Open the Academy playlist
-      url: https://www.youtube.com/playlist?list=PLie2idTJ_1wvlEgLuDUDt_bbAs-29xtmL
+      label: Watch episode 18
+      url: https://www.youtube.com/watch?v=r6_6i1Rcbbc&list=PLie2idTJ_1wvlEgLuDUDt_bbAs-29xtmL
+
+  - id: subflow-hide-ports
+    date: "2026-09-14"
+    tag: Improved
+    title: "Sub Flow: hide the input and output ports"
+    summary: >-
+      A subflow that only wraps a screen or a helper does not need to show its
+      Begin and End ports on the canvas. A new option on the Sub Flow node
+      hides them, and a bare Begin-to-End wire no longer stands in the way.
 
   - id: visual-diff
     date: "2026-09-01"
@@ -53,8 +69,24 @@ entries:
     summary: >-
       A flow's source is generated TypeScript, so a renamed node, a rewired
       port and a new selector all look the same in git. Visual Diff shows the
-      change on the canvas instead, version against version.
+      change on the canvas instead, version against version, with a bar that
+      walks you through every difference.
     video: 9JzXs2FHgl4
     link:
       label: Watch the walkthrough
       url: https://www.youtube.com/watch?v=9JzXs2FHgl4
+
+  - id: academy-and-templates-september
+    date: "2026-08-30"
+    tag: Academy
+    title: "Robomotion Academy: eighteen short lessons, and the templates that go with them"
+    summary: >-
+      The Home page now carries the Academy series: from your first run to
+      queues, knowledge bases, forms, chat assistants, webhooks and HTTP calls,
+      one node and one idea at a time. New companion templates ship beside the
+      episodes: Refund Queue, Knowledge Base Endpoint, Tax Portal MCP Server,
+      RAG with DeepSeek, Clinic Support Assistant and Website Pitch Builder.
+    video: F-Gi97ODx2s
+    link:
+      label: Open the Academy playlist
+      url: https://www.youtube.com/playlist?list=PLie2idTJ_1wvlEgLuDUDt_bbAs-29xtmL
