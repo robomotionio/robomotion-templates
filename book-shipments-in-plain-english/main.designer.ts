@@ -4,11 +4,11 @@
 // the message to a Label instead. Set up and sign in on top; the order loop under it; then
 // the sheet; then the browser closing. 280 px / 140 px on the grid in docs/layout-guide.md;
 // Start, Label, GoTo and Stop are short nodes, so they carry the +6 px nudge that keeps a
-// wire level. Act's ports are Continue, Needs a person, Done from the top, so Sign In's
-// Needs a person goes up to its GoTo and Done goes down to the other.
+// wire level. Act's ports are Step and Done from the top, and being stuck is an error: each
+// Act has a Catch, wired to where a stuck run goes next.
 export default {
   flowId: '929b22bc-0d17-4b95-84bc-dd1274c5af78',
-  sourceHash: '5b1bfb02',
+  sourceHash: '8e74cbf2',
   positions: {
     // ---- set up, and sign in ----
     'c10001': { x: 600, y: 246 },     // Start
@@ -18,15 +18,17 @@ export default {
     'c10005': { x: 1720, y: 240 },    // Open Chrome
     'c10006': { x: 2000, y: 240 },    // Open the Carrier
     'c10007': { x: 2280, y: 240 },    // Sign In (Act)
-    'c10015': { x: 2560, y: 196 },    // Go To Close  (Needs a person)
-    'c10014': { x: 2560, y: 286 },    // Start the Orders  (Done)
+    'c10017': { x: 2280, y: 106 },    // Catch: If Sign In Gets Stuck
+    'c10015': { x: 2560, y: 106 },    // Go To Close
+    'c10014': { x: 2560, y: 246 },    // Start the Orders  (Done)
     // ---- the order loop ----
     'c10008': { x: 600, y: 386 },     // Label: Next Order
     'c10009': { x: 880, y: 380 },     // For Each Order
     'c1000a': { x: 1160, y: 380 },    // Write the Instructions
     'c1000b': { x: 1440, y: 380 },    // Open a Blank Shipment
     'c1000c': { x: 1720, y: 380 },    // Book the Order (Act)
-    'c1000d': { x: 2000, y: 430 },    // Read the Tracking Number, set low so Needs a person passes over it
+    'c1000d': { x: 2000, y: 380 },    // Read the Tracking Number
+    'c10018': { x: 2000, y: 476 },    // Catch: If an Order Gets Stuck, up into Note It Down
     'c1000e': { x: 2280, y: 380 },    // Note It Down
     'c1000f': { x: 2560, y: 386 },    // Go To Next Order
     // ---- the sheet (For Each, done port) ----
