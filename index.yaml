@@ -318,6 +318,7 @@ templates:
     created: "2026-09-18"
     updated: "2026-09-18"
     screenshot: undefined
+    video_url: "https://www.youtube.com/watch?v=L21FH2jl3Mk"
     has_subflows: false
 
   - name: Broken Backlink Recovery Tasks

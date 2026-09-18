@@ -2,6 +2,10 @@
 
 Book Shipments in Plain English books a morning's orders on a carrier website that has no API. Six orders come in as a CSV, each with a consignee, a destination, a reference, a weight and a note from the customer about how soon they need it. Normally a person types them in one at a time and reads every note to choose the service. Here the robot does it from six numbered steps written in plain English.
 
+## Watch the video
+
+👉 [Watch on YouTube](https://www.youtube.com/watch?v=L21FH2jl3Mk)
+
 The instructions live in one node, *The Runbook*, and nothing else lives there: enter the consignee, choose the destination, enter the reference, choose the service from what the customer wrote, enter the weight, create the shipment. The **Browser Act** node follows them page by page. It reads what is on the screen, and **Jev**, TypeSafe's decision model, picks every next move through OpenRouter: which field, which option, when to go on, when it is done. Not one step names a button, a field or a page, so a redesigned form does not break the flow.
 
 Jev does not write text. It is given the page and a list of allowed answers and returns one of them with a probability for every option, so it cannot invent an answer and every move carries a number the robot can act on. That is also why it is cheap: output tokens cost nothing, and a decision pays for its input alone. In our runs a whole six-order batch took 55 decisions and cost $0.0086 on OpenRouter's own meter.
