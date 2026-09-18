@@ -1,7 +1,7 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('main', 'Book Shipments in Plain English', (f) => {
-  f.node('c30001', 'Core.Flow.Comment', 'Comment', { optText: "#### Book Shipments in Plain English\nSix orders go onto a carrier website that has no API. The whole job is six numbered steps of English in *The Runbook*, and the **Browser Act** node follows them page by page: it reads what is on the screen, and **Jev**, TypeSafe's decision model on OpenRouter, picks every next move. No step names a button or a field.\n\nJev also chooses each order's service from the customer's own note. It never writes text, so its output tokens cost nothing, and below a confidence of 0.55 the robot touches nothing and the order leaves on *Needs a person*.\n\nNothing is taken on trust: *Read the Tracking Number* checks the page for a new tracking number that names this order, and `~/Orders/booked.csv` is the receipt." });
+  f.node('c30001', 'Core.Flow.Comment', 'Comment', { optText: "#### Book Shipments in Plain English\nSix orders go onto a carrier website that has no API. The whole job is six numbered steps of English in *The Runbook*, and the **Browser Act** node follows them page by page: it reads what is on the screen, and **Jev**, TypeSafe's decision model on OpenRouter, picks every next move. No step names a button or a field.\n\nJev also chooses each order's service from the customer's own note. It never writes text, so its output tokens cost nothing, and below a confidence of 0.55 the robot touches nothing: the node fails with the reason, *If an Order Gets Stuck* catches it, and the order goes into the sheet as stuck.\n\nNothing is taken on trust: *Read the Tracking Number* checks the page for a new tracking number that names this order, and `~/Orders/booked.csv` is the receipt." });
 
   f.node('c30002', 'Core.Flow.Comment', 'Setup Guide', { optText: "#### 🚀 Setup Guide\n\n**1.** Copy `assets/orders.csv` into a folder called `Orders` in your home directory, or write your own with the columns Reference, Consignee, Destination, Weight, Note.\n\n**2.** Admin Console > Vaults: add a **Login** item for the carrier and select it in *Get the Carrier Login*. SlugExpress is a training portal, and its demo account is printed on its own sign-in page, https://slugexpress.robomotion.online/portal/login.\n\n**3.** Add an **API Key** item that holds an OpenRouter key, and select it in the **Credentials** property of *Sign In* and *Book the Order*.\n\n**4.** Give your robot access to that vault. The Browser Act node needs Robomotion 26.9.3 or later on the robot.\n\n**5.** Run the flow. Chrome signs in and books every order, and `~/Orders/booked.csv` gets a service and a tracking number for each one." });
 
@@ -59,6 +59,7 @@ msg.values = {
 };
 
 msg.proof_json = '';
+msg.act = null;
 return msg;
 ` })
     ;
@@ -80,7 +81,9 @@ return JSON.stringify({
 ` })
     ;
   f.node('c1000e', 'Core.Programming.Function', 'Note It Down', { func: `
-var a = msg.act;
+/* An order the Act node could not finish arrives here from the Catch, with
+   the node's own result still on the message. */
+var a = msg.act || { status: 'blocked', reason: msg.error ? msg.error.message : '', steps: 0, model_ms: 0, trace: [] };
 var o = msg.order;
 msg.proof = msg.proof_json ? JSON.parse(msg.proof_json) : { tracking: '' };
 msg.decisions = msg.decisions + a.steps;
@@ -108,7 +111,7 @@ var proven = a.status === 'done' && msg.proof.tracking !== '' && !seen &&
 
 var result = 'booked';
 if (!proven) {
-  result = a.status === 'done' ? 'not proven on the page' : 'needs a person: ' + a.reason;
+  result = a.status === 'done' ? 'not proven on the page' : 'stuck: ' + a.reason;
 }
 
 msg.booked.push({
@@ -159,6 +162,10 @@ return msg;
     ;
   f.node('c10016', 'Core.Flow.Label', 'Close the Browser', {})
     ;
+  f.node('c10017', 'Core.Trigger.Catch', 'If Sign In Gets Stuck', { optNodes: { type: 'catch', ids: ['c10007'], all: false } })
+    ;
+  f.node('c10018', 'Core.Trigger.Catch', 'If an Order Gets Stuck', { optNodes: { type: 'catch', ids: ['c1000c'], all: false } })
+    ;
 
   f.edge('c10001', 0, 'c10002', 0);
   f.edge('c10002', 0, 'c10003', 0);
@@ -166,16 +173,16 @@ return msg;
   f.edge('c10004', 0, 'c10005', 0);
   f.edge('c10005', 0, 'c10006', 0);
   f.edge('c10006', 0, 'c10007', 0);
-  f.edge('c10007', 2, 'c10014', 0);
-  f.edge('c10007', 1, 'c10015', 0);
+  f.edge('c10007', 1, 'c10014', 0);
+  f.edge('c10017', 0, 'c10015', 0);
   f.edge('c10016', 0, 'c10013', 0);
   f.edge('c10008', 0, 'c10009', 0);
   f.edge('c10009', 0, 'c1000a', 0);
   f.edge('c10009', 1, 'c10010', 0);
   f.edge('c1000a', 0, 'c1000b', 0);
   f.edge('c1000b', 0, 'c1000c', 0);
-  f.edge('c1000c', 2, 'c1000d', 0);
-  f.edge('c1000c', 1, 'c1000e', 0);
+  f.edge('c1000c', 1, 'c1000d', 0);
+  f.edge('c10018', 0, 'c1000e', 0);
   f.edge('c1000d', 0, 'c1000e', 0);
   f.edge('c1000e', 0, 'c1000f', 0);
   f.edge('c10010', 0, 'c10011', 0);
