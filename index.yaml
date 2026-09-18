@@ -299,6 +299,28 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Book Shipments in Plain English
+    slug: book-shipments-in-plain-english
+    summary: >-
+      Books a morning's shipments on a carrier website that has no API, from six
+      numbered steps written in plain English. The Browser Act node follows the
+      steps page by page: it reads what is on the screen, and Jev, TypeSafe's
+      decision model on OpenRouter, picks every next move, including which service
+      each customer's note asks for. No step names a button or a field. Jev never
+      writes text, so its output tokens cost nothing, and below a confidence of
+      0.55 the robot touches nothing and hands the order to a person. Every
+      booking is proven in code before it counts: a new tracking number, on a page
+      that names that order.
+    category: AI
+    level: Intermediate
+    tags: [ai, browser-act, jev, typesafe, openrouter, browser, web-automation, form-filling, csv, loop, vault]
+    author: Robomotion
+    created: "2026-09-18"
+    updated: "2026-09-18"
+    screenshot: undefined
+    video_url: "https://www.youtube.com/watch?v=L21FH2jl3Mk"
+    has_subflows: false
+
   - name: Broken Backlink Recovery Tasks
     slug: track-broken-backlinks-and-create-recovery-tasks-in-asana
     summary: >-
