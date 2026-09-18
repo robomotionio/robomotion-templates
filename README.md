@@ -318,6 +318,7 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 
 | Template | Level | Description |
 |----------|-------|-------------|
+| [Book Shipments in Plain English](book-shipments-in-plain-english) | Intermediate | Books orders on a carrier website from six numbered steps in plain English. The Browser Act node follows them page by page with Jev, a decision model whose output tokens cost nothing, choosing each order's service from the customer's note and proving every booking on the page. |
 | [Calorie Coach Agent](calorie-coach-agent) | Advanced | A chat-based nutrition tracker that logs meals into SQLite and coaches the user toward calorie and macro goals |
 | [Clinic Support Assistant](clinic-support-assistant) | Advanced | A website support assistant served to the page as one MCP tool. A visitor and a signed-in patient are answered by two different Hermes Agents, and only the patient's is wired to their own record. |
 | [Conversational Order Assistant](conversational-order-assistant) | Advanced | Takes a return in whatever order the customer explains it. An LLM Agent asks for what is missing, and an ordinary automation on its tools port looks the order up mid conversation. |
