@@ -153,6 +153,12 @@ return msg;
     ;
   f.node('c10099', 'Core.Flow.Stop', 'Stop', {})
     ;
+  f.node('c10014', 'Core.Flow.GoTo', 'Start the Orders', { optNodes: { ids: ['c10008'], type: 'goto', all: false } })
+    ;
+  f.node('c10015', 'Core.Flow.GoTo', 'Go To Close', { optNodes: { ids: ['c10016'], type: 'goto', all: false } })
+    ;
+  f.node('c10016', 'Core.Flow.Label', 'Close the Browser', {})
+    ;
 
   f.edge('c10001', 0, 'c10002', 0);
   f.edge('c10002', 0, 'c10003', 0);
@@ -160,15 +166,16 @@ return msg;
   f.edge('c10004', 0, 'c10005', 0);
   f.edge('c10005', 0, 'c10006', 0);
   f.edge('c10006', 0, 'c10007', 0);
-  f.edge('c10007', 0, 'c10009', 0);
-  f.edge('c10007', 2, 'c10013', 0);
+  f.edge('c10007', 2, 'c10014', 0);
+  f.edge('c10007', 1, 'c10015', 0);
+  f.edge('c10016', 0, 'c10013', 0);
   f.edge('c10008', 0, 'c10009', 0);
   f.edge('c10009', 0, 'c1000a', 0);
   f.edge('c10009', 1, 'c10010', 0);
   f.edge('c1000a', 0, 'c1000b', 0);
   f.edge('c1000b', 0, 'c1000c', 0);
-  f.edge('c1000c', 0, 'c1000d', 0);
-  f.edge('c1000c', 2, 'c1000e', 0);
+  f.edge('c1000c', 2, 'c1000d', 0);
+  f.edge('c1000c', 1, 'c1000e', 0);
   f.edge('c1000d', 0, 'c1000e', 0);
   f.edge('c1000e', 0, 'c1000f', 0);
   f.edge('c10010', 0, 'c10011', 0);
