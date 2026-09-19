@@ -241,8 +241,22 @@ videos:
       project, write the flow, validate it, run it on a real robot and commit the
       result, without anybody dragging a node onto a canvas. This episode films the
       whole loop once, end to end, with nothing cut out.
-    duration: "7:33"
-    duration_seconds: 453
+    duration: "7:34"
+    duration_seconds: 454
     published: "2026-09-16"
     level: Intermediate
     topic: "Claude Code"
+
+  - id: Th_Qyyp_73Q
+    episode: 19
+    title: "How to Build Robomotion Apps with Claude Code"
+    summary: >-
+      A Robomotion App is two halves in one git repository: a real web app built from
+      Robomotion's app kit, and a flow behind it that answers every button on a robot.
+      This episode builds one from a single prompt, a to-do list, and then shows three
+      things every Robomotion app gets without asking for them.
+    duration: "7:16"
+    duration_seconds: 436
+    published: "2026-09-19"
+    level: Intermediate
+    topic: "Apps"
