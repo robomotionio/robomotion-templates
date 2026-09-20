@@ -74,6 +74,10 @@ CURATION = {
     "9JzXs2FHgl4": ("Intermediate", "Version Control"),
     "r6_6i1Rcbbc": ("Intermediate", "Claude Code"),
     "Th_Qyyp_73Q": ("Intermediate", "Apps"),
+    # Same track as 19: one builds the app with Claude Code, the other with the
+    # Designer's own assistant, and a learner who wants apps wants both. Repeated
+    # topics are the pattern here - 3 and 10 are Scripting, 8 and 9 Web Scraping.
+    "jtoaOSHxHS4": ("Intermediate", "Apps"),
 }
 
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36"
