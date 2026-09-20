@@ -260,3 +260,17 @@ videos:
     published: "2026-09-19"
     level: Intermediate
     topic: "Apps"
+
+  - id: jtoaOSHxHS4
+    episode: 20
+    title: "From prompt to production: Build with AI"
+    summary: >-
+      The Designer builds the whole app for you: real screens people click, and a robot
+      behind every button. You choose the model it thinks with, and you can pay for it
+      with your own key. This episode builds a two screen expense tracker from one
+      paragraph and takes it all the way to production, without leaving the browser.
+    duration: "9:49"
+    duration_seconds: 589
+    published: "2026-09-20"
+    level: Intermediate
+    topic: "Apps"
