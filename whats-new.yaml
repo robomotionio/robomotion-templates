@@ -12,12 +12,99 @@
 #   bullets   - a short list of concrete things the feature does
 #   image     - repo-relative path (whats-new/<file>.png) or an absolute URL,
 #               shown 16:9 above the text
+#   image_dark- the same picture for the dark theme; `image` is used in both
+#               themes when it is missing
 #   video     - a YouTube video id; wins over image and plays in place
-#   link      - { label, url } rendered as the entry's call to action
+#   link      - { label, url } rendered as the entry's call to action; url is
+#               absolute, or a path such as /agents/hub/<slug> that opens in
+#               the person's own workspace
 #   try       - a prompt; the dialog shows a "Try it now" box and a button that
 #               puts it in the Home page's Build box
 #   tag       - short label such as "New", "Improved", "Academy"
 schema_version: 1
+
+# Dated announcements: one page of the dialog each, newest first. Designers
+# older than 2026-09-18 read only `entries` below and do not show these.
+announcements:
+  - date: "2026-09-24"
+    title: "Three new apps in the Agent Hub, and Agent Teams in early preview"
+    entries:
+      - id: hub-app-stageline
+        tag: New app
+        title: "Stageline: see where every deal stands"
+        summary: >-
+          A CRM that puts every deal and task on a board, one column per
+          stage. Open a card and you see every stage it has passed through,
+          who moved it and when. It runs on your own robot and keeps
+          everything there: no account to open, no seat to pay for.
+        bullets:
+          - "Drag a card to move it; each column shows its count on top"
+          - "Bring your records in from a spreadsheet, with every problem shown before anything is written"
+          - "Download a full backup whenever you like and restore it on any robot"
+        image: https://images.robomotion.io/agent-hub-test/stageline/cover-light.png
+        image_dark: https://images.robomotion.io/agent-hub-test/stageline/cover.png
+        link:
+          label: Open Stageline in the Agent Hub
+          url: /agents/hub/stageline
+
+      - id: hub-app-inkwell
+        tag: New app
+        title: "Inkwell: write your book in your own voice"
+        summary: >-
+          Start from one idea, shape the whole book and draft chapters that
+          remember everything before them. Inkwell learns your voice as rules
+          you can read and change, and keeps a bible of every person, place
+          and fact the book has established.
+        bullets:
+          - "Chapters are written section by section, to the length you asked for"
+          - "Nothing it writes replaces your words until you take it"
+          - "Edit, finish and export, with the cover, launch kit and translation in the same place"
+          - "Runs on your own robot and your own OpenRouter key: no credits, no seat fee"
+        image: https://images.robomotion.io/agent-hub-test/inkwell/cover-light.png
+        image_dark: https://images.robomotion.io/agent-hub-test/inkwell/cover.png
+        link:
+          label: Open Inkwell in the Agent Hub
+          url: /agents/hub/inkwell
+
+      - id: hub-app-ad-cracker
+        tag: New app
+        title: "Ad Cracker: turn competitor ads into your own"
+        summary: >-
+          Name the brands you care about and Ad Cracker reads every ad they
+          are running live in the Meta Ad Library, scores each one on twelve
+          questions and shows the pattern across your category. Point at the
+          ad that is working and it writes and draws three versions of it for
+          your brand.
+        bullets:
+          - "See the whole category at a glance instead of an afternoon of scrolling"
+          - "Nothing is published: the ads it makes wait for your review"
+          - "Runs on your own robot and your own OpenRouter key, so a category costs cents"
+        image: https://images.robomotion.io/agent-hub-test/ad-cracker/cover-light.png
+        image_dark: https://images.robomotion.io/agent-hub-test/ad-cracker/cover.png
+        link:
+          label: Open Ad Cracker in the Agent Hub
+          url: /agents/hub/ad-cracker
+
+      - id: agent-teams-early-preview
+        tag: Early preview
+        title: "Agent Teams: hire AI agents and talk to them"
+        summary: >-
+          Agent Teams is in early preview. Hire an agent from the Agent Hub,
+          such as a Content Writer, a Data Analyst or a Contract Reviewer, and
+          talk to it the way you would to a colleague: in a direct message or
+          in a channel with the rest of your team. Things will change while it
+          is in preview, and we would like to hear what you think.
+        bullets:
+          - "Hire agents from the Agent Hub, next to the apps"
+          - "Talk to them in direct messages and channels, and send them files"
+          - "Agents can hand work to each other: Trend Scout finds the topic, Content Writer writes the post"
+          - "Agents can use your apps too: give Ad Cracker to Ad Strategist and it writes 30 ad variants from what Ad Cracker found"
+        image: https://images.robomotion.io/agent-hub-test/copywriter/featured-light.png
+        image_dark: https://images.robomotion.io/agent-hub-test/copywriter/featured.png
+        link:
+          label: Open Agent Teams
+          url: /agents/teams
+
 entries:
   - id: robomotion-apps
     date: "2026-09-16"
