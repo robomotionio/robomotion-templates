@@ -90,7 +90,9 @@ return JSON.stringify(out);`,
     })
     .then('a1000d', 'Core.Programming.Function', 'Queue Requests', {
       func: `msg.requests = JSON.parse(msg.pending_json);
-if (msg.requests.length === 0) { throw new Error('no pending leave requests found'); }
+if (msg.requests.length === 0) {
+  throw new Error('no pending leave requests found');
+}
 console.log('Pending leave requests: ' + msg.requests.length);
 return msg;`
     })
@@ -115,10 +117,15 @@ msg.approve_xpath = row + '//button[@data-testid="approve-button"]';
 msg.violates = flag.length > 0;
 // Turn the site's policy chip into a written reason.
 var reason = '';
-if (flag.indexOf('balance') >= 0 || flag.indexOf('insufficient') >= 0) { reason = 'Insufficient annual leave balance for the days requested'; }
-else if (flag.indexOf('overlap') >= 0 || flag.indexOf('conflict') >= 0 || flag.indexOf('team') >= 0) { reason = 'Overlaps with leave already approved in the same team'; }
-else if (flag.indexOf('blackout') >= 0) { reason = 'Falls inside the month-end close blackout window'; }
-else if (msg.violates) { reason = 'Policy exception: ' + msg.req.flag; }
+if (flag.indexOf('balance') >= 0 || flag.indexOf('insufficient') >= 0) {
+  reason = 'Insufficient annual leave balance for the days requested';
+} else if (flag.indexOf('overlap') >= 0 || flag.indexOf('conflict') >= 0 || flag.indexOf('team') >= 0) {
+  reason = 'Overlaps with leave already approved in the same team';
+} else if (flag.indexOf('blackout') >= 0) {
+  reason = 'Falls inside the month-end close blackout window';
+} else if (msg.violates) {
+  reason = 'Policy exception: ' + msg.req.flag;
+}
 msg.reason = reason;
 return msg;`
   });
@@ -201,11 +208,21 @@ return msg;`
     func: `var rows = msg.decisions;
 rows.sort(function (a, b) { return a.request < b.request ? -1 : a.request > b.request ? 1 : 0; });
 var approved = 0, denied = 0;
-for (var i = 0; i < rows.length; i++) { if (rows[i].decision === 'Approved') { approved++; } else { denied++; } }
+for (var i = 0; i < rows.length; i++) {
+  if (rows[i].decision === 'Approved') {
+    approved++;
+  } else {
+    denied++;
+  }
+}
 msg.report_table = { columns: ['request', 'worker', 'decision', 'reason'], rows: rows };
 var elapsed = Math.round((Date.now() - msg.t0) / 1000);
 console.log('Processed ' + rows.length + ' leave requests in ' + elapsed + 's: ' + approved + ' approved, ' + denied + ' denied');
-for (var k = 0; k < rows.length; k++) { if (rows[k].decision === 'Denied') { console.log('  DENIED ' + rows[k].request + ' ' + rows[k].worker + ' - ' + rows[k].reason); } }
+for (var k = 0; k < rows.length; k++) {
+  if (rows[k].decision === 'Denied') {
+    console.log('  DENIED ' + rows[k].request + ' ' + rows[k].worker + ' - ' + rows[k].reason);
+  }
+}
 return msg;`
   });
   f.edge('c30001', 0, 'c30002', 0);
