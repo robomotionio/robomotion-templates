@@ -93,7 +93,9 @@ return JSON.stringify(out);`,
     })
     .then('a10010', 'Core.Programming.Function', 'Record Proposal', {
       func: `msg.proposed = JSON.parse(msg.due_json);
-if (msg.proposed.length === 0) { throw new Error('no bills due in the 7-day window'); }
+if (msg.proposed.length === 0) {
+  throw new Error('no bills due in the 7-day window');
+}
 console.log('Bills due within 7 days: ' + msg.proposed.length);
 return msg;`
     })
@@ -166,8 +168,14 @@ return JSON.stringify(out);`,
   f.node('c30001', 'Core.Programming.Function', 'Build Report', {
     func: `msg.blocked = JSON.parse(msg.blocked_json);
 var proposedCount = parseInt(msg.proposal_count, 10) || msg.proposed.length;
-function num(s) { return parseFloat(String(s == null ? '' : s).replace(/[^0-9.-]/g, '')) || 0; }
-function money(n) { var parts = n.toFixed(2).split('.'); parts[0] = parts[0].replace(/\\B(?=(\\d{3})+(?!\\d))/g, ','); return '€' + parts[0] + '.' + parts[1]; }
+function num(s) {
+  return parseFloat(String(s == null ? '' : s).replace(/[^0-9.-]/g, '')) || 0;
+}
+function money(n) {
+  var parts = n.toFixed(2).split('.');
+  parts[0] = parts[0].replace(/\\B(?=(\\d{3})+(?!\\d))/g, ',');
+  return '€' + parts[0] + '.' + parts[1];
+}
 var rows = [];
 var runTotal = 0;
 for (var i = 0; i < msg.proposed.length; i++) {
@@ -183,7 +191,9 @@ rows.unshift({ outcome: 'SUMMARY', document: '', vendor: proposedCount + ' propo
 msg.report_table = { columns: ['outcome', 'document', 'vendor', 'amount', 'reason'], rows: rows };
 var elapsed = Math.round((Date.now() - msg.t0) / 1000);
 console.log('Payment run in ' + elapsed + 's: ' + proposedCount + ' bills proposed (' + money(runTotal) + '), ' + msg.blocked.length + ' blocked and excluded');
-for (var k = 0; k < msg.blocked.length; k++) { console.log('  EXCLUDED ' + msg.blocked[k].document + ' ' + msg.blocked[k].vendor + ' - ' + msg.blocked[k].reason); }
+for (var k = 0; k < msg.blocked.length; k++) {
+  console.log('  EXCLUDED ' + msg.blocked[k].document + ' ' + msg.blocked[k].vendor + ' - ' + msg.blocked[k].reason);
+}
 return msg;`
   });
   f.edge('b20005', 0, 'c30001', 0);

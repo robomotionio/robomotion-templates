@@ -86,7 +86,9 @@ return JSON.stringify(out);`,
     })
     .then('a1000e', 'Core.Programming.Function', 'Total The Recovery', {
       func: `var deals = JSON.parse(msg.unbilled_json);
-if (deals.length === 0) { throw new Error('no unbilled won deals found on the board'); }
+if (deals.length === 0) {
+  throw new Error('no unbilled won deals found on the board');
+}
 var rows = [];
 var total = 0;
 for (var i = 0; i < deals.length; i++) {
