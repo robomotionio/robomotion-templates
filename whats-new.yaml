@@ -27,7 +27,7 @@ schema_version: 1
 # older than 2026-09-18 read only `entries` below and do not show these.
 announcements:
   - date: "2026-09-24"
-    title: "Three new apps in the Agent Hub, and Agent Teams in early preview"
+    title: "Three new apps in the Agent Hub"
     entries:
       - id: hub-app-stageline
         tag: New app
@@ -60,8 +60,8 @@ announcements:
           - "Nothing it writes replaces your words until you take it"
           - "Edit, finish and export, with the cover, launch kit and translation in the same place"
           - "Runs on your own robot and your own OpenRouter key: no credits, no seat fee"
-        image: https://images.robomotion.io/agent-hub-test/inkwell/cover-light.png
-        image_dark: https://images.robomotion.io/agent-hub-test/inkwell/cover.png
+        image: https://images.robomotion.io/agent-hub-test/inkwell/cover-v2-light.png
+        image_dark: https://images.robomotion.io/agent-hub-test/inkwell/cover-v2.png
         link:
           label: Open Inkwell in the Agent Hub
           url: /agents/hub/inkwell
@@ -84,26 +84,6 @@ announcements:
         link:
           label: Open Ad Cracker in the Agent Hub
           url: /agents/hub/ad-cracker
-
-      - id: agent-teams-early-preview
-        tag: Early preview
-        title: "Agent Teams: hire AI agents and talk to them"
-        summary: >-
-          Agent Teams is in early preview. Hire an agent from the Agent Hub,
-          such as a Content Writer, a Data Analyst or a Contract Reviewer, and
-          talk to it the way you would to a colleague: in a direct message or
-          in a channel with the rest of your team. Things will change while it
-          is in preview, and we would like to hear what you think.
-        bullets:
-          - "Hire agents from the Agent Hub, next to the apps"
-          - "Talk to them in direct messages and channels, and send them files"
-          - "Agents can hand work to each other: Trend Scout finds the topic, Content Writer writes the post"
-          - "Agents can use your apps too: give Ad Cracker to Ad Strategist and it writes 30 ad variants from what Ad Cracker found"
-        image: https://images.robomotion.io/agent-hub-test/copywriter/featured-light.png
-        image_dark: https://images.robomotion.io/agent-hub-test/copywriter/featured.png
-        link:
-          label: Open Agent Teams
-          url: /agents/teams
 
 entries:
   - id: robomotion-apps
