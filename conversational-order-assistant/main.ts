@@ -1,8 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('main', "Conversational Order Assistant", (f) => {
-  f.addDependency('Robomotion.ChatAssistant', '1.8.6');
-  f.addDependency('Robomotion.ADK', '0.22.2');
+  f.addDependency('Robomotion.ChatAssistant', '1.9.1');
+  f.addDependency('Robomotion.ADK', '0.23.4');
 
   f.node('b2d001', 'Core.Flow.Comment', 'Comment', { optText: '#### Conversational Order Assistant\n\nA conversational chat assistant hands the conversation to an LLM Agent. Nobody draws the questions: the instructions say what to collect, and the model asks for whatever is missing, in whatever order the customer brings it.\n\nAn LLM Agent has three outputs before its ordinary one: sub-agents, tools and callbacks. Anything wired to the tools port becomes something the model can decide to call, so the Tool In branch below is an ordinary automation the model can reach for mid sentence. Replace Find The Order with a portal login, a database query, or whatever your lookup really is.\n\nButtons and tick boxes are refused in this mode by the nodes themselves. In a conversation, the asking is the model\'s job.' });
 
@@ -22,7 +22,7 @@ flow.create('main', "Conversational Order Assistant", (f) => {
       outFileUris: Message('file_uris'),
       outCodeOutputs: Message('code_outputs'),
       outRawResponse: Message('raw_response'),
-      optModelName: 'gemini-3.1-flash',
+      optModelName: 'gemini-3.8-flash',
       optCustomModelString: Custom(''),
       optApiBaseUrl: Custom(''),
       optOutputSchema: Custom(''),
