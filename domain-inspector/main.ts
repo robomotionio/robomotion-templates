@@ -1,7 +1,7 @@
 import { flow, AI, Custom, Message } from '@robomotion/sdk';
 
 flow.create('9d663a2a-265f-44bc-a0b6-d2b7dbb8ad91', 'Domain Inspector', (f) => {
-  f.addDependency('Robomotion.ChatAssistant', '1.7.3');
+  f.addDependency('Robomotion.ChatAssistant', '1.9.2');
   f.addDependency('Robomotion.Agents', '0.14.1');
   f.addDependency('Robomotion.Monitoring', '0.5.5');
 
@@ -15,8 +15,8 @@ flow.create('9d663a2a-265f-44bc-a0b6-d2b7dbb8ad91', 'Domain Inspector', (f) => {
     func: 'You are a domain inspector assistant. Your job is to check and report on:\n\n- SSL/TLS certificate information (expiration, issuer, validity, etc.)\n- DNS records (A, AAAA, MX, TXT, CNAME, NS, etc.)\n\nWhen given a domain, provide the relevant SSL and/or DNS details clearly and concisely.\n\nIf a user asks about something unrelated to domain inspection, politely decline and explain that you only handle SSL and DNS lookups.\n\nYou MUST use the agent tools to answer these questions.\n',
     inUserPrompt: Message('payload.text'),
     inFiles: Message('payload.files'),
-    optSkills: '[]',
-    optActiveSkills: '[]',
+    optSkills: Custom('[]'),
+    optActiveSkills: Custom('[]'),
     optUseRobomotionCredits: true
   });
   f.node('c290ec', 'Robomotion.ChatAssistant.Text', 'Text', { inText: Message('text') })

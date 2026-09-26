@@ -1,7 +1,7 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('main', "Guided Returns Desk", (f) => {
-  f.addDependency('Robomotion.ChatAssistant', '1.9.1');
+  f.addDependency('Robomotion.ChatAssistant', '1.9.2');
 
   f.node('a1c001', 'Core.Flow.Comment', 'Comment', { optText: '#### Guided Returns Desk\n\nA guided chat assistant asks the questions you drew, in the order you drew them. Every question here is a node: a Textbox for the order number, a ButtonGroup for what went wrong, and a Checkbox group for what to do about it.\n\nThe interesting part is in the middle. Look The Order Up and Do We Have It check the answer while the customer is still in the conversation, and the wire from Say We Cannot Find It goes back to the question, so a wrong order number gets another go instead of an exception in a log nobody reads.' });
 
