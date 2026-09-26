@@ -27,7 +27,7 @@ schema_version: 1
 # older than 2026-09-18 read only `entries` below and do not show these.
 announcements:
   - date: "2026-09-24"
-    title: "Three new apps in the Agent Hub"
+    title: "Three new apps in the Robomotion Store"
     entries:
       - id: hub-app-stageline
         tag: New app
@@ -44,7 +44,7 @@ announcements:
         image: https://images.robomotion.io/agent-hub-test/stageline/cover-light.png
         image_dark: https://images.robomotion.io/agent-hub-test/stageline/cover.png
         link:
-          label: Open Stageline in the Agent Hub
+          label: Open Stageline in the Store
           url: /agents/hub/stageline
 
       - id: hub-app-inkwell
@@ -63,7 +63,7 @@ announcements:
         image: https://images.robomotion.io/agent-hub-test/inkwell/cover-v2-light.png
         image_dark: https://images.robomotion.io/agent-hub-test/inkwell/cover-v2.png
         link:
-          label: Open Inkwell in the Agent Hub
+          label: Open Inkwell in the Store
           url: /agents/hub/inkwell
 
       - id: hub-app-ad-cracker
@@ -82,7 +82,7 @@ announcements:
         image: https://images.robomotion.io/agent-hub-test/ad-cracker/cover-light.png
         image_dark: https://images.robomotion.io/agent-hub-test/ad-cracker/cover.png
         link:
-          label: Open Ad Cracker in the Agent Hub
+          label: Open Ad Cracker in the Store
           url: /agents/hub/ad-cracker
 
 entries:
