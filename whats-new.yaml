@@ -44,6 +44,9 @@ announcements:
           - "Use a project in any flow, measure its accuracy and train your own version"
           - "A 14-lesson course walks through all of it, from your first project to production"
         image: whats-new/document-understanding.png
+        link:
+          label: Watch the course
+          url: https://www.youtube.com/playlist?list=PLGBMcqUpul0I
 
   - date: "2026-09-24"
     title: "Three new apps in the Robomotion Store"
