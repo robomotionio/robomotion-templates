@@ -26,6 +26,25 @@ schema_version: 1
 # Dated announcements: one page of the dialog each, newest first. Designers
 # older than 2026-09-18 read only `entries` below and do not show these.
 announcements:
+  - date: "2026-10-01"
+    title: "Document Understanding: from paper to data"
+    entries:
+      - id: document-understanding
+        tag: New
+        title: "Document Understanding: turn any document into data"
+        summary: >-
+          Invoices, receipts, forms and statements become clean, checked data
+          your robots can use. Documents are read on your own machines, a
+          person checks only what the machine is not sure about, and every
+          check makes the project more accurate. Open it from the Documents
+          icon in the left bar.
+        bullets:
+          - "Start from a template, or let the AI draft the schema from a few sample documents"
+          - "Business rules catch mistakes; the Validation Station sends only the doubtful fields to a person"
+          - "Use a project in any flow, measure its accuracy and train your own version"
+          - "A 14-lesson course walks through all of it, from your first project to production"
+        image: whats-new/document-understanding.png
+
   - date: "2026-09-24"
     title: "Three new apps in the Robomotion Store"
     entries:
