@@ -1,38 +1,5 @@
 import { flow, Message, Custom } from '@robomotion/sdk';
 
-const psScript = [
-  'param([string]$JsonPath, [string]$XlsxPath)',
-  '$ErrorActionPreference = "Stop"',
-  '$tables = Get-Content -Raw -LiteralPath $JsonPath | ConvertFrom-Json',
-  '$excel = New-Object -ComObject Excel.Application',
-  '$excel.Visible = $false',
-  '$excel.DisplayAlerts = $false',
-  '$wb = $excel.Workbooks.Add()',
-  'while ($wb.Sheets.Count -lt $tables.Count) {',
-  '  $wb.Sheets.Add([System.Reflection.Missing]::Value, $wb.Sheets.Item($wb.Sheets.Count)) | Out-Null',
-  '}',
-  'for ($i = 0; $i -lt $tables.Count; $i++) {',
-  '  $table = $tables[$i]',
-  '  $sheet = $wb.Sheets.Item($i + 1)',
-  '  $sheet.Name = "Table_" + ($i + 1)',
-  '  $cols = @($table.columns)',
-  '  for ($c = 0; $c -lt $cols.Count; $c++) {',
-  '    $sheet.Cells.Item(1, $c + 1) = $cols[$c]',
-  '  }',
-  '  $rows = @($table.rows)',
-  '  for ($r = 0; $r -lt $rows.Count; $r++) {',
-  '    $row = $rows[$r]',
-  '    for ($c = 0; $c -lt $cols.Count; $c++) {',
-  '      $sheet.Cells.Item($r + 2, $c + 1) = $row.($cols[$c])',
-  '    }',
-  '  }',
-  '}',
-  '$wb.SaveAs($XlsxPath, 51)',
-  '$wb.Close($false)',
-  '$excel.Quit()',
-  '[System.Runtime.InteropServices.Marshal]::ReleaseComObject($excel) | Out-Null',
-].join('\r\n');
-
 const myFlow = flow.create('e9375004-4206-4251-b855-d97fbb09c729', 'Imported Extract Tables from PDF', (f) => {
   f.addDependency('Robomotion.Pandas', '0.4.2');
 
@@ -74,7 +41,38 @@ return [msg, null];`,
   })
     .then('a10005', 'Core.Programming.Function', 'Serialize Tables JSON', {
       func: `msg.tables_json = JSON.stringify(msg.table_list || []);
-msg.ps_script = ${JSON.stringify(psScript)};
+msg.ps_script = [
+  'param([string]$JsonPath, [string]$XlsxPath)',
+  '$ErrorActionPreference = "Stop"',
+  '$tables = Get-Content -Raw -LiteralPath $JsonPath | ConvertFrom-Json',
+  '$excel = New-Object -ComObject Excel.Application',
+  '$excel.Visible = $false',
+  '$excel.DisplayAlerts = $false',
+  '$wb = $excel.Workbooks.Add()',
+  'while ($wb.Sheets.Count -lt $tables.Count) {',
+  '  $wb.Sheets.Add([System.Reflection.Missing]::Value, $wb.Sheets.Item($wb.Sheets.Count)) | Out-Null',
+  '}',
+  'for ($i = 0; $i -lt $tables.Count; $i++) {',
+  '  $table = $tables[$i]',
+  '  $sheet = $wb.Sheets.Item($i + 1)',
+  '  $sheet.Name = "Table_" + ($i + 1)',
+  '  $cols = @($table.columns)',
+  '  for ($c = 0; $c -lt $cols.Count; $c++) {',
+  '    $sheet.Cells.Item(1, $c + 1) = $cols[$c]',
+  '  }',
+  '  $rows = @($table.rows)',
+  '  for ($r = 0; $r -lt $rows.Count; $r++) {',
+  '    $row = $rows[$r]',
+  '    for ($c = 0; $c -lt $cols.Count; $c++) {',
+  '      $sheet.Cells.Item($r + 2, $c + 1) = $row.($cols[$c])',
+  '    }',
+  '  }',
+  '}',
+  '$wb.SaveAs($XlsxPath, 51)',
+  '$wb.Close($false)',
+  '$excel.Quit()',
+  '[System.Runtime.InteropServices.Marshal]::ReleaseComObject($excel) | Out-Null',
+].join('\\r\\n');
 return msg;`,
     })
     .then('a10006', 'Core.FileSystem.WriteFile', 'Write Tables JSON', {

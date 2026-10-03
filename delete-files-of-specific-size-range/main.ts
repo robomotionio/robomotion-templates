@@ -11,23 +11,26 @@ msg.fixtures_dir = fixtures;
 msg.small_path = fixtures + '/small.txt';
 msg.medium_path = fixtures + '/medium.txt';
 msg.large_path = fixtures + '/large.txt';
+msg.small_text = 'x'.repeat(200);
+msg.medium_text = 'x'.repeat(3072);
+msg.large_text = 'x'.repeat(20480);
 return msg;`,
     })
     .then('a10002', 'Core.FileSystem.WriteFile', 'Seed Small File', {
       inPath: Message('small_path'),
-      inText: Custom('x'.repeat(200)),
+      inText: Message('small_text'),
       optBase64: false,
       optMode: 'truncate',
     })
     .then('a10003', 'Core.FileSystem.WriteFile', 'Seed Medium File', {
       inPath: Message('medium_path'),
-      inText: Custom('x'.repeat(3072)),
+      inText: Message('medium_text'),
       optBase64: false,
       optMode: 'truncate',
     })
     .then('a10004', 'Core.FileSystem.WriteFile', 'Seed Large File', {
       inPath: Message('large_path'),
-      inText: Custom('x'.repeat(20480)),
+      inText: Message('large_text'),
       optBase64: false,
       optMode: 'truncate',
     })
