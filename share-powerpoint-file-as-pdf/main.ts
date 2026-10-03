@@ -1,19 +1,5 @@
 import { flow, Message, Custom } from '@robomotion/sdk';
 
-// Template substituted per run: ${SRC} → PPTX path, ${DEST} → PDF path.
-const exportScriptTemplate = [
-  '$ErrorActionPreference = "Stop"',
-  '$pptx = ${SRC}',
-  '$pdf  = ${DEST}',
-  '$app = New-Object -ComObject PowerPoint.Application',
-  '$pres = $app.Presentations.Open($pptx, $true, $false, $false)',
-  '# 32 = ppSaveAsPDF',
-  '$pres.SaveAs($pdf, 32, $false)',
-  '$pres.Close()',
-  '$app.Quit()',
-  'Write-Output "exported"',
-].join('\n');
-
 const myFlow = flow.create('e4c34dfa-6f0e-44db-9460-d54ea4766344', 'Imported Share PowerPoint File as PDF', (f) => {
   f.addDependency('Robomotion.MicrosoftOutlook', '0.5.2');
 
@@ -61,7 +47,19 @@ return [msg, null];`,
     });
 
   f.node('a10006', 'Core.Programming.Function', 'Build Export Args', {
-    func: `var tpl = ${JSON.stringify(exportScriptTemplate)};
+    func: `// Filled in per run: \${SRC} is the PowerPoint path, \${DEST} the PDF path.
+var tpl = [
+  '$ErrorActionPreference = "Stop"',
+  '$pptx = \${SRC}',
+  '$pdf  = \${DEST}',
+  '$app = New-Object -ComObject PowerPoint.Application',
+  '$pres = $app.Presentations.Open($pptx, $true, $false, $false)',
+  '# 32 = ppSaveAsPDF',
+  '$pres.SaveAs($pdf, 32, $false)',
+  '$pres.Close()',
+  '$app.Quit()',
+  'Write-Output "exported"',
+].join('\\n');
 var script = tpl.replace('\${SRC}', JSON.stringify(msg.selected_powerpoint)).replace('\${DEST}', JSON.stringify(msg.pdf_path));
 msg.export_args = ['-NoProfile', '-Command', script];
 return msg;`,

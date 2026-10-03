@@ -1,21 +1,5 @@
 import { flow, Message, Custom } from '@robomotion/sdk';
 
-const scriptTemplate = [
-  'Dim Excel',
-  'Dim ExcelDoc',
-  '',
-  "'Opens the Excel file",
-  'Set Excel = CreateObject("Excel.Application")',
-  'Set ExcelDoc = Excel.Workbooks.Open(${EXCEL_PATH})',
-  '',
-  "'Creates the pdf file",
-  'Excel.ActiveSheet.ExportAsFixedFormat 0, ${PDF_PATH}, 0, 1, 0, , , 0',
-  '',
-  "'Closes the Excel file",
-  'Excel.ActiveWorkbook.Close',
-  'Excel.Application.Quit',
-].join('\n');
-
 const myFlow = flow.create('70e36839-1f44-4792-ab5d-06e9c2612969', 'Imported Convert Excel to PDF Using VBScript', (f) => {
   f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Convert Excel to PDF Using VBScript\n\nRuns an inline VBScript that drives Excel COM to export a workbook as PDF. Shows how to bridge Robomotion with Windows scripting.' });
 
@@ -54,7 +38,21 @@ return [msg, null];`,
     continueOnError: true,
   })
     .then('a10006', 'Core.Programming.Function', 'Build Script', {
-      func: `var tpl = ${JSON.stringify(scriptTemplate)};
+      func: `var tpl = [
+  'Dim Excel',
+  'Dim ExcelDoc',
+  '',
+  "'Opens the Excel file",
+  'Set Excel = CreateObject("Excel.Application")',
+  'Set ExcelDoc = Excel.Workbooks.Open(\${EXCEL_PATH})',
+  '',
+  "'Creates the pdf file",
+  'Excel.ActiveSheet.ExportAsFixedFormat 0, \${PDF_PATH}, 0, 1, 0, , , 0',
+  '',
+  "'Closes the Excel file",
+  'Excel.ActiveWorkbook.Close',
+  'Excel.Application.Quit',
+].join('\\n');
 msg.vbs_body = tpl.replace('\${EXCEL_PATH}', '"' + msg.excel_path.replace(/\\\\/g, '\\\\\\\\').replace(/"/g, '""') + '"').replace('\${PDF_PATH}', '"' + msg.pdf_path.replace(/\\\\/g, '\\\\\\\\').replace(/"/g, '""') + '"');
 return msg;`,
     })

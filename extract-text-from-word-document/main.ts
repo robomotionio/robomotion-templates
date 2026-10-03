@@ -1,29 +1,5 @@
 import { flow, Message, Custom } from '@robomotion/sdk';
 
-const scriptTemplate = [
-  'Dim Word',
-  'Dim WordDoc',
-  'Dim i',
-  'Set Word = CreateObject("Word.Application")',
-  '',
-  "'Open the document",
-  'Set WordDoc = Word.Documents.Open(${WORD_PATH})',
-  '',
-  "'Read the document",
-  'NumberOfWords = WordDoc.Sentences.Count',
-  'For i = 1 to NumberOfWords',
-  '    WScript.Echo WordDoc.Sentences(i)',
-  'Next',
-  '',
-  "'Close the document",
-  'WordDoc.Close False',
-  'Word.Quit',
-  '',
-  "'Release the object variables",
-  'Set WordDoc = Nothing',
-  'Set Word = Nothing',
-].join('\n');
-
 const myFlow = flow.create('13ddd484-1a0a-4ef2-b3d0-b71f6c0ae7da', 'Imported Extract Text from Word Document', (f) => {
   f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Extract Text from Word Document\n\nUses a VBScript bridge to pull raw text out of a .docx file for downstream NLP or search indexing.' });
 
@@ -51,7 +27,29 @@ return [msg, null];`,
     });
 
   f.node('a10004', 'Core.Programming.Function', 'Build Script', {
-    func: `var tpl = ${JSON.stringify(scriptTemplate)};
+    func: `var tpl = [
+  'Dim Word',
+  'Dim WordDoc',
+  'Dim i',
+  'Set Word = CreateObject("Word.Application")',
+  '',
+  "'Open the document",
+  'Set WordDoc = Word.Documents.Open(\${WORD_PATH})',
+  '',
+  "'Read the document",
+  'NumberOfWords = WordDoc.Sentences.Count',
+  'For i = 1 to NumberOfWords',
+  '    WScript.Echo WordDoc.Sentences(i)',
+  'Next',
+  '',
+  "'Close the document",
+  'WordDoc.Close False',
+  'Word.Quit',
+  '',
+  "'Release the object variables",
+  'Set WordDoc = Nothing',
+  'Set Word = Nothing',
+].join('\\n');
 msg.vbs_body = tpl.replace('\${WORD_PATH}', '"' + msg.word_doc_path.replace(/\\\\/g, '\\\\\\\\').replace(/"/g, '""') + '"'); return msg;`,
   })
     .then('a10005', 'Core.FileSystem.WriteFile', 'Write VBS', {
