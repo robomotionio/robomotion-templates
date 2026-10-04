@@ -64,6 +64,7 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | [Eventbrite Online Events](scrape-eventbrite-online-events) | Intermediate | Eventbrite scraper extracts event titles, images, and links from search results. |
 | [Facebook Group Members Export](facebook-group-members-export) | Intermediate | Exports the members of a Facebook group you belong to (name, profile link, photo, when they joined, their headline) into a CSV, scrolling until it has them all. |
 | [Facebook Profile Scraper](facebook-profile-scraper) | Intermediate | Reads a Facebook profile: the name, where the person lives and is from, their work and education, into a CSV. |
+| [Facebook Profile URL Finder](facebook-profile-url-finder) | Intermediate | Finds the Facebook profiles for a name with Facebook's own people search: each result's profile URL and name, into a CSV. |
 | [Framer Template Details](extract-framer-template-details) | Intermediate | Extract Framer templates data - names, prices, creators, publish dates, features. |
 | [Framer Templates by Category](extract-templates-framer-category) | Intermediate | Framer templates scraper extracting listings, pricing, creators, and images from category pages. |
 | [Freelancer.com Project Details](extract-project-details-from-freelancer-com) | Intermediate | Freelancer. |

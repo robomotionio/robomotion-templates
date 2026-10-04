@@ -1,0 +1,13 @@
+name: Facebook Profile URL Finder
+slug: facebook-profile-url-finder
+summary: >-
+  Finds the Facebook profiles for a name with Facebook's own people search: each result's profile URL and name, into a CSV.
+category: Web Scraping
+level: Intermediate
+tags: [facebook, scraping, browser]
+author: Robomotion
+created: "2026-10-04"
+updated: "2026-10-04"
+has_subflows: false
+flow_id: 7418f2
+schema_version: 1
