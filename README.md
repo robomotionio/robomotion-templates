@@ -93,6 +93,7 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | [Lever Job Details](extract-details-single-job-lever) | Intermediate | Lever job scraper extracts titles, descriptions, requirements, and locations from Lever career pages. |
 | [LinkedIn Company Scraper](linkedin-company-scraper) | Intermediate | Reads a LinkedIn company page: the name, industry, size, headquarters, website, specialties and overview, into a CSV. |
 | [LinkedIn Profile Scraper](linkedin-profile-scraper) | Intermediate | Reads a LinkedIn profile: the name, headline, location, current company and About, into a CSV. |
+| [LinkedIn Search Export](linkedin-search-export) | Intermediate | Exports LinkedIn people search results (name, headline, location, photo) into a CSV, page after page with the Next button. |
 | [Meetup Events Near Location](scrape-meetup-events-near-location) | Intermediate | Meetup scraper extracts event names, groups, dates, attendee counts, and spots left from Meetup search results. |
 | [n8n Integrations](extract-integrations-list-n8n) | Intermediate | N8n integrations scraper extracting app names, links, and logos from N8n's directory. |
 | [Pipedream Integrations](extract-integrations-pipedream) | Intermediate | Pipedream integrations scraper that extracts app names, descriptions, and logos. |
