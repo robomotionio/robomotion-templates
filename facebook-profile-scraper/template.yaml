@@ -1,0 +1,13 @@
+name: Facebook Profile Scraper
+slug: facebook-profile-scraper
+summary: >-
+  Reads a Facebook profile: the name, where the person lives and is from, their work and education, into a CSV.
+category: Web Scraping
+level: Intermediate
+tags: [facebook, scraping, browser]
+author: Robomotion
+created: "2026-10-04"
+updated: "2026-10-04"
+has_subflows: false
+flow_id: 14326c
+schema_version: 1
