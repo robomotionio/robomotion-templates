@@ -91,6 +91,7 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | [JustRemote Jobs](extract-jobs-justremote) | Intermediate | JustRemote jobs scraper extracts verified remote job titles, companies, and dates. |
 | [Lever Careers Page Jobs](extract-jobs-company-lever-page) | Intermediate | Lever careers page scraper that extracts job titles, employment types, and locations. |
 | [Lever Job Details](extract-details-single-job-lever) | Intermediate | Lever job scraper extracts titles, descriptions, requirements, and locations from Lever career pages. |
+| [LinkedIn Activity Extractor](linkedin-activity-extractor) | Intermediate | Exports a LinkedIn member's recent activity (each post's text, author and links) into a CSV, scrolling for more. |
 | [LinkedIn Company Employees Export](linkedin-company-employees-export) | Intermediate | Exports the people of a LinkedIn company (name, title, photo) into a CSV, pressing Show more results until it has enough. |
 | [LinkedIn Company Scraper](linkedin-company-scraper) | Intermediate | Reads a LinkedIn company page: the name, industry, size, headquarters, website, specialties and overview, into a CSV. |
 | [LinkedIn Profile Scraper](linkedin-profile-scraper) | Intermediate | Reads a LinkedIn profile: the name, headline, location, current company and About, into a CSV. |

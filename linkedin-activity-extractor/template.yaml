@@ -1,0 +1,13 @@
+name: LinkedIn Activity Extractor
+slug: linkedin-activity-extractor
+summary: >-
+  Exports a LinkedIn member's recent activity (each post's text, author and links) into a CSV, scrolling for more.
+category: Web Scraping
+level: Intermediate
+tags: [linkedin, scraping, browser]
+author: Robomotion
+created: "2026-10-04"
+updated: "2026-10-04"
+has_subflows: false
+flow_id: 476e04
+schema_version: 1
