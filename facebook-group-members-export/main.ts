@@ -1,7 +1,7 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('d2ed4d', 'Facebook Group Members Export', function (f) {
-  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Facebook Group Members Export\n\nExports the members of a Facebook group you belong to (name, profile link, photo, when they joined, their headline) into a CSV, scrolling until it has them all.\n\nLog in to Facebook once in Chrome, then set the profile folder in Setup Vars and enter the list URL when prompted.' });
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Facebook Group Members Export\n\nExports the members of a Facebook group you belong to (name, profile link, photo, when they joined, their headline) into a CSV, scrolling until it has them all.\n\nLog in to Facebook once in Chrome, then set the profile folder in Setup Vars and enter the list URL (for example https://www.facebook.com/groups/2180474725586463/members) when prompted.' });
 
   f.node('000001', 'Core.Trigger.Inject', 'Start', {})
     .then('000002', 'Core.Dialog.InputBox', 'Get Page URL', {

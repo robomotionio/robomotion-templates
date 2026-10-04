@@ -1,7 +1,7 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('14326c', 'Facebook Profile Scraper', function (f) {
-  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Facebook Profile Scraper\n\nReads a Facebook profile: the name, where the person lives and is from, their work and education, into a CSV.\n\nLog in to Facebook once in Chrome, then set the profile folder in Setup Vars and enter the page URL when prompted.' });
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Facebook Profile Scraper\n\nReads a Facebook profile: the name, where the person lives and is from, their work and education, into a CSV.\n\nLog in to Facebook once in Chrome, then set the profile folder in Setup Vars and enter the page URL (for example https://www.facebook.com/OrderBiryani/) when prompted.' });
 
   f.node('000001', 'Core.Trigger.Inject', 'Start', {})
     .then('000002', 'Core.Dialog.InputBox', 'Get Page URL', {
@@ -62,7 +62,7 @@ flow.create('14326c', 'Facebook Profile Scraper', function (f) {
       inPageId: Message('page_id')
     })
     .then('00000a', 'Core.Browser.GetValue', 'Get education', {
-      inSelector: Custom('//div[@role=\'list\' and preceding::h2[1][normalize-space(.)=\'Education\']]//div[@role=\'listitem\']'),
+      inSelector: Custom('//h2[normalize-space(.)=\'Education\']/following::div[@role=\'listitem\'][1]'),
       inAttribute: Custom('innerText'),
       outValue: Message('education'),
       optWaitTimeout: Custom('5'),
