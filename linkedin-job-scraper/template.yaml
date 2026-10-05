@@ -1,0 +1,13 @@
+name: LinkedIn Job Scraper
+slug: linkedin-job-scraper
+summary: >-
+  Reads a LinkedIn job: its title, company, location and the About the job text, into a CSV.
+category: Web Scraping
+level: Intermediate
+tags: [linkedin, scraping, browser]
+author: Robomotion
+created: "2026-10-05"
+updated: "2026-10-05"
+has_subflows: false
+flow_id: 4ada64
+schema_version: 1

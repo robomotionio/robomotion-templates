@@ -94,6 +94,7 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | [LinkedIn Activity Extractor](linkedin-activity-extractor) | Intermediate | Exports a LinkedIn member's recent activity (each post's text, author and links) into a CSV, scrolling for more. |
 | [LinkedIn Company Employees Export](linkedin-company-employees-export) | Intermediate | Exports the people of a LinkedIn company (name, title, photo) into a CSV, pressing Show more results until it has enough. |
 | [LinkedIn Company Scraper](linkedin-company-scraper) | Intermediate | Reads a LinkedIn company page: the name, industry, size, headquarters, website, specialties and overview, into a CSV. |
+| [LinkedIn Job Scraper](linkedin-job-scraper) | Intermediate | Reads a LinkedIn job: its title, company, location and the About the job text, into a CSV. |
 | [LinkedIn Profile Scraper](linkedin-profile-scraper) | Intermediate | Reads a LinkedIn profile: the name, headline, location, current company and About, into a CSV. |
 | [LinkedIn Search Export](linkedin-search-export) | Intermediate | Exports LinkedIn people search results (name, headline, location, photo) into a CSV, page after page with the Next button. |
 | [Meetup Events Near Location](scrape-meetup-events-near-location) | Intermediate | Meetup scraper extracts event names, groups, dates, attendee counts, and spots left from Meetup search results. |
