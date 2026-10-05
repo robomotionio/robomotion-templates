@@ -1,0 +1,13 @@
+name: LinkedIn Company URL Finder
+slug: linkedin-company-url-finder
+summary: >-
+  Finds the LinkedIn company pages for a company name with LinkedIn's own company search: each result's page URL, name, industry and location, into a CSV.
+category: Web Scraping
+level: Intermediate
+tags: [linkedin, scraping, browser]
+author: Robomotion
+created: "2026-10-05"
+updated: "2026-10-05"
+has_subflows: false
+flow_id: be29f1
+schema_version: 1
