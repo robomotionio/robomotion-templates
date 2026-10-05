@@ -1,0 +1,13 @@
+name: Twitter Follower Collector
+slug: twitter-follower-collector
+summary: >-
+  Collects the people who follow an X profile (name, handle, profile link, bio) into a CSV, scrolling for more.
+category: Web Scraping
+level: Intermediate
+tags: [x, scraping, browser]
+author: Robomotion
+created: "2026-10-05"
+updated: "2026-10-05"
+has_subflows: false
+flow_id: e8f9af
+schema_version: 1

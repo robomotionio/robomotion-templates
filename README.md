@@ -127,6 +127,8 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | [Substack Top Posts](extract-top-posts-substack-publication) | Intermediate | Substack top posts scraper extracts highest-performing newsletter content with engagement metrics. |
 | [Trendyol Product Details](extract-product-detail-page-trendyol) | Intermediate | Trendyol scraper extracts product details, prices, ratings, reviews, and materials. |
 | [Trendyol Product Listings](extract-product-listings-trendyol) | Intermediate | Scrape Trendyol products from search and category pages. |
+| [Twitter Follower Collector](twitter-follower-collector) | Intermediate | Collects the people who follow an X profile (name, handle, profile link, bio) into a CSV, scrolling for more. |
+| [Twitter Following Collector](twitter-following-collector) | Intermediate | Collects the people followed by an X profile (name, handle, profile link, bio) into a CSV, scrolling for more. |
 | [Twitter Profile Scraper](twitter-profile-scraper) | Intermediate | Reads an X profile: the name, handle, bio, location, join date, following and followers counts and the number of posts, into a CSV. |
 | [Udemy Course Details](extract-course-details-udemy) | Intermediate | Udemy scraper extracts course titles, ratings, reviews, prices, and more. |
 | [Udemy Course Reviews](extract-course-reviews-udemy) | Intermediate | Udemy review scraper extracts student feedback - course names, ratings, text, and dates. |
