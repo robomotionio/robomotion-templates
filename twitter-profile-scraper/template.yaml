@@ -1,0 +1,13 @@
+name: Twitter Profile Scraper
+slug: twitter-profile-scraper
+summary: >-
+  Reads an X profile: the name, handle, bio, location, join date, following and followers counts and the number of posts, into a CSV.
+category: Web Scraping
+level: Intermediate
+tags: [x, scraping, browser]
+author: Robomotion
+created: "2026-10-05"
+updated: "2026-10-05"
+has_subflows: false
+flow_id: 199ade
+schema_version: 1
