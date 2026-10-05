@@ -1,0 +1,13 @@
+name: LinkedIn Post Commenter and Liker Scraper
+slug: linkedin-post-commenter-and-liker-scraper
+summary: >-
+  Collects the people who commented on a LinkedIn post and the people who reacted to it into one CSV: name, profile link, headline, and whether each one commented and/or reacted.
+category: Web Scraping
+level: Intermediate
+tags: [linkedin, scraping, browser]
+author: Robomotion
+created: "2026-10-05"
+updated: "2026-10-05"
+has_subflows: false
+flow_id: 391bd7
+schema_version: 1

@@ -95,6 +95,7 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | [LinkedIn Company Employees Export](linkedin-company-employees-export) | Intermediate | Exports the people of a LinkedIn company (name, title, photo) into a CSV, pressing Show more results until it has enough. |
 | [LinkedIn Company Scraper](linkedin-company-scraper) | Intermediate | Reads a LinkedIn company page: the name, industry, size, headquarters, website, specialties and overview, into a CSV. |
 | [LinkedIn Job Scraper](linkedin-job-scraper) | Intermediate | Reads a LinkedIn job: its title, company, location and the About the job text, into a CSV. |
+| [LinkedIn Post Commenter and Liker Scraper](linkedin-post-commenter-and-liker-scraper) | Intermediate | Collects the people who commented on a LinkedIn post and the people who reacted to it into one CSV: name, profile link, headline, and whether each one commented and/or reacted. |
 | [LinkedIn Post Commenters Export](linkedin-post-commenters-export) | Intermediate | Exports the people who commented on a LinkedIn post (name, profile link, headline, comment) into a CSV, scrolling for more. |
 | [LinkedIn Post Likers Export](linkedin-post-likers-export) | Intermediate | Exports the people who reacted to a LinkedIn post (name, profile link, headline) into a CSV, from the post's reactions list. |
 | [LinkedIn Profile Scraper](linkedin-profile-scraper) | Intermediate | Reads a LinkedIn profile: the name, headline, location, current company and About, into a CSV. |
