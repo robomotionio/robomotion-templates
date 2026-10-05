@@ -1,0 +1,13 @@
+name: Amazon Product Search Scraper
+slug: amazon-product-search-scraper
+summary: >-
+  Searches Amazon from its search box and exports the products it finds (title, product link, price, rating, image) into a CSV, going through the result pages with Next.
+category: Web Scraping
+level: Intermediate
+tags: [amazon, scraping, browser]
+author: Robomotion
+created: "2026-10-05"
+updated: "2026-10-05"
+has_subflows: false
+flow_id: a752e8
+schema_version: 1

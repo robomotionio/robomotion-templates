@@ -38,6 +38,7 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 |----------|-------|-------------|
 | [Airbnb Property Details](extract-property-details-airbnb) | Intermediate | Airbnb scraper extracting ratings, reviews, pricing, amenities, and guest feedback. |
 | [Airbnb Search Results](extract-list-places-search-result-airbnb) | Intermediate | Airbnb data scraper that extracts listing titles, prices, ratings, and locations from search results. |
+| [Amazon Product Search Scraper](amazon-product-search-scraper) | Intermediate | Searches Amazon from its search box and exports the products it finds (title, product link, price, rating, image) into a CSV, going through the result pages with Next. |
 | [AppSumo Deals](scrape-products-list-appsumo) | Intermediate | AppSumo deals scraper extracting product listings, prices, descriptions, and reviews. |
 | [AppSumo Product Questions](extract-questions-appsumo-product) | Intermediate | AppSumo scraper that extracts product questions, users, and links. |
 | [AppSumo Product Reviews](scrape-products-reviews-appsumo) | Intermediate | AppSumo reviews scraper extracts star ratings, review text, reviewer names, and dates. |
