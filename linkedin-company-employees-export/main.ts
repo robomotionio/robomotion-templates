@@ -5,7 +5,7 @@ flow.create('40b31b', 'LinkedIn Company Employees Export', function (f) {
 
   f.node('000001', 'Core.Trigger.Inject', 'Start', {})
     .then('000002', 'Core.Dialog.InputBox', 'Get Page URL', {
-      inText: Custom('Enter the linkedin list URL (e.g. https://www.linkedin.com/company/microsoft/people/)'),
+      inText: Custom('Enter the LinkedIn list URL (e.g. https://www.linkedin.com/company/microsoft/people/)'),
       outText: Message('url')
     })
     .then('000003', 'Core.Programming.Function', 'Setup Vars', {

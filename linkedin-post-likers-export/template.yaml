@@ -1,0 +1,13 @@
+name: LinkedIn Post Likers Export
+slug: linkedin-post-likers-export
+summary: >-
+  Exports the people who reacted to a LinkedIn post (name, profile link, headline) into a CSV, from the post's reactions list.
+category: Web Scraping
+level: Intermediate
+tags: [linkedin, scraping, browser]
+author: Robomotion
+created: "2026-10-05"
+updated: "2026-10-05"
+has_subflows: false
+flow_id: da4a41
+schema_version: 1

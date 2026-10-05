@@ -5,7 +5,7 @@ flow.create('f16af3', 'LinkedIn Company Scraper', function (f) {
 
   f.node('000001', 'Core.Trigger.Inject', 'Start', {})
     .then('000002', 'Core.Dialog.InputBox', 'Get Page URL', {
-      inText: Custom('Enter the linkedin page URL (e.g. https://www.linkedin.com/company/microsoft/about/)'),
+      inText: Custom('Enter the LinkedIn page URL (e.g. https://www.linkedin.com/company/microsoft/about/)'),
       outText: Message('url')
     })
     .then('000003', 'Core.Programming.Function', 'Setup Vars', {

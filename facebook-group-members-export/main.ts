@@ -5,7 +5,7 @@ flow.create('d2ed4d', 'Facebook Group Members Export', function (f) {
 
   f.node('000001', 'Core.Trigger.Inject', 'Start', {})
     .then('000002', 'Core.Dialog.InputBox', 'Get Page URL', {
-      inText: Custom('Enter the facebook list URL (e.g. https://www.facebook.com/groups/2180474725586463/members)'),
+      inText: Custom('Enter the Facebook list URL (e.g. https://www.facebook.com/groups/2180474725586463/members)'),
       outText: Message('url')
     })
     .then('000003', 'Core.Programming.Function', 'Setup Vars', {

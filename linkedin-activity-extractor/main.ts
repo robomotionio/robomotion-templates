@@ -5,7 +5,7 @@ flow.create('476e04', 'LinkedIn Activity Extractor', function (f) {
 
   f.node('000001', 'Core.Trigger.Inject', 'Start', {})
     .then('000002', 'Core.Dialog.InputBox', 'Get Page URL', {
-      inText: Custom('Enter the linkedin list URL (e.g. https://www.linkedin.com/in/williamhgates/recent-activity/all/)'),
+      inText: Custom('Enter the LinkedIn list URL (e.g. https://www.linkedin.com/in/williamhgates/recent-activity/all/)'),
       outText: Message('url')
     })
     .then('000003', 'Core.Programming.Function', 'Setup Vars', {

@@ -5,7 +5,7 @@ flow.create('9274b5', 'LinkedIn Search Export', function (f) {
 
   f.node('000001', 'Core.Trigger.Inject', 'Start', {})
     .then('000002', 'Core.Dialog.InputBox', 'Get Page URL', {
-      inText: Custom('Enter the linkedin list URL (e.g. https://www.linkedin.com/search/results/people/?keywords=rpa%20developer)'),
+      inText: Custom('Enter the LinkedIn list URL (e.g. https://www.linkedin.com/search/results/people/?keywords=rpa%20developer)'),
       outText: Message('url')
     })
     .then('000003', 'Core.Programming.Function', 'Setup Vars', {

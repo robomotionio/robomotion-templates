@@ -5,7 +5,7 @@ flow.create('252b3a', 'LinkedIn Post Commenters Export', function (f) {
 
   f.node('000001', 'Core.Trigger.Inject', 'Start', {})
     .then('000002', 'Core.Dialog.InputBox', 'Get Page URL', {
-      inText: Custom('Enter the linkedin list URL (e.g. https://www.linkedin.com/feed/update/urn:li:activity:7508263424536080384/)'),
+      inText: Custom('Enter the LinkedIn list URL (e.g. https://www.linkedin.com/feed/update/urn:li:activity:7508263424536080384/)'),
       outText: Message('url')
     })
     .then('000003', 'Core.Programming.Function', 'Setup Vars', {

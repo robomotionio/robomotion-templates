@@ -5,7 +5,7 @@ flow.create('14326c', 'Facebook Profile Scraper', function (f) {
 
   f.node('000001', 'Core.Trigger.Inject', 'Start', {})
     .then('000002', 'Core.Dialog.InputBox', 'Get Page URL', {
-      inText: Custom('Enter the facebook page URL (e.g. https://www.facebook.com/OrderBiryani/)'),
+      inText: Custom('Enter the Facebook page URL (e.g. https://www.facebook.com/OrderBiryani/)'),
       outText: Message('url')
     })
     .then('000003', 'Core.Programming.Function', 'Setup Vars', {
