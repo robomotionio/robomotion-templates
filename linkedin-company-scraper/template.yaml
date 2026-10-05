@@ -1,0 +1,13 @@
+name: LinkedIn Company Scraper
+slug: linkedin-company-scraper
+summary: >-
+  Reads a LinkedIn company page: the name, industry, size, headquarters, website, specialties and overview, into a CSV.
+category: Web Scraping
+level: Intermediate
+tags: [linkedin, scraping, browser]
+author: Robomotion
+created: "2026-10-04"
+updated: "2026-10-05"
+has_subflows: false
+flow_id: f16af3
+schema_version: 1

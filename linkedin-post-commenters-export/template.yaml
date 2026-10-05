@@ -1,0 +1,13 @@
+name: LinkedIn Post Commenters Export
+slug: linkedin-post-commenters-export
+summary: >-
+  Exports the people who commented on a LinkedIn post (name, profile link, headline, comment) into a CSV, scrolling for more.
+category: Web Scraping
+level: Intermediate
+tags: [linkedin, scraping, browser]
+author: Robomotion
+created: "2026-10-05"
+updated: "2026-10-05"
+has_subflows: false
+flow_id: 252b3a
+schema_version: 1

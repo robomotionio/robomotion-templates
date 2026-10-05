@@ -38,6 +38,7 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 |----------|-------|-------------|
 | [Airbnb Property Details](extract-property-details-airbnb) | Intermediate | Airbnb scraper extracting ratings, reviews, pricing, amenities, and guest feedback. |
 | [Airbnb Search Results](extract-list-places-search-result-airbnb) | Intermediate | Airbnb data scraper that extracts listing titles, prices, ratings, and locations from search results. |
+| [Amazon Product Search Scraper](amazon-product-search-scraper) | Intermediate | Searches Amazon from its search box and exports the products it finds (title, product link, price, rating, image) into a CSV, going through the result pages with Next. |
 | [AppSumo Deals](scrape-products-list-appsumo) | Intermediate | AppSumo deals scraper extracting product listings, prices, descriptions, and reviews. |
 | [AppSumo Product Questions](extract-questions-appsumo-product) | Intermediate | AppSumo scraper that extracts product questions, users, and links. |
 | [AppSumo Product Reviews](scrape-products-reviews-appsumo) | Intermediate | AppSumo reviews scraper extracts star ratings, review text, reviewer names, and dates. |
@@ -62,6 +63,9 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | [ESPN Top Headlines](extract-top-headlines-espn) | Intermediate | ESPN top headlines scraper that extracts headline positions and links from ESPN's homepage. |
 | [Eventbrite Event Details](extract-online-event-details-eventbrite) | Intermediate | Eventbrite scraper extracts event names, dates, times, locations, prices, and descriptions. |
 | [Eventbrite Online Events](scrape-eventbrite-online-events) | Intermediate | Eventbrite scraper extracts event titles, images, and links from search results. |
+| [Facebook Group Members Export](facebook-group-members-export) | Intermediate | Exports the members of a Facebook group you belong to (name, profile link, photo, when they joined, their headline) into a CSV, scrolling until it has them all. |
+| [Facebook Profile Scraper](facebook-profile-scraper) | Intermediate | Reads a Facebook profile: the name, where the person lives and is from, their work and education, into a CSV. |
+| [Facebook Profile URL Finder](facebook-profile-url-finder) | Intermediate | Finds the Facebook profiles for a name with Facebook's own people search: each result's profile URL and name, into a CSV. |
 | [Framer Template Details](extract-framer-template-details) | Intermediate | Extract Framer templates data - names, prices, creators, publish dates, features. |
 | [Framer Templates by Category](extract-templates-framer-category) | Intermediate | Framer templates scraper extracting listings, pricing, creators, and images from category pages. |
 | [Freelancer.com Project Details](extract-project-details-from-freelancer-com) | Intermediate | Freelancer. |
@@ -88,6 +92,16 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | [JustRemote Jobs](extract-jobs-justremote) | Intermediate | JustRemote jobs scraper extracts verified remote job titles, companies, and dates. |
 | [Lever Careers Page Jobs](extract-jobs-company-lever-page) | Intermediate | Lever careers page scraper that extracts job titles, employment types, and locations. |
 | [Lever Job Details](extract-details-single-job-lever) | Intermediate | Lever job scraper extracts titles, descriptions, requirements, and locations from Lever career pages. |
+| [LinkedIn Activity Extractor](linkedin-activity-extractor) | Intermediate | Exports a LinkedIn member's recent activity (each post's text, author and links) into a CSV, scrolling for more. |
+| [LinkedIn Company Employees Export](linkedin-company-employees-export) | Intermediate | Exports the people of a LinkedIn company (name, title, photo) into a CSV, pressing Show more results until it has enough. |
+| [LinkedIn Company Scraper](linkedin-company-scraper) | Intermediate | Reads a LinkedIn company page: the name, industry, size, headquarters, website, specialties and overview, into a CSV. |
+| [LinkedIn Company URL Finder](linkedin-company-url-finder) | Intermediate | Finds the LinkedIn company pages for a company name with LinkedIn's own company search: each result's page URL, name, industry and location, into a CSV. |
+| [LinkedIn Job Scraper](linkedin-job-scraper) | Intermediate | Reads a LinkedIn job: its title, company, location and the About the job text, into a CSV. |
+| [LinkedIn Post Commenter and Liker Scraper](linkedin-post-commenter-and-liker-scraper) | Intermediate | Collects the people who commented on a LinkedIn post and the people who reacted to it into one CSV: name, profile link, headline, and whether each one commented and/or reacted. |
+| [LinkedIn Post Commenters Export](linkedin-post-commenters-export) | Intermediate | Exports the people who commented on a LinkedIn post (name, profile link, headline, comment) into a CSV, scrolling for more. |
+| [LinkedIn Post Likers Export](linkedin-post-likers-export) | Intermediate | Exports the people who reacted to a LinkedIn post (name, profile link, headline) into a CSV, from the post's reactions list. |
+| [LinkedIn Profile Scraper](linkedin-profile-scraper) | Intermediate | Reads a LinkedIn profile: the name, headline, location, current company and About, into a CSV. |
+| [LinkedIn Search Export](linkedin-search-export) | Intermediate | Exports LinkedIn people search results (name, headline, location, photo) into a CSV, page after page with the Next button. |
 | [Meetup Events Near Location](scrape-meetup-events-near-location) | Intermediate | Meetup scraper extracts event names, groups, dates, attendee counts, and spots left from Meetup search results. |
 | [n8n Integrations](extract-integrations-list-n8n) | Intermediate | N8n integrations scraper extracting app names, links, and logos from N8n's directory. |
 | [Pipedream Integrations](extract-integrations-pipedream) | Intermediate | Pipedream integrations scraper that extracts app names, descriptions, and logos. |
@@ -114,6 +128,9 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | [Substack Top Posts](extract-top-posts-substack-publication) | Intermediate | Substack top posts scraper extracts highest-performing newsletter content with engagement metrics. |
 | [Trendyol Product Details](extract-product-detail-page-trendyol) | Intermediate | Trendyol scraper extracts product details, prices, ratings, reviews, and materials. |
 | [Trendyol Product Listings](extract-product-listings-trendyol) | Intermediate | Scrape Trendyol products from search and category pages. |
+| [Twitter Follower Collector](twitter-follower-collector) | Intermediate | Collects the people who follow an X profile (name, handle, profile link, bio) into a CSV, scrolling for more. |
+| [Twitter Following Collector](twitter-following-collector) | Intermediate | Collects the people followed by an X profile (name, handle, profile link, bio) into a CSV, scrolling for more. |
+| [Twitter Profile Scraper](twitter-profile-scraper) | Intermediate | Reads an X profile: the name, handle, bio, location, join date, following and followers counts and the number of posts, into a CSV. |
 | [Udemy Course Details](extract-course-details-udemy) | Intermediate | Udemy scraper extracts course titles, ratings, reviews, prices, and more. |
 | [Udemy Course Reviews](extract-course-reviews-udemy) | Intermediate | Udemy review scraper extracts student feedback - course names, ratings, text, and dates. |
 | [Udemy Courses by Topic](extract-courses-topic-udemy) | Intermediate | Scrape Udemy courses by topic - get titles, descriptions, ratings, enrollments, prices & more from category pages. |

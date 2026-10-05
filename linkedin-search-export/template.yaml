@@ -1,0 +1,13 @@
+name: LinkedIn Search Export
+slug: linkedin-search-export
+summary: >-
+  Exports LinkedIn people search results (name, headline, location, photo) into a CSV, page after page with the Next button.
+category: Web Scraping
+level: Intermediate
+tags: [linkedin, scraping, browser]
+author: Robomotion
+created: "2026-10-04"
+updated: "2026-10-05"
+has_subflows: false
+flow_id: 9274b5
+schema_version: 1

@@ -1,0 +1,13 @@
+name: Facebook Group Members Export
+slug: facebook-group-members-export
+summary: >-
+  Exports the members of a Facebook group you belong to (name, profile link, photo, when they joined, their headline) into a CSV, scrolling until it has them all.
+category: Web Scraping
+level: Intermediate
+tags: [facebook, scraping, browser]
+author: Robomotion
+created: "2026-10-04"
+updated: "2026-10-05"
+has_subflows: false
+flow_id: d2ed4d
+schema_version: 1

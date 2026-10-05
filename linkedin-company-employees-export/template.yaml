@@ -1,0 +1,13 @@
+name: LinkedIn Company Employees Export
+slug: linkedin-company-employees-export
+summary: >-
+  Exports the people of a LinkedIn company (name, title, photo) into a CSV, pressing Show more results until it has enough.
+category: Web Scraping
+level: Intermediate
+tags: [linkedin, scraping, browser]
+author: Robomotion
+created: "2026-10-04"
+updated: "2026-10-05"
+has_subflows: false
+flow_id: 40b31b
+schema_version: 1
