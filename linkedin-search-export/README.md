@@ -10,7 +10,6 @@ Exports LinkedIn people search results (name, headline, location, photo) into a 
 - **Text 2**
 - **Text 3**
 - **Text 4**
-- **Text 5**
 
 ## How it works
 

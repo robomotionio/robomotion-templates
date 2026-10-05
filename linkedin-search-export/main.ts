@@ -34,11 +34,10 @@ flow.create('9274b5', 'LinkedIn Search Export', function (f) {
       optCustomListItems: [
         Custom({"name":"Profile URL","selector":".//a[normalize-space()]","attribute":"href"}),
         Custom({"name":"Photo","selector":".//img","attribute":"src"}),
-        Custom({"name":"Name","selector":".//p[normalize-space()]","attribute":"text"}),
-        Custom({"name":"Text 2","selector":"./div/a/div/div[1]/div[1]/div[2]/p/span","attribute":"text"}),
-        Custom({"name":"Text 3","selector":".//strong[normalize-space()]","attribute":"text"}),
-        Custom({"name":"Text 4","selector":".//span[normalize-space()]","attribute":"text"}),
-        Custom({"name":"Text 5","selector":"./div/a/div/div[2]/div/p/span","attribute":"text"})
+        Custom({"name":"Name","selector":"./div/a/div/div[1]/div[1]/div[2]/p/span","attribute":"text"}),
+        Custom({"name":"Text 2","selector":".//strong[normalize-space()]","attribute":"text"}),
+        Custom({"name":"Text 3","selector":".//span[normalize-space()]","attribute":"text"}),
+        Custom({"name":"Text 4","selector":"./div/a/div/div[2]/div/p/span","attribute":"text"})
       ],
       optPagination: 'nextButton',
       inNextSelector: Custom('//button[normalize-space(.)=\'Next\']'),

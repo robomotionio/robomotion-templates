@@ -54,7 +54,7 @@ flow.create('14326c', 'Facebook Profile Scraper', function (f) {
       inPageId: Message('page_id')
     })
     .then('000009', 'Core.Browser.GetValue', 'Get work', {
-      inSelector: Custom('(//div[@role=\'listitem\' and preceding::h2[1][normalize-space(.)=\'Work\']]//div)[2]'),
+      inSelector: Custom('(//h2[normalize-space(.)=\'Work\']/following::div[@role=\'listitem\'][1]//div)[2]'),
       inAttribute: Custom('innerText'),
       outValue: Message('work'),
       optWaitTimeout: Custom('5'),

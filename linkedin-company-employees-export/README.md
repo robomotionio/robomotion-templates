@@ -5,9 +5,7 @@ Exports the people of a LinkedIn company (name, title, photo) into a CSV, pressi
 ## What it extracts
 
 - **Image**
-- **Image 2**
 - **Text 1**
-- **Text 2**
 
 ## How it works
 

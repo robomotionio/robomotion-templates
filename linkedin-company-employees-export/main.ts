@@ -32,10 +32,8 @@ flow.create('40b31b', 'LinkedIn Company Employees Export', function (f) {
     .then('000006', 'Core.Browser.ScrapeList', 'Scrape List', {
       inSelector: Custom('//h2[normalize-space(.)=\'People you may know\']/following::ul[1]//li'),
       optCustomListItems: [
-        Custom({"name":"Photo","selector":".//img","attribute":"src"}),
-        Custom({"name":"Image 2","selector":"./div/section/div/div/div[1]/img","attribute":"src"}),
-        Custom({"name":"Text 1","selector":".//div[contains(concat(' ',normalize-space(@class),' '),' lt-line-clamp ')]","attribute":"text"}),
-        Custom({"name":"Text 2","selector":"./div/section/div/div/div[2]/div[2]/div/div","attribute":"text"})
+        Custom({"name":"Photo","selector":"./div/section/div/div/div[1]/img","attribute":"src"}),
+        Custom({"name":"Text 1","selector":"./div/section/div/div/div[2]/div[2]/div/div","attribute":"text"})
       ],
       optPagination: 'loadMore',
       inNextSelector: Custom('//button[normalize-space(.)=\'Show more results\']'),

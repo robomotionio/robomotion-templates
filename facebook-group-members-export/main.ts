@@ -30,7 +30,7 @@ flow.create('d2ed4d', 'Facebook Group Members Export', function (f) {
       outPageId: Message('page_id')
     })
     .then('000006', 'Core.Browser.ScrapeList', 'Scrape List', {
-      inSelector: Custom('//div[@role=\'list\' and preceding::h2[1][normalize-space(.)=\'New to the group\']]//div[@role=\'listitem\']'),
+      inSelector: Custom('//h2[normalize-space(.)=\'New to the group\']/following::div[@role=\'list\'][1]//div[@role=\'listitem\']'),
       optCustomListItems: [
         Custom({"name":"Profile URL","selector":".//a[@role='link']","attribute":"href"}),
         Custom({"name":"Name","selector":".//a[normalize-space()]","attribute":"text"}),

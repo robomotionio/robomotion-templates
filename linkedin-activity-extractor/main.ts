@@ -30,13 +30,18 @@ flow.create('476e04', 'LinkedIn Activity Extractor', function (f) {
       outPageId: Message('page_id')
     })
     .then('000006', 'Core.Browser.ScrapeList', 'Scrape List', {
-      inSelector: Custom('//h2[normalize-space(.)=\'All activity\']/following::div[@data-component-type=\'LazyColumn\'][1]//div[count(ancestor::div)=12]'),
+      inSelector: Custom('//h2[normalize-space(.)=\'All activity\']/following::div[@data-component-type=\'LazyColumn\'][1]//div[@role=\'listitem\']'),
       optCustomListItems: [
-        Custom({"name":"Text 1","selector":".//div[@role='listitem']//span","attribute":"text"}),
-        Custom({"name":"Text 2","selector":"./div/div/div/div/div[1]/div/div[1]/div[1]/div/div[2]/p/span","attribute":"text"}),
-        Custom({"name":"Text 3","selector":"./div/div/div/div/div[1]/div/div[1]/div[1]/div/div[3]/div/div/a/p","attribute":"text"}),
-        Custom({"name":"Text 4","selector":"./div/div/div/div/div[1]/div/div[1]/div[1]/div/div[4]/p/span","attribute":"text"}),
-        Custom({"name":"Text 5","selector":".//span[@data-testid='expandable-text-box']","attribute":"text"})
+        Custom({"name":"Link","selector":".//a","attribute":"href"}),
+        Custom({"name":"Author photo","selector":".//img","attribute":"src"}),
+        Custom({"name":"Link Text","selector":".//a[normalize-space()]","attribute":"text"}),
+        Custom({"name":"Link 2","selector":"./div[1]/div/div[1]/div[1]/div/div[3]/div/div/a","attribute":"href"}),
+        Custom({"name":"Link 3","selector":"./div[1]/div/div[1]/div[1]/div/a","attribute":"href"}),
+        Custom({"name":"Post text","selector":".//span[@data-testid='expandable-text-box']","attribute":"text"}),
+        Custom({"name":"Link 4","selector":"./div[1]/div/div[2]/a","attribute":"href"}),
+        Custom({"name":"expandable-text-button","selector":".//button[@data-testid='expandable-text-button']","attribute":"text"}),
+        Custom({"name":"Text 1","selector":"./div[1]/div/div[1]/div[1]/div/div[1]/div/a/div/div/div[1]/div/p/span","attribute":"text"}),
+        Custom({"name":"Text 2","selector":"./div[1]/div/div[1]/div[1]/div/div[1]/div/a/div/div/div[2]/p/span","attribute":"text"})
       ],
       optPagination: 'scroll',
       optMaxRows: Custom('500'),

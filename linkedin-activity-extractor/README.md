@@ -4,11 +4,16 @@ Exports a LinkedIn member's recent activity (each post's text, author and links)
 
 ## What it extracts
 
+- **Link**
+- **Image**
+- **Link Text**
+- **Link 2**
+- **Link 3**
+- **expandable-text-box**
+- **Link 4**
+- **expandable-text-button**
 - **Text 1**
 - **Text 2**
-- **Text 3**
-- **Text 4**
-- **Text 5**
 
 ## How it works
 
