@@ -1,0 +1,13 @@
+name: Every customer from a CSV
+slug: ui-automation-windows-recorder-csv
+summary: >-
+  The Windows Recorder's customer task run for every row of a CSV file, each typed value replaced by the row's field, with a Catch that logs a row the app will not take and goes on with the next.
+category: Desktop Automation
+level: Intermediate
+tags: [academy, ui-automation, acme-erp]
+author: Robomotion
+created: "2026-10-08"
+updated: "2026-10-08"
+has_subflows: true
+flow_id: main
+schema_version: 1

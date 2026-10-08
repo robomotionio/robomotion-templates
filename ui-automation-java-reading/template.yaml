@@ -1,0 +1,13 @@
+name: Reading from a Java application
+slug: ui-automation-java-reading
+summary: >-
+  A flow that signs in to Acme ERP (Java Edition), reads a customer's credit limit and the fasteners in the product table, works out how many boxes of each the limit covers, and writes the answer to a CSV file.
+category: Desktop Automation
+level: Intermediate
+tags: [academy, ui-automation, acme-erp]
+author: Robomotion
+created: "2026-10-08"
+updated: "2026-10-08"
+has_subflows: true
+flow_id: main
+schema_version: 1

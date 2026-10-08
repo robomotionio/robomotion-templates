@@ -1,0 +1,13 @@
+name: Any browser: Edge and Firefox
+slug: ui-automation-web-automation-any-browser
+summary: >-
+  A browser flow built from Web Automation nodes that signs in to Acme ERP Web and searches the customers, run on a robot in Edge and then in Firefox, with only the Browser Type changed.
+category: Web Automation
+level: Intermediate
+tags: [academy, ui-automation, acme-erp]
+author: Robomotion
+created: "2026-10-08"
+updated: "2026-10-08"
+has_subflows: true
+flow_id: main
+schema_version: 1

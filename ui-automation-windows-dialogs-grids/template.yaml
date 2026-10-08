@@ -1,0 +1,13 @@
+name: Windows dialogs and grids
+slug: ui-automation-windows-dialogs-grids
+summary: >-
+  A flow that signs in to Acme ERP for Windows, waits for its orders grid, reads it with Get Table Data, exports the orders on hold through the Save As dialog, and closes the app answering its "Save changes?" question.
+category: Desktop Automation
+level: Intermediate
+tags: [academy, ui-automation, acme-erp]
+author: Robomotion
+created: "2026-10-08"
+updated: "2026-10-08"
+has_subflows: true
+flow_id: main
+schema_version: 1
