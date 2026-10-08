@@ -2,6 +2,8 @@ import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomo
 
 flow.create('main', "Any browser: Edge and Firefox", (f) => {
   f.addDependency('Robomotion.WebAutomation', '1.11.4');
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Any browser: Edge and Firefox\n\nA browser flow built from Web Automation nodes that signs in to Acme ERP Web and searches the customers, run on a robot in Edge and then in Firefox, with only the Browser Type changed.' });
+
   f.node('b50001', 'Core.Trigger.Inject', 'Start', {})
     .then('b50004', 'Core.Flow.SubFlow', 'Open Acme ERP and sign in', {})
     .then('b50006', 'Robomotion.WebAutomation.TypeText', 'Type the customer', {

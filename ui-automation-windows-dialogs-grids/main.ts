@@ -2,6 +2,8 @@ import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomo
 
 flow.create('main', "Windows dialogs and grids", (f) => {
   f.addDependency('Robomotion.WindowsAutomation', '0.21.8');
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Windows dialogs and grids\n\nA flow that signs in to Acme ERP for Windows, waits for its orders grid, reads it with Get Table Data, exports the orders on hold through the Save As dialog, and closes the app answering its "Save changes?" question.' });
+
   f.node('b60001', 'Core.Trigger.Inject', 'Start', {})
     .then('b60002', 'Core.Flow.SubFlow', 'Open Acme ERP and sign in', {})
     .then('b60003', 'Robomotion.WindowsAutomation.SetText', 'Type a note, not saved', {

@@ -1,6 +1,6 @@
 export default {
   flowId: 'main',
-  sourceHash: '98b68946',
+  sourceHash: '0aa9fb20',
   positions: {
     'b70001': { x: 0, y: 6 },
     'b70002': { x: 200, y: 0 },
@@ -16,8 +16,12 @@ export default {
     'b7000c': { x: 470, y: 327 },
     'b7000d': { x: 450, y: 230 },
     'b7000e': { x: 700, y: 235 },
+    'c01000': { x: 455, y: -294 },
   },
   cameraPositions: {
     'main': { x: 675, y: 187, zoom: 0.83 },
+  },
+  commentExtras: {
+    'c01000': { colorIndex: 4, size: { width: 440, height: 214 } },
   },
 };

@@ -9,6 +9,8 @@ const IMG_OK = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAcCAIAAAB56a
 
 flow.create('main', "Slow sessions", (f) => {
   f.addDependency('Robomotion.ImageAutomation', '0.12.5');
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Slow sessions\n\nA flow recorded on a good Remote Desktop session that logs on and updates a customer\'s email, phone and notes in Acme ERP, and still gets every value right on a slow session that loses keystrokes.' });
+
   f.node('c90001', 'Core.Trigger.Inject', 'Start', {})
     .then('c90002', 'Core.Flow.SubFlow', 'Open Acme ERP over a slow session', {})
     .then('c90003', 'Robomotion.ImageAutomation.Image.ClickType', "Type the email", {

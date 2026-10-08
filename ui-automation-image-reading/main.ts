@@ -7,6 +7,8 @@ const IMG_OVERDUE = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAAAmCAIAA
 
 flow.create('main', "Reading over Remote Desktop", (f) => {
   f.addDependency('Robomotion.ImageAutomation', '0.12.3');
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Reading over Remote Desktop\n\nA flow that logs on to Acme ERP over Remote Desktop, reads the outstanding and overdue totals off the Invoices screen with OCR, each anchored to its label, and writes the overdue share to a CSV file.' });
+
   f.node('c90001', 'Core.Trigger.Inject', 'Start', {})
     .then('c90002', 'Core.Flow.SubFlow', 'Open Acme ERP over Remote Desktop', {})
     .then('c90003', 'Robomotion.ImageAutomation.Image.ClickImage', "Open Invoices", {

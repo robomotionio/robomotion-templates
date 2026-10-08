@@ -1,6 +1,6 @@
 export default {
   flowId: 'main',
-  sourceHash: '761e8117',
+  sourceHash: '060f982f',
   positions: {
     'c91001': { x: 0, y: 6 },
     'c91002': { x: 200, y: 0 },
@@ -34,8 +34,12 @@ export default {
     'c91028': { x: 450, y: 292 },
     'c91029': { x: 700, y: 292 },
     'c91030': { x: 970, y: 297 },
+    'c01000': { x: 980, y: -294 },
   },
   cameraPositions: {
     'main': { x: 1200, y: 244, zoom: 0.83 },
+  },
+  commentExtras: {
+    'c01000': { colorIndex: 4, size: { width: 440, height: 214 } },
   },
 };

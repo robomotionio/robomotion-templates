@@ -7,6 +7,8 @@ const IMG_OVERDUE = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAAAmCAIAA
 flow.create('main', "Putting it together", (f) => {
   f.addDependency('Robomotion.WindowsAutomation', '0.21.10');
   f.addDependency('Robomotion.ImageAutomation', '0.12.5');
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Putting it together\n\nOne flow over three systems. Headless Chrome reads today\'s web orders from Acme ERP Web, the finance system is asked about each customer over Remote Desktop, and the orders with nothing overdue are entered into Acme ERP for Windows, line by line, with a report at the end.' });
+
   f.node('c91001', 'Core.Trigger.Inject', "Start", {
 
     })

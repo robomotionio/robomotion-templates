@@ -3,6 +3,8 @@ import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomo
 flow.create('main', "Every customer from a CSV", (f) => {
   f.addDependency('Robomotion.WindowsAutomation', '0.21.10');
 
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Every customer from a CSV\n\nThe Windows Recorder\'s customer task run for every row of a CSV file, each typed value replaced by the row\'s field, with a Catch that logs a row the app will not take and goes on with the next.' });
+
   f.node('b70001', 'Core.Trigger.Inject', 'Start', {});
   f.node('b70002', 'Core.CSV.ReadCSV', 'Read the new customers', {
     inFilePath: Custom("C:/Acme/in/customers-to-add.csv"),

@@ -1,6 +1,8 @@
 import { flow, Message, Custom, JS, Global, Flow, Credential, AI } from '@robomotion/sdk';
 
 flow.create('main', "Headless Chrome", (f) => {
+  f.node('c01000', 'Core.Flow.Comment', 'Comment', { optText: '### Headless Chrome\n\nThe Web Inspector lesson\'s flow, run first headed so you can watch it, then headless with Record Session, so the robot keeps a video of the run nobody saw.' });
+
   f.node('b40001', 'Core.Trigger.Inject', 'Start', {})
     .then('b40004', 'Core.Flow.SubFlow', 'Open Acme ERP and sign in', {})
     .then('b40006', 'Core.Browser.TypeText', 'Type the customer', {
