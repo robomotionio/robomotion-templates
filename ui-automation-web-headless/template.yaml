@@ -1,0 +1,13 @@
+name: Headless Chrome
+slug: ui-automation-web-headless
+summary: >-
+  The Web Inspector lesson's flow, run first headed so you can watch it, then headless with Record Session, so the robot keeps a video of the run nobody saw.
+category: Web Automation
+level: Beginner
+tags: [academy, ui-automation, acme-erp]
+author: Robomotion
+created: "2026-10-08"
+updated: "2026-10-08"
+has_subflows: true
+flow_id: main
+schema_version: 1

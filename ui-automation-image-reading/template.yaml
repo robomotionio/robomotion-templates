@@ -1,0 +1,13 @@
+name: Reading over Remote Desktop
+slug: ui-automation-image-reading
+summary: >-
+  A flow that logs on to Acme ERP over Remote Desktop, reads the outstanding and overdue totals off the Invoices screen with OCR, each anchored to its label, and writes the overdue share to a CSV file.
+category: Desktop Automation
+level: Intermediate
+tags: [academy, ui-automation, acme-erp]
+author: Robomotion
+created: "2026-10-08"
+updated: "2026-10-08"
+has_subflows: true
+flow_id: main
+schema_version: 1

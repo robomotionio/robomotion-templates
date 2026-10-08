@@ -1,0 +1,13 @@
+name: Slow sessions
+slug: ui-automation-image-slow-sessions
+summary: >-
+  A flow recorded on a good Remote Desktop session that logs on and updates a customer's email, phone and notes in Acme ERP, and still gets every value right on a slow session that loses keystrokes.
+category: Desktop Automation
+level: Intermediate
+tags: [academy, ui-automation, acme-erp]
+author: Robomotion
+created: "2026-10-08"
+updated: "2026-10-08"
+has_subflows: true
+flow_id: main
+schema_version: 1

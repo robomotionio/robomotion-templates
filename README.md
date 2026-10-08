@@ -183,6 +183,8 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | [Tax Portal ERP Reconciliation](portal-erp-reconciliation) | Advanced | Reconciles the e-invoices a government tax portal received against the vendor bills booked in the ERP, and reports the three ways the two can disagree: an amount that drifted, an e-invoice with no matching bill (arrived in the portal, never booked), and a bill with no e-invoice (booked, never filed). |
 | [Tax Portal Morning Board](tax-portal-morning-board) | Advanced | Checks every client mandate on a government tax portal and builds one status board. |
 | [Vendor Onboarding](vendor-onboarding) | Intermediate | Turns a procurement onboarding request into a vendor master record across two systems. |
+| [Any browser: Edge and Firefox](ui-automation-web-automation-any-browser) | Intermediate | A browser flow built from Web Automation nodes that signs in to Acme ERP Web and searches the customers, run on a robot in Edge and then in Firefox, with only the Browser Type changed. |
+| [Headless Chrome](ui-automation-web-headless) | Beginner | The Web Inspector lesson's flow, run first headed so you can watch it, then headless with Record Session, so the robot keeps a video of the run nobody saw. |
 
 ### File Operations
 
@@ -257,6 +259,12 @@ The script reads titles, order, runtimes and publish dates from the playlist its
 | [Run an Application](run-an-application) | Beginner | Starts a desktop application by executable path — the simplest form of process orchestration in Robomotion. |
 | [Send Text to Notepad](send-text-to-notepad) | Beginner | Opens Notepad and types a provided string into its editor window. |
 | [Share PowerPoint File as PDF](share-powerpoint-file-as-pdf) | Advanced | Opens a . |
+| [Putting it together](ui-automation-capstone-order-to-erp) | Advanced | One flow over three systems. Headless Chrome reads today's web orders from Acme ERP Web, the finance system is asked about each customer over Remote Desktop, and the orders with nothing overdue are entered into Acme ERP for Windows, line by line, with a report at the end. |
+| [Reading over Remote Desktop](ui-automation-image-reading) | Intermediate | A flow that logs on to Acme ERP over Remote Desktop, reads the outstanding and overdue totals off the Invoices screen with OCR, each anchored to its label, and writes the overdue share to a CSV file. |
+| [Slow sessions](ui-automation-image-slow-sessions) | Intermediate | A flow recorded on a good Remote Desktop session that logs on and updates a customer's email, phone and notes in Acme ERP, and still gets every value right on a slow session that loses keystrokes. |
+| [Reading from a Java application](ui-automation-java-reading) | Intermediate | A flow that signs in to Acme ERP (Java Edition), reads a customer's credit limit and the fasteners in the product table, works out how many boxes of each the limit covers, and writes the answer to a CSV file. |
+| [Windows dialogs and grids](ui-automation-windows-dialogs-grids) | Intermediate | A flow that signs in to Acme ERP for Windows, waits for its orders grid, reads it with Get Table Data, exports the orders on hold through the Save As dialog, and closes the app answering its "Save changes?" question. |
+| [Every customer from a CSV](ui-automation-windows-recorder-csv) | Intermediate | The Windows Recorder's customer task run for every row of a CSV file, each typed value replaced by the row's field, with a Catch that logs a row the app will not take and goes on with the next. |
 
 ### Excel Automation
 

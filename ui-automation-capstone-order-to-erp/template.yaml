@@ -1,0 +1,13 @@
+name: Putting it together
+slug: ui-automation-capstone-order-to-erp
+summary: >-
+  One flow over three systems. Headless Chrome reads today's web orders from Acme ERP Web, the finance system is asked about each customer over Remote Desktop, and the orders with nothing overdue are entered into Acme ERP for Windows, line by line, with a report at the end.
+category: Desktop Automation
+level: Advanced
+tags: [academy, ui-automation, acme-erp]
+author: Robomotion
+created: "2026-10-08"
+updated: "2026-10-08"
+has_subflows: true
+flow_id: main
+schema_version: 1
