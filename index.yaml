@@ -1,5 +1,18 @@
 schema_version: 1
 templates:
+  - name: "Any browser: Edge and Firefox"
+    slug: ui-automation-web-automation-any-browser
+    summary: >-
+      A browser flow built from Web Automation nodes that signs in to Acme ERP Web and searches the customers, run on a robot in Edge and then in Firefox, with only the Browser Type changed.
+    category: Web Automation
+    level: Intermediate
+    tags: [academy, ui-automation, acme-erp]
+    author: Robomotion
+    created: "2026-10-08"
+    updated: "2026-10-08"
+    screenshot: screenshot.png
+    has_subflows: true
+
   - name: ActiveCampaign Lead Business Data
     slug: get-business-data-for-activecampaign-leads
     summary: >-
@@ -134,6 +147,19 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Amazon Product Search Scraper
+    slug: amazon-product-search-scraper
+    summary: >-
+      Searches Amazon from its search box and exports the products it finds (title, product link, price, rating, image) into a CSV, going through the result pages with Next.
+    category: Web Scraping
+    level: Intermediate
+    tags: [amazon, scraping, browser]
+    author: Robomotion
+    created: "2026-10-05"
+    updated: "2026-10-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: API Calls with Http Request
     slug: api-calls-with-http-request
     summary: >-
@@ -150,7 +176,7 @@ templates:
     author: Robomotion
     created: "2026-08-30"
     updated: "2026-08-30"
-    screenshot: undefined
+    screenshot: screenshot.png
     video_url: "https://www.youtube.com/watch?v=oqqpZ1RfbgY"
     has_subflows: false
 
@@ -317,7 +343,7 @@ templates:
     author: Robomotion
     created: "2026-09-18"
     updated: "2026-09-18"
-    screenshot: undefined
+    screenshot: screenshot.png
     video_url: "https://www.youtube.com/watch?v=L21FH2jl3Mk"
     has_subflows: false
 
@@ -534,7 +560,7 @@ templates:
     author: Robomotion
     created: "2026-08-30"
     updated: "2026-08-30"
-    screenshot: undefined
+    screenshot: screenshot.png
     video_url: "https://www.youtube.com/watch?v=Ej9lWmLEZDM"
     has_subflows: false
 
@@ -649,7 +675,7 @@ templates:
     author: Robomotion
     created: "2026-08-29"
     updated: "2026-08-29"
-    screenshot: undefined
+    screenshot: screenshot.png
     video_url: "https://www.youtube.com/watch?v=YnBsUuHYnRc"
     has_subflows: false
 
@@ -1098,6 +1124,19 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Every customer from a CSV
+    slug: ui-automation-windows-recorder-csv
+    summary: >-
+      The Windows Recorder's customer task run for every row of a CSV file, each typed value replaced by the row's field, with a Catch that logs a row the app will not take and goes on with the next.
+    category: Desktop Automation
+    level: Intermediate
+    tags: [academy, ui-automation, acme-erp]
+    author: Robomotion
+    created: "2026-10-08"
+    updated: "2026-10-08"
+    screenshot: screenshot.png
+    has_subflows: true
+
   - name: Extract Phone Numbers and Emails
     slug: extract-phone-numbers-and-emails
     summary: >-
@@ -1139,6 +1178,45 @@ templates:
     updated: "2025-11-15"
     screenshot: screenshot.png
     has_subflows: true
+
+  - name: Facebook Group Members Export
+    slug: facebook-group-members-export
+    summary: >-
+      Exports the members of a Facebook group you belong to (name, profile link, photo, when they joined, their headline) into a CSV, scrolling until it has them all.
+    category: Web Scraping
+    level: Intermediate
+    tags: [facebook, scraping, browser]
+    author: Robomotion
+    created: "2026-10-04"
+    updated: "2026-10-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Facebook Profile Scraper
+    slug: facebook-profile-scraper
+    summary: >-
+      Reads a Facebook profile: the name, where the person lives and is from, their work and education, into a CSV.
+    category: Web Scraping
+    level: Intermediate
+    tags: [facebook, scraping, browser]
+    author: Robomotion
+    created: "2026-10-04"
+    updated: "2026-10-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Facebook Profile URL Finder
+    slug: facebook-profile-url-finder
+    summary: >-
+      Finds the Facebook profiles for a name with Facebook's own people search: each result's profile URL and name, into a CSV.
+    category: Web Scraping
+    level: Intermediate
+    tags: [facebook, scraping, browser]
+    author: Robomotion
+    created: "2026-10-04"
+    updated: "2026-10-05"
+    screenshot: screenshot.png
+    has_subflows: false
 
   - name: Featured Snippet Wins by Email
     slug: track-new-featured-snippet-keyword-wins-via-email
@@ -1589,7 +1667,7 @@ templates:
     author: Robomotion
     created: "2026-08-29"
     updated: "2026-08-29"
-    screenshot: undefined
+    screenshot: screenshot.png
     video_url: "https://www.youtube.com/watch?v=YnBsUuHYnRc"
     has_subflows: false
 
@@ -1634,6 +1712,19 @@ templates:
     updated: "2025-11-16"
     screenshot: screenshot.png
     has_subflows: false
+
+  - name: Headless Chrome
+    slug: ui-automation-web-headless
+    summary: >-
+      The Web Inspector lesson's flow, run first headed so you can watch it, then headless with Record Session, so the robot keeps a video of the run nobody saw.
+    category: Web Automation
+    level: Beginner
+    tags: [academy, ui-automation, acme-erp]
+    author: Robomotion
+    created: "2026-10-08"
+    updated: "2026-10-08"
+    screenshot: screenshot.png
+    has_subflows: true
 
   - name: High-Volume Keywords to Asana Tasks
     slug: turn-new-high-volume-ranked-keywords-into-asana-tasks
@@ -1975,6 +2066,136 @@ templates:
     author: Robomotion
     created: "2026-05-23"
     updated: "2026-05-23"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: LinkedIn Activity Extractor
+    slug: linkedin-activity-extractor
+    summary: >-
+      Exports a LinkedIn member's recent activity (each post's text, author and links) into a CSV, scrolling for more.
+    category: Web Scraping
+    level: Intermediate
+    tags: [linkedin, scraping, browser]
+    author: Robomotion
+    created: "2026-10-04"
+    updated: "2026-10-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: LinkedIn Company Employees Export
+    slug: linkedin-company-employees-export
+    summary: >-
+      Exports the people of a LinkedIn company (name, title, photo) into a CSV, pressing Show more results until it has enough.
+    category: Web Scraping
+    level: Intermediate
+    tags: [linkedin, scraping, browser]
+    author: Robomotion
+    created: "2026-10-04"
+    updated: "2026-10-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: LinkedIn Company Scraper
+    slug: linkedin-company-scraper
+    summary: >-
+      Reads a LinkedIn company page: the name, industry, size, headquarters, website, specialties and overview, into a CSV.
+    category: Web Scraping
+    level: Intermediate
+    tags: [linkedin, scraping, browser]
+    author: Robomotion
+    created: "2026-10-04"
+    updated: "2026-10-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: LinkedIn Company URL Finder
+    slug: linkedin-company-url-finder
+    summary: >-
+      Finds the LinkedIn company pages for a company name with LinkedIn's own company search: each result's page URL, name, industry and location, into a CSV.
+    category: Web Scraping
+    level: Intermediate
+    tags: [linkedin, scraping, browser]
+    author: Robomotion
+    created: "2026-10-05"
+    updated: "2026-10-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: LinkedIn Job Scraper
+    slug: linkedin-job-scraper
+    summary: >-
+      Reads a LinkedIn job: its title, company, location and the About the job text, into a CSV.
+    category: Web Scraping
+    level: Intermediate
+    tags: [linkedin, scraping, browser]
+    author: Robomotion
+    created: "2026-10-05"
+    updated: "2026-10-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: LinkedIn Post Commenter and Liker Scraper
+    slug: linkedin-post-commenter-and-liker-scraper
+    summary: >-
+      Collects the people who commented on a LinkedIn post and the people who reacted to it into one CSV: name, profile link, headline, and whether each one commented and/or reacted.
+    category: Web Scraping
+    level: Intermediate
+    tags: [linkedin, scraping, browser]
+    author: Robomotion
+    created: "2026-10-05"
+    updated: "2026-10-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: LinkedIn Post Commenters Export
+    slug: linkedin-post-commenters-export
+    summary: >-
+      Exports the people who commented on a LinkedIn post (name, profile link, headline, comment) into a CSV, scrolling for more.
+    category: Web Scraping
+    level: Intermediate
+    tags: [linkedin, scraping, browser]
+    author: Robomotion
+    created: "2026-10-05"
+    updated: "2026-10-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: LinkedIn Post Likers Export
+    slug: linkedin-post-likers-export
+    summary: >-
+      Exports the people who reacted to a LinkedIn post (name, profile link, headline) into a CSV, from the post's reactions list.
+    category: Web Scraping
+    level: Intermediate
+    tags: [linkedin, scraping, browser]
+    author: Robomotion
+    created: "2026-10-05"
+    updated: "2026-10-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: LinkedIn Profile Scraper
+    slug: linkedin-profile-scraper
+    summary: >-
+      Reads a LinkedIn profile: the name, headline, location, current company and About, into a CSV.
+    category: Web Scraping
+    level: Intermediate
+    tags: [linkedin, scraping, browser]
+    author: Robomotion
+    created: "2026-10-04"
+    updated: "2026-10-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: LinkedIn Search Export
+    slug: linkedin-search-export
+    summary: >-
+      Exports LinkedIn people search results (name, headline, location, photo) into a CSV, page after page with the Next button.
+    category: Web Scraping
+    level: Intermediate
+    tags: [linkedin, scraping, browser]
+    author: Robomotion
+    created: "2026-10-04"
+    updated: "2026-10-05"
     screenshot: screenshot.png
     has_subflows: false
 
@@ -2414,6 +2635,19 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Putting it together
+    slug: ui-automation-capstone-order-to-erp
+    summary: >-
+      One flow over three systems. Headless Chrome reads today's web orders from Acme ERP Web, the finance system is asked about each customer over Remote Desktop, and the orders with nothing overdue are entered into Acme ERP for Windows, line by line, with a report at the end.
+    category: Desktop Automation
+    level: Advanced
+    tags: [academy, ui-automation, acme-erp]
+    author: Robomotion
+    created: "2026-10-08"
+    updated: "2026-10-08"
+    screenshot: screenshot.png
+    has_subflows: true
+
   - name: Quote-to-Cash Gap Audit
     slug: quote-to-cash-gap-audit
     summary: >-
@@ -2506,6 +2740,32 @@ templates:
     updated: "2025-11-17"
     screenshot: screenshot.png
     has_subflows: false
+
+  - name: Reading from a Java application
+    slug: ui-automation-java-reading
+    summary: >-
+      A flow that signs in to Acme ERP (Java Edition), reads a customer's credit limit and the fasteners in the product table, works out how many boxes of each the limit covers, and writes the answer to a CSV file.
+    category: Desktop Automation
+    level: Intermediate
+    tags: [academy, ui-automation, acme-erp]
+    author: Robomotion
+    created: "2026-10-08"
+    updated: "2026-10-08"
+    screenshot: screenshot.png
+    has_subflows: true
+
+  - name: Reading over Remote Desktop
+    slug: ui-automation-image-reading
+    summary: >-
+      A flow that logs on to Acme ERP over Remote Desktop, reads the outstanding and overdue totals off the Invoices screen with OCR, each anchored to its label, and writes the overdue share to a CSV file.
+    category: Desktop Automation
+    level: Intermediate
+    tags: [academy, ui-automation, acme-erp]
+    author: Robomotion
+    created: "2026-10-08"
+    updated: "2026-10-08"
+    screenshot: screenshot.png
+    has_subflows: true
 
   - name: Reddit Homepage & Subreddit Post Scraper
     slug: scrape-reddit-post-homepage-subreddit
@@ -2955,6 +3215,19 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Slow sessions
+    slug: ui-automation-image-slow-sessions
+    summary: >-
+      A flow recorded on a good Remote Desktop session that logs on and updates a customer's email, phone and notes in Acme ERP, and still gets every value right on a slow session that loses keystrokes.
+    category: Desktop Automation
+    level: Intermediate
+    tags: [academy, ui-automation, acme-erp]
+    author: Robomotion
+    created: "2026-10-08"
+    updated: "2026-10-08"
+    screenshot: screenshot.png
+    has_subflows: true
+
   - name: Sort Lines of a Text File
     slug: sort-lines-of-text-file
     summary: >-
@@ -3319,6 +3592,45 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Twitter Follower Collector
+    slug: twitter-follower-collector
+    summary: >-
+      Collects the people who follow an X profile (name, handle, profile link, bio) into a CSV, scrolling for more.
+    category: Web Scraping
+    level: Intermediate
+    tags: [x, scraping, browser]
+    author: Robomotion
+    created: "2026-10-05"
+    updated: "2026-10-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Twitter Following Collector
+    slug: twitter-following-collector
+    summary: >-
+      Collects the people followed by an X profile (name, handle, profile link, bio) into a CSV, scrolling for more.
+    category: Web Scraping
+    level: Intermediate
+    tags: [x, scraping, browser]
+    author: Robomotion
+    created: "2026-10-05"
+    updated: "2026-10-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
+  - name: Twitter Profile Scraper
+    slug: twitter-profile-scraper
+    summary: >-
+      Reads an X profile: the name, handle, bio, location, join date, following and followers counts and the number of posts, into a CSV.
+    category: Web Scraping
+    level: Intermediate
+    tags: [x, scraping, browser]
+    author: Robomotion
+    created: "2026-10-05"
+    updated: "2026-10-05"
+    screenshot: screenshot.png
+    has_subflows: false
+
   - name: Udemy Course Details
     slug: extract-course-details-udemy
     summary: >-
@@ -3504,7 +3816,7 @@ templates:
     author: Robomotion
     created: "2026-08-30"
     updated: "2026-08-30"
-    screenshot: undefined
+    screenshot: screenshot.png
     video_url: "https://www.youtube.com/watch?v=-IK6DQTcDW0"
     has_subflows: false
 
@@ -3566,7 +3878,7 @@ templates:
     author: Robomotion
     created: "2026-09-02"
     updated: "2026-09-02"
-    screenshot: undefined
+    screenshot: screenshot.png
     video_url: "https://www.youtube.com/watch?v=XWTFAp83FBo"
     has_subflows: true
 
@@ -3584,6 +3896,19 @@ templates:
     updated: "2026-08-05"
     screenshot: screenshot.png
     has_subflows: false
+
+  - name: Windows dialogs and grids
+    slug: ui-automation-windows-dialogs-grids
+    summary: >-
+      A flow that signs in to Acme ERP for Windows, waits for its orders grid, reads it with Get Table Data, exports the orders on hold through the Save As dialog, and closes the app answering its "Save changes?" question.
+    category: Desktop Automation
+    level: Intermediate
+    tags: [academy, ui-automation, acme-erp]
+    author: Robomotion
+    created: "2026-10-08"
+    updated: "2026-10-08"
+    screenshot: screenshot.png
+    has_subflows: true
 
   - name: WordPress Theme Search
     slug: extract-wordpress-themes-search-results
