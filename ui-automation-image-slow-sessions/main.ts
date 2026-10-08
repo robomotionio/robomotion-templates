@@ -8,7 +8,7 @@ const IMG_SAVE = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF4AAAAeCAIAAAAq
 const IMG_OK = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAcCAIAAAB56a/tAAADOklEQVRYCeXBIbKkWhAE0GQ/JUqWnf0gkNhxSATLaIFsd69MXBKR7OdHXDUL6Cd+v3Mmi/hNJov4TSaL+E0mixjmZcVXO/YNwGQRw7ysrTV8oz9//gA49g3AZBHDvKyttee+8F1e57v3DuDYNwCTRQzzsrbWnvvCd3md7947gGPfAEwWMczL2lp77gvf5XW+e+8Ajn0DMFnEMC9ra+25LwyRZTGyLEaWxciyGFkWI8tiZFmMLIuRZTGyLEaWxciyGFkWI8tiZFmMLIuRZTGyLEaWxciyGFkWI8tiZFmMLIuRZTGyLEaWxciyGFkWI8tiZFmMLIuRZRHA63z33gEc+wZgsohhXtbW2nNf+C6v8917B3DsG4DJIoZ5WVtrz31hiCyL+KjIwmARQ2RZxBBZFvEhkWURwOt8994BHPsGYLKIYV7W1tpzX/gZkWURQ2RZBBBZFgFElkX8gNf57r0DOPYNwGQRw7ysrbXnvjBElkV8SGRZxD8iy2JkWYwsi/ioyLII4HW+e+8Ajn0DMFnEMC9ra+25L/yAyLKIf0SWxcgCYBE/5nW+e+8Ajn0DMFnEMC9ra+25LwyRZREfElkW8Y/IshhZACzi0yLLIoDX+e69Azj2DcBkEcO8rK21577wAyLLIv4RWRYjy2JkWcTPeJ3v3juAY98ATBYxzMvaWnvuC0NkWcTnRJZFDJFlEUBkWQQQWRbxOZFlEcDrfPfeARz7BmCyiGFe1tbac1/4MZGFwSKGyLKIIbIs4tNe57v3DuDYNwCTRQzzsrbWnvvCEFkW8b8VWRYBvM537x3AsW8AJosY5mVtrT33he/yOt+9dwDHvgGYLGKYl7W19twXhsiyGFkWI8tiZFmMLIuRZTGyLEaWxciyGFkWI8tiZFmMLIuRZTGyLEaWxciyGFkWI8tiZFmMLIuRZTGyLEaWxciyGFkWI8tiZFmMLIuRZTGyLEaWxciyCOB1vnvvAI59AzBZxDAva2vtuS98l9f57r0DOPYNwGQRw7ysrbXnvvBdXue79w7g2DcAk0UM87K21v7+/Yuv03sHcOwbgMkihnlZ8dWOfQMwWcQwLyu+2rFvACaL+E0mi/hN/gOaXWwLFKLDrgAAAABJRU5ErkJggg==";
 
 flow.create('main', "Slow sessions", (f) => {
-  f.addDependency('Robomotion.ImageAutomation', '0.12.4');
+  f.addDependency('Robomotion.ImageAutomation', '0.12.5');
   f.node('c90001', 'Core.Trigger.Inject', 'Start', {})
     .then('c90002', 'Core.Flow.SubFlow', 'Open Acme ERP over a slow session', {})
     .then('c90003', 'Robomotion.ImageAutomation.Image.ClickType', "Type the email", {

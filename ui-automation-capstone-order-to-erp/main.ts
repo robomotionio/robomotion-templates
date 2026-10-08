@@ -6,7 +6,7 @@ const IMG_OVERDUE = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAAAmCAIAA
 
 flow.create('main', "Putting it together", (f) => {
   f.addDependency('Robomotion.WindowsAutomation', '0.21.10');
-  f.addDependency('Robomotion.ImageAutomation', '0.12.4');
+  f.addDependency('Robomotion.ImageAutomation', '0.12.5');
   f.node('c91001', 'Core.Trigger.Inject', "Start", {
 
     })
