@@ -26,6 +26,29 @@ schema_version: 1
 # Dated announcements: one page of the dialog each, newest first. Designers
 # older than 2026-09-18 read only `entries` below and do not show these.
 announcements:
+  - date: "2026-10-09"
+    title: "Robomotion Academy is open"
+    entries:
+      - id: robomotion-academy-site
+        tag: Academy
+        title: "Robomotion Academy: learn Robomotion, path by path"
+        summary: >-
+          academy.robomotion.io brings the lessons together in one place. Pick
+          a path, watch short videos, read articles you can search, answer
+          quick quizzes and finish hands-on challenges. Complete a course and
+          you earn a certificate you can share. The Home page now shows the
+          five paths; click one to start.
+        bullets:
+          - "Five paths: Automation Foundations, Web & Integration, People, AI & Apps, Document Understanding, and Desktop and Web UI Automation"
+          - "61 lessons, from your first flow to automations running in production"
+          - "Course certificates and skill badges, plus professional certificates with an exam"
+          - "Sign in and your progress is saved, so you can pick up where you left off"
+        image: whats-new/robomotion-academy.png
+        image_dark: whats-new/robomotion-academy-dark.png
+        link:
+          label: Open the Academy
+          url: https://academy.robomotion.io/en/learn
+
   - date: "2026-10-01"
     title: "Document Understanding: from paper to data"
     entries:
