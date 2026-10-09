@@ -23,7 +23,7 @@ flow.create('main', "Clinic Support Assistant", (f) => {
   f.addDependency('Robomotion.MCP', '0.6.0');
   f.addDependency('Robomotion.HermesAgent', '0.21.2');
   f.addDependency('Robomotion.KnowledgeBase', '0.1.7');
-  f.addDependency('Robomotion.SQLite', '1.6.4');
+  f.addDependency('Robomotion.SQLite', '1.7.1');
 
   // Two comment boxes, in their own column on the canvas: what this is, and what has to exist
   // before it can run. A screenshot cannot show a vault item or a knowledge base.
