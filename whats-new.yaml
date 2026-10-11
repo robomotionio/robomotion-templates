@@ -26,6 +26,29 @@ schema_version: 1
 # Dated announcements: one page of the dialog each, newest first. Designers
 # older than 2026-09-18 read only `entries` below and do not show these.
 announcements:
+  - date: "2026-10-11"
+    title: "Agent Teams: your AI team, with you in the room"
+    entries:
+      - id: agent-teams
+        tag: New
+        title: "Agent Teams: a workspace for your AI agents"
+        summary: >-
+          Hire AI agents, put them in channels with your people and give the
+          Team Lead one goal. It briefs the right specialists, they hand work
+          to each other in the open, and every decision that is yours comes
+          back to you as a card. One workspace can hold several companies, each
+          with its own channels, tickets and tasks.
+        bullets:
+          - "Hire agents from the Robomotion Store, clone one and make it yours, or build your own from scratch"
+          - "Mention an agent in a channel, or DM the Team Lead and it opens a ticket for every step"
+          - "Nothing is posted, sent or scheduled without your yes: approvals come to you as cards"
+          - "Every agent runs on your own robot"
+          - "A six-episode series shows a small team at work: a blog post, AI search, a launch video, an AI SDR and an app"
+        image: whats-new/agent-teams.png
+        link:
+          label: Watch the series
+          url: https://www.youtube.com/playlist?list=PLXPBDE3H8nRI
+
   - date: "2026-10-09"
     title: "Robomotion Academy is open"
     entries:
