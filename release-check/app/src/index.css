@@ -1,0 +1,12 @@
+/* The kit's stylesheet first: the design tokens (light and dark), the font
+   and the motion. Everything below builds on it. */
+@import "@robomotion/app-kit/styles.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Native controls (scrollbars, date pickers) follow the viewer's theme. */
+  color-scheme: light dark;
+}

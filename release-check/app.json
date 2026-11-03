@@ -1,0 +1,868 @@
+{
+  "schema": "robomotion.app/v1",
+  "app_id": "e32fbd6b-2274-49dd-81f0-07f6d05ea7cf",
+  "flow_id": "15442678-8da0-452a-8e74-961884a5a773",
+  "name": "Release Check",
+  "description": "Test new builds of Quillmoth Billing: keep the suites, run them, and see which builds are ready to ship.",
+  "auth": "workspace",
+  "theme": {
+    "accent": "#FF4F00"
+  },
+  "types": {
+    "Step": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "position": {
+          "type": "integer",
+          "description": "1 is the first step."
+        },
+        "action": {
+          "type": "string",
+          "description": "What to do on the page."
+        },
+        "expected": {
+          "type": "string",
+          "description": "The text that should be on the page afterwards."
+        }
+      },
+      "required": [
+        "id",
+        "position",
+        "action",
+        "expected"
+      ]
+    },
+    "TestCase": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "suite_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/types/Step"
+          }
+        },
+        "created": {
+          "type": "boolean",
+          "description": "True when this press made the case; false when it changed one that was already there."
+        }
+      },
+      "required": [
+        "id",
+        "suite_id",
+        "title",
+        "steps"
+      ]
+    },
+    "Suite": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "base_url": {
+          "type": "string",
+          "description": "The staging address this suite tests."
+        },
+        "case_count": {
+          "type": "integer"
+        },
+        "step_count": {
+          "type": "integer"
+        },
+        "created": {
+          "type": "boolean",
+          "description": "True when this press made the suite; false when it changed one that was already there."
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "base_url",
+        "case_count"
+      ]
+    },
+    "SuiteDetail": {
+      "type": "object",
+      "properties": {
+        "suite": {
+          "$ref": "#/types/Suite"
+        },
+        "cases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/types/TestCase"
+          }
+        }
+      },
+      "required": [
+        "suite",
+        "cases"
+      ]
+    },
+    "Run": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "suite_id": {
+          "type": "string"
+        },
+        "suite_name": {
+          "type": "string"
+        },
+        "build": {
+          "type": "string",
+          "description": "The build this run tested."
+        },
+        "started_at": {
+          "type": "number",
+          "description": "When the run started, in milliseconds since 1970."
+        },
+        "finished_at": {
+          "type": "number",
+          "description": "When the run finished, in milliseconds since 1970."
+        },
+        "total": {
+          "type": "integer"
+        },
+        "passed": {
+          "type": "integer"
+        },
+        "failed": {
+          "type": "integer"
+        },
+        "flaky": {
+          "type": "integer",
+          "description": "Tests that failed once and passed on a second try."
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "running",
+            "done"
+          ]
+        },
+        "note": {
+          "type": "string",
+          "description": "The first thing that did not work, in plain words."
+        }
+      },
+      "required": [
+        "id",
+        "suite_name",
+        "build",
+        "started_at",
+        "total",
+        "passed",
+        "failed",
+        "flaky"
+      ]
+    },
+    "Release": {
+      "type": "object",
+      "properties": {
+        "build": {
+          "type": "string"
+        },
+        "first_run_at": {
+          "type": "number"
+        },
+        "last_run_at": {
+          "type": "number"
+        },
+        "runs": {
+          "type": "integer"
+        },
+        "passed": {
+          "type": "integer"
+        },
+        "failed": {
+          "type": "integer"
+        },
+        "flaky": {
+          "type": "integer"
+        },
+        "failing_runs": {
+          "type": "integer"
+        },
+        "verdict": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "mixed",
+            "fail"
+          ]
+        }
+      },
+      "required": [
+        "build",
+        "last_run_at",
+        "runs",
+        "passed",
+        "failed",
+        "flaky"
+      ]
+    },
+    "StepResult": {
+      "type": "object",
+      "description": "What one step of one test case did.",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "case_title": {
+          "type": "string"
+        },
+        "attempt": {
+          "type": "integer",
+          "description": "1 for the first try, 2 for the second."
+        },
+        "position": {
+          "type": "integer"
+        },
+        "action": {
+          "type": "string"
+        },
+        "expected": {
+          "type": "string"
+        },
+        "said": {
+          "type": "string",
+          "description": "What the page actually showed."
+        },
+        "screenshot": {
+          "type": "string",
+          "description": "Where the screenshot of the page was saved."
+        },
+        "ok": {
+          "type": "boolean"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "case_title",
+        "attempt",
+        "position",
+        "expected",
+        "said",
+        "ok"
+      ]
+    },
+    "RunDetail": {
+      "type": "object",
+      "properties": {
+        "run": {
+          "$ref": "#/types/Run"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/types/StepResult"
+          }
+        }
+      },
+      "required": [
+        "run",
+        "steps"
+      ]
+    },
+    "ReportFailure": {
+      "type": "object",
+      "description": "One test case that failed, and the step that failed in it.",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "case_title": {
+          "type": "string"
+        },
+        "position": {
+          "type": "integer",
+          "description": "Which step of the case failed."
+        },
+        "action": {
+          "type": "string"
+        },
+        "expected": {
+          "type": "string"
+        },
+        "said": {
+          "type": "string",
+          "description": "What the page actually showed."
+        },
+        "url": {
+          "type": "string"
+        },
+        "attempt": {
+          "type": "integer"
+        },
+        "screenshot": {
+          "$ref": "#/types/FileRef"
+        },
+        "bug_report": {
+          "type": "string",
+          "description": "A ready-to-paste bug report: steps to reproduce, expected and found."
+        }
+      },
+      "required": [
+        "id",
+        "case_title",
+        "position",
+        "expected",
+        "said",
+        "bug_report"
+      ]
+    },
+    "BuildPoint": {
+      "type": "object",
+      "description": "One build's latest run, for the charts and the trend.",
+      "properties": {
+        "build": {
+          "type": "string"
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "passed": {
+          "type": "integer"
+        },
+        "failed": {
+          "type": "integer"
+        },
+        "flaky": {
+          "type": "integer"
+        },
+        "total": {
+          "type": "integer"
+        },
+        "pass_rate": {
+          "type": "number",
+          "description": "Passed plus flaky, as a percentage of the tests."
+        },
+        "at": {
+          "type": "number",
+          "description": "When that run finished, in milliseconds since 1970."
+        }
+      },
+      "required": [
+        "build",
+        "run_id",
+        "passed",
+        "failed",
+        "flaky",
+        "total",
+        "pass_rate",
+        "at"
+      ]
+    },
+    "ReportChanges": {
+      "type": "object",
+      "description": "How this build differs from the build tested before it.",
+      "properties": {
+        "previous_build": {
+          "type": "string"
+        },
+        "new_failures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "still_failing": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fixed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "new_failures",
+        "still_failing",
+        "fixed"
+      ]
+    },
+    "Report": {
+      "type": "object",
+      "description": "One run written up for the developers.",
+      "properties": {
+        "run": {
+          "$ref": "#/types/Run"
+        },
+        "build": {
+          "type": "string"
+        },
+        "suite_name": {
+          "type": "string"
+        },
+        "base_url": {
+          "type": "string",
+          "description": "The staging address this run tested."
+        },
+        "finished_at": {
+          "type": "number"
+        },
+        "ship": {
+          "type": "boolean",
+          "description": "True when nothing failed."
+        },
+        "pass_rate": {
+          "type": "number"
+        },
+        "previous_pass_rate": {
+          "type": "number",
+          "description": "The pass rate of the build tested before, or -1 when there is none."
+        },
+        "history": {
+          "type": "array",
+          "items": {
+            "$ref": "#/types/BuildPoint"
+          }
+        },
+        "changes": {
+          "$ref": "#/types/ReportChanges"
+        },
+        "failures": {
+          "type": "array",
+          "items": {
+            "$ref": "#/types/ReportFailure"
+          }
+        },
+        "junit": {
+          "type": "string",
+          "description": "The run as JUnit XML, for the build pipeline."
+        }
+      },
+      "required": [
+        "run",
+        "build",
+        "suite_name",
+        "base_url",
+        "ship",
+        "pass_rate",
+        "history",
+        "changes",
+        "failures",
+        "junit"
+      ]
+    }
+  },
+  "actions": {
+    "listSuites": {
+      "description": "See the test suites, a page at a time.",
+      "params": {
+        "type": "object"
+      },
+      "result": {
+        "type": "object",
+        "properties": {
+          "rows": {
+            "type": "array",
+            "items": {
+              "$ref": "#/types/Suite"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "description": "Rows there are altogether, across every page."
+          }
+        },
+        "required": [
+          "rows",
+          "total"
+        ]
+      },
+      "timeout_ms": 30000
+    },
+    "getSuite": {
+      "description": "Open one suite with all of its test cases and steps.",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "result": {
+        "$ref": "#/types/SuiteDetail"
+      },
+      "timeout_ms": 30000
+    },
+    "saveSuite": {
+      "description": "Add a suite, or change its name and the staging address it tests.",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "base_url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "base_url"
+        ]
+      },
+      "result": {
+        "$ref": "#/types/Suite"
+      },
+      "timeout_ms": 30000
+    },
+    "removeSuite": {
+      "description": "Remove a suite together with its test cases.",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "result": {
+        "type": "object"
+      },
+      "timeout_ms": 30000
+    },
+    "listCases": {
+      "description": "See the test cases of one suite.",
+      "params": {
+        "type": "object",
+        "properties": {
+          "suite_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "suite_id"
+        ]
+      },
+      "result": {
+        "type": "object",
+        "properties": {
+          "rows": {
+            "type": "array",
+            "items": {
+              "$ref": "#/types/TestCase"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "description": "Rows there are altogether, across every page."
+          }
+        },
+        "required": [
+          "rows",
+          "total"
+        ]
+      },
+      "timeout_ms": 30000
+    },
+    "saveCase": {
+      "description": "Add a test case, or change its title and steps.",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "suite_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "action": {
+                  "type": "string"
+                },
+                "expected": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "expected"
+              ]
+            }
+          }
+        },
+        "required": [
+          "suite_id",
+          "title",
+          "steps"
+        ]
+      },
+      "result": {
+        "$ref": "#/types/TestCase"
+      },
+      "timeout_ms": 30000
+    },
+    "removeCase": {
+      "description": "Remove one test case.",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "result": {
+        "type": "object"
+      },
+      "timeout_ms": 30000
+    },
+    "importCases": {
+      "description": "Read a CSV file of test cases and add them to a suite. It answers the ids of the cases it made, so they can be removed again.",
+      "params": {
+        "type": "object",
+        "properties": {
+          "suite_id": {
+            "type": "string"
+          },
+          "csv": {
+            "type": "string",
+            "description": "Rows pasted straight in: case, step, action, expected."
+          },
+          "file": {
+            "$ref": "#/types/FileRef"
+          }
+        },
+        "required": [
+          "suite_id"
+        ]
+      },
+      "result": {
+        "type": "object",
+        "properties": {
+          "cases": {
+            "type": "integer"
+          },
+          "steps": {
+            "type": "integer"
+          },
+          "skipped": {
+            "type": "integer"
+          },
+          "message": {
+            "type": "string"
+          },
+          "case_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The new test cases, by id, so they can be taken away again."
+          }
+        },
+        "required": [
+          "cases",
+          "steps",
+          "message",
+          "case_ids"
+        ]
+      },
+      "timeout_ms": 120000
+    },
+    "listRuns": {
+      "description": "See every run of every suite, newest first.",
+      "params": {
+        "type": "object"
+      },
+      "result": {
+        "type": "object",
+        "properties": {
+          "rows": {
+            "type": "array",
+            "items": {
+              "$ref": "#/types/Run"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "description": "Rows there are altogether, across every page."
+          }
+        },
+        "required": [
+          "rows",
+          "total"
+        ]
+      },
+      "timeout_ms": 30000
+    },
+    "runSuite": {
+      "description": "Run a suite against a build and record what passed, failed and was flaky.",
+      "params": {
+        "type": "object",
+        "properties": {
+          "suite_id": {
+            "type": "string"
+          },
+          "build": {
+            "type": "string",
+            "description": "Optional. Leave it empty and the robot takes the build number from the page footer."
+          }
+        },
+        "required": [
+          "suite_id"
+        ]
+      },
+      "result": {
+        "$ref": "#/types/Run"
+      },
+      "timeout_ms": 600000,
+      "progress": true,
+      "concurrency": {
+        "mode": "queue",
+        "limit": 1
+      }
+    },
+    "getRun": {
+      "description": "Open one run: every step it took, what each expected, what the page said, and its screenshot.",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "result": {
+        "$ref": "#/types/RunDetail"
+      },
+      "timeout_ms": 30000
+    },
+    "getReport": {
+      "description": "Read one run as a report for the developers: whether to ship, the numbers, what changed since the last build, and every failure with its screenshot.",
+      "params": {
+        "type": "object",
+        "properties": {
+          "run_id": {
+            "type": "string",
+            "description": "Which run. Leave it empty for the newest one."
+          }
+        }
+      },
+      "result": {
+        "$ref": "#/types/Report"
+      },
+      "timeout_ms": 120000
+    },
+    "removeRun": {
+      "description": "Remove one run from the history.",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "result": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "timeout_ms": 30000
+    },
+    "listReleases": {
+      "description": "See one row per build that has been tested.",
+      "params": {
+        "type": "object"
+      },
+      "result": {
+        "type": "object",
+        "properties": {
+          "rows": {
+            "type": "array",
+            "items": {
+              "$ref": "#/types/Release"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "description": "Rows there are altogether, across every page."
+          }
+        },
+        "required": [
+          "rows",
+          "total"
+        ]
+      },
+      "timeout_ms": 30000
+    }
+  },
+  "events": {},
+  "screens": {
+    "suites": {
+      "description": "Keep the test suites and the cases in them.",
+      "route": "/"
+    },
+    "runs": {
+      "description": "Run a suite and see how every run went.",
+      "route": "/runs"
+    },
+    "releases": {
+      "description": "Every build that has been tested, and whether it is ready.",
+      "route": "/releases"
+    },
+    "report": {
+      "description": "One run, written up for the developers.",
+      "route": "/report"
+    }
+  }
+}

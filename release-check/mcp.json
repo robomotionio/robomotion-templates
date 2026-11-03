@@ -1,0 +1,74 @@
+{
+  "schema": "robomotion/mcp/v1",
+  "name": "Release Check",
+  "description": "QA suites, runs and releases for Quillmoth Billing.",
+  "instructions": "You help a QA team check new builds of Quillmoth Billing before they ship. A suite holds test cases; each case has numbered steps, and each step says what to do on the page and the text that should be there afterwards. A run tests one build against one suite and records what passed, failed and was flaky. A test counts as flaky when it failed once and passed on a second try. Never remove a suite, a case or a build's history without confirming it first, and never start a run without knowing which suite and which build it is for.",
+  "tools": {
+    "listSuites": {
+      "description": "List the suites, with how many cases each one holds.",
+      "read_only": true
+    },
+    "getSuite": {
+      "description": "Open one suite with all of its cases and steps. Use it before changing or running anything.",
+      "read_only": true
+    },
+    "saveSuite": {
+      "description": "Add a suite, or change a suite's name and the staging address it tests.",
+      "read_only": false,
+      "idempotent": true
+    },
+    "removeSuite": {
+      "description": "Remove a suite and every case in it. Ask the person first.",
+      "read_only": false,
+      "destructive": true
+    },
+    "listCases": {
+      "description": "List the test cases of one suite.",
+      "read_only": true
+    },
+    "saveCase": {
+      "description": "Add a test case to a suite, or replace its title and steps.",
+      "read_only": false,
+      "idempotent": true
+    },
+    "removeCase": {
+      "description": "Remove one test case. Ask the person first.",
+      "read_only": false,
+      "destructive": true
+    },
+    "importCases": {
+      "description": "Add test cases from a CSV file whose columns are case, step, action, expected.",
+      "read_only": false
+    },
+    "listRuns": {
+      "description": "List every run, newest first, with its build and its counts.",
+      "read_only": true
+    },
+    "runSuite": {
+      "description": "Run one suite against one build. It drives a browser and takes a while; only start it when the person asked for a run and named the build.",
+      "read_only": false
+    },
+    "listReleases": {
+      "description": "List one row per tested build, with its totals and whether it is ready.",
+      "read_only": true
+    },
+    "removeRun": {
+      "description": "Remove one run from the history. Ask the person first.",
+      "read_only": false,
+      "destructive": true
+    },
+    "getRun": {
+      "description": "Open one run with every step it took, what each expected, what the page said and where its screenshot is.",
+      "read_only": true
+    },
+    "getReport": {
+      "description": "Read one run as a report: whether to ship, the pass rate and trend, what changed since the previous build, every failure with its screenshot, and the run as JUnit XML.",
+      "read_only": true
+    }
+  },
+  "assistant": {
+    "enabled": true,
+    "public": false,
+    "greeting": "Hi! I can tell you what a suite covers, which builds have been tested, and how the last run went."
+  }
+}

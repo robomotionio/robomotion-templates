@@ -1,0 +1,15 @@
+case,step,action,expected
+Sign in,1,Open the Dashboard,"Welcome back, Dana"
+Add a customer,1,Open Customers and click Add customer,New customer
+Add a customer,2,"Type ""Ottervale Design"" as the company name and ""billing@ottervale-design.example"" as the billing email, then save",Ottervale Design
+Create an invoice,1,Open Invoices and start a new invoice,Payment terms: 30 days
+Create an invoice,2,"Type ""Larchmont Studio"" as the customer and create the draft",Draft invoice
+Create an invoice,3,"Add a line ""Brand workshop"" with quantity ""1"" and price ""1200""","€1,200.00"
+Create an invoice,4,"Add a line ""Logo refresh"" with quantity ""1"" and price ""600""","Subtotal €1,800.00"
+Apply a discount,1,Open invoice INV-1004,INV-1004
+Apply a discount,2,"Apply the discount code ""AGENCY10""",Discount −€180.00
+Apply a discount,3,Look at the totals,"Total €1,927.80"
+Send an invoice,1,Open invoice INV-1004 and click Send,Sent
+Record a payment,1,Open invoice INV-1002 and record a full payment by bank transfer,Paid
+Find overdue invoices,1,Open Invoices and filter by Overdue,3 overdue
+Search by customer,1,"Open Invoices and type ""Brambleworth"" into the Search invoices box",1 invoice for Brambleworth
