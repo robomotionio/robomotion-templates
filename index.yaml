@@ -2864,6 +2864,7 @@ templates:
     created: "2026-11-03"
     updated: "2026-11-03"
     screenshot: screenshot.png
+    video_url: "https://www.youtube.com/watch?v=Zoq7-WxNfz0"
     has_subflows: true
 
   - name: RemoteOK Job Details
