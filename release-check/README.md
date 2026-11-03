@@ -1,7 +1,5 @@
 # Release Check
 
-![Release Check: an AI QA suite that says Ship or Hold](cover.png)
-
 Release Check is a QA app for a software company testing its own web product before a release. It is a Robomotion App: screens in front, a flow behind them, and a robot that does the testing. It was built in the Designer with **Build with AI**, in three prompts: the screens, the robot that runs the tests, and the report.
 
 The testers already have their test cases in a spreadsheet. Each case is a few numbered steps in plain English, and each step names the text that should be on the page afterwards. Release Check imports that CSV, runs every case against a staging build, and says **Ship** or **Hold**. The example suite tests *Quillmoth Billing*, a fictional invoicing product for small agencies, across three release candidates: the first passes all nine tests, the second fails the discount test and has a flaky customer save, and the third fixes the bug.
