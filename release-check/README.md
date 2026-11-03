@@ -6,6 +6,10 @@ Release Check is a QA app for a software company testing its own web product bef
 
 The testers already have their test cases in a spreadsheet. Each case is a few numbered steps in plain English, and each step names the text that should be on the page afterwards. Release Check imports that CSV, runs every case against a staging build, and says **Ship** or **Hold**. The example suite tests *Quillmoth Billing*, a fictional invoicing product for small agencies, across three release candidates: the first passes all nine tests, the second fails the discount test and has a flaky customer save, and the third fixes the bug.
 
+## Watch the video
+
+👉 [Watch on YouTube](https://www.youtube.com/watch?v=Zoq7-WxNfz0)
+
 ## What Release Check can do
 
 - Keep **suites** of test cases, each tied to the staging address it tests, and import cases from a CSV

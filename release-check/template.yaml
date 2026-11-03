@@ -17,6 +17,7 @@ tags: [ai, app, build-with-ai, testing, regression-testing, qa, browser-act, jev
 author: Robomotion
 created: "2026-11-03"
 updated: "2026-11-03"
+video_url: "https://www.youtube.com/watch?v=Zoq7-WxNfz0"
 dependencies:
   - package: Robomotion.Apps
     version: "0.6.0"
