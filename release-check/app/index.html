@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robomotion App</title>
+    <!--
+      Decide light or dark before the first pixel. This runs inline, in head,
+      on purpose: anything that waits for the bundle paints white first and
+      then corrects itself, and that flash is the thing being fixed.
+
+      Order: an explicit ?theme wins (that is how Build tells the preview what
+      the Designer is set to), then a remembered choice, then the operating
+      system. So an app opened on its own still follows the viewer's OS, which
+      is what it always did.
+    -->
+    <script>
+      (function () {
+        var t;
+        try {
+          t = new URLSearchParams(location.search).get("theme");
+        } catch (e) {}
+        if (t !== "dark" && t !== "light") {
+          try {
+            t = localStorage.getItem("rm-theme");
+          } catch (e) {}
+        }
+        if (t !== "dark" && t !== "light") {
+          t =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        }
+        var el = document.documentElement;
+        el.classList.toggle("dark", t === "dark");
+        // Native controls, scrollbars and form widgets follow this, not the
+        // class - without it a dark app keeps white dropdowns and scrollbars.
+        el.style.colorScheme = t;
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

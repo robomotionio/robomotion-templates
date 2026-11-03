@@ -2844,6 +2844,28 @@ templates:
     screenshot: screenshot.png
     has_subflows: false
 
+  - name: Release Check
+    slug: release-check
+    summary: >-
+      A QA app, built with Build with AI, that decides whether a new build of a
+      web product ships. Testers keep suites of test cases in plain English, each
+      step with the text that should be on the page afterwards, and import them
+      from a CSV. The robot runs every case in a fresh browser: it resets the
+      staging data, signs in, and the Browser Act node does each step while Jev,
+      TypeSafe's decision model on OpenRouter, picks every click. Code checks the
+      expected text, never the model. A failure runs once more from a clean start:
+      failed twice is Failed, passed the second time is Flaky, never Passed. The
+      report says Ship or Hold, with a bug report and a screenshot for every
+      failure and a JUnit file for the build pipeline. Results live in SQLite.
+    category: AI
+    level: Advanced
+    tags: [ai, app, build-with-ai, testing, regression-testing, qa, browser-act, jev, typesafe, openrouter, sqlite, junit, web-automation, vault]
+    author: Robomotion
+    created: "2026-11-03"
+    updated: "2026-11-03"
+    screenshot: screenshot.png
+    has_subflows: true
+
   - name: RemoteOK Job Details
     slug: scrape-job-posting-details-remoteok
     summary: >-
