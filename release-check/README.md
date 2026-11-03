@@ -31,10 +31,10 @@ A case whose first attempt fails gets one more attempt from a clean browser and 
 ## Setup Guide
 
 1. **Make the app.** This template is the flow behind a Robomotion App. Create an app in the Designer, then put this template's `app.json`, `mcp.json`, `src/` and `app/` into its project next to `main.ts` and `subflows/`. You can also rebuild the screens with Build with AI from the description above. The app needs the **Robomotion.Apps** and **Robomotion.SQLite** packages.
-2. **Add the QA login.** In Admin Console > Vaults, add a **Login** item with the QA account of the app you are testing. Select it in *The QA Login* inside the *Runs* subflow.
+2. **Add the QA login.** In Admin Console > Vaults, add a **Login** item and select it in *The QA Login* inside the *Runs* subflow. Quillmoth Billing is a test system for this flow, a single-page app with no backend, and its QA account is username `dana.qa@quillmoth.example`, password `QuillTraining2026!`. For your own product, use its QA account.
 3. **Add an OpenRouter key.** Put an OpenRouter API key into a Vault item (type: API Key) and select it in the **Credentials** property of *Do The Step* in *Runs*. Its Provider (OpenRouter), Decision Model (`typesafe/jev-1.14`) and Text Model are already set.
 4. **Give the app's robot access** to that vault. The Browser Act node needs Robomotion 26.11.0 or later on the robot.
-5. **Run it.** Open the app, add a suite with your staging address, import `assets/quillmoth-regression.csv` (or your own file with the columns `case,step,action,expected`) and press **Run a suite**. The run dialog says which case it is checking, the run lands on the Runs screen when it ends, and **Report** says Ship or Hold.
+5. **Run it.** Open the app, add a suite with a staging address: Quillmoth has three builds, `https://quillmoth.robomotion.online/rc3/` (passes), `/rc4/` (a discount bug and a flaky customer save) and `/rc5/` (fixed). Then import `assets/quillmoth-regression.csv` (or your own file with the columns `case,step,action,expected`) and press **Run a suite**. The run dialog says which case it is checking, the run lands on the Runs screen when it ends, and **Report** says Ship or Hold.
 
 ## Customization
 

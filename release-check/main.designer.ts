@@ -5,7 +5,7 @@
 // 280 px columns on the grid in docs/layout-guide.md; the Catch carries the +6 px nudge.
 export default {
   flowId: 'main',
-  sourceHash: 'bed9581d',
+  sourceHash: '2ee29dd7',
   positions: {
     // ---- one SubFlow per screen ----
     'b3ea2a': { x: 900, y: 120 },     // Suites
@@ -25,6 +25,6 @@ export default {
   },
   commentExtras: {
     'c30001': { colorIndex: 4, size: { width: 480, height: 350 } },
-    'c30002': { colorIndex: 0, size: { width: 480, height: 400 } },
+    'c30002': { colorIndex: 0, size: { width: 480, height: 450 } },
   },
 };
